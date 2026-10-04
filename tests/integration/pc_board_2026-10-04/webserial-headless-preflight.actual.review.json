@@ -1,0 +1,27 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_readonly_browser_preflight_review",
+  "verdict": "connection_not_established; inconclusive_for_device_or_board",
+  "evidence": [
+    "test_webserial_headless_preflight.cjs",
+    "webserial-headless-preflight/summary.json",
+    "webserial-headless-preflight/cdc.json"
+  ],
+  "findings": {
+    "browser": "Separate headless Edge persistent profile; secure context and navigator.serial available",
+    "device": "Parent separately verified COM29 PNP identity VID_239A/PID_CAFE/MI_00",
+    "cleanup": "Browser context closed in finally",
+    "simulated": false,
+    "cdc_requests": 0,
+    "hardware_write_calls": 0,
+    "prompt": "No DeviceAccess request prompt observed",
+    "connection": "14-second page connection wait timed out; page stayed 未连接设备"
+  },
+  "limits": [
+    "No Web Serial port was selected or opened, so this is not a Web Serial pass.",
+    "No CDC request reached firmware; timeout cannot be attributed to board or firmware.",
+    "summary.hardware_writes is initialized to zero rather than computed, although empty cdc.json and no connection support that no protocol requests were observed.",
+    "Headless Edge chooser behavior may differ from interactive Chromium and the Electron test."
+  ],
+  "recommendation": "Retain as an inconclusive host-side preflight. Do not infer firmware failure or make firmware changes from this timeout."
+}

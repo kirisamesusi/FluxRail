@@ -1,0 +1,8 @@
+{
+  "reviewer": "Luna",
+  "kind": "review_erratum",
+  "corrects": "gp9-post-short.actual.review.json",
+  "statement_corrected": "The earlier review said the original PowerShell-generated gp9-post-short-user-confirmation.json had suffered Chinese text encoding corruption. That statement was incorrect: the JSON file itself is valid UTF-8 and its Chinese user_text is intact. The apparent corruption came from the Python/terminal output encoding path used to display it, not from the stored file.",
+  "evidence": "The original confirmation was independently read with explicit UTF-8 and PYTHONIOENCODING=utf-8; its user_text is 已完成，跳线已移除，无明显发热. The separate .utf8.json transcript also preserves correct Chinese text, but its note alleging source-file corruption is likewise inaccurate.",
+  "impact": "This corrects only the encoding/display claim. The booleans, user statement, monitor and CDC snapshot evidence remain as previously reviewed; the first GP9 attempt still correctly failed because forced_recovery was false. Original evidence and earlier review are retained unchanged."
+}

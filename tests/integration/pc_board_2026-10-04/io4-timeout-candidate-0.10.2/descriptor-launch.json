@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "original_runner_sha256": "d5d24862556b8e460b4b665a78712eee3657a6c42447272622713f5fffecccd5",
+  "isolated_runner_sha256": "365324c0cdd8c6884b9b983bdf0bd8c22fe6f72f916929a4ce0aa799aee1193d",
+  "changes": "only ROOT/HERE evidence routing",
+  "historical_before": "a8ca7ec006c2b49960e0482f808c9dee69dc4337e1e13a34a047293a16f34aa1",
+  "historical_after": "a8ca7ec006c2b49960e0482f808c9dee69dc4337e1e13a34a047293a16f34aa1",
+  "historical_unchanged": true,
+  "hardware_tested": false,
+  "game_tested": false
+}

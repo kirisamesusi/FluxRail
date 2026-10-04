@@ -1,0 +1,25 @@
+{
+  "cancellations": [
+    {
+      "index": 4918,
+      "time": "2026-10-04T20:13:54.965904500+07:59",
+      "pipe": "0xFFFFDF0D909C4CB0",
+      "ntstatus": "0xC0000120",
+      "urbstatus": "0xC0010000",
+      "function": "0x9",
+      "length": "0x0",
+      "endpoint": "0x82"
+    },
+    {
+      "index": 4923,
+      "time": "2026-10-04T20:13:54.967905200+07:59",
+      "pipe": "0xFFFFDF0DA02ACCB0",
+      "ntstatus": "0xC0000120",
+      "urbstatus": "0xC0010000",
+      "function": "0x9",
+      "length": "0x0",
+      "endpoint": "0x81"
+    }
+  ],
+  "limitation": "Near CDC close; endpoint association is direct rundown mapping, cause not inferred as HID failure."
+}

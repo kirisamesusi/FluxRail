@@ -1,0 +1,24 @@
+{
+  "reviewer": "Luna",
+  "assessment": "io4_mode_saved_and_enumerated",
+  "evidence": [
+    "io4-entry-v3/summary.json",
+    "io4-entry-v3/cdc.jsonl",
+    "io4-entry-v3/attempts.jsonl",
+    "io4-entry-v3/exit.json",
+    "io4-entry-v3/pnp-after.json",
+    "switch_usb_mode_once_v3.ps1"
+  ],
+  "verified": {
+    "serial": "5054316560DD729C",
+    "prestate": "NORMAL_NKRO; forced_recovery=true; revision=7; active_profile=4; physical_mask=0; valid_slots=3",
+    "writes": [
+      "set_startup_usb_mode IO4, revision 7 to 8",
+      "save_config, saved_revision 8, dirty=false, save_result=1",
+      "reboot_to_saved_mode IO4, reboot_ready=true"
+    ],
+    "port_closed": true,
+    "post_reboot_pnp": "Only VID_0CA3/PID_0021 target HIDClass and HID-compliant game-controller nodes present; prior VID_239A/PID_CAFE normal composite/CDC nodes absent"
+  },
+  "interpretation": "The explicit mode save and reboot request succeeded, and Windows enumerated the expected IO4 device identity after the normal composite disappeared. This establishes the saved-mode transition and host PnP enumeration for this boot. It does not establish interrupt report delivery, Windows application/game behavior, physical input behavior, or electrical health after the prior short. The subsequent single control GetInputReport is reviewed separately."
+}

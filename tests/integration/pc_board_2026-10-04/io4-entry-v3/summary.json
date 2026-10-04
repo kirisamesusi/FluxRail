@@ -1,0 +1,10 @@
+{
+    "serial_closed":  true,
+    "ram_preview_kept_normal":  true,
+    "writes":  3,
+    "started":  "2026-10-04T15:44:01.0658130Z",
+    "target":  "IO4",
+    "reboot_ack_received":  true,
+    "finished":  "2026-10-04T15:44:01.8390142Z",
+    "saved_revision":  8
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-04",
+  "configuration_operations_clicked": 0,
+  "browser": "Codex In-app Browser",
+  "tab_id": "1",
+  "tab_closed": true,
+  "webserial_passed": false,
+  "action": "Clicked visible connect button via CUA",
+  "connect_disabled": true,
+  "native_chooser_observed": false,
+  "user_desktop_testing_authorized": true,
+  "source": "Actual cua_repl browser observations",
+  "after_connection": "未连接设备",
+  "note": "AX and screenshot showed no serial chooser or connected identity. No claim about hidden native chooser outside observable browser surface. No CDC trace was instrumented for this UI round.",
+  "initial_connection": "未连接设备",
+  "url": "http://localhost:4174/"
+}

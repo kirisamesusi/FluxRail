@@ -1,0 +1,20 @@
+{
+  "started": "2026-10-04T14:43:56.435Z",
+  "desktop_control": false,
+  "headless": true,
+  "hardware_writes": 0,
+  "prompts": [],
+  "errors": [],
+  "capabilities": {
+    "secure": true,
+    "serial": true
+  },
+  "connected": false,
+  "error": "TimeoutError: page.waitForFunction: Timeout 14000ms exceeded.",
+  "page": {
+    "connection": "未连接设备",
+    "notice": "连接设备后读取设置。编辑 → 应用到RAM → 保存到设备。",
+    "simulated": false
+  },
+  "finished": "2026-10-04T14:44:15.154Z"
+}

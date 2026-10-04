@@ -1,0 +1,35 @@
+{
+  "reviewer": "Luna",
+  "kind": "static_io4_tools_preflight",
+  "verdict": "hold_execution_until_short_incident_cleared; HID_probe_requires_prequery_uniqueness_gate",
+  "evidence": [
+    "tests/integration/switch_usb_mode_once.ps1",
+    "tests/integration/windows_io4_report_probe.py",
+    "tests/integration/pc_board_2026-10-04/gp9-normal.actual.json"
+  ],
+  "mode_script": {
+    "waits_for_reboot_ack_then_closes_CDC": true,
+    "missing_gate": "Does not require valid_slots==3 or verify all current/requested/saved mode fields before mutation. Add valid_slots==3 and assert get_usb_mode consistency before set/save.",
+    "no_automatic_loop": true,
+    "target_normal_requires_forced_recovery": true,
+    "requires_clean_revision_and_saved_mode": true,
+    "requires_unique_normal_CDC_and_strict_serial_version_mode": true,
+    "recovery": "IO4 target leaves the board in IO4 after reboot; a separate physical GP9 forced-normal recovery plus explicit NORMAL save/reboot is required.",
+    "single_target_io4_or_normal": true
+  },
+  "hid_probe": {
+    "filters": "VID_0CA3/PID_0021; reads device serial; access=0; validates UsagePage=1/Usage=4/input report length64 before actual input read",
+    "issue": "With --get-input-report it calls HidD_GetInputReport for each matching serial interface, then asserts target count is exactly one only after enumeration. Multiple same-serial interfaces can therefore receive multiple control reads before uniqueness fails.",
+    "required_fix": "Perform complete metadata enumeration and require exactly one matching serial + expected usage/caps before any HidD_GetInputReport. Keep the unique candidate handle open, then issue exactly one read; if count is not one, save diagnostics and make zero query calls.",
+    "writes": false
+  },
+  "incident": {
+    "hold": "Do not reconnect power or issue CDC/HID requests until fully de-energized, cooled, visually inspected, and parent/user decides safe next step. GP9 test predates incident and is not a post-incident health check.",
+    "status": "Board reported hot after accidental 5V-to-GND contact; no IO4 switch was executed"
+  },
+  "limitations": [
+    "No scripts executed and no hardware requested by reviewer.",
+    "Even after incident clearance, this one-shot test would not prove repeated IO4 reliability or game compatibility.",
+    "4MiB firmware metadata does not independently verify physical Flash capacity."
+  ]
+}

@@ -1,0 +1,791 @@
+{
+  "started": "2026-10-04T09:13:12.622Z",
+  "port": "COM29",
+  "serial": "5054316560DD729C",
+  "kind": "real_board",
+  "stages": [
+    {
+      "name": "阶段1复核通过：身份与备份一致",
+      "time": "2026-10-04T09:13:12.985Z",
+      "summary": "身份、四模板及完整schema2备份核对通过；RAM/协议/稳定性待测。",
+      "result": {
+        "version": "0.10.1",
+        "serial": "5054316560DD729C",
+        "revision": 1,
+        "length": 1387,
+        "crc": 1053904252
+      },
+      "next": "安全RAM参数与模板切换",
+      "interfaces": "hello/get_status/get_profile/export_config",
+      "limits": "外设缺失，不能证明物理键、传感器、灯色或游戏功能。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 1,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段1复核通过：身份与备份一致",
+        "continue": true,
+        "evaluation": "Luna增量复核工具门槛通过；9条只读CDC请求确认0.10.1/同序号/revision1，四模板及1387字节schema2/CRC1053904252与备份一致，可进入RAM阶段。平均轮询速率门槛不证明匀速，实板Flash镜像/外设/游戏不在本阶段结论内。"
+      }
+    },
+    {
+      "name": "阶段2通过：RAM应用与恢复",
+      "time": "2026-10-04T09:16:20.504Z",
+      "summary": "30组参数、20次模板切换、IO4映射RAM读回完成并还原；协议与稳定性待测。",
+      "result": {
+        "groups": 30,
+        "switches": 20,
+        "restored": true,
+        "revision": 54,
+        "apply_roundtrip_ms": {
+          "min": 83.20889999999781,
+          "max": 115.40260000000126
+        }
+      },
+      "next": "错误请求与CRC损坏导入",
+      "interfaces": "set_profile/set_active_profile/get_config/get_motion/set_io4_bindings",
+      "limits": "无校准Hall持续valid=false/active=false/output0；无外设无法验证实际映射与颜色或运行时Y保持。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 2,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段2通过：RAM应用与恢复",
+        "continue": true,
+        "evaluation": "Luna查证227条CDC成功；set_profile31/set_active20/set_io4_bindings2，30组参数及20切换读回/恢复符合预期。final-schema2.bin与原始仅revision字段1→54变化，meta/模板恢复，无save/reboot。通过范围是CDC RAM配置与IO4映射读回，物理输入/灯/外设/游戏/掉电未验证。"
+      }
+    },
+    {
+      "name": "阶段3通过：协议边界与错误恢复",
+      "time": "2026-10-04T09:18:22.124Z",
+      "summary": "非法参数/revision/JSON/超长行/损坏导入均拒绝；分片/连续行正常，RAM字节未改变。",
+      "result": {
+        "negative_cases": 12,
+        "fragment_bytes": 3,
+        "burst_replies": 3,
+        "revision": 54
+      },
+      "next": "20次端口重开和20次DTR切换",
+      "interfaces": "CDC JSON边界、import/export",
+      "limits": "外设缺失，不能证明物理键、传感器、灯色或游戏功能。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 3,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段3通过：协议边界与错误恢复",
+        "continue": true,
+        "evaluation": "Luna核对12类negative cases及错误码/revision不变/健康恢复，包括4200字节超长行、重复字段、协议版本和损坏schema2 commit返回INVALID_TRANSFER；前后完整snapshot一致。3字节分片及连续三应答ID匹配/ok，当前262条日志，无save/reboot。可进入会话恢复，物理外设/Flash掉电/游戏仍未验。"
+      }
+    },
+    {
+      "name": "阶段4通过：CDC会话恢复",
+      "time": "2026-10-04T09:19:45.260Z",
+      "summary": "20次端口重开与20次DTR切换含残留半行，握手恢复且配置不变。",
+      "result": {
+        "reopen": 20,
+        "dtr": 20,
+        "partial_line_discard": true,
+        "revision": 54
+      },
+      "next": "5分钟10Hz轮询和1分钟无间隔通信压力",
+      "interfaces": "SerialPort.Close/Open、DtrEnable、resetSession",
+      "limits": "CDC会话重连不等于物理USB拔插/重新枚举或断电恢复。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 4,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段4通过：CDC会话恢复",
+        "continue": true,
+        "evaluation": "Luna查证20次重开+20次DTR主机控制，均恢复同序号hello/健康状态，残留半行丢弃，revision54及前后schema2快照不变。日志错误来自stage3预期拒绝，不是会话失败。仅CDC逻辑恢复，不等于物理USB拔插/冷枚举/断电/重启；可进入按设备计数计算的负载阶段。"
+      }
+    },
+    {
+      "name": "阶段5通过：持续通信稳定性",
+      "time": "2026-10-04T09:27:32.048Z",
+      "summary": "5分钟目标10Hz轮询及1分钟无间隔通信完成，最终恢复待复核。",
+      "result": {
+        "paced_seconds": 300.00735219999996,
+        "poll_cycles": 3000,
+        "paced_poll_hz": 9.999754932672614,
+        "paced_poll_test_tolerance_hz": [
+          9.5,
+          10.5
+        ],
+        "duplicate_snapshots": 1,
+        "stress_seconds": 60.07395509999991,
+        "stress_status_requests": 6263,
+        "host_latency_ms": {
+          "count": 13306,
+          "p50": 6.218800000031479,
+          "p95": 21.824900000006892,
+          "p99": 30.937599999946542,
+          "max": 57.5905999999959
+        },
+        "core1_max_service_us": 1248,
+        "hall_samples_added": 360045,
+        "queue_full_added": 0,
+        "telemetry_dropped_added": 0,
+        "adc_errors_added": 0,
+        "revision": 55,
+        "epoch": 55,
+        "hall_hz": {
+          "idle": 1000.0042752220953,
+          "paced": 1000.0014298447618,
+          "stress": 999.9948887263233
+        }
+      },
+      "next": "最终配置恢复核对并关闭串口",
+      "interfaces": "get_motion/get_status/hello/export_config",
+      "limits": "主机请求耗时含Windows桥接，不是按键/USB延迟。20Hz遥测不能证明500us扫描无丢采；最大诊断含历史/配置维护停顿，外设驱动负载不等于真实运动/键输入。Hall频率计算见hall-rate-report.json，不以通信通过代替1kHz阈值判定。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 5,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段5通过：持续通信稳定性",
+        "continue": true,
+        "evaluation": "Luna对原始计数复算：idle1000.004/paced1000.001/stress999.995Hz，同revision/epoch，三个窗口skipped/ADC错误/队满/遥测丢弃增量0；累计skipped2及最大间隔1822us/迟到1059us是未增长历史峰。3000轮/300.007s平均9.99975Hz，60.074s/6263状态压力请求，1个重复快照。通过范围为裸板驱动平均约1kHz与CDC通信，不保证最坏时序/真实传感器或运动HID/游戏。当前restored=false且端口未关闭，可放行finally恢复，整轮收尾另审核。"
+      }
+    },
+    {
+      "name": "本轮CDC测试结束与恢复核对",
+      "time": "2026-10-04T09:31:02.136Z",
+      "summary": "授权CDC/RAM/协议/会话恢复/稳定性完成。",
+      "result": {
+        "restored": true,
+        "revision": 56,
+        "flash_written": false
+      },
+      "next": "网页协议客户端实板适配复验；外设到货后测真实输入。",
+      "interfaces": "get_profile/get_device/export_config；report.json、original/final-schema2.bin",
+      "limits": "逐模板/meta及二进制校验，只有revision字段允许增加；不含真实Web Serial端到端、HID物理输入、Flash/断电/IO4/游戏。缺MT6701时全零SSI帧valid=true待澄清。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 6,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "本轮CDC测试结束与恢复核对",
+        "continue": true,
+        "evaluation": "Luna审核13407条CDC及收尾：末尾set_profile恢复revision55→56，四模板/设备meta/状态/export成功；1387字节原final仅offset4的revision1→56，CRC3256476313，无save/reboot/bootloader。RAM恢复通过，可关闭串口；此刻closed标志未出，进程实际退出后父窗口验证exit0/port_close_verified，不能用finished作关闭证据。"
+      }
+    }
+  ],
+  "restored": true,
+  "flash_written": false,
+  "game_tested": false,
+  "final_revision": 56,
+  "final_snapshot_crc": 3256476313,
+  "stability_running": false,
+  "stability_progress": {
+    "seconds": 270.6260057,
+    "cycles": 2707,
+    "last_sample": {
+      "sample_ready": true,
+      "timestamp_us": 1853385755,
+      "sample_revision": 55,
+      "epoch": 55,
+      "calibration": {
+        "job_id": 0,
+        "stage": 0,
+        "error": 0,
+        "collected": 0,
+        "required": 0,
+        "next_reference": 0,
+        "nodes": 0,
+        "sweep_segments": 0,
+        "sweep_left": false,
+        "sweep_right": false
+      },
+      "adc_started": true,
+      "ssi_started": true,
+      "raw_adc": [
+        884,
+        910,
+        929
+      ],
+      "hall": {
+        "valid": false,
+        "active": false,
+        "quality": 2,
+        "mm": 0,
+        "p": 0,
+        "output": 0,
+        "samples": 1853373,
+        "queue_full": 0,
+        "adc_errors": 0,
+        "adc_attempts": 1853373,
+        "skipped_periods": 2,
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      },
+      "knobs": [
+        {
+          "knob_id": 0,
+          "valid": true,
+          "active": false,
+          "enabled": true,
+          "axis": 0,
+          "raw_angle": 0,
+          "raw_turns": 0,
+          "scaled_turns": 0,
+          "quality": 0,
+          "crc_errors": 0,
+          "transport_errors": 0,
+          "raw_push": false,
+          "ssi_push": false,
+          "filtered_push": false
+        },
+        {
+          "knob_id": 1,
+          "valid": true,
+          "active": false,
+          "enabled": true,
+          "axis": 1,
+          "raw_angle": 0,
+          "raw_turns": 0,
+          "scaled_turns": 0,
+          "quality": 0,
+          "crc_errors": 0,
+          "transport_errors": 0,
+          "raw_push": false,
+          "ssi_push": false,
+          "filtered_push": false
+        }
+      ],
+      "core1_max_service_us": 1248,
+      "telemetry_dropped": 0,
+      "running": false,
+      "adopting": false,
+      "calibration_generation": 0,
+      "calibration_valid": false
+    }
+  },
+  "hall_rates": {
+    "idle": {
+      "start": {
+        "sample_ready": true,
+        "timestamp_us": 1572428851,
+        "sample_revision": 54,
+        "epoch": 54,
+        "calibration": {
+          "job_id": 0,
+          "stage": 0,
+          "error": 0,
+          "collected": 0,
+          "required": 0,
+          "next_reference": 0,
+          "nodes": 0,
+          "sweep_segments": 0,
+          "sweep_left": false,
+          "sweep_right": false
+        },
+        "adc_started": true,
+        "ssi_started": true,
+        "raw_adc": [
+          878,
+          898,
+          924
+        ],
+        "hall": {
+          "valid": false,
+          "active": false,
+          "quality": 2,
+          "mm": 0,
+          "p": 0,
+          "output": 0,
+          "samples": 1572416,
+          "queue_full": 0,
+          "adc_errors": 0,
+          "adc_attempts": 1572416,
+          "skipped_periods": 2,
+          "max_lateness_us": 1059,
+          "max_interval_us": 1822,
+          "max_span_us": 171,
+          "max_service_us": 196
+        },
+        "knobs": [
+          {
+            "knob_id": 0,
+            "valid": true,
+            "active": false,
+            "enabled": false,
+            "axis": 0,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          },
+          {
+            "knob_id": 1,
+            "valid": true,
+            "active": false,
+            "enabled": false,
+            "axis": 1,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          }
+        ],
+        "core1_max_service_us": 1248,
+        "telemetry_dropped": 0,
+        "running": false,
+        "adopting": false,
+        "calibration_generation": 0,
+        "calibration_valid": false
+      },
+      "end": {
+        "sample_ready": true,
+        "timestamp_us": 1582486808,
+        "sample_revision": 54,
+        "epoch": 54,
+        "calibration": {
+          "job_id": 0,
+          "stage": 0,
+          "error": 0,
+          "collected": 0,
+          "required": 0,
+          "next_reference": 0,
+          "nodes": 0,
+          "sweep_segments": 0,
+          "sweep_left": false,
+          "sweep_right": false
+        },
+        "adc_started": true,
+        "ssi_started": true,
+        "raw_adc": [
+          867,
+          885,
+          904
+        ],
+        "hall": {
+          "valid": false,
+          "active": false,
+          "quality": 2,
+          "mm": 0,
+          "p": 0,
+          "output": 0,
+          "samples": 1582474,
+          "queue_full": 0,
+          "adc_errors": 0,
+          "adc_attempts": 1582474,
+          "skipped_periods": 2,
+          "max_lateness_us": 1059,
+          "max_interval_us": 1822,
+          "max_span_us": 171,
+          "max_service_us": 196
+        },
+        "knobs": [
+          {
+            "knob_id": 0,
+            "valid": true,
+            "active": false,
+            "enabled": false,
+            "axis": 0,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          },
+          {
+            "knob_id": 1,
+            "valid": true,
+            "active": false,
+            "enabled": false,
+            "axis": 1,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          }
+        ],
+        "core1_max_service_us": 1248,
+        "telemetry_dropped": 0,
+        "running": false,
+        "adopting": false,
+        "calibration_generation": 0,
+        "calibration_valid": false
+      },
+      "device_elapsed_us": 10057957,
+      "attempts_added": 10058,
+      "hall_hz": 1000.0042752220953,
+      "skipped_periods_added": 0,
+      "samples_added": 10058
+    },
+    "paced": {
+      "start": {
+        "sample_ready": true,
+        "timestamp_us": 1582737917,
+        "sample_revision": 55,
+        "epoch": 55,
+        "calibration": {
+          "job_id": 0,
+          "stage": 0,
+          "error": 0,
+          "collected": 0,
+          "required": 0,
+          "next_reference": 0,
+          "nodes": 0,
+          "sweep_segments": 0,
+          "sweep_left": false,
+          "sweep_right": false
+        },
+        "adc_started": true,
+        "ssi_started": true,
+        "raw_adc": [
+          870,
+          902,
+          918
+        ],
+        "hall": {
+          "valid": false,
+          "active": false,
+          "quality": 2,
+          "mm": 0,
+          "p": 0,
+          "output": 0,
+          "samples": 1582725,
+          "queue_full": 0,
+          "adc_errors": 0,
+          "adc_attempts": 1582725,
+          "skipped_periods": 2,
+          "max_lateness_us": 1059,
+          "max_interval_us": 1822,
+          "max_span_us": 171,
+          "max_service_us": 196
+        },
+        "knobs": [
+          {
+            "knob_id": 0,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 0,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          },
+          {
+            "knob_id": 1,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 1,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          }
+        ],
+        "core1_max_service_us": 1248,
+        "telemetry_dropped": 0,
+        "running": false,
+        "adopting": false,
+        "calibration_generation": 0,
+        "calibration_valid": false
+      },
+      "end": {
+        "sample_ready": true,
+        "timestamp_us": 1882770488,
+        "sample_revision": 55,
+        "epoch": 55,
+        "calibration": {
+          "job_id": 0,
+          "stage": 0,
+          "error": 0,
+          "collected": 0,
+          "required": 0,
+          "next_reference": 0,
+          "nodes": 0,
+          "sweep_segments": 0,
+          "sweep_left": false,
+          "sweep_right": false
+        },
+        "adc_started": true,
+        "ssi_started": true,
+        "raw_adc": [
+          861,
+          884,
+          904
+        ],
+        "hall": {
+          "valid": false,
+          "active": false,
+          "quality": 2,
+          "mm": 0,
+          "p": 0,
+          "output": 0,
+          "samples": 1882758,
+          "queue_full": 0,
+          "adc_errors": 0,
+          "adc_attempts": 1882758,
+          "skipped_periods": 2,
+          "max_lateness_us": 1059,
+          "max_interval_us": 1822,
+          "max_span_us": 171,
+          "max_service_us": 196
+        },
+        "knobs": [
+          {
+            "knob_id": 0,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 0,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          },
+          {
+            "knob_id": 1,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 1,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          }
+        ],
+        "core1_max_service_us": 1248,
+        "telemetry_dropped": 0,
+        "running": false,
+        "adopting": false,
+        "calibration_generation": 0,
+        "calibration_valid": false
+      },
+      "device_elapsed_us": 300032571,
+      "attempts_added": 300033,
+      "hall_hz": 1000.0014298447618,
+      "skipped_periods_added": 0,
+      "samples_added": 300033
+    },
+    "stress": {
+      "start": {
+        "sample_ready": true,
+        "timestamp_us": 1882770488,
+        "sample_revision": 55,
+        "epoch": 55,
+        "calibration": {
+          "job_id": 0,
+          "stage": 0,
+          "error": 0,
+          "collected": 0,
+          "required": 0,
+          "next_reference": 0,
+          "nodes": 0,
+          "sweep_segments": 0,
+          "sweep_left": false,
+          "sweep_right": false
+        },
+        "adc_started": true,
+        "ssi_started": true,
+        "raw_adc": [
+          861,
+          884,
+          904
+        ],
+        "hall": {
+          "valid": false,
+          "active": false,
+          "quality": 2,
+          "mm": 0,
+          "p": 0,
+          "output": 0,
+          "samples": 1882758,
+          "queue_full": 0,
+          "adc_errors": 0,
+          "adc_attempts": 1882758,
+          "skipped_periods": 2,
+          "max_lateness_us": 1059,
+          "max_interval_us": 1822,
+          "max_span_us": 171,
+          "max_service_us": 196
+        },
+        "knobs": [
+          {
+            "knob_id": 0,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 0,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          },
+          {
+            "knob_id": 1,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 1,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          }
+        ],
+        "core1_max_service_us": 1248,
+        "telemetry_dropped": 0,
+        "running": false,
+        "adopting": false,
+        "calibration_generation": 0,
+        "calibration_valid": false
+      },
+      "end": {
+        "sample_ready": true,
+        "timestamp_us": 1942833795,
+        "sample_revision": 55,
+        "epoch": 55,
+        "calibration": {
+          "job_id": 0,
+          "stage": 0,
+          "error": 0,
+          "collected": 0,
+          "required": 0,
+          "next_reference": 0,
+          "nodes": 0,
+          "sweep_segments": 0,
+          "sweep_left": false,
+          "sweep_right": false
+        },
+        "adc_started": true,
+        "ssi_started": true,
+        "raw_adc": [
+          866,
+          881,
+          908
+        ],
+        "hall": {
+          "valid": false,
+          "active": false,
+          "quality": 2,
+          "mm": 0,
+          "p": 0,
+          "output": 0,
+          "samples": 1942821,
+          "queue_full": 0,
+          "adc_errors": 0,
+          "adc_attempts": 1942821,
+          "skipped_periods": 2,
+          "max_lateness_us": 1059,
+          "max_interval_us": 1822,
+          "max_span_us": 171,
+          "max_service_us": 196
+        },
+        "knobs": [
+          {
+            "knob_id": 0,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 0,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          },
+          {
+            "knob_id": 1,
+            "valid": true,
+            "active": false,
+            "enabled": true,
+            "axis": 1,
+            "raw_angle": 0,
+            "raw_turns": 0,
+            "scaled_turns": 0,
+            "quality": 0,
+            "crc_errors": 0,
+            "transport_errors": 0,
+            "raw_push": false,
+            "ssi_push": false,
+            "filtered_push": false
+          }
+        ],
+        "core1_max_service_us": 1248,
+        "telemetry_dropped": 0,
+        "running": false,
+        "adopting": false,
+        "calibration_generation": 0,
+        "calibration_valid": false
+      },
+      "device_elapsed_us": 60063307,
+      "attempts_added": 60063,
+      "hall_hz": 999.9948887263233,
+      "skipped_periods_added": 0,
+      "samples_added": 60063
+    }
+  },
+  "load": {
+    "hall_enabled": true,
+    "both_knobs_enabled": true,
+    "lighting_mode": "rainbow_wave",
+    "brightness_level": 25,
+    "physical_inputs_present": false
+  },
+  "finished": "2026-10-04T09:32:41.857Z",
+  "port_close_verified": true
+}

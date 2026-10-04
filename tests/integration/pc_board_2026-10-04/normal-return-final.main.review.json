@@ -1,0 +1,29 @@
+{
+  "reviewer": "/root main process",
+  "authorization": "Trusted user: 本轮改由主进程审核; Luna quota unavailable",
+  "time_utc": "2026-10-04T16:26:19.227039+00:00",
+  "method": "independently recomputed from original CDC transcripts, raw schema and original profiles; no new device requests",
+  "passed": true,
+  "checks": {
+    "mutating_requests": 3,
+    "mode_round_responses": 11,
+    "independent_readonly_responses": 15,
+    "revision_applied_saved": 9,
+    "active_profile": 4,
+    "schema_crc32": 700994562,
+    "original_diff_offsets": [
+      4
+    ],
+    "original_profiles_restored": true,
+    "serial_closed": true
+  },
+  "limitations": [
+    "application reboot, not another true power cut",
+    "firmware remains original 0.10.1; candidate not flashed; game not tested"
+  ],
+  "evidence_sha256": {
+    "io4-gp9-recovery.actual.json": "ae37681df9bbd4675cf0a52ce796d08ab5c1b18643ded455bb502165aa4c709f",
+    "io4-gp9-recovery.actual.v2.json": "4a98b67e9f7874c48e546247ff1520dbc303064f36a81589a97709a9c0d60fd6",
+    "normal-return-final.actual.json": "6ebcba0403b3bb3ef044b3a2c4ba32269e866ed45cb80a550fbccb9c73a1752e"
+  }
+}

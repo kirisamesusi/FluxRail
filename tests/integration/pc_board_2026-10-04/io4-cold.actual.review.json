@@ -1,0 +1,27 @@
+{
+  "reviewer": "Luna",
+  "assessment": "usb_only_cold_cycle_io4_reenumerated_control_get_passed",
+  "evidence": [
+    "io4-cold-launch.json",
+    "io4-cold-monitor/summary.json",
+    "io4-cold-user-confirmation.json",
+    "io4-cold-pnp.json",
+    "io4-cold-report.json",
+    "io4-cold.actual.json"
+  ],
+  "verified": {
+    "user_confirmed_usb_only_unplug_at_least_5_seconds_and_no_jumpers": true,
+    "target_pnp_absence_seconds": 8.562021,
+    "target_serial": "5054316560DD729C",
+    "reappeared_as_io4_vid_0ca3_pid_0021": true,
+    "normal_composite_present_after": false,
+    "single_actual_control_get_succeeded": true,
+    "report_length": 64,
+    "report_id": 1,
+    "system": 2,
+    "flash_writes": 0,
+    "configuration_snapshot_available": false,
+    "brief_normal_enumeration_excluded": false
+  },
+  "interpretation": "A USB-only power interruption/reconnection was observed; after reconnection the target was available as IO4 and one real 64-byte control state report returned the neutral system=2 snapshot. This confirms re-enumeration and a one-shot IO4 control read. No full schema/configuration read was available in pure IO4 mode. The evidence cannot exclude a brief intermediate NORMAL enumeration because no complete USB event trace was captured, and it is not an electrical-health assessment or game test."
+}

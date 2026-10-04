@@ -1,0 +1,31 @@
+{
+  "reviewer": "Luna",
+  "assessment": "partial_transport_pass_state_transition_failed_cleanup_not_restored",
+  "evidence": [
+    "io4-protocol-actual/result.json",
+    "io4-protocol-actual/watchdog.json",
+    "io4-protocol-actual/stdout.log",
+    "io4-protocol-actual/stderr.log",
+    "io4-protocol-actual/test_io4_protocol_actual_v2-executed.py"
+  ],
+  "verified": {
+    "target_serial": "5054316560DD729C",
+    "caps": "Usage Page 1 / Usage 4; input/output 64 bytes; feature 0",
+    "initial_control_get": "success, 64-byte report ID 1, system 2",
+    "interrupt_readfile_reports": 8,
+    "interrupt_reports": "all 64 bytes, report ID 1, default analog values, switches 0x4000/0x8000, system 2, reserved bytes zero",
+    "first_control_cmd1_units4_transport": "HidD_SetOutputReport returned true",
+    "cmd1_state_readback": "successful control GET still reported system 2; expected 0x30 assertion failed",
+    "cleanup_transport": "finally sent cmd1 units=1 and cmd3; both HidD_SetOutputReport calls returned true",
+    "cleanup_state_readback": "system remained 0 after 130ms; idle_restored=false",
+    "handles_closed": true,
+    "configuration_writes": 0,
+    "flash_writes": 0,
+    "unreached_cases": ["interrupt cmd3", "cmd2", "control cmd3", "timeout recovery", "zero GPIO cmd4", "unknown 0x85"],
+    "watchdog_exit_code": 1,
+    "watchdog_exit_code_available": true,
+    "watchdog_timeout": false
+  },
+  "interpretation": "The eight real ReadFile reports prove neutral 64-byte interrupt-IN delivery for this collection at the tested moment. HidD_SetOutputReport success proves Windows completed the host API operation, not that command 1 produced its intended device-state transition. The immediate GetInputReport stayed at system=2 instead of 0x30, so the first state assertion failed. The finally path transmitted cmd1/cmd3 and closed both handles, but the final state remained system=0 rather than the required idle system=2. Therefore runtime restoration is not proven, and this stage is not a pass. No Flash/configuration write occurred. The failure mechanism remains undetermined; do not attribute it to Windows scheduling, firmware parsing, or device damage from this trace alone.",
+  "recommendation": "Keep the device in the IO4 diagnostic state until a separately reviewed read-only/current-state check or the already planned recovery procedure establishes its state. Investigate the command-to-state timing/transfer path using a new evidence directory; do not replay or overwrite this failed round. Continue to distinguish successful HID API transport from firmware callback acceptance and state readback."
+}

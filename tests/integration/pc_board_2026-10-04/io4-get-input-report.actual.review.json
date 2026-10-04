@@ -1,0 +1,36 @@
+{
+  "reviewer": "Luna",
+  "assessment": "single_control_input_report_read_passed",
+  "evidence": [
+    "io4-get-input-report.json",
+    "io4-get-input-report.exit.json",
+    "windows_io4_report_probe.py",
+    "firmware/FluxRail/src/usb/Io4Codec.h",
+    "firmware/FluxRail/src/usb/Io4Codec.cpp"
+  ],
+  "verified": {
+    "target_serial": "5054316560DD729C",
+    "manufacturer": "SEGA",
+    "product_matches_kIo4ProductName": true,
+    "usage_page": 1,
+    "usage": 4,
+    "input_report_bytes": 64,
+    "output_report_bytes": 64,
+    "feature_report_bytes": 0,
+    "get_input_report_calls": 1,
+    "api_success": true,
+    "buffer_marked_as_actual_device_report": true,
+    "report_id": 1,
+    "report_matches_default_Io4Input_encoding": true,
+    "decoded": {
+      "analog_words": [32767,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "switch_words": [16384,32768],
+      "system": 2,
+      "usb": 0,
+      "reserved_bytes_zero": true
+    },
+    "script_exit_code": 0
+  },
+  "interpretation": "The 64-byte successful HidD_GetInputReport response was independently decoded as report ID 1 followed by the Io4Input default state from Io4Codec.h: ADC[0]=0x7fff, remaining ADC/spinner/coin values zero, switches 0x4000 and 0x8000, system=2, usb=0, and 29 zero reserved bytes. The returned product string exactly matches kIo4ProductName. This verifies one current-state control GetInputReport snapshot for the identified IO4 collection.",
+  "limits": "This is not an interrupt-IN transfer or continuous input stream. Default values do not demonstrate changing analog/switch state, physical button or axis operation, NKRO keyboard/mouse reports, game input, or electrical safety."
+}

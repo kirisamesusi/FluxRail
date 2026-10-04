@@ -1,0 +1,44 @@
+{
+  "reviewer": "Luna",
+  "assessment": "diagnostic_reproduced_premature_timeout_candidate; not_full_protocol_pass",
+  "evidence": [
+    "io4-timing-diagnostic/result.json",
+    "io4-timing-diagnostic/watchdog.json",
+    "io4-timing-diagnostic/stdout.log",
+    "io4-timing-diagnostic/stderr.log",
+    "io4-timing-diagnostic/test_io4_protocol_diagnostic-executed.py",
+    "firmware/FluxRail/src/app/App.cpp",
+    "firmware/FluxRail/src/usb/UsbBackend.cpp",
+    "firmware/FluxRail/src/usb/Io4Codec.cpp",
+    "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp",
+    "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/class/hid/hid_device.c"
+  ],
+  "verified": {
+    "serial": "5054316560DD729C",
+    "caps": "Usage Page 1 / Usage 4; input/output 64 bytes",
+    "neutral_interrupt_readfile_reports": 8,
+    "timeout_zero_20ms_state": 48,
+    "timeout_trials": [
+      {"units":1,"expected_seconds":0.1,"host_elapsed_seconds":0.02309220004826784,"state":2,"early":true},
+      {"units":4,"expected_seconds":0.4,"host_elapsed_seconds":0.02371770003810525,"state":2,"early":true},
+      {"units":255,"expected_seconds":25.5,"host_elapsed_seconds":0.023933400167152286,"state":2,"early":true}
+    ],
+    "timeout_disabled_recovery_states": [48,48,48],
+    "interrupt_cmd3_state": 0,
+    "control_cmd2_state": 48,
+    "control_cmd3_state": 0,
+    "zero_gpio_and_unknown_0x85": "system state stayed 0; no rejected counter was observed",
+    "final_initialized_neutral_state": 0,
+    "final_idle_state_2": false,
+    "handles_closed": true,
+    "flash_writes": 0,
+    "configuration_writes": 0,
+    "physical_input_injection": false,
+    "diagnostic_completed": true,
+    "protocol_acceptance": false,
+    "watchdog_exit_code": 0,
+    "watchdog_timeout": false
+  },
+  "independent_timing_analysis": "The proposed stale-now mechanism is mechanically plausible and its execution window exists in the actual installed RP2040 TinyUSB port. App::serviceCore0 calls TinyUSB_Device_Task(), releases its USB mutex, captures local `now`, performs substantial work, and only later calls hid.service(now). The installed Adafruit_TinyUSB_rp2040.cpp routes USBCTRL IRQ to a user IRQ; usb_task_irq acquires the same mutex and calls tud_task(). Thus a USB IRQ may acquire the mutex and run TinyUSB task/callback work after App captured `now` but before hid.service(now). The installed hid_device.c handles control SET_REPORT in CONTROL_STAGE_ACK, strips the report ID from the payload, and then calls tud_hid_set_report_cb. UsbBackend's callback reaches UsbBackend::output, whose state.accept records `micros()` as last_command_us. If that callback executes in the stated interval, `Io4State::tick(now)` receives a timestamp older than last_command_us; unsigned uint32 subtraction wraps to a large elapsed value, immediately expiring any nonzero timeout. This matches the observed early system=2 for units 1/4/255 and the units=0 control. The 8 neutral ReadFile reports and command parsing order do not independently prove that this race caused the behavior. No event trace directly timestamped callback and tick, and no software simulation was run; retain as a strong candidate, not root-cause confirmation.",
+  "limits": "This diagnostic intentionally ended in initialized state 0 rather than idle 2; protocol_acceptance is explicitly false. The final state must be restored/recovered independently. The early GET elapsed values are host measurements from output submission to completed GET, not firmware callback-to-tick latency. This stage did not test full protocol acceptance, persistent settings, Flash, physical controls, game behavior, or electrical health."
+}

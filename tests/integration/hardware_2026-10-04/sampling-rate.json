@@ -1,0 +1,21 @@
+{
+  "kind": "real_board_counter_analysis",
+  "sample_revision": 59,
+  "epoch": 59,
+  "telemetry_snapshots": 3854,
+  "first": {
+    "timestamp_us": 1277595037,
+    "hall_samples": 1078566
+  },
+  "last": {
+    "timestamp_us": 1637754053,
+    "hall_samples": 1382568
+  },
+  "seconds_board_clock": 360.159016,
+  "hall_samples_added": 304002,
+  "hall_average_hz": 844.0771617390247,
+  "target_hz": 1000,
+  "queue_full_added": 0,
+  "adc_errors_added": 0,
+  "limits": "Counter/board-clock average only; no physical sensor precision or high-frequency jitter measurement. Root cause not determined."
+}

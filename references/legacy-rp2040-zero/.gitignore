@@ -1,0 +1,16 @@
+# Local reference checkout, not part of this project repo.
+reference-lkick-io4/
+
+# Build and editor output.
+build/
+dist/
+out/
+.pio/
+.vscode/
+.idea/
+
+# OS and temporary files.
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

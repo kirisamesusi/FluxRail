@@ -1,0 +1,289 @@
+{
+    "started":  "2026-10-04T14:30:38.6604164Z",
+    "saves":  [
+                  {
+                      "valid_slots_mask":  1,
+                      "revision":  3,
+                      "time":  "2026-10-04T14:30:38.8943938Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:38.9662937Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.0304973Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.0973437Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.1623663Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.2273345Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.2926246Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.3605068Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.4254488Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.4910332Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.5571747Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.6191744Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.6879205Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.7581672Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.8237250Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.8884456Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:39.9532767Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.0195212Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.0957551Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.1602043Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.2256101Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.2895220Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.3537284Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.4192457Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.4876308Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.5545985Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.6194995Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.6843663Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.7501793Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.8148883Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.8802485Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:40.9473633Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.0128243Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.0774496Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.1407240Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.2069188Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.2713313Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.3371561Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.4049779Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.4810967Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.5498514Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.6136753Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.6794224Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.7437105Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.8104530Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.8755880Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:41.9662358Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:42.0301987Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:42.0954322Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  4,
+                      "time":  "2026-10-04T14:30:42.1609177Z"
+                  },
+                  {
+                      "valid_slots_mask":  3,
+                      "revision":  5,
+                      "time":  "2026-10-04T14:30:44.1581818Z"
+                  }
+              ],
+    "reboots":  [
+                    {
+                        "time":  "2026-10-04T14:30:43.7532990Z",
+                        "application_reboot_only":  true,
+                        "revision":  4,
+                        "name":  "marker-load",
+                        "before_timestamp_us":  2539206390,
+                        "before_epoch":  54,
+                        "after_timestamp_us":  803144,
+                        "after_epoch":  1
+                    },
+                    {
+                        "time":  "2026-10-04T14:30:45.3730095Z",
+                        "application_reboot_only":  true,
+                        "revision":  5,
+                        "name":  "original-load",
+                        "before_timestamp_us":  1255893,
+                        "before_epoch":  3,
+                        "after_timestamp_us":  753239,
+                        "after_epoch":  1
+                    }
+                ],
+    "restored":  false,
+    "error":  null,
+    "physical_power_cycle":  false,
+    "marker_loaded":  true,
+    "restore_error":  "Profiles not restored",
+    "serial_closed":  true,
+    "finished":  "2026-10-04T14:30:45.6981639Z"
+}

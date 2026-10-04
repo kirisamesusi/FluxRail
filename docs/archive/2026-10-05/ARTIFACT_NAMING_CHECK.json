@@ -1,0 +1,24 @@
+{
+  "date_local": "2026-10-05",
+  "scope": "Versioned export function on copies of real archived 0.10.2 UF2/ELF in temporary directory; no compiler/hardware execution",
+  "checks": {
+    "all_deliverables_versioned": true,
+    "optional_bin_map_exported_if_present": true,
+    "real_artifact_bytes_preserved": true,
+    "same_version_rebuild_keeps_both": true,
+    "manifest_version_hashes_size": true,
+    "prerelease_build_metadata_allowed": true,
+    "unsafe_name_rejected": true,
+    "missing_artifact_does_not_publish": true
+  },
+  "input_sha256": {
+    ".uf2": "92991fa7e70e591fa16857ac09cd513eb337e6b6f0ca9cbe2824292379d9b479",
+    ".elf": "368e21df56ac4033ecdd80eea4d58a1d6ed4235297ec320a5f22ad580a60cdbb",
+    ".bin": "81fdbea04e0a3116dd87309dfc2491e01a0b7c615de803ca4e2119edd62092b9",
+    ".map": "cf3de6f2ea3567109ff8619e7d3def93149deb420386b8cfc13964840d208a7f"
+  },
+  "compile_script_sha256": "7a33de6dc8f0fd67813c08cc80f3833c8cbb6cc9bbe470d262d2461ce1be744b",
+  "compiled": false,
+  "uploaded": false,
+  "passed": true
+}

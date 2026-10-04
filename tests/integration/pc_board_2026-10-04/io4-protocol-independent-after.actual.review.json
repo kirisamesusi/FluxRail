@@ -1,0 +1,19 @@
+{
+  "reviewer": "Luna",
+  "assessment": "post_failure_readonly_snapshot_confirms_io4_state_still_system_zero",
+  "evidence": ["io4-protocol-independent-after.json"],
+  "verified": {
+    "serial": "5054316560DD729C",
+    "usage_page": 1,
+    "usage": 4,
+    "input_report_length": 64,
+    "single_control_get_succeeded": true,
+    "report_id": 1,
+    "switch_words": [16384,32768],
+    "system": 0,
+    "usb": 0,
+    "reserved_zero": true,
+    "flash_or_configuration_mutation": false
+  },
+  "interpretation": "The independent one-shot GET confirms that the target remains reachable as the IO4 HID collection and that its report currently has system=0, consistent with the failed round's final snapshot. It is a read-only control-state snapshot and does not establish why cmd1/timeout handling differed or prove interrupt traffic. No further device mutation is evidenced."
+}

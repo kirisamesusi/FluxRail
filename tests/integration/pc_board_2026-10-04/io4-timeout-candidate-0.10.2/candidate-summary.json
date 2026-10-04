@@ -1,0 +1,22 @@
+{
+  "time_utc": "2026-10-04T16:28:41.797163+00:00",
+  "candidate_version": "0.10.2",
+  "target_contract": "existing project 4MiB; actual installed board capacity remains unverified",
+  "uploaded": false,
+  "hardware_tested": false,
+  "game_tested": false,
+  "frozen_before_sha256": {
+    "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\build\\arduino\\FluxRail.ino.uf2": "13778aeab0d3de5209423e14f70a74f494ee6ae006d45a6cf56428c659417412",
+    "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\build\\firmware_results.json": "a032a90b834b21887df2a06d9aedf53fd26dc8e30960275d762886df08b553ec",
+    "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\build\\source_link_audit.json": "e8bda67b9ecc6076aa2cea767f456bc5b5398e85161ad9ddcba70d8e20ffa78f"
+  },
+  "compile_passed": true,
+  "uf2_bytes": 341504,
+  "uf2_sha256": "92991fa7e70e591fa16857ac09cd513eb337e6b6f0ca9cbe2824292379d9b479",
+  "frozen_after_sha256": {
+    "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\build\\arduino\\FluxRail.ino.uf2": "13778aeab0d3de5209423e14f70a74f494ee6ae006d45a6cf56428c659417412",
+    "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\build\\firmware_results.json": "a032a90b834b21887df2a06d9aedf53fd26dc8e30960275d762886df08b553ec",
+    "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\build\\source_link_audit.json": "e8bda67b9ecc6076aa2cea767f456bc5b5398e85161ad9ddcba70d8e20ffa78f"
+  },
+  "frozen_evidence_unchanged": true
+}

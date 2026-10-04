@@ -1,0 +1,18 @@
+{
+  "reviewer": "Luna",
+  "assessment": "static_preflight_pass_with_scope_limits",
+  "evidence": [
+    "switch_usb_mode_once_v2.ps1",
+    "windows_io4_report_probe.py",
+    "gp9-post-short-retry2.actual.json",
+    "gp9-post-short-retry2.actual.review.json"
+  ],
+  "findings": {
+    "fresh_gate_path": "V2 now reads the separately named gp9-post-short-retry2.actual.json. Its passed flag, exact target serial, forced_recovery and matching revision/saved_revision are required before IO4 entry; first-attempt failure evidence is preserved and cannot authorize the switch.",
+    "runtime_gate": "Before writes the script requires the unique target NORMAL CDC node, matching serial and firmware version, active profile 4, healthy idle/neutral status, valid_slots=3, clean matching revisions, expected saved startup mode and current NORMAL_NKRO. For IO4 it also requires current forced_recovery and exact equality with the reviewed retry2 gate revision. Return to NORMAL_NKRO requires current forced_recovery and saved IO4.",
+    "mutation_sequence": "Only after these checks, the script previews requested startup mode, explicitly saves, checks save status and stored mode, requests reboot_to_saved_mode and waits 450ms. The serial is closed in finally. This is a controlled one-time mode transition; completion/ACK alone is not proof that the next USB personality enumerated or that the mode works in applications.",
+    "report_probe": "The optional probe first identifies exactly one expected-serial VID_0CA3/PID_0021 collection, verifies Usage Page 1/Usage 4/64-byte input report caps, then reopens that interface with desired access 0 and performs one HidD_GetInputReport. It sends no output report and injects no input. On API failure the buffer is not device data (hex=null); on success this is a control GetInputReport snapshot, not interrupt-stream traffic or proof of physical controls.",
+    "risk_boundary": "The retry2 GP9 pass is functional recovery evidence, not electrical clearance after the short. The board's actual Flash capacity, all IO4 HID byte delivery, keyboard/mouse behavior and game behavior remain unverified. Do not treat mode reboot ACK as successful re-enumeration; capture and review the actual post-reboot USB/PnP/HID state and, on IO4 return, require a new forced-recovery CDC session and full configuration check."
+  },
+  "recommendation": "The static gates are coherent for one authorized IO4 entry and one forced-recovery return. Proceed only with stage-specific evidence review after each transition; keep the incident/electrical uncertainty explicit."
+}

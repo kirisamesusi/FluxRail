@@ -1,0 +1,1 @@
+PASS: actual formal ELF both personas, all descriptors/long strings/unique serial/first-connect ordering; no host enumeration

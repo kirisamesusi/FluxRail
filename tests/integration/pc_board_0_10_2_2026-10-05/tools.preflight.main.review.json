@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "0.10.2 gate requires fresh verified revision9 clean original config; historical GP9 proof plus unchanged App SHA",
+    "Return NORMAL requires current forced_recovery true with saved IO4; original physical recovery proof not presented as new actual result",
+    "deadline test samples before earliest accepted-command deadline; misses labeled inconclusive; after-deadline samples at +60ms",
+    "old bounded HID handles/cancel-rundown and 45s exact-process watchdog unchanged",
+    "all PS tools parse; separate output refuses overwrite"
+  ],
+  "passed": true,
+  "script_sha256": {
+    "test_io4_timeout_fixed_actual.py": "E753097A03C7D157C1F317ECF307E2D7B1A1EFC566336FAEC1BA3AA556E3B2E6",
+    "switch_usb_mode_once_0_10_2.ps1": "FEA917CA13F07DAD3A10B1BC7F70EB045EAFA0D5EB70AEC1236F62577CD5C27F",
+    "run_io4_timeout_fixed_watchdog.ps1": "CCE5BA0C7CE59A62A3EC4370E6FDE3D207B3B3B0D0C4E686846B2F55EE0AFCE1",
+    "watch_io4_recovery_0_10_2.ps1": "BB8A977E761A9B48E3B3BF464E27483423816233EB6845BAA41841ECA38F780A"
+  },
+  "device_requests": 0,
+  "time": "2026-10-04T17:15:33.0353022Z",
+  "reviewer": "/root main process (ongoing user-authorized substitute)"
+}

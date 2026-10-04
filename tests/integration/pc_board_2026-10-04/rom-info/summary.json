@@ -1,0 +1,9 @@
+{
+  "command": "picotool info -a --ser E0C9125B0D9B",
+  "flash_writes": 0,
+  "time": "2026-10-04T16:26:50.6145529Z",
+  "source": "https://github.com/raspberrypi/picotool/blob/2.0.0/main.cpp",
+  "exit_code": -7,
+  "rom_serial": "E0C9125B0D9B",
+  "method": "picotool 2.0.0 guess_flash_size compares Flash boot-page aliases at power-of-two addresses; not compiled firmware metadata"
+}

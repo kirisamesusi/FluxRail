@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-04",
+  "backup": "C:/Users/admin/Documents/FluxRail/backups/web-before-template-management-2026-10-04",
+  "backup_files": 38,
+  "changed_files": [
+    "web/index.html",
+    "web/style.css",
+    "web/src/app.js",
+    "web/src/device.js",
+    "web/src/confirmation.js",
+    "web/src/template-actions.js",
+    "web/tests/template-actions.test.mjs",
+    "web/package.json",
+    "web/README.md"
+  ],
+  "tests": {
+    "total": 51,
+    "passed": 51,
+    "failed": 0,
+    "new_template_tests": 11
+  },
+  "browser": {
+    "url": "http://localhost:4174/#profiles",
+    "mode": "isolated schema1 simulation",
+    "verified": [
+      "四个预设保持不变；同一预设再次点击恢复固件内置默认值",
+      "未应用亮度草稿100另存My SDVX后读回100",
+      "自定义模板保存需确认；亮度0直接保存并读回0",
+      "取消带草稿的切换保留自定义模板和草稿",
+      "预设亮度100应用到RAM并确认保存设备；再次点击SDVX读回默认50",
+      "恢复预设后自定义模板仍读回亮度0",
+      "中文名称阻止提交，ASCII名称正常创建保存",
+      "新建/修改名称取消和Escape不产生模板修改",
+      "最终Escape取消后焦点返回create按钮",
+      "预设名称、删除禁止；自定义对应操作可用"
+    ],
+    "console_warn_error": [],
+    "screenshots": [
+      "web/tests/template-management-2026-10-04.png",
+      "web/tests/template-confirmation-2026-10-04.png",
+      "web/tests/template-new-save-2026-10-04.png"
+    ]
+  },
+  "hardware_verified": false,
+  "firmware_changed": false,
+  "protocol_changed": false,
+  "notes": [
+    "save_config沿用完整设备快照，不引入独立网页存储。",
+    "固件内置四个预设为恢复真值；修改预设运行配置仍可保存设备。",
+    "部分写入失败禁止继续写入并要求读回；不盲重试。"
+  ]
+}

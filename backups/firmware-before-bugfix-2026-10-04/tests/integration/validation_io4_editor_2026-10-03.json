@@ -1,0 +1,145 @@
+{
+  "date_local": "2026-10-03",
+  "scope": "实验室IO4映射编辑；普通CDC编辑同一Profile.io4_bindings后保存并冷启动IO4",
+  "source_sha256": {
+    "web/src/io4-editor.js": "4a7c9ca943d93e1e9745955081e5d8ca5467c8d7c2da4107eb80620192869f69",
+    "web/src/integration.js": "6703971bbfc8845dffe7c32b6a2100c594b9b380af198826cfce166e8fe5d7ff",
+    "web/src/app.js": "341f8641ea4f427154a15a0da6dfef14ad024489c2e258b1a20940963547c7bb",
+    "web/style.css": "98483c4e35de85550874d2936af2ca643e0f45c4bd3f841fa6c6560c513c7275",
+    "web/tests/integration-ui.test.mjs": "8a93e5d609f4022c32a69f4cfeb1e38349b7d0a895f8e123385105ef3c8a2c2f",
+    "tests/integration/io4_tests.cpp": "3e0c3364c59173440ad92ba0032c30071a693ac1789f41ef5a7f52d34abd4541"
+  },
+  "protocol_changes": false,
+  "firmware_source_changes": [],
+  "formal_firmware": {
+    "uf2_path": "tests/integration/build/arduino/FluxRail.ino.uf2",
+    "uf2_bytes": 337920,
+    "uf2_sha256": "c86760969c59dd900eeb7950b46e2c7c7ae493067320e148c06dd17c74468aaf",
+    "elf_sha256": "3f0b7eea0f0cc48433dffe951022e4359f76524f6ef2694c16e7af96f6124bba",
+    "flash_bytes": 151052,
+    "global_ram_bytes": 107168,
+    "compile": "本轮未重新构建；固件源码哈希与完整阶段4快照全部一致，UF2哈希重新核对一致",
+    "prior_evidence": "tests/integration/validation_integration_2026-10-03.json"
+  },
+  "web": {
+    "tests": 33,
+    "passed": 33,
+    "failed": 0,
+    "log": "tests/integration/build/io4_mapping_web.log"
+  },
+  "arm": {
+    "strict_translation_units": 33,
+    "exit_code": 0,
+    "groups": 22,
+    "raw_checks": 67513,
+    "tests": [
+      {
+        "name": "test_app_full_snapshot_save_boot_and_preview",
+        "checks": 10
+      },
+      {
+        "name": "test_app_save_waits_usb_completion_and_resumes_on_flash_failure",
+        "checks": 8
+      },
+      {
+        "name": "test_app_maintenance_disconnect_timeout_no_write",
+        "checks": 5
+      },
+      {
+        "name": "test_app_save_faulted_busy_led_no_flash_and_input_recovers",
+        "checks": 11
+      },
+      {
+        "name": "test_app_indicator_uses_confirmed_template_and_actual_persona",
+        "checks": 10
+      },
+      {
+        "name": "test_io4_wire_golden_and_descriptor",
+        "checks": 121
+      },
+      {
+        "name": "test_io4_out_all_lengths_ids_types_instances",
+        "checks": 1031
+      },
+      {
+        "name": "test_io4_init_timeout_clear_and_unsupported",
+        "checks": 12
+      },
+      {
+        "name": "test_io4_twelve_mapping_polarity_and_absolute",
+        "checks": 65548
+      },
+      {
+        "name": "test_io4_backend_busy_control_get_motion_and_lights",
+        "checks": 103
+      },
+      {
+        "name": "test_io4_app_one_endpoint_maintenance_and_disconnect",
+        "checks": 9
+      },
+      {
+        "name": "test_io4_boot_saved_snapshot_and_physical_recovery",
+        "checks": 4
+      },
+      {
+        "name": "test_io4_boot_forced_normal_keeps_saved_identity",
+        "checks": 10
+      },
+      {
+        "name": "test_io4_cdc_mode_save_then_response_bus_completion_reboot",
+        "checks": 8
+      },
+      {
+        "name": "test_io4_reboot_failed_save_disconnect_and_response_timeout",
+        "checks": 13
+      },
+      {
+        "name": "test_io4_cdc_tx_complete_is_distinct_from_copy",
+        "checks": 3
+      },
+      {
+        "name": "test_io4_schema1_full_migration_and_mixed_slots",
+        "checks": 18
+      },
+      {
+        "name": "test_io4_mode_save_interrupted_preserves_previous_identity",
+        "checks": 41
+      },
+      {
+        "name": "test_io4_protocol_function_binding_bounds_and_mode_readback",
+        "checks": 4
+      },
+      {
+        "name": "test_io4_host_lights_follow_user_brightness_disable_and_physical_mapping",
+        "checks": 523
+      },
+      {
+        "name": "test_io4_indicator_persona_color_and_independent_disable",
+        "checks": 7
+      },
+      {
+        "name": "test_io4_normal_edit_saved_mapping_survives_cold_boot",
+        "checks": 14
+      }
+    ],
+    "log": "tests/integration/build/io4_mapping_cold.log",
+    "boundary": "真实协议/App/Flash/IO4报告，USB/复位外围替身；不能代表主机枚举或实板"
+  },
+  "browser": {
+    "url": "http://localhost:4174/#experimental",
+    "screenshot": "tests/integration/io4_mapping_editor_2026-10-03.png",
+    "selectors": 12,
+    "functions_per_selector": 13,
+    "disconnected_all_disabled": true,
+    "warnings_errors": 0,
+    "hardware_connected": false
+  },
+  "review": {
+    "model": "gpt-6-luna",
+    "result": "只读审查未发现可复现软件缺陷"
+  },
+  "uploaded": false,
+  "hardware_tested": false,
+  "usb_host_tested": false,
+  "game_tested": false
+}

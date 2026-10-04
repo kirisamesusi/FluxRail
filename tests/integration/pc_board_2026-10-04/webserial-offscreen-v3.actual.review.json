@@ -1,0 +1,26 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_offscreen_webserial_v3_review",
+  "verdict": "chooser_target_selected; device_permission_denied_due_metadata_shape; no_firmware_request",
+  "evidence": [
+    "webserial-offscreen-v3/summary.json",
+    "webserial-offscreen-v3/cdc.json",
+    "webserial-offscreen-v3/final.json",
+    "webserial-pnp-correlation.json",
+    "webserial-launch-3/test_webserial_offscreen_v3-executed.cjs"
+  ],
+  "findings": {
+    "correlation": "Fresh COM29 mapping ties deviceInstanceId USB\\\\VID_239A&PID_CAFE&MI_00\\\\7&1E2FBD10&0&0000 to parent USB\\\\VID_239A&PID_CAFE\\\\5054316560DD729C.",
+    "permissions": "Exact localhost origin check allowed. Device permission callback received deviceType serial and device fields {device_instance_id,name}; serialNumber was absent, so current serialNumber-only device-permission predicate returned false.",
+    "mutation": "No profile captured and no writes; no_device_mutation true; hidden BrowserWindow cleanup completed.",
+    "connection": "requestPortErrors empty and client saw a SerialPort object; page nevertheless remained disconnected with 连接失败. The real SerialClient.open exception was not captured, so lower-level open failure detail remains unavailable.",
+    "device": "CDC log empty; no hello/handshake or configuration request reached device.",
+    "chooser": "V3 strict COM29 + exact deviceInstanceId + VID/PID selector found and selected the intended port."
+  },
+  "limits": [
+    "This is not a Web Serial pass; the selected port was not opened through to successful handshake.",
+    "The failure is explained by the host permission metadata mismatch, not evidence of a firmware error or board fault.",
+    "The PnP correlation proves chooser deviceInstanceId maps to the target USB parent identity at that timestamp; retain freshness and exact-match gates."
+  ],
+  "recommendation": "V4 should bind device permission to the freshly correlated exact device_instance_id and exact origin, record the returned boolean and capture SerialClient.open exception; keep rejecting zero or multiple candidate mappings."
+}

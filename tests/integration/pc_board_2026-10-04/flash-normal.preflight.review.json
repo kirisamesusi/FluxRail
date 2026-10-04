@@ -1,0 +1,21 @@
+{
+  "reviewer": "Luna",
+  "scope": "Static-only review of tests/integration/test_flash_normal.ps1; not executed and no hardware/UI interaction performed.",
+  "assessment": "No blocking destructive or cross-device operation found for the authorized normal-mode flash test. The script limits changes to the target device selected by VID/PID MI_00 then verifies serial/version; checks physical_mask=0 before every save; writes only through save_config and set_active_profile; performs only NORMAL_NKRO application reboots; discovers the CDC COM port again with a 20-second bound; never initiates PC restart, USB-controller reset, physical power cut, IO4 mode, bootloader, or HID report writes. Its recovery path returns profile4, saves it, reboots into NORMAL_NKRO, and verifies the final exported schema2 bytes except revision and identical profile JSON. The existing baseline is 0.10.1 / 5054316560DD729C / revision3 / active4 / NORMAL_NKRO / physical_mask0 / saved_revision null / valid_slots0 / 1387-byte export CRC3601827843. Therefore the first baseline save creates the first persistent valid slot; this cannot be rolled back to an empty Flash through the protocol and should be recorded as an intentional state transition. Before running, add an explicit post-first-save assertion that valid_slots is nonzero, so the test will stop before changing the active profile if the save result claims success but no recoverable slot is reported. This is a recommended preflight gate, not evidence of a current firmware defect.",
+  "checked": [
+    "Evidence root is supplied explicitly; a non-fresh flash-normal stage directory is rejected before output is written.",
+    "CDC opener filters the normal interface by VID/PID MI_00, refuses ambiguous ports, has a bounded 20-second re-enumeration wait, and verifies product/serial/firmware/mode after opening.",
+    "Each Save obtains a fresh healthy status with physical_mask=0, config ready, not applying/failed, maintenance idle, revision==applied_revision; it supplies expected_revision, requires SAVE_OK, saved_revision==revision, dirty=false, and records the valid-slots mask.",
+    "The planned successful saves total 51: one persisted original baseline, 49 more saves after selecting profile1 (50 maintenance saves total through the marker stage), and one final original-profile save in finally.",
+    "The marker stage captures the saved profile1 snapshot, invokes reboot_to_saved_mode with target NORMAL_NKRO only, waits for detachment, re-discovers CDC, verifies identity and saved/clean state, then compares the post-reboot schema2 export byte-exactly with the marker snapshot and checks active_profile1.",
+    "The finally path uses the current device revision to restore active profile4, saves, performs a second normal-mode application reboot, captures a final snapshot, verifies all non-revision schema2 bytes and all profile JSON, checks active4/saved clean/two valid slots, then closes the target serial port and writes a summary.",
+    "No physical power-loss recovery, IO4 switch, desktop UI interaction, or browser permission changes are present in this script; physical_power_cycle is explicitly false."
+  ],
+  "limitations_and_gates": [
+    "The first successful save changes persistent state from no valid slot/saved_revision null to a real valid slot. It must be counted and documented; do not describe final valid_slots=3 as restoring the former empty-Flash state.",
+    "Add the first-save valid_slots!=0 check before allowing the profile mutation. Final valid_slots==3 is already required after all saves.",
+    "The script verifies a normal application reboot/reload, not power-loss recovery. A separate future power-cut test needs an independently preserved known-good slot and physical power control; this script does not perform it.",
+    "The timestamp/epoch reboot evidence is a host-side heuristic; the protocol response, re-enumeration, saved snapshot equality, saved_revision and non-default active-profile reload provide the stronger combined evidence."
+  ],
+  "recommendation": "Preflight acceptable after adding the explicit first-save valid slot gate; do not run power-loss or IO4 tests under this script."
+}

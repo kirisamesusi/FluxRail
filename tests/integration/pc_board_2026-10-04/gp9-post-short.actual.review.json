@@ -1,0 +1,37 @@
+{
+  "reviewer": "Luna",
+  "assessment": "failed_gate_no_forced_recovery_observed",
+  "evidence": {
+    "summary": "gp9-post-short.actual.json",
+    "monitor": "gp9-post-short-monitor/summary.json",
+    "user_confirmation_original": "gp9-post-short-user-confirmation.json",
+    "user_confirmation_utf8_transcript": "gp9-post-short-user-confirmation.utf8.json",
+    "snapshot": "gp9-post-short-after/baseline.json",
+    "schema2": "gp9-post-short-after/original-schema2.bin",
+    "comparison_baseline": "webserial-after/original-schema2.bin"
+  },
+  "findings": {
+    "target_serial": "5054316560DD729C",
+    "target_pnp_disconnect_and_reconnect_observed": true,
+    "user_confirmed_jumper_removed": true,
+    "user_reported_no_obvious_heating": true,
+    "forced_recovery": false,
+    "mode": "NORMAL_NKRO",
+    "revision": 7,
+    "saved_revision": 7,
+    "dirty": false,
+    "physical_mask": 0,
+    "valid_slots": 3,
+    "snapshot_config_ready": true,
+    "snapshot_schema2_length": 1387,
+    "snapshot_schema2_crc32": 3710059708,
+    "schema2_byte_exact_to_pretest": true,
+    "schema2_sha256": "d7662d6f2380586347e381314b2bad89b7a00fb9b60ff02716c6cceb9acfac32",
+    "profiles_equal_to_pretest": true,
+    "device_writes": 0,
+    "serial_closed": true,
+    "electrical_health_verified": false
+  },
+  "interpretation": "The expected GP9 forced-recovery flag was not observed, so the post-incident GP9 gate correctly fails and IO4 must remain blocked. The board nevertheless answered the 15-request CDC read-only snapshot and its saved configuration bytes/profiles exactly match the pretest baseline. The monitor proves the target PnP device disappeared and returned, but does not prove GP9 was electrically low at the firmware's boot sample. Firmware samples source index 9 (GP9) once during fluxrail_usb_wants_cdc after enabling key pins and a 50 microsecond settling delay; the available evidence does not establish jumper contact/timing at that exact instant. This result cannot distinguish missed/poorly timed jumper contact from a GP9/input-path fault and does not establish GPIO damage. It also does not establish electrical health after the short circuit. The UTF-8 transcript preserves the user's confirmation; the original PowerShell-generated confirmation remains untouched.",
+  "next_step": "Do not enter IO4 using this gate. If continuing later, first make a fresh GP9 recovery attempt with the jumper demonstrably connected from before power application through startup sampling, then removed before normal operation; require forced_recovery=true and a fresh independent full snapshot before mode switching. Do not treat another ordinary successful CDC connection as a recovery pass."
+}

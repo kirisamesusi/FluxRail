@@ -1,0 +1,22 @@
+{
+    "started":  "2026-10-04T15:33:07.7218453Z",
+    "events":  [
+                   {
+                       "present":  true,
+                       "utc":  "2026-10-04T15:33:08.1839275Z"
+                   },
+                   {
+                       "present":  false,
+                       "utc":  "2026-10-04T15:33:31.9875282Z"
+                   },
+                   {
+                       "present":  true,
+                       "utc":  "2026-10-04T15:34:22.2617640Z"
+                   }
+               ],
+    "target":  "USB\\VID_239A\u0026PID_CAFE\\5054316560DD729C",
+    "disconnect_and_reconnect_observed":  true,
+    "pid":  236776,
+    "finished":  "2026-10-04T15:34:22.2637634Z",
+    "readonly":  true
+}

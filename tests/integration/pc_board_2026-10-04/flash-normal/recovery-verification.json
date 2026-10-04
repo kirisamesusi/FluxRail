@@ -1,0 +1,22 @@
+{
+  "reviewer": "parent",
+  "kind": "offline_independent_recovery_check",
+  "restored": true,
+  "initial_revision": 3,
+  "final_revision": 5,
+  "final_crc32": 895336899,
+  "final_saved_revision": 5,
+  "valid_slots_bitmask": 3,
+  "schema_diff_offsets": [
+    4
+  ],
+  "profiles_equal_semantically": true,
+  "marker_saved_loaded_byte_exact": true,
+  "save_count": 51,
+  "application_reboot_count": 2,
+  "physical_power_cycle": false,
+  "original_script_exit": 1,
+  "original_error_preserved": true,
+  "cause": "Raw profile JSON format differs between initial pwsh7 and runtime Windows PowerShell5; parsed profiles and encoded snapshot unchanged except expected revision.",
+  "final_schema_sha256": "2eccea8b9acdbefcb2aacb4e52ca8061c8d4b1142b42033edf7cbb9a847eec1c"
+}

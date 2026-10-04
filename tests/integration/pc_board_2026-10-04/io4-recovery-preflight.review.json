@@ -1,0 +1,25 @@
+{
+  "reviewer": "Luna",
+  "kind": "static_recovery_gate_review",
+  "verdict": "recovery_gate_supported_with_host_input_safety_condition",
+  "evidence": [
+    "firmware/FluxRail/src/board/BoardConfig.h",
+    "firmware/FluxRail/src/keyboard/KeyScannerRp2040.cpp",
+    "firmware/FluxRail/src/app/App.cpp",
+    "firmware/FluxRail/src/protocol/CDC_PROTOCOL.md",
+    "tests/integration/pc_board_2026-10-04/power-cut-before/original-profiles.json"
+  ],
+  "findings": {
+    "recommendation": "Use the verified GP9/GND pads only after pin orientation is physically confirmed. Test forced recovery in ordinary NORMAL first, remove jumper and prove mask0/profile/schema unchanged. Then do one IO4 mode save/reboot, recover with BT10/GP9, verify forced_recovery and normal CDC, save NORMAL_NKRO, reboot once, and compare full configuration. Abort on missing CDC/identity mismatch; do not retry or reflash.",
+    "flash": "Device identity/metadata says RP2040 4MiB, but standard RP2040-Zero reference may describe a 2MiB variant; pin recovery does not establish actual Flash capacity. Preserve this distinction.",
+    "status": "get_usb_mode exposes current/requested_startup/saved_startup/forced_recovery. Normal-mode jumper check should observe forced_recovery=true; after removing jumper, wait for physical_mask=0 and capture full read-only baseline.",
+    "mapping": "BoardConfig maps source9 to GP9; KeyScanner configures the key GPIO as input with pull-up, and considers low level pressed. Startup samples the source9 down bit before USB personality selection; prepareUsbBoot records forced_recovery and selects NORMAL_NKRO without rewriting the stored mode.",
+    "profile_binding": "All four preserved profiles bind keyboard source_id9 (BT10/GP9) to HID usage17. Grounding GP9 is also a real key press; a connected host can receive the T key when NORMAL HID enumerates. Keep games, text fields, and other action-sensitive apps unfocused or use an isolated host during both force-normal checks."
+  },
+  "limitations": [
+    "Static source inspection only; no jumper or hardware action by reviewer.",
+    "A single forced-recovery result does not verify actual game mappings or guarantee recovery under every electrical condition.",
+    "Do not claim board Flash size from firmware metadata alone.",
+    "No repeated cold-switch reliability claim."
+  ]
+}

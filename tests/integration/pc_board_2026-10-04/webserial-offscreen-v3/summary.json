@@ -1,0 +1,106 @@
+{
+  "started": "2026-10-04T15:29:04.069Z",
+  "kind": "offscreen_chromium_real_webserial",
+  "desktop_control": false,
+  "versions": {
+    "node": "24.21.0",
+    "acorn": "8.18.0",
+    "ada": "4.0.0",
+    "amaro": "1.1.11",
+    "ares": "1.34.8",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.2",
+    "llhttp": "9.4.3",
+    "merve": "1.2.2",
+    "modules": "149",
+    "napi": "10",
+    "nbytes": "0.1.4",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.70.0",
+    "nghttp3": "",
+    "ngtcp2": "",
+    "openssl": "0.0.0",
+    "simdjson": "4.6.7",
+    "simdutf": "7.7.0",
+    "sqlite": "3.53.4",
+    "tz": "2025c",
+    "undici": "7.29.1",
+    "unicode": "17.0",
+    "uv": "1.52.1",
+    "uvwasi": "0.0.23",
+    "v8": "15.2.124.28-electron.0",
+    "zlib": "1.3.2.1-motley",
+    "zstd": "1.6.0",
+    "electron": "44.5.1",
+    "chrome": "152.0.7977.130"
+  },
+  "steps": [
+    {
+      "name": "final",
+      "time": "2026-10-04T15:29:22.670Z",
+      "connection": "未连接设备",
+      "identity": "设备等待握手",
+      "notice": "连接失败",
+      "draft": "无网页草稿",
+      "saved": "已断开，保存结果以重连读回为准",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    }
+  ],
+  "ports": [
+    {
+      "portId": "7EA3D3AE40300607D1A7A0B77695D459",
+      "portName": "COM1",
+      "displayName": "通信端口",
+      "deviceInstanceId": "ACPI\\PNP0501\\0"
+    },
+    {
+      "portId": "466A5C7621C1AF85E0A947DAD278DBB6",
+      "portName": "COM29",
+      "displayName": "TinyUSB Serial",
+      "vendorId": "9114",
+      "productId": "51966",
+      "deviceInstanceId": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000"
+    }
+  ],
+  "pnp_correlation": {
+    "port": "COM29",
+    "deviceInstanceId": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000",
+    "parent": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+    "time": "2026-10-04T15:28:27.1967376Z"
+  },
+  "error": "Error: Page condition timeout: document.querySelector('#connection-state').textContent==='已连接并完成读回'",
+  "restored": false,
+  "permissions": [
+    {
+      "kind": "check",
+      "permission": "serial",
+      "requestingOrigin": "http://localhost:4174/",
+      "details": {
+        "isMainFrame": true,
+        "requestingUrl": "http://localhost:4174/",
+        "securityOrigin": "http://localhost:4174/"
+      },
+      "allowed": true
+    },
+    {
+      "kind": "device",
+      "details": {
+        "deviceType": "serial",
+        "origin": "http://localhost:4174",
+        "device": {
+          "device_instance_id": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000",
+          "name": "TinyUSB Serial"
+        }
+      },
+      "allowed": false
+    }
+  ],
+  "stack": "Error: Page condition timeout: document.querySelector('#connection-state').textContent==='已连接并完成读回'\n    at wait (C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\test_webserial_offscreen_v3.cjs:45:150)\n    at async C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\test_webserial_offscreen_v3.cjs:65:3",
+  "no_device_mutation": true,
+  "native_window_visible": false,
+  "finished": "2026-10-04T15:29:22.671Z"
+}

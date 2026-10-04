@@ -1,0 +1,11 @@
+{
+  "saved_revision": 10,
+  "mode_writes": 3,
+  "passed": true,
+  "game": "not run",
+  "serial_closed": true,
+  "board": "User states2MiB test board;4MiB final capacity acceptance waived",
+  "responses": 11,
+  "actual_unique_IO4_parent": true,
+  "reviewer": "/root main process"
+}

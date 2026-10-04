@@ -1,0 +1,1866 @@
+{
+  "date_local": "2026-10-03T05:15:32.722346+08:00",
+  "phase": 8,
+  "scope": "module1 plus complete config/profile/persistence integration",
+  "validation": {
+    "suites": {
+      "module1": {
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_bindings_ascii",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 195
+          },
+          {
+            "test": "test_twelve_nkro",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 54
+          },
+          {
+            "test": "test_duplicate_busy_overlap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 95
+          },
+          {
+            "test": "test_modifiers_and_mouse",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 25
+          },
+          {
+            "test": "test_backpressure_revision_recovery",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 83
+          },
+          {
+            "test": "test_retrigger_time_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 7
+          },
+          {
+            "test": "test_scanner_bounce_overflow_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 11
+          },
+          {
+            "test": "test_lighting_modes_bounds",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 44849
+          },
+          {
+            "test": "test_final_output_cap_and_order",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 24
+          }
+        ]
+      },
+      "integration": {
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_timeout_stale_reply_retry",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 6
+          },
+          {
+            "test": "test_hid_descriptors_and_wire_encoding",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 22
+          },
+          {
+            "test": "test_replace_busy_apply_keeps_confirmed_config",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 15
+          },
+          {
+            "test": "test_spsc_fifo_peek_full",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 1806
+          },
+          {
+            "test": "test_mailbox_complete_value_copy",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 6
+          },
+          {
+            "test": "test_overflow_new_epoch_no_history",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 139
+          },
+          {
+            "test": "test_bt_push_single_stream",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 13
+          },
+          {
+            "test": "test_pause_apply_ack_busy_and_resume",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 14
+          }
+        ]
+      },
+      "transport": {
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_transport_order_busy_fault_and_mutex",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 29
+          },
+          {
+            "test": "test_transport_mouse_owner_and_control_bounds",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 18
+          }
+        ]
+      },
+      "protocol": {
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_protocol_json_and_runtime_atomic_validation",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 1229
+          },
+          {
+            "test": "test_protocol_handshake_partial_and_backpressure",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 9
+          },
+          {
+            "test": "test_protocol_errors_and_line_resynchronization",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 3
+          },
+          {
+            "test": "test_protocol_dual_core_apply_and_revision_conflict",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 10
+          },
+          {
+            "test": "test_protocol_disconnect_busy_timeout_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 7
+          },
+          {
+            "test": "test_protocol_timeout_and_revision_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 6
+          },
+          {
+            "test": "test_cdc_transport_guard_dtr_and_partial_write",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 11
+          },
+          {
+            "test": "test_runtime_rejects_invalid_actions_and_lighting",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 29
+          },
+          {
+            "test": "test_protocol_envelope_rejects_noncanonical_fields",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 16
+          }
+        ]
+      },
+      "storage": {
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_storage_schema_golden_and_17_node_calibration",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 6
+          },
+          {
+            "test": "test_storage_profiles_full_snapshot_codec",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 21
+          },
+          {
+            "test": "test_storage_cut_erase_and_payload_early",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 251
+          },
+          {
+            "test": "test_storage_cut_payload_late_and_commit",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 215
+          },
+          {
+            "test": "test_storage_corruption_semantic_fallback_generation_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 26
+          },
+          {
+            "test": "test_storage_readback_failure_preserves_previous",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 5
+          },
+          {
+            "test": "test_storage_protocol_templates_and_save_ack",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 8
+          },
+          {
+            "test": "test_storage_motion_codec_and_import_atomicity",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 9
+          },
+          {
+            "test": "test_storage_maintenance_release_resume_current_mask",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 8
+          },
+          {
+            "test": "test_storage_truncation_0",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 777
+          },
+          {
+            "test": "test_storage_truncation_1",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 777
+          },
+          {
+            "test": "test_storage_truncation_2",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 777
+          },
+          {
+            "test": "test_storage_truncation_3",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 777
+          },
+          {
+            "test": "test_storage_truncation_4",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 777
+          },
+          {
+            "test": "test_storage_truncation_5",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 396
+          },
+          {
+            "test": "test_storage_set_profile_full_payload_and_readback",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 4
+          },
+          {
+            "test": "test_storage_import_revision_change_invalidates_candidate",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 3
+          }
+        ]
+      },
+      "app_storage": {
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_app_full_snapshot_save_boot_and_preview",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 10
+          },
+          {
+            "test": "test_app_save_waits_usb_completion_and_resumes_on_flash_failure",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 8
+          },
+          {
+            "test": "test_app_maintenance_disconnect_timeout_no_write",
+            "passed": true,
+            "failed_cpp_line": null,
+            "completed": true,
+            "checks": 5
+          }
+        ]
+      }
+    },
+    "groups": 48,
+    "checks": 53591,
+    "firmware": {
+      "date_local": "2026-10-03T05:10:59.121664+08:00",
+      "validation": "production entry normal NKRO prototype compile/link only",
+      "fqbn": "rp2040:rp2040:generic:flash=4194304_0,boot2=boot2_w25q64jv_4_padded_checksum,freq=125,usbstack=tinyusb",
+      "core": "Arduino-Pico 6.1.0",
+      "tinyusb": "3.7.7 project-owned startup adapter",
+      "exit_code": 0,
+      "source_sha256": {
+        "firmware/FluxRail/FluxRail.ino": "0375af76ea40e292a8682d4e50fa40ca85d53bfd96cb8ce27ce342af5e3e7490",
+        "firmware/FluxRail/src/app/App.cpp": "62f196dd064b59d7750ce4977d76085bef2695857d5a1bda816360accb52dbeb",
+        "firmware/FluxRail/src/app/App.h": "99c50ca50dd96f4a70868595fceb5c29c4be24e0556c095993643d534dd8cb6b",
+        "firmware/FluxRail/src/app/ConfigCoordinator.cpp": "18363f54ff8f673b59684d5426f96fdbcf92463d64729dcd880b87167192c64a",
+        "firmware/FluxRail/src/app/ConfigCoordinator.h": "a34afd85d14a0a0a793631e3af9298553689baf8fd14b77b46cc458b36b5c3b9",
+        "firmware/FluxRail/src/board/BoardConfig.h": "87d59a31b2ee329ad008378cb4590856db3b064fa4d9fc4c25793827dfe5b176",
+        "firmware/FluxRail/src/common/ConfigTypes.h": "1bb104188fb36fc0dbfcea3db2a79c54af6af9d31d46f2c8b2474912d421a811",
+        "firmware/FluxRail/src/common/DeviceConfig.h": "361598acd8c5770b8e8e583e13268c3c7b0b40de0d535df546c7a5b74d03726f",
+        "firmware/FluxRail/src/common/InputTypes.h": "244a3d3fc727e56ba83549976a0169d56a2007052bd1500be365151dc19657a8",
+        "firmware/FluxRail/src/config/ConfigStore.cpp": "43b8dcab5a99ed48ba514758c73470b5390c3420bc562746e76107119927a743",
+        "firmware/FluxRail/src/config/ConfigStore.h": "fb8086891e3c17c03a268c11c1705a19c4d6925b0cf00028f867d134fada53da",
+        "firmware/FluxRail/src/config/DeviceCodec.cpp": "fef7d0ca162f46de0cbdfd2b5f31cd39f93b35f3c225ce4b2979b7e1a2ab4916",
+        "firmware/FluxRail/src/config/DeviceCodec.h": "70eec154f4ebd8901487c0198617c262871a39f571f71acd926eadfbac0bbfe9",
+        "firmware/FluxRail/src/config/FlashRp2040.cpp": "d96a4a6162e5f03db6597220cd8121c5b2ea10530b411f575095c39bb33c5423",
+        "firmware/FluxRail/src/config/FlashRp2040.h": "4463e632a4acad031a919ec8f4651b4d8da750e523ddbeb081604ad4cb431c5b",
+        "firmware/FluxRail/src/config/ProfileManager.cpp": "326f21eebb329b97cf6ce385a6f0ac48f23be33762a43d37642ddb4607458822",
+        "firmware/FluxRail/src/config/ProfileManager.h": "30bb41ce439cee74b5941a0f63ed7885622d50d06a602324a4b4ff126c58519f",
+        "firmware/FluxRail/src/hall/HallAdcRp2040.cpp": "1d6ae498806720f0b70e8593d9dec7ed7003711027d1858051d1f1ff758db54e",
+        "firmware/FluxRail/src/hall/HallAdcRp2040.h": "fbfd6afa09277c4029a8b2359bd5ada4dd6f5e849f49c12e7bacb980aabc6f96",
+        "firmware/FluxRail/src/hall/HallCalibration.cpp": "eb4fa6527b71a97676467042da82e3cbb9460ce8e83557c856955bca8a279511",
+        "firmware/FluxRail/src/hall/HallCalibration.h": "1cb8428e153bb1bb713c5437cedbf200c1de3986877e098898cb2d60b0e633f0",
+        "firmware/FluxRail/src/hall/HallModule.cpp": "84188dfb0a0ad6626f2e6b48b5fb5d9598c900a092b42d15eff74706b999e2c9",
+        "firmware/FluxRail/src/hall/HallModule.h": "9b300c9acde814269bd209cf54fccdd2f2f6f5a4ed8eee2e8fe52c6bdca71333",
+        "firmware/FluxRail/src/hall/HallPosition.cpp": "e0812ef6d16987e1a983a47690c36be0f4bf28ec0cf1d1229749ef8776c685b3",
+        "firmware/FluxRail/src/hall/HallPosition.h": "084ea88c91fb031005961fa9e004d491b8018122678c7f54200833c8b4939bd2",
+        "firmware/FluxRail/src/hall/HallSampler.cpp": "495c56433b8fd0b8c2295fcb6db26b8a4e513a76f725ba51c2208875036eab2f",
+        "firmware/FluxRail/src/hall/HallSampler.h": "895933fc948990c1008d107a692f968070e529fea81b3f9caf76656993343d04",
+        "firmware/FluxRail/src/hall/HallTypes.cpp": "7a85accc84a18e068acce2e837b40cbce7c0919c38cf255759ebd7e5fdfbe2bc",
+        "firmware/FluxRail/src/hall/HallTypes.h": "74bcc31a175cf0627a56bbde25f0c9a0b54769092d0330bfadd9f62a59be0be1",
+        "firmware/FluxRail/src/keyboard/ActionMapper.cpp": "1418b7706b2000ed93eba4f970eefab25b808a2c15a857e928fb3d64c24934c0",
+        "firmware/FluxRail/src/keyboard/ActionMapper.h": "2fc0c143ff3076f17de9fe002254ec7f5147001cef8229b44f8dedacb0e59b1c",
+        "firmware/FluxRail/src/keyboard/KeyboardTypes.cpp": "3cff667ce1b1ad9b26a4961874e5c69aca5bedd25cec6fa4a085278e2db4a899",
+        "firmware/FluxRail/src/keyboard/KeyboardTypes.h": "bcf283cd8845bfa1e7dad1f312d71aecd2b3edd6b89534ef31f064d21678d228",
+        "firmware/FluxRail/src/keyboard/KeyScanner.cpp": "b8dedbb7dd92c8b99266100619014da716f709e3333a776589139f7bd7392580",
+        "firmware/FluxRail/src/keyboard/KeyScanner.h": "f114bbff6f4d8af97e0c5c4611e5b5ae1b414a9d3646154a46309823f2b8e87d",
+        "firmware/FluxRail/src/keyboard/KeyScannerRp2040.cpp": "41cacf342f1d0f6c394f3ee30f0eba8b2f056d76332cdda0c296277247bcb33b",
+        "firmware/FluxRail/src/keyboard/KeyScannerRp2040.h": "524543ac23b2db840a62627133cd9d6700059be5de68fad5d2d88f6c6dcfbb85",
+        "firmware/FluxRail/src/knobs/AppPushSink.h": "d9f293f0df5e42e88520807fe9654a25ac492d4c1b9c8d4796c4fe9bf5c1abc6",
+        "firmware/FluxRail/src/knobs/KnobModule.cpp": "9ca8302f4fbdbfdfd7198aa9f0ea7a758057a27be3b53df3755c3bc355bf05ed",
+        "firmware/FluxRail/src/knobs/KnobModule.h": "5659d3e3a1d901b4e865214b90f96a7d3ee77c19c72136e45d36e6309df8de23",
+        "firmware/FluxRail/src/knobs/KnobMotion.cpp": "e8bc842e098dd1de7e525661266da9d23f4d0c85092d70faf59b189588de53c8",
+        "firmware/FluxRail/src/knobs/KnobMotion.h": "a3659dce30beb2068ebe3c802064f49b8304562679c4519fff274b517c6aaf8c",
+        "firmware/FluxRail/src/knobs/KnobSampler.cpp": "12dbf961cbd1ae4418bed9571371b8566bc93dc0567c600f13b7ca4555ed21eb",
+        "firmware/FluxRail/src/knobs/KnobSampler.h": "35379f5fe6f0521ba398c6b490d312f06a9453f4562dd94cb9777c52d325535b",
+        "firmware/FluxRail/src/knobs/KnobTypes.cpp": "43213a7fddd2eb9fb193fa011589530f8af2892d3ad47ba397912b5f6b6f1c88",
+        "firmware/FluxRail/src/knobs/KnobTypes.h": "24b48050ec66b05d9220b9ccdabf5b5c51b82a0322387898197c44eccf7e9964",
+        "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.cpp": "96cc34e020f5c6c31b822a635feec193c55c45cc001a5639ffeb4357deaf38f6",
+        "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.h": "da59845e22564bb09309be60a10d94d1fa655e4e66f0b4d8bd445e580b2d0074",
+        "firmware/FluxRail/src/knobs/PushFilter.cpp": "d9bcc31ebebfa9d6acce050a09215c6889dbef83630a092c1a9a9bb5b803c0d8",
+        "firmware/FluxRail/src/knobs/PushFilter.h": "8c3ce8108f7cb32cec9b6b59ac95f0ddceb0e58d0557457ab2db455b101d83dd",
+        "firmware/FluxRail/src/lighting/KeyLighting.cpp": "2063558405f4ca0b735d0f69f2ecc3d3b9909c05022857ee561745cf9d5527f8",
+        "firmware/FluxRail/src/lighting/KeyLighting.h": "9e2f3f1eb92b2f79cf2f78e82d8e60d4f867425b1480cc39574a9c4f7d96072e",
+        "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.cpp": "79945f4abef1917fad8018be030dad3cb5eb87773ef00d31bc0dc6d9d39653ea",
+        "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.h": "3cbd6f8c6fb273a7ade848dc5fb965119845bb22e3ea902c2695169726d557f1",
+        "firmware/FluxRail/src/protocol/ConfigProtocol.cpp": "e0e12b41d076acbf8e489458855a4e182e3e013a1ce3a6ea38b7d2ffd0a684b5",
+        "firmware/FluxRail/src/protocol/ConfigProtocol.h": "78d197876eaff7e1c52117e93382ff830fefc1031cc5e21108ecc52b9740fe8b",
+        "firmware/FluxRail/src/protocol/ConfigProtocolDevice.cpp": "088a76e72d054a2af6f06bce5f1b5a1bd115124fb663d741e9d24a1c3defa789",
+        "firmware/FluxRail/src/protocol/Json.cpp": "4d18acaa17f25a6bff48538044f5fee5ded1148c83770b904676174277502cfa",
+        "firmware/FluxRail/src/protocol/Json.h": "07a76ea481fcc2f2ef8df2e60ac2d2f1ffc5df5a5a8fbb0f770dbdd9e03f3fbb",
+        "firmware/FluxRail/src/protocol/ProfileCodec.cpp": "60f392a6d27f37106dfb7a2d0e34743c7520bb0cef93c7c9fb32691598ff359e",
+        "firmware/FluxRail/src/protocol/ProfileCodec.h": "9f69a808e43893f5fb14259d6446a1b5833926196008ac24fb5c4ea3b0f55a8d",
+        "firmware/FluxRail/src/protocol/RuntimeCodec.cpp": "a6ca4ad2bcb2a2b1e943f9ac29a6f6e7cccea308eca035422f2e7e548b49f705",
+        "firmware/FluxRail/src/protocol/RuntimeCodec.h": "2d25e3a4bbb67a39e293fbb359b291f2c432dd5187ebf7fc376c99f5a1754cd7",
+        "firmware/FluxRail/src/realtime/ConfigMailbox.h": "6ec840dc7368432a559dab85d26e7f2a23cd14d0a2f36024fbce9236cbaad44b",
+        "firmware/FluxRail/src/realtime/InputWorker.cpp": "cd299a1a96d857e86593572dc43abe49e4940edc01ea6a705e72f13a8364056b",
+        "firmware/FluxRail/src/realtime/InputWorker.h": "a6504a1e12f89fcf413ea2847f08921171910306cf4609eaa19b11c66c563d25",
+        "firmware/FluxRail/src/realtime/SpscQueue.h": "d53170a665c34adf1283751120c794f084b6043f3ba4ea4e7b6b76819ed6bced",
+        "firmware/FluxRail/src/usb/CdcTransport.cpp": "337b2130e7c4ba0414a7f47be9b298760920cdd5f1e3684354c09752f43b2df7",
+        "firmware/FluxRail/src/usb/CdcTransport.h": "a15bba457769b38f7b85c621e6d78481ccf6b43d08e51a2474e8d55fac932856",
+        "firmware/FluxRail/src/usb/NormalHid.cpp": "ec449d38201150ff03c1e7cda690b80ecd8e794ae02eef59a962ba4bac6dedc6",
+        "firmware/FluxRail/src/usb/NormalHid.h": "287d19e2a45f74e2b2706ecdb84bc008b5748fcebb6ce3e7c9b5243ed85a90c3",
+        "firmware/FluxRail/src/usb/NormalHidCodec.cpp": "20912404701f99fa2bd18eba37638b14f6fa9e856c14455e3a879d78553c5fdc",
+        "firmware/FluxRail/src/usb/NormalHidCodec.h": "90dc5618e7dcf69683638c56ad6d805cb25f8e8b0ffbfa8f68d003277a96359b"
+      },
+      "dependency_adapter": {
+        "upstream": "Arduino-Pico6.1.0 bundled Adafruit TinyUSB3.7.7",
+        "source": "C:\\Users\\admin\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\6.1.0\\libraries\\Adafruit_TinyUSB_Arduino",
+        "generated": "C:\\Users\\admin\\Documents\\FluxRail\\dependencies\\generated\\Adafruit_TinyUSB_Arduino",
+        "modified": [
+          "src/arduino/Adafruit_USBD_Device.cpp",
+          "src/arduino/Adafruit_USBD_Device.h"
+        ],
+        "source_sha256": {
+          "src/arduino/Adafruit_USBD_Device.cpp": "bf5b5618c8bc6654b0d139349e7a9a68ba051a2146c0b84f0c52e3b7e3122c4c",
+          "src/arduino/Adafruit_USBD_Device.h": "63b7cd70b8428e66057749251b5fe64381301a062b4fe6a378447bd51bdeb468"
+        },
+        "generated_sha256": {
+          "src/arduino/Adafruit_USBD_Device.cpp": "940b1082422caaed17dc0b983ee9fb839ef781ec9ed336e33fe90b25dda52788",
+          "src/arduino/Adafruit_USBD_Device.h": "8a5cc2b952b0db3b5b205eb83a1ce81f654491906c34a20cbf2acf518178ca79"
+        },
+        "system_library_modified": false
+      },
+      "uploaded": false,
+      "hardware_tested": false,
+      "game_tested": false,
+      "io4_implemented": false,
+      "flash_storage_implemented": true,
+      "log": "firmware_compile.log",
+      "cdc_protocol_version": 1,
+      "runtime_config_scope": "device_schema1",
+      "flash_slot_offsets": [
+        4173824,
+        4182016
+      ],
+      "flash_slot_bytes": 8192,
+      "source_drift_during_compile": [],
+      "copied_source_mismatch": [],
+      "strict_project_units": 34,
+      "source_link_audit_passed": true
+    },
+    "stack_usage": [
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocolDevice.cpp:24:6:bool fluxrail::protocol::ConfigProtocol::dispatchDevice(uint16_t, uint16_t, uint32_t, fluxrail::protocol::ConfigHost&)",
+        "bytes": 1192,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:47:6:bool fluxrail::protocol::decodeRuntime(const Json&, uint16_t, fluxrail::common::RuntimeConfig&)",
+        "bytes": 304,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:78:6:void fluxrail::protocol::ConfigProtocol::dispatch(uint32_t, fluxrail::protocol::ConfigHost&)",
+        "bytes": 256,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:36:12:fluxrail::hall::Projection fluxrail::hall::project(const float*, const Calibration&)",
+        "bytes": 240,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ProfileCodec.cpp:82:6:bool fluxrail::protocol::decodeMotion(const Json&, uint16_t, fluxrail::common::Profile&)",
+        "bytes": 192,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:15:1:fluxrail::app::App::App()",
+        "bytes": 168,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:40:6:void fluxrail::knobs::KnobModule::sample(uint8_t, const fluxrail::knobs::Sample&, fluxrail::knobs::PushSink&)",
+        "bytes": 168,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.cpp:92:6:void fluxrail::realtime::InputWorker::service(uint16_t, uint32_t)",
+        "bytes": 168,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:54:6:virtual bool fluxrail::app::App::applyDevice(const fluxrail::common::DeviceConfig&, uint32_t)",
+        "bytes": 160,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\ConfigCoordinator.cpp:38:6:void fluxrail::app::ConfigCoordinator::service(uint32_t, fluxrail::keyboard::ActionSink&)",
+        "bytes": 160,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:19:6:void fluxrail::app::App::beginCore0()",
+        "bytes": 152,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallPosition.cpp:30:10:fluxrail::hall::Estimate fluxrail::hall::HallPosition::process(const fluxrail::hall::Sample&)",
+        "bytes": 136,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\ActionMapper.cpp:102:6:void fluxrail::keyboard::ActionMapper::service(uint32_t, fluxrail::keyboard::ActionSink&)",
+        "bytes": 136,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:85:11:fluxrail::knobs::Discarded fluxrail::knobs::KnobModule::discardPaused(uint8_t)",
+        "bytes": 128,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:75:6:bool fluxrail::hall::validateCalibrationStructure(const Calibration&)",
+        "bytes": 112,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:82:6:void fluxrail::app::App::serviceCore0()",
+        "bytes": 104,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:25:13:void fluxrail::config::preset(fluxrail::common::Profile&, uint32_t)",
+        "bytes": 104,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:42:6:void fluxrail::hall::HallModule::sample(const fluxrail::hall::Sample&)",
+        "bytes": 96,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobMotion.cpp:24:8:fluxrail::knobs::Motion fluxrail::knobs::KnobMotion::sample(const fluxrail::knobs::Sample&, uint8_t, uint32_t)",
+        "bytes": 88,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:214:6:bool fluxrail::config::DeviceCodec::decode(const uint8_t*, size_t, fluxrail::common::DeviceConfig&)",
+        "bytes": 80,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:133:6:void fluxrail::hall::HallCalibration::sample(const fluxrail::hall::Sample&)",
+        "bytes": 80,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:137:6:bool fluxrail::hall::validateCalibration(const Calibration&)",
+        "bytes": 80,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ConfigStore.cpp:67:12:fluxrail::config::SaveResult fluxrail::config::ConfigStore::save(const fluxrail::common::DeviceConfig&)",
+        "bytes": 72,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallSampler.cpp:5:6:bool fluxrail::hall::HallSampler::poll(uint32_t, fluxrail::hall::AdcReader&, fluxrail::hall::Sample&)",
+        "bytes": 72,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyboardTypes.cpp:40:6:bool fluxrail::keyboard::bindingFromUsAscii(char, fluxrail::common::Binding&)",
+        "bytes": 72,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\KeyLighting.cpp:56:12:fluxrail::lighting::LightFrame fluxrail::lighting::renderLights(const fluxrail::common::LightingConfig&, uint16_t, uint32_t, bool, fluxrail::common::Rgb)",
+        "bytes": 72,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\Ws2812OutputRp2040.cpp:30:6:bool fluxrail::lighting::Ws2812OutputRp2040::begin(const fluxrail::lighting::LedOrder&, bool)",
+        "bytes": 72,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:78:6:virtual bool fluxrail::usb::NormalHid::tryKeyboard(const fluxrail::common::KeyboardState&)",
+        "bytes": 72,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ConfigStore.cpp:20:6:bool fluxrail::config::ConfigStore::readSlot(uint8_t, uint32_t&, fluxrail::common::DeviceConfig&)",
+        "bytes": 64,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:70:6:bool fluxrail::hall::HallCalibration::beginSweep(uint32_t)",
+        "bytes": 56,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:216:6:void fluxrail::hall::HallCalibration::finishCapture()",
+        "bytes": 56,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyScanner.cpp:20:6:void fluxrail::keyboard::KeyScanner::sample(uint16_t, uint32_t, fluxrail::keyboard::EdgeSink&)",
+        "bytes": 56,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ConfigStore.cpp:47:6:bool fluxrail::config::ConfigStore::load(fluxrail::common::DeviceConfig&)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:156:6:constprop(Bytes&, fluxrail::common::DeviceConfig&)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:205:8:static size_t fluxrail::config::DeviceCodec::encode(const fluxrail::common::DeviceConfig&, uint8_t*, size_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\Mt6701SsiRp2040.cpp:39:6:virtual bool fluxrail::knobs::Mt6701SsiRp2040::read(uint8_t, fluxrail::knobs::Sample&)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\Ws2812OutputRp2040.cpp:120:6:bool fluxrail::lighting::Ws2812OutputRp2040::trySubmit(const fluxrail::lighting::LightFrame&, uint32_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:216:6:void fluxrail::protocol::ConfigProtocol::service(uint32_t, fluxrail::protocol::CdcPort&, fluxrail::protocol::ConfigHost&)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:39:6:bool fluxrail::protocol::Json::value(uint8_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:242:6:bool fluxrail::protocol::Json::doubleValue(uint16_t, double&) const",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:312:6:void fluxrail::protocol::JsonWriter::number(uint32_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:21:6:bool fluxrail::protocol::{anonymous}::color(const fluxrail::protocol::Json&, uint16_t, fluxrail::common::Rgb&)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.cpp:26:6:virtual bool fluxrail::realtime::InputWorker::tryEdge(uint8_t, bool, uint32_t, uint32_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.cpp:55:6:void fluxrail::realtime::InputWorker::handle(const fluxrail::realtime::ConfigCommand&, uint16_t, uint32_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:95:6:virtual bool fluxrail::usb::NormalHid::tryMouseButtons(uint8_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:110:6:bool fluxrail::usb::NormalHid::tryRelative(int16_t, int16_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:137:10:uint16_t fluxrail::usb::NormalHid::getKeyboard(uint8_t, hid_report_type_t, uint8_t*, uint16_t)",
+        "bytes": 48,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.h:7:7:constexpr fluxrail::config::DeviceCodec::DeviceCodec()",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:42:8:void fluxrail::config::{anonymous}::Bytes::u32(uint32_t&)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:35:6:void fluxrail::config::defaults(fluxrail::common::DeviceConfig&)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:87:6:bool fluxrail::config::createProfile(fluxrail::common::DeviceConfig&, uint32_t, const char*)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:16:6:bool fluxrail::hall::HallModule::startCalibration(uint32_t, uint32_t, bool, float, float)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:32:6:void fluxrail::hall::responses(const Sample&, const Calibration&, float*)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:14:6:void fluxrail::knobs::KnobModule::pause(fluxrail::knobs::PushSink&, uint32_t)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:25:6:bool fluxrail::knobs::KnobModule::resume(uint32_t, const fluxrail::knobs::Discarded (&)[2])",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobSampler.cpp:9:6:bool fluxrail::knobs::KnobSampler::poll(uint8_t, uint32_t, fluxrail::knobs::Reader&, fluxrail::knobs::Sample&)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\PushFilter.cpp:10:6:bool fluxrail::knobs::PushFilter::sample(const fluxrail::knobs::Sample&, bool)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\KeyLighting.cpp:100:6:void fluxrail::lighting::packLightWords(const LightFrame&, const LedOrder&, bool, uint32_t*, uint32_t&)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:37:6:void fluxrail::protocol::ConfigProtocol::finish(fluxrail::protocol::JsonWriter&)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:156:6:bool fluxrail::protocol::Json::uintValue(uint16_t, uint32_t&) const",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ProfileCodec.cpp:5:6:void fluxrail::protocol::encodeMotion(JsonWriter&, const fluxrail::common::Profile&)",
+        "bytes": 40,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:66:6:virtual bool fluxrail::app::App::save(uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\ConfigMailbox.h:19:8:constexpr fluxrail::realtime::RealtimeBridge::RealtimeBridge()",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\ConfigCoordinator.cpp:7:6:bool fluxrail::app::ConfigCoordinator::start(const fluxrail::common::RuntimeConfig&, uint32_t, bool)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:35:8:void fluxrail::config::{anonymous}::Bytes::u16(uint16_t&)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:73:8:void fluxrail::config::{anonymous}::Bytes::real64(double&)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\FlashRp2040.cpp:41:6:virtual bool fluxrail::config::FlashRp2040::program(uint8_t, uint32_t, const uint8_t*, uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:106:6:bool fluxrail::config::deleteProfile(fluxrail::common::DeviceConfig&, uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:25:6:bool fluxrail::hall::HallCalibration::start(uint32_t, uint32_t, bool, float, float)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:55:6:bool fluxrail::hall::HallCalibration::captureNode(float, uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallPosition.cpp:5:6:bool fluxrail::hall::HallPosition::apply(const fluxrail::hall::Settings&, uint32_t, uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\ActionMapper.cpp:27:15:fluxrail::common::KeyboardState fluxrail::keyboard::ActionMapper::buildKeyboard(uint16_t) const",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\ActionMapper.cpp:47:6:bool fluxrail::keyboard::ActionMapper::reset(const fluxrail::common::KeyboardConfig&, uint32_t, uint16_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\ActionMapper.cpp:65:15:fluxrail::keyboard::IngressResult fluxrail::keyboard::ActionMapper::enqueue(uint8_t, bool, uint32_t, uint32_t, uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyboardTypes.cpp:29:16:fluxrail::common::KeyboardConfig fluxrail::keyboard::defaultKeyboardConfig()",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:5:6:bool fluxrail::knobs::KnobModule::apply(const fluxrail::knobs::Settings (&)[2], uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\Mt6701SsiRp2040.cpp:23:6:bool fluxrail::knobs::Mt6701SsiRp2040::begin(uint32_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:56:6:void fluxrail::protocol::ConfigProtocol::error(const char*, const char*, const fluxrail::protocol::ConfigHost&)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:68:6:void fluxrail::protocol::ConfigProtocol::configReply(const fluxrail::protocol::ConfigHost&)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocolDevice.cpp:5:6:void fluxrail::protocol::ConfigProtocol::deviceReply(const fluxrail::protocol::ConfigHost&)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:15:6:bool fluxrail::protocol::Json::string()",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:195:10:uint16_t fluxrail::protocol::Json::field(uint16_t, const char*) const",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:210:6:bool fluxrail::protocol::Json::shape(uint16_t, const char* const*, uint16_t) const",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:234:6:bool fluxrail::protocol::Json::floatValue(uint16_t, float&) const",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:132:6:void fluxrail::protocol::encodeRuntime(JsonWriter&, const fluxrail::common::RuntimeConfig&)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:8:12:fluxrail::usb::NormalHid& fluxrail::usb::normalHid()",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:22:10:uint16_t fluxrail::usb::{anonymous}::keyboardGet(uint8_t, hid_report_type_t, uint8_t*, uint16_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:26:10:uint16_t fluxrail::usb::{anonymous}::mouseGet(uint8_t, hid_report_type_t, uint8_t*, uint16_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:29:6:void fluxrail::usb::{anonymous}::keyboardSet(uint8_t, hid_report_type_t, const uint8_t*, uint16_t)",
+        "bytes": 32,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:46:6:bool fluxrail::app::App::applyRuntimeConfig(const fluxrail::common::RuntimeConfig&, uint32_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:66:8:void fluxrail::config::{anonymous}::Bytes::real(float&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:52:8:void fluxrail::config::{anonymous}::Bytes::boolean(bool&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\FlashRp2040.cpp:28:6:virtual bool fluxrail::config::FlashRp2040::erase(uint8_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:64:6:bool fluxrail::config::validDevice(const fluxrail::common::DeviceConfig&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallAdcRp2040.cpp:10:6:bool fluxrail::hall::HallAdcRp2040::begin()",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallAdcRp2040.cpp:48:6:virtual bool fluxrail::hall::HallAdcRp2040::read12(uint8_t, uint16_t&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:32:6:bool fluxrail::hall::HallModule::resume(uint32_t, uint32_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:18:13:bool fluxrail::hall::between(float, float, float)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyScannerRp2040.cpp:8:6:void fluxrail::keyboard::beginKeyPinsRp2040()",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobMotion.cpp:10:6:bool fluxrail::knobs::KnobMotion::apply(const fluxrail::knobs::Settings&, uint32_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobTypes.cpp:19:7:fluxrail::knobs::Frame fluxrail::knobs::decode(const Sample&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobTypes.cpp:35:6:bool fluxrail::knobs::validate(const Settings&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\Ws2812OutputRp2040.cpp:148:6:void fluxrail::lighting::Ws2812OutputRp2040::releaseResources()",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:13:6:void fluxrail::protocol::ConfigProtocol::prefix(fluxrail::protocol::JsonWriter&, bool, const fluxrail::protocol::ConfigHost&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:282:6:void fluxrail::protocol::JsonWriter::real(double)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:11:6:bool fluxrail::protocol::{anonymous}::byte(const fluxrail::protocol::Json&, uint16_t, const char*, uint8_t&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.cpp:14:6:void fluxrail::realtime::InputWorker::begin(uint16_t, uint32_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.cpp:47:6:bool fluxrail::realtime::InputWorker::submitPush(uint8_t, bool, uint32_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\CdcTransport.cpp:35:10:virtual uint32_t fluxrail::usb::CdcTransport::write(const char*, uint32_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\CdcTransport.cpp:16:6:virtual bool fluxrail::usb::CdcTransport::connectionState(bool&)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\CdcTransport.cpp:27:9:virtual int32_t fluxrail::usb::CdcTransport::readByte()",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:34:6:bool fluxrail::usb::NormalHid::configureBeforeConnect()",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:48:6:bool fluxrail::usb::NormalHid::connectionState(bool&) const",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:59:6:bool fluxrail::usb::NormalHid::quiescent()",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:67:6:bool fluxrail::usb::NormalHid::readStats(fluxrail::usb::HidStats&) const",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:155:10:uint16_t fluxrail::usb::NormalHid::getMouse(uint8_t, hid_report_type_t, uint8_t*, uint16_t)",
+        "bytes": 24,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:40:18:fluxrail::common::Profile* fluxrail::config::find(fluxrail::common::DeviceConfig&, uint32_t)",
+        "bytes": 20,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobTypes.cpp:8:9:uint8_t fluxrail::knobs::crc6(uint32_t)",
+        "bytes": 20,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\Ws2812OutputRp2040.cpp:100:6:void fluxrail::lighting::Ws2812OutputRp2040::service(uint32_t)",
+        "bytes": 20,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:10:6:void fluxrail::protocol::Json::space()",
+        "bytes": 20,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:144:6:bool fluxrail::protocol::Json::text(uint16_t, const char*) const",
+        "bytes": 20,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:218:6:bool fluxrail::protocol::Json::stringValue(uint16_t, char*, size_t) const",
+        "bytes": 20,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:33:6:void fluxrail::app::App::beginCore1()",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:39:6:void fluxrail::app::App::serviceCore1()",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\ConfigCoordinator.cpp:29:6:bool fluxrail::app::ConfigCoordinator::finishMaintenance(uint32_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:84:8:void fluxrail::config::{anonymous}::Bytes::color(fluxrail::common::Rgb&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:8:10:uint32_t fluxrail::config::crc32(const uint8_t*, size_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:52:6:bool fluxrail::config::validProfile(const fluxrail::common::Profile&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:81:23:fluxrail::common::RuntimeConfig fluxrail::config::activeRuntime(const fluxrail::common::DeviceConfig&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:99:6:bool fluxrail::config::renameProfile(fluxrail::common::DeviceConfig&, uint32_t, const char*)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:47:6:bool fluxrail::hall::HallCalibration::captureReference(uint8_t, uint32_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:109:6:bool fluxrail::hall::HallCalibration::finishSweep(uint32_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:5:6:bool fluxrail::hall::HallModule::apply(const fluxrail::hall::Settings&, uint32_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:13:6:bool fluxrail::hall::HallModule::load(const fluxrail::hall::Calibration&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallPosition.cpp:14:6:bool fluxrail::hall::HallPosition::load(const fluxrail::hall::Calibration&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:6:7:float fluxrail::hall::clamp(float, float, float)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:10:7:float fluxrail::hall::squareRoot(float)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:21:6:bool fluxrail::hall::validateSettings(const Settings&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyboardTypes.cpp:20:6:bool fluxrail::keyboard::validConfig(const fluxrail::common::KeyboardConfig&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyScanner.cpp:5:6:bool fluxrail::keyboard::KeyScanner::reset(const fluxrail::common::ScanConfig&, uint16_t, uint32_t, uint32_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyScannerRp2040.cpp:17:10:uint16_t fluxrail::keyboard::readKeyDownMaskRp2040()",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:82:6:bool fluxrail::knobs::KnobModule::tryTake(uint8_t, fluxrail::knobs::Motion&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobMotion.cpp:18:6:void fluxrail::knobs::KnobMotion::resetReference()",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobTypes.cpp:48:10:fluxrail::knobs::Settings fluxrail::knobs::defaults(uint8_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\Mt6701SsiRp2040.cpp:15:6:void fluxrail::knobs::Mt6701SsiRp2040::configure(uint8_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\PushFilter.cpp:5:6:void fluxrail::knobs::PushFilter::apply(const fluxrail::knobs::PushSettings&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:135:6:bool fluxrail::protocol::Json::parse(const char*, uint16_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:308:6:void fluxrail::protocol::JsonWriter::literal(const char*)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:7:6:bool fluxrail::protocol::{anonymous}::integer(const fluxrail::protocol::Json&, uint16_t, const char*, uint32_t&, uint32_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:18:6:bool fluxrail::protocol::{anonymous}::boolean(const fluxrail::protocol::Json&, uint16_t, const char*, bool&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\RuntimeCodec.cpp:35:6:void fluxrail::protocol::{anonymous}::rgb(fluxrail::protocol::JsonWriter&, const fluxrail::common::Rgb&)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:74:6:bool fluxrail::usb::NormalHid::connected() const",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:179:17:void tud_hid_report_complete_cb(uint8_t, const uint8_t*, uint16_t)",
+        "bytes": 16,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallAdcRp2040.cpp:35:6:bool fluxrail::hall::HallAdcRp2040::conversion(uint16_t&)",
+        "bytes": 12,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\ActionMapper.cpp:38:9:uint8_t fluxrail::keyboard::ActionMapper::buildMouse(uint16_t) const",
+        "bytes": 12,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\KeyLighting.cpp:47:6:bool fluxrail::lighting::validLedOrder(const LedOrder&)",
+        "bytes": 12,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:186:10:uint16_t fluxrail::protocol::Json::count(uint16_t) const",
+        "bytes": 12,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\FluxRail.ino:6:6:void setup()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\FluxRail.ino:7:6:void loop()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\FluxRail.ino:8:6:void setup1()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\FluxRail.ino:9:6:void loop1()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:17:7:virtual constexpr fluxrail::app::App::~App()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:54:8:virtual bool fluxrail::app::App::flashAvailable() const",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:39:8:virtual bool fluxrail::app::App::ready() const",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:47:8:virtual bool fluxrail::app::App::apply(const fluxrail::common::RuntimeConfig&, uint32_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:192:1:cpp)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\ConfigCoordinator.cpp:22:6:bool fluxrail::app::ConfigCoordinator::startMaintenance(const fluxrail::common::RuntimeConfig&, uint32_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\SpscQueue.h:46:8:bool fluxrail::realtime::SpscQueue<T, Capacity>::tryPop(T&) [with T = fluxrail::common::InputSnapshot; long unsigned int Capacity = 4]",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\FlashRp2040.h:5:7:virtual constexpr fluxrail::config::FlashRp2040::~FlashRp2040()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\FlashRp2040.cpp:19:6:virtual bool fluxrail::config::FlashRp2040::read(uint8_t, uint32_t, uint8_t*, uint32_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\6.1.0\\cores\\rp2040/RP2040Support.h:211:10:void _MFIFO::idleOtherCore()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\6.1.0\\cores\\rp2040/RP2040Support.h:225:10:void _MFIFO::resumeOtherCore()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:18:13:void fluxrail::config::nameCopy(char*, const char*)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:46:24:const fluxrail::common::Profile* fluxrail::config::find(const fluxrail::common::DeviceConfig&, uint32_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:121:6:bool fluxrail::config::restorePreset(fluxrail::common::DeviceConfig&, uint32_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallAdcRp2040.h:8:7:virtual constexpr fluxrail::hall::HallAdcRp2040::~HallAdcRp2040()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:24:6:void fluxrail::hall::HallModule::pause()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.cpp:29:10:uint32_t fluxrail::hall::HallModule::discardPaused()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallPosition.cpp:40:17:fluxrail::hall::HallPosition::process(const fluxrail::hall::Sample&)::<lambda(fluxrail::hall::Quality)>",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallPosition.cpp:21:6:void fluxrail::hall::HallPosition::adoptCompleted(const fluxrail::hall::Calibration&)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallTypes.cpp:9:7:float fluxrail::hall::magnitude(float)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\KeyboardTypes.cpp:5:6:bool fluxrail::keyboard::validBinding(const fluxrail::common::Binding&)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\SpscQueue.h:46:8:bool fluxrail::realtime::SpscQueue<T, Capacity>::tryPop(T&) [with T = fluxrail::knobs::Motion; long unsigned int Capacity = 64]",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\Mt6701SsiRp2040.h:14:7:virtual constexpr fluxrail::knobs::Mt6701SsiRp2040::~Mt6701SsiRp2040()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\KeyLighting.cpp:6:5:fluxrail::common::Rgb fluxrail::lighting::{anonymous}::wheel(uint8_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\Ws2812OutputRp2040.cpp:141:6:bool fluxrail::lighting::Ws2812OutputRp2040::end()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.h:50:8:void fluxrail::protocol::JsonWriter::boolean(bool)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:302:6:void fluxrail::protocol::JsonWriter::put(char)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.h:50:8:void fluxrail::protocol::JsonWriter::boolean(bool)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.h:50:8:void fluxrail::protocol::JsonWriter::boolean(bool)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.h:8:7:virtual constexpr fluxrail::realtime::InputWorker::~InputWorker()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\CdcTransport.h:7:7:virtual constexpr fluxrail::usb::CdcTransport::~CdcTransport()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.h:18:7:virtual constexpr fluxrail::usb::NormalHid::~NormalHid()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:15:8:constexpr fluxrail::usb::{anonymous}::UsbGuard::UsbGuard()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:17:3:fluxrail::usb::{anonymous}::UsbGuard::~UsbGuard()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:124:6:void fluxrail::usb::NormalHid::reportCompleted(uint8_t, uint16_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:165:6:void fluxrail::usb::NormalHid::keyboardOutput(uint8_t, hid_report_type_t, const uint8_t*, uint16_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:176:17:void fluxrail_usb_configure_before_connect()",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:183:17:void tud_hid_report_failed_cb(uint8_t, hid_report_type_t, const uint8_t*, uint16_t)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHidCodec.cpp:24:6:void fluxrail::usb::encodeKeyboard(const fluxrail::common::KeyboardState&, uint8_t*)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHidCodec.cpp:35:6:void fluxrail::usb::encodeRelativeMouse(uint8_t, int16_t, int16_t, uint8_t*)",
+        "bytes": 8,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:35:32:virtual const fluxrail::common::RuntimeConfig& fluxrail::app::App::appliedConfig() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:38:12:virtual uint32_t fluxrail::app::App::requestedRevision() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:41:8:virtual bool fluxrail::app::App::failed() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:46:15:virtual const char* fluxrail::app::App::serial() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:50:31:virtual const fluxrail::common::DeviceConfig* fluxrail::app::App::deviceConfig() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:53:12:virtual uint32_t fluxrail::app::App::savedRevision() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:55:11:virtual uint8_t fluxrail::app::App::validSlots() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:57:8:virtual bool fluxrail::app::App::saving() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:58:22:virtual fluxrail::config::SaveResult fluxrail::app::App::saveResult() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:17:7:constexpr fluxrail::app::App::~App()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:42:12:virtual uint16_t fluxrail::app::App::physicalMask() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:75:13:virtual const char* fluxrail::app::App::maintenancePhase() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\SpscQueue.h:39:8:bool fluxrail::realtime::SpscQueue<T, Capacity>::pop() [with T = fluxrail::common::InputEdge; long unsigned int Capacity = 128]",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.h:40:8:virtual bool fluxrail::app::App::busy() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\ConfigCoordinator.h:42:8:bool fluxrail::app::ConfigCoordinator::ready() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\app\\App.cpp:14:6:fluxrail::app::App& fluxrail::app::application()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ConfigStore.cpp:7:10:uint32_t fluxrail::config::{anonymous}::get(const uint8_t*)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ConfigStore.cpp:11:6:void fluxrail::config::{anonymous}::put(uint8_t*, uint32_t)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\DeviceCodec.cpp:24:8:void fluxrail::config::{anonymous}::Bytes::u8(uint8_t&)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\FlashRp2040.cpp:14:6:virtual bool fluxrail::config::FlashRp2040::available() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\FlashRp2040.h:5:7:constexpr fluxrail::config::FlashRp2040::~FlashRp2040()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:8:10:uint32_t fluxrail::config::nextRevision(uint32_t)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\config\\ProfileManager.cpp:9:6:bool fluxrail::config::validName(const char*)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallAdcRp2040.cpp:9:10:virtual uint32_t fluxrail::hall::HallAdcRp2040::nowUs() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallAdcRp2040.h:8:7:constexpr fluxrail::hall::HallAdcRp2040::~HallAdcRp2040()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:6:6:bool fluxrail::hall::HallCalibration::running() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:10:6:void fluxrail::hall::HallCalibration::fail(fluxrail::hall::CalibrationError)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:15:6:void fluxrail::hall::HallCalibration::beginCapture(fluxrail::hall::CalibrationStage, uint16_t)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:121:6:void fluxrail::hall::HallCalibration::tick(uint32_t)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallCalibration.cpp:126:6:void fluxrail::hall::HallCalibration::cancel()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallModule.h:42:8:bool fluxrail::hall::HallModule::paused() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\hall\\HallPosition.cpp:25:6:void fluxrail::hall::HallPosition::resetReference()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\keyboard\\ActionMapper.cpp:95:6:void fluxrail::keyboard::ActionMapper::finishEvent()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:76:6:bool fluxrail::knobs::KnobModule::paused(uint8_t) const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobModule.cpp:79:6:bool fluxrail::knobs::KnobModule::recoveryNeeded(uint8_t) const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\KnobSampler.cpp:5:6:void fluxrail::knobs::KnobSampler::reset()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\Mt6701SsiRp2040.h:14:7:constexpr fluxrail::knobs::Mt6701SsiRp2040::~Mt6701SsiRp2040()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\Mt6701SsiRp2040.cpp:14:10:uint32_t fluxrail::knobs::Mt6701SsiRp2040::nowUs() const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\knobs\\PushFilter.cpp:6:6:void fluxrail::knobs::PushFilter::reset()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\KeyLighting.cpp:41:6:bool fluxrail::lighting::validLightingConfig(const fluxrail::common::LightingConfig&)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\lighting\\Ws2812OutputRp2040.cpp:175:1:cpp)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\ConfigProtocol.cpp:5:6:void fluxrail::protocol::ConfigProtocol::resetSession()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\protocol\\Json.cpp:173:6:bool fluxrail::protocol::Json::boolValue(uint16_t, bool&) const",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.h:8:7:constexpr fluxrail::realtime::InputWorker::~InputWorker()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\realtime\\InputWorker.cpp:22:6:void fluxrail::realtime::InputWorker::updatePhysical()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\CdcTransport.h:7:7:constexpr fluxrail::usb::CdcTransport::~CdcTransport()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\CdcTransport.cpp:50:1:cpp)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.h:18:7:constexpr fluxrail::usb::NormalHid::~NormalHid()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:9:20:void __tcf_ZZN8fluxrail3usb9normalHidEvE8instance()",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:131:6:void fluxrail::usb::NormalHid::reportFailed(uint8_t)",
+        "bytes": 0,
+        "kind": "static"
+      },
+      {
+        "function": "C:\\Users\\admin\\Documents\\FluxRail\\firmware\\FluxRail\\src\\usb\\NormalHid.cpp:186:1:cpp)",
+        "bytes": 0,
+        "kind": "static"
+      }
+    ],
+    "compile_summary": [
+      "Sketch uses 119516 bytes (2%) of program storage space. Maximum is 4173824 bytes.",
+      "Global variables use 80248 bytes (30%) of dynamic memory, leaving 181896 bytes for local variables. Maximum is 262144 bytes."
+    ],
+    "strict_project_units": 34,
+    "stack_frame_budget_passed": true,
+    "flash_sram_symbols": {
+      "flash_range_erase": 536874052,
+      "flash_range_program": 536874184
+    },
+    "project_warnings": 0,
+    "uploaded": false,
+    "hardware_tested": false,
+    "game_tested": false
+  },
+  "artifact": {
+    "uf2": "tests/integration/build/arduino/FluxRail.ino.uf2",
+    "bytes": 274944,
+    "sha256": "d80e6f222356e58cb8cd43b9e5e184ca133216f648e7669285358e9db7949857",
+    "uploaded": false
+  },
+  "test_script_sample_sha256": {
+    "tests/module1/run_tests.py": "2a4b9a86d4aae53448eb310bca789dee8c8be145b26e2e380108900ad725ae46",
+    "tests/integration/cdc_client.py": "42ded5dec3b261a5b50c6a68f9430fdab144a3b1c79693f24ad9e511bf2cbbb4",
+    "tests/integration/compile_firmware.py": "11c018899d80337ee89bf48a1084e6a4f647fc6d5f40c3307752c309499ef225",
+    "tests/integration/finalize_storage_report.py": "3236cfa6a7d4b779a9d7e59408b42bf19a4271b6c1e300f80463466e82d34e1a",
+    "tests/integration/run_app_storage.py": "c7430e6185773744114dbb99c58fa30d0600db8302fb06c1025bb91c3801a2dd",
+    "tests/integration/run_protocol.py": "21a2c0b4c7f86cb581b4510afe191ba2f7b5d8e92f6938c5eacef24d704663b6",
+    "tests/integration/run_storage.py": "e48ef2c942b97828744d6d2668e35f622a26e8e5fc48581741623a99baead0bf",
+    "tests/integration/run_tests.py": "7442f7e0912ecb87d884a0d7eeef144242b8fc3c7a4a1004436f44e99a7e159a",
+    "tests/integration/run_transport.py": "5344bb4dbe679dd11d84c9f4aa692185459e33705e4027d81d7e5295ea960cdd",
+    "tests/integration/app_storage_tests.cpp": "f34d3343ed259f587e64d8f60cdc664f705edd0dc9517eb0ea4054736fca32a7",
+    "tests/integration/integration_tests.cpp": "a1ecbd29abbe08cb17bd1dd2406bd9f53f97e529cc1e4c3168aceae380b69c5b",
+    "tests/integration/protocol_tests.cpp": "20934d05b75b81840ad667fd524ca107b638811f905dca748f9c5418ed07f3c0",
+    "tests/integration/storage_tests.cpp": "e83adb66cb7d66c81eca4713fe75bab8c5daa6a7fee89be8280f13d83f03c886",
+    "tests/integration/transport_tests.cpp": "b08d35543d5da8881f33ffc35ede588e94e04f1602b08a629c35e43f05a4518a",
+    "tests/integration/cdc_examples.jsonl": "3b449eab466297014bde8919f61cfefe9b32017efaf36545eb65b111e1a9e530",
+    "tests/integration/storage_examples.jsonl": "f3541b03aeb91db1fa55374d24e49fe6021e2bf668bd170a4e2172161d04e19c",
+    "tests/integration/schema1_defaults.bin": "c67377f09ac1d3f491b8f6060088781131a530df061780352cc0ea4a9287a754",
+    "tests/integration/stubs/Adafruit_TinyUSB.h": "5ef4e2701b373295f937d4c0b7d5cf0e9fb3917028f5319c150b2c654c73b480",
+    "tests/integration/stubs/pico/mutex.h": "3f0408073dbb2ed777586c83e13543888e4121a0a07a81972914aabbcb3570b8",
+    "tests/integration/stubs_app/Arduino.h": "05c79e13c21eba525b518dfc79fd1a7411c8cfceb184389b986cade90346edf2",
+    "tests/integration/stubs_app/hardware/pio.h": "353e1e119e86f388a9acd6d25f5e2387e76309b3ca340de6f391cee422dea6a9",
+    "tests/integration/stubs_app/hardware/watchdog.h": "814279bdb249f0c273e5005083c4061f39ba7437d82333d1843c1a12abc1d5ea",
+    "tests/integration/stubs_app/pico/unique_id.h": "bf2df4f38d76f6cf01f54fee4c85899015d2c4160a03e4ef052d5a5a53ff1560"
+  },
+  "storage": {
+    "schema": 1,
+    "profiles": 12,
+    "presets": 4,
+    "slot_offsets": [
+      4173824,
+      4182016
+    ],
+    "slot_bytes": 8192,
+    "erase_sector_bytes": 4096,
+    "explicit_save": true,
+    "calibration_object_memory_written": false,
+    "default_payload_bytes": 1339,
+    "default_payload_crc32": 3954875198
+  },
+  "review": [
+    "immutable full RAM candidate published after module1 two-core ACK",
+    "previews never erase/program Flash",
+    "independent sectors, inactive slot only",
+    "commit page programmed last after byte readback; final CRC/schema/semantic verification",
+    "maintenance release USB completion before Flash, pause ACK, resume ACK after rebuild",
+    "CDC disconnect does not cancel accepted apply/save",
+    "whole import revision isolated",
+    "original hall/knobs business sources not modified; only their values/validators referenced",
+    "actual App/NormalHid simulated with explicit hardware boundary replacements"
+  ],
+  "remaining": [
+    "physical Flash/power cut and real dual-core lockout not tested",
+    "USB host, Windows Web Serial, RGB/GRB and games not tested",
+    "HallModule/KnobModule scheduling, calibration jobs/diagnostics/motion routing not connected",
+    "absolute X with independent Y, IO4/persona cold switch not implemented",
+    "mouse duplicate strategy/default lights/mode colors remain engineering starting values"
+  ],
+  "previous_snapshot": "validation_cdc_2026-10-03.json"
+}

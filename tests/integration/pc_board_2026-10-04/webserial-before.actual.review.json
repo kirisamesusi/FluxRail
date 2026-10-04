@@ -1,0 +1,54 @@
+{
+  "reviewer": "Luna",
+  "kind": "fresh_webserial_pretest_baseline_actual_review",
+  "verdict": "baseline_healthy_and_ready_for_isolated_webserial_test",
+  "evidence": [
+    "webserial-before/baseline.json",
+    "webserial-before/baseline-cdc.jsonl",
+    "webserial-before/original-schema2.bin",
+    "webserial-before/original-profiles.json",
+    "tests/integration/test_webserial_offscreen.cjs",
+    "tests/integration/prepare_offscreen_runtime.ps1"
+  ],
+  "baseline": {
+    "saved_revision": 5,
+    "requests": 15,
+    "active_profile": 4,
+    "physical_mask": 0,
+    "forced_recovery": false,
+    "schema2_length": 1387,
+    "serial": "5054316560DD729C",
+    "current_mode": "NORMAL_NKRO",
+    "version": "0.10.1",
+    "revision": 5,
+    "all_ok": true,
+    "requested_startup": "NORMAL_NKRO",
+    "maintenance": "idle",
+    "apply_failed": false,
+    "config_ready": true,
+    "crc_matches_metadata": true,
+    "crc32": 895336899,
+    "saved_startup": "NORMAL_NKRO",
+    "dirty": false,
+    "read_only": true,
+    "valid_slots": 3
+  },
+  "script_delta": {
+    "cleanup": "Uses globalThis testClient/cdcEvidence for safe no-connection paths; original profile captured before mutation, finally restoration path retained.",
+    "selection": "Exact serial and COM29 unique chooser selection; real Chromium SerialPort, production page/client; no mock.",
+    "stage_snapshots": "Each snap now writes cdc.json and summary.json, improving evidence retention.",
+    "hardware_requested": false,
+    "production_code_changed": false
+  },
+  "runtime": {
+    "current_archive": "Still partial per parent; not checksum-validated, extracted, or executed.",
+    "source": "Official Electron v44.5.1 Windows x64 GitHub release",
+    "checksum": "SHA256 compared with the version-pinned electron npm checksums.json before extraction"
+  },
+  "limits": [
+    "Baseline establishes pre-test identity and persistence state, not Web Serial success.",
+    "The Web Serial run has not occurred in this review.",
+    "180-second timeout bypasses finally; if mutation_attempted is present after abnormal exit, require independent CDC restore and full snapshot verification.",
+    "Post-short electrical integrity remains unknown despite this successful read-only baseline."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "actual_production_webserial_then_independent_cdc_snapshot",
+  "cdc_browser_count": 36,
+  "browser_write_count": 4,
+  "browser_write_ops": [
+    "set_profile",
+    "save_config",
+    "set_profile",
+    "save_config"
+  ],
+  "browser_error": null,
+  "browser_restored": true,
+  "reconnect_saved_readback": true,
+  "independent_read_requests": 15,
+  "profiles_equal": true,
+  "schema_length": 1387,
+  "schema_diff_offsets": [
+    4
+  ],
+  "schema_equal_except_revision": true,
+  "initial_revision": 5,
+  "revision": 7,
+  "saved_revision": 7,
+  "dirty": false,
+  "crc32": 3710059708,
+  "active_profile": 4,
+  "mode": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "NORMAL_NKRO",
+    "saved_startup": "NORMAL_NKRO",
+    "forced_recovery": false,
+    "reboot_ready": false
+  },
+  "serial_closed": true,
+  "game": "not_run",
+  "hardware_flash_capacity_verified": false,
+  "passed": true
+}

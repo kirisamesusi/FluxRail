@@ -1,0 +1,238 @@
+Sketch uses 152724 bytes (3%) of program storage space. Maximum is 4173824 bytes.
+Global variables use 107220 bytes (40%) of dynamic memory, leaving 154924 bytes for local variables. Maximum is 262144 bytes.
+
+Used library             Version Path
+Adafruit TinyUSB Library 3.7.7   C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino
+SPI                      1.0     C:\Users\admin\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\6.1.0\libraries\SPI
+
+Used platform Version Path
+rp2040:rp2040 6.1.0   C:\Users\admin\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\6.1.0
+
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\NormalHid.h:4,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\UsbBackend.h:5,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\app\App.h:9,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\FluxRail.ino:3:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\CdcTransport.cpp:2:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\NormalHid.h:4,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\NormalHid.cpp:1:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\NormalHid.h:4,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\UsbBackend.h:5,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\UsbBackend.cpp:1:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\NormalHid.h:4,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\usb\UsbBackend.h:5,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\app\App.h:9,
+                 from C:\Users\admin\Documents\FluxRail\firmware\FluxRail\src\app\App.cpp:1:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\msc\Adafruit_USBH_MSC.h:28,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\msc\Adafruit_USBH_MSC.cpp:34:
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBD_Interface.cpp:29:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\msc\Adafruit_USBD_MSC.h:28,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\msc\Adafruit_USBD_MSC.cpp:29:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\hid\Adafruit_USBD_HID.h:28,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\hid\Adafruit_USBD_HID.cpp:29:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\video\Adafruit_USBD_Video.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\video\Adafruit_USBD_Video.cpp:31:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\midi\Adafruit_USBD_MIDI.h:29,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\midi\Adafruit_USBD_MIDI.cpp:29:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\cdc\Adafruit_USBH_CDC.cpp:34:
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\ports\rp2040\Adafruit_TinyUSB_rp2040.cpp:41:
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\webusb\Adafruit_USBD_WebUSB.h:29,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\webusb\Adafruit_USBD_WebUSB.cpp:29:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBD_Device.cpp:32:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBD_CDC.cpp:35:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_TinyUSB_API.cpp:29:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBH_Host.h:29,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src\arduino\Adafruit_USBH_Host.cpp:36:
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^
+In file included from C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/tusb.h:59,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/arduino/Adafruit_USBD_Device.h:30,
+                 from C:\Users\admin\Documents\FluxRail\dependencies\generated\Adafruit_TinyUSB_Arduino\src/Adafruit_TinyUSB.h:33,
+                 from C:\Users\admin\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\6.1.0\libraries\SPI\src\SPI.cpp:47:
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_dtr(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]
+  154 |   cdc_line_control_state_t line_state = {.dtr = dtr_state};
+      |                                                          ^
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h: In function 'bool tuh_cdc_set_rts(uint8_t, bool, tuh_xfer_cb_t, uintptr_t)':
+C:/Users/admin/Documents/FluxRail/dependencies/generated/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]
+  162 |   cdc_line_control_state_t line_state = {.rts = rts_state};
+      |                                                          ^

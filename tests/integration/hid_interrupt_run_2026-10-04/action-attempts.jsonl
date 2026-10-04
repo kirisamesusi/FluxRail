@@ -1,0 +1,14 @@
+{"time":"2026-10-04T12:34:22.1227511Z","request":{"op":"hello","id":30001,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.1357703Z","request":{"op":"get_device","id":30002,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.1427927Z","request":{"op":"get_status","id":30003,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.1540026Z","request":{"op":"get_status","id":30004,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.1600064Z","request":{"op":"set_active_profile","id":30005,"payload":{"expected_revision":1,"profile_id":1},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.1754177Z","request":{"op":"get_device","id":30006,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.1814164Z","request":{"op":"get_status","id":30007,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2099292Z","request":{"op":"get_status","id":30008,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2179290Z","request":{"op":"set_active_profile","id":30009,"payload":{"expected_revision":2,"profile_id":4},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2311257Z","request":{"op":"get_device","id":30010,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2376352Z","request":{"op":"get_status","id":30011,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2446363Z","request":{"op":"get_device","id":30012,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2506371Z","request":{"op":"get_device","id":30013,"payload":{},"protocol_version":1}}
+{"time":"2026-10-04T12:34:22.2576438Z","request":{"op":"get_status","id":30014,"payload":{},"protocol_version":1}}

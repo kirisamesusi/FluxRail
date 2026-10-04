@@ -1,0 +1,133 @@
+
+Provider                                 GUID
+-------------------------------------------------------------------------------
+Microsoft-Windows-USB-USBXHCI            {30E1D284-5D88-459C-83FD-6345B39B19EC}
+
+Value               Keyword              Description
+-------------------------------------------------------------------------------
+0x0000000000000001  Default              
+0x0000000000000002  USBError             
+0x0000000000000004  IRP                  
+0x0000000000000008  Power                
+0x0000000000000010  PnP                  
+0x0000000000000020  Performance          
+0x0000000000000040  HeadersBusTrace      
+0x0000000000000080  PartialDataBusTrace  
+0x0000000000000100  FullDataBusTrace     
+0x0000000000000200  StateMachine         
+0x0000000000000400  Enumeration          
+0x0000000000000800  VerifyDriver         
+0x0000000000001000  HWVerifyHost         
+0x0000000000002000  HWVerifyHub          
+0x0000000000004000  HWVerifyDevice       
+0x0000000000008000  Rundown              
+0x0000000000010000  Device               
+0x0000000000020000  Hub                  
+0x0000000000040000  Compat               
+0x0000000000080000  ControllerCommand    
+0x0000100000000000  ms:ReservedKeyword44 
+0x0000200000000000  ms:Telemetry         
+0x0000400000000000  ms:Measures          
+0x0000800000000000  ms:CriticalData      
+0x8000000000000000  System               System 
+0x4000000000000000  Microsoft-Windows-USB-USBXHCI-Analytic This is the Analytic channel to which internal Analytic events from the USBXHCI driver are sent. 
+0x2000000000000000  Microsoft-Windows-USB-USBXHCI-Trustlet-Analytic This is the Analytic channel to which internal Analytic events from the USBXHCI trustlet are sent from VTL1. 
+
+Value               Level                Description
+-------------------------------------------------------------------------------
+0x02                win:Error            Error 
+0x04                win:Informational    Information 
+
+PID                 Image                
+-------------------------------------------------------------------------------
+0x00000000                               
+
+
+The command completed successfully.
+
+
+Provider                                 GUID
+-------------------------------------------------------------------------------
+Microsoft-Windows-USB-UCX                {36DA592D-E43A-4E28-AF6F-4BC57C5A11E8}
+
+Value               Keyword              Description
+-------------------------------------------------------------------------------
+0x0000000000000001  Default              
+0x0000000000000002  USBError             
+0x0000000000000004  IRP                  
+0x0000000000000008  Power                
+0x0000000000000010  PnP                  
+0x0000000000000020  Performance          
+0x0000000000000040  HeadersBusTrace      
+0x0000000000000080  PartialDataBusTrace  
+0x0000000000000100  FullDataBusTrace     
+0x0000000000000200  StateMachine         
+0x0000000000000400  Enumeration          
+0x0000000000000800  VerifyDriver         
+0x0000000000001000  HWVerifyHost         
+0x0000000000002000  HWVerifyHub          
+0x0000000000004000  HWVerifyDevice       
+0x0000000000008000  Rundown              
+0x0000000000010000  Device               
+0x0000000000020000  Hub                  
+0x0000000000040000  Compat               
+0x0000000000080000  ControllerCommand    
+0x8000000000000000  Microsoft-Windows-USB-UCX-Analytic This is the Analytic channel to which internal Analytic events from the UCX driver are sent. 
+
+Value               Level                Description
+-------------------------------------------------------------------------------
+0x04                win:Informational    Information 
+
+PID                 Image                
+-------------------------------------------------------------------------------
+0x00000000                               
+
+
+The command completed successfully.
+
+
+Provider                                 GUID
+-------------------------------------------------------------------------------
+Microsoft-Windows-USB-USBHUB3            {AC52AD17-CC01-4F85-8DF5-4DCE4333C99B}
+
+Value               Keyword              Description
+-------------------------------------------------------------------------------
+0x0000000000000001  Default              
+0x0000000000000002  USBError             
+0x0000000000000004  IRP                  
+0x0000000000000008  Power                
+0x0000000000000010  PnP                  
+0x0000000000000020  Performance          
+0x0000000000000040  HeadersBusTrace      
+0x0000000000000080  PartialDataBusTrace  
+0x0000000000000100  FullDataBusTrace     
+0x0000000000000200  StateMachine         
+0x0000000000000400  Enumeration          
+0x0000000000000800  VerifyDriver         
+0x0000000000001000  HWVerifyHost         
+0x0000000000002000  HWVerifyHub          
+0x0000000000004000  HWVerifyDevice       
+0x0000000000008000  Rundown              
+0x0000000000010000  Device               
+0x0000000000020000  Hub                  
+0x0000000000040000  Compat               
+0x0000000000080000  ControllerCommand    
+0x0000100000000000  ms:ReservedKeyword44 
+0x0000200000000000  ms:Telemetry         
+0x0000400000000000  ms:Measures          
+0x0000800000000000  ms:CriticalData      
+0x8000000000000000  System               System 
+0x4000000000000000  Microsoft-Windows-USB-USBHUB3-Analytic This is the Analytic channel to which internal Analytic events from the USBHUB3 driver are sent. 
+
+Value               Level                Description
+-------------------------------------------------------------------------------
+0x02                win:Error            Error 
+0x03                win:Warning          Warning 
+0x04                win:Informational    Information 
+
+PID                 Image                
+-------------------------------------------------------------------------------
+0x00000000                               
+
+
+The command completed successfully.

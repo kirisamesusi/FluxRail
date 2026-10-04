@@ -1,0 +1,16 @@
+{
+  "reviewer": "Luna",
+  "assessment": "static_preflight_pass_with_timeout_race_visibility",
+  "evidence": [
+    "tests/integration/run_io4_protocol_watchdog_v2.ps1",
+    "tests/integration/test_io4_protocol_actual_v2.py"
+  ],
+  "findings": {
+    "cached_process_handle": "The launcher captures the child Process.Handle before waiting and retains the Process object, then checks HasExited/ExitCode after WaitForExit. This is a reasonable attempt to preserve access to the eventual exit code. The prior actual preflight's null exit_code remains unchanged and is not retroactively repaired.",
+    "timeout_accounting": "V2 distinguishes deadline_elapsed, kill_attempted, kill_completed and exit_code_available, and only kills when the current PID, start time and executable path match the launched child. It records when independent state readback or physical recovery is required.",
+    "identity_and_scope": "The child path/hash, serial argument, output folder and redirected logs remain explicit; --preflight-only has no report-output commands. The full run's os._exit containment path does not falsely claim Python finally restoration.",
+    "minor_implementation_note": "$taskCachedHandle is assigned but not otherwise referenced; the launched Process object itself is also retained in $taskChild. This appears harmless but may be removed if it is not needed to keep the native handle rooted.",
+    "verification_boundary": "This is static review only; the V2 launcher has not been exercised by the submitted evidence. The earlier preflight used the old launcher and its null exit code must remain visible. Parent reports the V2 PowerShell parser check passed."
+  },
+  "recommendation": "The launcher V2 is suitable for subsequent separately authorized protocol execution with per-run evidence review. Preserve all pre-existing artifacts; classify any deadline or containment exit as cleanup unverified unless independent readback proves restored state."
+}

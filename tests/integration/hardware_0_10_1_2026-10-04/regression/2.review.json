@@ -1,0 +1,8 @@
+{
+  "stage": 2,
+  "reviewer": "gpt-6-luna",
+  "run_started": "2026-10-04T09:13:12.622Z",
+  "stage_name": "阶段2通过：RAM应用与恢复",
+  "continue": true,
+  "evaluation": "Luna查证227条CDC成功；set_profile31/set_active20/set_io4_bindings2，30组参数及20切换读回/恢复符合预期。final-schema2.bin与原始仅revision字段1→54变化，meta/模板恢复，无save/reboot。通过范围是CDC RAM配置与IO4映射读回，物理输入/灯/外设/游戏/掉电未验证。"
+}

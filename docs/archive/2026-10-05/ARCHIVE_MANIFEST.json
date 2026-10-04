@@ -1,0 +1,244 @@
+{
+  "date_local": "2026-10-05",
+  "original_snapshot": "backups/docs-before-reorganization-2026-10-05/original-documents.zip",
+  "files": [
+    {
+      "original_path": "docs/spec/00_项目需求与决策.md",
+      "archive_path": "docs/archive/2026-10-05/spec/00_项目需求与决策.md",
+      "original_sha256": "1ea2c35bcdff2fca0a0fc5a4288aaee16314301b85fbe18390edfd6141bacdc6",
+      "archive_sha256": "93ec75893594a3d3588ce0efe0244503c5f84fba1d3e15fe7ee57b056ec45a7f",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/01_公共接口与集成约定.md",
+      "archive_path": "docs/archive/2026-10-05/spec/01_公共接口与集成约定.md",
+      "original_sha256": "5d1f96eae334bdde19547f8fb71b4c881536acdd29effd6c656968457c930c9d",
+      "archive_sha256": "a18cbaab6e4e6cd9723424f3a156858f537e7df35a73087af8a875f8b640afeb",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/02_模块1_键盘与灯光.md",
+      "archive_path": "docs/archive/2026-10-05/spec/02_模块1_键盘与灯光.md",
+      "original_sha256": "c0bf62a3292520c270d48119009e50645e20c95c2333894791b39206c7f02de3",
+      "archive_sha256": "71c2ad1104cb2537a245e81769fa3d7bd8d75639a4f96a0196b50635773d425f",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/03_模块2_三霍尔滑轨.md",
+      "archive_path": "docs/archive/2026-10-05/spec/03_模块2_三霍尔滑轨.md",
+      "original_sha256": "cb79a00e5209919d2e0e53ada1c52c28c85c9cd08d8904545a9372f69770b5e1",
+      "archive_sha256": "f5bf9e3a5e1496e1181be11ef47da113a8b9b5850b37d189f5f12e144317eebf",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/04_模块3_MT6701旋钮.md",
+      "archive_path": "docs/archive/2026-10-05/spec/04_模块3_MT6701旋钮.md",
+      "original_sha256": "4f6a8625e5d8885032400c1723cc0e2bd9f2b04c06fcbb6e4df99e01e744e530",
+      "archive_sha256": "f416ab984ed6550de282218b93f630f7dfb0b5f1b4c1013360bbc1a2277d01fa",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/05_模块4_Web上位机.md",
+      "archive_path": "docs/archive/2026-10-05/spec/05_模块4_Web上位机.md",
+      "original_sha256": "647d8b2ea2ce46bbab7b615479b1543b496b072e312c5ceab7e88af7cae34b8c",
+      "archive_sha256": "d530181054394c0933ff1849891f7ad04ab9104d60d5fa5908e6f8addd3036e8",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/06_验收与实测计划.md",
+      "archive_path": "docs/archive/2026-10-05/spec/06_验收与实测计划.md",
+      "original_sha256": "2e662d08b23966f6f3ea3b2e42cc81a860d208d3cb01f3e483f45ec9671f9f1d",
+      "archive_sha256": "10698648bdbdd3d54ca334cf1ca80d802873e1f1df18bd782e4937b14d5ba72c",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/07_旧项目审查与来源.md",
+      "archive_path": "docs/archive/2026-10-05/spec/07_旧项目审查与来源.md",
+      "original_sha256": "b8a3db58567358d90290074ef738c8f53ec2c7096b03e8ba49bc07670ee9c87f",
+      "archive_sha256": "2cce48aee7d267b027211102a15ef5173497a10317a07cd97c023c80b10f0787",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/08_功能缺口与使用场景清单.md",
+      "archive_path": "docs/archive/2026-10-05/spec/08_功能缺口与使用场景清单.md",
+      "original_sha256": "8698c8d1573036e1dfcaa54c62ced4d0335cf510d5c39d01f603aa7f86b171e1",
+      "archive_sha256": "95a452d9ff90513f114b9d6f2ace7505a7aaddaff5d6c248c3303defda5a577f",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/09_IO4兼容与USB冷切换.md",
+      "archive_path": "docs/archive/2026-10-05/spec/09_IO4兼容与USB冷切换.md",
+      "original_sha256": "41e5a0c59bd09f1d8031623e73b092ab1c807c197b2a0b4aad53e69858efdd6f",
+      "archive_sha256": "22b70a4563bbf5ccb6d4db915f26777333a598e0d54593355a24127c0ffef5ed",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/10_IO4外部项目对比.md",
+      "archive_path": "docs/archive/2026-10-05/spec/10_IO4外部项目对比.md",
+      "original_sha256": "0e4835be229ed5f938b372d5744ac529038d209c0172ed5104c9fc40f2b4f515",
+      "archive_sha256": "2d8ce8715a388fedab8eb79f638185570701b40a3e205df154ce38866421f154",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/11_Arduino模块拆分与四窗口交接.md",
+      "archive_path": "docs/archive/2026-10-05/spec/11_Arduino模块拆分与四窗口交接.md",
+      "original_sha256": "851d3c726e326bb9e10ccd1fb654845190d73df0d31fbbd87e3c45a5e86f4c11",
+      "archive_sha256": "08619ffa6a679333ed0e07fae5444c7918b44dd91c4790f008e043a1f6073185",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/12_完整配置与Flash序列化.md",
+      "archive_path": "docs/archive/2026-10-05/spec/12_完整配置与Flash序列化.md",
+      "original_sha256": "95ca7c90bbdc5ee51f4e0d05aff4a90cc407d1014f6000ec656bb95336dc1023",
+      "archive_sha256": "7a43eeeb7efaf624757aed2d72f354dba0b396b3e08152157183f55d53fb4c17",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/13_IO4软件契约.md",
+      "archive_path": "docs/archive/2026-10-05/spec/13_IO4软件契约.md",
+      "original_sha256": "a246f1301c05df3a8ab06309935d9a906c6b778fd5e5e3a05ed36984c24af5e3",
+      "archive_sha256": "7c2882cf8ac03d5c722a64cb433f72b97612b52ea92fea75a5cb361a518f0005",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/14_模块整合运行契约.md",
+      "archive_path": "docs/archive/2026-10-05/spec/14_模块整合运行契约.md",
+      "original_sha256": "5d6f6b9fd3ace74e47827d3ef1c50216ca4e9c4a8978f9d4090914dcede88326",
+      "archive_sha256": "c61bf49d5fae46a5744fef058fc0875b139470ec7a8decf7bf70e194a9240857",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/spec/15_固件版本与UF2识别.md",
+      "archive_path": "docs/archive/2026-10-05/spec/15_固件版本与UF2识别.md",
+      "original_sha256": "1911fc6c5decaf8cc42d159223dec7ea7de409c0b8d0c34741c60f9d51e53ea3",
+      "archive_sha256": "a18bc68067b303655c80b8bb32f792575778f5f99dfce368c9635351d3d35514",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/IO4.md",
+      "archive_path": "docs/archive/2026-10-05/progress/IO4.md",
+      "original_sha256": "8261431f752081ae551fcdbf682976c4f81c9c7e543e99fcd15431735e162f66",
+      "archive_sha256": "f1f36cddf467afb6dd7854c2c9d030eceda4084cbe33755595170fa8916758f7",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/修复.md",
+      "archive_path": "docs/archive/2026-10-05/progress/修复.md",
+      "original_sha256": "97e46c9da0411cbf9049386201e86b03d92a1153496393399d8841e825737aa2",
+      "archive_sha256": "f64c9d0e6437fc5f56fabafbfd72f6d6d9e912a0ce8856983926da4023a30b65",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/模块1.md",
+      "archive_path": "docs/archive/2026-10-05/progress/模块1.md",
+      "original_sha256": "326bb6bf79d04b3ed2740170fc38a003936dfaec32f388bbbefcc2ced31f12c5",
+      "archive_sha256": "8edc5046c5a467a3ae105a7b13cdc46eb0f88812238605ff188f9f4a9ef1b98f",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/模块2.md",
+      "archive_path": "docs/archive/2026-10-05/progress/模块2.md",
+      "original_sha256": "4114ee0a83e6825ac1354cf2aa9f81fc80dcf05d507b81e18b84bd711746370a",
+      "archive_sha256": "b533fab0d88f536d8fadc58919f7518521e3babb7f8c89507145d6d22b9f2e69",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/模块3.md",
+      "archive_path": "docs/archive/2026-10-05/progress/模块3.md",
+      "original_sha256": "fd30df19e3b3e7027936c21e65e4fc284ea46c0761bbc07a513cf4f0fe142eb2",
+      "archive_sha256": "87d402fb0180b312adcce7c7a7a66a8edac96e6b982fd8321a9c84e7eb2bb8b2",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/模块4.md",
+      "archive_path": "docs/archive/2026-10-05/progress/模块4.md",
+      "original_sha256": "a749283adf520196abfa5150d59ea8153b12b5b6c34293338ac9bdd058c689a5",
+      "archive_sha256": "1140fe29eaf7faba146f7e70b90f57f2fdf853e080415c41e313d29f28799a3f",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/模块整合.md",
+      "archive_path": "docs/archive/2026-10-05/progress/模块整合.md",
+      "original_sha256": "cf7e95b4b64f9593d29ced935d5c5cc98abd312afd293d9759a37b98a89c4dcf",
+      "archive_sha256": "6d4390aa40623e9ca22e1924a2481d63e73d41f69c0808e2d3149216f7f5545d",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/progress/测试.md",
+      "archive_path": "docs/archive/2026-10-05/progress/测试.md",
+      "original_sha256": "a305297a6eade12e96e49739ea4eb2ee5345f1f63fcce157b2d8b494b5797bd7",
+      "archive_sha256": "3be8066d61cd210812cce4029354e8ac3251cfc25a6c0f2a6c507a27e86f9a52",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/FluxRail_需求总览_用户版.md",
+      "archive_path": "docs/archive/2026-10-05/handoffs/FluxRail_需求总览_用户版.md",
+      "original_sha256": "95b20a64f93093ac35f3f37250a235f4f8076cab236bcca9700b60d7f3c6708a",
+      "archive_sha256": "535508c03a4d0ca409a2ac677afd593e99a3c29e20c4e32cb28b5e48b105f081",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/FluxRail_开发交接_窗口必读.md",
+      "archive_path": "docs/archive/2026-10-05/handoffs/FluxRail_开发交接_窗口必读.md",
+      "original_sha256": "5cad23202af48b87aaee742a16643388b2374b5b6bb5d681722d149a8c43c009",
+      "archive_sha256": "573dafb8b113c42cbb53411c29b6b9f136ff03578d0f82d9fc8d2f532bf3079e",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/FluxRail_Web_开发与调整交接.md",
+      "archive_path": "docs/archive/2026-10-05/handoffs/FluxRail_Web_开发与调整交接.md",
+      "original_sha256": "ffff02d1771606d57c9117af461635150db2a67b0e65a530142beed06d5f2efd",
+      "archive_sha256": "31e0c53541d9b902597ac41a164a21d2bccf16118618ae9b560786f55aff9ef2",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/FluxRail_IO4专项_开发交接.md",
+      "archive_path": "docs/archive/2026-10-05/handoffs/FluxRail_IO4专项_开发交接.md",
+      "original_sha256": "ec91392ed0ec664cd59f28a6298735d3505005be2c5a2d0d8716f95ca034013f",
+      "archive_sha256": "47c232ce84eb12563d3d1a23d70c06307871d884abe37c66208ee0b6df743440",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "docs/rp2040_kb_firmware_notes.md",
+      "archive_path": "docs/archive/2026-10-05/handoffs/rp2040_kb_firmware_notes.md",
+      "original_sha256": "9ef2a2309151d98459d8c82879f2cdbc1679572656d6e98d226f99b97eddc239",
+      "archive_sha256": "ffb49935c7eb7bb5d64e9c59cd49284036c9c94638ffafa589d27c03cecedfc4",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "README.md",
+      "archive_path": "docs/archive/2026-10-05/root/README.md",
+      "original_sha256": "754ed73ad067708d1bd93ab939142a221a6218f04e0471ae240ccb4fc4ba2b7c",
+      "archive_sha256": "543eae37ff8cf0580e3afafad2bda11519eed2e19e087e06a484464eb3981ec7",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "RUN_INTEGRATED.md",
+      "archive_path": "docs/archive/2026-10-05/root/RUN_INTEGRATED.md",
+      "original_sha256": "80b1c2303f75398988937106960db3507ee09cd3b127f1ea9c1bef9a55654cad",
+      "archive_sha256": "f4abc58020a0f965fbcf7fc1cdb7aa1fef3fcfced54bb0dbc7334000e5ae2ccd",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "REVIEW_FULL_2026-10-04.md",
+      "archive_path": "docs/archive/2026-10-05/root/REVIEW_FULL_2026-10-04.md",
+      "original_sha256": "68c9cd3ec2dc339099696c013ca2e87b4ba19445097de9b6166fb5501d590005",
+      "archive_sha256": "0c843d53ddfb7af1228624402140f839562c02ad1c29fdc5e64120dda30fa5d9",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "firmware/FluxRail/README.md",
+      "archive_path": "docs/archive/2026-10-05/source-readmes/firmware/FluxRail/README.md",
+      "original_sha256": "6fac959635a75ee5d6eeaed7c3a46a8314aab4fe0e2f32456b9a10e8bf208b04",
+      "archive_sha256": "8ba42ca92d91e5032b93622c5f3c0de8f9426f958c9f8e13249e322456e06c1c",
+      "change": "Markdown relative links relocated; historical text retained"
+    },
+    {
+      "original_path": "web/README.md",
+      "archive_path": "docs/archive/2026-10-05/source-readmes/web/README.md",
+      "original_sha256": "596d81640ba08aea02d801a278e304d7090fc15beb375119afb3c8c09bb637af",
+      "archive_sha256": "3d95373c374e01e4f068a075b4939436d5c21d5e6d54d35983ac0483ba270510",
+      "change": "Markdown relative links relocated; historical text retained"
+    }
+  ]
+}

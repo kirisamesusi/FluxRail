@@ -1,0 +1,1 @@
+No accessible RP2040/RP2350 devices in BOOTSEL mode were found found with serial number E0C9125B0D9B.

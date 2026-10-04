@@ -1,0 +1,34 @@
+{
+  "time": "2026-10-04T15:34:51.793820+00:00",
+  "kind": "post_short_physical_GP9_to_GND_boot_recovery",
+  "serial": "5054316560DD729C",
+  "user_confirmation": {
+    "no_obvious_heating_reported": true,
+    "jumper_removed": true,
+    "user_text": "已完成，跳线已移除，无明显发热",
+    "time": "2026-10-04T15:34:51.0878442Z",
+    "completed": true
+  },
+  "monitor_disconnect_and_reconnect": true,
+  "forced_recovery": false,
+  "mode": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "NORMAL_NKRO",
+    "saved_startup": "NORMAL_NKRO",
+    "forced_recovery": false,
+    "reboot_ready": false
+  },
+  "physical_mask": 0,
+  "schema_byte_exact": true,
+  "profiles_equal": true,
+  "revision": 7,
+  "saved_revision": 7,
+  "dirty": false,
+  "crc32": 3710059708,
+  "device_writes": 0,
+  "serial_closed": true,
+  "electrical_health_verified": false,
+  "hardware_flash_capacity_verified": false,
+  "game": "not_run",
+  "passed": false
+}

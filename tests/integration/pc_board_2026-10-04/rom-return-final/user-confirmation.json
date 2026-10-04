@@ -1,0 +1,7 @@
+{
+  "no_boot_button": true,
+  "disconnected_at_least_5_seconds": true,
+  "reply": "已重插，无跳线、未按 BOOT",
+  "source": "Trusted user reply",
+  "no_jumper": true
+}

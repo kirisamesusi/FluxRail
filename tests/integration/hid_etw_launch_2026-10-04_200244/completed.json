@@ -1,0 +1,10 @@
+{
+    "started":  "2026-10-04T12:08:02.9169493Z",
+    "process_id":  251632,
+    "capture_directory":  "C:/Users/admin/Documents/FluxRail/tests/integration/hid_etw_run_2026-10-04_200244",
+    "exit_code":  1,
+    "administrator":  true,
+    "error":  "由于调用深度溢出，脚本失败。",
+    "error_details":  "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\capture_hid_etw_v2.ps1 : 由于调用深度溢出，脚本失败。\r\n所在位置 C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\hid_etw_launch_2026-10-04_200244\\run-elevated.ps1:13 字符: 2\r\n+  \u0026 \"$taskRoot/tests/integration/capture_hid_etw_v2.ps1\" -Port COM29 - ...\r\n+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidOperation: (0:Int32) [capture_hid_etw_v2.ps1]，RuntimeException\r\n    + FullyQualifiedErrorId : CallDepthOverflow,capture_hid_etw_v2.ps1\r\n \r\n",
+    "finished":  "2026-10-04T12:08:21.3391155Z"
+}

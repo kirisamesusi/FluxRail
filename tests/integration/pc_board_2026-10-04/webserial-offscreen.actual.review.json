@@ -1,0 +1,28 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_offscreen_webserial_attempt_review",
+  "verdict": "WebSerial_connection_not_established; no_device_request_observed; not_a_firmware_failure",
+  "evidence": [
+    "webserial-offscreen/summary.json",
+    "webserial-offscreen/cdc.json",
+    "webserial-offscreen/final.json",
+    "webserial-launch-1/browser.json",
+    "webserial-launch-1/server.json",
+    "webserial-launch-1/test_webserial_offscreen-executed.cjs",
+    "build/pc_browser_runtime/runtime-prepare-result.json"
+  ],
+  "findings": {
+    "runtime": "Electron 44.5.1 Windows x64 archive SHA256 matched packaged official checksum: 9b382492dcfee91f8f9e92c91f7972550a1b95d2299cac72279dab33a600d7db; full length 157998329; hardware requests 0.",
+    "cleanup": "Hidden BrowserWindow ended and final snapshot saved; no restoration was needed because no mutation occurred.",
+    "attempt": "Production page was loaded in hidden Electron; secure/serial API assertions passed far enough to reach the connect-state wait. The connection state never reached 已连接并完成读回 within 18s; final page says 未连接设备 / 连接失败.",
+    "device": "CDC evidence is empty; no handshake or request reached firmware.",
+    "chooser": "Electron select-serial-port callback recorded no ports and did not run; no permission callback details or navigator.serial.requestPort rejection were recorded, so the specific host-side cause (permission gating vs chooser/requestPort path) remains unresolved.",
+    "mutation": "No profile was captured, no mutation_attempted field, no writes; summary explicitly no_device_mutation=true and native_window_visible=false."
+  },
+  "limits": [
+    "This is a failed/inconclusive Web Serial connection attempt, not a successful Web Serial test.",
+    "No evidence indicates firmware rejection, board fault, or hardware failure; the device was not reached over CDC.",
+    "The test does not distinguish among Chromium/Electron permission, requestPort rejection, and chooser enumeration before selection; the planned v2 instrumentation is appropriate.",
+    "No game, desktop UI, or physical HID payload test occurred."
+  ]
+}

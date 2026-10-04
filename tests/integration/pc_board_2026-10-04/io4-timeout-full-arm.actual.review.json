@@ -1,0 +1,18 @@
+{
+  "reviewer": "Luna",
+  "assessment": "full_ARM_module_regression_passed",
+  "evidence": ["io4-timeout-full-arm/simulation_results.json", "io4-timeout-full-arm/module1_tests.elf", "tests/integration/io4_timeout_full_tests.cpp", "tests/integration/run_io4_timeout_regression.py", "tests/integration/prepare_io4_full_regression.py"],
+  "verified": {
+    "test_groups": 25,
+    "passed": 25,
+    "failed": 0,
+    "original_full_IO4_backend_protocol_storage_and_reboot_groups": 22,
+    "new_timeout_order_groups": 3,
+    "firmware_hardware_tested": false,
+    "game_tested": false,
+    "Io4Codec_candidate_source_sha256": "a64f72df8a74348bf81f740ea08f6a3d919eacc30b51035ba36931947f7b9dd7",
+    "object_files_in_build_directory": 34,
+    "compile_count_note": "The runner's reported implementation/helper translation-unit count is 33; run_tests.py separately compiles module1_tests.cpp as the test harness, yielding 34 object files total."
+  },
+  "interpretation": "The expanded module ARM simulation passes all 25 groups, including the previous 22 full IO4 integration groups and three stale-timestamp/deadline regressions. This is a software simulation of original C++ modules with modeled boundaries, not a hardware test or full firmware build. No UF2 was produced and no board was flashed."
+}

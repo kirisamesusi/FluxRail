@@ -1,0 +1,43 @@
+{
+  "reviewer": "/root main process, ongoing round authorized substitute while Luna quota unavailable",
+  "time_utc": "2026-10-04T17:13:43.507786+00:00",
+  "passed": true,
+  "new_version": "0.10.2",
+  "revision": 9,
+  "serial": "5054316560DD729C",
+  "original_schema_byte_exact": true,
+  "crc32": 700994562,
+  "profiles_equal": true,
+  "independent_read_only_requests": 15,
+  "serial_closed": true,
+  "configuration_writes": 0,
+  "archives": [
+    {
+      "path": "C:\\Users\\admin\\Documents\\FluxRail\\backups\\firmware-rollback\\0.10.1\\20261004T171125762981Z",
+      "version": "0.10.1",
+      "file_count": 360,
+      "source_file_count": 84,
+      "changed_code_files": [
+        "firmware/FluxRail/src/common/FirmwareInfo.h",
+        "firmware/FluxRail/src/usb/Io4Codec.cpp"
+      ],
+      "UF2_SHA256": "13778aeab0d3de5209423e14f70a74f494ee6ae006d45a6cf56428c659417412"
+    },
+    {
+      "path": "C:\\Users\\admin\\Documents\\FluxRail\\backups\\firmware-rollback\\0.10.2\\20261004T171126137829Z",
+      "version": "0.10.2",
+      "file_count": 360,
+      "source_file_count": 84,
+      "changed_code_files": [],
+      "UF2_SHA256": "92991fa7e70e591fa16857ac09cd513eb337e6b6f0ca9cbe2824292379d9b479"
+    }
+  ],
+  "compile_gate": "backup before dependencies/compiler; missing or hash mismatch raises before compile",
+  "GPIO_recovery_entry": "Previously physical proven; App.cpp unchanged SHA; no claim new firmware physical recovery retest yet",
+  "board_capacity": "User states test board2MiB/final target4MiB; capacity query waived; not independently measured",
+  "limits": [
+    "No compiler run in this phase",
+    "Board hello verifies reported version, not flashed UF2 SHA",
+    "IO4 fixed actual behavior still pending"
+  ]
+}

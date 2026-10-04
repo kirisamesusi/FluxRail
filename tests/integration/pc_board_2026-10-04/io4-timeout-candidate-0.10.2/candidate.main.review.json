@@ -1,0 +1,33 @@
+{
+  "reviewer": "/root main process",
+  "authorization": "Trusted user: 本轮改由主进程审核; Luna quota unavailable",
+  "time_utc": "2026-10-04T16:31:36.917599+00:00",
+  "passed": true,
+  "checks": {
+    "formal_compile_and_strict_link_audit": "passed 38 project translation units",
+    "source_changes": [
+      "firmware/FluxRail/src/common/FirmwareInfo.h",
+      "firmware/FluxRail/src/usb/Io4Codec.cpp"
+    ],
+    "timing_source_matches_Luna_reviewed_ARM_regression": true,
+    "formal_ELF_descriptor_ARM": "NORMAL/IO4 both passed; modeled hardware boundaries",
+    "version": "0.10.2",
+    "uf2_bytes": 341504,
+    "uf2_sha256": "92991fa7e70e591fa16857ac09cd513eb337e6b6f0ca9cbe2824292379d9b479",
+    "frozen_original_artifacts_unchanged": true
+  },
+  "limitations": [
+    "4MiB contract candidate only; physical Flash capacity still unverified",
+    "Candidate not uploaded or tested on board/game",
+    "Old 0.10.1 premature timeout failure remains open until approved update and board retest"
+  ],
+  "evidence_sha256": {
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\build\\firmware_results.json": "41d6495f56c3a3a2b7f3e04811957a2302d8742dc77294cd16be498c9ed99034",
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\build\\source_link_audit.json": "b44111768965b8a5b319fe0efae67b3188205e6e41b51191cd013cc281f2414e",
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\build\\usb_descriptor_results.json": "ed74d2c80b8e7def9212fbd730786d924d16acfb207e6f77b386eb14ff1181ee",
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\candidate-summary.json": "2949effdd2807dfed18181939c93eb224a9c4b99e1177107104d9dc7c9026293",
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\descriptor-launch.json": "352dd20ea418f606ba3a2e91dbbffba3a097bba0fbacae415e3da6d47c26e449",
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\build\\arduino\\FluxRail.ino.uf2": "92991fa7e70e591fa16857ac09cd513eb337e6b6f0ca9cbe2824292379d9b479",
+    "tests\\integration\\pc_board_2026-10-04\\io4-timeout-candidate-0.10.2\\build\\arduino\\FluxRail.ino.elf": "368e21df56ac4033ecdd80eea4d58a1d6ed4235297ec320a5f22ad580a60cdbb"
+  }
+}

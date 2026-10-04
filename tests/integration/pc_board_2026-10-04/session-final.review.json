@@ -1,0 +1,34 @@
+{
+  "reviewer": "Luna",
+  "kind": "session_final_offline_review",
+  "scope": "Read-only consolidation; no new desktop interaction, serial connection, HID request, board write, reboot, or mode switch.",
+  "verified": {
+    "post_short": "After user reported cooling/no new heat or USB warning, 15 read-only CDC requests succeeded; original config snapshot and profiles matched. V2 checker passed offline after adding get_config/export_config to whitelist; original V1 false-negative remains preserved and is a host checker whitelist error.",
+    "idle_power_cycle": "One physical USB-only idle power interruption, user-confirmed unplug >=5 seconds; full schema bytes/profiles and CRC unchanged after return.",
+    "flash_storage": "51 saves; two NORMAL application-reboot/load cycles; final saved original profile4 state verified. Original script exit-1 was the PowerShell JSON-format false negative; later semantic comparer passed offline.",
+    "gp9": "One ordinary-mode GP9-to-GND boot produced forced_recovery=true; after jumper removal physical_mask0 and configuration remained byte-identical."
+  },
+  "not_verified": {
+    "electrical": "No conclusion that short caused no electrical or latent damage; temperature/current/voltage not measured.",
+    "other": "No new compile, simulation, or game validation.",
+    "io4": "No IO4 switch or IO4 HID report query was performed.",
+    "hid": "Normal-mode report payload/real key, mouse, X/Y input bytes are not verified; earlier GetInputReport error1 remains limited to that attempted Windows path.",
+    "webserial": "Not passed. Headless Edge timed out without DeviceAccess prompt and had empty CDC; IAB stayed disconnected with disabled connect/no visible chooser. Current desktop window was enumerated, but window-state action was stopped by tool URL policy before interaction. No serial chooser or configuration action occurred in this latest attempt."
+  },
+  "static_review": {
+    "io4_probe": "Current version completes metadata enumeration, then asserts exactly one serial-matched IO4 UsagePage1/Usage4/64B target before any actual input read; a single target is reopened and serial rechecked before one GetInputReport. This is static review only.",
+    "mode_tool": "Current version includes slots mask3, saved/current/requested mode and revision coherence checks, single transition, and physical forced-recovery gate for return to NORMAL.",
+    "flash_capacity": "Reported firmware board metadata says 4MiB; actual physical Flash capacity is not independently proven."
+  },
+  "evidence": [
+    "flash-normal.actual.review.json",
+    "power-cut.actual.review.json",
+    "gp9-normal.actual.review.json",
+    "post-short-readonly.actual.review.json",
+    "post-short-readonly.actual.v2.json",
+    "webserial-headless-preflight.actual.review.json",
+    "iab-preflight.actual.review.json",
+    "io4-tools.preflight.review.json"
+  ],
+  "recommendation": "Keep IO4 and all additional energizing tests stopped after the reported 5V-GND short unless a separate physical inspection and explicit user decision establish a safe continuation. Preserve all earlier results with their scope; do not treat read-only CDC success as electrical clearance."
+}

@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-03",
+  "project": "FluxRail",
+  "authorization": "用户要求清理旧项目，并说明已有备份。",
+  "preserved": [
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\README.md",
+      "to": "references\\io4\\failed-lkick\\README.md",
+      "sha256": "4373b0e688e75b25a222bd2645358f917699134c5fe5250ddf5c4f6503109244"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\usb_descriptors.c",
+      "to": "references\\io4\\failed-lkick\\usb_descriptors.c",
+      "sha256": "9611c176db21ed6f7e4377772d86f0d4ae52d0ed6908197ca59e21748df7abb7"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\tusb_config.h",
+      "to": "references\\io4\\failed-lkick\\tusb_config.h",
+      "sha256": "687097e74b9da29f9a03ce1519d860ef7c63b02e50ab1ee3788fd5ae1f79a86a"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\src\\components\\io4_usb.cpp",
+      "to": "references\\io4\\failed-lkick\\src\\components\\io4_usb.cpp",
+      "sha256": "ef17a037c47c5b7721dcccb4eaca5e8b1a2a298757b018065e5d38b8d06b02bd"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\src\\components\\io4_usb.h",
+      "to": "references\\io4\\failed-lkick\\src\\components\\io4_usb.h",
+      "sha256": "1f16ee44d3308b9977dc1eed889369963dd5a82d3cb8f82e6a8698b5ec4aec68"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\src\\components\\ongeki_hardware.cpp",
+      "to": "references\\io4\\failed-lkick\\src\\components\\ongeki_hardware.cpp",
+      "sha256": "e02156d36494edafc5f8cc1e08381db6b1ec9917db376555b88a9949ab8c9162"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\src\\components\\ongeki_hardware.h",
+      "to": "references\\io4\\failed-lkick\\src\\components\\ongeki_hardware.h",
+      "sha256": "c73ffd59592decbfb482746caeb75682c568dfcdc73aadaf8333ddca7e4a659b"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\src\\components\\config.cpp",
+      "to": "references\\io4\\failed-lkick\\src\\components\\config.cpp",
+      "sha256": "df402cc1bd7fdff87df9b08de4697b56b08b78d7659205f251bfb289f0e0c946"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4\\src\\components\\config.h",
+      "to": "references\\io4\\failed-lkick\\src\\components\\config.h",
+      "sha256": "6292eadc22aee7e1e1f28a07925b9c474dd4a08aa3f2672fe9d8fd1b53cccf0b"
+    },
+    {
+      "from": "arduino-rp2040-zero-1-8-rp2040\\dist\\edge-trial-1\\original-source.ino",
+      "to": "references/legacy-rp2040-zero/original-source.ino",
+      "sha256": "ac84994d04f1d076b304f8c99017fd33ac995b82275532d47860ace8dbeba05f"
+    }
+  ],
+  "removed": [
+    {
+      "path": "arduino-rp2040-zero-1-8-rp2040\\build",
+      "files": 717,
+      "bytes": 78157070
+    },
+    {
+      "path": "arduino-rp2040-zero-1-8-rp2040\\dist",
+      "files": 16,
+      "bytes": 5036140
+    },
+    {
+      "path": "arduino-rp2040-zero-1-8-rp2040\\firmware\\RP2040RhythmControllerEdgeCalibrated\\build",
+      "files": 4,
+      "bytes": 4011601
+    },
+    {
+      "path": "arduino-rp2040-zero-1-8-rp2040\\reference-lkick-io4",
+      "files": 71,
+      "bytes": 467504
+    },
+    {
+      "path": "arduino-rp2040-zero-1-8-rp2040\\tools\\package_edge_trial.py",
+      "files": 1,
+      "bytes": 1660
+    }
+  ],
+  "moved": {
+    "from": "arduino-rp2040-zero-1-8-rp2040",
+    "to": "references\\legacy-rp2040-zero"
+  },
+  "note": "保留旧项目 .git、原版/优化版/诊断版源码、算法测试与网页；仅保留失败 IO4 核心审查快照。",
+  "documentation_changes": [
+    "新增FluxRail根README和参考目录说明",
+    "旧README移到README_historical.md，保留内容"
+  ]
+}

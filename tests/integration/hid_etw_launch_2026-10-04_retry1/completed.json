@@ -1,0 +1,9 @@
+{
+    "started":  "2026-10-04T12:13:53.6441122Z",
+    "process_id":  266260,
+    "capture_directory":  "C:/Users/admin/Documents/FluxRail/tests/integration/hid_etw_run_2026-10-04_retry1",
+    "exit_code":  0,
+    "administrator":  true,
+    "capture_tool_sha256":  "C4E2A62F0046EA57243DBACD8A8BBF4A431DACF462B530D9F91ADC38971F134C",
+    "finished":  "2026-10-04T12:13:55.4290371Z"
+}

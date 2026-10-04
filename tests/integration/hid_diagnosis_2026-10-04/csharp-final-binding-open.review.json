@@ -1,0 +1,29 @@
+{
+  "reviewer": "Luna",
+  "assessment": "本轮工具层metadata打开验证通过，但尚未执行HidD读取。此前显式EntryPoint/uint修正后的运行仍在CreateFile返回ERROR_ACCESS_DENIED(5)，control_requests=0。后续将解析记录和devicePath先物化、把native方法名改为Open并加入OpenOnly后，同一确认过的COL02路径以access=0成功打开并关闭，control_requests=0。由于改动是组合施加，不能声称已单独查明此前失败由某一项引起；可归因于当前主机工具组合已能完成只读句柄打开。final CDC快照的身份/版本/revision、profile/config/export元数据及schema2文件与本轮before一致，15行日志和健康字段正常。",
+  "evidence": {
+    "prior_abort": "tests/integration/hid_diagnosis_2026-10-04/csharp-explicit-open-aborted.json",
+    "prior_abort_stage": "CSharp_CreateFile_explicit_entrypoint_before_HidD_query",
+    "prior_abort_error": 5,
+    "prior_abort_control_requests": 0,
+    "metadata_open": "tests/integration/hid_diagnosis_2026-10-04/csharp-final-binding-open.json",
+    "metadata_open_path": "observed COL02; string path; 94 characters",
+    "desired_access": 0,
+    "metadata_open_success": true,
+    "handle_closed": true,
+    "control_requests": 0,
+    "final_cdc": "tests/integration/hid_diagnosis_2026-10-04/final",
+    "cdc_lines": 15,
+    "identity_version_revision_profiles_config_usb_export_unchanged": true,
+    "schema2_equal_to_before": true,
+    "schema2_length": 1387,
+    "profiles_equal_to_before": true,
+    "healthy_status": "config_ready=true, applying=false, apply_failed=false, maintenance=idle, valid_slots=0, protocol_rejected=0"
+  },
+  "continue": true,
+  "next_step": "允许对相同已验证COL02执行一次真实C# HidD_GetInputReport（Report ID 2、长度6），调用前仍以序号、Usage和caps复核；失败时hex为空并将预置/失败缓冲标为无效。此轮只能回答当前C# HidD路径结果，不能判定USB总线或设备回调原因。之后继续完整只读CDC健康核对。",
+  "etw_script_static_review": {
+    "path": "tests/integration/capture_hid_etw.ps1",
+    "assessment": "静态检查通过，可作为尚未运行的受限ETW捕获工具；不能称ETW已运行或捕获有效。要求管理员但不自动提权，输出目录必须预先不存在，使用随机唯一会话名及16MB循环文件，create成功后在finally只停止该命名会话并记录退出码；stop失败会抛错。UCX/HUB3采用0x40，USBPORT采用Diagnostic 0x1，脚本不再假定USBPORT事件不含payload，要求检查实际provider schema。无驱动安装、输入注入或设备配置写入。若采集中途失败，ETL和命令记录会保留，但不会执行tracerpt及前后导出校验，需人工检查并处理该部分证据。"
+  }
+}

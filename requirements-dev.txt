@@ -1,0 +1,2 @@
+# Test-only dependency. Firmware/Web have no Python runtime requirement.
+unicorn==2.1.3

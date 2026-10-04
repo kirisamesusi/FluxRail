@@ -1,0 +1,96 @@
+{
+  "validation": "ARM execution of real formal-ELF descriptor construction and callbacks",
+  "elf_sha256": "368e21df56ac4033ecdd80eea4d58a1d6ed4235297ec320a5f22ad580a60cdbb",
+  "unicorn": "2.1.3",
+  "results": [
+    {
+      "mode": "NORMAL_NKRO",
+      "device_hex": "12010002ef0201409a23feca000101020301",
+      "config_hex": "09027d00040100a032080b000202020000090400000102020004052400200105240100010424020605240600010705810308000109040100020a000000070501024000000705820240000009040200010300000009211101000122330007058303400001090403000103000000092111010001226b0007058403400001",
+      "strings": {
+        "1": "FluxRail",
+        "2": "FluxRail NKRO prototype",
+        "3": "0123456789ABCDEF"
+      },
+      "interfaces": [
+        2,
+        10,
+        3,
+        3
+      ],
+      "endpoints": [
+        {
+          "address": 129,
+          "size": 8,
+          "interval": 1
+        },
+        {
+          "address": 1,
+          "size": 64,
+          "interval": 0
+        },
+        {
+          "address": 130,
+          "size": 64,
+          "interval": 0
+        },
+        {
+          "address": 131,
+          "size": 64,
+          "interval": 1
+        },
+        {
+          "address": 132,
+          "size": 64,
+          "interval": 1
+        }
+      ],
+      "startup_trace": [
+        "mode_before_default_cdc",
+        "first_port_connect"
+      ],
+      "report_hex": "05010902a10185010901a1000509190129031500250175019503810275059501810305010930093116008026ff7f751095028106c0c005010902a10185020901a10005091901290315002501750195038102750595018103050109300931150026ff7f751095028102c0c0",
+      "passed": true
+    },
+    {
+      "mode": "IO4",
+      "device_hex": "1201000200000040a30c2100000101020301",
+      "config_hex": "090229000101008032090400000203000004092111010001226f000705810340000107050103400001",
+      "strings": {
+        "1": "SEGA",
+        "2": "I/O CONTROL BD;15257;01;90;1831;6679A;00;GOUT=14_ADIN=8,E_ROTIN=4_COININ=2_SWIN=2,E_UQ1=41,6",
+        "3": "0123456789ABCDEF",
+        "4": "I/O CONTROL BD;15257;01;90;1831;6679A;00;GOUT=14_ADIN=8,E_ROTIN=4_COININ=2_SWIN=2,E_UQ1=41,6;"
+      },
+      "interfaces": [
+        3
+      ],
+      "endpoints": [
+        {
+          "address": 129,
+          "size": 64,
+          "interval": 1
+        },
+        {
+          "address": 1,
+          "size": 64,
+          "interval": 1
+        }
+      ],
+      "startup_trace": [
+        "mode_before_default_cdc",
+        "first_port_connect"
+      ],
+      "report_hex": "05010904a10185010901a10009300931093009310930093109300931093309340933093409360936150027ffff0000350047ffff0000950e75108102c005091901293015002501450175019530810209007508951d810106a0ff09008510a1010900150026ff007508953f9102c0c0",
+      "passed": true
+    }
+  ],
+  "hardware_tested": false,
+  "game_tested": false,
+  "boundaries": [
+    "saved mode already validated by App C++ suite",
+    "USB port init suppressed",
+    "ROM memcpy/memset",
+    "flash unique ID synthetic"
+  ]
+}

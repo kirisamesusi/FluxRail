@@ -1,0 +1,1042 @@
+{
+  "1": {
+    "profile_id": 1,
+    "name": "SDVX",
+    "config": {
+      "keyboard": {
+        "bindings": [
+          {
+            "source_id": 0,
+            "action": {
+              "type": "keyboard",
+              "usage": 51,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 1,
+            "action": {
+              "type": "keyboard",
+              "usage": 15,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 2,
+            "action": {
+              "type": "keyboard",
+              "usage": 14,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 3,
+            "action": {
+              "type": "keyboard",
+              "usage": 13,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 4,
+            "action": {
+              "type": "keyboard",
+              "usage": 9,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 5,
+            "action": {
+              "type": "keyboard",
+              "usage": 7,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 6,
+            "action": {
+              "type": "keyboard",
+              "usage": 22,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 7,
+            "action": {
+              "type": "keyboard",
+              "usage": 4,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 8,
+            "action": {
+              "type": "keyboard",
+              "usage": 25,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 9,
+            "action": {
+              "type": "keyboard",
+              "usage": 17,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 10,
+            "action": {
+              "type": "disabled"
+            }
+          },
+          {
+            "source_id": 11,
+            "action": {
+              "type": "disabled"
+            }
+          }
+        ],
+        "retrigger_gap_us": 1000
+      },
+      "scan": {
+        "press_debounce_us": 1000,
+        "release_debounce_us": 1000
+      },
+      "lighting": {
+        "enabled": true,
+        "mode": "press",
+        "brightness_level": 50,
+        "per_key": false,
+        "global_color": [
+          255,
+          255,
+          255
+        ],
+        "key_colors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "period_ms": 2000,
+        "reverse": false
+      },
+      "indicator": {
+        "enabled": true,
+        "color": [
+          0,
+          255,
+          255
+        ]
+      }
+    },
+    "motion": {
+      "hall": {
+        "enabled": false,
+        "invert": false,
+        "center_gain": 1,
+        "range_min": 0,
+        "range_max": 1,
+        "quiet_tau_us": 1500,
+        "moving_tau_us": 0,
+        "fast_speed_mm_s": 200,
+        "activity_mm": 0.2,
+        "activity_hold_us": 10000,
+        "enter_signal": 80,
+        "exit_signal": 60,
+        "curve_tolerance": 35,
+        "max_gap_us": 10000
+      },
+      "knobs": [
+        {
+          "enabled": true,
+          "axis": 0,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        },
+        {
+          "enabled": true,
+          "axis": 1,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        }
+      ],
+      "routing": {
+        "idle_us": 10000,
+        "simultaneous_hall_first": true
+      }
+    },
+    "io4_bindings": [
+      8,
+      6,
+      5,
+      4,
+      7,
+      3,
+      2,
+      1,
+      9,
+      10,
+      0,
+      0
+    ]
+  },
+  "2": {
+    "profile_id": 2,
+    "name": "ONGEKI",
+    "config": {
+      "keyboard": {
+        "bindings": [
+          {
+            "source_id": 0,
+            "action": {
+              "type": "keyboard",
+              "usage": 51,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 1,
+            "action": {
+              "type": "keyboard",
+              "usage": 15,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 2,
+            "action": {
+              "type": "keyboard",
+              "usage": 14,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 3,
+            "action": {
+              "type": "keyboard",
+              "usage": 13,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 4,
+            "action": {
+              "type": "keyboard",
+              "usage": 9,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 5,
+            "action": {
+              "type": "keyboard",
+              "usage": 7,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 6,
+            "action": {
+              "type": "keyboard",
+              "usage": 22,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 7,
+            "action": {
+              "type": "keyboard",
+              "usage": 4,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 8,
+            "action": {
+              "type": "keyboard",
+              "usage": 25,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 9,
+            "action": {
+              "type": "keyboard",
+              "usage": 17,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 10,
+            "action": {
+              "type": "disabled"
+            }
+          },
+          {
+            "source_id": 11,
+            "action": {
+              "type": "disabled"
+            }
+          }
+        ],
+        "retrigger_gap_us": 1000
+      },
+      "scan": {
+        "press_debounce_us": 1000,
+        "release_debounce_us": 1000
+      },
+      "lighting": {
+        "enabled": true,
+        "mode": "press",
+        "brightness_level": 50,
+        "per_key": false,
+        "global_color": [
+          255,
+          255,
+          255
+        ],
+        "key_colors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "period_ms": 2000,
+        "reverse": false
+      },
+      "indicator": {
+        "enabled": true,
+        "color": [
+          255,
+          96,
+          0
+        ]
+      }
+    },
+    "motion": {
+      "hall": {
+        "enabled": true,
+        "invert": false,
+        "center_gain": 1,
+        "range_min": 0,
+        "range_max": 1,
+        "quiet_tau_us": 1500,
+        "moving_tau_us": 0,
+        "fast_speed_mm_s": 200,
+        "activity_mm": 0.2,
+        "activity_hold_us": 10000,
+        "enter_signal": 80,
+        "exit_signal": 60,
+        "curve_tolerance": 35,
+        "max_gap_us": 10000
+      },
+      "knobs": [
+        {
+          "enabled": false,
+          "axis": 0,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        },
+        {
+          "enabled": false,
+          "axis": 1,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        }
+      ],
+      "routing": {
+        "idle_us": 10000,
+        "simultaneous_hall_first": true
+      }
+    },
+    "io4_bindings": [
+      8,
+      6,
+      5,
+      4,
+      7,
+      3,
+      2,
+      1,
+      9,
+      10,
+      0,
+      0
+    ]
+  },
+  "3": {
+    "profile_id": 3,
+    "name": "IN FALSUS",
+    "config": {
+      "keyboard": {
+        "bindings": [
+          {
+            "source_id": 0,
+            "action": {
+              "type": "keyboard",
+              "usage": 51,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 1,
+            "action": {
+              "type": "keyboard",
+              "usage": 15,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 2,
+            "action": {
+              "type": "keyboard",
+              "usage": 14,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 3,
+            "action": {
+              "type": "keyboard",
+              "usage": 13,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 4,
+            "action": {
+              "type": "keyboard",
+              "usage": 9,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 5,
+            "action": {
+              "type": "keyboard",
+              "usage": 7,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 6,
+            "action": {
+              "type": "keyboard",
+              "usage": 22,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 7,
+            "action": {
+              "type": "keyboard",
+              "usage": 4,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 8,
+            "action": {
+              "type": "keyboard",
+              "usage": 25,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 9,
+            "action": {
+              "type": "keyboard",
+              "usage": 17,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 10,
+            "action": {
+              "type": "disabled"
+            }
+          },
+          {
+            "source_id": 11,
+            "action": {
+              "type": "disabled"
+            }
+          }
+        ],
+        "retrigger_gap_us": 1000
+      },
+      "scan": {
+        "press_debounce_us": 1000,
+        "release_debounce_us": 1000
+      },
+      "lighting": {
+        "enabled": true,
+        "mode": "press",
+        "brightness_level": 50,
+        "per_key": false,
+        "global_color": [
+          255,
+          255,
+          255
+        ],
+        "key_colors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "period_ms": 2000,
+        "reverse": false
+      },
+      "indicator": {
+        "enabled": true,
+        "color": [
+          128,
+          0,
+          255
+        ]
+      }
+    },
+    "motion": {
+      "hall": {
+        "enabled": false,
+        "invert": false,
+        "center_gain": 1,
+        "range_min": 0,
+        "range_max": 1,
+        "quiet_tau_us": 1500,
+        "moving_tau_us": 0,
+        "fast_speed_mm_s": 200,
+        "activity_mm": 0.2,
+        "activity_hold_us": 10000,
+        "enter_signal": 80,
+        "exit_signal": 60,
+        "curve_tolerance": 35,
+        "max_gap_us": 10000
+      },
+      "knobs": [
+        {
+          "enabled": false,
+          "axis": 0,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        },
+        {
+          "enabled": false,
+          "axis": 1,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        }
+      ],
+      "routing": {
+        "idle_us": 10000,
+        "simultaneous_hall_first": true
+      }
+    },
+    "io4_bindings": [
+      8,
+      6,
+      5,
+      4,
+      7,
+      3,
+      2,
+      1,
+      9,
+      10,
+      0,
+      0
+    ]
+  },
+  "4": {
+    "profile_id": 4,
+    "name": "MULTI K",
+    "config": {
+      "keyboard": {
+        "bindings": [
+          {
+            "source_id": 0,
+            "action": {
+              "type": "keyboard",
+              "usage": 51,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 1,
+            "action": {
+              "type": "keyboard",
+              "usage": 15,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 2,
+            "action": {
+              "type": "keyboard",
+              "usage": 14,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 3,
+            "action": {
+              "type": "keyboard",
+              "usage": 13,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 4,
+            "action": {
+              "type": "keyboard",
+              "usage": 9,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 5,
+            "action": {
+              "type": "keyboard",
+              "usage": 7,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 6,
+            "action": {
+              "type": "keyboard",
+              "usage": 22,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 7,
+            "action": {
+              "type": "keyboard",
+              "usage": 4,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 8,
+            "action": {
+              "type": "keyboard",
+              "usage": 25,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 9,
+            "action": {
+              "type": "keyboard",
+              "usage": 17,
+              "modifiers": 0
+            }
+          },
+          {
+            "source_id": 10,
+            "action": {
+              "type": "disabled"
+            }
+          },
+          {
+            "source_id": 11,
+            "action": {
+              "type": "disabled"
+            }
+          }
+        ],
+        "retrigger_gap_us": 1000
+      },
+      "scan": {
+        "press_debounce_us": 1000,
+        "release_debounce_us": 1000
+      },
+      "lighting": {
+        "enabled": true,
+        "mode": "press",
+        "brightness_level": 50,
+        "per_key": false,
+        "global_color": [
+          255,
+          255,
+          255
+        ],
+        "key_colors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "period_ms": 2000,
+        "reverse": false
+      },
+      "indicator": {
+        "enabled": true,
+        "color": [
+          0,
+          255,
+          0
+        ]
+      }
+    },
+    "motion": {
+      "hall": {
+        "enabled": false,
+        "invert": false,
+        "center_gain": 1,
+        "range_min": 0,
+        "range_max": 1,
+        "quiet_tau_us": 1500,
+        "moving_tau_us": 0,
+        "fast_speed_mm_s": 200,
+        "activity_mm": 0.2,
+        "activity_hold_us": 10000,
+        "enter_signal": 80,
+        "exit_signal": 60,
+        "curve_tolerance": 35,
+        "max_gap_us": 10000
+      },
+      "knobs": [
+        {
+          "enabled": false,
+          "axis": 0,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        },
+        {
+          "enabled": false,
+          "axis": 1,
+          "invert": false,
+          "gain": 1,
+          "counts_per_turn_at_gain1": 1024,
+          "filter_tau_us": 0,
+          "max_gap_us": 2000,
+          "max_turns_per_second": 100,
+          "activity_ticks": 8,
+          "activity_hold_us": 10000,
+          "push": {
+            "enabled": false,
+            "press_us": 2000,
+            "rotating_press_us": 5000,
+            "release_us": 1000,
+            "rearm_us": 2000,
+            "max_hold_us": 2000000,
+            "max_sample_gap_us": 2000
+          }
+        }
+      ],
+      "routing": {
+        "idle_us": 10000,
+        "simultaneous_hall_first": true
+      }
+    },
+    "io4_bindings": [
+      8,
+      6,
+      5,
+      4,
+      7,
+      3,
+      2,
+      1,
+      9,
+      10,
+      0,
+      0
+    ]
+  }
+}

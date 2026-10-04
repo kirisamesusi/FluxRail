@@ -1,0 +1,28 @@
+{
+  "reviewer": "Luna",
+  "assessment": "V2启动前静态审查通过，可在用户手工确认Windows UAC后由父窗口运行；本审核者未启动脚本、未提权、未访问开发板。PnP链证据将目标定位到Intel USB 3.20 xHCI控制器→ROOT_HUB30→Realtek 5411 hub→FluxRail复合设备，因此仅采USB3栈是有证据的选择。providers.txt显示XHCI、UCX、HUB3都定义Default=0x1、HeadersBusTrace=0x40、Rundown=0x8000；0x8041确为三者的组合。V2显式启用这三个provider，随后记录logman query输出；只有之后核实查询确实列出三个provider及对应mask，才可认为provider配置已启动。HeadersBusTrace用于传输头且不保存数据包；它可以提供URB/传输层证据，但具体事件是否带足够setup字段、请求状态和完成状态，必须在原始ETL解码后判定，不能预先保证。",
+  "evidence": {
+    "capture_script": "tests/integration/capture_hid_etw_v2.ps1",
+    "wrapper": "tests/integration/hid_etw_launch_2026-10-04_200244/run-elevated.ps1",
+    "provider_inventory": "tests/integration/hid_etw_launch_2026-10-04_200244/providers.txt",
+    "device_chain": "tests/integration/hid_etw_launch_2026-10-04_200244/device-chain.json",
+    "target_stack": "Intel USB 3.20 xHCI / ROOT_HUB30 / Realtek 5411 hub",
+    "provider_mask": "0x8041 = Default 0x1 + HeadersBusTrace 0x40 + Rundown 0x8000; confirmed in local provider inventory for USBXHCI, UCX and USBHUB3",
+    "bounded_trace": "16 MB circular ETL; 16-64 buffers of 64 KB",
+    "session_lifecycle": "unique random ETS session; started flag follows successful create; finally stops only that session, records stop code, and throws on nonzero stop",
+    "elevation": "explicit administrator-role check; no self-elevation or driver installation; wrapper records token role, PID, timestamps, output log and exit code",
+    "serial_cleanup": "capture owns no COM handle; prepare_board_baseline.ps1 closes/disposes its SerialPort in finally; C# HID helper closes its handle in finally",
+    "post_capture": "tracerpt XML and summary requested; script checks tracerpt exit and pre/post schema2 SHA; raw ETL remains source evidence",
+    "official_guidance": [
+      "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/how-to-capture-a-usb-event-trace",
+      "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-event-tracing-for-windows"
+    ]
+  },
+  "continue": true,
+  "preflight_conditions": [
+    "用户在Windows UAC界面手工允许后，wrapper必须记录administrator=true；UAC取消或未提升时不得把脚本未运行报告成采集结果。",
+    "父窗口运行后由审核者检查capture-commands.json的provider query输出，确认三个provider和0x8041确实启用；检查停止命令exit=0、trace summary的events lost/buffers lost，并核实原始ETL包含查询前后已知正常CDC传输作为正对照。",
+    "对GET_REPORT结论只依据能关联到目标设备/接口的原始USB事件及完成状态。若HeadersBusTrace事件未显示setup字段或completion status、存在丢失、或无法关联设备，则记为证据不足并转被动分析器；不以未检出事件证明请求未发出。"
+  ],
+  "limitations": "该静态审核只确认启动参数和生命周期设计，没有验证管理员ETW能否启动、驱动是否输出所需字段、ETL是否无丢失，或GET_REPORT是否被捕获。"
+}

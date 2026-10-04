@@ -1,0 +1,21 @@
+{
+  "reviewer": "Luna",
+  "assessment": "diagnostic_source_preflight_pass_with_provenance_and_result-label_caveats",
+  "scope": "Static review only; diagnostic script not executed.",
+  "evidence": [
+    "tests/integration/test_io4_protocol_diagnostic.py",
+    "tests/integration/run_io4_diag_watchdog.ps1",
+    "tests/integration/firmware/FluxRail/src/usb/Io4Codec.cpp",
+    "tests/integration/firmware/FluxRail/src/usb/UsbBackend.cpp",
+    "tests/integration/firmware/FluxRail/src/app/App.cpp"
+  ],
+  "findings": {
+    "diagnostic_steps": "Initial control state permits system 0 or 2; eight 64-byte interrupt reads require report ID 1, neutral switch words, system 0/2 and zero reserved bytes. Cmd1 units=0 then 20ms and one GET requires system 0x30. Units 1/4/255 each record elapsed host time and early system after 20ms, then disable timeout with units=0 and require system 0x30. Cmd3 interrupt, cmd2 control and cmd3 control each have a 20ms wait and expected state snapshot. Zero cmd4 and unknown 0x85 are checked only for preserved system state. Finally sends units=0 and cmd3, waits 20ms and records initialized neutral system=0; it does not claim idle system=2 or full protocol acceptance.",
+    "abi_and_cleanup": "V2's reviewed metadata/caps/serial gate, read/write-capable control handle, separate overlapped RW handle, output report-ID framing and bounded ReadFile/WriteFile cancellation containment remain in place. Finally attempts no-Flash RAM cleanup and closes both handles. The 45s launcher watchdog is adequate for the planned bounded waits; on timeout it must be treated as cleanup unverified and require independent state readback/recovery.",
+    "race_hypothesis": "The comparison between timeout disabled and units 1/4/255 is a useful discriminator for the stale-now hypothesis, especially with a single state read at a fixed 20ms. Source ordering supports the candidate if the USB report callback can execute between App's local now capture and UsbBackend::service(now); it remains an observed-behavior diagnostic, not a confirmed root cause. Preserve command API completion, per-step host timestamps, report bytes and decoded state separately.",
+    "provenance_caveat": "run_io4_diag_watchdog.ps1 copies test_io4_protocol_diagnostic.py to a file named test_io4_protocol_actual_v2-executed.py. The child actually runs the diagnostic source and watchdog hash/path identify it, but the copied artifact filename is misleading. Rename the copy to test_io4_protocol_diagnostic-executed.py before capture so the evidence directory cannot be mistaken for the prior V2 run.",
+    "result_label_caveat": "The script's top-level `passed` becomes true when no exception occurred and the final initialized system state is 0, even if any timed trial showed premature timeout. Its `kind` correctly says this is not full protocol acceptance, but downstream readers could misread `passed`. Prefer `diagnostic_completed=true`, `protocol_acceptance=false`, and retain a distinct `premature_timeout_observed` result. Do not fail the diagnostic merely because it confirms the suspected bug.",
+    "scope": "No Flash/config/save/reboot request or physical-input injection is present. Cmd4 sends zero GPIO bits, which briefly activates the firmware's modeled IO4 GPIO state and may affect host-driven lighting; it does not drive RP2040 GPIO pins. No command result exposes rejected counters, so 0x85 remains a state-preservation observation."
+  },
+  "recommendation": "No hardware-safety blocker remains for the planned RAM-only diagnostic, but fix the executed-source copy name and make diagnostic-completion versus protocol-acceptance fields unambiguous before execution. A run with premature-timeout observations is a useful diagnostic result, not a pass of IO4 timing behavior."
+}

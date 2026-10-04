@@ -1,0 +1,43 @@
+{
+  "reviewer": "/root main process",
+  "authorization": "Trusted user: 本轮改由主进程审核; Luna quota unavailable",
+  "time_utc": "2026-10-04T16:31:36.907600+00:00",
+  "passed": true,
+  "checks": {
+    "ROM_enter_ack_and_unique_enumeration": true,
+    "enter_requests": 1,
+    "Flash_config_writes": 0,
+    "ROM_info": "failed; two attempts exit -7; MI01 missing driver Code28",
+    "USB_return_original_schema_byte_exact": true,
+    "schema_crc32": 700994562,
+    "active_profile": 4,
+    "revision_applied_saved": 9,
+    "independent_readonly_requests": 15
+  },
+  "limitations": [
+    "Flash capacity not obtained; compile identity does not measure physical size",
+    "No picotool reboot executed because info access unavailable; actual return via user power cycle",
+    "No electrical or game verification"
+  ],
+  "evidence_sha256": {
+    "tests\\integration\\pc_board_2026-10-04\\rom-entry\\attempts.jsonl": "e040bd869b32000a34a85622e789354cc2da717d2e8b71de698dcc32e8ffb24c",
+    "tests\\integration\\pc_board_2026-10-04\\rom-entry\\cdc.jsonl": "50526c0e2f017afc80a5c80c6a81a794892ae632ad0f630bd44a87f72ea432ba",
+    "tests\\integration\\pc_board_2026-10-04\\rom-entry\\pnp-after.json": "8d72e5847077b6336b1873f4af0ea1142c58a1b2a844ac34a4b1477aee6537e4",
+    "tests\\integration\\pc_board_2026-10-04\\rom-entry\\summary.json": "452750f3b63405911ab4630d191b879378589074b39e15d46d80635a1062d67c",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\driver-details.json": "3fcb4aec59089de995d2987a4b342cda94ca4cb03cc687c9a44b2527c34ffc6e",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\driver-details.v2.json": "1601783b85de39e0366b4a4a9fc609e0ecc7fdb5290f163459437729014a8469",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\pnp-before.json": "7ce0143408b8f368aa4afdd15060310546a4661a24122ce9ec6c62881b8d6ebb",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\stdout.txt": "c030da817d051f1648ac302a331c87abc60e57a8a52b596c1752c702f9e4ba3e",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\summary.json": "e3ac1936d55c9d913040f8fddbf9339e563e9893c6eb3c9587264589dc85184e",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\vidpid-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\vidpid-stdout.txt": "7e2202ee39216a8c1a7e46b1c1c18081266ef8ca8a168bb060b9f611ceb0569a",
+    "tests\\integration\\pc_board_2026-10-04\\rom-info\\vidpid-summary.json": "84d89b94cadd9bde053c1eaab9138ca4ec7f0cb63e97dca04cfbc8bc4dbcbe06",
+    "tests\\integration\\pc_board_2026-10-04\\rom-return-final\\baseline-cdc.jsonl": "8468fb33ed575d7c55c70c74347f2f609b4d67ea00d0fcec458293e5fe6b64b4",
+    "tests\\integration\\pc_board_2026-10-04\\rom-return-final\\baseline.json": "26198b1d0db6cf4fa227cde1065ba138bc017ba1a05ff5e5d4f75fb2e168082f",
+    "tests\\integration\\pc_board_2026-10-04\\rom-return-final\\original-profiles.json": "914129ed6ef146ad08d031b2d3fb9b0bae963d2306cf48f8cf954025b2b639a4",
+    "tests\\integration\\pc_board_2026-10-04\\rom-return-final\\original-schema2.bin": "af93d4d8ccc868239157370f9e9136c66a99fb705b61240dcf293a6df3adfa65",
+    "tests\\integration\\pc_board_2026-10-04\\rom-return-final\\pnp-after.json": "67b6742f34fc4fc7c611f15cc8d430b079fb7be0372184db8e5768c25cbbf7f6",
+    "tests\\integration\\pc_board_2026-10-04\\rom-return-final\\user-confirmation.json": "e31eeb11847325459b2944968d1307a7c5d73cf1498c6aa690555c542d3f38b3"
+  }
+}

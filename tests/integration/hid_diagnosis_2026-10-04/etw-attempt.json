@@ -1,0 +1,5 @@
+{
+  "output": "\r\nError:\r\nAccess is denied.\r\nTry running this command as an administrator.\r\n",
+  "exit": -2147024891,
+  "command": "logman create trace (UCX headers+partial bus, 16–64 x64KB, ETS)"
+}

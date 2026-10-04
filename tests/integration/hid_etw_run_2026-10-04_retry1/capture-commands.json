@@ -1,0 +1,78 @@
+[
+    {
+        "output":  "命令成功结束。\r\n",
+        "time":  "2026-10-04T12:13:54.2427487Z",
+        "arguments":  [
+                          "create",
+                          "trace",
+                          "FluxRailHid_17907f8199e7475cb5ec73cc013eca74",
+                          "-o",
+                          "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\hid_etw_run_2026-10-04_retry1/usb.etl",
+                          "-f",
+                          "bincirc",
+                          "-max",
+                          "16",
+                          "-bs",
+                          "64",
+                          "-nb",
+                          "16",
+                          "64",
+                          "-p",
+                          "Microsoft-Windows-USB-USBXHCI",
+                          "0x8041",
+                          "5",
+                          "-ets"
+                      ],
+        "exit":  0
+    },
+    {
+        "output":  "命令成功结束。\r\n",
+        "time":  "2026-10-04T12:13:54.3199229Z",
+        "arguments":  [
+                          "update",
+                          "trace",
+                          "FluxRailHid_17907f8199e7475cb5ec73cc013eca74",
+                          "-p",
+                          "Microsoft-Windows-USB-UCX",
+                          "0x8041",
+                          "5",
+                          "-ets"
+                      ],
+        "exit":  0
+    },
+    {
+        "output":  "命令成功结束。\r\n",
+        "time":  "2026-10-04T12:13:54.3984277Z",
+        "arguments":  [
+                          "update",
+                          "trace",
+                          "FluxRailHid_17907f8199e7475cb5ec73cc013eca74",
+                          "-p",
+                          "Microsoft-Windows-USB-USBHUB3",
+                          "0x8041",
+                          "5",
+                          "-ets"
+                      ],
+        "exit":  0
+    },
+    {
+        "output":  "\r\n名称:                   FluxRailHid_17907f8199e7475cb5ec73cc013eca74\r\n状态:                   正在运行\r\n根路径:                  C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\hid_etw_run_2026-10-04_retry1\r\n弓形:                   关闭\r\n计划:                   启用\r\n段最大大小:                16 MB\r\n\r\n名称:                   FluxRailHid_17907f8199e7475cb5ec73cc013eca74\\FluxRailHid_17907f8199e7475cb5ec73cc013eca74\r\n类型:                   跟踪\r\n输出位置:                 C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\hid_etw_run_2026-10-04_retry1\\usb.etl\r\n附加:                   关闭\r\n循环:                   启用\r\n覆盖:                   关闭\r\n缓存大小:                 64\r\n缓冲区已丢失:               0\r\n缓冲区已写入:               7\r\n缓冲区刷新计时器:             0\r\n时钟类型:                 性能\r\n文件模式:                 文件\r\n\r\n提供程序:\r\n名称:                   Microsoft-Windows-USB-UCX\r\n提供商 Guid:             {36DA592D-E43A-4E28-AF6F-4BC57C5A11E8}\r\nLevel:                5\r\nKeywordsAll:          0x0\r\nKeywordsAny:          0x8041 (Default,HeadersBusTrace,Rundown)\r\nProperties:           64\r\n筛选器类型:                0\r\n\r\n提供程序:\r\n名称:                   Microsoft-Windows-USB-USBHUB3\r\n提供商 Guid:             {AC52AD17-CC01-4F85-8DF5-4DCE4333C99B}\r\nLevel:                5\r\nKeywordsAll:          0x0\r\nKeywordsAny:          0x8041 (Default,HeadersBusTrace,Rundown)\r\nProperties:           64\r\n筛选器类型:                0\r\n\r\n提供程序:\r\n名称:                   Microsoft-Windows-USB-USBXHCI\r\n提供商 Guid:             {30E1D284-5D88-459C-83FD-6345B39B19EC}\r\nLevel:                5\r\nKeywordsAll:          0x0\r\nKeywordsAny:          0x8041 (Default,HeadersBusTrace,Rundown)\r\nProperties:           64\r\n筛选器类型:                0\r\n\r\n命令成功结束。\r\n",
+        "time":  "2026-10-04T12:13:54.5809581Z",
+        "arguments":  [
+                          "query",
+                          "FluxRailHid_17907f8199e7475cb5ec73cc013eca74",
+                          "-ets"
+                      ],
+        "exit":  0
+    },
+    {
+        "output":  "命令成功结束。\r\n",
+        "time":  "2026-10-04T12:13:55.0095238Z",
+        "arguments":  [
+                          "stop",
+                          "FluxRailHid_17907f8199e7475cb5ec73cc013eca74",
+                          "-ets"
+                      ],
+        "exit":  0
+    }
+]

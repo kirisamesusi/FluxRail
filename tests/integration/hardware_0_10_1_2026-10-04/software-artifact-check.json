@@ -1,0 +1,12 @@
+{
+  "new_compile": false,
+  "new_simulation": false,
+  "source_files": 84,
+  "source_drift": [],
+  "uf2_bytes": 341504,
+  "uf2_expected_sha256": "13778aeab0d3de5209423e14f70a74f494ee6ae006d45a6cf56428c659417412",
+  "uf2_current_sha256": "13778aeab0d3de5209423e14f70a74f494ee6ae006d45a6cf56428c659417412",
+  "historical_arm_groups": 122,
+  "historical_arm_checks": 153396,
+  "historical_full_validation_passed": true
+}

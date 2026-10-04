@@ -1,0 +1,49 @@
+{
+  "date_local": "2026-10-04",
+  "firmware_version": "0.10.0",
+  "firmware_id": "FLUXRAIL-FW-V1",
+  "board": "fluxrail-rp2040-4mib",
+  "web_tests": {
+    "passed": 59,
+    "failed": 0,
+    "suites": 7
+  },
+  "arm_protocol_tests": {
+    "groups": 9,
+    "passed": true
+  },
+  "formal_build": {
+    "passed": true,
+    "strict_project_translation_units": 38,
+    "metadata_verified_by_web_parser": true,
+    "report": "tests/integration/build/firmware_results.json"
+  },
+  "usb_descriptors": {
+    "normal": true,
+    "io4": true,
+    "report": "tests/integration/build/usb_descriptor_results.json"
+  },
+  "browser": {
+    "actual_formal_uf2_selected": true,
+    "version_read": "0.10.0",
+    "console_warn_errors": 0,
+    "screenshot": "web/tests/firmware-version-2026-10-04.png"
+  },
+  "uploaded": false,
+  "hardware_tested": false,
+  "source_sha256": {
+    "firmware/FluxRail/src/common/FirmwareInfo.h": "202102c120de3156028f15a49f916a7fcdba718054381b6b05cf076307d0d2d3",
+    "firmware/FluxRail/src/protocol/ConfigProtocol.cpp": "faf41970234d2041ab26889d408ae25a6ae9b0b6047d60f038d3c2d911400894",
+    "web/src/update/uf2.js": "01d7ec56e3d9c710dc1fce1b6e059dc26b9f2674b51653f7a5dc8224619ae5a9",
+    "web/src/update/controller.js": "e2b35eb2352133ebaf6f4ec62966e9cd811aaf87555d46df75ed883b8e49a686",
+    "web/src/app.js": "690e71097e67b36199b791c6aab3335fef8376e655bb83a249f35943a6d48493",
+    "web/index.html": "e53aae66d04da99e4447fa1c4c0ee01f060cd65cc8f74624805aefe1ac560bf7",
+    "web/package.json": "888e08068c1fddb290df06269d1478e2e8c50d9e567bc7ec62d5dd7c16158b98",
+    "web/tests/uf2.test.mjs": "f79b7e48c0e95e2c1d2a43fea6eba6e7bc83c96cd43f6804b6df1089a8b679ff",
+    "web/tests/web.test.mjs": "27dc7dcf9316971df0c340e3b5056c299ead917eaa3555bb0c371a39c3b8564c",
+    "tests/integration/protocol_tests.cpp": "e4d05e3d2c986d475ec6df9990cc387a23c7d3119bf4c50993b34da31c653bda",
+    "tests/integration/check_firmware_version.mjs": "2869343f218b5721487126eaad0420571a53f69999ac585ab57d125c04fee1e4",
+    "tests/integration/compile_firmware.py": "75c4afec2d70c8069fb8dbdaf0aae4aeff406aef11472432f91affa272337322",
+    "tests/integration/run_all.py": "d590b7ae8c2f855dc54c7ac4c67c3e0994b5e18773f5861eccae57b0e9f523e3"
+  }
+}

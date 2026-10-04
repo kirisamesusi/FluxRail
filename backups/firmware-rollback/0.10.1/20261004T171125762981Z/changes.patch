@@ -1,0 +1,25 @@
+--- old/firmware/FluxRail/src/common/FirmwareInfo.h
++++ next/firmware/FluxRail/src/common/FirmwareInfo.h
+@@ -3,7 +3,7 @@
+ #include <stdint.h>
+ 
+ // Release version: change only this value before building the formal UF2.
+-#define FLUXRAIL_FIRMWARE_VERSION "0.10.1"
++#define FLUXRAIL_FIRMWARE_VERSION "0.10.2"
+ 
+ namespace fluxrail {
+ namespace firmware {
+--- old/firmware/FluxRail/src/usb/Io4Codec.cpp
++++ next/firmware/FluxRail/src/usb/Io4Codec.cpp
+@@ -111,7 +111,10 @@
+   return true;
+ }
+ void Io4State::tick(uint32_t now) {
+-  if (timeout_units &&
++  // A USB IRQ can accept a command after the main loop cached its tick time.
++  // Ignore that older sample; the next sample will advance from the command.
++  // The modular half-range check preserves normal uint32_t clock rollover.
++  if (timeout_units && now - last_command_us < 0x80000000u &&
+       now - last_command_us >= uint32_t(timeout_units) * 100000u) {
+     input.system = 2;
+     gpio_active = false;

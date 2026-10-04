@@ -1,0 +1,845 @@
+{
+  "scope": "pre-fix firmware and authored tests; excludes generated build and historical board evidence",
+  "files": [
+    {
+      "path": "firmware/FluxRail/FluxRail.ino",
+      "bytes": 583,
+      "sha256": "0375af76ea40e292a8682d4e50fa40ca85d53bfd96cb8ce27ce342af5e3e7490"
+    },
+    {
+      "path": "firmware/FluxRail/README.md",
+      "bytes": 5951,
+      "sha256": "977ceb784aa863c54433889195e1e3b8715a0127fdb06cb37808c9556b83eae8"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/Acquisition.cpp",
+      "bytes": 6079,
+      "sha256": "de0ae39a8791d111e43c3e58d89325ce03dffa8b03ba554a8f507395214355f4"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/Acquisition.h",
+      "bytes": 2745,
+      "sha256": "532ea460df382236f10febd3e247ce80e432e43a1f902b548cba4ab0141f489d"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/App.cpp",
+      "bytes": 18232,
+      "sha256": "6b323e2cb2e1c731cdc7fbfaeb7133fd46cc53ebdd973b77f6b95dbe1727d4d8"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/App.h",
+      "bytes": 6283,
+      "sha256": "7716b3e25fd83e4969652dedeb59b6bf25a0fb8bc7662a2e3c4340e4b0a3b409"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/ConfigCoordinator.cpp",
+      "bytes": 3560,
+      "sha256": "0beaf3278811292d34eeae6e36f3c19407475f4d85d1ea89e77ec4e1b930a166"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/ConfigCoordinator.h",
+      "bytes": 2334,
+      "sha256": "c5527d227722f2cc1d001432ce0bd88feaf6620c6b859fffab7d34d0957bb99e"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/MotionRouter.cpp",
+      "bytes": 6638,
+      "sha256": "80866fa50aa49a260f081708a320fae30a3a571ab56bd1663e96b8cb4f9a6ce3"
+    },
+    {
+      "path": "firmware/FluxRail/src/app/MotionRouter.h",
+      "bytes": 2114,
+      "sha256": "3881e7c23806d455fcb07163aa96897eb050bb787c0e54a8d2ab91e7b80e6753"
+    },
+    {
+      "path": "firmware/FluxRail/src/board/BoardConfig.h",
+      "bytes": 1122,
+      "sha256": "da06a1f895a948fa38436226f95a343ae3934565c31b617669e9c053850a91c2"
+    },
+    {
+      "path": "firmware/FluxRail/src/common/ConfigTypes.h",
+      "bytes": 2033,
+      "sha256": "1bb104188fb36fc0dbfcea3db2a79c54af6af9d31d46f2c8b2474912d421a811"
+    },
+    {
+      "path": "firmware/FluxRail/src/common/DeviceConfig.h",
+      "bytes": 1287,
+      "sha256": "c50e8999d679d8c871209105ffec861ee00820d73857d3b316d9dd6c1fb3f9fb"
+    },
+    {
+      "path": "firmware/FluxRail/src/common/FirmwareInfo.h",
+      "bytes": 1152,
+      "sha256": "202102c120de3156028f15a49f916a7fcdba718054381b6b05cf076307d0d2d3"
+    },
+    {
+      "path": "firmware/FluxRail/src/common/InputTypes.h",
+      "bytes": 1401,
+      "sha256": "244a3d3fc727e56ba83549976a0169d56a2007052bd1500be365151dc19657a8"
+    },
+    {
+      "path": "firmware/FluxRail/src/common/Io4Types.h",
+      "bytes": 918,
+      "sha256": "2b4d8860dc0475724f795670b7c36415551677385848653309c686daf936e136"
+    },
+    {
+      "path": "firmware/FluxRail/src/common/MotionTypes.h",
+      "bytes": 2252,
+      "sha256": "cd91ff22424b27c9a4fa02990119b7e402e04ff7b795832820f05b37e13e4562"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/ConfigStore.cpp",
+      "bytes": 4266,
+      "sha256": "476163d47b967c1de1ab7e38d74ab6dc67240386e5273996c341078d2093a309"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/ConfigStore.h",
+      "bytes": 1958,
+      "sha256": "cb4f0ed0a016bd65f6f6bd07a139a751d4f903533043dbe28752b8e301829ef9"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/DeviceCodec.cpp",
+      "bytes": 6129,
+      "sha256": "90e55da2c633f072c7aaf9bd5d86c718878cecea7458b4e179fee844e4758da1"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/DeviceCodec.h",
+      "bytes": 526,
+      "sha256": "70eec154f4ebd8901487c0198617c262871a39f571f71acd926eadfbac0bbfe9"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/FlashRp2040.cpp",
+      "bytes": 2039,
+      "sha256": "d96a4a6162e5f03db6597220cd8121c5b2ea10530b411f575095c39bb33c5423"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/FlashRp2040.h",
+      "bytes": 460,
+      "sha256": "4463e632a4acad031a919ec8f4651b4d8da750e523ddbeb081604ad4cb431c5b"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/ProfileManager.cpp",
+      "bytes": 4694,
+      "sha256": "a7b7f61c4d7cfbebdceff920602dbd266480bda73233a7e52fbe0582972fb232"
+    },
+    {
+      "path": "firmware/FluxRail/src/config/ProfileManager.h",
+      "bytes": 981,
+      "sha256": "30bb41ce439cee74b5941a0f63ed7885622d50d06a602324a4b4ff126c58519f"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallAdcRp2040.cpp",
+      "bytes": 1773,
+      "sha256": "1d6ae498806720f0b70e8593d9dec7ed7003711027d1858051d1f1ff758db54e"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallAdcRp2040.h",
+      "bytes": 608,
+      "sha256": "fbfd6afa09277c4029a8b2359bd5ada4dd6f5e849f49c12e7bacb980aabc6f96"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallCalibration.cpp",
+      "bytes": 9352,
+      "sha256": "eb4fa6527b71a97676467042da82e3cbb9460ce8e83557c856955bca8a279511"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallCalibration.h",
+      "bytes": 1996,
+      "sha256": "1cb8428e153bb1bb713c5437cedbf200c1de3986877e098898cb2d60b0e633f0"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallModule.cpp",
+      "bytes": 3771,
+      "sha256": "84188dfb0a0ad6626f2e6b48b5fb5d9598c900a092b42d15eff74706b999e2c9"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallModule.h",
+      "bytes": 2718,
+      "sha256": "9b300c9acde814269bd209cf54fccdd2f2f6f5a4ed8eee2e8fe52c6bdca71333"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallPosition.cpp",
+      "bytes": 4523,
+      "sha256": "e0812ef6d16987e1a983a47690c36be0f4bf28ec0cf1d1229749ef8776c685b3"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallPosition.h",
+      "bytes": 1287,
+      "sha256": "084ea88c91fb031005961fa9e004d491b8018122678c7f54200833c8b4939bd2"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallSampler.cpp",
+      "bytes": 1382,
+      "sha256": "495c56433b8fd0b8c2295fcb6db26b8a4e513a76f725ba51c2208875036eab2f"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallSampler.h",
+      "bytes": 886,
+      "sha256": "895933fc948990c1008d107a692f968070e529fea81b3f9caf76656993343d04"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallTypes.cpp",
+      "bytes": 5874,
+      "sha256": "7a85accc84a18e068acce2e837b40cbce7c0919c38cf255759ebd7e5fdfbe2bc"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/HallTypes.h",
+      "bytes": 4694,
+      "sha256": "74bcc31a175cf0627a56bbde25f0c9a0b54769092d0330bfadd9f62a59be0be1"
+    },
+    {
+      "path": "firmware/FluxRail/src/hall/README.md",
+      "bytes": 13807,
+      "sha256": "1490adce11a55b72aa5972ebc83d0367b4f1282e9ca9165c4e6818c74c8c23b5"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/ActionMapper.cpp",
+      "bytes": 6661,
+      "sha256": "1418b7706b2000ed93eba4f970eefab25b808a2c15a857e928fb3d64c24934c0"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/ActionMapper.h",
+      "bytes": 2597,
+      "sha256": "2fc0c143ff3076f17de9fe002254ec7f5147001cef8229b44f8dedacb0e59b1c"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/KeyboardTypes.cpp",
+      "bytes": 3085,
+      "sha256": "3cff667ce1b1ad9b26a4961874e5c69aca5bedd25cec6fa4a085278e2db4a899"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/KeyboardTypes.h",
+      "bytes": 1443,
+      "sha256": "ef1257693344a7b0c4278a82d5399b26e3108d31ae6bfd85ac4ad6c8672e3df5"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/KeyScanner.cpp",
+      "bytes": 2063,
+      "sha256": "b8dedbb7dd92c8b99266100619014da716f709e3333a776589139f7bd7392580"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/KeyScanner.h",
+      "bytes": 1471,
+      "sha256": "f114bbff6f4d8af97e0c5c4611e5b5ae1b414a9d3646154a46309823f2b8e87d"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/KeyScannerRp2040.cpp",
+      "bytes": 873,
+      "sha256": "41cacf342f1d0f6c394f3ee30f0eba8b2f056d76332cdda0c296277247bcb33b"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/KeyScannerRp2040.h",
+      "bytes": 275,
+      "sha256": "524543ac23b2db840a62627133cd9d6700059be5de68fad5d2d88f6c6dcfbb85"
+    },
+    {
+      "path": "firmware/FluxRail/src/keyboard/README.md",
+      "bytes": 5446,
+      "sha256": "ab939b7c273682cc4fb3001299455922949704b664850e6272a4661db85da2ea"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/AppPushSink.h",
+      "bytes": 747,
+      "sha256": "d9f293f0df5e42e88520807fe9654a25ac492d4c1b9c8d4796c4fe9bf5c1abc6"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobModule.cpp",
+      "bytes": 4950,
+      "sha256": "9ca8302f4fbdbfdfd7198aa9f0ea7a758057a27be3b53df3755c3bc355bf05ed"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobModule.h",
+      "bytes": 2773,
+      "sha256": "5659d3e3a1d901b4e865214b90f96a7d3ee77c19c72136e45d36e6309df8de23"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobMotion.cpp",
+      "bytes": 4665,
+      "sha256": "e8bc842e098dd1de7e525661266da9d23f4d0c85092d70faf59b189588de53c8"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobMotion.h",
+      "bytes": 999,
+      "sha256": "a3659dce30beb2068ebe3c802064f49b8304562679c4519fff274b517c6aaf8c"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobSampler.cpp",
+      "bytes": 911,
+      "sha256": "12dbf961cbd1ae4418bed9571371b8566bc93dc0567c600f13b7ca4555ed21eb"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobSampler.h",
+      "bytes": 926,
+      "sha256": "35379f5fe6f0521ba398c6b490d312f06a9453f4562dd94cb9777c52d325535b"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobTypes.cpp",
+      "bytes": 2382,
+      "sha256": "43213a7fddd2eb9fb193fa011589530f8af2892d3ad47ba397912b5f6b6f1c88"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/KnobTypes.h",
+      "bytes": 4119,
+      "sha256": "24b48050ec66b05d9220b9ccdabf5b5c51b82a0322387898197c44eccf7e9964"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.cpp",
+      "bytes": 3236,
+      "sha256": "96cc34e020f5c6c31b822a635feec193c55c45cc001a5639ffeb4357deaf38f6"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.h",
+      "bytes": 942,
+      "sha256": "da59845e22564bb09309be60a10d94d1fa655e4e66f0b4d8bd445e580b2d0074"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/PushFilter.cpp",
+      "bytes": 2765,
+      "sha256": "d9bcc31ebebfa9d6acce050a09215c6889dbef83630a092c1a9a9bb5b803c0d8"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/PushFilter.h",
+      "bytes": 976,
+      "sha256": "8c3ce8108f7cb32cec9b6b59ac95f0ddceb0e58d0557457ab2db455b101d83dd"
+    },
+    {
+      "path": "firmware/FluxRail/src/knobs/README.md",
+      "bytes": 12985,
+      "sha256": "78757467e562a9d38b08a5e9bfa03f92e429f1130cc482027032260a6fd02496"
+    },
+    {
+      "path": "firmware/FluxRail/src/lighting/KeyLighting.cpp",
+      "bytes": 4546,
+      "sha256": "6218cd02ca6bf25c18ff2afe3647c3bff72740a51e31045544c2834ddfdbcb0c"
+    },
+    {
+      "path": "firmware/FluxRail/src/lighting/KeyLighting.h",
+      "bytes": 1901,
+      "sha256": "cd677bd1e0d075e0ff02b50be926fa0ce529456e908ee7d143a30194c7ab886a"
+    },
+    {
+      "path": "firmware/FluxRail/src/lighting/README.md",
+      "bytes": 4734,
+      "sha256": "a90be776c9482b82f09e42bab064607d2d7327e88ed76d1126370b65e29306ce"
+    },
+    {
+      "path": "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.cpp",
+      "bytes": 6359,
+      "sha256": "79945f4abef1917fad8018be030dad3cb5eb87773ef00d31bc0dc6d9d39653ea"
+    },
+    {
+      "path": "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.h",
+      "bytes": 1685,
+      "sha256": "3cbd6f8c6fb273a7ade848dc5fb965119845bb22e3ea902c2695169726d557f1"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/CDC_PROTOCOL.md",
+      "bytes": 19272,
+      "sha256": "ef2e47d2042458783a0fa61e863b887be284e2a1d1b583237ca2d15ce9875684"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/ConfigProtocol.cpp",
+      "bytes": 20477,
+      "sha256": "faf41970234d2041ab26889d408ae25a6ae9b0b6047d60f038d3c2d911400894"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/ConfigProtocol.h",
+      "bytes": 4302,
+      "sha256": "43dd8b130ea69fe315e5e226eaf123baeceeacc09240f2ab7002f729149f1d93"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/ConfigProtocolDevice.cpp",
+      "bytes": 14109,
+      "sha256": "69d283411a9cab223b57b671f05736222bdb16e9896763e4d8ab259e233a5781"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/Json.cpp",
+      "bytes": 8596,
+      "sha256": "4d18acaa17f25a6bff48538044f5fee5ded1148c83770b904676174277502cfa"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/Json.h",
+      "bytes": 1784,
+      "sha256": "07a76ea481fcc2f2ef8df2e60ac2d2f1ffc5df5a5a8fbb0f770dbdd9e03f3fbb"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/ProfileCodec.cpp",
+      "bytes": 7215,
+      "sha256": "60f392a6d27f37106dfb7a2d0e34743c7520bb0cef93c7c9fb32691598ff359e"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/ProfileCodec.h",
+      "bytes": 315,
+      "sha256": "9f69a808e43893f5fb14259d6446a1b5833926196008ac24fb5c4ea3b0f55a8d"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/RuntimeCodec.cpp",
+      "bytes": 6810,
+      "sha256": "a6ca4ad2bcb2a2b1e943f9ac29a6f6e7cccea308eca035422f2e7e548b49f705"
+    },
+    {
+      "path": "firmware/FluxRail/src/protocol/RuntimeCodec.h",
+      "bytes": 337,
+      "sha256": "2d25e3a4bbb67a39e293fbb359b291f2c432dd5187ebf7fc376c99f5a1754cd7"
+    },
+    {
+      "path": "firmware/FluxRail/src/realtime/ConfigMailbox.h",
+      "bytes": 1591,
+      "sha256": "0ad1b71100c9f9725aa3bc5fcd9783d8bfc508f66f0e248cd1fc2a85994388cc"
+    },
+    {
+      "path": "firmware/FluxRail/src/realtime/InputWorker.cpp",
+      "bytes": 4470,
+      "sha256": "f21984842330f3b6d552eedea0f5820195ed77836ab825a23909835455b54c21"
+    },
+    {
+      "path": "firmware/FluxRail/src/realtime/InputWorker.h",
+      "bytes": 1439,
+      "sha256": "e324a772f7f1976449d76c4c42ff390ab1bc2708b2559cdd2a6ed6bc43f724f0"
+    },
+    {
+      "path": "firmware/FluxRail/src/realtime/SpscQueue.h",
+      "bytes": 2405,
+      "sha256": "d53170a665c34adf1283751120c794f084b6043f3ba4ea4e7b6b76819ed6bced"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/CdcTransport.cpp",
+      "bytes": 1601,
+      "sha256": "5683ce0d58db9ad1219daa9a43c36d86cc685435549f648e7ebaff9361eaba0a"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/CdcTransport.h",
+      "bytes": 457,
+      "sha256": "6acbe7e7e0e8cb297adf896e9f09902738608488ad1ebf3b0c1e6b8b3ce666ec"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/Io4Codec.cpp",
+      "bytes": 4229,
+      "sha256": "8441cf823548c1f4a4fde60b1a7f51f0587efbb2b99e881126eba3af6feda7f3"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/Io4Codec.h",
+      "bytes": 1560,
+      "sha256": "17a55900ce227e73de8323acd931948871de124219234db6601345f08259a86d"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/NormalHid.cpp",
+      "bytes": 6662,
+      "sha256": "6fb3279363d202d7bcb73f40da372a9625248237e036712b5e5f0b4097a15b64"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/NormalHid.h",
+      "bytes": 2625,
+      "sha256": "9d5a988932d9eb5ea922cdcecbcb82508310d2d8306023910b0ff3e9e9eaadaa"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/NormalHidCodec.cpp",
+      "bytes": 2756,
+      "sha256": "c3d1c144b35f17c3f2afd5e9b9cea24f3fa8748e01a5c621d7a9819692525dae"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/NormalHidCodec.h",
+      "bytes": 831,
+      "sha256": "7d27729c629d70d41e894f8736679f58d10ce9d7d661ef11a284245829af3ce8"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/UsbBackend.cpp",
+      "bytes": 8293,
+      "sha256": "1acc2d88e4cf3d897a5f1f252af1beb64dadb71961ea4ae4b4e49b8c9ddeb902"
+    },
+    {
+      "path": "firmware/FluxRail/src/usb/UsbBackend.h",
+      "bytes": 3310,
+      "sha256": "1fc445fecf8ac1680468bbf975ff37a662b4f025034dbc145e233a665b6f140e"
+    },
+    {
+      "path": "tests/integration/.gitignore",
+      "bytes": 20,
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    {
+      "path": "tests/integration/app_storage_tests.cpp",
+      "bytes": 14929,
+      "sha256": "170ff41af3e7f9ec6c2aefcdb7f4d99d43e304b74fef0ce77897efa7e83124ca"
+    },
+    {
+      "path": "tests/integration/bare_board_test.mjs",
+      "bytes": 17956,
+      "sha256": "4071256a59d5cee9bcd4b0200c5556ee0f64191c58ce78953dceef8bf99c77f9"
+    },
+    {
+      "path": "tests/integration/calibration_lab_2026-10-03.png",
+      "bytes": 79973,
+      "sha256": "02e88b7abaee031f2ff383357058eb735587d5ff4c4b73cc67f74b49de3eb662"
+    },
+    {
+      "path": "tests/integration/cdc_client.py",
+      "bytes": 5094,
+      "sha256": "f9bbb14e63f784a1c3c156977d6f1ef71af0de00557539095afaf31be4da05d6"
+    },
+    {
+      "path": "tests/integration/cdc_examples.jsonl",
+      "bytes": 1548,
+      "sha256": "3b449eab466297014bde8919f61cfefe9b32017efaf36545eb65b111e1a9e530"
+    },
+    {
+      "path": "tests/integration/check_firmware_version.mjs",
+      "bytes": 812,
+      "sha256": "2869343f218b5721487126eaad0420571a53f69999ac585ab57d125c04fee1e4"
+    },
+    {
+      "path": "tests/integration/check_module1_regressions.py",
+      "bytes": 3890,
+      "sha256": "6054d64a72d346cea38a598e6fb5bc98d18c8921e8a85c7b0f4436d76c794454"
+    },
+    {
+      "path": "tests/integration/compile_firmware.py",
+      "bytes": 9853,
+      "sha256": "75c4afec2d70c8069fb8dbdaf0aae4aeff406aef11472432f91affa272337322"
+    },
+    {
+      "path": "tests/integration/finalize_io4_report.py",
+      "bytes": 10222,
+      "sha256": "63f8fe12b3a3d5ed8daa3e8bf96cc628de1567425995b7c045e19d186436bb2a"
+    },
+    {
+      "path": "tests/integration/finalize_module1_report.py",
+      "bytes": 249,
+      "sha256": "8817fc1b82b5983703b187577ffc25528a3aeb2e4bf96b5994c73f860712e6a7"
+    },
+    {
+      "path": "tests/integration/finalize_storage_report.py",
+      "bytes": 216,
+      "sha256": "5d9304ad91d1c3c310e9c18747bb3615d8347fa40f17b9c086423aed7bbab9c9"
+    },
+    {
+      "path": "tests/integration/HARDWARE_CHECKLIST.md",
+      "bytes": 5985,
+      "sha256": "3188dd4e56c74777fb33a47e3d67c53772fcb1af5a73e62c7ab4a3acc3e1e97a"
+    },
+    {
+      "path": "tests/integration/integration_tests.cpp",
+      "bytes": 15005,
+      "sha256": "5579c2b2529ab595bd492a135b269c15425d08653950f1505f3cc3d8d395a0bf"
+    },
+    {
+      "path": "tests/integration/integration_ui_2026-10-03.png",
+      "bytes": 70419,
+      "sha256": "d615c29e135166b4c1c27aa80153bd29941996eec4ee1f1228541f42c81c66ac"
+    },
+    {
+      "path": "tests/integration/io4_examples.jsonl",
+      "bytes": 555,
+      "sha256": "f027703cc0f6e9693faacc5cbbb67b247a2055b5a449e36d9a1b39098d81b159"
+    },
+    {
+      "path": "tests/integration/io4_mapping_editor_2026-10-03.png",
+      "bytes": 88899,
+      "sha256": "4d9608826825b4b75e9856ae6a4f7d4dcc6d3b329db3dd1e976207d3299d9463"
+    },
+    {
+      "path": "tests/integration/io4_tests.cpp",
+      "bytes": 26393,
+      "sha256": "3e0c3364c59173440ad92ba0032c30071a693ac1789f41ef5a7f52d34abd4541"
+    },
+    {
+      "path": "tests/integration/keyboard_listening_2026-10-03.png",
+      "bytes": 95180,
+      "sha256": "597eb47656d720cfd5d9161b99365e0d9adee099912d7dfe32bc268ee87146ee"
+    },
+    {
+      "path": "tests/integration/motion_tests.cpp",
+      "bytes": 12387,
+      "sha256": "bec185b3d7e146a940d1ab202cfdfdfc7d192de5b5581a5c2fc06ca7e4a40a90"
+    },
+    {
+      "path": "tests/integration/protocol_tests.cpp",
+      "bytes": 20061,
+      "sha256": "e4d05e3d2c986d475ec6df9990cc387a23c7d3119bf4c50993b34da31c653bda"
+    },
+    {
+      "path": "tests/integration/README.md",
+      "bytes": 5699,
+      "sha256": "5c85b89282c7a875849b82087fd4d2600e8579a7cbf82877bd1c9547cecaa2a8"
+    },
+    {
+      "path": "tests/integration/REVIEW_INTEGRATION_2026-10-03.md",
+      "bytes": 4149,
+      "sha256": "4a6256792c8afedd81a04a0e1e2d2b27b98ab7f4ad2eb428b75ce9989a954039"
+    },
+    {
+      "path": "tests/integration/run_all.py",
+      "bytes": 2766,
+      "sha256": "d590b7ae8c2f855dc54c7ac4c67c3e0994b5e18773f5861eccae57b0e9f523e3"
+    },
+    {
+      "path": "tests/integration/run_app_storage.py",
+      "bytes": 1526,
+      "sha256": "640829634e555ac4d40337995b541e450dd6e2bad8667d74d4843ccbe3285a63"
+    },
+    {
+      "path": "tests/integration/run_io4.py",
+      "bytes": 1510,
+      "sha256": "72f58db933c8b0f562f6c76c1113070075975da9bb82fb936cd692df7562bf34"
+    },
+    {
+      "path": "tests/integration/run_motion.py",
+      "bytes": 1516,
+      "sha256": "614a225fda5c84cbf59e4691f4456a9dd3c77d2b4ac780b6ec976a87f148b665"
+    },
+    {
+      "path": "tests/integration/run_protocol.py",
+      "bytes": 1043,
+      "sha256": "21a2c0b4c7f86cb581b4510afe191ba2f7b5d8e92f6938c5eacef24d704663b6"
+    },
+    {
+      "path": "tests/integration/run_storage.py",
+      "bytes": 1041,
+      "sha256": "e48ef2c942b97828744d6d2668e35f622a26e8e5fc48581741623a99baead0bf"
+    },
+    {
+      "path": "tests/integration/run_tests.py",
+      "bytes": 513,
+      "sha256": "7442f7e0912ecb87d884a0d7eeef144242b8fc3c7a4a1004436f44e99a7e159a"
+    },
+    {
+      "path": "tests/integration/run_transport.py",
+      "bytes": 650,
+      "sha256": "303105340ee0cfe5bdfe1809d53baabce5589e2d4ddca0ee0e147b6f1a49d3bb"
+    },
+    {
+      "path": "tests/integration/run_usb_descriptors.py",
+      "bytes": 8929,
+      "sha256": "959c2f481b473be4559381d0ce0d5dbacedd23b009c02bdf3b36e7c4577b5f7a"
+    },
+    {
+      "path": "tests/integration/schema1_defaults.bin",
+      "bytes": 1339,
+      "sha256": "c67377f09ac1d3f491b8f6060088781131a530df061780352cc0ea4a9287a754"
+    },
+    {
+      "path": "tests/integration/schema2_defaults.bin",
+      "bytes": 1387,
+      "sha256": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581"
+    },
+    {
+      "path": "tests/integration/schema2_defaults_phase9.bin",
+      "bytes": 1387,
+      "sha256": "03ad74d08801d5cc1e86ac7b8da819154a6a48f8cb62f4b47458dff404e18f0b"
+    },
+    {
+      "path": "tests/integration/sensor_stubs.cpp",
+      "bytes": 1110,
+      "sha256": "271e8e109ecf04aafbf095dbd1333cdad3223b6a4dadba1fabfa94804927869f"
+    },
+    {
+      "path": "tests/integration/serial_bridge.ps1",
+      "bytes": 1975,
+      "sha256": "c00588db7852d9156cc643426b60d4ff3e0e6a89ad2fc560c9408f2ea3cb2ff7"
+    },
+    {
+      "path": "tests/integration/storage_examples.jsonl",
+      "bytes": 695,
+      "sha256": "f3541b03aeb91db1fa55374d24e49fe6021e2bf668bd170a4e2172161d04e19c"
+    },
+    {
+      "path": "tests/integration/storage_tests.cpp",
+      "bytes": 27871,
+      "sha256": "b590b83ee953e2c6b926159bfe05e153507c0796bef3776f4950442796806e37"
+    },
+    {
+      "path": "tests/integration/transport_tests.cpp",
+      "bytes": 6373,
+      "sha256": "ebb27231a815adfb6700cd40e314c847c9eee51301624c64b20f3243a389d330"
+    },
+    {
+      "path": "tests/integration/usb_mode_entry_2026-10-03.png",
+      "bytes": 82593,
+      "sha256": "c4426527790d851cb3f797b3bc17a32e6c1c2c8bea857075a79283cef9dfeeb6"
+    },
+    {
+      "path": "tests/integration/validation_2026-10-03.json",
+      "bytes": 14898,
+      "sha256": "6fcfb205899981a1749b084a161f9a39dc0baf0eb4f817b65e81132f4f3a1600"
+    },
+    {
+      "path": "tests/integration/validation_bare_board_2026-10-04.json",
+      "bytes": 3909,
+      "sha256": "0df7594e71ab861a98688f42d121a96ba3330692294865c5735787220494ed18"
+    },
+    {
+      "path": "tests/integration/validation_cdc_2026-10-03.json",
+      "bytes": 20951,
+      "sha256": "c3ecf88ec372ecc51a352acb0c8848585e7ab248431a9009b3884b17c4ede137"
+    },
+    {
+      "path": "tests/integration/validation_firmware_version_2026-10-04.json",
+      "bytes": 2222,
+      "sha256": "1fb8aab022eb4c08e285e7edf0f5f4f08e6d0dab51d88b395fa338dd052eeaf1"
+    },
+    {
+      "path": "tests/integration/validation_integration_2026-10-03.json",
+      "bytes": 168381,
+      "sha256": "3da8a57dd13dcc305e5a106850f6380133c40073ae5b749b56949c16dc68c220"
+    },
+    {
+      "path": "tests/integration/validation_io4_2026-10-03.json",
+      "bytes": 198998,
+      "sha256": "affd5819e1461f9085fe6c780a6753d501dc0646e7cbaea8c73167d35a4c61cc"
+    },
+    {
+      "path": "tests/integration/validation_io4_editor_2026-10-03.json",
+      "bytes": 4734,
+      "sha256": "b2d2673ad15934f5bf99b6dcfbebc84effb0955a33d85093c9f0b9c1a9462a5c"
+    },
+    {
+      "path": "tests/integration/validation_module1_2026-10-03.json",
+      "bytes": 203901,
+      "sha256": "7f618fa2437ad43e442b49edea0043dfa328ffcd7e57de149936916d4c2235d4"
+    },
+    {
+      "path": "tests/integration/validation_storage_2026-10-03.json",
+      "bytes": 92172,
+      "sha256": "ec1a0fc67eee05d68f7631a5083051056afaf06c731a871bce900d7fc21e9c82"
+    },
+    {
+      "path": "tests/integration/validation_web_layout_2026-10-03.json",
+      "bytes": 2436,
+      "sha256": "2d70714eac3e2cea3c72552e2c5ae10dcd9ee8ca4416cc4e04ddf1273d910940"
+    },
+    {
+      "path": "tests/integration/web_client_board_test.mjs",
+      "bytes": 4882,
+      "sha256": "75ab779a2303cac1617512b06f242f10767250ddbfcff95acccec5c244237fe8"
+    },
+    {
+      "path": "tests/integration/windows_hid_probe.py",
+      "bytes": 5400,
+      "sha256": "3802808a8dba2cf487e052d8073af915b0e622cb2f3f0f2f5bcd937a32b2ba84"
+    },
+    {
+      "path": "tests/module2/compile_smoke.py",
+      "bytes": 3816,
+      "sha256": "2e0d2046fcb176747ee1083b92df9d6065ce0c717798f280141553d2bfc63cd2"
+    },
+    {
+      "path": "tests/module2/finalize_report.py",
+      "bytes": 3046,
+      "sha256": "d18502c92cbaf876db425533f96c0a5b535411879ee7bfd7abadfe82716d5df2"
+    },
+    {
+      "path": "tests/module2/HARDWARE_CHECKLIST.md",
+      "bytes": 3595,
+      "sha256": "a773b42588372ba511d708e7d3150ff224335497587dd6f62422ee9364db5b63"
+    },
+    {
+      "path": "tests/module2/module2_tests.cpp",
+      "bytes": 20109,
+      "sha256": "db8c6ed24e3a692ad9eccd9f2bcd7e8a1c7bfd4c93f71ec3897ffbcc283336e8"
+    },
+    {
+      "path": "tests/module2/README.md",
+      "bytes": 4612,
+      "sha256": "38d6527a2a227abe1934494e82623d40ed370642d44397921411917724dce43f"
+    },
+    {
+      "path": "tests/module2/run_tests.py",
+      "bytes": 7111,
+      "sha256": "9d0c32555d4f5b98a477a1213f899d55bd600b3b57f9ffc4dc307dcb028cd268"
+    },
+    {
+      "path": "tests/module2/validation_2026-10-03.json",
+      "bytes": 7173,
+      "sha256": "cc0a6630e86b75f678c362aa88c6d16e9c14ec69c041bf751a1f94a606fa8378"
+    },
+    {
+      "path": "tests/module3/.gitignore",
+      "bytes": 20,
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    {
+      "path": "tests/module3/app_adapter_compile.cpp",
+      "bytes": 712,
+      "sha256": "59610d039d704fa603cedd59debfe911a3d34258f0b80af081836c41ae43767e"
+    },
+    {
+      "path": "tests/module3/compile_app_adapter.py",
+      "bytes": 2739,
+      "sha256": "8896bac9b1acfd8e365a19644c1e2c28beab6c9433900036b3c142db98afac0f"
+    },
+    {
+      "path": "tests/module3/compile_smoke.py",
+      "bytes": 4968,
+      "sha256": "bbb40d299880223e740584ff672839b8cb53603e0057be59d8de84a5ff61a4c6"
+    },
+    {
+      "path": "tests/module3/finalize_report.py",
+      "bytes": 2907,
+      "sha256": "a820a1c4757c395b52d0f27f5beea454294ce9b34f481e428e6c236b669a7af5"
+    },
+    {
+      "path": "tests/module3/HARDWARE_CHECKLIST.md",
+      "bytes": 3612,
+      "sha256": "55df9acb8eda788e3e2501145ee5b0737940bfa254ed42c8d0b1ff63d0027d27"
+    },
+    {
+      "path": "tests/module3/module3_tests.cpp",
+      "bytes": 16113,
+      "sha256": "0c847d1d43319c17e5c73a96d0a0a89a0ccfa9d5a9ce361cf035bb67e5466e33"
+    },
+    {
+      "path": "tests/module3/README.md",
+      "bytes": 3238,
+      "sha256": "4922a45197f38d73a04a8bd0107e77fe3c07217b21c90641fa1260d3fe993f6c"
+    },
+    {
+      "path": "tests/module3/run_tests.py",
+      "bytes": 7670,
+      "sha256": "6119a1fb8a184f85f3a7f5ddd922a04de5e37a69d02e62836219f34bdd5fdd76"
+    },
+    {
+      "path": "tests/module3/validation_2026-10-03.json",
+      "bytes": 16743,
+      "sha256": "12ca39a3d63243f26c1d6bd1272ed6623a51764f12a5a71e2b77f986413a64d6"
+    },
+    {
+      "path": "tests/integration/stubs/Adafruit_TinyUSB.h",
+      "bytes": 4783,
+      "sha256": "24d756cffc5ee02a947373fd7f0e13a33401069009ab4863963d485112d94c5b"
+    },
+    {
+      "path": "tests/integration/stubs_app/Arduino.h",
+      "bytes": 421,
+      "sha256": "4ac88e2dbd2c80f97c41095a6fb1ad91cc160a435e1a5ec89dd4e2ea03d63073"
+    },
+    {
+      "path": "tests/integration/stubs_app/Sensors.h",
+      "bytes": 246,
+      "sha256": "088ee1c5316c7a0651df9f6b2489415edb305b0125b6fa2bd3793f98eb73d869"
+    },
+    {
+      "path": "tests/integration/stubs/pico/mutex.h",
+      "bytes": 339,
+      "sha256": "3f0408073dbb2ed777586c83e13543888e4121a0a07a81972914aabbcb3570b8"
+    },
+    {
+      "path": "tests/integration/stubs_app/hardware/pio.h",
+      "bytes": 31,
+      "sha256": "353e1e119e86f388a9acd6d25f5e2387e76309b3ca340de6f391cee422dea6a9"
+    },
+    {
+      "path": "tests/integration/stubs_app/hardware/watchdog.h",
+      "bytes": 90,
+      "sha256": "814279bdb249f0c273e5005083c4061f39ba7437d82333d1843c1a12abc1d5ea"
+    },
+    {
+      "path": "tests/integration/stubs_app/pico/bootrom.h",
+      "bytes": 155,
+      "sha256": "548cdfa1254b7a37fe1c327a1268db92291b8e480f7861cf5f1a338cf9c241c2"
+    },
+    {
+      "path": "tests/integration/stubs_app/pico/unique_id.h",
+      "bytes": 174,
+      "sha256": "bf2df4f38d76f6cf01f54fee4c85899015d2c4160a03e4ef052d5a5a53ff1560"
+    }
+  ]
+}

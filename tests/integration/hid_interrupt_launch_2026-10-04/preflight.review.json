@@ -1,0 +1,18 @@
+{
+  "reviewer": "Luna",
+  "assessment": "Static preflight passes with one required evidence constraint: this is a short, RAM-only profile 4→1→4 transition that should cause the mapper to emit neutral keyboard/mouse-button reports; it does not exercise real key states, relative movement, Hall sensing, absolute XY, or game behavior. The trigger script checks serial/version/revision, active profile 4, Hall disabled on profiles 1 and 4, and physical_mask=0 before each transition; it restores profile 4 using a freshly read revision in finally. The capture enables only the observed USB3 stack providers at 0x8081 and stops its own session in finally. The capture is global to those providers, not device-filtered, so keep the interval short and treat unrelated USB payload as potentially sensitive. PartialDataBusTrace means limited payload: only call this a neutral-report readback if the target endpoint/direction and complete report ID/bytes/length are actually present and untruncated in ETW. Otherwise report an inconclusive capture, not pass. No blocking flaw identified in the inspected safe path.",
+  "scope": ["run-elevated.ps1", "capture_hid_interrupt.ps1", "trigger_neutral_hid.ps1"],
+  "checks": [
+    "Elevated launcher records actual admin token, PID, start/finish, tool hash and exit status; it does not bypass UAC.",
+    "Capture refuses existing evidence directory, requires explicit Python/identity parameters, checks present HID metadata, captures XHCI/UCX/HUB3 and queries the session before triggering actions.",
+    "Trigger gates on baseline active profile 4, both profile1/profile4 Hall disabled, matching device identity/revision, healthy/idle state and physical_mask=0. Hall profile2 is enabled and is not selected; do not generalize to all profiles.",
+    "Only set_active_profile 1 then 4 is issued; no save/Flash/reboot request appears. Each transition is followed by active-profile and healthy-state checks; finally uses fresh device revision to restore profile4 and closes the serial port.",
+    "Capture finally stops its own ETW session and saves command evidence; tracerpt runs after stop. Before/after schema2 checks require equal size, identical bytes except revision offsets 4..7, and identical profile JSON."
+  ],
+  "constraints": [
+    "ETW payload is partial and not guaranteed complete. Verify target-device association, interrupt IN endpoint, report ID, exact report bytes and length before claiming payload readback; truncated/absent payload is inconclusive.",
+    "0x8081 is provider-wide USB capture on the host, not filtered to FluxRail; unrelated USB events and limited payload may be collected. Minimize duration and protect the ETL/XML files.",
+    "This can establish only neutral configuration-resynchronization reports if observed. It does not test HID GET_REPORT, non-neutral NKRO, button presses, mouse movement, sensor/Hall behavior, absolute X/Y, or game integration.",
+    "A physical key held during the transition could be restored by the mapper. Keep the board physically idle and retain the fresh physical_mask checks; abort/restore on any nonzero mask or health mismatch."
+  ]
+}

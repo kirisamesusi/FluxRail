@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RP2040 Rhythm Controller</title>
+  <style>
+    :root {
+      --bg: #eafcff;
+      --bg-deep: #c6f3fb;
+      --surface: rgba(255, 255, 255, 0.82);
+      --surface-strong: rgba(255, 255, 255, 0.95);
+      --line: rgba(44, 156, 179, 0.22);
+      --text: #123744;
+      --muted: #557c88;
+      --accent: #10aeca;
+      --accent-2: #44d7cb;
+      --accent-warm: #ff8f86;
+      --danger: #d74c68;
+      --shadow: 0 20px 48px rgba(18, 91, 112, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(111, 226, 238, 0.55), transparent 34%),
+        radial-gradient(circle at 86% 0%, rgba(144, 242, 210, 0.5), transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, #f8feff 45%, var(--bg-deep) 100%);
+      color: var(--text);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .shell {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .title {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.02;
+      font-weight: 800;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    button, select, input[type="range"], input[type="color"], input[type="text"] {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 18px;
+      min-height: 44px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(16, 174, 202, 0.24);
+      transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+
+    button.secondary {
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--text);
+      box-shadow: none;
+      border: 1px solid var(--line);
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.58;
+      transform: none;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      color: var(--muted);
+    }
+
+    .banner strong { color: var(--text); }
+
+    .banner.disconnected {
+      border-color: rgba(215, 76, 104, 0.28);
+      color: var(--danger);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.9fr) minmax(460px, 1.55fr) minmax(260px, 0.9fr) minmax(260px, 0.9fr);
+      gap: 18px;
+      margin-top: 18px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .panel p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .row {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .row:last-child { margin-bottom: 0; }
+
+    .row label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(44, 156, 179, 0.24);
+      background: var(--surface-strong);
+      padding: 11px 12px;
+      color: var(--text);
+      outline-color: var(--accent);
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    input[type="color"] {
+      width: 100%;
+      height: 46px;
+      border: 1px solid rgba(44, 156, 179, 0.24);
+      background: var(--surface-strong);
+      border-radius: 14px;
+      padding: 4px;
+    }
+
+    .switch-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(44, 156, 179, 0.18);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .switch-row span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .switch {
+      position: relative;
+      width: 56px;
+      height: 32px;
+      flex: 0 0 auto;
+    }
+
+    .switch input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+    }
+
+    .slider {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: #bad4dc;
+      cursor: pointer;
+      transition: background 160ms ease;
+    }
+
+    .slider::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 4px;
+      left: 4px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 3px 10px rgba(33, 92, 110, 0.22);
+      transition: transform 160ms ease;
+    }
+
+    .switch input:checked + .slider {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .switch input:checked + .slider::after {
+      transform: translateX(24px);
+    }
+
+    .key-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(54px, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .key-card {
+      min-width: 0;
+      border-radius: 14px;
+      border: 1px solid rgba(44, 156, 179, 0.22);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(215, 248, 252, 0.72));
+      padding: 10px;
+      box-shadow: 0 10px 24px rgba(35, 128, 151, 0.08);
+    }
+
+    .key-card small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-weight: 750;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .key-card input {
+      height: 54px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 24px;
+      padding: 8px;
+      margin-bottom: 8px;
+      min-width: 0;
+      color: var(--text);
+      background: var(--surface-strong);
+      border-color: rgba(44, 156, 179, 0.28);
+      box-shadow: 0 8px 18px rgba(35, 128, 151, 0.08);
+      text-shadow: none;
+    }
+
+    .key-card button {
+      width: 100%;
+      padding: 8px;
+      min-height: 34px;
+      font-size: 12px;
+      border-radius: 12px;
+    }
+
+    .key-pos-0 { grid-column: 1; }
+    .key-pos-1 { grid-column: 2; }
+    .key-pos-2 { grid-column: 3; }
+    .key-pos-3 { grid-column: 4; }
+    .key-pos-4 { grid-column: 5; }
+    .key-pos-5 { grid-column: 6; }
+    .key-pos-6 { grid-column: 2; }
+    .key-pos-7 { grid-column: 5; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .metric {
+      min-width: 0;
+      border-radius: 14px;
+      border: 1px solid rgba(44, 156, 179, 0.18);
+      background: rgba(255, 255, 255, 0.58);
+      padding: 10px 12px;
+    }
+
+    .metric small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .metric strong {
+      display: block;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .cal-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .cal-actions button {
+      width: 100%;
+      padding: 10px 8px;
+      min-height: 40px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .shell { padding: 24px 14px 44px; }
+      .banner { align-items: flex-start; flex-direction: column; }
+      .grid {
+        grid-template-columns: minmax(260px, 0.9fr) minmax(460px, 1.55fr) minmax(260px, 0.9fr) minmax(260px, 0.9fr);
+      }
+      .key-grid { gap: 8px; }
+      .key-card { padding: 8px; }
+      .key-card input { height: 50px; font-size: 22px; }
+      .key-card button { font-size: 11px; }
+      .metric-grid, .cal-actions { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <h1 class="title">RP2040 Rhythm Controller</h1>
+      <p class="subtitle">连接控制器后，页面会自动读取主控当前配置。按键、灯效、霍尔校准和滑动输出会立即下发并保存到主控。</p>
+      <div class="toolbar">
+        <button id="connectButton">连接设备</button>
+        <button id="disconnectButton" class="secondary" disabled>断开连接</button>
+        <span class="tag" id="runtimeTag">当前未连接</span>
+      </div>
+    </section>
+
+    <div class="banner disconnected" id="statusBanner">
+      <strong>连接已断开</strong>
+      <span id="statusText">请点击“连接设备”，并从浏览器弹窗中选择控制器的串口。</span>
+    </div>
+
+    <main id="configRoot" class="hidden">
+      <div class="grid">
+        <section class="panel">
+          <h2>滑动与霍尔</h2>
+          <p>关闭滑动后，设备只发送 8 键键盘输入，霍尔传感器不会再输出鼠标横向移动。</p>
+          <div class="row">
+            <div class="switch-row">
+              <span>滑动输出</span>
+              <label class="switch" aria-label="滑动输出">
+                <input id="slideToggle" type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <label>霍尔传感器</label>
+            <div class="toolbar">
+              <button id="calibrateButton" class="secondary">保存空磁场基线</button>
+              <span class="tag" id="hallTag">等待数据</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="metric-grid">
+              <div class="metric"><small>位置 / 候选</small><strong id="hallPositionMetric">--</strong></div>
+              <div class="metric"><small>DX / 余量</small><strong id="hallMouseMetric">--</strong></div>
+              <div class="metric"><small>强度 / 向量</small><strong id="hallSignalMetric">--</strong></div>
+              <div class="metric"><small>边缘比例 L / R</small><strong id="hallEndpointMetric">--</strong></div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="hallPolaritySelect">霍尔极性</label>
+            <select id="hallPolaritySelect">
+              <option value="AUTO">自动</option>
+              <option value="DROP">RAW_DROP</option>
+              <option value="RISE">RAW_RISE</option>
+              <option value="FLIP">翻转一次</option>
+            </select>
+          </div>
+          <div class="row">
+            <label>边缘校准</label>
+            <div class="cal-actions">
+              <button id="endpointScanButton" class="secondary" type="button">端点扫描</button>
+              <button id="sensorGainButton" class="secondary" type="button">采集当前传感器（静止 0.5 秒）</button>
+              <button id="centerCalButton" class="secondary" type="button">保存中心点</button>
+              <button id="saveHallCalButton" class="secondary" type="button">保存校准</button>
+              <button id="resetHallCalButton" class="secondary" type="button">恢复默认</button>
+            </div>
+          </div>
+          <p>校准顺序：移开磁铁保存空磁场基线 → 同一磁铁以相同高度依次放在四个传感器上采集增益 → 在可到达两端的行程下扫描 8 秒。短限位到不了两端时，请跳过端点扫描。重新采集增益后需重做端点扫描。</p>
+          <p id="hallGainDetail">每路增益：等待数据</p>
+          <div class="toolbar">
+            <button id="recordHallButton" class="secondary" type="button">开始记录测试</button>
+            <button id="exportHallButton" class="secondary" type="button" disabled>导出 CSV</button>
+            <span id="recordHallStatus">约 4 次/秒，用于观察趋势</span>
+          </div>
+          <div class="row">
+            <label for="mouseScaleSelect">鼠标倍率</label>
+            <select id="mouseScaleSelect">
+              <option value="750">0.75x</option>
+              <option value="1000">1.00x</option>
+              <option value="1250">1.25x</option>
+              <option value="1500">1.50x</option>
+              <option value="1750">1.75x</option>
+              <option value="2000">2.00x</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="panel key-panel">
+          <h2>按键映射</h2>
+          <p>默认布局为上排 A S D J K L，下排 Z 在 S 下方、M 在 K 下方。允许多个槽位设置成同一个键。</p>
+          <div class="key-grid" id="keyGrid"></div>
+        </section>
+
+        <section class="panel">
+          <h2>按键灯</h2>
+          <p>支持即按即亮、单色常亮、幻彩常亮，默认亮度 50%。</p>
+          <div class="row">
+            <label for="keyLedEffect">效果</label>
+            <select id="keyLedEffect">
+              <option value="press">即按即亮</option>
+              <option value="solid">常亮</option>
+              <option value="rainbow">幻彩常亮</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="keyLedColor">颜色</label>
+            <input id="keyLedColor" type="color" value="#00c4ff">
+          </div>
+          <div class="row">
+            <label for="keyLedBrightness">亮度</label>
+            <input id="keyLedBrightness" type="range" min="0" max="255" value="128">
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>氛围灯</h2>
+          <p>支持幻彩常亮、单色流光、跑马灯，默认亮度 50%。</p>
+          <div class="row">
+            <label for="ambientLedEffect">效果</label>
+            <select id="ambientLedEffect">
+              <option value="rainbow">幻彩常亮</option>
+              <option value="flow">单色流光</option>
+              <option value="marquee">跑马灯</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="ambientLedColor">颜色</label>
+            <input id="ambientLedColor" type="color" value="#40e0d0">
+          </div>
+          <div class="row">
+            <label for="ambientLedBrightness">亮度</label>
+            <input id="ambientLedBrightness" type="range" min="0" max="255" value="128">
+          </div>
+          <div class="row">
+            <label for="syncToggle">两套灯效同步</label>
+            <select id="syncToggle">
+              <option value="0">关闭</option>
+              <option value="1">开启</option>
+            </select>
+          </div>
+        </section>
+      </div>
+
+      <p class="footer-note">Web Serial 需要在 <code>http://localhost</code> 或 <code>https</code> 下打开页面。页面每次连上设备都会重新读取主控里的当前配置。</p>
+    </main>
+  </div>
+
+  <script>
+    const keySlots = ["K1", "K2", "K3", "K4", "K5", "K6", "K7", "K8"];
+    const defaultKeyCodes = [4, 22, 7, 13, 14, 15, 29, 16];
+    const hidCodeToLabel = new Map([
+      [4, "A"], [5, "B"], [6, "C"], [7, "D"], [8, "E"], [9, "F"], [10, "G"], [11, "H"], [12, "I"],
+      [13, "J"], [14, "K"], [15, "L"], [16, "M"], [17, "N"], [18, "O"], [19, "P"], [20, "Q"], [21, "R"],
+      [22, "S"], [23, "T"], [24, "U"], [25, "V"], [26, "W"], [27, "X"], [28, "Y"], [29, "Z"],
+      [30, "1"], [31, "2"], [32, "3"], [33, "4"], [34, "5"], [35, "6"], [36, "7"], [37, "8"], [38, "9"], [39, "0"],
+      [40, "Enter"], [41, "Esc"], [42, "Backspace"], [43, "Tab"], [44, "Space"],
+      [79, "Right"], [80, "Left"], [81, "Down"], [82, "Up"]
+    ]);
+
+    const browserKeyToHid = {
+      a: 4, b: 5, c: 6, d: 7, e: 8, f: 9, g: 10, h: 11, i: 12, j: 13, k: 14, l: 15, m: 16,
+      n: 17, o: 18, p: 19, q: 20, r: 21, s: 22, t: 23, u: 24, v: 25, w: 26, x: 27, y: 28, z: 29,
+      1: 30, 2: 31, 3: 32, 4: 33, 5: 34, 6: 35, 7: 36, 8: 37, 9: 38, 0: 39,
+      Enter: 40, Escape: 41, Backspace: 42, Tab: 43, " ": 44, ArrowRight: 79, ArrowLeft: 80, ArrowDown: 81, ArrowUp: 82
+    };
+
+    const ui = {
+      connectButton: document.getElementById("connectButton"),
+      disconnectButton: document.getElementById("disconnectButton"),
+      statusBanner: document.getElementById("statusBanner"),
+      statusText: document.getElementById("statusText"),
+      configRoot: document.getElementById("configRoot"),
+      keyGrid: document.getElementById("keyGrid"),
+      keyLedEffect: document.getElementById("keyLedEffect"),
+      keyLedColor: document.getElementById("keyLedColor"),
+      keyLedBrightness: document.getElementById("keyLedBrightness"),
+      ambientLedEffect: document.getElementById("ambientLedEffect"),
+      ambientLedColor: document.getElementById("ambientLedColor"),
+      ambientLedBrightness: document.getElementById("ambientLedBrightness"),
+      syncToggle: document.getElementById("syncToggle"),
+      runtimeTag: document.getElementById("runtimeTag"),
+      hallTag: document.getElementById("hallTag"),
+      calibrateButton: document.getElementById("calibrateButton"),
+      bootloaderButton: null,
+      mouseScaleSelect: document.getElementById("mouseScaleSelect"),
+      slideToggle: document.getElementById("slideToggle"),
+      hallPolaritySelect: document.getElementById("hallPolaritySelect"),
+      endpointScanButton: document.getElementById("endpointScanButton"),
+      sensorGainButton: document.getElementById("sensorGainButton"),
+      centerCalButton: document.getElementById("centerCalButton"),
+      saveHallCalButton: document.getElementById("saveHallCalButton"),
+      resetHallCalButton: document.getElementById("resetHallCalButton"),
+      hallPositionMetric: document.getElementById("hallPositionMetric"),
+      hallMouseMetric: document.getElementById("hallMouseMetric"),
+      hallSignalMetric: document.getElementById("hallSignalMetric"),
+      hallEndpointMetric: document.getElementById("hallEndpointMetric")
+    };
+
+    let port = null;
+    let reader = null;
+    let writer = null;
+    let readLoopActive = false;
+    let recordingHall = false;
+    let hallRecords = [];
+    let recordingStart = 0;
+    const recordHallButton = document.getElementById("recordHallButton");
+    const exportHallButton = document.getElementById("exportHallButton");
+    const recordHallStatus = document.getElementById("recordHallStatus");
+    const hallRecordFields = ["ms", "raw1", "raw2", "raw3", "raw4", "signal1", "signal2", "signal3", "signal4", "centroid", "candidate", "position", "dx", "remainder", "strength", "vector", "usable", "calibrating"];
+    recordHallButton.addEventListener("click", () => {
+      recordingHall = !recordingHall;
+      if (recordingHall) {
+        hallRecords = [];
+        recordingStart = performance.now();
+        exportHallButton.disabled = true;
+      }
+      recordHallButton.textContent = recordingHall ? "停止记录" : "开始记录测试";
+    });
+    exportHallButton.addEventListener("click", () => {
+      const csv = [hallRecordFields.join(","), ...hallRecords.map(row => row.join(","))].join("\r\n");
+      const url = URL.createObjectURL(new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "arc2-hall-test.csv";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+
+    function createBootloaderButton() {
+      ui.bootloaderButton = document.createElement("button");
+      ui.bootloaderButton.id = "bootloaderButton";
+      ui.bootloaderButton.className = "secondary";
+      ui.bootloaderButton.type = "button";
+      ui.bootloaderButton.textContent = "UF2 Boot";
+      ui.calibrateButton.insertAdjacentElement("afterend", ui.bootloaderButton);
+    }
+
+    function setConnected(connected, message = "") {
+      ui.configRoot.classList.toggle("hidden", !connected);
+      ui.disconnectButton.disabled = !connected;
+      ui.statusBanner.classList.toggle("disconnected", !connected);
+      ui.runtimeTag.textContent = connected ? "设备已连接" : "当前未连接";
+      ui.statusText.textContent = message || (connected ? "已连接，正在同步主控配置。" : "请点击“连接设备”，并从浏览器弹窗中选择控制器的串口。");
+      ui.statusBanner.querySelector("strong").textContent = connected ? "连接正常" : "连接已断开";
+    }
+
+    function rgbToHex([r, g, b]) {
+      return "#" + [r, g, b].map(value => value.toString(16).padStart(2, "0")).join("");
+    }
+
+    function labelForHid(code) {
+      return hidCodeToLabel.get(code) || `HID ${code}`;
+    }
+
+    function formatNumber(value, digits = 2) {
+      return Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : "--";
+    }
+
+    function createKeyInputs() {
+      ui.keyGrid.innerHTML = "";
+      keySlots.forEach((slot, index) => {
+        const card = document.createElement("div");
+        card.className = `key-card key-pos-${index}`;
+        card.innerHTML = `
+          <small>${slot}</small>
+          <input type="text" data-index="${index}" readonly value="${labelForHid(defaultKeyCodes[index])}">
+          <button type="button" class="secondary" data-index="${index}">监听</button>
+        `;
+        ui.keyGrid.appendChild(card);
+      });
+
+      ui.keyGrid.querySelectorAll("button[data-index]").forEach(button => {
+        button.addEventListener("click", () => {
+          const index = Number(button.dataset.index);
+          const input = ui.keyGrid.querySelector(`input[data-index="${index}"]`);
+          input.value = "按键...";
+          input.focus();
+        });
+      });
+
+      ui.keyGrid.querySelectorAll("input[data-index]").forEach(input => {
+        input.addEventListener("keydown", async event => {
+          event.preventDefault();
+          const hid = browserKeyToHid[event.key] ?? browserKeyToHid[event.key.toLowerCase()];
+          if (!hid) {
+            input.value = "不支持";
+            return;
+          }
+          input.value = labelForHid(hid);
+          await sendCommand(`SET KEYMAP ${input.dataset.index} ${hid}`);
+        });
+      });
+    }
+
+    function applyConfig(config) {
+      ui.keyLedEffect.value = config.keyLed.effect;
+      ui.keyLedColor.value = rgbToHex(config.keyLed.color);
+      ui.keyLedBrightness.value = String(config.keyLed.brightness);
+      ui.ambientLedEffect.value = config.ambientLed.effect;
+      ui.ambientLedColor.value = rgbToHex(config.ambientLed.color);
+      ui.ambientLedBrightness.value = String(config.ambientLed.brightness);
+      ui.syncToggle.value = config.sync ? "1" : "0";
+      ui.mouseScaleSelect.value = String(config.mouseScale ?? 1500);
+      if (config.hall?.polarity && ui.hallPolaritySelect.value !== "FLIP") {
+        ui.hallPolaritySelect.value = config.hall.polarity === "raw_rise"
+          ? "RISE"
+          : (config.hall.polarity === "raw_drop" ? "DROP" : "AUTO");
+      }
+      ui.slideToggle.checked = config.slideEnabled !== false;
+      const hall = config.hall ?? {};
+      document.getElementById("hallGainDetail").textContent = `${config.firmware ?? "旧固件"} / 增益 H1→H4: ${(hall.calibration?.sensorGain ?? []).map(v => formatNumber(v, 3)).join(" / ")}`;
+      if (recordingHall && config.type === "telemetry") {
+        hallRecords.push([Math.round(performance.now() - recordingStart),
+          ...Array.from({ length: 4 }, (_, i) => hall.raw?.[i] ?? ""),
+          ...Array.from({ length: 4 }, (_, i) => hall.activation?.[i] ?? ""),
+          hall.centroid, hall.candidate, hall.position, hall.dx, hall.rem, hall.strength, hall.vector,
+          Number(Boolean(hall.usable)), Number(Boolean(hall.calibrating || hall.endpointScan?.active))]);
+        exportHallButton.disabled = false;
+        recordHallStatus.textContent = `已记录 ${hallRecords.length} 条（约 4 次/秒）`;
+        if (hallRecords.length >= 2400) {
+          recordingHall = false;
+          recordHallButton.textContent = "开始记录测试";
+          recordHallStatus.textContent += "，已达到上限";
+        }
+      }
+      const scanActive = hall.endpointScan?.active;
+      ui.runtimeTag.textContent = `设备已连接 / 滑动${ui.slideToggle.checked ? "开启" : "关闭"} / ${config.hallRange ?? "edge_calibrated"}`;
+      ui.hallTag.textContent = `RAW ${hall.raw?.join(", ") ?? "--"} / ${hall.usable ? "GOOD" : "TOO_FAR"}${hall.tooClose ? " / TOO_CLOSE" : ""}${hall.calibrating ? " / 校准中" : ""}${scanActive ? " / 端点扫描中" : ""}`;
+      ui.hallPositionMetric.textContent = `${formatNumber(hall.position, 3)} / ${formatNumber(hall.candidate, 3)}`;
+      ui.hallMouseMetric.textContent = `${hall.dx ?? 0} / ${formatNumber(hall.rem, 2)}`;
+      ui.hallSignalMetric.textContent = `${formatNumber(hall.strength, 1)} / ${formatNumber(hall.vector, 2)} / H${hall.dominant ?? 0}`;
+      ui.hallEndpointMetric.textContent = `${formatNumber(hall.calibration?.leftEndpointRatio, 3)} / ${formatNumber(hall.calibration?.rightEndpointRatio, 3)}`;
+
+      config.keyCodes.forEach((code, index) => {
+        const input = ui.keyGrid.querySelector(`input[data-index="${index}"]`);
+        if (input) input.value = labelForHid(code);
+      });
+    }
+
+    async function sendCommand(command) {
+      if (!writer) return;
+      const payload = new TextEncoder().encode(command + "\n");
+      await writer.write(payload);
+    }
+
+    async function disconnectPort() {
+      readLoopActive = false;
+      try { if (reader) await reader.cancel(); } catch {}
+      try { if (writer) writer.releaseLock(); } catch {}
+      try { if (reader) reader.releaseLock(); } catch {}
+      try { if (port) await port.close(); } catch {}
+      reader = null;
+      writer = null;
+      port = null;
+      setConnected(false);
+    }
+
+    async function readLoop() {
+      readLoopActive = true;
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      while (port && readLoopActive) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        let newlineIndex = buffer.indexOf("\n");
+        while (newlineIndex >= 0) {
+          const line = buffer.slice(0, newlineIndex).trim();
+          buffer = buffer.slice(newlineIndex + 1);
+          if (line) {
+            try {
+              const message = JSON.parse(line);
+              if (message.type === "config" || message.type === "telemetry") {
+                applyConfig(message);
+              } else if (message.type === "status") {
+                ui.statusText.textContent = message.message;
+              }
+            } catch (error) {
+              console.warn("Failed to parse line:", line, error);
+            }
+          }
+          newlineIndex = buffer.indexOf("\n");
+        }
+      }
+
+      if (port) {
+        await disconnectPort();
+      }
+    }
+
+    async function connect() {
+      if (!("serial" in navigator)) {
+        ui.statusText.textContent = "当前浏览器不支持 Web Serial。请使用最新版 Chrome 或 Edge。";
+        return;
+      }
+
+      port = await navigator.serial.requestPort();
+      await port.open({ baudRate: 115200 });
+      writer = port.writable.getWriter();
+      reader = port.readable.getReader();
+      setConnected(true);
+      readLoop().catch(async () => {
+        await disconnectPort();
+      });
+      await sendCommand("GET");
+    }
+
+    ui.connectButton.addEventListener("click", () => connect().catch(error => {
+      console.error(error);
+      setConnected(false, "连接失败，请重新选择设备。");
+    }));
+
+    ui.disconnectButton.addEventListener("click", () => disconnectPort());
+
+    ui.slideToggle.addEventListener("change", () => sendCommand(`SET SLIDE ${ui.slideToggle.checked ? 1 : 0}`));
+    ui.keyLedEffect.addEventListener("change", () => sendCommand(`SET KEYLED_EFFECT ${ui.keyLedEffect.value.toUpperCase()}`));
+    ui.keyLedBrightness.addEventListener("input", () => sendCommand(`SET KEYLED_BRIGHTNESS ${ui.keyLedBrightness.value}`));
+    ui.keyLedColor.addEventListener("input", () => {
+      const value = ui.keyLedColor.value;
+      const r = parseInt(value.slice(1, 3), 16);
+      const g = parseInt(value.slice(3, 5), 16);
+      const b = parseInt(value.slice(5, 7), 16);
+      sendCommand(`SET KEYLED_COLOR ${r} ${g} ${b}`);
+    });
+
+    ui.ambientLedEffect.addEventListener("change", () => sendCommand(`SET AMBIENT_EFFECT ${ui.ambientLedEffect.value.toUpperCase()}`));
+    ui.ambientLedBrightness.addEventListener("input", () => sendCommand(`SET AMBIENT_BRIGHTNESS ${ui.ambientLedBrightness.value}`));
+    ui.ambientLedColor.addEventListener("input", () => {
+      const value = ui.ambientLedColor.value;
+      const r = parseInt(value.slice(1, 3), 16);
+      const g = parseInt(value.slice(3, 5), 16);
+      const b = parseInt(value.slice(5, 7), 16);
+      sendCommand(`SET AMBIENT_COLOR ${r} ${g} ${b}`);
+    });
+
+    ui.syncToggle.addEventListener("change", () => sendCommand(`SET SYNC ${ui.syncToggle.value}`));
+    ui.calibrateButton.addEventListener("click", () => sendCommand("SET CALIBRATE"));
+    createBootloaderButton();
+    ui.bootloaderButton.addEventListener("click", () => {
+      if (confirm("现在进入 UF2 Bootloader 模式？")) {
+        sendCommand("BOOTLOADER");
+      }
+    });
+    ui.mouseScaleSelect.addEventListener("change", () => sendCommand(`SET MOUSE_SCALE ${ui.mouseScaleSelect.value}`));
+    ui.hallPolaritySelect.addEventListener("change", async () => {
+      await sendCommand(`SET HALL_POLARITY ${ui.hallPolaritySelect.value}`);
+      if (ui.hallPolaritySelect.value === "FLIP") {
+        ui.hallPolaritySelect.value = "AUTO";
+      }
+    });
+    ui.endpointScanButton.addEventListener("click", () => sendCommand("SET HALL_ENDPOINT_SCAN"));
+    ui.sensorGainButton.addEventListener("click", () => sendCommand("SET HALL_SENSOR_GAIN"));
+    ui.centerCalButton.addEventListener("click", () => sendCommand("SET HALL_CENTER"));
+    ui.saveHallCalButton.addEventListener("click", () => sendCommand("SET HALL_CAL_SAVE"));
+    ui.resetHallCalButton.addEventListener("click", () => {
+      if (confirm("恢复霍尔校准默认值？")) {
+        sendCommand("SET HALL_CAL_DEFAULTS");
+      }
+    });
+
+    navigator.serial?.addEventListener("disconnect", async event => {
+      if (port && event.port === port) {
+        await disconnectPort();
+      }
+    });
+
+    createKeyInputs();
+  </script>
+</body>
+</html>

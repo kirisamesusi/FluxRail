@@ -1,0 +1,19 @@
+{
+  "reviewer": "Luna",
+  "assessment": "minimal_source_fix_is_coherent_and_scoped",
+  "evidence": [
+    "firmware/FluxRail/src/usb/Io4Codec.cpp",
+    "backups/firmware-before-io4-timeout-2026-10-05/Io4Codec.cpp",
+    "backups/firmware-before-io4-timeout-2026-10-05/sha256.json",
+    "io4-timeout-before-arm/simulation_results.json",
+    "io4-timeout-after-arm/simulation_results.json",
+    "io4-timeout-full-arm/simulation_results.json"
+  ],
+  "findings": {
+    "source_delta": "Diff against the backed-up pre-fix Io4Codec.cpp shows only the three explanatory comments and the additional `now - last_command_us < 0x80000000u` guard in the timeout condition. App.cpp and UsbBackend.cpp match the backup SHA values; no other application source changes are part of this candidate.",
+    "arithmetic": "A callback timestamp newer than cached now by a small amount appears as a modular difference near UINT32_MAX and is rejected by the half-range guard. Normal elapsed times below half range, including wraparound, remain eligible for timeout. Configured maximum is 255 * 100000us = 25.5s, far below the half-range horizon of about 35.8 minutes; the reported 2s service/watchdog cadence is also much shorter.",
+    "regressions": "Before-fix simulation passed the 11 prior groups and failed all three newly added tests at their expected future-time assertions. After-fix focused simulation passes 14/14; expanded simulation passes 25/25, including the original 22 IO4 backend/protocol/save/reboot groups.",
+    "artifact_boundary": "The simulation runner compiled ARM test/module objects and executed them under Unicorn. It did not produce a firmware UF2 or test a physical device. Previous firmware/UF2/validation artifacts remain historical; no board image changed, and no result here establishes hardware fix behavior. The backed-up source hashes preserve the pre-fix version."
+  },
+  "recommendation": "Candidate source logic is suitable for a separately reviewed real firmware build after physical return to NORMAL and the independent snapshot gates. Keep the candidate build and any later flash/reboot evidence as separate stages; do not mark the physical issue fixed until the newly built firmware is explicitly flashed and the board diagnostic is repeated."
+}

@@ -1,0 +1,22 @@
+{
+    "started":  "2026-10-04T16:01:53.5044059Z",
+    "events":  [
+                   {
+                       "present":  true,
+                       "utc":  "2026-10-04T16:01:53.8336973Z"
+                   },
+                   {
+                       "present":  false,
+                       "utc":  "2026-10-04T16:03:30.7900067Z"
+                   },
+                   {
+                       "present":  true,
+                       "utc":  "2026-10-04T16:03:39.3520273Z"
+                   }
+               ],
+    "target":  "USB\\VID_0CA3\u0026PID_0021\\5054316560DD729C",
+    "disconnect_and_reconnect_observed":  true,
+    "pid":  255772,
+    "finished":  "2026-10-04T16:03:39.3546276Z",
+    "readonly":  true
+}

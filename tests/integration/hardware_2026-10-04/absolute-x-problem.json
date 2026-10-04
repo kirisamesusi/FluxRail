@@ -1,0 +1,18 @@
+[
+  {
+    "KeyName": "DEVPKEY_Device_ProblemCode",
+    "Data": 10
+  },
+  {
+    "KeyName": "DEVPKEY_Device_ProblemStatus",
+    "Data": 3222339588
+  },
+  {
+    "KeyName": "DEVPKEY_Device_Service",
+    "Data": "mouhid"
+  },
+  {
+    "KeyName": "DEVPKEY_Device_Parent",
+    "Data": "USB\\VID_239A&PID_CAFE&MI_03\\7&1e2fbd10&0&0003"
+  }
+]

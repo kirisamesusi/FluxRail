@@ -1,0 +1,6 @@
+{
+  "watch_pid": 240664,
+  "started": "2026-10-04T16:07:24.5891271Z",
+  "reason": "Launcher stray trailing dash removed before physical instruction; prior process exited without monitor output",
+  "replaces_early_exited_watch_pid": 236372
+}

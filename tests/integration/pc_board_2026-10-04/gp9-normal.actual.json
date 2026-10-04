@@ -1,0 +1,25 @@
+{
+  "kind": "physical_GP9_to_GND_at_boot",
+  "user_confirmation": "USB removed; GP9 grounded during USB-only power-on; jumper removed after 3 seconds",
+  "forced_recovery": true,
+  "mode": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "NORMAL_NKRO",
+    "saved_startup": "NORMAL_NKRO",
+    "forced_recovery": true,
+    "reboot_ready": false
+  },
+  "physical_mask_after": 0,
+  "schema_byte_exact": true,
+  "profiles_equal": true,
+  "crc32": 895336899,
+  "revision": 5,
+  "saved_revision": 5,
+  "dirty": false,
+  "active_profile": 4,
+  "device_writes": 0,
+  "serial_closed": true,
+  "hardware_flash_capacity_verified": false,
+  "game": "not_run",
+  "passed": true
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "parent": "USB\\VID_0BDA&PID_5411\\5&3a692ce1&0&9",
+    "class": "USB",
+    "instance": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+    "name": "USB Composite Device"
+  },
+  {
+    "parent": "USB\\ROOT_HUB30\\4&1a408fee&0&0",
+    "class": "USB",
+    "instance": "USB\\VID_0BDA&PID_5411\\5&3a692ce1&0&9",
+    "name": "通用 USB 集线器"
+  },
+  {
+    "parent": "PCI\\VEN_8086&DEV_7AE0&SUBSYS_50071458&REV_11\\3&11583659&0&A0",
+    "class": "USB",
+    "instance": "USB\\ROOT_HUB30\\4&1a408fee&0&0",
+    "name": "USB 根集线器(USB 3.0)"
+  },
+  {
+    "parent": "ACPI\\PNP0A08\\0",
+    "class": "USB",
+    "instance": "PCI\\VEN_8086&DEV_7AE0&SUBSYS_50071458&REV_11\\3&11583659&0&A0",
+    "name": "Intel(R) USB 3.20 可扩展主机控制器 - 1.20 (Microsoft)"
+  },
+  {
+    "parent": "ACPI_HAL\\PNP0C08\\0",
+    "class": "System",
+    "instance": "ACPI\\PNP0A08\\0",
+    "name": "PCI Express 根复合体"
+  },
+  {
+    "parent": "ROOT\\ACPI_HAL\\0000",
+    "class": "System",
+    "instance": "ACPI_HAL\\PNP0C08\\0",
+    "name": "Microsoft ACPI-Compliant System"
+  },
+  {
+    "parent": "HTREE\\ROOT\\0",
+    "class": "Computer",
+    "instance": "ROOT\\ACPI_HAL\\0000",
+    "name": "基于 ACPI x64 的电脑"
+  }
+]

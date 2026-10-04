@@ -1,0 +1,63 @@
+{
+  "date_local": "2026-10-03",
+  "scope": "共享校准迁入实验室；监听键盘高亮生命周期；连接错误文字；配置读回说明",
+  "source_sha256": {
+    "web/src/app.js": "2e4aef2c82d3cf7dec8a4c6ebb48a11446e3ac53a202aeabf9142d9874a5166a",
+    "web/src/integration.js": "2baa9cadc7c5ac4c303d8c486059b997bcb3a9aa34e1aa044e07f04efb5ee927",
+    "web/index.html": "c405fc7c8f7758ece047f28f257537f6dda7768db55c040d19a7485390f3dc26",
+    "web/style.css": "dafb79549bc0a04700fc2fbbd73890f1f4608fe623328bad314c2c4a2c68c0f5",
+    "web/tests/integration-ui.test.mjs": "53323d127ca8c8e7d080e6777609bf5366d2cfeb929486256b13446bd25ae938"
+  },
+  "web": {
+    "tests": 33,
+    "passed": 33,
+    "failed": 0,
+    "log": "tests/integration/build/web_layout_listening.log",
+    "syntax_check": "node --check web/src/app.js exit 0"
+  },
+  "browser": {
+    "calibration": {
+      "in_experimental": true,
+      "hash_opens_outer_inner": true,
+      "buttons": 8
+    },
+    "listening": {
+      "label": "监听键盘",
+      "active_class": true,
+      "aria_pressed": "true",
+      "background_rgb": "75,155,207",
+      "input_Q": {
+        "binding": "Q",
+        "active": false,
+        "aria_pressed": "false"
+      },
+      "escape_clears": true,
+      "blur_clears": true
+    },
+    "device_readback": {
+      "boundary": "schema1隔离模拟，不是真实硬件",
+      "applied_BT8": "Q",
+      "refresh_BT8": "Q",
+      "flash_saved": false
+    },
+    "connection_failure": {
+      "source_review": "connect action failureText与fault回调均为连接失败；其他配置错误仍保留详细提示",
+      "browser_verification": "发起实串口选择后等待未结束，未观察到实际错误返回；未选择设备，关闭验证页恢复干净最终页面"
+    },
+    "screenshots": [
+      "tests/integration/calibration_lab_2026-10-03.png",
+      "tests/integration/keyboard_listening_2026-10-03.png"
+    ],
+    "console_warn_error": 0
+  },
+  "config_truth": "Device.handshake hello后refresh，读取get_status/get_device/list_profiles/get_profile；首次取active_profile。设备RAM为真值，网页只生成草稿。",
+  "review": {
+    "model": "gpt-6-luna",
+    "result": "未发现可复现软件缺陷"
+  },
+  "firmware_changed": false,
+  "formal_compile": "本轮未重编译；仅Web改动，阶段4固件编译证据不变",
+  "uploaded": false,
+  "hardware_tested": false,
+  "game_tested": false
+}

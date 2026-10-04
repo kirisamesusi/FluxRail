@@ -1,0 +1,18 @@
+{
+  "reviewer": "Luna",
+  "assessment": "This ETL supports a bounded host-path conclusion for this single C# HidD_GetInputReport call: it failed with Win32 error 1, and no corresponding GET_REPORT setup reached the observed UCX/xHCI stack. Complete target setup fields, zero reported ETW event/buffer loss, a successful GET_DESCRIPTOR in-window, and subsequent healthy CDC control/bulk traffic strengthen that inference. It does not establish physical-wire absence, identify the exact rejecting Windows component, explain the earlier native IOCTL, or validate device-side GET_REPORT handling or real interrupt/input behavior.",
+  "evidence": {
+    "etl": "usb.etl; 5006 events; target pointer 0x20f265a47398; VID_239A/PID_CAFE; strict and -lr setup signatures agree; both report zero lost events/buffers",
+    "target_setup": "40 target setup events (20 dispatch and 20 completion), all setup fields present; all control completions successful; no bmRequestType=A1/bRequest=01 GET_REPORT",
+    "query": "One C# HidD_GetInputReport on matching COL02, length 6, 2026-10-04T12:13:54.6815162Z through 12:13:54.7131570Z; FALSE, Win32 error 1; hex=null; failed_buffer_hex is not device data",
+    "positive_controls": "Successful GET_DESCRIPTOR string request in the query interval; subsequent target CDC control and bulk traffic succeeds",
+    "cancellations": "Two endpoint rundown-mapped cancellations are CDC endpoints 0x82 and 0x81, length 0, near CDC close; neither is HID endpoint 0x83/0x84",
+    "time": "XML SystemTime carries anomalous +07:59 offset; timestamps were aligned to raw TraceHeader UTC anchor 2026-10-04T12:13:54.238720Z plus relative time, not parsed using that offset"
+  },
+  "limitations": [
+    "ETW observes the Windows USB software stack, not a physical USB analyzer; absence is bounded to the enabled UCX/xHCI trace boundary.",
+    "This applies only to the C# HidD_GetInputReport call, not the earlier native DeviceIoControl attempt.",
+    "No firmware GET_REPORT callback, interrupt input payload, physical key/mouse movement, XY/Y behavior, or game behavior was validated.",
+    "Strict XML localized EventID 4 labels are not trusted; the manifest/-lr identifies device rundown."
+  ]
+}

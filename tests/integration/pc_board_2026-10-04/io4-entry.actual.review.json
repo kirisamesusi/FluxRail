@@ -1,0 +1,20 @@
+{
+  "reviewer": "Luna",
+  "assessment": "host_gate_parse_failure_before_device_io",
+  "evidence": [
+    "io4-entry/summary.json",
+    "io4-entry/exit.json",
+    "io4-entry/pnp-after.json",
+    "io4-entry/switch_usb_mode_once_v2-executed.ps1"
+  ],
+  "findings": {
+    "failure": "Windows PowerShell 5.1 read the valid UTF-8 retry2 gate with its default ANSI encoding. The resulting mojibake in user_text made ConvertFrom-Json reject the gate before port enumeration/open.",
+    "writes_counter": 0,
+    "cdc_log_created": false,
+    "attempt_log_created": false,
+    "serial_opened": false,
+    "pnp_after": "The target remains in normal composite USB mode with COM29 present; this is consistent with no mode change.",
+    "classification": "Host-side evidence-file decoding failure, not CDC/protocol/firmware failure and not an IO4 attempt. No device request or mode mutation occurred. The failed source summary and exit code 1 are retained."
+  },
+  "interpretation": "The failure is reproducible from the PowerShell 5.1 default decoding behavior shown in the embedded malformed JSON. The underlying gate file is valid UTF-8; this is distinct from the earlier console-output encoding misinterpretation."
+}

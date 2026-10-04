@@ -1,0 +1,84 @@
+import time
+from datetime import datetime,timezone
+report={'started':datetime.now(timezone.utc).isoformat(),'metadata':results,'steps':[],'flash_writes':0,'configuration_writes':0,'game':'not_run','error':None}
+def put():
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+target=[r for r in results if r.get('serial')==args.serial]
+assert len(target)==1 and target[0].get('caps_status')=='0x00110000'
+r=target[0];assert r['caps']['InputReportByteLength']==r['caps']['OutputReportByteLength']==64
+class Overlapped(C.Structure):
+    _fields_=[('Internal',C.c_size_t),('InternalHigh',C.c_size_t),('Offset',W.DWORD),('OffsetHigh',W.DWORD),('hEvent',W.HANDLE)]
+kernel.CreateEventW.argtypes=[C.c_void_p,W.BOOL,W.BOOL,W.LPCWSTR];kernel.CreateEventW.restype=W.HANDLE
+kernel.WaitForSingleObject.argtypes=[W.HANDLE,W.DWORD];kernel.WaitForSingleObject.restype=W.DWORD
+kernel.GetOverlappedResult.argtypes=[W.HANDLE,C.POINTER(Overlapped),C.POINTER(W.DWORD),W.BOOL];kernel.GetOverlappedResult.restype=W.BOOL
+kernel.CancelIoEx.argtypes=[W.HANDLE,C.POINTER(Overlapped)];kernel.CancelIoEx.restype=W.BOOL
+for n in ('ReadFile','WriteFile'):
+    getattr(kernel,n).argtypes=[W.HANDLE,C.c_void_p,W.DWORD,C.POINTER(W.DWORD),C.POINTER(Overlapped)];getattr(kernel,n).restype=W.BOOL
+hid.HidD_SetOutputReport.argtypes=[W.HANDLE,C.c_void_p,W.ULONG];hid.HidD_SetOutputReport.restype=C.c_ubyte
+def decoded(data):
+    return {'report_id':data[0],'analog_words':[int.from_bytes(data[i:i+2],'little') for i in range(1,29,2)],'switch_words':[int.from_bytes(data[i:i+2],'little') for i in (29,31)],'system':data[33],'usb':data[34],'reserved_hex':data[35:].hex()}
+def step(name,**values):
+    report['steps'].append({'name':name,'time':datetime.now(timezone.utc).isoformat(),**values});put()
+ctrl=rw=invalid;mutated=False;pending_keepalive=[]
+def io(method,data=None):
+    buf=C.create_string_buffer(data,64) if data is not None else C.create_string_buffer(64)
+    ov=Overlapped();ov.hEvent=kernel.CreateEventW(None,True,False,None);assert ov.hEvent
+    count=W.DWORD();ret=False
+    try:
+        C.set_last_error(0);ok=bool(getattr(kernel,method)(rw,buf,64,C.byref(count),C.byref(ov)));err=C.get_last_error()
+        if not ok:
+            assert err==997, f'{method} error {err}'
+            if kernel.WaitForSingleObject(ov.hEvent,1500)!=0:
+                kernel.CancelIoEx(rw,C.byref(ov))
+                if kernel.WaitForSingleObject(ov.hEvent,1500)!=0:
+                    pending_keepalive.append((buf,ov));ret=True
+                raise TimeoutError(method+' did not complete; cancel requested')
+            assert kernel.GetOverlappedResult(rw,C.byref(ov),C.byref(count),False), C.get_last_error()
+        assert count.value==64, f'{method} short report {count.value}'
+        return buf.raw
+    finally:
+        if not ret:kernel.CloseHandle(ov.hEvent)
+def get_input(name):
+    b=C.create_string_buffer(64);b[0]=b'\x01';C.set_last_error(0)
+    ok=bool(hid.HidD_GetInputReport(ctrl,b,64));step(name,method='HidD_GetInputReport',passed=ok,hex=b.raw.hex() if ok else None,error=None if ok else C.get_last_error())
+    assert ok,'Control input read failed';v=decoded(b.raw);assert v['report_id']==1 and v['reserved_hex']=='00'*29;return v
+def output(cmd,param=0,method='control'):
+    global mutated
+    data=bytes([0x10,cmd,param])+bytes(61);mutated=True
+    step('output_attempt',method=method,command=cmd,param=param,hex=data.hex())
+    if method=='control':
+        b=C.create_string_buffer(data,64);C.set_last_error(0);ok=bool(hid.HidD_SetOutputReport(ctrl,b,64));step('output_completed',method=method,passed=ok,error=None if ok else C.get_last_error());assert ok,'SetOutputReport failed'
+    else:io('WriteFile',data);step('output_completed',method='WriteFile',passed=True)
+try:
+    ctrl=kernel.CreateFileW(r['path'],0,3,None,3,0,None);assert ctrl!=invalid
+    serial=C.create_unicode_buffer(256);assert hid.HidD_GetSerialNumberString(ctrl,serial,C.sizeof(serial)) and serial.value==args.serial
+    assert get_input('initial_control')['system']==2
+    rw=kernel.CreateFileW(r['path'],0xC0000000,3,None,3,0x40000000,None);assert rw!=invalid, f'IO4 read/write open failed {C.get_last_error()}'
+    assert hid.HidD_GetSerialNumberString(rw,serial,C.sizeof(serial)) and serial.value==args.serial
+    for i in range(8):
+        data=io('ReadFile');v=decoded(data);step('interrupt_input',method='ReadFile',index=i,hex=data.hex(),decoded=v)
+        assert v['report_id']==1 and v['switch_words']==[0x4000,0x8000] and v['system']==2 and v['reserved_hex']=='00'*29
+    output(1,4);assert get_input('cmd1_state')['system']==0x30
+    output(3,method='interrupt');assert get_input('cmd3_interrupt_state')['system']==0
+    output(2,32);assert get_input('cmd2_state')['system']==0x30
+    output(3);assert get_input('cmd3_control_state')['system']==0
+    time.sleep(.45);assert get_input('timeout_400ms_state')['system']==2
+    output(4);assert get_input('zero_gpio_state')['system']==2
+    # Put the system in initialized state so accepting unknown cmd as timeout/init is observable.
+    output(3);assert get_input('before_unknown_state')['system']==0
+    output(0x85);assert get_input('unknown_0x85_state')['system']==0
+    report['interrupt_input_passed']=True;report['control_cmd1_cmd2_passed']=True;report['interrupt_cmd3_passed']=True;report['timeout_400ms_passed']=True;report['zero_gpio_transport_passed']=True;report['unknown_preserved_system_state']=True
+except BaseException as e:
+    report['error']=repr(e)
+finally:
+    try:
+        if mutated and ctrl!=invalid:
+            output(1,1);output(3);time.sleep(.13);report['idle_restored']=get_input('final_idle')['system']==2
+    except BaseException as e:report['cleanup_error']=repr(e)
+    for handle in (rw,ctrl):
+        if handle!=invalid:kernel.CloseHandle(handle)
+    for buf,ov in pending_keepalive:kernel.CloseHandle(ov.hEvent)
+    report['finished']=datetime.now(timezone.utc).isoformat();report['handles_closed']=True;report['passed']=report['error'] is None and not report.get('cleanup_error') and report.get('idle_restored',False);put()
+print(json.dumps(report,ensure_ascii=False))
+assert report['passed']

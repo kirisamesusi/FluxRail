@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-04",
+  "source": "web/",
+  "purpose": "页头替换fluxrail-lace-bunny图片前的三个文件快照",
+  "scope": "partial",
+  "restore": "只恢复清单中的三个文件，不作为完整web使用；先备份当前web并检查资源依赖。",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 23951,
+      "sha256": "06e2f44f6cb5d2246cba18ac9a20a460e2bf23fc18a7c66ea75f92c0b6c5c9ef"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 1717,
+      "sha256": "b5508888850bfd6f2d1ea4bb9b87134de0efa7da96285c42ba6d61e9d006c965"
+    },
+    {
+      "path": "style.css",
+      "bytes": 28963,
+      "sha256": "21dd686ad5d971f2635117d395c0aeba80805a3db81001b01e23509e63585967"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "read_only_requests": 15,
+  "mode_writes": 3,
+  "revision_applied_saved": 11,
+  "active_profile": 4,
+  "current_requested_saved": "NORMAL_NKRO",
+  "forced_recovery": false,
+  "original_profiles_equal": true,
+  "persistent_schema_equal_except_revision": true,
+  "schema_crc32": 3249967485,
+  "serial_closed": true,
+  "reviewer": "/root main process (ongoing user-authorized substitute)",
+  "passed": true,
+  "time_utc": "2026-10-04T17:25:49.072543+00:00",
+  "limits": [
+    "2MiB test board per user; not final4MiB Flash acceptance",
+    "No new compile/simulation/game; physical GP9 and actual configuration return only"
+  ]
+}

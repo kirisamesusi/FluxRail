@@ -1,0 +1,48 @@
+{
+  "reviewer": "Luna",
+  "kind": "offline_and_static_preflight",
+  "verdict": "comparison_fix_pass; offscreen_webserial_static_review_pass_with_recovery_deadline_caveat",
+  "evidence": [
+    "flash-normal/v2-offline-check.json",
+    "flash-normal/v3-offline-comparison.json",
+    "../compare_json_values.py",
+    "../test_flash_normal_v3.ps1",
+    "../test_webserial_offscreen.cjs"
+  ],
+  "json_comparator": {
+    "int_float_numeric_equivalence_intentional": true,
+    "array_order_and_length_preserved": true,
+    "v3_comparison_equal": true,
+    "device_requests": 0,
+    "v2_powershell_normalization_still_failed": true,
+    "dict_key_sets_compared_order_independently": true,
+    "bool_distinct_from_number": true
+  },
+  "powershell": {
+    "nonzero_comparator_throws_into_restore_error_path": true,
+    "external_exitcode_checked": true,
+    "semantic_comparison_output_is_new_file": true,
+    "raw_v2_failure_preserved": true
+  },
+  "webserial_static": {
+    "finally_reconnect_healthcheck_restore_save_readback_and_disconnect": true,
+    "serial_identity_version_mode_and_health_checked": true,
+    "selection_requires_unique_serial_and_COM29": true,
+    "mutation_records_original_then_marks_attempt": true,
+    "production_page_and_client_used": true,
+    "only_local_origin_requests_allowed": true,
+    "physical_mask_must_be_zero": true,
+    "draft_checked_before_apply": true,
+    "real_chromium_serialport_and_stream_path": true,
+    "not_executed": true,
+    "hidden_offscreen_window_and_private_session": true,
+    "no_mock_serial": true
+  },
+  "limits": [
+    "The 180-second overall timer exits without running the finally block; if mutation_attempted was recorded, parent must independently restore and verify over CDC.",
+    "This script is a hidden offscreen Chromium test, not manual desktop UI or game validation.",
+    "No Web Serial run or hardware requests have occurred yet.",
+    "Pure IO4 switching and physical power-cycle remain out of scope."
+  ],
+  "recommendation": "Static review supports running the authorized isolated offscreen Web Serial test after Electron setup is ready; preserve all output in fresh evidence directory and inspect timeout/mutation_attempted before claiming recovery."
+}

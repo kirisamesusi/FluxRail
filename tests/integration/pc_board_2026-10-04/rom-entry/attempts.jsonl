@@ -1,0 +1,5 @@
+{"protocol_version":1,"id":71001,"op":"hello","payload":{}}
+{"protocol_version":1,"id":71002,"op":"get_status","payload":{}}
+{"protocol_version":1,"id":71003,"op":"get_usb_mode","payload":{}}
+{"protocol_version":1,"id":71004,"op":"get_device","payload":{}}
+{"protocol_version":1,"id":71005,"op":"enter_bootloader","payload":{"expected_revision":9}}

@@ -1,0 +1,8 @@
+{
+  "source": "Trusted asynchronous user reply in this turn",
+  "completed": true,
+  "jumper_removed": true,
+  "no_obvious_heating_reported": true,
+  "user_text": "已完成，跳线已移除，无明显发热",
+  "note": "Original PowerShell-generated confirmation retained; its user_text suffered console encoding corruption, boolean fields unaffected. This separate transcript preserves the actual user wording."
+}

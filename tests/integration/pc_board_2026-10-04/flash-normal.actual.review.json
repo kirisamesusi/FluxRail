@@ -1,0 +1,33 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_stage_review",
+  "verdict": "configuration_and_application_reboot_recovery_pass; script_exit_false_negative",
+  "evidence": [
+    "summary.json",
+    "attempts.jsonl",
+    "cdc.jsonl",
+    "saved-marker/baseline.json",
+    "saved-marker/schema2.bin",
+    "loaded-marker/baseline.json",
+    "loaded-marker/schema2.bin",
+    "final/baseline.json",
+    "final/schema2.bin",
+    "recovery-verification.json"
+  ],
+  "findings": {
+    "tool_failure": "Script exit 1 at raw pretty-printed profile JSON string comparison. Initial and final parsed profiles match; pwsh7 versus Windows PowerShell5 formatting caused the false negative.",
+    "marker": "profile 1 persisted and loaded byte-exactly across application reboot",
+    "successful_reboot_loads": 2,
+    "first_save": "valid_slots mask became 1",
+    "recommendation": "For future runs compare parsed profile objects/canonical serialization instead of raw JSON formatting. Keep the original exit-1 summary unchanged; classify this run by independently verified recovery evidence, not as a clean script exit.",
+    "save_count": 51,
+    "restoration": "active profile 4 saved and loaded; final revision/saved_revision 5; valid_slots mask 3; dirty false; physical_mask 0; serial closed",
+    "initial_state": "revision 3; active profile 4; saved_revision null; valid_slots 0; physical_mask 0; NORMAL_NKRO",
+    "snapshot": "final schema2 length 1387; CRC32 895336899; differs from initial only at revision byte offset 4 (revision 3 to 5); profiles semantically equal",
+    "limitations": [
+      "No physical power-cycle or power-loss test; both resets were application reboots.",
+      "This was not a desktop UI, HID input, or game test.",
+      "Initial empty Flash state (valid_slots 0, saved_revision null) cannot be restored by this test; first save created durable state."
+    ]
+  }
+}

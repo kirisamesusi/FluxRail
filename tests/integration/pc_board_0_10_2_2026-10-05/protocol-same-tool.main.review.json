@@ -1,0 +1,15 @@
+{
+  "Flash_config_writes": 0,
+  "unknown_preserves_system": true,
+  "cmd1_system": 48,
+  "interrupt_OUT_cmd3": true,
+  "limits": "Neutral reports; full GPIO, physical inputs, game and4MiB Flash acceptance not tested",
+  "timeout_after_450ms": 2,
+  "handles_closed": true,
+  "same_tool_SHA_as_old_failed_round": true,
+  "reviewer": "/root main process ongoing substitute",
+  "actual_ReadFile_reports": 8,
+  "passed": true,
+  "final_idle": 2,
+  "control_cmd2_cmd3": true
+}

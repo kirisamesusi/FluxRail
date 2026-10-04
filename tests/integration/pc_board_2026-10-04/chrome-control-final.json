@@ -1,0 +1,11 @@
+{
+  "returned_title": "FluxRail · 设备配置 - Google Chrome",
+  "kind": "native_chrome_control_attempt_after_user_resumed",
+  "date": "2026-10-04",
+  "returned_window_id": 1644188,
+  "cdc_requests_observed": null,
+  "result": "Computer use forcibly stopped: browser URL confidence insufficient",
+  "configuration_write_actions": 0,
+  "input_actions_after_selection": 0,
+  "no_permission_requested_again": true
+}

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider name="Microsoft-Windows-USB-USBXHCI" guid="30e1d284-5d88-459c-83fd-6345b39b19ec" helpLink="https://go.microsoft.com/fwlink/events.asp?CoName=Microsoft%20Corporation&amp;ProdName=Microsoft%c2%ae%20Windows%c2%ae%20Operating%20System&amp;ProdVer=10.0.19041.1&amp;FileName=usbxhci.sys&amp;FileVer=10.0.19041.1" resourceFileName="C:\Windows\system32\drivers\usbxhci.sys" messageFileName="C:\Windows\system32\drivers\usbxhci.sys" message="" xmlns="http://schemas.microsoft.com/win/2004/08/events">
+  <channels>
+    <channel name="System" id="8" flags="1" message="2415919105">
+    </channel>
+    <channel name="Microsoft-Windows-USB-USBXHCI-Analytic" id="16" flags="0" message="2415919106">
+    </channel>
+    <channel name="Microsoft-Windows-USB-USBXHCI-Trustlet-Analytic" id="17" flags="0" message="2415919107">
+    </channel>
+  </channels>
+  <levels>
+    <level name="win:Error" value="2" message="1342177282">
+    </level>
+    <level name="win:Informational" value="4" message="1342177284">
+    </level>
+  </levels>
+  <opcodes>
+    <opcode name="win:Start" value="65536" message="805306369">
+    </opcode>
+    <opcode name="win:Stop" value="131072" message="805306370">
+    </opcode>
+    <opcode name="INFORMATION" value="655360" message="805306378">
+    </opcode>
+    <opcode name="RECEIVED_IN_TRUSTLET" value="655383" message="806813706">
+    </opcode>
+    <opcode name="TRANSFER_INITIALIZED" value="655384" message="806879242">
+    </opcode>
+    <opcode name="COMPLETED_IN_TRUSTLET" value="720919" message="806813707">
+    </opcode>
+  </opcodes>
+  <tasks>
+    <task name="USBXHCI_RUNDOWN" value="1" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048193">
+    </task>
+    <task name="USBXHCI_CONTROLLER_RUNDOWN" value="2" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048194">
+    </task>
+    <task name="USBXHCI_DEVICE_RUNDOWN" value="3" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048195">
+    </task>
+    <task name="USBXHCI_ENDPOINT_RUNDOWN" value="4" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048196">
+    </task>
+    <task name="USBXHCI_CONTROLLER_CREATE" value="5" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048197">
+    </task>
+    <task name="USBXHCI_CONTROLLER_DELETE" value="6" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048198">
+    </task>
+    <task name="USBXHCI_DEVICE_CREATE" value="7" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048199">
+    </task>
+    <task name="USBXHCI_DEVICE_UPDATE" value="8" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048200">
+    </task>
+    <task name="USBXHCI_DEVICE_DELETE" value="9" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048201">
+    </task>
+    <task name="USBXHCI_ENDPOINT_CREATE" value="10" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048202">
+    </task>
+    <task name="USBXHCI_ENDPOINT_UPDATE" value="11" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048203">
+    </task>
+    <task name="USBXHCI_ENDPOINT_DELETE" value="12" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048204">
+    </task>
+    <task name="USBXHCI_CONTROLLER_FIRMWARE_VERSION_UPDATE" value="13" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048205">
+    </task>
+    <task name="USBXHCI_CONTROLLER_D0_ENTRY" value="14" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048206">
+    </task>
+    <task name="USBXHCI_CONTROLLER_D0_ENTRY_POST_INTERRUPTS" value="15" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048207">
+    </task>
+    <task name="USBXHCI_CONTROLLER_D0_EXIT_PRE_INTERRUPTS" value="16" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048208">
+    </task>
+    <task name="USBXHCI_CONTROLLER_D0_EXIT" value="17" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048209">
+    </task>
+    <task name="USBXHCI_CONTROLLER_SAVE_STATE" value="18" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048210">
+    </task>
+    <task name="USBXHCI_CONTROLLER_RESTORE_STATE" value="19" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048211">
+    </task>
+    <task name="USBXHCI_CONTROLLER_INTERNAL_RESET" value="20" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048212">
+    </task>
+    <task name="USBXHCI_ETW_EVENT_CONTROLLER_ERROR" value="21" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048213">
+    </task>
+    <task name="USBXHCI_ETW_COMMAND" value="22" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048214">
+    </task>
+    <task name="USBXHCI_TRUSTLET_REQUEST" value="23" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048215">
+    </task>
+    <task name="USBXHCI_TRANSFER" value="24" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048216">
+    </task>
+    <task name="USBXHCI_DEFERRED_WORK" value="25" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048217">
+    </task>
+    <task name="USBXHCI_START_TRACKING_FOR_TIME_SYNC" value="26" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048218">
+    </task>
+    <task name="USBXHCI_STOP_TRACKING_FOR_TIME_SYNC" value="27" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048219">
+    </task>
+    <task name="USBXHCI_CONFIGURE_ENDPOINT" value="28" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048220">
+    </task>
+    <task name="USBXHCI_CONTROLLER_HEALTH" value="29" eventGUID="00000000-0000-0000-0000-000000000000" message="1879048221">
+    </task>
+  </tasks>
+  <keywords>
+    <keyword name="Default" mask="1" message="">
+    </keyword>
+    <keyword name="USBError" mask="2" message="">
+    </keyword>
+    <keyword name="IRP" mask="4" message="">
+    </keyword>
+    <keyword name="Power" mask="8" message="">
+    </keyword>
+    <keyword name="PnP" mask="10" message="">
+    </keyword>
+    <keyword name="Performance" mask="20" message="">
+    </keyword>
+    <keyword name="HeadersBusTrace" mask="40" message="">
+    </keyword>
+    <keyword name="PartialDataBusTrace" mask="80" message="">
+    </keyword>
+    <keyword name="FullDataBusTrace" mask="100" message="">
+    </keyword>
+    <keyword name="StateMachine" mask="200" message="">
+    </keyword>
+    <keyword name="Enumeration" mask="400" message="">
+    </keyword>
+    <keyword name="VerifyDriver" mask="800" message="">
+    </keyword>
+    <keyword name="HWVerifyHost" mask="1000" message="">
+    </keyword>
+    <keyword name="HWVerifyHub" mask="2000" message="">
+    </keyword>
+    <keyword name="HWVerifyDevice" mask="4000" message="">
+    </keyword>
+    <keyword name="Rundown" mask="8000" message="">
+    </keyword>
+    <keyword name="Device" mask="10000" message="">
+    </keyword>
+    <keyword name="Hub" mask="20000" message="">
+    </keyword>
+    <keyword name="Compat" mask="40000" message="">
+    </keyword>
+    <keyword name="ControllerCommand" mask="80000" message="">
+    </keyword>
+    <keyword name="ms:ReservedKeyword44" mask="100000000000" message="">
+    </keyword>
+    <keyword name="ms:Telemetry" mask="200000000000" message="">
+    </keyword>
+    <keyword name="ms:Measures" mask="400000000000" message="">
+    </keyword>
+    <keyword name="ms:CriticalData" mask="800000000000" message="">
+    </keyword>
+  </keywords>
+  <events>
+    <event value="1" version="0" opcode="1" channel="16" level="4" task="1" keywords="0x4000000000008001" message="2952790017">
+    </event>
+    <event value="2" version="0" opcode="2" channel="16" level="4" task="1" keywords="0x4000000000008001" message="2952790018">
+    </event>
+    <event value="3" version="0" opcode="10" channel="16" level="4" task="2" keywords="0x4000000000008001" message="2952790019">
+    </event>
+    <event value="3" version="1" opcode="10" channel="16" level="4" task="2" keywords="0x4000000000008001" message="2952790019">
+    </event>
+    <event value="3" version="2" opcode="10" channel="16" level="4" task="2" keywords="0x4000000000008001" message="2952790019">
+    </event>
+    <event value="3" version="3" opcode="10" channel="16" level="4" task="2" keywords="0x4000000000008001" message="2952790019">
+    </event>
+    <event value="3" version="4" opcode="10" channel="16" level="4" task="2" keywords="0x4000000000008001" message="2952790019">
+    </event>
+    <event value="4" version="0" opcode="10" channel="16" level="4" task="3" keywords="0x4000000000008001" message="2952790020">
+    </event>
+    <event value="4" version="1" opcode="10" channel="16" level="4" task="3" keywords="0x4000000000008001" message="2952790020">
+    </event>
+    <event value="4" version="2" opcode="10" channel="16" level="4" task="3" keywords="0x4000000000008001" message="2952790020">
+    </event>
+    <event value="4" version="3" opcode="10" channel="16" level="4" task="3" keywords="0x4000000000008001" message="2952790020">
+    </event>
+    <event value="5" version="0" opcode="10" channel="16" level="4" task="4" keywords="0x4000000000008001" message="2952790021">
+    </event>
+    <event value="6" version="0" opcode="10" channel="16" level="4" task="5" keywords="0x4000000000000001" message="2952790022">
+    </event>
+    <event value="6" version="1" opcode="10" channel="16" level="4" task="5" keywords="0x4000000000000001" message="2952790022">
+    </event>
+    <event value="7" version="0" opcode="10" channel="16" level="4" task="6" keywords="0x4000000000000001" message="2952790023">
+    </event>
+    <event value="8" version="0" opcode="10" channel="16" level="4" task="7" keywords="0x4000000000000001" message="2952790024">
+    </event>
+    <event value="8" version="1" opcode="10" channel="16" level="4" task="7" keywords="0x4000000000000001" message="2952790024">
+    </event>
+    <event value="8" version="2" opcode="10" channel="16" level="4" task="7" keywords="0x4000000000000001" message="2952790024">
+    </event>
+    <event value="8" version="3" opcode="10" channel="16" level="4" task="7" keywords="0x4000000000000001" message="2952790024">
+    </event>
+    <event value="9" version="0" opcode="10" channel="16" level="4" task="8" keywords="0x4000000000000001" message="2952790025">
+    </event>
+    <event value="9" version="1" opcode="10" channel="16" level="4" task="8" keywords="0x4000000000000001" message="2952790025">
+    </event>
+    <event value="9" version="2" opcode="10" channel="16" level="4" task="8" keywords="0x4000000000000001" message="2952790025">
+    </event>
+    <event value="9" version="3" opcode="10" channel="16" level="4" task="8" keywords="0x4000000000000001" message="2952790025">
+    </event>
+    <event value="10" version="0" opcode="10" channel="16" level="4" task="9" keywords="0x4000000000000001" message="2952790026">
+    </event>
+    <event value="10" version="1" opcode="10" channel="16" level="4" task="9" keywords="0x4000000000000001" message="2952790026">
+    </event>
+    <event value="10" version="2" opcode="10" channel="16" level="4" task="9" keywords="0x4000000000000001" message="2952790026">
+    </event>
+    <event value="10" version="3" opcode="10" channel="16" level="4" task="9" keywords="0x4000000000000001" message="2952790026">
+    </event>
+    <event value="11" version="0" opcode="10" channel="16" level="4" task="10" keywords="0x4000000000000001" message="2952790027">
+    </event>
+    <event value="12" version="0" opcode="10" channel="16" level="4" task="11" keywords="0x4000000000000001" message="2952790028">
+    </event>
+    <event value="13" version="0" opcode="10" channel="16" level="4" task="12" keywords="0x4000000000000001" message="2952790029">
+    </event>
+    <event value="14" version="0" opcode="0" channel="8" level="2" task="0" keywords="0x8000400000000000" message="14">
+    </event>
+    <event value="15" version="0" opcode="10" channel="16" level="4" task="13" keywords="0x4000000000000001" message="2952790031">
+    </event>
+    <event value="16" version="0" opcode="1" channel="16" level="4" task="14" keywords="0x4000000000000009" message="2952790032">
+    </event>
+    <event value="17" version="0" opcode="2" channel="16" level="4" task="14" keywords="0x4000000000000009" message="2952790033">
+    </event>
+    <event value="18" version="0" opcode="1" channel="16" level="4" task="15" keywords="0x4000000000000009" message="2952790034">
+    </event>
+    <event value="19" version="0" opcode="2" channel="16" level="4" task="15" keywords="0x4000000000000009" message="2952790035">
+    </event>
+    <event value="20" version="0" opcode="1" channel="16" level="4" task="16" keywords="0x4000000000000009" message="2952790036">
+    </event>
+    <event value="21" version="0" opcode="2" channel="16" level="4" task="16" keywords="0x4000000000000009" message="2952790037">
+    </event>
+    <event value="22" version="0" opcode="1" channel="16" level="4" task="17" keywords="0x4000000000000009" message="2952790038">
+    </event>
+    <event value="23" version="0" opcode="2" channel="16" level="4" task="17" keywords="0x4000000000000009" message="2952790039">
+    </event>
+    <event value="24" version="0" opcode="1" channel="16" level="4" task="18" keywords="0x4000000000000009" message="2952790040">
+    </event>
+    <event value="25" version="0" opcode="2" channel="16" level="4" task="18" keywords="0x4000000000000009" message="2952790041">
+    </event>
+    <event value="26" version="0" opcode="1" channel="16" level="4" task="19" keywords="0x4000000000000009" message="2952790042">
+    </event>
+    <event value="27" version="0" opcode="2" channel="16" level="4" task="19" keywords="0x4000000000000009" message="2952790043">
+    </event>
+    <event value="28" version="0" opcode="1" channel="16" level="4" task="20" keywords="0x4000000000000001" message="2952790044">
+    </event>
+    <event value="29" version="0" opcode="2" channel="16" level="4" task="20" keywords="0x4000000000000001" message="2952790045">
+    </event>
+    <event value="30" version="0" opcode="10" channel="16" level="2" task="21" keywords="0x4000400000001001" message="2952790046">
+    </event>
+    <event value="31" version="0" opcode="10" channel="16" level="4" task="22" keywords="0x4000000000080001" message="2952790047">
+    </event>
+    <event value="32" version="0" opcode="10" channel="16" level="4" task="22" keywords="0x4000000000080001" message="2952790048">
+    </event>
+    <event value="33" version="0" opcode="10" channel="16" level="4" task="22" keywords="0x4000000000080001" message="2952790049">
+    </event>
+    <event value="34" version="0" opcode="10" channel="16" level="2" task="22" keywords="0x4000400000080001" message="2952790050">
+    </event>
+    <event value="35" version="0" opcode="10" channel="16" level="4" task="22" keywords="0x4000000000000005" message="2952790051">
+    </event>
+    <event value="36" version="0" opcode="10" channel="16" level="4" task="0" keywords="0x4000000000000009" message="2952790052">
+    </event>
+    <event value="37" version="0" opcode="1" channel="16" level="4" task="23" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="37" version="1" opcode="1" channel="16" level="4" task="23" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="38" version="0" opcode="10" channel="17" level="4" task="23" keywords="0x2000000000000021" message="">
+    </event>
+    <event value="38" version="1" opcode="10" channel="17" level="4" task="23" keywords="0x2000000000000020" message="">
+    </event>
+    <event value="39" version="0" opcode="11" channel="17" level="4" task="23" keywords="0x2000000000000021" message="">
+    </event>
+    <event value="39" version="1" opcode="11" channel="17" level="4" task="23" keywords="0x2000000000000020" message="">
+    </event>
+    <event value="40" version="0" opcode="2" channel="16" level="4" task="23" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="40" version="1" opcode="2" channel="16" level="4" task="23" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="41" version="0" opcode="10" channel="16" level="4" task="24" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="41" version="1" opcode="10" channel="16" level="4" task="24" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="42" version="0" opcode="0" channel="16" level="4" task="0" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="42" version="1" opcode="0" channel="16" level="4" task="0" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="43" version="0" opcode="1" channel="16" level="4" task="25" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="43" version="1" opcode="1" channel="16" level="4" task="25" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="44" version="0" opcode="2" channel="16" level="4" task="25" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="44" version="1" opcode="2" channel="16" level="4" task="25" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="45" version="0" opcode="0" channel="16" level="4" task="0" keywords="0x4000000000000021" message="">
+    </event>
+    <event value="45" version="1" opcode="0" channel="16" level="4" task="0" keywords="0x4000000000000020" message="">
+    </event>
+    <event value="46" version="0" opcode="10" channel="16" level="4" task="26" keywords="0x4000400000000001" message="2952790062">
+    </event>
+    <event value="47" version="0" opcode="10" channel="16" level="4" task="27" keywords="0x4000400000000001" message="2952790063">
+    </event>
+    <event value="48" version="0" opcode="10" channel="16" level="4" task="28" keywords="0x4000000000000001" message="2952790064">
+    </event>
+    <event value="49" version="0" opcode="10" channel="16" level="2" task="29" keywords="0x4000400000000001" message="2952790065">
+    </event>
+    <event value="49" version="1" opcode="10" channel="16" level="2" task="29" keywords="0x4000400000000001" message="2952790065">
+    </event>
+    <event value="49" version="2" opcode="10" channel="16" level="2" task="29" keywords="0x4000400000000001" message="2952790065">
+    </event>
+    <event value="49" version="3" opcode="10" channel="16" level="2" task="29" keywords="0x4000400000000001" message="2952790065">
+    </event>
+  </events>
+</provider>

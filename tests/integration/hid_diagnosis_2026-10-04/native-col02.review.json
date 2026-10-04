@@ -1,0 +1,29 @@
+{
+  "reviewer": "Luna",
+  "assessment": "本轮只读诊断记录可信，未定位设备端根因。唯一一次观察到的COL02调用以access=0句柄、长度6、Report ID 2和IOCTL_HID_GET_INPUT_REPORT(0x000B01A2)执行；NtDeviceIoControlFile直接返回0xC0000010（STATUS_INVALID_DEVICE_REQUEST），映射Win32错误1，Information为0。iosb_status=0是未完成结构中的初始化值，不能当作成功状态或有效完成结果。失败缓冲区保持预置内容，hex=null且buffer_is_device_report=false，故没有可用的设备报告数据。此结果说明该Windows/HID控制路径拒绝了请求，但不能证明USB setup是否实际到达设备，也不能归因于USB回调、HID描述符或固件损坏。调用耗时仅为主机API耗时。非管理员ETW创建被拒绝，没有总线捕获证据。",
+  "evidence": {
+    "native_result": "tests/integration/hid_diagnosis_2026-10-04/native-col02.json",
+    "collection": "observed COL02, Usage Page 1 / Usage 2",
+    "serial": "5054316560DD729C",
+    "desired_access": "0x00000000",
+    "ioctl": "0x000B01A2",
+    "report_id": 2,
+    "input_output_length": 6,
+    "ntstatus": "0xC0000010",
+    "iosb_status": "0x00000000 (initial value; not evidence of success)",
+    "bytes_returned": 0,
+    "buffer_is_device_report": false,
+    "hex": null,
+    "handle_closed": true,
+    "etw": "tests/integration/hid_diagnosis_2026-10-04/etw-attempt.json: access denied; no usable capture",
+    "cdc_after": "tests/integration/hid_diagnosis_2026-10-04/after-native",
+    "baseline_cdc_lines_before_after": [15, 15],
+    "schema2_bytes_before_after_equal": true,
+    "schema2_length": 1387,
+    "schema2_sha256_before_after": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "profiles_equal": true,
+    "identity_version_revision": "5054316560DD729C / 0.10.1 / revision 1 before and after"
+  },
+  "continue": true,
+  "next_step": "可继续一次独立C# HidD_GetInputReport 对照，仅限该已观察且序号/caps复核通过的COL02、access=0、Report ID 2、长度6；脚本拒绝覆盖旧证据，并在API失败时将hex置空。它能检验此前HidD Python FFI结果是否可复现，不能验证native IOCTL路径或证明USB总线行为。完成后应再做只读CDC健康核对；不要因该API失败推断HID整体不可用或固件损坏。"
+}

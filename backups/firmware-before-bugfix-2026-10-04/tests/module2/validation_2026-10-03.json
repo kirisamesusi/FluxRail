@@ -1,0 +1,167 @@
+{
+  "date_local": "2026-10-03T04:19:24.387667+08:00",
+  "module": "FluxRail module2 three Hall absolute rail",
+  "source_scope": [
+    "firmware/FluxRail/src/hall",
+    "tests/module2",
+    "docs/progress/模块2.md"
+  ],
+  "strict_arm_translation_units": 6,
+  "simulation": {
+    "validation": "ARM instruction simulation of original module C++",
+    "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+    "core": "Arduino-Pico 6.1.0",
+    "unicorn": "2.1.3",
+    "hardware_tested": false,
+    "game_tested": false,
+    "instruction_limit": 200000000,
+    "object_size_bytes": {
+      "Sample": 36,
+      "Estimate": 60,
+      "Calibration": 544,
+      "HallModule": 5252,
+      "HallPosition": 644,
+      "HallCalibration": 620
+    },
+    "results": [
+      {
+        "test": "test_absolute_return_endpoints_gain_invert",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 3866
+      },
+      {
+        "test": "test_failure_reentry_and_parameter_atomicity",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 17
+      },
+      {
+        "test": "test_activity_slow_motion_filter_dt_wrap_reverse",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 341
+      },
+      {
+        "test": "test_saved_calibration_rejection_ambiguity",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 15
+      },
+      {
+        "test": "test_module_queue_recovery_revision_calibration_suppression",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 26
+      },
+      {
+        "test": "test_sampler_budget_cadence_errors_timestamp_wrap",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 18
+      },
+      {
+        "test": "test_measured_short_travel_and_maximum_nodes",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 190
+      },
+      {
+        "test": "test_async_calibration_success_and_reuse",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 91
+      },
+      {
+        "test": "test_calibration_control_cooperative_checks_and_command_timeout",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 15
+      },
+      {
+        "test": "test_module_calibration_success_atomic_application",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 13
+      },
+      {
+        "test": "test_calibration_cancel_timeout_noise_coverage_keeps_old",
+        "completed": true,
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 23
+      }
+    ]
+  },
+  "checks": 4615,
+  "arduino_smoke": {
+    "date_local": "2026-10-03",
+    "validation": "isolated Arduino module2 compile and link smoke test",
+    "fqbn": "rp2040:rp2040:generic:flash=4194304_0,boot2=boot2_w25q64jv_4_padded_checksum,freq=125,usbstack=tinyusb",
+    "core": "Arduino-Pico 6.1.0",
+    "tinyusb": "3.7.7",
+    "exit_code": 0,
+    "source_sha256": {
+      "firmware/FluxRail/src/hall/HallAdcRp2040.h": "fbfd6afa09277c4029a8b2359bd5ada4dd6f5e849f49c12e7bacb980aabc6f96",
+      "firmware/FluxRail/src/hall/HallCalibration.h": "1cb8428e153bb1bb713c5437cedbf200c1de3986877e098898cb2d60b0e633f0",
+      "firmware/FluxRail/src/hall/HallModule.h": "9b300c9acde814269bd209cf54fccdd2f2f6f5a4ed8eee2e8fe52c6bdca71333",
+      "firmware/FluxRail/src/hall/HallPosition.h": "084ea88c91fb031005961fa9e004d491b8018122678c7f54200833c8b4939bd2",
+      "firmware/FluxRail/src/hall/HallSampler.h": "895933fc948990c1008d107a692f968070e529fea81b3f9caf76656993343d04",
+      "firmware/FluxRail/src/hall/HallTypes.h": "74bcc31a175cf0627a56bbde25f0c9a0b54769092d0330bfadd9f62a59be0be1",
+      "firmware/FluxRail/src/hall/HallAdcRp2040.cpp": "1d6ae498806720f0b70e8593d9dec7ed7003711027d1858051d1f1ff758db54e",
+      "firmware/FluxRail/src/hall/HallCalibration.cpp": "eb4fa6527b71a97676467042da82e3cbb9460ce8e83557c856955bca8a279511",
+      "firmware/FluxRail/src/hall/HallModule.cpp": "84188dfb0a0ad6626f2e6b48b5fb5d9598c900a092b42d15eff74706b999e2c9",
+      "firmware/FluxRail/src/hall/HallPosition.cpp": "e0812ef6d16987e1a983a47690c36be0f4bf28ec0cf1d1229749ef8776c685b3",
+      "firmware/FluxRail/src/hall/HallSampler.cpp": "495c56433b8fd0b8c2295fcb6db26b8a4e513a76f725ba51c2208875036eab2f",
+      "firmware/FluxRail/src/hall/HallTypes.cpp": "7a85accc84a18e068acce2e837b40cbce7c0919c38cf255759ebd7e5fdfbe2bc",
+      "firmware/FluxRail/src/board/BoardConfig.h": "b42411fee0d0382ea852c968f3ad522c250757d6ee93e87dec558ca80df70b03",
+      "firmware/FluxRail/src/common/InputTypes.h": "244a3d3fc727e56ba83549976a0169d56a2007052bd1500be365151dc19657a8",
+      "firmware/FluxRail/src/realtime/SpscQueue.h": "d53170a665c34adf1283751120c794f084b6043f3ba4ea4e7b6b76819ed6bced"
+    },
+    "uploaded": false,
+    "production_application": false,
+    "hardware_tested": false,
+    "game_tested": false,
+    "log": "arduino_compile.log"
+  },
+  "flash_bytes": 85036,
+  "global_ram_bytes": 22116,
+  "project_warnings": [],
+  "third_party_warnings": [
+    "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:154:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::rts' [-Wmissing-field-initializers]",
+    "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/class/cdc/cdc_host.h:162:58: warning: missing initializer for member 'cdc_line_control_state_t::<unnamed struct>::dtr' [-Wmissing-field-initializers]"
+  ],
+  "test_source_sha256": {
+    "tests/module2/compile_smoke.py": "2e0d2046fcb176747ee1083b92df9d6065ce0c717798f280141553d2bfc63cd2",
+    "tests/module2/finalize_report.py": "d18502c92cbaf876db425533f96c0a5b535411879ee7bfd7abadfe82716d5df2",
+    "tests/module2/HARDWARE_CHECKLIST.md": "a773b42588372ba511d708e7d3150ff224335497587dd6f62422ee9364db5b63",
+    "tests/module2/module2_tests.cpp": "db8c6ed24e3a692ad9eccd9f2bcd7e8a1c7bfd4c93f71ec3897ffbcc283336e8",
+    "tests/module2/README.md": "38d6527a2a227abe1934494e82623d40ed370642d44397921411917724dce43f",
+    "tests/module2/run_tests.py": "9d0c32555d4f5b98a477a1213f899d55bd600b3b57f9ffc4dc307dcb028cd268"
+  },
+  "smoke_uf2_sha256": "849a27ca85b268e49134d369df85d4a3db8983fb7e8a0febbc90e17036029b4f",
+  "production_app_connected": false,
+  "hardware_tested": false,
+  "host_tested": false,
+  "game_tested": false,
+  "uploaded": false,
+  "not_verified": [
+    "actual mechanical endpoints/field curves",
+    "ADC peripheral timing/noise",
+    "worst algorithm service time",
+    "dual-core concurrency",
+    "ordinary absolute X and independent Y",
+    "IO4/game compatibility",
+    "global flash persistence"
+  ]
+}

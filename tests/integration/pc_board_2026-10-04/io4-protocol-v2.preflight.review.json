@@ -1,0 +1,19 @@
+{
+  "reviewer": "Luna",
+  "assessment": "preflight_only_and_protocol_v2_static_review_pass",
+  "scope": "Static review only. No HID requests or device actions performed.",
+  "evidence": [
+    "tests/integration/test_io4_protocol_actual_v2.py",
+    "tests/integration/run_io4_protocol_watchdog.ps1"
+  ],
+  "findings": {
+    "handle_access": "V2 opens ctrl with GENERIC_READ|GENERIC_WRITE and rechecks the expected serial; it uses this handle for synchronous HidD_GetInputReport and HidD_SetOutputReport. It opens a separate GENERIC_READ|GENERIC_WRITE FILE_FLAG_OVERLAPPED handle, rechecks serial, and uses it for ReadFile/WriteFile. This fixes the prior access-0 output handle defect.",
+    "preflight_only": "With --preflight-only, the tool performs one control input snapshot, opens and identity-checks the overlapped RW handle, runs zero ReadFile iterations, skips all protocol output commands, and closes both handles in finally. The report distinguishes preflight_only from full protocol testing.",
+    "overlapped_cleanup": "The OVERLAPPED structure uses pointer-sized Internal fields, DWORD offsets and a manual-reset event. ReadFile/WriteFile use bounded 1500ms waits. If cancellation remains pending after the second bound, it records containment state and calls os._exit(2) without freeing the referenced OVERLAPPED/buffer/event or running Python cleanup; the outer watchdog then terminates only the matching child identity if necessary. If cancellation signals completion, the event remains live until GetOverlappedResult and normal cleanup.",
+    "watchdog": "The PowerShell wrapper launches the exact Python script with a 45-second deadline, redirects stdout/stderr, records PID/start time and script hash, and force-stops only when PID, start time and executable path still match. Timeout is explicitly marked as requiring independent readback or physical recovery; it does not claim finally restoration.",
+    "protocol_assertions": "The 64-byte report includes its report ID; the decoder offsets match Io4Codec's 14 little-endian analog words, two switch words, system/usb bytes and reserved tail. Neutral interrupt reports require ID 1, switches [0x4000,0x8000], system 2 and zero reserved bytes. Command system-state checks, 400ms timeout, and unknown-command state preservation are useful behavioral checks. Unknown 0x85 result is correctly limited to unchanged system state, not proof of a rejected-counter increment.",
+    "scope_limits": "All protocol commands affect runtime IO4 state; no Flash/config/save/reboot request or injected physical input is present. Command 4 carries zero GPIO bits; firmware models this as active IO4 GPIO state and may transiently alter host-driven lighting, but does not drive RP2040 GPIO pins. `zero_gpio_transport_passed` must remain a transport claim. HidD_GetInputReport calls are one-shot control snapshots, not the ReadFile interrupt stream.",
+    "minor_watchdog_race": "If WaitForExit reaches the deadline just as the child exits, Get-Process can return null and the wrapper still writes timeout_killed=true although it may not have killed the process. Consider recording timeout_deadline_elapsed and kill_attempted separately, then collect final exit status when the process has exited. This affects rare timeout-path labeling, not the no-mutation preflight path."
+  },
+  "recommendation": "The revised source has no remaining blocking issue for the planned --preflight-only run; capture and review that result before running the mutating RAM-only protocol sequence. If the external watchdog fires or the child exits through containment, treat cleanup as unverified and require the documented independent readback/recovery before further IO4 testing."
+}

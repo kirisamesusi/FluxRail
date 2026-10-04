@@ -1,0 +1,9 @@
+{
+  "exit_code": 1,
+  "stage": "CSharp_CreateFile_explicit_entrypoint_before_HidD_query",
+  "error": 5,
+  "device_control_requests": 0,
+  "correction_notes": "Explicit W entrypoint and uint arguments alone did not fix the script. Later metadata-only in the same tool succeeded after separately materializing parsed records/devicePath and naming native method Open. These changes were combined; unique cause was not isolated.",
+  "cdc_check_after_abort": "final/baseline.json",
+  "successful_metadata_check": "csharp-final-binding-open.json"
+}

@@ -1,0 +1,12 @@
+{
+  "firmware_changed": false,
+  "date": "2026-10-04",
+  "first_response": "Advised immediately disconnect USB/all power and jumpers; naturally cool; no further board writes",
+  "last_verified_state": "GP9 forced NORMAL; active4/revision5/saved5/dirtyfalse; actual recovery check before incident",
+  "user_disconnect_confirmation": "Fully disconnected; no smoke, smell or discoloration",
+  "io4_switch_executed": false,
+  "latest_user": "Cooled; user reconnected USB and requested check",
+  "kind": "user_reported_5V_GND_short",
+  "post_incident_health": "Pending readonly verification; no electrical damage conclusion",
+  "user_report": "Accidental 5V/GND contact; board very hot"
+}

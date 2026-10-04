@@ -1,0 +1,8 @@
+{
+  "started": "2026-10-04T12:08:02.4695206Z",
+  "mechanism": "Windows ShellExecute RunAs, manual UAC, hidden PowerShell",
+  "script": "C:\\Users\\admin\\Documents\\FluxRail\\tests\\integration\\hid_etw_launch_2026-10-04_200244\\run-elevated.ps1",
+  "launched": true,
+  "process_id": 251632,
+  "finished": "2026-10-04T12:08:02.7270199Z"
+}

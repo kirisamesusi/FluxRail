@@ -1,0 +1,29 @@
+{
+  "reviewer": "Luna",
+  "assessment": "一次C# HidD_GetInputReport真实查询已被如实记录为失败：调用前校验的序号为5054316560DD729C、Usage Page 1/Usage 2、InputReportByteLength 6及Report ID 2均匹配；API返回false、Win32 error 1，hex=null、buffer_is_device_report=false，预置失败缓冲020000000000无效，句柄已关闭。脚本exit 0仅表示采证脚本正常收尾，不能算查询通过。查询后15条只读CDC检查仍识别为0.10.1、revision 1；profile、配置、USB模式、导出元数据和1387字节schema2均与before一致，CRC1053904252。设备仍ready/idle、无apply失败、valid_slots=0、protocol_rejected=0。此结果与native IOCTL一次失败相互印证Windows当前报告控制路径失败，但没有USB总线捕获，不能确定请求是否抵达设备或归因固件/HID整体失效。",
+  "evidence": {
+    "query": "tests/integration/hid_diagnosis_2026-10-04/csharp-col02.json",
+    "control_requests": 1,
+    "serial": "5054316560DD729C",
+    "usage_page": 1,
+    "usage": 2,
+    "report_id": 2,
+    "length": 6,
+    "passed": false,
+    "error": 1,
+    "hex": null,
+    "buffer_is_device_report": false,
+    "handle_closed": true,
+    "post_query_cdc": "tests/integration/hid_diagnosis_2026-10-04/after-final-query",
+    "cdc_requests": 15,
+    "version_revision": "0.10.1 / revision 1",
+    "schema2_length": 1387,
+    "schema2_crc32": 1053904252,
+    "schema2_matches_before": true,
+    "profiles_match_before": true,
+    "healthy_status": "config_ready=true, applying=false, apply_failed=false, maintenance=idle, valid_slots=0, protocol_rejected=0",
+    "query_count_scope": "two real current-report control requests total: one native IOCTL and this one C# HidD call; prior opens and aborted attempts issued zero control requests"
+  },
+  "continue": true,
+  "next_step": "可冻结本轮分层诊断并由独立审阅者核查汇总器及证据哈希。若后续继续追因，需先获取有效USB总线/ETW证据；当前只证明本机HidD与native IOCTL两种当前报告查询均失败，不能据此认定USB报告中断、固件损坏或HID所有传输均不可用。"
+}

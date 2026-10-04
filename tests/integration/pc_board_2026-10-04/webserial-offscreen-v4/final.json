@@ -1,0 +1,12 @@
+{
+  "connection": "未连接",
+  "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision6",
+  "notice": "已断开；设备RAM变化未自动保存，重连会重新读回。",
+  "draft": "设备版本已变化：必须读回",
+  "saved": "已断开，保存结果以重连读回为准",
+  "visible": "visible",
+  "requestPortErrors": [],
+  "serialOpenErrors": [],
+  "portType": "SerialPort",
+  "simulated": false
+}

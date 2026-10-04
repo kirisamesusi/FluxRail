@@ -1,0 +1,52 @@
+{
+  "kind": "USB_only_idle_IO4_physical_power_cycle",
+  "user_confirmation": {
+    "source": "Trusted user reply",
+    "usb_only_supply_previously_confirmed": true,
+    "removed_usb_at_least_5_seconds": true,
+    "no_jumpers": true,
+    "user_text": "已等待至少5秒并重插，没有跳线"
+  },
+  "pnp_absence_seconds": 8.562021,
+  "pnp_after": [
+    {
+      "Status": "OK",
+      "Class": "HIDClass",
+      "FriendlyName": "USB 输入设备",
+      "InstanceId": "USB\\VID_0CA3&PID_0021\\5054316560DD729C"
+    },
+    {
+      "Status": "OK",
+      "Class": "HIDClass",
+      "FriendlyName": "HID-compliant game controller",
+      "InstanceId": "HID\\VID_0CA3&PID_0021\\7&13F10231&0&0000"
+    }
+  ],
+  "normal_nodes_after": [],
+  "target_serial": "5054316560DD729C",
+  "input_control_passed": true,
+  "actual_report_hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+  "system_after": 2,
+  "io4_caps_after": {
+    "Usage": 4,
+    "UsagePage": 1,
+    "InputReportByteLength": 64,
+    "OutputReportByteLength": 64,
+    "FeatureReportByteLength": 0,
+    "NumberLinkCollectionNodes": 3,
+    "NumberInputButtonCaps": 1,
+    "NumberInputValueCaps": 14,
+    "NumberInputDataIndices": 62,
+    "NumberOutputButtonCaps": 0,
+    "NumberOutputValueCaps": 1,
+    "NumberOutputDataIndices": 1,
+    "NumberFeatureButtonCaps": 0,
+    "NumberFeatureValueCaps": 0,
+    "NumberFeatureDataIndices": 0
+  },
+  "configuration_snapshot_available_in_pure_io4": false,
+  "brief_normal_enumeration_excluded": false,
+  "flash_writes": 0,
+  "game": "not_run",
+  "passed": true
+}

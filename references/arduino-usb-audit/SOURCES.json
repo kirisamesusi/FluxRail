@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-03",
+  "core": "Arduino-Pico 6.1.0",
+  "library": "Adafruit TinyUSB Arduino 3.7.7",
+  "scope": "Read-only installed source snapshot for design audit; not a patched build dependency",
+  "files": [
+    {
+      "file": "cores/rp2040/main.cpp",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/cores/rp2040/main.cpp",
+      "sha256": "fd974635a897f2d75f84a77d2f947d18c30f28d2b8023116e3104f013518210e",
+      "bytes": 7390
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_USBD_Device.h",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_USBD_Device.h",
+      "sha256": "63b7cd70b8428e66057749251b5fe64381301a062b4fe6a378447bd51bdeb468",
+      "bytes": 5241
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_USBD_Device.cpp",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_USBD_Device.cpp",
+      "sha256": "bf5b5618c8bc6654b0d139349e7a9a68ba051a2146c0b84f0c52e3b7e3122c4c",
+      "bytes": 17025
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_TinyUSB_API.cpp",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_TinyUSB_API.cpp",
+      "sha256": "2af11cff1192dd23a02e3389d9be13acec0e7b997b060ba84d6b45f13d8d1817",
+      "bytes": 3082
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/hid/Adafruit_USBD_HID.h",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/hid/Adafruit_USBD_HID.h",
+      "sha256": "61d91c69844b93966d7cfa7db052c911a116d1ef91b68a5d008bec88aeedf2a1",
+      "bytes": 4701
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/hid/Adafruit_USBD_HID.cpp",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/hid/Adafruit_USBD_HID.cpp",
+      "sha256": "96584d5b3416d6ab9af879abd3c904f4a3122f5afe9e482f5cc4e62460af924f",
+      "bytes": 9143
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp",
+      "sha256": "c464f2d791fc0e6a3b01c6971072eb1a1b0ff0bd2218560ef8c1ec96b46d606d",
+      "bytes": 4771
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/arduino/ports/rp2040/tusb_config_rp2040.h",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/arduino/ports/rp2040/tusb_config_rp2040.h",
+      "sha256": "67d36d89023473351485c8c2fdfc31ac0fd4db31aca324fea775a78cbe276abf",
+      "bytes": 5111
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/class/hid/hid_device.c",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/class/hid/hid_device.c",
+      "sha256": "a168e91cac81135905a52eb7da2a2b113134afb5b32ac04307de486146696132",
+      "bytes": 14922
+    },
+    {
+      "file": "cores/rp2040/RP2040Support.h",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/cores/rp2040/RP2040Support.h",
+      "sha256": "df51670f33813a7c32c51591e339bba3ca7fb78b052a9bce704be55fc0236703",
+      "bytes": 22257
+    },
+    {
+      "file": "libraries/Adafruit_TinyUSB_Arduino/src/device/usbd.h",
+      "installed_path": "C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino/src/device/usbd.h",
+      "sha256": "5ea0f415425b04479370749fc6af5d69c0d3046cf444981bfece85f0948d104b",
+      "bytes": 62017
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "device_requests": 0,
+  "fix": "Compare DateTime UTC ticks directly; exact path/PID/command/time checks retained",
+  "initial_cleanup_refused": "PowerShell7 ConvertFrom-Json converted ISO time to DateTime; DateTimeOffset.Parse implicit string lost fractional precision; no process stopped on failed check",
+  "stopped": [
+    245336
+  ],
+  "time": "2026-10-04T17:28:36.6010428Z"
+}

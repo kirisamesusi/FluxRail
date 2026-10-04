@@ -1,0 +1,18 @@
+{
+  "time_local": "2026-10-04T17:06:56.5966206+08:00",
+  "os": "Windows 10 Enterprise LTSC 2021",
+  "display_version": "21H2",
+  "build": "19044",
+  "ubr": 7417,
+  "ports": [
+    "COM1",
+    "COM29"
+  ],
+  "supply": "USB connected; voltage/current not instrumented",
+  "board_physical_model": "User reports development board only; Flash capacity not physically probed",
+  "external_peripherals": "No external controls or sensors claimed",
+  "new_upload": false,
+  "new_firmware_compile": false,
+  "new_arm_simulation": false,
+  "game_tested": false
+}

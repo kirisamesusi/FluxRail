@@ -1,0 +1,55 @@
+{
+  "reviewer": "Luna",
+  "kind": "iab_observation_and_power_cut_preflight_review",
+  "iab": {
+    "cdc_observed": false,
+    "limitations": [
+      "No protocol instrumentation was present, so this round provides no CDC request count.",
+      "No claim is made about native chooser behavior outside the observed browser surface.",
+      "This is not a Web Serial pass."
+    ],
+    "observed": "IAB page remained 未连接设备; connect control was disabled; no chooser was visible; tab closed",
+    "verdict": "no_Web_Serial_connection_evidence"
+  },
+  "power_cut_preflight": {
+    "valid_slots": 3,
+    "maintenance": "idle",
+    "assessment": "Suitable quiescent durable baseline for a single 5-second full power disconnect, provided physical handling is controlled and no write or maintenance is in progress.",
+    "dirty": false,
+    "revision": 5,
+    "schema2_length": 1387,
+    "baseline": "power-cut-before/baseline.json and baseline-cdc.jsonl",
+    "saved_revision": 5,
+    "limitations": [
+      "A single idle power interruption tests persistence/recovery in this exact state; it does not prove power loss during an active Flash write is safe.",
+      "Do not run pure IO4 mode switching in this round; it remains deferred.",
+      "No actual board disconnect has occurred in this review."
+    ],
+    "active_profile": 4,
+    "checks_before_disconnect": [
+      "Capture and freeze this complete baseline immediately before unplugging; confirm exact serial, revision/saved revision 5, clean state, slots mask3, NORMAL_NKRO, maintenance idle, physical mask0, active profile4, and snapshot CRC/bytes.",
+      "Confirm no concurrent board process or open COM handle and no save/import/reboot command in flight.",
+      "Disconnect only the FluxRail board power/data path for the stated 5 seconds; do not disturb PC USB controllers, other devices, or UI.",
+      "After reconnect, rediscover unique serial/PNP node with a bounded timeout and capture hello/status/device/profile/export readback.",
+      "Require same serial/version/mode, healthy idle, physical mask0, saved config present, profile4 active, and compare full schema/profiles against frozen pre-cut bytes/values; account explicitly for expected revision/boot counters.",
+      "If port does not return or state differs, stop further tests and preserve raw logs; do not retry writes or flash."
+    ],
+    "cdc_requests": 15,
+    "physical_mask": 0,
+    "cdc_ops": [
+      "hello",
+      "get_status",
+      "get_device",
+      "list_profiles",
+      "get_config",
+      "get_profile",
+      "get_motion",
+      "get_calibration",
+      "get_usb_mode",
+      "export_config"
+    ],
+    "serial": "5054316560DD729C",
+    "firmware": "0.10.1 NORMAL_NKRO",
+    "crc32": 895336899
+  }
+}

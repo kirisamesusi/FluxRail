@@ -1,0 +1,19 @@
+{
+  "reviewer": "parent",
+  "kind": "static_preflight",
+  "device_execution": false,
+  "scope": "RAM4->1->4; Hall1/4 disabled; physical_mask0; fresh-revision restoration; no Flash/reboot/injected input",
+  "checks": [
+    "exact identity/version/current baseline revision",
+    "three USB3 providers PartialData+Default+Rundown0x8081",
+    "finally stop exit checked",
+    "serial dispose and action failure evidence",
+    "after schema bytes except revision and profiles equal",
+    "payload completeness requires actual events"
+  ],
+  "files": {
+    "tests/integration/trigger_neutral_hid.ps1": "9304154bafb85c56d03e7c15b56719a2ae92be394faba07ed7843e3d0507bbc9",
+    "tests/integration/capture_hid_interrupt.ps1": "84e07ab541908c2cf05f9f9b965e3fad9f6fa686b69eea80edc0637c20cf6192",
+    "tests/integration/hid_interrupt_launch_2026-10-04/run-elevated.ps1": "60f2c04567903371ed4684b66047a8b644325a3015d9c2964f1c2de967fe5770"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "reviewer": "Luna",
+  "assessment": "metadata-only对照在同一observed COL02字符串路径上，以64位PowerShell 5.1分别通过显式CreateFileW P/Invoke及PowerShell直调成功打开并关闭句柄；access=0、share=3、OPEN_EXISTING=3，错误码0，controls=0。这确认修正后的C#打开代码可用，但由于本轮同时限定了EntryPoint/ExactSpelling和uint参数，不能把成功单独归因于其中某一处，也不能据此说明此前ERROR_ACCESS_DENIED的唯一根因。该结果为继续一次有限的HidD当前状态读取提供了合适前置条件；它本身不是HID查询结果。",
+  "evidence": {
+    "record": "tests/integration/hid_diagnosis_2026-10-04/csharp-open-binding.json",
+    "system_64bit": true,
+    "process_64bit": true,
+    "powershell": "5.1.19041.7417",
+    "target_count": 1,
+    "target": "observed COL02, string path, 94 characters",
+    "csharp_fixed_open": "handle=1732; error=0; closed=true",
+    "powershell_direct_open": "invalid=false; error=0; closed=true",
+    "control_requests": 0
+  },
+  "continue": true,
+  "next_step": "允许至多一次真实C# HidD_GetInputReport对照，只作用于已核验序号和COL02 caps的单一句柄，access=0、Report ID 2、长度6；失败时hex必须为空且预置缓冲需标为无效，成功才记录设备返回字节。随后进行完整只读CDC健康核对。该步骤只能检验HidD查询是否可由C#触发，不能证明native IOCTL是否上总线。"
+}

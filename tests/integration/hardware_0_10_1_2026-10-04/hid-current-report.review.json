@@ -1,0 +1,6 @@
+{
+  "reviewer": "gpt-6-luna",
+  "test_passed": false,
+  "continue_finalization": true,
+  "evaluation": "Luna确认三个目标集合HidD_GetInputReport均FALSE/GetLastError1；hex是预置失败缓冲，不是设备返回值。仅local parser的人工zero X/Y解析成功，既有PnP/caps通过不能覆盖控制状态读取失败。访问0句柄/API/Windows驱动/设备控制路径根因未定位，不推断固件HID已损坏。此额外失败应保留并在最终报告单独列项。"
+}

@@ -1,0 +1,27 @@
+{
+  "reviewer": "Luna",
+  "kind": "post_incident_readonly_review",
+  "verdict": "read_only_communication_and_configuration_check_pass; electrical_integrity_unproven",
+  "evidence": [
+    "short-incident.json",
+    "post-short-readonly/baseline.json",
+    "post-short-readonly/baseline-cdc.jsonl",
+    "post-short-readonly/original-schema2.bin",
+    "post-short-readonly/original-profiles.json"
+  ],
+  "findings": {
+    "identity": "Serial 5054316560DD729C, firmware 0.10.1, NORMAL_NKRO",
+    "incident": "User reported accidental 5V-to-GND contact and board hot; user later reported fully disconnected, no smoke/smell/discoloration, cooled before reconnect, and no renewed abnormal heating or USB warning.",
+    "status": "revision/saved_revision 5; dirty false; valid slots3; active profile4; forced_recovery false; maintenance idle; physical_mask0",
+    "writes": 0,
+    "requests": "15 CDC requests, all read-only hello/status/device/profile/config/motion/calibration/mode/export",
+    "snapshot": "1387 bytes exactly equal to pre-incident power-cut-after schema; CRC32 895336899; profiles equal"
+  },
+  "limits": [
+    "This confirms the device currently enumerates, answers read-only CDC requests, and returns the prior configuration.",
+    "It does not verify electrical integrity, temperature, current draw, analog inputs, HID behavior, physical Flash capacity, or latent damage.",
+    "Do not treat the earlier GP9 forced-recovery pass as post-incident hardware health evidence.",
+    "No HID query, save, reboot, mode switch, firmware upload, or game test was performed after the incident."
+  ],
+  "recommendation": "Keep IO4/mode switching and other additional energizing tests paused pending user/parent decision after cooling and physical inspection. If further testing is approved, start with non-invasive monitoring and stop at any renewed heating, odor, discoloration, or USB instability."
+}

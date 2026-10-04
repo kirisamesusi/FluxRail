@@ -1,0 +1,25 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_offscreen_webserial_v2_review",
+  "verdict": "host_chooser_binding_failure; no_port_selected; no_firmware_request",
+  "evidence": [
+    "webserial-offscreen-v2/summary.json",
+    "webserial-offscreen-v2/cdc.json",
+    "webserial-offscreen-v2/final.json",
+    "webserial-launch-2/test_webserial_offscreen_v2-executed.cjs"
+  ],
+  "findings": {
+    "mutations": "no_device_mutation=true; no profile was captured and no write operation ran; BrowserWindow stayed hidden and cleanup completed.",
+    "chooser": "Chooser enumerated COM1 and FluxRail COM29. COM29 had portName=COM29, vendorId=9114, productId=51966 and deviceInstanceId USB\\\\VID_239A&PID_CAFE&MI_00\\\\7&1E2FBD10&0&0000, but Electron SerialPort metadata lacked serialNumber.",
+    "device": "cdc.json is empty; there was no hello, handshake, or firmware request.",
+    "firmware": "No evidence of firmware/device failure; target CDC appeared in chooser metadata but selection stopped in host-side binding.",
+    "originPermission": "Permission check for http://localhost:4174/ was allowed; permission request/device callbacks did not follow.",
+    "selection": "The strict serialNumber+COM29 predicate therefore selected zero ports and callback received empty string. requestPort then raised NotFoundError: No port selected by the user."
+  },
+  "limitations": [
+    "Not a Web Serial pass; no SerialPort opened.",
+    "This identifies a host metadata mismatch in the chooser mapping, not a board defect.",
+    "A later preselection mapping must resolve COM29 deviceInstanceId to the target USB parent serial uniquely before returning a portId; never fall back to selecting an arbitrary COM port."
+  ],
+  "recommendation": "Proceed only after the v3 host-side COM-to-PnP-parent-serial resolver passes a read-only metadata preflight and guarantees exactly one match before chooser callback selection."
+}

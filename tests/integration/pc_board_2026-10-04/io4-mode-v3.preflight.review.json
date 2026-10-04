@@ -1,0 +1,16 @@
+{
+  "reviewer": "Luna",
+  "assessment": "static_preflight_pass",
+  "evidence": [
+    "tests/integration/switch_usb_mode_once_v3.ps1",
+    "tests/integration/pc_board_2026-10-04/gp9-post-short-retry2.actual.json",
+    "tests/integration/pc_board_2026-10-04/gp9-post-short-retry2.actual.review.json"
+  ],
+  "findings": {
+    "encoding_fix": "V3 explicitly specifies -Encoding UTF8 when reading the gate JSON, addressing the PowerShell 5.1 ANSI default that caused the prior pre-open abort. Parent reports the same gate parsed successfully offline in Windows PowerShell 5.1 and the script syntax check passed.",
+    "gates": "The independent retry2 passed result remains the only IO4-entry artifact. The script checks passed, exact serial, forced recovery and matching saved revision, then rechecks runtime identity/version/current mode/profile/status/slots/revision and exact gate revision before any mode mutation.",
+    "write_path": "If all gates pass, operations remain set startup mode, preview check, save, saved-state check, reboot request; the port is closed in finally. The script does not itself prove post-reboot IO4 enumeration or HID report delivery; those require separate evidence.",
+    "return_path": "NORMAL_NKRO return requires a fresh forced-recovery session and saved IO4 mode, consistent with the demonstrated GP9 path. The post-short functional recovery gate does not establish electrical health."
+  },
+  "recommendation": "V3 is ready for a separately reviewed execution attempt under the already authorized test plan. Review the resulting CDC requests and state before any further steps; classify reboot ACK separately from successful IO4 enumeration/HID reads."
+}

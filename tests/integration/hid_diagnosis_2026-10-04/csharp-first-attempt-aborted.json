@@ -1,0 +1,8 @@
+{
+  "exit_code": 1,
+  "stage": "reading_observed_paths_before_AddType_or_CreateFile",
+  "device_control_requests": 0,
+  "reason": "PowerShell 5.1 default file encoding decoded UTF8 JSON as local ANSI, breaking the Chinese error_message and JSON parse.",
+  "correction": "Specify Get-Content -Encoding UTF8; preserve original JSON unchanged.",
+  "cdc_check_after_abort": "after-csharp/baseline.json"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "original_review_overwritten_not_recoverable",
+  "reviewer": null,
+  "assessment": null,
+  "reason": "Luna accidentally wrote neutral preflight to existing retry1 path; original text unavailable. This marker is not an original review.",
+  "replacement_content_preserved": "preflight-overwritten-by-neutral.review.json",
+  "correct_neutral_preflight": "../hid_interrupt_launch_2026-10-04/preflight.review.json",
+  "actual_capture_review": "capture.review.json",
+  "actual_offline_review": "../hid_etw_run_2026-10-04_retry1/usb-control-path-analysis.review.json"
+}

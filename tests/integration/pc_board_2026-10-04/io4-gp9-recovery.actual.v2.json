@@ -1,0 +1,42 @@
+{
+  "kind": "pure_io4_physical_GP9_forced_normal_recovery",
+  "offline_checker_v2_only": true,
+  "new_device_requests": 0,
+  "calibration_volatile_fields_excluded": [
+    "timestamp_us",
+    "sample_revision",
+    "epoch"
+  ],
+  "held_mask": 512,
+  "released_mask": 0,
+  "held_forced_recovery": true,
+  "mode": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "IO4",
+    "saved_startup": "IO4",
+    "forced_recovery": true,
+    "reboot_ready": false
+  },
+  "revision": 8,
+  "saved_revision": 8,
+  "dirty": false,
+  "profiles_equal": true,
+  "calibration_equal": true,
+  "held_released_schema_byte_exact": true,
+  "schema_length": 1387,
+  "schema_diff_offsets_from_original": [
+    4,
+    17
+  ],
+  "crc32": 2980498192,
+  "device_writes": 0,
+  "read_only_cdc_requests": 30,
+  "serial_closed": true,
+  "user_confirmation": {
+    "source": "Trusted user reply",
+    "held_at_least_10_seconds": true,
+    "jumper_removed": true,
+    "user_text": "已保持至少10秒，跳线已移除"
+  },
+  "passed": true
+}

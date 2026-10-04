@@ -1,0 +1,34 @@
+{
+  "reviewer": "Luna",
+  "assessment": "passed_gp9_functional_recovery_gate",
+  "evidence": [
+    "gp9-post-short-retry2.actual.json",
+    "gp9-post-short-retry2/held-read/baseline.json",
+    "gp9-post-short-retry2-after/baseline.json",
+    "gp9-post-short-retry2/monitor.json",
+    "gp9-retry2-user-confirmation.json",
+    "check_gp9_retry2.py"
+  ],
+  "verified": {
+    "serial": "5054316560DD729C",
+    "pnp_disconnected_and_reconnected": true,
+    "held_snapshot_physical_mask": 512,
+    "held_snapshot_forced_recovery": true,
+    "released_snapshot_physical_mask": 0,
+    "released_snapshot_forced_recovery": true,
+    "mode": "NORMAL_NKRO",
+    "revision": 7,
+    "saved_revision": 7,
+    "dirty": false,
+    "schema2_length": 1387,
+    "schema2_crc32": 3710059708,
+    "schema2_sha256": "d7662d6f2380586347e381314b2bad89b7a00fb9b60ff02716c6cceb9acfac32",
+    "held_and_released_schema_bytes_equal": true,
+    "schema_equal_to_webserial_baseline": true,
+    "profiles_equal": true,
+    "device_writes": 0,
+    "serial_closed": true,
+    "user_confirmed_jumper_removed_and_held_at_least_10_seconds": true
+  },
+  "interpretation": "This independent retry satisfies the functional GP9 boot-recovery gate: while the jumper was held, the device reported source bit 9 (mask 512) and forced_recovery=true; after release it reported mask 0 while forced_recovery remained true. The target PnP node disappeared and returned, and the held/released full CDC snapshots preserved the same saved configuration and profiles. This supports proceeding to the separately reviewed IO4 mode procedure under its runtime identity/revision gates. It does not establish electrical health after the earlier short circuit, hardware Flash capacity, HID report-byte delivery, physical IO4 inputs, or game behavior. The first failed GP9 attempt remains valid separate evidence and was not replaced."
+}

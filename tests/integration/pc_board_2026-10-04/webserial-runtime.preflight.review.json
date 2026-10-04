@@ -1,0 +1,35 @@
+{
+  "reviewer": "Luna",
+  "kind": "static_hidden_webserial_and_runtime_preflight",
+  "verdict": "static_review_pass_with_known_timeout_recovery_gate",
+  "webserial": {
+    "isolation": "Hidden offscreen window, separate in-memory session/userData, blocks requests/navigation outside localhost:4174, denies window opens",
+    "electronApis": "Electron v44.5.1 session permission check/request handlers plus select-serial-port chooser callback; typings confirm serialNumber and portName fields",
+    "realSerialAPI": true,
+    "not_run": true,
+    "secureLocalhostRequired": true,
+    "target": "Unique COM29 plus exact serial 5054316560DD729C",
+    "risk": "180-second hard timeout calls app.exit without finally; summary warns independent CDC restoration is required if mutation_attempted. Must inspect that field and independently verify saved profile after any timeout.",
+    "recovery": "Captures original profile before edit, checks no set_profile during draft, writes mutation_attempted before apply, then finally reconnects if needed, checks idle/mask0, restores full profile4, saves, reads back and disconnects",
+    "noMock": true,
+    "dom": "Selectors/texts verified against web/index.html and web/src/app.js; second #scan-editor input maps to press_debounce_us; change event updates draft; connected/apply/save/disconnect state labels match production UI.",
+    "identity": "Requires exact serial, firmware 0.10.1, NORMAL_NKRO, profile4 and status physical_mask0/config_ready"
+  },
+  "runtime": {
+    "expected_sha256": "9b382492dcfee91f8f9e92c91f7972550a1b95d2299cac72279dab33a600d7db",
+    "release": "Official GitHub Electron v44.5.1 Windows x64 asset",
+    "expected_source": "node_modules/electron/checksums.json from Electron 44.5.1 npm package pinned by package-lock integrity",
+    "assessment": "Resume download is gated by official packaged SHA256 before extraction; do not execute or extract current partial archive.",
+    "extraction": "Only after full SHA match; destination must not already exist",
+    "partial_hash_validated": false,
+    "hardware_requests": 0,
+    "expected_download_bytes": 157998329,
+    "current_download_bytes": 129414230
+  },
+  "conditions": [
+    "Before running the hidden test, obtain a fresh complete CDC baseline and ensure no open COM handle/concurrent board process.",
+    "Do not describe the test as manual browser UI or game validation.",
+    "If summary says mutation_attempted and process ends abnormally, reconnect/read full profile, status, saved_revision and export over CDC before any further test.",
+    "Keep the post-short electrical damage limitation; successful read-only communication is not electrical clearance."
+  ]
+}

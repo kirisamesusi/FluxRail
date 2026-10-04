@@ -1,0 +1,31 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_gp9_normal_recovery_review",
+  "verdict": "GP9_forced_normal_recovery_pass",
+  "evidence": [
+    "gp9-normal-monitor/summary.json",
+    "gp9-normal-after/baseline.json",
+    "gp9-normal-after/baseline-cdc.jsonl",
+    "gp9-normal-after/original-schema2.bin",
+    "gp9-normal-after/original-profiles.json",
+    "gp9-normal.actual.json",
+    "check_gp9_recovery.py"
+  ],
+  "findings": {
+    "user_action": "USB removed; GP9 grounded during USB-only power-on; jumper removed after 3 seconds",
+    "port_closed": true,
+    "active_profile": 4,
+    "dirty": false,
+    "saved_revision": 5,
+    "writes": 0,
+    "flash_capacity_verified": false,
+    "forced_recovery": true,
+    "revision": 5,
+    "pnp": "Target USB serial node disconnected and returned; recorded absence window includes monitor polling and user sequence, not a precise startup latency",
+    "profiles": "Structurally equal",
+    "schema": "Byte-exact to power-cut-after baseline, 1387 bytes, CRC32 895336899",
+    "current_and_saved": "NORMAL_NKRO",
+    "physical_mask_after": 0
+  },
+  "scope": "Proves GP9 grounded-at-boot forced NORMAL selection on this board and unchanged persisted configuration after jumper removal. Does not prove IO4 cold-switch or game/input compatibility."
+}

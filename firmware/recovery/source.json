@@ -1,0 +1,38 @@
+{
+  "source": "https://github.com/raspberrypi/pico-sdk-prebuilts/releases/latest/download/nuke_universal.uf2",
+  "downloaded_local_date": "2026-10-04",
+  "local_file": "RP2040_Flash_Reset.uf2",
+  "original_filename": "nuke_universal.uf2",
+  "bytes": 114688,
+  "sha256": "f3c3b6a62d2d7e944f336bc2ec73393f00adfbb56b6fa7440ba7ee3d5ad5b49d",
+  "unaltered_upstream_binary": true,
+  "uf2_magic_and_block_sequence_valid": true,
+  "rp2040_family_present": true,
+  "families": {
+    "0xe48bff56": {
+      "blocks": 112,
+      "minAddress": 536870912,
+      "maxAddress": 536899584,
+      "payloadSizes": [
+        256
+      ],
+      "declaredBlocks": [
+        112
+      ]
+    },
+    "0xe48bff57": {
+      "blocks": 112,
+      "minAddress": 536870912,
+      "maxAddress": 536899584,
+      "payloadSizes": [
+        256
+      ],
+      "declaredBlocks": [
+        112
+      ]
+    }
+  },
+  "uploaded": false,
+  "hardware_tested": false,
+  "behavior": "Full external Flash erase; removes application, startup mode, profiles, and calibration. Reinstall formal FluxRail UF2 afterwards."
+}

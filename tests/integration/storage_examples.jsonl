@@ -1,0 +1,9 @@
+{"protocol_version":1,"id":1,"op":"hello","payload":{}}
+{"protocol_version":1,"id":2,"op":"get_device","payload":{}}
+{"protocol_version":1,"id":3,"op":"list_profiles","payload":{}}
+{"protocol_version":1,"id":4,"op":"get_profile","payload":{"profile_id":2}}
+{"protocol_version":1,"id":5,"op":"copy_profile","payload":{"expected_revision":1,"profile_id":2,"name":"CUSTOM"}}
+{"protocol_version":1,"id":6,"op":"set_active_profile","payload":{"expected_revision":2,"profile_id":5}}
+{"protocol_version":1,"id":7,"op":"save_config","payload":{"expected_revision":3}}
+{"protocol_version":1,"id":8,"op":"get_status","payload":{}}
+{"protocol_version":1,"id":9,"op":"export_config","payload":{"offset":0}}

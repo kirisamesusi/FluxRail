@@ -1,0 +1,393 @@
+{
+  "date_local": "2026-10-04T17:37:59.427564+08:00",
+  "scope": "0.10.1 same-board Windows enumeration, reversible RAM/protocol/session and bare-board driver/CDC load",
+  "firmware_version_readback": "0.10.1",
+  "serial": "5054316560DD729C",
+  "port": "COM29",
+  "new_firmware_compile": false,
+  "new_arm_simulation": false,
+  "uploaded": false,
+  "historical_software_report": "tests/integration/validation_bugfix_2026-10-04.json",
+  "source_and_local_uf2_unchanged": true,
+  "board_image_bytes_readback": false,
+  "windows_col02_code10_resolved_on_this_host": true,
+  "windows_hid_caps_and_local_parser_verified": true,
+  "actual_hid_motion_or_buttons_verified": false,
+  "hid_control_current_report_read": {
+    "attempted": true,
+    "passed": false,
+    "results": [
+      {
+        "path": "\\\\?\\hid#vid_239a&pid_cafe&mi_02#8&2eca9fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\\kbd",
+        "passed": false,
+        "win32_error": 1,
+        "buffer_is_device_report": false,
+        "failure_buffer_excluded_from_device_data": true
+      },
+      {
+        "path": "\\\\?\\hid#vid_239a&pid_cafe&mi_03&col01#8&1ab03641&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+        "passed": false,
+        "win32_error": 1,
+        "buffer_is_device_report": false,
+        "failure_buffer_excluded_from_device_data": true
+      },
+      {
+        "path": "\\\\?\\hid#vid_239a&pid_cafe&mi_03&col02#8&1ab03641&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+        "passed": false,
+        "win32_error": 1,
+        "buffer_is_device_report": false,
+        "failure_buffer_excluded_from_device_data": true
+      }
+    ],
+    "review": {
+      "reviewer": "gpt-6-luna",
+      "test_passed": false,
+      "continue_finalization": true,
+      "evaluation": "Luna确认三个目标集合HidD_GetInputReport均FALSE/GetLastError1；hex是预置失败缓冲，不是设备返回值。仅local parser的人工zero X/Y解析成功，既有PnP/caps通过不能覆盖控制状态读取失败。访问0句柄/API/Windows驱动/设备控制路径根因未定位，不推断固件HID已损坏。此额外失败应保留并在最终报告单独列项。"
+    },
+    "root_cause": "unresolved: access-zero handle/host API/driver/device control path not isolated"
+  },
+  "cdc_healthy_after_failed_hid_read": true,
+  "real_board_cdc_tested": true,
+  "ram_config_restored_except_revision": true,
+  "initial_revision": 1,
+  "final_revision": 56,
+  "flash_written": false,
+  "game_tested": false,
+  "browser_web_serial_ui_tested": false,
+  "physical_usb_unplug_tested": false,
+  "physical_peripherals_tested": false,
+  "physical_flash_capacity_verified": false,
+  "io4_personality_tested": false,
+  "hall_driver_mean_hz": {
+    "idle": {
+      "device_elapsed_us": 10057957,
+      "attempts_added": 10058,
+      "hall_hz": 1000.0042752220953,
+      "skipped_periods_added": 0,
+      "samples_added": 10058,
+      "maxima_before": {
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      },
+      "maxima_after": {
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      }
+    },
+    "paced": {
+      "device_elapsed_us": 300032571,
+      "attempts_added": 300033,
+      "hall_hz": 1000.0014298447618,
+      "skipped_periods_added": 0,
+      "samples_added": 300033,
+      "maxima_before": {
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      },
+      "maxima_after": {
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      }
+    },
+    "stress": {
+      "device_elapsed_us": 60063307,
+      "attempts_added": 60063,
+      "hall_hz": 999.9948887263233,
+      "skipped_periods_added": 0,
+      "samples_added": 60063,
+      "maxima_before": {
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      },
+      "maxima_after": {
+        "max_lateness_us": 1059,
+        "max_interval_us": 1822,
+        "max_span_us": 171,
+        "max_service_us": 196
+      }
+    }
+  },
+  "load": {
+    "hall_enabled": true,
+    "both_knobs_enabled": true,
+    "lighting_mode": "rainbow_wave",
+    "brightness_level": 25,
+    "physical_inputs_present": false
+  },
+  "paced_get_motion_host_response_gaps": {
+    "basis": "host completion timestamps between exact full start/end motion response matches in CDC log order, additionally filtered by revision/epoch/device elapsed time",
+    "start_cdc_line": 437,
+    "end_cdc_line": 6498,
+    "host_start": "2026-10-04T09:21:31.951Z",
+    "host_end": "2026-10-04T09:26:31.974Z",
+    "responses": 3002,
+    "min_ms": 16.0,
+    "p50_ms": 95.0,
+    "p95_ms": 122.0,
+    "max_ms": 128.0,
+    "not_a_sensor_or_usb_input_latency": true
+  },
+  "stages": [
+    {
+      "name": "阶段1复核通过：身份与备份一致",
+      "time": "2026-10-04T09:13:12.985Z",
+      "summary": "身份、四模板及完整schema2备份核对通过；RAM/协议/稳定性待测。",
+      "result": {
+        "version": "0.10.1",
+        "serial": "5054316560DD729C",
+        "revision": 1,
+        "length": 1387,
+        "crc": 1053904252
+      },
+      "next": "安全RAM参数与模板切换",
+      "interfaces": "hello/get_status/get_profile/export_config",
+      "limits": "外设缺失，不能证明物理键、传感器、灯色或游戏功能。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 1,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段1复核通过：身份与备份一致",
+        "continue": true,
+        "evaluation": "Luna增量复核工具门槛通过；9条只读CDC请求确认0.10.1/同序号/revision1，四模板及1387字节schema2/CRC1053904252与备份一致，可进入RAM阶段。平均轮询速率门槛不证明匀速，实板Flash镜像/外设/游戏不在本阶段结论内。"
+      }
+    },
+    {
+      "name": "阶段2通过：RAM应用与恢复",
+      "time": "2026-10-04T09:16:20.504Z",
+      "summary": "30组参数、20次模板切换、IO4映射RAM读回完成并还原；协议与稳定性待测。",
+      "result": {
+        "groups": 30,
+        "switches": 20,
+        "restored": true,
+        "revision": 54,
+        "apply_roundtrip_ms": {
+          "min": 83.20889999999781,
+          "max": 115.40260000000126
+        }
+      },
+      "next": "错误请求与CRC损坏导入",
+      "interfaces": "set_profile/set_active_profile/get_config/get_motion/set_io4_bindings",
+      "limits": "无校准Hall持续valid=false/active=false/output0；无外设无法验证实际映射与颜色或运行时Y保持。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 2,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段2通过：RAM应用与恢复",
+        "continue": true,
+        "evaluation": "Luna查证227条CDC成功；set_profile31/set_active20/set_io4_bindings2，30组参数及20切换读回/恢复符合预期。final-schema2.bin与原始仅revision字段1→54变化，meta/模板恢复，无save/reboot。通过范围是CDC RAM配置与IO4映射读回，物理输入/灯/外设/游戏/掉电未验证。"
+      }
+    },
+    {
+      "name": "阶段3通过：协议边界与错误恢复",
+      "time": "2026-10-04T09:18:22.124Z",
+      "summary": "非法参数/revision/JSON/超长行/损坏导入均拒绝；分片/连续行正常，RAM字节未改变。",
+      "result": {
+        "negative_cases": 12,
+        "fragment_bytes": 3,
+        "burst_replies": 3,
+        "revision": 54
+      },
+      "next": "20次端口重开和20次DTR切换",
+      "interfaces": "CDC JSON边界、import/export",
+      "limits": "外设缺失，不能证明物理键、传感器、灯色或游戏功能。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 3,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段3通过：协议边界与错误恢复",
+        "continue": true,
+        "evaluation": "Luna核对12类negative cases及错误码/revision不变/健康恢复，包括4200字节超长行、重复字段、协议版本和损坏schema2 commit返回INVALID_TRANSFER；前后完整snapshot一致。3字节分片及连续三应答ID匹配/ok，当前262条日志，无save/reboot。可进入会话恢复，物理外设/Flash掉电/游戏仍未验。"
+      }
+    },
+    {
+      "name": "阶段4通过：CDC会话恢复",
+      "time": "2026-10-04T09:19:45.260Z",
+      "summary": "20次端口重开与20次DTR切换含残留半行，握手恢复且配置不变。",
+      "result": {
+        "reopen": 20,
+        "dtr": 20,
+        "partial_line_discard": true,
+        "revision": 54
+      },
+      "next": "5分钟10Hz轮询和1分钟无间隔通信压力",
+      "interfaces": "SerialPort.Close/Open、DtrEnable、resetSession",
+      "limits": "CDC会话重连不等于物理USB拔插/重新枚举或断电恢复。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 4,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段4通过：CDC会话恢复",
+        "continue": true,
+        "evaluation": "Luna查证20次重开+20次DTR主机控制，均恢复同序号hello/健康状态，残留半行丢弃，revision54及前后schema2快照不变。日志错误来自stage3预期拒绝，不是会话失败。仅CDC逻辑恢复，不等于物理USB拔插/冷枚举/断电/重启；可进入按设备计数计算的负载阶段。"
+      }
+    },
+    {
+      "name": "阶段5通过：持续通信稳定性",
+      "time": "2026-10-04T09:27:32.048Z",
+      "summary": "5分钟目标10Hz轮询及1分钟无间隔通信完成，最终恢复待复核。",
+      "result": {
+        "paced_seconds": 300.00735219999996,
+        "poll_cycles": 3000,
+        "paced_poll_hz": 9.999754932672614,
+        "paced_poll_test_tolerance_hz": [
+          9.5,
+          10.5
+        ],
+        "duplicate_snapshots": 1,
+        "stress_seconds": 60.07395509999991,
+        "stress_status_requests": 6263,
+        "host_latency_ms": {
+          "count": 13306,
+          "p50": 6.218800000031479,
+          "p95": 21.824900000006892,
+          "p99": 30.937599999946542,
+          "max": 57.5905999999959
+        },
+        "core1_max_service_us": 1248,
+        "hall_samples_added": 360045,
+        "queue_full_added": 0,
+        "telemetry_dropped_added": 0,
+        "adc_errors_added": 0,
+        "revision": 55,
+        "epoch": 55,
+        "hall_hz": {
+          "idle": 1000.0042752220953,
+          "paced": 1000.0014298447618,
+          "stress": 999.9948887263233
+        }
+      },
+      "next": "最终配置恢复核对并关闭串口",
+      "interfaces": "get_motion/get_status/hello/export_config",
+      "limits": "主机请求耗时含Windows桥接，不是按键/USB延迟。20Hz遥测不能证明500us扫描无丢采；最大诊断含历史/配置维护停顿，外设驱动负载不等于真实运动/键输入。Hall频率计算见hall-rate-report.json，不以通信通过代替1kHz阈值判定。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 5,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "阶段5通过：持续通信稳定性",
+        "continue": true,
+        "evaluation": "Luna对原始计数复算：idle1000.004/paced1000.001/stress999.995Hz，同revision/epoch，三个窗口skipped/ADC错误/队满/遥测丢弃增量0；累计skipped2及最大间隔1822us/迟到1059us是未增长历史峰。3000轮/300.007s平均9.99975Hz，60.074s/6263状态压力请求，1个重复快照。通过范围为裸板驱动平均约1kHz与CDC通信，不保证最坏时序/真实传感器或运动HID/游戏。当前restored=false且端口未关闭，可放行finally恢复，整轮收尾另审核。"
+      }
+    },
+    {
+      "name": "本轮CDC测试结束与恢复核对",
+      "time": "2026-10-04T09:31:02.136Z",
+      "summary": "授权CDC/RAM/协议/会话恢复/稳定性完成。",
+      "result": {
+        "restored": true,
+        "revision": 56,
+        "flash_written": false
+      },
+      "next": "网页协议客户端实板适配复验；外设到货后测真实输入。",
+      "interfaces": "get_profile/get_device/export_config；report.json、original/final-schema2.bin",
+      "limits": "逐模板/meta及二进制校验，只有revision字段允许增加；不含真实Web Serial端到端、HID物理输入、Flash/断电/IO4/游戏。缺MT6701时全零SSI帧valid=true待澄清。",
+      "review_status": "reviewed",
+      "review": {
+        "stage": 6,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:13:12.622Z",
+        "stage_name": "本轮CDC测试结束与恢复核对",
+        "continue": true,
+        "evaluation": "Luna审核13407条CDC及收尾：末尾set_profile恢复revision55→56，四模板/设备meta/状态/export成功；1387字节原final仅offset4的revision1→56，CRC3256476313，无save/reboot/bootloader。RAM恢复通过，可关闭串口；此刻closed标志未出，进程实际退出后父窗口验证exit0/port_close_verified，不能用finished作关闭证据。"
+      }
+    }
+  ],
+  "web_client": {
+    "kind": "real_board_with_host_adapter",
+    "browser_ui_tested": false,
+    "flash_written": false,
+    "started": "2026-10-04T09:32:45.231Z",
+    "result": {
+      "passed": true,
+      "version": "0.10.1",
+      "serial": "5054316560DD729C",
+      "revision": 56,
+      "queued_read_requests": 50,
+      "expected_device_error_recovered": true,
+      "receive_fragment_bytes": 7,
+      "faults": []
+    },
+    "finished": "2026-10-04T09:32:45.997Z"
+  },
+  "web_client_review": {
+    "reviewer": "gpt-6-luna",
+    "run_started": "2026-10-04T09:32:45.231Z",
+    "continue": true,
+    "evaluation": "Luna查证53请求/53响应：50排队只读请求、预热hello、预期INVALID_PROFILE及错误后的hello；revision56不变，client恢复、faults[]，无写请求。7字节接收分片为主机适配器，数据源真实开发板，生产SerialClient处理通过。不是真实浏览器Web Serial权限/UI或物理HID/游戏验收。"
+  },
+  "initial_tool_run_safely_stopped": true,
+  "tool_sha256": {
+    "tests/integration/prepare_board_baseline.ps1": "08b9967e73bcf74ba27a3dfdc0c432c560b5a5fc12f9de472a347a4f6925fd25",
+    "tests/integration/serial_bridge.ps1": "c00588db7852d9156cc643426b60d4ff3e0e6a89ad2fc560c9408f2ea3cb2ff7",
+    "tests/integration/bare_board_test.mjs": "593405442e91e04ca56e8e24caa1207f2551aa133131531c7f83af1d0094f71e",
+    "tests/integration/web_client_board_test.mjs": "c329004bf6324ef54841bdc1a104ffc3ea020c3311fe15557773d1a2b84ff9dd",
+    "tests/integration/windows_hid_probe.py": "3009ecccec2cf5d2a80a8bc303344f701a0bd68e46e4489fffca832add79fe34",
+    "tests/integration/finalize_board_0_10_1.py": "004eea91d549ec50f40b0b2edad6442848f4d21145eaa270b5693a2a71594487",
+    "tests/integration/BARE_BOARD_RUN.md": "6bfb024d727f13aa2174ee4e13a498d58d2303e0c92c30e3d34cef62239ee400"
+  },
+  "tool_hash_scope": "Current tool sources at freeze time. HID failure-buffer labeling was clarified after the optional failed read; that read was not repeated.",
+  "evidence_sha256": {
+    "tests/integration/hardware_0_10_1_2026-10-04/1.review.json": "86e1989bb737b70973b29e537e285d56499d5a1ba896d74854fd329d174f6824",
+    "tests/integration/hardware_0_10_1_2026-10-04/2.review.json": "fb5aaabc048929509b4c61ad89486c1e690e1f7e46d1fb16b755bf225663b003",
+    "tests/integration/hardware_0_10_1_2026-10-04/automated-cdc.jsonl": "75743663ab38aa9957fcd838afde84d7bb2c1a4c5f4745849eb6157f0f63d1ed",
+    "tests/integration/hardware_0_10_1_2026-10-04/baseline-cdc.jsonl": "783394e49352bc14ea454c192b6e5cce5777f3524d6701e9273d184fce8d4aff",
+    "tests/integration/hardware_0_10_1_2026-10-04/baseline.json": "b1674ad1302eb6becfc65721b8aa86f724324babcdae14292c9e712d8594d207",
+    "tests/integration/hardware_0_10_1_2026-10-04/environment.json": "0091d99ed95b233a03c3bc4199dcb8b41f968573b46301c5bd89c69d2ca7fe79",
+    "tests/integration/hardware_0_10_1_2026-10-04/final-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "tests/integration/hardware_0_10_1_2026-10-04/hid-current-report.review.json": "f87ecbaa787f78b46728af56842f62200621de76a4ff1eeeaf3bfa9445009453",
+    "tests/integration/hardware_0_10_1_2026-10-04/initial-readback.json": "ea2d547c3497fc4ae3f7930551711b6d6485bdc38cf96b4c741f2c842bcd81e7",
+    "tests/integration/hardware_0_10_1_2026-10-04/luna-initial-reviews.md": "370f77fdabee213b5552c7f2c294a7fffc936c46e069ac0604b6d8d79b06ae5f",
+    "tests/integration/hardware_0_10_1_2026-10-04/original-profiles.json": "914129ed6ef146ad08d031b2d3fb9b0bae963d2306cf48f8cf954025b2b639a4",
+    "tests/integration/hardware_0_10_1_2026-10-04/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "tests/integration/hardware_0_10_1_2026-10-04/post-hid-cdc.json": "946343c0927bb14d51cdce789bb1a75f3ecde5f1737c11fc111a413d3b21e92c",
+    "tests/integration/hardware_0_10_1_2026-10-04/report.json": "02a56ab95af11fb765b0ebc42f4205f82562ed6cdcac6d7f997e81c329ae0ad6",
+    "tests/integration/hardware_0_10_1_2026-10-04/software-artifact-check.json": "b03e3aaf6acf6379b4c27cc71c80898b8109714b020fb54110566e20fa341c7a",
+    "tests/integration/hardware_0_10_1_2026-10-04/windows-hid-current-report.json": "2edd793e27870fe42bf0d9ec7ff315ee7a88f3a312cba423736e152dc5ab5ca5",
+    "tests/integration/hardware_0_10_1_2026-10-04/windows-hid-probe-guarded.json": "3328189fdef52f4be05fc366f763cb5811c0fa788cc04fdbf4c75232aaf5ca46",
+    "tests/integration/hardware_0_10_1_2026-10-04/windows-hid-probe.json": "3328189fdef52f4be05fc366f763cb5811c0fa788cc04fdbf4c75232aaf5ca46",
+    "tests/integration/hardware_0_10_1_2026-10-04/windows-pnp.json": "051d679889db771bf38e64e8256ded4d7610c0b001b1ea709fcc89504601657d",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/1.review.json": "43ba580792a90c96f8bae5a6a5b74fecc7c18cb80196a3ac2127b15c0337b616",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/2.review.json": "466570c92dd00bdb4c5726e72ecec1c446b5e4985c65cbd5505635be383e50d5",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/3.review.json": "80006cd9fe7a81075a624b1de590f6d7b29d89f1b5ab0f5aca7a4fd59fcedadd",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/4.review.json": "5fb2a589fc44a19e8c73c9a36f95382dcd12927fb639a71661d3c0bf57326c5b",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/5.review.json": "d7c4c35d197240dc7d595be0a830c9e815faa213427e86c2f1e27e546e45a1a5",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/6.review.json": "77bbcd952b8a8ae09ecaaf87108d39a46ad3e29b75264b3f8a6c17d166863aa6",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/automated-cdc.jsonl": "0c009b6b3488332036a8d0e076774f9cb7dbcc593e80adb98234443eb9739d3e",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/baseline-cdc.jsonl": "40dd08ea15b671898b307107b6ecb91f2dc116c0bd38421481c13e69b068aff1",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/baseline.json": "4875bf60db97d3e8c9989f1ff600e3ad96ba7d862d6676b1bb413351b9dec097",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/final-schema2.bin": "660a9bfa2eb35ed33461560caca621f4e647b383ba5160fe82af55a102c1d214",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/hall-rate-report.json": "dbd42b35e99e43b64f050d220b17d3c4fdeffb79ca4b6c2e06f17feb8203c0f4",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/original-profiles.json": "914129ed6ef146ad08d031b2d3fb9b0bae963d2306cf48f8cf954025b2b639a4",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/report.json": "98cc8a0c40e1db9c6dd74ce89cb05f55b27a0de46cab342e15098e84ce7bbd9a",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/web-client-cdc.jsonl": "07b0d5b27522ae5a8900d26b3f0465f8cb0c9423ed0c8c519a98e514a00a3c70",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/web-client-report.json": "9e7ff2c78262afdc7b6c078fd16aa66d172f7096ce5ebceb5d5a0f5b4cfa17ec",
+    "tests/integration/hardware_0_10_1_2026-10-04/regression/web-client.review.json": "f093eb975bbdccf1862208559baedca97d07af29542ac408497993ba5f92b03e"
+  },
+  "limitations": [
+    "Only this Windows host and device instance; no broad Windows certification",
+    "No calibrated Hall position, real knob motion/PUSH, Y/button behavior, physical LEDs or games",
+    "SSI zero frame with valid CRC does not prove a connected MT6701",
+    "Poll rate is a full-window mean; host request latency is not hardware input/USB latency",
+    "Hall diagnostics are cumulative maxima and include earlier maintenance/configuration pauses",
+    "Enabling drivers without sensors does not create real motion HID bandwidth pressure",
+    "No Flash save/power-loss, IO4 switch/recovery or ROM upgrade test",
+    "Extra HID current-state API read returned Win32 error 1 on all three collections; initialized failure buffers are not device data",
+    "Same device version/serial is not a byte-for-byte board Flash/UF2 comparison"
+  ]
+}

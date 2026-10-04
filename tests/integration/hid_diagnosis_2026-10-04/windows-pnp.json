@@ -1,0 +1,93 @@
+[
+  {
+    "instance_id": "HID\\VID_239A&PID_CAFE&MI_03&COL02\\8&1AB03641&0&0001",
+    "class": "Mouse",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "mouhid",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.1",
+      "DEVPKEY_Device_Parent": "USB\\VID_239A&PID_CAFE&MI_03\\7&1e2fbd10&0&0003",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  },
+  {
+    "instance_id": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000",
+    "class": "Ports",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "usbser",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.3636",
+      "DEVPKEY_Device_Parent": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  },
+  {
+    "instance_id": "HID\\VID_239A&PID_CAFE&MI_02\\8&2ECA9FC&0&0000",
+    "class": "Keyboard",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "kbdhid",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.1",
+      "DEVPKEY_Device_Parent": "USB\\VID_239A&PID_CAFE&MI_02\\7&1e2fbd10&0&0002",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  },
+  {
+    "instance_id": "USB\\VID_239A&PID_CAFE&MI_02\\7&1E2FBD10&0&0002",
+    "class": "HIDClass",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "HidUsb",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.3636",
+      "DEVPKEY_Device_Parent": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  },
+  {
+    "instance_id": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+    "class": "USB",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "usbccgp",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.6456",
+      "DEVPKEY_Device_Parent": "USB\\VID_0BDA&PID_5411\\5&3a692ce1&0&9",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  },
+  {
+    "instance_id": "USB\\VID_239A&PID_CAFE&MI_03\\7&1E2FBD10&0&0003",
+    "class": "HIDClass",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "HidUsb",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.3636",
+      "DEVPKEY_Device_Parent": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  },
+  {
+    "instance_id": "HID\\VID_239A&PID_CAFE&MI_03&COL01\\8&1AB03641&0&0000",
+    "class": "Mouse",
+    "status": "OK",
+    "properties": {
+      "DEVPKEY_Device_Service": "mouhid",
+      "DEVPKEY_Device_ProblemCode": 0,
+      "DEVPKEY_Device_DriverVersion": "10.0.19041.1",
+      "DEVPKEY_Device_Parent": "USB\\VID_239A&PID_CAFE&MI_03\\7&1e2fbd10&0&0003",
+      "DEVPKEY_Device_LowerFilters": null,
+      "DEVPKEY_Device_UpperFilters": null
+    }
+  }
+]

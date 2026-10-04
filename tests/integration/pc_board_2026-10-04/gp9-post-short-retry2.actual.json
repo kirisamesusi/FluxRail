@@ -1,0 +1,56 @@
+{
+  "time": "2026-10-04T15:39:14.041067+00:00",
+  "kind": "post_incident_GP9_held_10s_boot_then_released",
+  "serial": "5054316560DD729C",
+  "user_confirmation": {
+    "source": "Trusted user reply",
+    "completed": true,
+    "jumper_removed": true,
+    "held_at_least_10_seconds": true,
+    "user_text": "已完成，保持了至少10秒，跳线已移除"
+  },
+  "monitor": {
+    "events": [
+      {
+        "present": true,
+        "time": "2026-10-04T15:36:46.1597762Z"
+      },
+      {
+        "present": false,
+        "time": "2026-10-04T15:37:15.2352354Z"
+      },
+      {
+        "present": true,
+        "time": "2026-10-04T15:37:59.2720959Z"
+      }
+    ],
+    "started": "2026-10-04T15:36:45.8187457Z",
+    "read_completed": true,
+    "device_writes": 0,
+    "pid": 252276,
+    "finished": "2026-10-04T15:37:59.9429644Z"
+  },
+  "physical_mask_held": 512,
+  "physical_mask_released": 0,
+  "held_forced_recovery": true,
+  "forced_recovery": true,
+  "mode": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "NORMAL_NKRO",
+    "saved_startup": "NORMAL_NKRO",
+    "forced_recovery": true,
+    "reboot_ready": false
+  },
+  "schema_byte_exact": true,
+  "profiles_equal": true,
+  "revision": 7,
+  "saved_revision": 7,
+  "dirty": false,
+  "crc32": 3710059708,
+  "device_writes": 0,
+  "serial_closed": true,
+  "electrical_health_verified": false,
+  "hardware_flash_capacity_verified": false,
+  "game": "not_run",
+  "passed": true
+}

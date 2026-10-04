@@ -1,0 +1,17 @@
+{
+  "kind": "real_board_with_host_adapter",
+  "browser_ui_tested": false,
+  "flash_written": false,
+  "started": "2026-10-04T09:32:45.231Z",
+  "result": {
+    "passed": true,
+    "version": "0.10.1",
+    "serial": "5054316560DD729C",
+    "revision": 56,
+    "queued_read_requests": 50,
+    "expected_device_error_recovered": true,
+    "receive_fragment_bytes": 7,
+    "faults": []
+  },
+  "finished": "2026-10-04T09:32:45.997Z"
+}

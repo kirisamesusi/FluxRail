@@ -1,0 +1,29 @@
+{
+  "reviewer": "Luna",
+  "assessment": "read_only_handle_preflight_passed",
+  "evidence": [
+    "io4-protocol-handles-preflight/result.json",
+    "io4-protocol-handles-preflight/watchdog.json",
+    "io4-protocol-handles-preflight/stdout.log",
+    "io4-protocol-handles-preflight/stderr.log",
+    "io4-protocol-handles-preflight/test_io4_protocol_actual_v2-executed.py"
+  ],
+  "verified": {
+    "python_architecture": "64-bit, as separately confirmed by parent",
+    "expected_serial": "5054316560DD729C",
+    "unique_collection_caps": "Usage Page 1 / Usage 4; input/output report lengths 64; feature length 0",
+    "control_handle": "GENERIC_READ|GENERIC_WRITE with serial recheck; one HidD_GetInputReport call succeeded",
+    "overlapped_handle": "GENERIC_READ|GENERIC_WRITE open and serial recheck succeeded",
+    "input_report_bytes": 64,
+    "report_id": 1,
+    "report_matches_default_state": true,
+    "configuration_writes": 0,
+    "flash_writes": 0,
+    "interrupt_read_count": 0,
+    "output_report_count": 0,
+    "handles_closed": true,
+    "tool_result_passed": true,
+    "watchdog_exit_code": null
+  },
+  "interpretation": "The --preflight-only tool completed successfully: both intended handles opened and were identity-checked, one real 64-byte control input snapshot was received, and the code path skipped all output commands and interrupt reads before closing its handles. The returned bytes match the IO4 default report shape previously decoded. This is a read-only tool/handle preflight, not a protocol-command or interrupt-stream test. The parent wrapper's cached process object did not provide an exit code; null is preserved and is not recast as exit 0."
+}

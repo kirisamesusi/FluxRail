@@ -1,0 +1,18 @@
+{
+  "reviewer": "gpt-6-luna",
+  "assessment": "通过本轮只读打开矩阵，可进行受限的下一步控制请求诊断。八个路径/权限组合中，四个access=0句柄均成功打开、序号与预期匹配、HID caps状态成功且句柄关闭；四个GENERIC_READ组合均在CreateFile阶段返回ERROR_ACCESS_DENIED(5)，没有调用任何控制请求。键盘规范\\kbd路径与去后缀路径都解析为同一序号/Usage 6/caps。由于本轮query=metadata且calls全部为空，本轮没有测试HidD_GetInputReport、DeviceIoControl或USB GET_REPORT是否发出/被拒；也不能据此归因固件故障。",
+  "evidence": {
+    "path": "tests/integration/hid_diagnosis_2026-10-04/open-matrix.json",
+    "attempts": 8,
+    "access_zero_opened_and_identity_caps_matched": 4,
+    "generic_read_open_denied_error5": 4,
+    "control_calls": 0,
+    "all_successful_handles_closed": true,
+    "serial": "5054316560DD729C",
+    "hid_usage_page": 1,
+    "keyboard_usage": 6,
+    "mouse_usage": 2
+  },
+  "continue": true,
+  "next_step": "最多对观察到的COL02、access=0句柄做一次NtDeviceIoControlFile(IOCTL_HID_GET_INPUT_REPORT 0x000B01A2)，保存NTSTATUS/IOSB状态并随后做只读CDC健康核对。该IOCTL宏的access bits为FILE_ANY_ACCESS，因此access=0本身不一定阻止该控制请求；但单次结果仍不能证明总线上实际发送了USB setup。若需进一步排除Python绑定问题，独立C# HidD_GetInputReport单次确认可选，不应先对所有集合重复GET。无可用被动USB捕获时保留根因未定位。"
+}

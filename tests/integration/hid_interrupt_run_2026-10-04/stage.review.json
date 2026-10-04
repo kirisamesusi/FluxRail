@@ -1,0 +1,22 @@
+{
+  "reviewer": "Luna",
+  "assessment": "The actual neutral transition round passed its configuration and recovery gates. It operated on the matching 0.10.1 / serial 5054316560DD729C device from revision 1, profile 4, physical_mask 0; only two set_active_profile requests occurred (4→1→4), reaching revision 3, with profile 4 restored and serial closed. The before/after schema2 exports are both 1387 bytes; all bytes except revision offsets 4–7 match, and original-profiles.json is byte-identical. No save, Flash, or reboot request is present. ETW captured 5183 events with zero reported loss under PartialDataBusTrace on the three USB3 stack providers; target UCX transfer summaries show four successful endpoint-0x83 completions of length 29 and four successful endpoint-0x84 completions of length 6. This verifies neutral-sized interrupt transport at the host stack (transport_verified=true), but report bytes remain unverified (report_bytes_verified=false): the complete trace has no target payload-byte event. Do not infer an all-zero report from transfer lengths. This is not a physical key/motion, GET_REPORT, Hall, XY, or game test.",
+  "evidence": {
+    "launcher": "admin=true; PID 245804; exit 0; capture script SHA recorded in completed.json",
+    "device_baseline": "firmware 0.10.1; serial 5054316560DD729C; revision 1; active profile 4; physical_mask 0; valid_slots 0; Hall enabled profile1=false, profile2=true, profile3=false, profile4=false",
+    "actions": "action-attempts.jsonl / action-cdc.jsonl show only set_active_profile profile_id 1 at expected_revision 1 and profile_id 4 at expected_revision 2; both replies ok and applied; final revision 3 and active profile 4",
+    "restore": "action-summary.restored=true; error=null; serial_closed=true; final health idle and physical_mask=0",
+    "configuration": "before/after schema2 both length 1387; revision 1→3; every other byte identical; original-profiles.json identical; CRC differs consistently with revision update",
+    "ETW": "usb.etl 1,769,472 bytes; 5183 events; summary reports 0 events lost; XHCI/UCX/HUB3 enabled level 5 KeywordsAny 0x8081; session query showed all providers; stop exit 0; tracerpt -lr completed",
+    "HID_transfer_summary": "Target endpoint rundown maps pipe handles to interrupt-IN endpoints 0x83 (29 bytes) and 0x84 (6 bytes). UCX has 4 successful completion summaries per endpoint, each with matching requested transfer length; the UCX summaries inspected do not contain report payload bytes.",
+    "offline_frozen_analysis": "interrupt-analysis.json: 8 successful HID endpoint completions / 14 requests; payload_verified=false; configuration diff only revision offset 4; CRC independently computed."
+  },
+  "limitations": [
+    "The complete trace contains no target-correlated payload-byte event; report bytes remain unverified. No additional full-data capture or driver installation was performed.",
+    "PartialDataBusTrace is host-wide and may contain limited data from unrelated USB devices; this round's short capture was not device-filtered.",
+    "Only the neutral profile-resynchronization state was exercised. No physical key press, relative mouse movement, Hall sensing, actual GET_REPORT, absolute XY, host UI, or game behavior was tested.",
+    "Firmware compilation, simulation, and upload were not part of this round."
+  ],
+  "transport_verified": true,
+  "report_bytes_verified": false
+}

@@ -1,0 +1,30 @@
+{
+  "reviewer": "Luna",
+  "assessment": "首轮只读基线通过身份和配置快照核验。CDC hello显示设备序号5054316560DD729C、固件版本0.10.1、NORMAL_NKRO、revision/applied_revision均为1；status为config_ready、maintenance idle、未apply、valid_slots=0。get_device列出4个profiles，active_profile=4，schema2导出长度1387、CRC32 1053904252，calibration_valid=false。该校准状态是基线读值，不代表本轮校准测试。基线只覆盖CDC只读请求和导出状态，不代表实板HID当前报告、物理输入、PnP或游戏行为测试。",
+  "evidence": {
+    "baseline": "tests/integration/hid_diagnosis_2026-10-04/before/baseline.json",
+    "cdc_log": "tests/integration/hid_diagnosis_2026-10-04/before/baseline-cdc.jsonl",
+    "requests": 15,
+    "serial": "5054316560DD729C",
+    "firmware_version": "0.10.1",
+    "usb_mode": "NORMAL_NKRO",
+    "revision": 1,
+    "applied_revision": 1,
+    "config_ready": true,
+    "applying": false,
+    "apply_failed": false,
+    "maintenance": "idle",
+    "valid_slots": 0,
+    "profile_count": 4,
+    "active_profile": 4,
+    "calibration_valid": false,
+    "schema2": {
+      "path": "tests/integration/hid_diagnosis_2026-10-04/before/original-schema2.bin",
+      "length": 1387,
+      "crc32": 1053904252
+    },
+    "profiles": "tests/integration/hid_diagnosis_2026-10-04/before/original-profiles.json"
+  },
+  "continue": true,
+  "next_step": "使用该只读基线与同一序号、版本及revision核验后续诊断快照；不把CDC握手或schema导出当成HID输入测试。"
+}

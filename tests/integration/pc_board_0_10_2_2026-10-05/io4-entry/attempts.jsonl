@@ -1,0 +1,11 @@
+{"id":60001,"payload":{},"protocol_version":1,"op":"hello"}
+{"id":60002,"payload":{},"protocol_version":1,"op":"get_status"}
+{"id":60003,"payload":{},"protocol_version":1,"op":"get_usb_mode"}
+{"id":60004,"payload":{},"protocol_version":1,"op":"get_device"}
+{"id":60005,"payload":{"mode":"IO4","expected_revision":9},"protocol_version":1,"op":"set_startup_usb_mode"}
+{"id":60006,"payload":{},"protocol_version":1,"op":"get_status"}
+{"id":60007,"payload":{},"protocol_version":1,"op":"get_usb_mode"}
+{"id":60008,"payload":{"expected_revision":10},"protocol_version":1,"op":"save_config"}
+{"id":60009,"payload":{},"protocol_version":1,"op":"get_status"}
+{"id":60010,"payload":{},"protocol_version":1,"op":"get_usb_mode"}
+{"id":60011,"payload":{"target":"IO4","expected_revision":10},"protocol_version":1,"op":"reboot_to_saved_mode"}

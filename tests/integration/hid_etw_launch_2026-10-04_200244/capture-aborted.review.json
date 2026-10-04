@@ -1,0 +1,29 @@
+{
+  "reviewer": "Luna",
+  "assessment": "管理员包装器成功启动（PID 251632、administrator=true），但本次没有开始USB ETW采集。capture脚本在首次Logman调用时因PowerShell函数`Logman`内部的`& logman`再次解析到同名函数而递归，触发CallDepthOverflow；capture-commands.json为空，目录无usb.etl、查询后CDC或C#查询证据。此前CDC基线15条只读请求成功，序号/版本/revision为5054316560DD729C/0.10.1/1，schema2为1387字节CRC1053904252；PresentOnly HID metadata probe只枚举并解析了同序号3个集合，没有HidD控制请求字段。复核当前`logman query -ets`没有活动数据收集器，符合会话未创建的事实。此轮是主机脚本错误中止，不是ETW捕获失败、HID再次失败或设备测试通过。",
+  "evidence": {
+    "wrapper_result": "tests/integration/hid_etw_launch_2026-10-04_200244/completed.json",
+    "pid": 251632,
+    "administrator": true,
+    "exit_code": 1,
+    "failure": "CallDepthOverflow in capture_hid_etw_v2.ps1 while invoking first Logman function",
+    "capture_directory": "tests/integration/hid_etw_run_2026-10-04_200244",
+    "before_cdc_lines": 15,
+    "before_revision": 1,
+    "before_serial_version": "5054316560DD729C / 0.10.1",
+    "before_schema2_length": 1387,
+    "before_schema2_crc32": 1053904252,
+    "before_schema2_sha256": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "before_profiles_sha256": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_metadata_paths": 3,
+    "all_hid_paths_same_serial": true,
+    "hidd_control_requests": 0,
+    "capture_commands_file_length": 0,
+    "usb_etl_exists": false,
+    "post_query_cdc_exists": false,
+    "csharp_query_exists": false,
+    "active_logman_collectors_after_abort": 0
+  },
+  "continue": true,
+  "next_step": "可用新输出目录重试修正后的V2。将辅助函数更名为InvokeUsbTraceCommand，并从Get-Command logman.exe -CommandType Application显式取得真正的可执行文件路径后调用；在无设备操作的metadata-only预检中先确认查询函数解析到该Application。保留原中止目录不覆盖。重试后先审wrapper的admin/exit、provider query、stop exit、trace loss和ETL正对照，再分析HID请求。"
+}

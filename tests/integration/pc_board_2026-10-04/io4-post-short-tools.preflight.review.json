@@ -1,0 +1,18 @@
+{
+  "reviewer": "Luna",
+  "assessment": "blocked_until_retry_gate_is_explicitly_wired",
+  "scope": [
+    "tests/integration/switch_usb_mode_once_v2.ps1",
+    "tests/integration/check_gp9_post_short.py",
+    "tests/integration/watch_and_read_gp9.ps1",
+    "tests/integration/windows_io4_report_probe.py"
+  ],
+  "findings": {
+    "switch_script_write_gate": "The mode script checks all prerequisites before any mutation. Target IO4 requires a passing post-short GP9 result, exact device serial, forced recovery, saved-clean matching revisions, current NORMAL_NKRO mode, expected startup state, active profile 4, health/neutral status, and valid_slots=3. The save and reboot are explicit, sequenced requests; the port is closed in finally. Target NORMAL_NKRO requires a fresh forced-recovery CDC session and saved IO4 before it can change startup mode back.",
+    "retry_path_blocker": "The script still reads the first failed artifact at pc_board_2026-10-04/gp9-post-short.actual.json. The checker also hardcodes the first attempt's gp9-post-short-after, monitor, confirmation and output filename. Since that artifact correctly records passed=false and must be preserved, a second GP9 diagnostic saved as retry2.actual.json cannot currently authorize IO4: this gate will keep reading the failed first attempt. Before any IO4 run, wire a new explicit gate path (or a distinct retry checker/output path) to the independently reviewed retry2 artifact without replacing the original. The fresh gate should preserve exact target serial/revision, PnP disconnect/reconnect, forced_recovery=true, mask=0, clean saved state, baseline byte/profile identity and user confirmation.",
+    "gp9_monitor": "watch_and_read_gp9.ps1 observes only the exact USB VID/PID/serial parent PnP instance, waits for disappearance then return, delays 350ms, and invokes the read-only baseline collector. Its monitor status alone is not recovery proof; the collected hello/mode snapshot must establish forced_recovery=true. The script stores monitor.json and held-read under a new output directory and performs no protocol writes.",
+    "report_probe": "windows_io4_report_probe.py performs metadata/caps and serial checks with desired access 0, and the optional mode makes one HidD_GetInputReport call only after requiring exactly one matching serial collection and expected Usage Page/Usage/report length. A failed call is a failed read with hex=null; it must not be treated as device bytes. This is a control GET, not an interrupt input stream or evidence of real button/axis input.",
+    "electrical_boundary": "A passing functional GP9 recovery gate would establish only the observed boot-recovery and CDC/config behavior. It is not electrical clearance after the short circuit and does not establish flash capacity, physical IO4 input behavior, game behavior, or general device health."
+  },
+  "recommendation": "Do not execute switch_usb_mode_once_v2.ps1 for IO4 until its gate is pointed to a new, separately named and reviewed retry result. Preserve the first failed evidence and review unchanged. Current second GP9 attempt is not a mode switch."
+}

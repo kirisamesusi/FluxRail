@@ -1,0 +1,106 @@
+{
+  "date_local": "2026-10-03",
+  "simulation": {
+    "validation": "ARM instruction simulation of original module C++",
+    "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+    "core": "Arduino-Pico 6.1.0",
+    "unicorn": "2.1.3",
+    "hardware_tested": false,
+    "game_tested": false,
+    "results": [
+      {
+        "test": "test_bindings_ascii",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 195
+      },
+      {
+        "test": "test_twelve_nkro",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 54
+      },
+      {
+        "test": "test_duplicate_busy_overlap",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 95
+      },
+      {
+        "test": "test_modifiers_and_mouse",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 25
+      },
+      {
+        "test": "test_backpressure_revision_recovery",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 83
+      },
+      {
+        "test": "test_retrigger_time_wrap",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 7
+      },
+      {
+        "test": "test_scanner_bounce_overflow_wrap",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 11
+      },
+      {
+        "test": "test_lighting_modes_bounds",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 44849
+      },
+      {
+        "test": "test_final_output_cap_and_order",
+        "passed": true,
+        "failed_cpp_line": null,
+        "checks": 24
+      }
+    ]
+  },
+  "arduino": {
+    "date_local": "2026-10-03",
+    "validation": "isolated Arduino module1 compile and link smoke test",
+    "fqbn": "rp2040:rp2040:generic:flash=4194304_0,boot2=boot2_w25q64jv_4_padded_checksum,freq=125,usbstack=tinyusb",
+    "core": "Arduino-Pico 6.1.0",
+    "tinyusb": "3.7.7",
+    "exit_code": 0,
+    "source_sha256": {
+      "firmware/FluxRail/src/keyboard/ActionMapper.cpp": "76a7bf4ea15ea14bc880fbfd76bfc0d72f76148256c5e225f15e5c3e25b6c602",
+      "firmware/FluxRail/src/keyboard/ActionMapper.h": "3d94eab1b181b35893166898bd6930d599cc1682ec10bfdd7076c737433b1ae5",
+      "firmware/FluxRail/src/keyboard/KeyboardTypes.cpp": "12167d733746e83245e04ed9a447771d478f1254442f0f2c5fd4563318520f4b",
+      "firmware/FluxRail/src/keyboard/KeyboardTypes.h": "4e2580944f80c533a0476b5f908329cdbaab70d70e7a37c98e4b881aa62ce09a",
+      "firmware/FluxRail/src/keyboard/KeyScanner.cpp": "cd68986c04d627cccaef0f72db0c64bb17c8ea8b4cadcfc1cf42ad12e023c5cf",
+      "firmware/FluxRail/src/keyboard/KeyScanner.h": "49d6218540c19c49759a694b7d4917db9abe535241ab22d6d24169efe80b39a6",
+      "firmware/FluxRail/src/keyboard/KeyScannerRp2040.cpp": "1adc409a60ef319441b358b6b8834d56150c73f36420e1b70bf75251792e1647",
+      "firmware/FluxRail/src/keyboard/KeyScannerRp2040.h": "524543ac23b2db840a62627133cd9d6700059be5de68fad5d2d88f6c6dcfbb85",
+      "firmware/FluxRail/src/lighting/KeyLighting.cpp": "95816e5d18b638537d9d78562c11d784fb82e47e6e4ed7f7616d89ac2551d811",
+      "firmware/FluxRail/src/lighting/KeyLighting.h": "2dfea3357d81d446cc81f51e806d39e358af8c2ae5328d52c871e8515cd33be0",
+      "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.cpp": "4e237375e0f71fdbc1e1d6fae87fc51dbe9a7d149f213db4ca7aa0c423a5bad3",
+      "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.h": "c15538e979a6338677b5ef597cb891bfff77df5b9a39f2472da75cc4a925b86b"
+    },
+    "uploaded": false,
+    "production_application": false,
+    "log": "arduino_compile.log"
+  },
+  "review": {
+    "fixed": [
+      "US ASCII转义与十六进制字面量词法",
+      "PIO程序版本字段与初始化依赖",
+      "重复键UP阶段保持旧修饰状态"
+    ],
+    "status": "完成本轮代码自审和对应回归；公共后端/实板/游戏未验证"
+  },
+  "scope": [
+    "firmware/FluxRail/src/keyboard",
+    "firmware/FluxRail/src/lighting",
+    "tests/module1",
+    "docs/progress/模块1.md"
+  ]
+}

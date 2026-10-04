@@ -1,0 +1,228 @@
+{
+  "started": "2026-10-04T15:30:09.674Z",
+  "kind": "offscreen_chromium_real_webserial",
+  "desktop_control": false,
+  "versions": {
+    "node": "24.21.0",
+    "acorn": "8.18.0",
+    "ada": "4.0.0",
+    "amaro": "1.1.11",
+    "ares": "1.34.8",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.2",
+    "llhttp": "9.4.3",
+    "merve": "1.2.2",
+    "modules": "149",
+    "napi": "10",
+    "nbytes": "0.1.4",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.70.0",
+    "nghttp3": "",
+    "ngtcp2": "",
+    "openssl": "0.0.0",
+    "simdjson": "4.6.7",
+    "simdutf": "7.7.0",
+    "sqlite": "3.53.4",
+    "tz": "2025c",
+    "undici": "7.29.1",
+    "unicode": "17.0",
+    "uv": "1.52.1",
+    "uvwasi": "0.0.23",
+    "v8": "15.2.124.28-electron.0",
+    "zlib": "1.3.2.1-motley",
+    "zstd": "1.6.0",
+    "electron": "44.5.1",
+    "chrome": "152.0.7977.130"
+  },
+  "steps": [
+    {
+      "name": "connected",
+      "time": "2026-10-04T15:30:10.291Z",
+      "connection": "已连接并完成读回",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision5",
+      "notice": "已完成能力握手和配置读回。编辑只形成网页草稿。",
+      "draft": "网页与已读模板一致",
+      "saved": "设备快照已保存",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    },
+    {
+      "name": "draft-only",
+      "time": "2026-10-04T15:30:10.344Z",
+      "connection": "已连接并完成读回",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision5",
+      "notice": "已完成能力握手和配置读回。编辑只形成网页草稿。",
+      "draft": "网页草稿未应用",
+      "saved": "设备快照已保存",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    },
+    {
+      "name": "applied",
+      "time": "2026-10-04T15:30:10.494Z",
+      "connection": "已连接并完成读回",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision6",
+      "notice": "设置已应用并读回。当前配置仅存于设备 RAM；需要掉电保留时，请点击“保存到设备”。",
+      "draft": "网页与已读模板一致",
+      "saved": "设备设置尚未保存",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    },
+    {
+      "name": "saved",
+      "time": "2026-10-04T15:30:10.610Z",
+      "connection": "已连接并完成读回",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision6",
+      "notice": "设备已完成保存，保存状态已读回。",
+      "draft": "网页与已读模板一致",
+      "saved": "设备快照已保存",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    },
+    {
+      "name": "disconnected",
+      "time": "2026-10-04T15:30:10.725Z",
+      "connection": "未连接",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision6",
+      "notice": "已断开；设备RAM变化未自动保存，重连会重新读回。",
+      "draft": "网页与已读模板一致",
+      "saved": "已断开，保存结果以重连读回为准",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    },
+    {
+      "name": "reconnected",
+      "time": "2026-10-04T15:30:10.857Z",
+      "connection": "已连接并完成读回",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision6",
+      "notice": "已完成能力握手和配置读回。编辑只形成网页草稿。",
+      "draft": "网页与已读模板一致",
+      "saved": "设备快照已保存",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    },
+    {
+      "name": "final",
+      "time": "2026-10-04T15:30:11.127Z",
+      "connection": "未连接",
+      "identity": "产品 / 板型FluxRail / FluxRail RP2040 4MiB固件 / 协议0.10.1 / CDC v1唯一序号5054316560DD729C实际USB身份NORMAL_NKRO已保存启动身份NORMAL_NKRO活动模板4读取revision6",
+      "notice": "已断开；设备RAM变化未自动保存，重连会重新读回。",
+      "draft": "设备版本已变化：必须读回",
+      "saved": "已断开，保存结果以重连读回为准",
+      "visible": "visible",
+      "requestPortErrors": [],
+      "serialOpenErrors": [],
+      "portType": "SerialPort",
+      "simulated": false
+    }
+  ],
+  "ports": [
+    {
+      "portId": "CB35F5A7D5F9E56F16955B14A4AEAC9C",
+      "portName": "COM1",
+      "displayName": "通信端口",
+      "deviceInstanceId": "ACPI\\PNP0501\\0"
+    },
+    {
+      "portId": "D0A3D0D5AFFA71E9D60C422F1AC6D469",
+      "portName": "COM29",
+      "displayName": "TinyUSB Serial",
+      "vendorId": "9114",
+      "productId": "51966",
+      "deviceInstanceId": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000"
+    },
+    {
+      "portId": "CB35F5A7D5F9E56F16955B14A4AEAC9C",
+      "portName": "COM1",
+      "displayName": "通信端口",
+      "deviceInstanceId": "ACPI\\PNP0501\\0"
+    },
+    {
+      "portId": "D0A3D0D5AFFA71E9D60C422F1AC6D469",
+      "portName": "COM29",
+      "displayName": "TinyUSB Serial",
+      "vendorId": "9114",
+      "productId": "51966",
+      "deviceInstanceId": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000"
+    }
+  ],
+  "pnp_correlation": {
+    "port": "COM29",
+    "deviceInstanceId": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000",
+    "parent": "USB\\VID_239A&PID_CAFE\\5054316560DD729C",
+    "time": "2026-10-04T15:28:27.1967376Z"
+  },
+  "error": null,
+  "restored": true,
+  "permissions": [
+    {
+      "kind": "check",
+      "permission": "serial",
+      "requestingOrigin": "http://localhost:4174/",
+      "details": {
+        "isMainFrame": true,
+        "requestingUrl": "http://localhost:4174/",
+        "securityOrigin": "http://localhost:4174/"
+      },
+      "allowed": true
+    },
+    {
+      "kind": "device",
+      "details": {
+        "deviceType": "serial",
+        "origin": "http://localhost:4174",
+        "device": {
+          "device_instance_id": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000",
+          "name": "TinyUSB Serial"
+        }
+      },
+      "allowed": true
+    },
+    {
+      "kind": "check",
+      "permission": "serial",
+      "requestingOrigin": "http://localhost:4174/",
+      "details": {
+        "isMainFrame": true,
+        "requestingUrl": "http://localhost:4174/",
+        "securityOrigin": "http://localhost:4174/"
+      },
+      "allowed": true
+    },
+    {
+      "kind": "device",
+      "details": {
+        "deviceType": "serial",
+        "origin": "http://localhost:4174",
+        "device": {
+          "device_instance_id": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000",
+          "name": "TinyUSB Serial"
+        }
+      },
+      "allowed": true
+    }
+  ],
+  "mutation_attempted": true,
+  "reconnect_saved_readback": true,
+  "native_window_visible": false,
+  "finished": "2026-10-04T15:30:11.129Z"
+}

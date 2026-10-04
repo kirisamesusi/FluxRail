@@ -1,0 +1,492 @@
+{
+  "date_local": "2026-10-04T09:37:56.879259+08:00",
+  "scope": "Hall and core1 scheduling candidate; Windows absolute-X Code10 unresolved",
+  "hall_software_fixed": true,
+  "windows_code10_fixed": false,
+  "hardware_tested": false,
+  "game_tested": false,
+  "uploaded": false,
+  "usb_choice_pending": true,
+  "release_blocked_by_windows_compatibility": true,
+  "full_validation": {
+    "steps": [
+      {
+        "command": "tests/module1/run_tests.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_module1_run_tests.py.log"
+      },
+      {
+        "command": "tests/module2/run_tests.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_module2_run_tests.py.log"
+      },
+      {
+        "command": "tests/module3/run_tests.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_module3_run_tests.py.log"
+      },
+      {
+        "command": "tests/integration/run_tests.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_tests.py.log"
+      },
+      {
+        "command": "tests/integration/run_transport.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_transport.py.log"
+      },
+      {
+        "command": "tests/integration/run_protocol.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_protocol.py.log"
+      },
+      {
+        "command": "tests/integration/run_storage.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_storage.py.log"
+      },
+      {
+        "command": "tests/integration/run_app_storage.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_app_storage.py.log"
+      },
+      {
+        "command": "tests/integration/run_io4.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_io4.py.log"
+      },
+      {
+        "command": "tests/integration/run_motion.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_motion.py.log"
+      },
+      {
+        "command": "web_all",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/web_all.log"
+      },
+      {
+        "command": "tests/integration/compile_firmware.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_compile_firmware.py.log"
+      },
+      {
+        "command": "tests/integration/run_usb_descriptors.py",
+        "exit_code": 0,
+        "log": "tests/integration/build/full/tests_integration_run_usb_descriptors.py.log"
+      }
+    ],
+    "passed": true,
+    "status": "complete",
+    "hardware_tested": false,
+    "game_tested": false,
+    "uploaded": false,
+    "formal_build_included": true
+  },
+  "firmware": {
+    "date_local": "2026-10-04T09:34:42.494456+08:00",
+    "validation": "single firmware NORMAL_NKRO/IO4 compile/link only; no USB host or game verification",
+    "fqbn": "rp2040:rp2040:generic:flash=4194304_0,boot2=boot2_w25q64jv_4_padded_checksum,freq=125,usbstack=tinyusb",
+    "core": "Arduino-Pico 6.1.0",
+    "tinyusb": "3.7.7 project-owned startup adapter",
+    "exit_code": 0,
+    "source_sha256": {
+      "firmware/FluxRail/FluxRail.ino": "0375af76ea40e292a8682d4e50fa40ca85d53bfd96cb8ce27ce342af5e3e7490",
+      "firmware/FluxRail/src/app/Acquisition.cpp": "223ff402d8cfae1fa50a0cf965cac0c6d9f30dbdfaafa293d15a8253694ab368",
+      "firmware/FluxRail/src/app/Acquisition.h": "9590a6512de02400636a4690bfb304ded92d416f5021219c4041e84fdf8bb92f",
+      "firmware/FluxRail/src/app/App.cpp": "179586802250dc010dd1d6c7858ce3ac13acedb84477e19206981e00967dfd79",
+      "firmware/FluxRail/src/app/App.h": "7716b3e25fd83e4969652dedeb59b6bf25a0fb8bc7662a2e3c4340e4b0a3b409",
+      "firmware/FluxRail/src/app/ConfigCoordinator.cpp": "0beaf3278811292d34eeae6e36f3c19407475f4d85d1ea89e77ec4e1b930a166",
+      "firmware/FluxRail/src/app/ConfigCoordinator.h": "c5527d227722f2cc1d001432ce0bd88feaf6620c6b859fffab7d34d0957bb99e",
+      "firmware/FluxRail/src/app/MotionRouter.cpp": "80866fa50aa49a260f081708a320fae30a3a571ab56bd1663e96b8cb4f9a6ce3",
+      "firmware/FluxRail/src/app/MotionRouter.h": "3881e7c23806d455fcb07163aa96897eb050bb787c0e54a8d2ab91e7b80e6753",
+      "firmware/FluxRail/src/board/BoardConfig.h": "da06a1f895a948fa38436226f95a343ae3934565c31b617669e9c053850a91c2",
+      "firmware/FluxRail/src/common/ConfigTypes.h": "1bb104188fb36fc0dbfcea3db2a79c54af6af9d31d46f2c8b2474912d421a811",
+      "firmware/FluxRail/src/common/DeviceConfig.h": "c50e8999d679d8c871209105ffec861ee00820d73857d3b316d9dd6c1fb3f9fb",
+      "firmware/FluxRail/src/common/FirmwareInfo.h": "2141bfb50d6d4df66a57a02aacc5cea1a91fb2fbe24226023a3b1010cc986d28",
+      "firmware/FluxRail/src/common/InputTypes.h": "244a3d3fc727e56ba83549976a0169d56a2007052bd1500be365151dc19657a8",
+      "firmware/FluxRail/src/common/Io4Types.h": "2b4d8860dc0475724f795670b7c36415551677385848653309c686daf936e136",
+      "firmware/FluxRail/src/common/MotionTypes.h": "cd91ff22424b27c9a4fa02990119b7e402e04ff7b795832820f05b37e13e4562",
+      "firmware/FluxRail/src/config/ConfigStore.cpp": "476163d47b967c1de1ab7e38d74ab6dc67240386e5273996c341078d2093a309",
+      "firmware/FluxRail/src/config/ConfigStore.h": "cb4f0ed0a016bd65f6f6bd07a139a751d4f903533043dbe28752b8e301829ef9",
+      "firmware/FluxRail/src/config/DeviceCodec.cpp": "90e55da2c633f072c7aaf9bd5d86c718878cecea7458b4e179fee844e4758da1",
+      "firmware/FluxRail/src/config/DeviceCodec.h": "70eec154f4ebd8901487c0198617c262871a39f571f71acd926eadfbac0bbfe9",
+      "firmware/FluxRail/src/config/FlashRp2040.cpp": "d96a4a6162e5f03db6597220cd8121c5b2ea10530b411f575095c39bb33c5423",
+      "firmware/FluxRail/src/config/FlashRp2040.h": "4463e632a4acad031a919ec8f4651b4d8da750e523ddbeb081604ad4cb431c5b",
+      "firmware/FluxRail/src/config/ProfileManager.cpp": "a7b7f61c4d7cfbebdceff920602dbd266480bda73233a7e52fbe0582972fb232",
+      "firmware/FluxRail/src/config/ProfileManager.h": "30bb41ce439cee74b5941a0f63ed7885622d50d06a602324a4b4ff126c58519f",
+      "firmware/FluxRail/src/hall/HallAdcRp2040.cpp": "1d6ae498806720f0b70e8593d9dec7ed7003711027d1858051d1f1ff758db54e",
+      "firmware/FluxRail/src/hall/HallAdcRp2040.h": "fbfd6afa09277c4029a8b2359bd5ada4dd6f5e849f49c12e7bacb980aabc6f96",
+      "firmware/FluxRail/src/hall/HallCalibration.cpp": "eb4fa6527b71a97676467042da82e3cbb9460ce8e83557c856955bca8a279511",
+      "firmware/FluxRail/src/hall/HallCalibration.h": "1cb8428e153bb1bb713c5437cedbf200c1de3986877e098898cb2d60b0e633f0",
+      "firmware/FluxRail/src/hall/HallModule.cpp": "84188dfb0a0ad6626f2e6b48b5fb5d9598c900a092b42d15eff74706b999e2c9",
+      "firmware/FluxRail/src/hall/HallModule.h": "9b300c9acde814269bd209cf54fccdd2f2f6f5a4ed8eee2e8fe52c6bdca71333",
+      "firmware/FluxRail/src/hall/HallPosition.cpp": "e0812ef6d16987e1a983a47690c36be0f4bf28ec0cf1d1229749ef8776c685b3",
+      "firmware/FluxRail/src/hall/HallPosition.h": "084ea88c91fb031005961fa9e004d491b8018122678c7f54200833c8b4939bd2",
+      "firmware/FluxRail/src/hall/HallSampler.cpp": "b36e03b2cdc68711f9da782db7cc96c3149dbd0ca8b3c1a70766cd66ae6d2090",
+      "firmware/FluxRail/src/hall/HallSampler.h": "a81a9f11bc4238402ca136da90bd244096ab9da3a01ff57c40a069ea102b4a2e",
+      "firmware/FluxRail/src/hall/HallTypes.cpp": "7a85accc84a18e068acce2e837b40cbce7c0919c38cf255759ebd7e5fdfbe2bc",
+      "firmware/FluxRail/src/hall/HallTypes.h": "74bcc31a175cf0627a56bbde25f0c9a0b54769092d0330bfadd9f62a59be0be1",
+      "firmware/FluxRail/src/keyboard/ActionMapper.cpp": "1418b7706b2000ed93eba4f970eefab25b808a2c15a857e928fb3d64c24934c0",
+      "firmware/FluxRail/src/keyboard/ActionMapper.h": "2fc0c143ff3076f17de9fe002254ec7f5147001cef8229b44f8dedacb0e59b1c",
+      "firmware/FluxRail/src/keyboard/KeyboardTypes.cpp": "3cff667ce1b1ad9b26a4961874e5c69aca5bedd25cec6fa4a085278e2db4a899",
+      "firmware/FluxRail/src/keyboard/KeyboardTypes.h": "ef1257693344a7b0c4278a82d5399b26e3108d31ae6bfd85ac4ad6c8672e3df5",
+      "firmware/FluxRail/src/keyboard/KeyScanner.cpp": "b8dedbb7dd92c8b99266100619014da716f709e3333a776589139f7bd7392580",
+      "firmware/FluxRail/src/keyboard/KeyScanner.h": "f114bbff6f4d8af97e0c5c4611e5b5ae1b414a9d3646154a46309823f2b8e87d",
+      "firmware/FluxRail/src/keyboard/KeyScannerRp2040.cpp": "41cacf342f1d0f6c394f3ee30f0eba8b2f056d76332cdda0c296277247bcb33b",
+      "firmware/FluxRail/src/keyboard/KeyScannerRp2040.h": "524543ac23b2db840a62627133cd9d6700059be5de68fad5d2d88f6c6dcfbb85",
+      "firmware/FluxRail/src/knobs/AppPushSink.h": "d9f293f0df5e42e88520807fe9654a25ac492d4c1b9c8d4796c4fe9bf5c1abc6",
+      "firmware/FluxRail/src/knobs/KnobModule.cpp": "9ca8302f4fbdbfdfd7198aa9f0ea7a758057a27be3b53df3755c3bc355bf05ed",
+      "firmware/FluxRail/src/knobs/KnobModule.h": "5659d3e3a1d901b4e865214b90f96a7d3ee77c19c72136e45d36e6309df8de23",
+      "firmware/FluxRail/src/knobs/KnobMotion.cpp": "e8bc842e098dd1de7e525661266da9d23f4d0c85092d70faf59b189588de53c8",
+      "firmware/FluxRail/src/knobs/KnobMotion.h": "a3659dce30beb2068ebe3c802064f49b8304562679c4519fff274b517c6aaf8c",
+      "firmware/FluxRail/src/knobs/KnobSampler.cpp": "a9416b505a30011b1f12819819e7a277f369cc23295b3d0bb016d581b1747cab",
+      "firmware/FluxRail/src/knobs/KnobSampler.h": "3bed34fbadd2c67c92cfae751650479c47eefd789fcc137ecc5bd0cc085d71d9",
+      "firmware/FluxRail/src/knobs/KnobTypes.cpp": "43213a7fddd2eb9fb193fa011589530f8af2892d3ad47ba397912b5f6b6f1c88",
+      "firmware/FluxRail/src/knobs/KnobTypes.h": "24b48050ec66b05d9220b9ccdabf5b5c51b82a0322387898197c44eccf7e9964",
+      "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.cpp": "96cc34e020f5c6c31b822a635feec193c55c45cc001a5639ffeb4357deaf38f6",
+      "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.h": "da59845e22564bb09309be60a10d94d1fa655e4e66f0b4d8bd445e580b2d0074",
+      "firmware/FluxRail/src/knobs/PushFilter.cpp": "d9bcc31ebebfa9d6acce050a09215c6889dbef83630a092c1a9a9bb5b803c0d8",
+      "firmware/FluxRail/src/knobs/PushFilter.h": "8c3ce8108f7cb32cec9b6b59ac95f0ddceb0e58d0557457ab2db455b101d83dd",
+      "firmware/FluxRail/src/lighting/KeyLighting.cpp": "6218cd02ca6bf25c18ff2afe3647c3bff72740a51e31045544c2834ddfdbcb0c",
+      "firmware/FluxRail/src/lighting/KeyLighting.h": "cd677bd1e0d075e0ff02b50be926fa0ce529456e908ee7d143a30194c7ab886a",
+      "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.cpp": "79945f4abef1917fad8018be030dad3cb5eb87773ef00d31bc0dc6d9d39653ea",
+      "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.h": "3cbd6f8c6fb273a7ade848dc5fb965119845bb22e3ea902c2695169726d557f1",
+      "firmware/FluxRail/src/protocol/ConfigProtocol.cpp": "ecc6c19a15d313cb26479b6956dfd9d73ad8c851ba59af7b1ab7cbda19ad169f",
+      "firmware/FluxRail/src/protocol/ConfigProtocol.h": "43dd8b130ea69fe315e5e226eaf123baeceeacc09240f2ab7002f729149f1d93",
+      "firmware/FluxRail/src/protocol/ConfigProtocolDevice.cpp": "69d283411a9cab223b57b671f05736222bdb16e9896763e4d8ab259e233a5781",
+      "firmware/FluxRail/src/protocol/Json.cpp": "4d18acaa17f25a6bff48538044f5fee5ded1148c83770b904676174277502cfa",
+      "firmware/FluxRail/src/protocol/Json.h": "07a76ea481fcc2f2ef8df2e60ac2d2f1ffc5df5a5a8fbb0f770dbdd9e03f3fbb",
+      "firmware/FluxRail/src/protocol/ProfileCodec.cpp": "60f392a6d27f37106dfb7a2d0e34743c7520bb0cef93c7c9fb32691598ff359e",
+      "firmware/FluxRail/src/protocol/ProfileCodec.h": "9f69a808e43893f5fb14259d6446a1b5833926196008ac24fb5c4ea3b0f55a8d",
+      "firmware/FluxRail/src/protocol/RuntimeCodec.cpp": "a6ca4ad2bcb2a2b1e943f9ac29a6f6e7cccea308eca035422f2e7e548b49f705",
+      "firmware/FluxRail/src/protocol/RuntimeCodec.h": "2d25e3a4bbb67a39e293fbb359b291f2c432dd5187ebf7fc376c99f5a1754cd7",
+      "firmware/FluxRail/src/realtime/ConfigMailbox.h": "0ad1b71100c9f9725aa3bc5fcd9783d8bfc508f66f0e248cd1fc2a85994388cc",
+      "firmware/FluxRail/src/realtime/InputWorker.cpp": "f21984842330f3b6d552eedea0f5820195ed77836ab825a23909835455b54c21",
+      "firmware/FluxRail/src/realtime/InputWorker.h": "e324a772f7f1976449d76c4c42ff390ab1bc2708b2559cdd2a6ed6bc43f724f0",
+      "firmware/FluxRail/src/realtime/SpscQueue.h": "d53170a665c34adf1283751120c794f084b6043f3ba4ea4e7b6b76819ed6bced",
+      "firmware/FluxRail/src/usb/CdcTransport.cpp": "5683ce0d58db9ad1219daa9a43c36d86cc685435549f648e7ebaff9361eaba0a",
+      "firmware/FluxRail/src/usb/CdcTransport.h": "6acbe7e7e0e8cb297adf896e9f09902738608488ad1ebf3b0c1e6b8b3ce666ec",
+      "firmware/FluxRail/src/usb/Io4Codec.cpp": "8441cf823548c1f4a4fde60b1a7f51f0587efbb2b99e881126eba3af6feda7f3",
+      "firmware/FluxRail/src/usb/Io4Codec.h": "17a55900ce227e73de8323acd931948871de124219234db6601345f08259a86d",
+      "firmware/FluxRail/src/usb/NormalHid.cpp": "6fb3279363d202d7bcb73f40da372a9625248237e036712b5e5f0b4097a15b64",
+      "firmware/FluxRail/src/usb/NormalHid.h": "9d5a988932d9eb5ea922cdcecbcb82508310d2d8306023910b0ff3e9e9eaadaa",
+      "firmware/FluxRail/src/usb/NormalHidCodec.cpp": "c3d1c144b35f17c3f2afd5e9b9cea24f3fa8748e01a5c621d7a9819692525dae",
+      "firmware/FluxRail/src/usb/NormalHidCodec.h": "7d27729c629d70d41e894f8736679f58d10ce9d7d661ef11a284245829af3ce8",
+      "firmware/FluxRail/src/usb/UsbBackend.cpp": "1acc2d88e4cf3d897a5f1f252af1beb64dadb71961ea4ae4b4e49b8c9ddeb902",
+      "firmware/FluxRail/src/usb/UsbBackend.h": "1fc445fecf8ac1680468bbf975ff37a662b4f025034dbc145e233a665b6f140e"
+    },
+    "dependency_adapter": {
+      "upstream": "Arduino-Pico6.1.0 bundled Adafruit TinyUSB3.7.7",
+      "source": "C:\\Users\\admin\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\6.1.0\\libraries\\Adafruit_TinyUSB_Arduino",
+      "generated": "C:\\Users\\admin\\Documents\\FluxRail\\dependencies\\generated\\Adafruit_TinyUSB_Arduino",
+      "modified": [
+        "src/arduino/Adafruit_USBD_Device.cpp",
+        "src/class/cdc/cdc_device.c",
+        "src/arduino/Adafruit_USBD_Device.h"
+      ],
+      "source_sha256": {
+        "src/arduino/Adafruit_USBD_Device.cpp": "bf5b5618c8bc6654b0d139349e7a9a68ba051a2146c0b84f0c52e3b7e3122c4c",
+        "src/class/cdc/cdc_device.c": "2ca9f63f5812e6fd58405e52b1bb282aa0752d1110fa577aca6442c1f67f4840",
+        "src/arduino/Adafruit_USBD_Device.h": "63b7cd70b8428e66057749251b5fe64381301a062b4fe6a378447bd51bdeb468"
+      },
+      "generated_sha256": {
+        "src/arduino/Adafruit_USBD_Device.cpp": "e6da7588d1e23614dc492e34dc8fe384b65ae667ff70d5f71ce4aefb31ee4063",
+        "src/class/cdc/cdc_device.c": "7311016a5745fe2c5531feebc8f5ade69c389aa9218a5ba4da8fb22b0810777e",
+        "src/arduino/Adafruit_USBD_Device.h": "163278b03a22c703690f67e46b0ca7bdfbb1a68d9c4e73464980fc4a0ee5bda7"
+      },
+      "system_library_modified": false
+    },
+    "uploaded": false,
+    "hardware_tested": false,
+    "game_tested": false,
+    "io4_implemented": true,
+    "flash_storage_implemented": true,
+    "log": "firmware_compile.log",
+    "cdc_protocol_version": 1,
+    "runtime_config_scope": "device_schema2",
+    "flash_slot_offsets": [
+      4173824,
+      4182016
+    ],
+    "flash_slot_bytes": 8192,
+    "source_drift_during_compile": [],
+    "copied_source_mismatch": [],
+    "firmware_metadata": {
+      "blocks": 663,
+      "payload_bytes": 169728,
+      "start": 268435456,
+      "end": 268605184,
+      "firmware": {
+        "id": "FLUXRAIL-FW-V1",
+        "board": "fluxrail-rp2040-4mib",
+        "version": "0.10.1-hall",
+        "format": 1
+      },
+      "verified": true
+    },
+    "strict_project_units": 38,
+    "source_link_audit_passed": true
+  },
+  "descriptors": {
+    "validation": "ARM execution of real formal-ELF descriptor construction and callbacks",
+    "elf_sha256": "9fb4fd19c05797fd222ab1459053d7b131facd5a81d361694746a61792e7ac68",
+    "unicorn": "2.1.3",
+    "results": [
+      {
+        "mode": "NORMAL_NKRO",
+        "device_hex": "12010002ef0201409a23feca000101020301",
+        "config_hex": "09027d00040100a032080b000202020000090400000102020004052400200105240100010424020605240600010705810308000109040100020a00000007050102400000070582024000000904020001030000000921110100012233000705830340000109040300010300000009211101000122510007058403400001",
+        "strings": {
+          "1": "FluxRail",
+          "2": "FluxRail NKRO prototype",
+          "3": "0123456789ABCDEF"
+        },
+        "interfaces": [
+          2,
+          10,
+          3,
+          3
+        ],
+        "endpoints": [
+          {
+            "address": 129,
+            "size": 8,
+            "interval": 1
+          },
+          {
+            "address": 1,
+            "size": 64,
+            "interval": 0
+          },
+          {
+            "address": 130,
+            "size": 64,
+            "interval": 0
+          },
+          {
+            "address": 131,
+            "size": 64,
+            "interval": 1
+          },
+          {
+            "address": 132,
+            "size": 64,
+            "interval": 1
+          }
+        ],
+        "startup_trace": [
+          "mode_before_default_cdc",
+          "first_port_connect"
+        ],
+        "report_hex": "05010902a10185010901a1000509190129031500250175019503810275059501810305010930093116008026ff7f751095028106c0c005010902a10185020901a1000930150026ff7f751095018102c0c0",
+        "passed": true
+      },
+      {
+        "mode": "IO4",
+        "device_hex": "1201000200000040a30c2100000101020301",
+        "config_hex": "090229000101008032090400000203000004092111010001226f000705810340000107050103400001",
+        "strings": {
+          "1": "SEGA",
+          "2": "I/O CONTROL BD;15257;01;90;1831;6679A;00;GOUT=14_ADIN=8,E_ROTIN=4_COININ=2_SWIN=2,E_UQ1=41,6",
+          "3": "0123456789ABCDEF",
+          "4": "I/O CONTROL BD;15257;01;90;1831;6679A;00;GOUT=14_ADIN=8,E_ROTIN=4_COININ=2_SWIN=2,E_UQ1=41,6;"
+        },
+        "interfaces": [
+          3
+        ],
+        "endpoints": [
+          {
+            "address": 129,
+            "size": 64,
+            "interval": 1
+          },
+          {
+            "address": 1,
+            "size": 64,
+            "interval": 1
+          }
+        ],
+        "startup_trace": [
+          "mode_before_default_cdc",
+          "first_port_connect"
+        ],
+        "report_hex": "05010904a10185010901a10009300931093009310930093109300931093309340933093409360936150027ffff0000350047ffff0000950e75108102c005091901293015002501450175019530810209007508951d810106a0ff09008510a1010900150026ff007508953f9102c0c0",
+        "passed": true
+      }
+    ],
+    "hardware_tested": false,
+    "game_tested": false,
+    "boundaries": [
+      "saved mode already validated by App C++ suite",
+      "USB port init suppressed",
+      "ROM memcpy/memset",
+      "flash unique ID synthetic"
+    ]
+  },
+  "arm_reports": [
+    {
+      "path": "tests/module1/build/simulation_results.json",
+      "sha256": "2a97ee8e04a4352b55b67db04da3561e6d01f2a91f2f90a9c0389d74666f094e",
+      "groups": 11,
+      "checks": 68415
+    },
+    {
+      "path": "tests/module2/build/simulation_results.json",
+      "sha256": "5b1f5f782928a18a79de8b8fe97fc873316083d6d46a2eee9320916406d9bcd5",
+      "groups": 12,
+      "checks": 4622
+    },
+    {
+      "path": "tests/module3/build/simulation_results.json",
+      "sha256": "f84809befa20e4696d3fa881053a09bbb66acd948abba9ab916268a804b04673",
+      "groups": 14,
+      "checks": 4153
+    },
+    {
+      "path": "tests/integration/build/simulation_results.json",
+      "sha256": "7a8a564aa6c2fd749f9e8b2f628257c4fcc603db486f3b283bb0dee239bd73c7",
+      "groups": 8,
+      "checks": 2021
+    },
+    {
+      "path": "tests/integration/build/transport/simulation_results.json",
+      "sha256": "f8f76f8e6044821710e7b5d0902862ca0c5041155c7e7d8a727d32c1770987a5",
+      "groups": 2,
+      "checks": 47
+    },
+    {
+      "path": "tests/integration/build/protocol/simulation_results.json",
+      "sha256": "1ed323498eba00ef44e5f4bd7f93dd68d002e8b0d5344de5c393fcfa5761eb99",
+      "groups": 9,
+      "checks": 1322
+    },
+    {
+      "path": "tests/integration/build/storage/simulation_results.json",
+      "sha256": "09b1d192c9f8bdb4bbd2746bd74148750608cbc33b667c5a0d71df45eec6a172",
+      "groups": 18,
+      "checks": 5012
+    },
+    {
+      "path": "tests/integration/build/app_storage/simulation_results.json",
+      "sha256": "81e51e39c6c5379d3fa9cbbd0866229c73059160bd169a1b6486dd260eec1524",
+      "groups": 5,
+      "checks": 44
+    },
+    {
+      "path": "tests/integration/build/io4/simulation_results.json",
+      "sha256": "e5e426fa37fa06be90a86f37c08aeb0b7f36db6df30184a2f4639d79d196d4c9",
+      "groups": 22,
+      "checks": 67513
+    },
+    {
+      "path": "tests/integration/build/motion/simulation_results.json",
+      "sha256": "28ecaf506e753c4d17b4ee34202b1f72fed5f259759f6dfd65f5054fe1875f4d",
+      "groups": 16,
+      "checks": 158
+    }
+  ],
+  "arm_groups": 117,
+  "arm_checks": 153307,
+  "uf2": {
+    "path": "tests/integration/build/arduino/FluxRail.ino.uf2",
+    "bytes": 339456,
+    "sha256": "de0767cc695ddf7f79b0bb12bcb767eae5d5bd50a2b02225a1c1af854ddb63e8"
+  },
+  "documentation_sha256": {
+    "web/tests/style_review_2026-10-03.md": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36",
+    "web/tests/layout-test-output-2026-10-04.txt": "fb802405c1116348911a77ae3a62505dc215e3aec1e778389c887df5a6165e41",
+    "web/tests/layout-review-2026-10-04.md": "c168fa18777e4e6721645a030a55bd0b95bb3bbe6a3a7d86b12e7906273b1550",
+    "web/README.md": "596d81640ba08aea02d801a278e304d7090fc15beb375119afb3c8c09bb637af",
+    "tests/module3/README.md": "4922a45197f38d73a04a8bd0107e77fe3c07217b21c90641fa1260d3fe993f6c",
+    "tests/module3/HARDWARE_CHECKLIST.md": "55df9acb8eda788e3e2501145ee5b0737940bfa254ed42c8d0b1ff63d0027d27",
+    "tests/module2/README.md": "38d6527a2a227abe1934494e82623d40ed370642d44397921411917724dce43f",
+    "tests/module2/HARDWARE_CHECKLIST.md": "a773b42588372ba511d708e7d3150ff224335497587dd6f62422ee9364db5b63",
+    "tests/module1/REVIEW_2026-10-03.md": "c6e6a7f5d65353aec8110827f69b022e0e19633db92b79c8397a456b07e20995",
+    "tests/module1/README.md": "ee479d16ca62069d507e11477a5e402e6e4f69405608e7774e1c075ae20c2dbe",
+    "tests/integration/REVIEW_INTEGRATION_2026-10-03.md": "4a6256792c8afedd81a04a0e1e2d2b27b98ab7f4ad2eb428b75ce9989a954039",
+    "tests/integration/REVIEW_BUGFIX_2026-10-04.md": "2b4762ed21cc7e243b82f5f8725ffb085a72ad26a3779f2c7f8ce0dbe9eb5d7d",
+    "tests/integration/README.md": "5c85b89282c7a875849b82087fd4d2600e8579a7cbf82877bd1c9547cecaa2a8",
+    "tests/integration/HARDWARE_CHECKLIST.md": "3188dd4e56c74777fb33a47e3d67c53772fcb1af5a73e62c7ab4a3acc3e1e97a",
+    "README.md": "182a38d7b350a36c8142b8a6e4260bde2aa1322db179059583caca85341dce16",
+    "firmware/recovery/README.md": "6b6cec55785747ef1c009f10b1f0183fd15c7db86867d5a83429ae7a24c5b9cb",
+    "docs/spec/15_固件版本与UF2识别.md": "1911fc6c5decaf8cc42d159223dec7ea7de409c0b8d0c34741c60f9d51e53ea3",
+    "docs/spec/14_模块整合运行契约.md": "eddd6bb9091b6d863d59ec5a2b9a2d2ecf0cf5468cd71e5a19dbc9738d84df24",
+    "docs/spec/13_IO4软件契约.md": "a246f1301c05df3a8ab06309935d9a906c6b778fd5e5e3a05ed36984c24af5e3",
+    "docs/spec/12_完整配置与Flash序列化.md": "95ca7c90bbdc5ee51f4e0d05aff4a90cc407d1014f6000ec656bb95336dc1023",
+    "docs/spec/11_Arduino模块拆分与四窗口交接.md": "851d3c726e326bb9e10ccd1fb654845190d73df0d31fbbd87e3c45a5e86f4c11",
+    "docs/spec/10_IO4外部项目对比.md": "0e4835be229ed5f938b372d5744ac529038d209c0172ed5104c9fc40f2b4f515",
+    "docs/spec/09_IO4兼容与USB冷切换.md": "41e5a0c59bd09f1d8031623e73b092ab1c807c197b2a0b4aad53e69858efdd6f",
+    "docs/spec/08_功能缺口与使用场景清单.md": "260005e720762b6552f0f3fc1076dc81402bd765e50d8472771c6b2d682b9969",
+    "docs/spec/07_旧项目审查与来源.md": "b8a3db58567358d90290074ef738c8f53ec2c7096b03e8ba49bc07670ee9c87f",
+    "docs/spec/06_验收与实测计划.md": "8ab7cdfdc8f40d32c838ac14ae942064a4be1afaf7765ffb15d9133f2304fa99",
+    "docs/spec/05_模块4_Web上位机.md": "647d8b2ea2ce46bbab7b615479b1543b496b072e312c5ceab7e88af7cae34b8c",
+    "docs/spec/04_模块3_MT6701旋钮.md": "fe95ca97bd6dcd2afdcbe7d7339986578f2227775d9f0392ca249ed967701192",
+    "docs/spec/03_模块2_三霍尔滑轨.md": "cb79a00e5209919d2e0e53ada1c52c28c85c9cd08d8904545a9372f69770b5e1",
+    "docs/spec/02_模块1_键盘与灯光.md": "c0bf62a3292520c270d48119009e50645e20c95c2333894791b39206c7f02de3",
+    "docs/spec/01_公共接口与集成约定.md": "29d9392ba8cb5ef02ca0b5ea288094877853d3af8a09d3c5035c2be6089b1a2a",
+    "docs/spec/00_项目需求与决策.md": "1ea2c35bcdff2fca0a0fc5a4288aaee16314301b85fbe18390edfd6141bacdc6",
+    "docs/rp2040_kb_firmware_notes.md": "9ef2a2309151d98459d8c82879f2cdbc1679572656d6e98d226f99b97eddc239",
+    "dependencies/README.md": "fef38bc01774a7e01313a475d4a9597b222f596fc8d338abe09ece9f4ad35364",
+    "docs/progress/测试.md": "620c05d082bc48a207aaf31298f5376c5f8ae4ba79d8e00ab91cc5dfadd1ab0a",
+    "docs/progress/模块整合.md": "cf7e95b4b64f9593d29ced935d5c5cc98abd312afd293d9759a37b98a89c4dcf",
+    "docs/progress/模块4.md": "a749283adf520196abfa5150d59ea8153b12b5b6c34293338ac9bdd058c689a5",
+    "docs/progress/模块3.md": "fd30df19e3b3e7027936c21e65e4fc284ea46c0761bbc07a513cf4f0fe142eb2",
+    "docs/progress/模块2.md": "4114ee0a83e6825ac1354cf2aa9f81fc80dcf05d507b81e18b84bd711746370a",
+    "docs/progress/模块1.md": "326bb6bf79d04b3ed2740170fc38a003936dfaec32f388bbbefcc2ced31f12c5",
+    "docs/progress/修复.md": "c9e7d6c1195c24e66ef95a91c2bbbe8e2020afebbcd4704853f7f9bd13b5a880",
+    "docs/progress/IO4.md": "8261431f752081ae551fcdbf682976c4f81c9c7e543e99fcd15431735e162f66",
+    "docs/FluxRail_需求总览_用户版.md": "1c631763615455d767dc5411a94856c20c85a68ec7fca4db2d47149ee7ff7087",
+    "docs/FluxRail_开发交接_窗口必读.md": "5cad23202af48b87aaee742a16643388b2374b5b6bb5d681722d149a8c43c009",
+    "docs/FluxRail_Web_开发与调整交接.md": "ffff02d1771606d57c9117af461635150db2a67b0e65a530142beed06d5f2efd",
+    "docs/FluxRail_IO4专项_开发交接.md": "ec91392ed0ec664cd59f28a6298735d3505005be2c5a2d0d8716f95ca034013f",
+    "backups/web-before-header-image-2026-10-04/BACKUP-README.md": "69995a9e02b0bc63f79e6cbec1c3f5460f83f86792ab505980654383bda82447",
+    "RUN_INTEGRATED.md": "df5d2df5c347a02a840b7e3aa8cd20fceff011ed09766890cd05926a04ae9d56",
+    "backups/README.md": "380fc9a5e09ed77e7b9d08e58501265b8d89c5969c008fc6bb5e5cd86bc2daa3",
+    "REVIEW_FULL_2026-10-04.md": "68c9cd3ec2dc339099696c013ca2e87b4ba19445097de9b6166fb5501d590005",
+    "backups/web-before-template-management-2026-10-04/tests/style_review_2026-10-03.md": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36",
+    "backups/web-before-template-management-2026-10-04/tests/layout-test-output-2026-10-04.txt": "fb802405c1116348911a77ae3a62505dc215e3aec1e778389c887df5a6165e41",
+    "backups/web-before-template-management-2026-10-04/tests/layout-review-2026-10-04.md": "c168fa18777e4e6721645a030a55bd0b95bb3bbe6a3a7d86b12e7906273b1550",
+    "references/arduino-usb-audit/README.md": "6c435839f828b5a6d6b197272d568328d79f8718ea6af6838c79077044990982",
+    "firmware/FluxRail/src/protocol/CDC_PROTOCOL.md": "d5f24286af4a5c6aa7f88c53422b685084391778fd528485581eb07c5679cbab",
+    "firmware/FluxRail/src/lighting/README.md": "a90be776c9482b82f09e42bab064607d2d7327e88ed76d1126370b65e29306ce",
+    "backups/web-before-template-management-2026-10-04/BACKUP-README.md": "b6dab5a0fea341e61214f7b2a466e62a23b6ba3dde950f93e54ade6940adda81",
+    "backups/web-before-template-management-2026-10-04/README.md": "4e41119bbd6564b9230ecc01fad7fb1e9bd820e75202309ed074a0363c0c2f5a",
+    "firmware/FluxRail/README.md": "80c8e72888d33f816da7a3562262b16664a5b376d314e99fd922a332a893fa59",
+    "firmware/FluxRail/src/knobs/README.md": "a0d5841bb41918e584014159a96fe41959d29a31c02cf97f557ab5ae308542a5",
+    "firmware/FluxRail/src/keyboard/README.md": "ab939b7c273682cc4fb3001299455922949704b664850e6272a4661db85da2ea",
+    "references/legacy-rp2040-zero/README_historical.md": "4214363bfa07189e2e996cd2d47fc32a50ce5ad3b773c18c687b2e3c5ea5c2b9",
+    "references/legacy-rp2040-zero/README.md": "5a9510db1e1d4152289f90f6f24c37de899ff7a64ccd326a01334fbd7d4f0c59",
+    "firmware/FluxRail/src/hall/README.md": "94be280ae5de9f079c47ebc6d933585f333fabd53151d71d787a78b7a3f1bd80",
+    "references/legacy-rp2040-zero/EDGE_TRIAL_1.md": "bc49988b8a95531e14e2b1340fdd9f6f9232d125ac2a4419f1cfa9d1410c111d",
+    "backups/web-before-physical-layout-2026-10-04/tests/style_review_2026-10-03.md": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36",
+    "backups/web-before-physical-layout-2026-10-04/tests/layout-test-output-2026-10-04.txt": "fb802405c1116348911a77ae3a62505dc215e3aec1e778389c887df5a6165e41",
+    "backups/web-before-physical-layout-2026-10-04/tests/layout-review-2026-10-04.md": "c168fa18777e4e6721645a030a55bd0b95bb3bbe6a3a7d86b12e7906273b1550",
+    "references/io4/ongeeki-firmware/README.md": "d005266c89053969c0c5a9cc8064ac6b6d880896fe9ddf3137c51b5acb67316a",
+    "references/io4/segatools/README.md": "c31484d4d4a567d17dd37a5cdc1525c8b432f5a27b18af04f1c43a2498051a0b",
+    "backups/web-before-physical-layout-2026-10-04/BACKUP-README.md": "7dd1da0045939f0d396902217bf13d92b6e3668670bcab6d503e25a3f5c7a698",
+    "references/io4/failed-lkick/README.md": "4373b0e688e75b25a222bd2645358f917699134c5fe5250ddf5c4f6503109244",
+    "references/io4/failed-lkick/FLUXRAIL_STATUS.md": "4d931d4b9f3369b4473b868a5beb7e2671f7aebb7090f117352f4eb560224bac",
+    "backups/web-before-layout-2026-10-04/README.md": "943d4d245a057d3e5a381b5de574cf2c82b6fd099514d237577d85da30b2e2fb",
+    "backups/web-before-layout-2026-10-04/BACKUP-README.md": "2e7c59c39116c5e4782c857bc64c820bac686ea437e35ba67c32272d18764970",
+    "references/io4/SEGA835Lib/README.md": "986fb33133e93ca4bcb49ff37ab623e72e581b39f30df2c7edb2c9e7437c51c5",
+    "references/io4/SEGA835Lib/LICENSE.txt": "e7fcf3cec12364329a95a8a28199a2fe2d19df8426a3ffe3d6e7c158c7ed91ae",
+    "references/io4/README.md": "a9a1677c633f8bb19b1f99bdc1632e16339dc394fcc844d9c1d162f96c6f4f13",
+    "backups/web-before-layout-2026-10-04/tests/style_review_2026-10-03.md": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36",
+    "backups/web-before-physical-layout-2026-10-04/README.md": "b7699707dfc27f10706a74b0080402de4bb47a48e7dbbec5c059e0fb1d11e8d7",
+    "references/io4/SDDT_io4_esp32s2/README.md": "14ed46b315ef4cc94269eb3648f8d03dcccccc9a84cf3aff0c71995147b86ac8"
+  },
+  "documentation_scope": "Project docs, module/test/Web docs, reference README and license, old Web backup docs; identical content read once; generated build/library copies excluded",
+  "review": {
+    "model": "gpt-6-luna",
+    "read_only": true,
+    "path": "tests/integration/REVIEW_BUGFIX_2026-10-04.md",
+    "sha256": "2b4762ed21cc7e243b82f5f8725ffb085a72ad26a3779f2c7f8ce0dbe9eb5d7d"
+  },
+  "limitations": [
+    "No new board or Windows host/game validation",
+    "ELF descriptor checks validate structure, not Windows mouhid startup or independent Y",
+    "Synthetic execution costs do not prove worst-case real-time performance",
+    "Original combined timing case exhausted simulator budget; split cases pass"
+  ]
+}

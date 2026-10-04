@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-04",
+  "status": "partial_diagnosis_root_cause_unresolved",
+  "identity": {
+    "serial": "5054316560DD729C",
+    "firmware": "0.10.1",
+    "mode": "NORMAL_NKRO"
+  },
+  "host_hid_control_query_count": 2,
+  "hid_current_report_reads_passed": false,
+  "native": {
+    "ntstatus": "0xC0000010",
+    "mapped_win32_error": 1,
+    "iosb_status": "0x00000000",
+    "iosb_is_completion_evidence": false
+  },
+  "independent_csharp": {
+    "passed": false,
+    "error": 1,
+    "closed": true
+  },
+  "windows_read_open_error": 5,
+  "pnp_problem_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "usb_bus_trace_available": false,
+  "etw_permission_denied": true,
+  "configuration_checks": {
+    "before": {
+      "requests": 15,
+      "revision": 1,
+      "binary_unchanged": true,
+      "profiles_unchanged": true,
+      "crc32": 1053904252
+    },
+    "after-native": {
+      "requests": 15,
+      "revision": 1,
+      "binary_unchanged": true,
+      "profiles_unchanged": true,
+      "crc32": 1053904252
+    },
+    "after-csharp": {
+      "requests": 15,
+      "revision": 1,
+      "binary_unchanged": true,
+      "profiles_unchanged": true,
+      "crc32": 1053904252
+    },
+    "after-csharp-query": {
+      "requests": 15,
+      "revision": 1,
+      "binary_unchanged": true,
+      "profiles_unchanged": true,
+      "crc32": 1053904252
+    },
+    "final": {
+      "requests": 15,
+      "revision": 1,
+      "binary_unchanged": true,
+      "profiles_unchanged": true,
+      "crc32": 1053904252
+    },
+    "after-final-query": {
+      "requests": 15,
+      "revision": 1,
+      "binary_unchanged": true,
+      "profiles_unchanged": true,
+      "crc32": 1053904252
+    }
+  },
+  "firmware_compile": "not_run",
+  "arm_simulation": "not_run",
+  "game": "not_run",
+  "host_tool_checks": "Python syntax, PowerShell syntax and runtime C# Add-Type",
+  "limitations": [
+    "No evidence whether GET_REPORT setup reached USB or which layer rejected it.",
+    "System-use keyboard/mouse exclusive access is a candidate, not a proven root cause.",
+    "Failed buffers and initial IOSB values are not device reports.",
+    "No physical input/events, host interrupt stream or gameplay validated.",
+    "Combined C# tool fixes did not isolate the unique cause of earlier open failures.",
+    "ETW continuation script statically reviewed only; admin capture not executed.",
+    "Revision changed from prior run 56 to this run 1; cause/timing unknown."
+  ],
+  "next": "Run capture_hid_etw.ps1 in administrator environment with a new output directory; verify trace stop and positive USB traffic before analyzing target GET_REPORT.",
+  "tools_sha256": {
+    "diagnose_hid_read.py": "37da1456b8e06aecb12c6b6a938e9b9283be4a399682b3cd553562ad7aa56188",
+    "diagnose_hid_open.ps1": "b0e7aa1956f0f41887ee9c799fb756a6061e012d7c734e515afdb7ed0e28956b",
+    "confirm_hid_read.ps1": "d592321d9ad1117fea9448f2ab8a93c8a17b89d9dcde66f35931250bec486cfc",
+    "capture_hid_etw.ps1": "9639d815e16e9082df76ec700dad07388e4184f4b502d0687d38fddb74b677be",
+    "prepare_board_baseline.ps1": "08b9967e73bcf74ba27a3dfdc0c432c560b5a5fc12f9de472a347a4f6925fd25",
+    "windows_hid_probe.py": "3009ecccec2cf5d2a80a8bc303344f701a0bd68e46e4489fffca832add79fe34",
+    "finalize_hid_diagnosis.py": "cc8109d6456db3bb9478119c5648fdd33a9b182ec76e1bce5c9da3f9c8d934a7"
+  },
+  "evidence_sha256": {
+    "hid_diagnosis_2026-10-04/after-csharp/baseline-cdc.jsonl": "eedb5d4547368f98ecae7c617ac485117dc3de2b06b3914e6fa0d0a6188af2c0",
+    "hid_diagnosis_2026-10-04/after-csharp/baseline.json": "efc1210d9a38a5ccd43d5fe2c385574bd62ea5f02d833a583fcc4be117e60e67",
+    "hid_diagnosis_2026-10-04/after-csharp/original-profiles.json": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_diagnosis_2026-10-04/after-csharp/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "hid_diagnosis_2026-10-04/after-csharp-query/baseline-cdc.jsonl": "bbb33db1f3ea92f01e742a117d50e178a278ae00a762328190d2ad12ec16343e",
+    "hid_diagnosis_2026-10-04/after-csharp-query/baseline.json": "d403b54670ceccbd7dc0710f4a6d4189e9c911b1847cf7b051cd57cc320b6a42",
+    "hid_diagnosis_2026-10-04/after-csharp-query/original-profiles.json": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_diagnosis_2026-10-04/after-csharp-query/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "hid_diagnosis_2026-10-04/after-final-query/baseline-cdc.jsonl": "3dc4c81dabca7b5969f955ae5396d219a49e3d16cb7bd005d593250d1e850e39",
+    "hid_diagnosis_2026-10-04/after-final-query/baseline.json": "eaaffafc2fdeddb30bd57efea7427ed21ad0ad8df7063035e35615d407b1a28e",
+    "hid_diagnosis_2026-10-04/after-final-query/original-profiles.json": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_diagnosis_2026-10-04/after-final-query/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "hid_diagnosis_2026-10-04/after-native/baseline-cdc.jsonl": "c417ab39c8286ca950747d3f6d98cf216ba1464e16cad5fefdbb76df2c2e2a3a",
+    "hid_diagnosis_2026-10-04/after-native/baseline.json": "c9efb6b36ce733ba3c534d7ccf159d71153b5e639b03a70e1edbf2cc43c16241",
+    "hid_diagnosis_2026-10-04/after-native/original-profiles.json": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_diagnosis_2026-10-04/after-native/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "hid_diagnosis_2026-10-04/before/baseline-cdc.jsonl": "aa9fe8b75d9816ae29c6998c196af2345c63448be64ef1ded3460af2d414e566",
+    "hid_diagnosis_2026-10-04/before/baseline.json": "0473c7588226a73febda82db3d9f9bf8672deb6d71f70f17ee34345b7a7c7ce1",
+    "hid_diagnosis_2026-10-04/before/original-profiles.json": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_diagnosis_2026-10-04/before/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "hid_diagnosis_2026-10-04/before-baseline.review.json": "ad978d9a7091f62e5c63575f1019ffa4fa507405200ee3f780294f6a0d46d31f",
+    "hid_diagnosis_2026-10-04/csharp-col02.json": "6730edbb964076f665735c087d26b0e8e931f4305dcdef2a6b7a3c8c50ad6203",
+    "hid_diagnosis_2026-10-04/csharp-col02.review.json": "3e9279314fd1e9a803d591f75ae0be9459c3e7c8d7ff6fe83ee777905e75117e",
+    "hid_diagnosis_2026-10-04/csharp-explicit-open-aborted.json": "a0ff854c1f22962a3ddd5628c9535ee04111d67c348bc5de6a76e9385d6cb542",
+    "hid_diagnosis_2026-10-04/csharp-final-binding-open.json": "ca7c6f53943c069ff56334fd1d729e5c379dff68fc734faff787ab6bfe6563ea",
+    "hid_diagnosis_2026-10-04/csharp-final-binding-open.review.json": "4d71a0130e2339d3b1feddafb4f7ee7500e2939ddc4048e2c1e473df0107dae7",
+    "hid_diagnosis_2026-10-04/csharp-first-attempt-aborted.json": "c6cf877cc1572110390bd5886a0a37cac0ea54e18352b3efc604c65f2ad84c46",
+    "hid_diagnosis_2026-10-04/csharp-first-attempt-aborted.review.json": "21b4a307235050ae0482dea655ef5955446866f72357079409fa89aa418e566c",
+    "hid_diagnosis_2026-10-04/csharp-open-aborted.json": "02ef73f9250c9c148117a81eac4a8c9f89fe39a7fc9df492a6800a01ab640850",
+    "hid_diagnosis_2026-10-04/csharp-open-aborted.review.json": "62752d98b19b42cfb182e03d9c77ba136d48ea25d0a89a75f4bfbcc1fc4f7461",
+    "hid_diagnosis_2026-10-04/csharp-open-binding.json": "76fcce58f05ba341d51e9dd761b38421fd818bb5673dfb7a6d3dae06b5115f70",
+    "hid_diagnosis_2026-10-04/csharp-open-binding.review.json": "dfec0c57772945fdb41100b9c88bb905f08b4261aadea52eec441759ea88d10a",
+    "hid_diagnosis_2026-10-04/etw-attempt.json": "ab8333c687f8b580fb16f7bce331a1c57fd9a88133025bb1dfbdbbeb3b4dddc8",
+    "hid_diagnosis_2026-10-04/final/baseline-cdc.jsonl": "28bcdf0846022a0b25cbf30933c93afb9461abe9cd1a0eb1d03d55b410a06d2c",
+    "hid_diagnosis_2026-10-04/final/baseline.json": "7e9cdfcf03bdac2b8989b9a8d5b65ed3d0b318b734a5ee5d04a6359b018df165",
+    "hid_diagnosis_2026-10-04/final/original-profiles.json": "21772198db32bc97ae38ee8e6782328f0488396b6a2785cd3a0f78357bf02420",
+    "hid_diagnosis_2026-10-04/final/original-schema2.bin": "c488ab01690f18a3e1469fb52da3d737c41758b3c83106e822652d73504e4581",
+    "hid_diagnosis_2026-10-04/native-col02.json": "82b629ea1067f426b14197cfefe5e8d2891a9039a99d9a36c0670c40ca2b4247",
+    "hid_diagnosis_2026-10-04/native-col02.review.json": "c9132e6b9ddb67d731fbde9e0f9572ed5725f4c29b89a5d9af5514dc1a551fa2",
+    "hid_diagnosis_2026-10-04/open-matrix.json": "f777f86f7d025e2f69145df5558a03317510aabf37f63e8f40d3851544e98b97",
+    "hid_diagnosis_2026-10-04/open-matrix.review.json": "2f67cd7b50e0de4bab17054d6affbb484677c4b2f43e868d5ecafabc498bad0b",
+    "hid_diagnosis_2026-10-04/windows-pnp.json": "21fdd91621fdcca8b1c8300fe7ab3e306f880b4925377ff67e6a13804358e215"
+  }
+}

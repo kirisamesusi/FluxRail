@@ -1,0 +1,42 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_power_cycle_review",
+  "verdict": "single_idle_USB_power_cycle_recovery_pass",
+  "evidence": [
+    "power-cut-monitor/summary.json",
+    "power-cut-before/baseline.json",
+    "power-cut-before/baseline-cdc.jsonl",
+    "power-cut-before/original-schema2.bin",
+    "power-cut-before/original-profiles.json",
+    "power-cut-after/baseline.json",
+    "power-cut-after/baseline-cdc.jsonl",
+    "power-cut-after/original-schema2.bin",
+    "power-cut-after/original-profiles.json",
+    "power-cut.actual.json",
+    "check_power_cycle.py"
+  ],
+  "findings": {
+    "user_confirmed": "USB-only unplug for at least 5 seconds, then reconnect",
+    "snapshot": "schema2 1387 bytes identical before/after; CRC32 895336899; profile structures equal",
+    "pnp": "Target serial node absent at 14:50:54.0735314Z and present at 14:51:04.5972542Z; 10.523723-second OS absence interval",
+    "cleanup": "Baseline helper closed serial",
+    "scope": "One quiescent USB power interruption only; no in-flight Flash write interruption.",
+    "compile_sim_game": "Not run",
+    "before_after": "15 CDC requests each, read-only operations only; same serial/version/mode; revision and saved_revision 5; dirty false; active profile4; idle; physical mask0; slots3"
+  },
+  "io4_next_preflight": [
+    "Before any write, make a fresh full NORMAL_NKRO baseline with same serial, rev=saved, dirty=false, valid_slots3, maintenance idle, physical_mask0, active profile4, and preserve schema2/profile bytes plus CRC.",
+    "Physically verify the BT10/GP9 recovery control and exact hold/reset/power sequence from board labeling and firmware documentation before entering IO4; ensure user can perform it immediately if CDC disappears.",
+    "Change only saved startup mode to IO4, confirm save status/revision and read back requested/saved mode before issuing one cold reboot; do not loop or retry.",
+    "Expect CDC loss in IO4. Capture USB/PnP re-enumeration and at most the authorized single HID status/report attempt; do not interpret prior HidD error1 as proof of firmware failure or success.",
+    "Use the verified physical recovery control to return to NORMAL_NKRO; confirm unique serial and CDC hello, then save NORMAL_NKRO and perform at most one target application reboot.",
+    "Finally compare complete profiles and schema snapshot against baseline, accounting for expected revision and startup mode bytes only during intermediate state; require final saved/current mode NORMAL_NKRO, active profile4, dirty false, slots3, idle, mask0, and close handles.",
+    "On any failure to recover or identity mismatch, stop; preserve evidence and do not issue repeated mode changes or flash firmware."
+  ],
+  "limitations": [
+    "Observed PnP absence duration includes OS polling cadence; the user confirmation establishes unplugged-at-least-five-seconds.",
+    "This does not test power loss during Flash commit.",
+    "No IO4 operation has occurred in this review.",
+    "A single IO4 switch and recovery cannot support claims of repeated reliability, actual game compatibility, key mappings, or real HID report-byte validity."
+  ]
+}

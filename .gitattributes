@@ -1,0 +1,14 @@
+# Preserve the exact bytes used by source/evidence/rollback SHA manifests.
+# Do not normalize LF/CRLF during add, checkout, or clone.
+* -text
+
+# Show useful textual diffs for source and documentation.
+*.md diff
+*.h diff
+*.cpp diff
+*.ino diff
+*.js diff
+*.mjs diff
+*.py diff
+*.json diff
+*.ps1 diff

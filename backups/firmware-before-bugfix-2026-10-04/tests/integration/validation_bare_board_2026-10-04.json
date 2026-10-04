@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-04",
+  "timezone": "Asia/Shanghai",
+  "device": {
+    "port": "COM29",
+    "serial": "5054316560DD729C",
+    "firmware": "0.10.0",
+    "usb_mode": "NORMAL_NKRO"
+  },
+  "host": {
+    "ProductName": "Windows 10 Enterprise LTSC 2021",
+    "DisplayVersion": "21H2",
+    "CurrentBuildNumber": "19044",
+    "UBR": 7417
+  },
+  "status": {
+    "cdc": "passed",
+    "version_readback": "passed",
+    "ram_config": "passed",
+    "stability": "passed",
+    "web_production_client_via_native_adapter": "passed",
+    "windows_keyboard_enumeration": "passed",
+    "windows_relative_mouse_enumeration": "passed",
+    "windows_absolute_x_collection": "failed_code10",
+    "browser_web_serial_ui": "not_tested",
+    "compile": "not_run",
+    "simulation": "not_run",
+    "game": "not_tested",
+    "flash": "not_written",
+    "hall_average_rate": "below_1khz_target"
+  },
+  "main_report": "hardware_2026-10-04/report.json",
+  "web_report": "hardware_2026-10-04/web-client-report.json",
+  "restoration": {
+    "matched": true,
+    "changed_byte_offsets": [
+      4
+    ],
+    "old_revision": 6,
+    "final_revision": 59,
+    "restored_all_profiles": true,
+    "active_profile": 4,
+    "flash_saved_revision": null,
+    "port_closed": true
+  },
+  "intentional_errors": {
+    "main_negative_cases": 12,
+    "web_negative_cases": 1,
+    "final_rejected": 13,
+    "overlong_lines": 1
+  },
+  "open_issues": [
+    {
+      "id": "WIN-ABS-X-001",
+      "evidence": "hardware_2026-10-04/absolute-x-problem.json",
+      "problem_code": 10,
+      "status": "0xC0110004",
+      "description": "Windows mouhid cannot start the only-X absolute collection; missing required usage suspected, exact usage/root cause not proven."
+    },
+    {
+      "id": "SSI-PRESENCE-001",
+      "description": "Without MT6701, all-zero SSI frames still report valid=true; frame CRC validity is not physical sensor presence."
+    },
+    {
+      "id": "HALL-RATE-001",
+      "evidence": "hardware_2026-10-04/sampling-rate.json",
+      "description": "Stable revision59/epoch59: 304002 samples in 360.159016 board-clock seconds = 844.077Hz, below nominal1000Hz; deadline-miss/max-gap counters not exposed by current CDC."
+    }
+  ],
+  "source_sha256": {
+    "tests/integration/bare_board_test.mjs": "4071256a59d5cee9bcd4b0200c5556ee0f64191c58ce78953dceef8bf99c77f9",
+    "tests/integration/serial_bridge.ps1": "c00588db7852d9156cc643426b60d4ff3e0e6a89ad2fc560c9408f2ea3cb2ff7",
+    "tests/integration/windows_hid_probe.py": "3802808a8dba2cf487e052d8073af915b0e622cb2f3f0f2f5bcd937a32b2ba84",
+    "tests/integration/web_client_board_test.mjs": "75ab779a2303cac1617512b06f242f10767250ddbfcff95acccec5c244237fe8"
+  },
+  "source_validation_limit": "bare_board_test.mjs final source includes baseline/serial restoration guards added while the successful run was executing; that added guard branch was syntax-checked, not rerun on hardware. serial_bridge.ps1 also gained the signals host-control branch after the main run started; this branch was exercised by the later Web client test.",
+  "uf2_metadata_check": {
+    "version": "0.10.0",
+    "verified": true,
+    "blocks": 661,
+    "payload_bytes": 169216,
+    "meaning": "Existing local file parsed only; no recompile or flash upload."
+  },
+  "sampling_rate": {
+    "kind": "real_board_counter_analysis",
+    "sample_revision": 59,
+    "epoch": 59,
+    "telemetry_snapshots": 3854,
+    "first": {
+      "timestamp_us": 1277595037,
+      "hall_samples": 1078566
+    },
+    "last": {
+      "timestamp_us": 1637754053,
+      "hall_samples": 1382568
+    },
+    "seconds_board_clock": 360.159016,
+    "hall_samples_added": 304002,
+    "hall_average_hz": 844.0771617390247,
+    "target_hz": 1000,
+    "queue_full_added": 0,
+    "adc_errors_added": 0,
+    "limits": "Counter/board-clock average only; no physical sensor precision or high-frequency jitter measurement. Root cause not determined."
+  }
+}

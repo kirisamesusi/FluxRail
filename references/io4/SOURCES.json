@@ -1,0 +1,246 @@
+{
+  "retrieved": "2026-10-03",
+  "scope": "Selected source snapshots for protocol analysis; not complete buildable projects",
+  "files": [
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/README.md",
+      "bytes": 774,
+      "sha256": "d005266c89053969c0c5a9cc8064ac6b6d880896fe9ddf3137c51b5acb67316a"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": ".gitmodules",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/.gitmodules",
+      "bytes": 117,
+      "sha256": "f9d565d0abb6a7995dfe259b6595af5f9b619f5fc9f9ae996f98c6e0d7cd819d"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/CMakeLists.txt",
+      "bytes": 239,
+      "sha256": "37c5d8ad2ef8eab92fdd50ffd62a1a700b152c0e1682b66bca189d5c65a572f0"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "components/tusb/include/tusb_config.h",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/components/tusb/include/tusb_config.h",
+      "bytes": 1052,
+      "sha256": "20ac835f3eca18d281997b7b187f6ffb1406339a7fbb4c706ad44c06ac389fc2"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "main/src/usb/desc.hpp",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/main/src/usb/desc.hpp",
+      "bytes": 6936,
+      "sha256": "24da9db39daec150b596ad149cc415bc40c86950795adc4a8db75d5a760bdff6"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "main/src/usb/hid.cpp",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/main/src/usb/hid.cpp",
+      "bytes": 2309,
+      "sha256": "aad617449aca793640bf5f4bbda1a7f22fbacb4c99a451f5fae85199569b0e77"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "main/src/usb/hid.hpp",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/main/src/usb/hid.hpp",
+      "bytes": 1225,
+      "sha256": "1db5c9a0ba75c3c15cb7fb15c7d996d5fec13f4081ff106efbb8f9c1e6fbfcbb"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "main/src/usb/usb.cpp",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/main/src/usb/usb.cpp",
+      "bytes": 7665,
+      "sha256": "e5d5be9dee77a4b99710804f794ea4658c626cd2706b242784a7b7e65771489e"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "main/src/hardware.cpp",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/main/src/hardware.cpp",
+      "bytes": 3986,
+      "sha256": "27c69c051d13f1d77ad68106c712625678dc728ee7dd05d8e5a3ed4f0e586210"
+    },
+    {
+      "repo": "GEEKiDoS/ongeeki-firmware",
+      "commit": "93f1df0df1fe004c6bafce4c06161ed455d634a1",
+      "file": "main/src/hardware.hpp",
+      "url": "https://raw.githubusercontent.com/GEEKiDoS/ongeeki-firmware/93f1df0df1fe004c6bafce4c06161ed455d634a1/main/src/hardware.hpp",
+      "bytes": 221,
+      "sha256": "a648e0dea03cb2f2b2eae5900a067f521e61f417e5a6dd49613b68f681f6d064"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/README.md",
+      "bytes": 4936,
+      "sha256": "14ed46b315ef4cc94269eb3648f8d03dcccccc9a84cf3aff0c71995147b86ac8"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "main/components/usb_hid.c",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/main/components/usb_hid.c",
+      "bytes": 798,
+      "sha256": "b47794cd4cefe555f7ecd0daa7d5d3a19e1f88607b18f67efe5254b3cb7c75a2"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "main/components/usb_hid.h",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/main/components/usb_hid.h",
+      "bytes": 951,
+      "sha256": "b30fb2ed9e1c3f2f0f77e1b23dd90af35e39229b8f9d03106d34796145861d12"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "main/components/hardware.c",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/main/components/hardware.c",
+      "bytes": 2602,
+      "sha256": "ab4db4500a17eefaf043bc465819eef3d73d9a772ec9ec2c4dc05aa9c584909e"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "main/components/hardware.h",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/main/components/hardware.h",
+      "bytes": 427,
+      "sha256": "1919975c113b4410fb6fafae406ac2a98946d076f6f76b5402eeabcbe4f177b8"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "modify idf/Kconfig",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/modify%20idf/Kconfig",
+      "bytes": 5808,
+      "sha256": "b772583746023fcc0f23071edbdfe5ef9e88d55fa3d50e6d67ec34174934450d"
+    },
+    {
+      "repo": "Lee65535/SDDT_io4_esp32s2",
+      "commit": "74ebf3b8be0addf006d4989e73cb741e5091c8fd",
+      "file": "modify idf/tusb_config.h",
+      "url": "https://raw.githubusercontent.com/Lee65535/SDDT_io4_esp32s2/74ebf3b8be0addf006d4989e73cb741e5091c8fd/modify%20idf/tusb_config.h",
+      "bytes": 3240,
+      "sha256": "95f2be752504365d9bb348d2219ef495c206ba499e6d6f3b2fbeaba2c127f76a"
+    },
+    {
+      "repo": "akechi-haruka/SEGA835Lib",
+      "commit": "f704227be06fe9a453c7ddd75678ed6324be3c60",
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/akechi-haruka/SEGA835Lib/f704227be06fe9a453c7ddd75678ed6324be3c60/README.md",
+      "bytes": 5969,
+      "sha256": "986fb33133e93ca4bcb49ff37ab623e72e581b39f30df2c7edb2c9e7437c51c5"
+    },
+    {
+      "repo": "akechi-haruka/SEGA835Lib",
+      "commit": "f704227be06fe9a453c7ddd75678ed6324be3c60",
+      "file": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/akechi-haruka/SEGA835Lib/f704227be06fe9a453c7ddd75678ed6324be3c60/LICENSE.txt",
+      "bytes": 29449,
+      "sha256": "e7fcf3cec12364329a95a8a28199a2fe2d19df8426a3ffe3d6e7c158c7ed91ae"
+    },
+    {
+      "repo": "akechi-haruka/SEGA835Lib",
+      "commit": "f704227be06fe9a453c7ddd75678ed6324be3c60",
+      "file": "SEGA835Lib/Devices/IO/835-15257-01/IO4USB835-15257-01.cs",
+      "url": "https://raw.githubusercontent.com/akechi-haruka/SEGA835Lib/f704227be06fe9a453c7ddd75678ed6324be3c60/SEGA835Lib/Devices/IO/835-15257-01/IO4USB835-15257-01.cs",
+      "bytes": 5593,
+      "sha256": "ea1226a8f6cb9096224652acb88f3e8d138498f33a84f0ca4885d604b1c56217"
+    },
+    {
+      "repo": "akechi-haruka/SEGA835Lib",
+      "commit": "f704227be06fe9a453c7ddd75678ed6324be3c60",
+      "file": "SEGA835Lib/Devices/IO/JvsUsbIo.cs",
+      "url": "https://raw.githubusercontent.com/akechi-haruka/SEGA835Lib/f704227be06fe9a453c7ddd75678ed6324be3c60/SEGA835Lib/Devices/IO/JvsUsbIo.cs",
+      "bytes": 13629,
+      "sha256": "db747ffc14a498f5bf64cee55e09991dca4eae21d721911b5cc79413bdfb5e08"
+    },
+    {
+      "repo": "akechi-haruka/SEGA835Lib",
+      "commit": "f704227be06fe9a453c7ddd75678ed6324be3c60",
+      "file": "SEGA835Lib/Devices/IO/JvsUsbReports.cs",
+      "url": "https://raw.githubusercontent.com/akechi-haruka/SEGA835Lib/f704227be06fe9a453c7ddd75678ed6324be3c60/SEGA835Lib/Devices/IO/JvsUsbReports.cs",
+      "bytes": 12862,
+      "sha256": "946d7854a98462a7630cd9e0a6eba20c0d0e098ef879cffedf51d4c0aa2028fc"
+    },
+    {
+      "repo": "akechi-haruka/SEGA835Lib",
+      "commit": "f704227be06fe9a453c7ddd75678ed6324be3c60",
+      "file": "835TestsMaybeLess/IO4Test.cs",
+      "url": "https://raw.githubusercontent.com/akechi-haruka/SEGA835Lib/f704227be06fe9a453c7ddd75678ed6324be3c60/835TestsMaybeLess/IO4Test.cs",
+      "bytes": 2711,
+      "sha256": "d997c129007e79dae69f1480c6439d90d4aaff9c3983f7190b44257a6ed6586b"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/README.md",
+      "bytes": 970,
+      "sha256": "c31484d4d4a567d17dd37a5cdc1525c8b432f5a27b18af04f1c43a2498051a0b"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "LICENSE",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/LICENSE",
+      "bytes": 1211,
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "board/io4.c",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/board/io4.c",
+      "bytes": 8573,
+      "sha256": "e46766000484375bee6a1a65921461669f4d503b62bf89164bc3fd686da731de"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "board/io4.h",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/board/io4.h",
+      "bytes": 530,
+      "sha256": "267e92b5f4f33c0fbfd76c7f6b33732c45b363023b927c0fd6516f3c21a96975"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "mu3hook/io4.c",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/mu3hook/io4.c",
+      "bytes": 2434,
+      "sha256": "719f81f630ba9c4cb700f8d523152bf418b14a5dc771718dee49c6849a2ba774"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "mu3hook/io4.h",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/mu3hook/io4.h",
+      "bytes": 117,
+      "sha256": "678a7c09f557d3461cf97b9af33e81a4ab5a6062e2e431269bf898745ac4fa91"
+    },
+    {
+      "repo": "djhackersdev/segatools",
+      "commit": "ca9c72db968c81fdf88ba01f9b4a474bf818e401",
+      "file": "mu3io/mu3io.h",
+      "url": "https://raw.githubusercontent.com/djhackersdev/segatools/ca9c72db968c81fdf88ba01f9b4a474bf818e401/mu3io/mu3io.h",
+      "bytes": 2867,
+      "sha256": "6c4e8b92e78f80aa9bdfc8b4332c3f2129ccf1125024ef607533765fb951cd1e"
+    }
+  ]
+}

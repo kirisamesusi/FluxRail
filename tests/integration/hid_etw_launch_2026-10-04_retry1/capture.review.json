@@ -1,0 +1,61 @@
+{
+  "reviewer": "Luna",
+  "assessment": "retry1管理员捕获流程实测完成，控制台包装器exit0且所记录capture脚本SHA匹配当前V2；该exit表示完整流程正常收尾，不等于HID查询成功或事件已能证明请求到达总线。三个USB3 provider的create/update均exit0，随后session query显示USBXHCI、UCX、USBHUB3全部运行，Level 5、KeywordsAny 0x8041 (Default/HeadersBusTrace/Rundown)；最终stop exit0。tracerpt成功输出XML和summary，统计5006 events、25 buffers、Events Lost=0；但输出明确警告部分事件不匹配schema并建议使用-lr，故XML不是无损/完整解码的充分证据，原始ETL应保留并可仅对现有ETL再跑-lr。C#单次COL02查询仍false/error1，报告hex=null且失败buffer无效、句柄关闭。前后CDC基线各15条只读成功请求，身份/版本/revision、健康、四模板及1387字节schema2/CRC均一致。PnP链指向Intel xHCI下的ROOT_HUB30和Realtek hub，采USB3三层与该实际路径相符。此审核仅确认采集流程和宏观trace健康；是否捕获到目标设备的GET_REPORT setup及完成状态、是否存在可用CDC正对照事件，须由后续原始事件字段审查决定，当前不能做根因结论。",
+  "evidence": {
+    "launcher": "tests/integration/hid_etw_launch_2026-10-04_retry1/completed.json",
+    "pid": 266260,
+    "administrator": true,
+    "exit_code": 0,
+    "capture_tool_sha256_matches": true,
+    "capture_directory": "tests/integration/hid_etw_run_2026-10-04_retry1",
+    "providers": [
+      "Microsoft-Windows-USB-USBXHCI",
+      "Microsoft-Windows-USB-UCX",
+      "Microsoft-Windows-USB-USBHUB3"
+    ],
+    "provider_query": "all three running at level 5, KeywordsAny=0x8041 (Default, HeadersBusTrace, Rundown)",
+    "create_update_exit_codes": [0, 0, 0],
+    "stop_exit_code": 0,
+    "trace_size_bytes": 1638400,
+    "tracerpt_exit_code": 0,
+    "trace_summary": {
+      "total_events_processed": 5006,
+      "total_buffers_processed": 25,
+      "total_events_lost": 0
+    },
+    "decode_warning": "Some events did not match schema; tracerpt suggested -lr. Preserve raw ETL; XML output is not proof of complete decoding.",
+    "csharp_query": {
+      "requests": 1,
+      "serial": "5054316560DD729C",
+      "usage_page": 1,
+      "usage": 2,
+      "report_id": 2,
+      "length": 6,
+      "passed": false,
+      "error": 1,
+      "hex": null,
+      "buffer_is_device_report": false,
+      "handle_closed": true
+    },
+    "before_after": {
+      "cdc_requests_each": 15,
+      "all_readonly_responses_ok": true,
+      "serial": "5054316560DD729C",
+      "firmware": "0.10.1",
+      "revision": 1,
+      "config_ready": true,
+      "applying": false,
+      "apply_failed": false,
+      "maintenance": "idle",
+      "valid_slots": 0,
+      "crc32": 1053904252,
+      "schema2_length": 1387,
+      "schema2_sha256_equal": true,
+      "profiles_sha256_equal": true
+    },
+    "device_chain": "FluxRail composite → Realtek 5411 hub → ROOT_HUB30 → Intel USB 3.20 xHCI"
+  },
+  "continue": true,
+  "next_step": "不重发板端查询。保留usb.etl；如需更宽松的XML解析，只对这份现有ETL运行tracerpt -lr并保留新的解码日志，不覆盖原始结果。逐事件审查目标序号/interface 3的control transfer（A1/01/0102/6）是否存在、阶段/完成状态及Activity/endpoint/设备关联，并核对before/after CDC已知正向业务在总线事件中确实出现。只有事件字段足够且身份关联与无丢失条件满足，才判断拒绝边界；否则报告trace覆盖不足/架构解码不完整，不从缺失事件推断未发请求。",
+  "limitations": "本次审查未独立解析目标control transfer事件字段；summary的0 lost是ETW统计，不排除provider schema解码警告或目标事件缺失。"
+}

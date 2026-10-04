@@ -1,0 +1,456 @@
+{
+  "hello": {
+    "protocol_version": 1,
+    "id": 20001,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "product": "FluxRail",
+      "board": "FluxRail RP2040 4MiB",
+      "firmware_version": "0.10.1",
+      "firmware_id": "FLUXRAIL-FW-V1",
+      "firmware_board": "fluxrail-rp2040-4mib",
+      "firmware_metadata_format": 1,
+      "serial": "5054316560DD729C",
+      "usb_mode": "NORMAL_NKRO",
+      "scope": "device_schema2",
+      "capabilities": {
+        "nkro": true,
+        "mouse_buttons": true,
+        "lighting": true,
+        "cdc_config": true,
+        "ram_preview": true,
+        "profiles": true,
+        "flash_save": true,
+        "global_calibration_storage": true,
+        "snapshot_transfer": true,
+        "hall": true,
+        "knobs": true,
+        "push_hardware": true,
+        "absolute_x": true,
+        "motion_telemetry": true,
+        "hall_calibration": true,
+        "bootloader_command": true,
+        "usb_host_verified": false,
+        "io4": true,
+        "io4_game_verified": false,
+        "usb_cold_switch": true,
+        "max_profiles": 12,
+        "binding_sources": 12,
+        "max_line_bytes": 4096,
+        "max_tokens": 384,
+        "max_depth": 12
+      }
+    }
+  },
+  "get_status": {
+    "protocol_version": 1,
+    "id": 20002,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "config_ready": true,
+      "applying": false,
+      "apply_failed": false,
+      "requested_revision": 5,
+      "maintenance": "idle",
+      "save_result": 0,
+      "valid_slots": 3,
+      "physical_mask": 0,
+      "protocol_requests": 17,
+      "protocol_rejected": 0,
+      "overlong_lines": 0
+    }
+  },
+  "get_device": {
+    "protocol_version": 1,
+    "id": 20003,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "schema": 2,
+      "active_profile": 4,
+      "profile_count": 4,
+      "next_profile_id": 5,
+      "startup_usb_mode": "NORMAL_NKRO",
+      "calibration_valid": false,
+      "calibration_generation": 0
+    }
+  },
+  "list_profiles": {
+    "protocol_version": 1,
+    "id": 20004,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "active_profile": 4,
+      "max_profiles": 12,
+      "profiles": [
+        {
+          "profile_id": 1,
+          "name": "SDVX",
+          "preset": true
+        },
+        {
+          "profile_id": 2,
+          "name": "ONGEKI",
+          "preset": true
+        },
+        {
+          "profile_id": 3,
+          "name": "IN FALSUS",
+          "preset": true
+        },
+        {
+          "profile_id": 4,
+          "name": "MULTI K",
+          "preset": true
+        }
+      ]
+    }
+  },
+  "get_config": {
+    "protocol_version": 1,
+    "id": 20005,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "scope": "runtime_module1",
+      "config_ready": true,
+      "config": {
+        "keyboard": {
+          "bindings": [
+            {
+              "source_id": 0,
+              "action": {
+                "type": "keyboard",
+                "usage": 51,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 1,
+              "action": {
+                "type": "keyboard",
+                "usage": 15,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 2,
+              "action": {
+                "type": "keyboard",
+                "usage": 14,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 3,
+              "action": {
+                "type": "keyboard",
+                "usage": 13,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 4,
+              "action": {
+                "type": "keyboard",
+                "usage": 9,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 5,
+              "action": {
+                "type": "keyboard",
+                "usage": 7,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 6,
+              "action": {
+                "type": "keyboard",
+                "usage": 22,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 7,
+              "action": {
+                "type": "keyboard",
+                "usage": 4,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 8,
+              "action": {
+                "type": "keyboard",
+                "usage": 25,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 9,
+              "action": {
+                "type": "keyboard",
+                "usage": 17,
+                "modifiers": 0
+              }
+            },
+            {
+              "source_id": 10,
+              "action": {
+                "type": "disabled"
+              }
+            },
+            {
+              "source_id": 11,
+              "action": {
+                "type": "disabled"
+              }
+            }
+          ],
+          "retrigger_gap_us": 1000
+        },
+        "scan": {
+          "press_debounce_us": 1000,
+          "release_debounce_us": 1000
+        },
+        "lighting": {
+          "enabled": true,
+          "mode": "press",
+          "brightness_level": 50,
+          "per_key": false,
+          "global_color": [
+            255,
+            255,
+            255
+          ],
+          "key_colors": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "period_ms": 2000,
+          "reverse": false
+        },
+        "indicator": {
+          "enabled": true,
+          "color": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "get_motion": {
+    "protocol_version": 1,
+    "id": 20006,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "sample_ready": true,
+      "timestamp_us": 728112557,
+      "sample_revision": 5,
+      "epoch": 1,
+      "calibration": {
+        "job_id": 0,
+        "stage": 0,
+        "error": 0,
+        "collected": 0,
+        "required": 0,
+        "next_reference": 0,
+        "nodes": 0,
+        "sweep_segments": 0,
+        "sweep_left": false,
+        "sweep_right": false
+      },
+      "adc_started": true,
+      "ssi_started": true,
+      "raw_adc": [
+        881,
+        905,
+        929
+      ],
+      "hall": {
+        "valid": false,
+        "active": false,
+        "quality": 2,
+        "mm": 0.0,
+        "p": 0.0,
+        "output": 0.0,
+        "samples": 728095,
+        "queue_full": 0,
+        "adc_errors": 0,
+        "adc_attempts": 728095,
+        "skipped_periods": 0,
+        "max_lateness_us": 660,
+        "max_interval_us": 1468,
+        "max_span_us": 170,
+        "max_service_us": 194
+      },
+      "knobs": [
+        {
+          "knob_id": 0,
+          "valid": true,
+          "active": false,
+          "enabled": false,
+          "axis": 0,
+          "raw_angle": 0,
+          "raw_turns": 0.0,
+          "scaled_turns": 0.0,
+          "quality": 0,
+          "crc_errors": 0,
+          "transport_errors": 0,
+          "raw_push": false,
+          "ssi_push": false,
+          "filtered_push": false
+        },
+        {
+          "knob_id": 1,
+          "valid": true,
+          "active": false,
+          "enabled": false,
+          "axis": 1,
+          "raw_angle": 0,
+          "raw_turns": 0.0,
+          "scaled_turns": 0.0,
+          "quality": 0,
+          "crc_errors": 0,
+          "transport_errors": 0,
+          "raw_push": false,
+          "ssi_push": false,
+          "filtered_push": false
+        }
+      ],
+      "core1_max_service_us": 1312,
+      "telemetry_dropped": 0,
+      "running": false,
+      "adopting": false,
+      "calibration_generation": 0,
+      "calibration_valid": false
+    }
+  },
+  "get_calibration": {
+    "protocol_version": 1,
+    "id": 20007,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "sample_ready": true,
+      "timestamp_us": 728163078,
+      "sample_revision": 5,
+      "epoch": 1,
+      "calibration": {
+        "job_id": 0,
+        "stage": 0,
+        "error": 0,
+        "collected": 0,
+        "required": 0,
+        "next_reference": 0,
+        "nodes": 0,
+        "sweep_segments": 0,
+        "sweep_left": false,
+        "sweep_right": false
+      },
+      "running": false,
+      "adopting": false,
+      "calibration_generation": 0,
+      "calibration_valid": false
+    }
+  },
+  "get_usb_mode": {
+    "protocol_version": 1,
+    "id": 20008,
+    "ok": true,
+    "revision": 5,
+    "applied_revision": 5,
+    "saved_revision": 5,
+    "dirty": false,
+    "result": {
+      "current": "NORMAL_NKRO",
+      "requested_startup": "NORMAL_NKRO",
+      "saved_startup": "NORMAL_NKRO",
+      "forced_recovery": false,
+      "reboot_ready": false
+    }
+  },
+  "export_metadata": {
+    "length": 1387,
+    "revision": 5,
+    "crc32": 895336899
+  }
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "Status": "OK",
+    "Class": "USB",
+    "Name": "USB Composite Device",
+    "InstanceId": "USB\\VID_2E8A&PID_0003\\E0C9125B0D9B",
+    "properties": [
+      {
+        "KeyName": "DEVPKEY_Device_Service",
+        "Data": "usbccgp"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_Parent",
+        "Data": "USB\\VID_0BDA&PID_5411\\5&3a692ce1&0&9"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_ProblemCode",
+        "Data": 0
+      },
+      {
+        "KeyName": "DEVPKEY_Device_DriverInfPath",
+        "Data": "usb.inf"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_LocationPaths",
+        "Data": [
+          "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(9)#USB(2)",
+          "ACPI(_SB_)#ACPI(PC00)#ACPI(XHCI)#ACPI(RHUB)#ACPI(HS09)#USB(2)"
+        ]
+      }
+    ]
+  },
+  {
+    "Status": "OK",
+    "Class": "USB",
+    "Name": "USB 大容量存储设备",
+    "InstanceId": "USB\\VID_2E8A&PID_0003&MI_00\\7&22CF742D&0&0000",
+    "properties": [
+      {
+        "KeyName": "DEVPKEY_Device_Service",
+        "Data": "USBSTOR"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_Parent",
+        "Data": "USB\\VID_2E8A&PID_0003\\E0C9125B0D9B"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_ProblemCode",
+        "Data": 0
+      },
+      {
+        "KeyName": "DEVPKEY_Device_DriverInfPath",
+        "Data": "usbstor.inf"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_LocationPaths",
+        "Data": [
+          "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(9)#USB(2)#USBMI(0)",
+          "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(9)#USB(2)#USB(2)",
+          "ACPI(_SB_)#ACPI(PC00)#ACPI(XHCI)#ACPI(RHUB)#ACPI(HS09)#USB(2)#USBMI(0)",
+          "ACPI(_SB_)#ACPI(PC00)#ACPI(XHCI)#ACPI(RHUB)#ACPI(HS09)#USB(2)#USB(2)"
+        ]
+      }
+    ]
+  },
+  {
+    "Status": "Error",
+    "Class": null,
+    "Name": "RP2 Boot",
+    "InstanceId": "USB\\VID_2E8A&PID_0003&MI_01\\7&22CF742D&0&0001",
+    "properties": [
+      {
+        "KeyName": "DEVPKEY_Device_Service",
+        "Data": null
+      },
+      {
+        "KeyName": "DEVPKEY_Device_Parent",
+        "Data": "USB\\VID_2E8A&PID_0003\\E0C9125B0D9B"
+      },
+      {
+        "KeyName": "DEVPKEY_Device_ProblemCode",
+        "Data": 28
+      },
+      {
+        "KeyName": "DEVPKEY_Device_DriverInfPath",
+        "Data": null
+      },
+      {
+        "KeyName": "DEVPKEY_Device_LocationPaths",
+        "Data": [
+          "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(9)#USB(2)#USBMI(1)",
+          "ACPI(_SB_)#ACPI(PC00)#ACPI(XHCI)#ACPI(RHUB)#ACPI(HS09)#USB(2)#USBMI(1)"
+        ]
+      }
+    ]
+  }
+]

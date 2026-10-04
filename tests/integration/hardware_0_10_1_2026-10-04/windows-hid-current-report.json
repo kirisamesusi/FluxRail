@@ -1,0 +1,128 @@
+[
+  {
+    "path": "\\\\?\\hid#vid_239a&pid_cafe&mi_02#8&2eca9fc&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}\\kbd",
+    "product": "FluxRail NKRO prototype",
+    "serial": "5054316560DD729C",
+    "manufacturer": "FluxRail",
+    "caps_status": "0x00110000",
+    "caps": {
+      "Usage": 6,
+      "UsagePage": 1,
+      "InputReportByteLength": 30,
+      "OutputReportByteLength": 2,
+      "FeatureReportByteLength": 0,
+      "NumberLinkCollectionNodes": 1,
+      "NumberInputButtonCaps": 2,
+      "NumberInputValueCaps": 0,
+      "NumberInputDataIndices": 232,
+      "NumberOutputButtonCaps": 1,
+      "NumberOutputValueCaps": 0,
+      "NumberOutputDataIndices": 5,
+      "NumberFeatureButtonCaps": 0,
+      "NumberFeatureValueCaps": 0,
+      "NumberFeatureDataIndices": 0
+    },
+    "local_parser_zero_report": {
+      "X": {
+        "status": "0xC0110004",
+        "value": 0
+      },
+      "Y": {
+        "status": "0xC0110004",
+        "value": 0
+      }
+    },
+    "control_get_input_report": {
+      "passed": false,
+      "length": 30,
+      "hex": "000000000000000000000000000000000000000000000000000000000000",
+      "method": "HidD_GetInputReport single control state read; not motion/event capture",
+      "error": 1,
+      "error_message": "函数不正确。"
+    }
+  },
+  {
+    "path": "\\\\?\\hid#vid_239a&pid_cafe&mi_03&col01#8&1ab03641&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+    "product": "FluxRail NKRO prototype",
+    "serial": "5054316560DD729C",
+    "manufacturer": "FluxRail",
+    "caps_status": "0x00110000",
+    "caps": {
+      "Usage": 2,
+      "UsagePage": 1,
+      "InputReportByteLength": 6,
+      "OutputReportByteLength": 0,
+      "FeatureReportByteLength": 0,
+      "NumberLinkCollectionNodes": 2,
+      "NumberInputButtonCaps": 1,
+      "NumberInputValueCaps": 2,
+      "NumberInputDataIndices": 5,
+      "NumberOutputButtonCaps": 0,
+      "NumberOutputValueCaps": 0,
+      "NumberOutputDataIndices": 0,
+      "NumberFeatureButtonCaps": 0,
+      "NumberFeatureValueCaps": 0,
+      "NumberFeatureDataIndices": 0
+    },
+    "local_parser_zero_report": {
+      "X": {
+        "status": "0x00110000",
+        "value": 0
+      },
+      "Y": {
+        "status": "0x00110000",
+        "value": 0
+      }
+    },
+    "control_get_input_report": {
+      "passed": false,
+      "length": 6,
+      "hex": "010000000000",
+      "method": "HidD_GetInputReport single control state read; not motion/event capture",
+      "error": 1,
+      "error_message": "函数不正确。"
+    }
+  },
+  {
+    "path": "\\\\?\\hid#vid_239a&pid_cafe&mi_03&col02#8&1ab03641&0&0001#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+    "product": "FluxRail NKRO prototype",
+    "serial": "5054316560DD729C",
+    "manufacturer": "FluxRail",
+    "caps_status": "0x00110000",
+    "caps": {
+      "Usage": 2,
+      "UsagePage": 1,
+      "InputReportByteLength": 6,
+      "OutputReportByteLength": 0,
+      "FeatureReportByteLength": 0,
+      "NumberLinkCollectionNodes": 2,
+      "NumberInputButtonCaps": 1,
+      "NumberInputValueCaps": 2,
+      "NumberInputDataIndices": 5,
+      "NumberOutputButtonCaps": 0,
+      "NumberOutputValueCaps": 0,
+      "NumberOutputDataIndices": 0,
+      "NumberFeatureButtonCaps": 0,
+      "NumberFeatureValueCaps": 0,
+      "NumberFeatureDataIndices": 0
+    },
+    "local_parser_zero_report": {
+      "X": {
+        "status": "0x00110000",
+        "value": 0
+      },
+      "Y": {
+        "status": "0x00110000",
+        "value": 0
+      }
+    },
+    "control_get_input_report": {
+      "passed": false,
+      "length": 6,
+      "hex": "020000000000",
+      "method": "HidD_GetInputReport single control state read; not motion/event capture",
+      "error": 1,
+      "error_message": "函数不正确。"
+    }
+  }
+]

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\admin\Documents\FluxRail\tests\integration\test_io4_protocol_actual_v2.py", line 178, in <module>
+    assert report['passed']
+           ~~~~~~^^^^^^^^^^
+AssertionError

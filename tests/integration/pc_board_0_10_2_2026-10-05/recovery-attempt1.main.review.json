@@ -1,0 +1,13 @@
+{
+  "held_read_not_obtained": true,
+  "device_writes": 0,
+  "commentary_erratum": "Earlier return to NORMAL claim was premature; monitor only showed some target persona present",
+  "kind": "0.10.2 physical GP9 recovery first attempt",
+  "actual_parent": "USB\\VID_0CA3&PID_0021\\5054316560DD729C",
+  "monitor_stopped": true,
+  "reviewer": "/root main process",
+  "normal_CDC_absent": true,
+  "user_confirmed_held_10_seconds_and_removed": true,
+  "reason": "Physical entry did not trigger; contact/boot timing not yet determined; no conclusion GPIO damage",
+  "passed": false
+}

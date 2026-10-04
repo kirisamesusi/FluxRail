@@ -1,0 +1,36 @@
+# Generated compiler output, downloaded tools, and dependency runtimes.
+/tests/**/build/
+/dependencies/generated/
+**/node_modules/
+**/__pycache__/
+*.py[cod]
+*.tmp
+*.pending
+
+# Browser profiles contain session/cache data; they are not test evidence.
+/tests/integration/pc_board_*/**/isolated-profile/
+/tests/integration/pc_board_*/**/user-data/
+/tests/integration/pc_board_*/**/browser-profile/
+/tests/integration/pc_board_*/**/isolated-browser-data/
+*.o
+*.a
+
+# Local credentials and editor/OS state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# The old project retains its local Git history separately.
+/references/legacy-rp2040-zero/.git/
+/backups/local-git-history/
+
+# Release exports stay local; verified historical rollback artifacts under
+# backups/ remain tracked together with their source and SHA manifests.
+/releases/

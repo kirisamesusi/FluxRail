@@ -1,0 +1,10 @@
+{
+  "started": "2026-10-04T17:15:33.0829976Z",
+  "finished": "2026-10-04T17:15:33.7606306Z",
+  "reboot_ack_received": true,
+  "writes": 3,
+  "saved_revision": 10,
+  "serial_closed": true,
+  "ram_preview_kept_normal": true,
+  "target": "IO4"
+}

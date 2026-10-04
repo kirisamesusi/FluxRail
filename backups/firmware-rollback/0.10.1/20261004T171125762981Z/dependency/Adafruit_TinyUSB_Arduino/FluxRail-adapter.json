@@ -1,0 +1,21 @@
+{
+  "upstream": "Arduino-Pico6.1.0 bundled Adafruit TinyUSB3.7.7",
+  "source": "C:\\Users\\admin\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\6.1.0\\libraries\\Adafruit_TinyUSB_Arduino",
+  "generated": "C:\\Users\\admin\\Documents\\FluxRail\\dependencies\\generated\\Adafruit_TinyUSB_Arduino",
+  "modified": [
+    "src/arduino/Adafruit_USBD_Device.cpp",
+    "src/class/cdc/cdc_device.c",
+    "src/arduino/Adafruit_USBD_Device.h"
+  ],
+  "source_sha256": {
+    "src/arduino/Adafruit_USBD_Device.cpp": "bf5b5618c8bc6654b0d139349e7a9a68ba051a2146c0b84f0c52e3b7e3122c4c",
+    "src/class/cdc/cdc_device.c": "2ca9f63f5812e6fd58405e52b1bb282aa0752d1110fa577aca6442c1f67f4840",
+    "src/arduino/Adafruit_USBD_Device.h": "63b7cd70b8428e66057749251b5fe64381301a062b4fe6a378447bd51bdeb468"
+  },
+  "generated_sha256": {
+    "src/arduino/Adafruit_USBD_Device.cpp": "e6da7588d1e23614dc492e34dc8fe384b65ae667ff70d5f71ce4aefb31ee4063",
+    "src/class/cdc/cdc_device.c": "7311016a5745fe2c5531feebc8f5ade69c389aa9218a5ba4da8fb22b0810777e",
+    "src/arduino/Adafruit_USBD_Device.h": "163278b03a22c703690f67e46b0ca7bdfbb1a68d9c4e73464980fc4a0ee5bda7"
+  },
+  "system_library_modified": false
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "independent_normal_return_original_configuration_restored",
+  "profiles_equal": true,
+  "schema_diff_offsets": [
+    4
+  ],
+  "schema_equal_except_revision": true,
+  "schema_length": 1387,
+  "crc32": 700994562,
+  "revision": 9,
+  "applied_revision": 9,
+  "saved_revision": 9,
+  "dirty": false,
+  "active_profile": 4,
+  "physical_mask": 0,
+  "maintenance": "idle",
+  "mode": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "NORMAL_NKRO",
+    "saved_startup": "NORMAL_NKRO",
+    "forced_recovery": false,
+    "reboot_ready": false
+  },
+  "serial_closed": true,
+  "independent_read_only_cdc_requests": 15,
+  "firmware_still": "0.10.1 original device build; candidate not flashed",
+  "game": "not_run",
+  "passed": true
+}

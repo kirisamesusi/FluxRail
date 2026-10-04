@@ -1,0 +1,64 @@
+{
+  "started": "2026-10-04T09:08:40.629Z",
+  "port": "COM29",
+  "serial": "5054316560DD729C",
+  "kind": "real_board",
+  "stages": [
+    {
+      "name": "阶段1复核通过：身份与备份一致",
+      "time": "2026-10-04T09:08:40.943Z",
+      "summary": "身份、四模板及完整schema2备份核对通过；RAM/协议/稳定性待测。",
+      "result": {
+        "version": "0.10.1",
+        "serial": "5054316560DD729C",
+        "revision": 1,
+        "length": 1387,
+        "crc": 1053904252
+      },
+      "next": "安全RAM参数与模板切换",
+      "interfaces": "hello/get_status/get_profile/export_config",
+      "limits": "外设缺失，不能证明物理键、传感器、灯色或游戏功能。",
+      "review": {
+        "stage": 1,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:08:40.629Z",
+        "stage_name": "阶段1复核通过：身份与备份一致",
+        "continue": false,
+        "evaluation": "Luna确认基线读回及备份一致；工具轮询最低速率/强制审核/显式版本门槛须修正。本次在只读阶段停止，未开始RAM改动。"
+      }
+    },
+    {
+      "name": "本轮CDC测试结束与恢复核对",
+      "time": "2026-10-04T09:09:49.304Z",
+      "summary": "有失败项，完成范围见前述阶段。",
+      "result": {
+        "restored": true,
+        "revision": 1,
+        "flash_written": false,
+        "failure": "Luna review requires stopping\n\nfalse !== true\n"
+      },
+      "next": "从report.json失败项定位继续，先核对RAM恢复。",
+      "interfaces": "get_profile/get_device/export_config；report.json、original/final-schema2.bin",
+      "limits": "逐模板/meta及二进制校验，只有revision字段允许增加；不含真实Web Serial端到端、HID物理输入、Flash/断电/IO4/游戏。缺MT6701时全零SSI帧valid=true待澄清。",
+      "review": {
+        "stage": 2,
+        "reviewer": "gpt-6-luna",
+        "run_started": "2026-10-04T09:08:40.629Z",
+        "stage_name": "本轮CDC测试结束与恢复核对",
+        "continue": true,
+        "evaluation": "Luna确认安全中止：20条仅只读请求，original/final-schema2.bin逐字节一致，revision1，无RAM写入/Flash/重启；本次无稳定性结论。关闭串口由父窗口等待exec会话结束确认，33134为工具session_id，不是操作系统PID。"
+      }
+    }
+  ],
+  "restored": true,
+  "flash_written": false,
+  "game_tested": false,
+  "failure": {
+    "message": "Luna review requires stopping\n\nfalse !== true\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Luna review requires stopping\n\nfalse !== true\n\n    at stage (file:///C:/Users/admin/Documents/FluxRail/tests/integration/bare_board_test.mjs:33:10)\n    at async file:///C:/Users/admin/Documents/FluxRail/tests/integration/bare_board_test.mjs:71:2",
+    "time": "2026-10-04T09:09:49.110Z"
+  },
+  "final_revision": 1,
+  "final_snapshot_crc": 1053904252,
+  "finished": "2026-10-04T09:09:49.304Z"
+}

@@ -1,0 +1,21 @@
+﻿{
+    "events":  [
+                   {
+                       "present":  true,
+                       "time":  "2026-10-04T16:07:25.2476592Z"
+                   },
+                   {
+                       "present":  false,
+                       "time":  "2026-10-04T16:09:14.3901464Z"
+                   },
+                   {
+                       "present":  true,
+                       "time":  "2026-10-04T16:10:01.9804245Z"
+                   }
+               ],
+    "started":  "2026-10-04T16:07:24.7826080Z",
+    "read_completed":  true,
+    "device_writes":  0,
+    "pid":  240664,
+    "finished":  "2026-10-04T16:10:02.6614711Z"
+}

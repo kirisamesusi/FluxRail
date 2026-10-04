@@ -1,0 +1,20 @@
+[
+  {
+    "Status": "OK",
+    "Class": "USB",
+    "FriendlyName": "USB Composite Device",
+    "InstanceId": "USB\\VID_2E8A&PID_0003\\E0C9125B0D9B"
+  },
+  {
+    "Status": "OK",
+    "Class": "USB",
+    "FriendlyName": "USB 大容量存储设备",
+    "InstanceId": "USB\\VID_2E8A&PID_0003&MI_00\\7&22CF742D&0&0000"
+  },
+  {
+    "Status": "Error",
+    "Class": null,
+    "FriendlyName": "RP2 Boot",
+    "InstanceId": "USB\\VID_2E8A&PID_0003&MI_01\\7&22CF742D&0&0001"
+  }
+]

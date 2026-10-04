@@ -1,0 +1,353 @@
+{
+  "date_local": "2026-10-03",
+  "phase": "module1 plus authorized public integration; normal NKRO prototype",
+  "scope": {
+    "authorized": [
+      "keyboard",
+      "lighting",
+      "common",
+      "board",
+      "realtime",
+      "app",
+      "usb",
+      "dependencies and relevant validation/docs"
+    ],
+    "other_business_modules_modified": false
+  },
+  "validation": {
+    "firmware_compile_link": {
+      "date_local": "2026-10-03T03:36:43.678238+08:00",
+      "validation": "production entry normal NKRO prototype compile/link only",
+      "fqbn": "rp2040:rp2040:generic:flash=4194304_0,boot2=boot2_w25q64jv_4_padded_checksum,freq=125,usbstack=tinyusb",
+      "core": "Arduino-Pico 6.1.0",
+      "tinyusb": "3.7.7 project-owned startup adapter",
+      "exit_code": 0,
+      "source_sha256": {
+        "firmware/FluxRail/FluxRail.ino": "0375af76ea40e292a8682d4e50fa40ca85d53bfd96cb8ce27ce342af5e3e7490",
+        "firmware/FluxRail/src/app/App.cpp": "e8dbe924d679ac84c3a0dce097b6d7e1bf074b14d5cce269b788b47fc24273bf",
+        "firmware/FluxRail/src/app/App.h": "41019c82dac592be7bf03279b34402dd8cd772b4a221b6fdea4324753798a5e0",
+        "firmware/FluxRail/src/app/ConfigCoordinator.cpp": "9af48892bab4741c82e5e400abd1d8bebf279bcfc92552607be90579b3048873",
+        "firmware/FluxRail/src/app/ConfigCoordinator.h": "ee27f0f674e8d86d1f241aedcbab1ebcfd11bb982bb0459b47af0d2466ff5daa",
+        "firmware/FluxRail/src/board/BoardConfig.h": "b42411fee0d0382ea852c968f3ad522c250757d6ee93e87dec558ca80df70b03",
+        "firmware/FluxRail/src/common/ConfigTypes.h": "9c806343ea9ee5a48e2de5f5ede7b908a5d4161006db049ebf76833ab9f56dfc",
+        "firmware/FluxRail/src/common/InputTypes.h": "244a3d3fc727e56ba83549976a0169d56a2007052bd1500be365151dc19657a8",
+        "firmware/FluxRail/src/keyboard/ActionMapper.cpp": "1418b7706b2000ed93eba4f970eefab25b808a2c15a857e928fb3d64c24934c0",
+        "firmware/FluxRail/src/keyboard/ActionMapper.h": "2fc0c143ff3076f17de9fe002254ec7f5147001cef8229b44f8dedacb0e59b1c",
+        "firmware/FluxRail/src/keyboard/KeyboardTypes.cpp": "3cff667ce1b1ad9b26a4961874e5c69aca5bedd25cec6fa4a085278e2db4a899",
+        "firmware/FluxRail/src/keyboard/KeyboardTypes.h": "bcf283cd8845bfa1e7dad1f312d71aecd2b3edd6b89534ef31f064d21678d228",
+        "firmware/FluxRail/src/keyboard/KeyScanner.cpp": "b8dedbb7dd92c8b99266100619014da716f709e3333a776589139f7bd7392580",
+        "firmware/FluxRail/src/keyboard/KeyScanner.h": "f114bbff6f4d8af97e0c5c4611e5b5ae1b414a9d3646154a46309823f2b8e87d",
+        "firmware/FluxRail/src/keyboard/KeyScannerRp2040.cpp": "41cacf342f1d0f6c394f3ee30f0eba8b2f056d76332cdda0c296277247bcb33b",
+        "firmware/FluxRail/src/keyboard/KeyScannerRp2040.h": "524543ac23b2db840a62627133cd9d6700059be5de68fad5d2d88f6c6dcfbb85",
+        "firmware/FluxRail/src/lighting/KeyLighting.cpp": "2063558405f4ca0b735d0f69f2ecc3d3b9909c05022857ee561745cf9d5527f8",
+        "firmware/FluxRail/src/lighting/KeyLighting.h": "9e2f3f1eb92b2f79cf2f78e82d8e60d4f867425b1480cc39574a9c4f7d96072e",
+        "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.cpp": "79945f4abef1917fad8018be030dad3cb5eb87773ef00d31bc0dc6d9d39653ea",
+        "firmware/FluxRail/src/lighting/Ws2812OutputRp2040.h": "3cbd6f8c6fb273a7ade848dc5fb965119845bb22e3ea902c2695169726d557f1",
+        "firmware/FluxRail/src/realtime/ConfigMailbox.h": "6ec840dc7368432a559dab85d26e7f2a23cd14d0a2f36024fbce9236cbaad44b",
+        "firmware/FluxRail/src/realtime/InputWorker.cpp": "cd299a1a96d857e86593572dc43abe49e4940edc01ea6a705e72f13a8364056b",
+        "firmware/FluxRail/src/realtime/InputWorker.h": "a6504a1e12f89fcf413ea2847f08921171910306cf4609eaa19b11c66c563d25",
+        "firmware/FluxRail/src/realtime/SpscQueue.h": "d53170a665c34adf1283751120c794f084b6043f3ba4ea4e7b6b76819ed6bced",
+        "firmware/FluxRail/src/usb/NormalHid.cpp": "2be5fc804b380fdcdf566820c5ca1a70bf352cb188f7abf1added784520cd7a1",
+        "firmware/FluxRail/src/usb/NormalHid.h": "8441ac4be7e22fcfb7b351e3bdb46816ce818f810121bd3a20136cb947427216",
+        "firmware/FluxRail/src/usb/NormalHidCodec.cpp": "20912404701f99fa2bd18eba37638b14f6fa9e856c14455e3a879d78553c5fdc",
+        "firmware/FluxRail/src/usb/NormalHidCodec.h": "90dc5618e7dcf69683638c56ad6d805cb25f8e8b0ffbfa8f68d003277a96359b"
+      },
+      "dependency_adapter": {
+        "upstream": "Arduino-Pico6.1.0 bundled Adafruit TinyUSB3.7.7",
+        "source": "C:\\Users\\admin\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\6.1.0\\libraries\\Adafruit_TinyUSB_Arduino",
+        "generated": "C:\\Users\\admin\\Documents\\FluxRail\\dependencies\\generated\\Adafruit_TinyUSB_Arduino",
+        "modified": [
+          "src/arduino/Adafruit_USBD_Device.cpp",
+          "src/arduino/Adafruit_USBD_Device.h"
+        ],
+        "source_sha256": {
+          "src/arduino/Adafruit_USBD_Device.cpp": "bf5b5618c8bc6654b0d139349e7a9a68ba051a2146c0b84f0c52e3b7e3122c4c",
+          "src/arduino/Adafruit_USBD_Device.h": "63b7cd70b8428e66057749251b5fe64381301a062b4fe6a378447bd51bdeb468"
+        },
+        "generated_sha256": {
+          "src/arduino/Adafruit_USBD_Device.cpp": "940b1082422caaed17dc0b983ee9fb839ef781ec9ed336e33fe90b25dda52788",
+          "src/arduino/Adafruit_USBD_Device.h": "8a5cc2b952b0db3b5b205eb83a1ce81f654491906c34a20cbf2acf518178ca79"
+        },
+        "system_library_modified": false
+      },
+      "uploaded": false,
+      "hardware_tested": false,
+      "game_tested": false,
+      "io4_implemented": false,
+      "flash_storage_implemented": false,
+      "log": "firmware_compile.log",
+      "strict_project_units": 12,
+      "source_link_audit_passed": true
+    },
+    "strict_application": {
+      "passed": true,
+      "translation_units": 12,
+      "project_warnings": [],
+      "unique_usb_callbacks": {
+        "fluxrail_usb_configure_before_connect": [
+          "100053f8 T fluxrail_usb_configure_before_connect"
+        ],
+        "tud_descriptor_device_cb": [
+          "10005a64 T tud_descriptor_device_cb"
+        ],
+        "tud_descriptor_configuration_cb": [
+          "10005a6c T tud_descriptor_configuration_cb"
+        ],
+        "tud_descriptor_string_cb": [
+          "10005a78 T tud_descriptor_string_cb"
+        ],
+        "tud_hid_descriptor_report_cb": [
+          "10005cd4 T tud_hid_descriptor_report_cb"
+        ],
+        "tud_hid_get_report_cb": [
+          "10005ce8 T tud_hid_get_report_cb"
+        ],
+        "tud_hid_set_report_cb": [
+          "10005d14 T tud_hid_set_report_cb"
+        ],
+        "tud_hid_report_complete_cb": [
+          "10005404 T tud_hid_report_complete_cb"
+        ],
+        "tud_hid_report_failed_cb": [
+          "10005418 T tud_hid_report_failed_cb"
+        ]
+      },
+      "core1_entry_calls_project": true
+    },
+    "simulations": [
+      {
+        "suite": "module1",
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_bindings_ascii",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 195
+          },
+          {
+            "test": "test_twelve_nkro",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 54
+          },
+          {
+            "test": "test_duplicate_busy_overlap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 95
+          },
+          {
+            "test": "test_modifiers_and_mouse",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 25
+          },
+          {
+            "test": "test_backpressure_revision_recovery",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 83
+          },
+          {
+            "test": "test_retrigger_time_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 7
+          },
+          {
+            "test": "test_scanner_bounce_overflow_wrap",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 11
+          },
+          {
+            "test": "test_lighting_modes_bounds",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 44849
+          },
+          {
+            "test": "test_final_output_cap_and_order",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 24
+          }
+        ]
+      },
+      {
+        "suite": "shared state machine and codec",
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_timeout_stale_reply_retry",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 6
+          },
+          {
+            "test": "test_hid_descriptors_and_wire_encoding",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 22
+          },
+          {
+            "test": "test_replace_busy_apply_keeps_confirmed_config",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 15
+          },
+          {
+            "test": "test_spsc_fifo_peek_full",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 1806
+          },
+          {
+            "test": "test_mailbox_complete_value_copy",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 6
+          },
+          {
+            "test": "test_overflow_new_epoch_no_history",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 139
+          },
+          {
+            "test": "test_bt_push_single_stream",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 13
+          },
+          {
+            "test": "test_pause_apply_ack_busy_and_resume",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 14
+          }
+        ]
+      },
+      {
+        "suite": "actual NormalHid with boundary mocks",
+        "validation": "ARM instruction simulation of original module C++",
+        "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+        "core": "Arduino-Pico 6.1.0",
+        "unicorn": "2.1.3",
+        "hardware_tested": false,
+        "game_tested": false,
+        "results": [
+          {
+            "test": "test_transport_order_busy_fault_and_mutex",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 29
+          },
+          {
+            "test": "test_transport_mouse_owner_and_control_bounds",
+            "passed": true,
+            "failed_cpp_line": null,
+            "checks": 18
+          }
+        ]
+      }
+    ],
+    "total_test_groups": 19,
+    "total_checks": 47411,
+    "firmware_resource_bytes": {
+      "flash": 88700,
+      "global_ram": 21828
+    },
+    "module_smoke_resource_bytes": {
+      "flash": 82480,
+      "global_ram": 17952
+    },
+    "dependency_warnings": {
+      "occurrences_in_final_log": 24,
+      "source": "bundled TinyUSB class/cdc/cdc_host.h dtr/rts missing-field-initializers",
+      "project_source_warnings": 0
+    },
+    "hardware": {
+      "uploaded": false,
+      "tested": false,
+      "inventory": {
+        "observed_at": "2026-10-02T19:35:07.211Z",
+        "command": "arduino-cli board list --format json",
+        "exit_code": 0,
+        "result": [
+          {
+            "port": {
+              "address": "COM1",
+              "label": "COM1",
+              "protocol": "serial",
+              "protocol_label": "Serial Port"
+            }
+          }
+        ],
+        "read_only": true,
+        "serial_writes": false,
+        "uploaded": false
+      }
+    },
+    "game_tested": false
+  },
+  "artifact": {
+    "path": "tests/integration/build/arduino/FluxRail.ino.uf2",
+    "file_bytes": 212480,
+    "sha256": "fdfc57038a9fe19c649143122ddd3a4bc3094e6001b9a23d53cf0723b13b4b6b",
+    "compiled_only": true
+  },
+  "test_and_build_script_sha256": {
+    "tests/module1/module1_tests.cpp": "9e5bf84be99fd661004777bd2e79349874d99eb40146357e2f6fa12ca17b4a22",
+    "tests/module1/run_tests.py": "7558b1b34b17dee41aa09c7ae557bd5a147a05bc463e95d7a813e3c0d3396099",
+    "tests/module1/compile_smoke.py": "e84a1f6b61afd231a806cd6f8ffecddb169d335462cf917ed2283546d6bd845d",
+    "tests/integration/integration_tests.cpp": "a1ecbd29abbe08cb17bd1dd2406bd9f53f97e529cc1e4c3168aceae380b69c5b",
+    "tests/integration/transport_tests.cpp": "b08d35543d5da8881f33ffc35ede588e94e04f1602b08a629c35e43f05a4518a",
+    "tests/integration/run_tests.py": "7442f7e0912ecb87d884a0d7eeef144242b8fc3c7a4a1004436f44e99a7e159a",
+    "tests/integration/run_transport.py": "5344bb4dbe679dd11d84c9f4aa692185459e33705e4027d81d7e5295ea960cdd",
+    "tests/integration/compile_firmware.py": "48163d027b4551d44d090baee0ed32169e5cc119cd602d718f5e02362b21f833",
+    "tests/integration/stubs/Adafruit_TinyUSB.h": "6c02cb10af5cc402d72508deb227fc9d01882962bd96097e5cf665d45b724e7c",
+    "tests/integration/stubs/pico/mutex.h": "3f0408073dbb2ed777586c83e13543888e4121a0a07a81972914aabbcb3570b8",
+    "dependencies/prepare_tinyusb.py": "f35cbb2e79f5ba6f72fae6dbacd5da0f441c0acd0bd83a064c3c549bf7cf085f"
+  },
+  "review": {
+    "completed": true,
+    "checked": [
+      "single shared types and source numbering",
+      "SPSC acquire/release and mailbox ownership",
+      "pause ACK before clearing queue",
+      "USB IRQ mutex and report copying/ready/backpressure",
+      "independent same-usage UP/DOWN and modifiers",
+      "fault epoch and paused-state recovery without history replay",
+      "new config indicator only after confirmation including first apply",
+      "watchdog input-core freshness including core never started",
+      "LED DMA lifetime/caps and shared pin constants",
+      "fixed private TinyUSB startup hook and sole callbacks",
+      "generated build artifacts not uploaded"
+    ],
+    "test_harness_repairs": [
+      "ARM EABI 32-bit guard required in transport-only runtime shim",
+      "retain Arduino include order to avoid mixing SDK TinyUSB when auditing; no firmware dependency replacement"
+    ]
+  },
+  "remaining": [
+    "real Windows enumeration and physical HID/PIO/DMA/dual-core timing",
+    "BT and inferred LED chain/GRB verification",
+    "PUSH module3 input and mechanical filtering",
+    "ordinary absolute X plus relative knob motion routing",
+    "IO4 persona/output/cold switch",
+    "CDC commands and full Profile/calibration/Flash storage",
+    "game same-usage retrigger interval acceptance"
+  ]
+}

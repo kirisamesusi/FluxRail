@@ -1,0 +1,9 @@
+{
+  "gp9_retry2_held_20_seconds": true,
+  "first_reply": "已完成，保持至少10秒，跳线已移除",
+  "board_capacity_user_statement": "Final target4MiB; current test board2MiB; capacity check waived",
+  "reply": "已完成，保持至少20秒，跳线已移除",
+  "source": "Trusted user reply",
+  "user_flashing_statement": "我已经刷了0.10.2版本固件了",
+  "jumper_removed": true
+}

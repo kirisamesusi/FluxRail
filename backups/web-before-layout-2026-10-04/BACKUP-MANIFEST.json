@@ -1,0 +1,148 @@
+{
+  "created": "2026-10-04",
+  "source": "web/",
+  "purpose": "左右布局重构前完整备份",
+  "restore": "停止网页服务后，将本目录除 BACKUP-MANIFEST.json 外的内容复制回 web/。",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 20873,
+      "sha256": "c044185501c60ac90e5a111dc232903e1b1e71f015c77803b91eaf77d181af9f"
+    },
+    {
+      "path": "package.json",
+      "bytes": 273,
+      "sha256": "55f3cc3d92339c5257a5b334d098c6443411b06097067ccfecf20d4224b75f4c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14433,
+      "sha256": "943d4d245a057d3e5a381b5de574cf2c82b6fd099514d237577d85da30b2e2fb"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 1717,
+      "sha256": "b5508888850bfd6f2d1ea4bb9b87134de0efa7da96285c42ba6d61e9d006c965"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 30905,
+      "sha256": "d6bc240e33b36aaeee6d77d3c9df925d52932349287bcf3b94d63a937b7368f8"
+    },
+    {
+      "path": "src/config.js",
+      "bytes": 7058,
+      "sha256": "2cb2b91b05935b3b3b84458382f48c5972da84d325851ac54bd81c0d7ffe4ca3"
+    },
+    {
+      "path": "src/connection/client.js",
+      "bytes": 6629,
+      "sha256": "cefe0e868efad23fa160f0058d5c2214a6538ba2e5248dedbb8f4804b8c55cd3"
+    },
+    {
+      "path": "src/demo.js",
+      "bytes": 8852,
+      "sha256": "c8a89e8fb08c8e12dc9665aeb161057ab30706f17d96f96d4e21873bc89a4842"
+    },
+    {
+      "path": "src/device.js",
+      "bytes": 3494,
+      "sha256": "c55e99cf19fc752519c3ffaf725ac084d33ea23dca50081346d6d65ae30cd49f"
+    },
+    {
+      "path": "src/integration.js",
+      "bytes": 13139,
+      "sha256": "d7db1f7a1fd7eee9b8cf83e93f858b7e6568fed6ad9af8052f022a53d4668443"
+    },
+    {
+      "path": "src/io4-editor.js",
+      "bytes": 6795,
+      "sha256": "9e792e61f6f12f990bcbe7d046dceac2c2f77bdd46840e121476430dc307e466"
+    },
+    {
+      "path": "src/keyboard.js",
+      "bytes": 3597,
+      "sha256": "ade1e14ad255431ae7f663c42f202b8c3a2ef318d7cd73f5e7491c007b28ba48"
+    },
+    {
+      "path": "src/knob-preview.js",
+      "bytes": 6595,
+      "sha256": "2618d996a28f2ccffa6ee382bc78ac8c18341f9db2a608a0c54c6ada641b95c2"
+    },
+    {
+      "path": "src/snapshot.js",
+      "bytes": 8620,
+      "sha256": "7900895bcb151a2670eb8249571bf49820862ccbf36190a4a35949df6fcb2bbd"
+    },
+    {
+      "path": "src/update/uf2.js",
+      "bytes": 1480,
+      "sha256": "8ff3ffd98af9afdcfc9cb6248cbfb8df26375d13b3bb62172765ba6458e26595"
+    },
+    {
+      "path": "style.css",
+      "bytes": 20006,
+      "sha256": "82b36d9db3f438376410d6c03889c7a30f5cb9ce049b3c37ca3663f4ff57e5ef"
+    },
+    {
+      "path": "tests/golden.js",
+      "bytes": 2811,
+      "sha256": "f2c656a470166cf61d9c1e561652ea88bf2e0ea9669afa54b231b7b76b670c85"
+    },
+    {
+      "path": "tests/hall-controls-2026-10-03.png",
+      "bytes": 39314,
+      "sha256": "f415732247c282c854cf058fa482018b1ae28bc8417f8cd5243f19287818e063"
+    },
+    {
+      "path": "tests/import-example.json",
+      "bytes": 2923,
+      "sha256": "75da9671a70ae5b154a7a41d7260813b8c8105839fc1c9af63ef0ce6d7bcd000"
+    },
+    {
+      "path": "tests/integration-ui.test.mjs",
+      "bytes": 10531,
+      "sha256": "d8de2999853b034a976f7254a7ab13b582ddf5b524478bce5e6c05524954bb3c"
+    },
+    {
+      "path": "tests/integration.test.mjs",
+      "bytes": 2855,
+      "sha256": "9fc23330b76c2a38c83e671b922235d2b4ecf179b9fa15a2ef465d2ff41bf494"
+    },
+    {
+      "path": "tests/knob-preview.test.mjs",
+      "bytes": 1342,
+      "sha256": "e413352b7cbe9f2bbbc4e820a8c632a774ce60a22d661b915aa0c96c2a644276"
+    },
+    {
+      "path": "tests/lab-layout-2026-10-03.png",
+      "bytes": 42549,
+      "sha256": "dd9d277b3a1a6f4bb6f290be1d78bc991ba31575bd1dc4f5a1c8aeeb2d801a63"
+    },
+    {
+      "path": "tests/style_review_2026-10-03.md",
+      "bytes": 4446,
+      "sha256": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36"
+    },
+    {
+      "path": "tests/validation_2026-10-03.json",
+      "bytes": 11369,
+      "sha256": "9d33819a907772056a5fe332acada329554a3bee086653c31b8a93a8cce2d73b"
+    },
+    {
+      "path": "tests/validation_hall_controls_2026-10-03.json",
+      "bytes": 552,
+      "sha256": "7863c597ef90b3d0cd97e0beea35f7b533e04ef3afdd98c5b8ca1d6aa75a7851"
+    },
+    {
+      "path": "tests/validation_lab_layout_2026-10-03.json",
+      "bytes": 1867,
+      "sha256": "5fb154ab7e4bf8fc0b55ccaccbc8198de96463074743383a917023a67e148d5b"
+    },
+    {
+      "path": "tests/web.test.mjs",
+      "bytes": 11995,
+      "sha256": "ba555b0b6aa4e9323a73406ca68b9a9e7b159c919f44d446c33ab17a6da5abc3"
+    }
+  ]
+}

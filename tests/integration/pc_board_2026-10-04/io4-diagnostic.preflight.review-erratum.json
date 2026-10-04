@@ -1,0 +1,8 @@
+{
+  "reviewer": "Luna",
+  "kind": "review_erratum",
+  "corrects": "io4-diagnostic.preflight.review.json",
+  "statement_corrected": "The earlier preflight listed firmware source evidence under `tests/integration/firmware/...`, which is an incorrect repository-relative path. The project sources are under `firmware/FluxRail/src/...`.",
+  "independent_dependency_check": "The installed dependency was located at C:/Users/admin/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/6.1.0/libraries/Adafruit_TinyUSB_Arduino. Adafruit_TinyUSB_rp2040.cpp routes USBCTRL shared IRQ to usb_task_trigger_irq, which pends USB_TASK_IRQ; usb_task_irq acquires __usb_mutex and calls tud_task. TinyUSB_Device_Task also acquires this mutex around tud_task. In hid_device.c, control SET_REPORT invokes tud_hid_set_report_cb at ACK stage after extracting a matching report ID from the leading byte. These lines independently establish a possible callback interval after App's local now capture and before its later hid.service(now), conditional on the IRQ actually running in that interval.",
+  "impact": "Only the source paths and the degree of independent timing evidence are corrected. The previous source-ordering explanation remains a hypothesis; the new hardware diagnostic strongly reproduces premature timeouts but does not by itself prove the interleaving or exclude another implementation/timing cause."
+}

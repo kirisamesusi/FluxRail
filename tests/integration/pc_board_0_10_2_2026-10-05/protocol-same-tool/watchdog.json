@@ -1,0 +1,11 @@
+{
+  "exit_code_available": true,
+  "finished": "2026-10-04T17:16:03.3348827Z",
+  "exit_code": 0,
+  "timeout_seconds": 45,
+  "launcher_sha256": "37E2704F2432051DFC82DB7E893EB186B8157304641825246C0ABE09B701FDF0",
+  "child_pid": 246520,
+  "started": "2026-10-04T17:16:02.5653759Z",
+  "preflight_only": false,
+  "script_sha256": "BDB83FD6AC8B04CF8C90EA9F4EF664D0C0363C4891D11FAD03A444314F75F881"
+}

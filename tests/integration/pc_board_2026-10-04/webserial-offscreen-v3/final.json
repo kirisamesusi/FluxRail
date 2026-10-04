@@ -1,0 +1,11 @@
+{
+  "connection": "未连接设备",
+  "identity": "设备等待握手",
+  "notice": "连接失败",
+  "draft": "无网页草稿",
+  "saved": "已断开，保存结果以重连读回为准",
+  "visible": "visible",
+  "requestPortErrors": [],
+  "portType": "SerialPort",
+  "simulated": false
+}

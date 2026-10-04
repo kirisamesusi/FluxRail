@@ -1,0 +1,9 @@
+{
+  "helper_stopped": true,
+  "unverified_binary_executed": false,
+  "official_download_helper_pid": 252212,
+  "partial_archive_bytes": 125458496,
+  "date": "2026-10-04",
+  "webserial_offscreen_executed": false,
+  "reason": "Native Chrome computer use forcibly stopped because current URL could not be reliably established; current turn ending"
+}

@@ -1,0 +1,6 @@
+{"protocol_version":1,"id":1,"op":"hello","payload":{}}
+{"protocol_version":1,"id":2,"op":"get_usb_mode","payload":{}}
+{"protocol_version":1,"id":3,"op":"set_io4_bindings","payload":{"expected_revision":1,"profile_id":2,"bindings":[8,6,5,4,7,3,2,1,9,10,0,0]}}
+{"protocol_version":1,"id":4,"op":"set_startup_usb_mode","payload":{"expected_revision":2,"mode":"IO4"}}
+{"protocol_version":1,"id":5,"op":"save_config","payload":{"expected_revision":3}}
+{"protocol_version":1,"id":6,"op":"reboot_to_saved_mode","payload":{"expected_revision":3,"target":"IO4"}}

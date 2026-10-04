@@ -1,0 +1,718 @@
+{
+  "started": "2026-10-04T17:16:30.595365+00:00",
+  "metadata": [
+    {
+      "path": "\\\\?\\hid#vid_0ca3&pid_0021#7&13f10231&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+      "product": "I/O CONTROL BD;15257;01;90;1831;6679A;00;GOUT=14_ADIN=8,E_ROTIN=4_COININ=2_SWIN=2,E_UQ1=41,6",
+      "serial": "5054316560DD729C",
+      "manufacturer": "SEGA",
+      "caps_status": "0x00110000",
+      "caps": {
+        "Usage": 4,
+        "UsagePage": 1,
+        "InputReportByteLength": 64,
+        "OutputReportByteLength": 64,
+        "FeatureReportByteLength": 0,
+        "NumberLinkCollectionNodes": 3,
+        "NumberInputButtonCaps": 1,
+        "NumberInputValueCaps": 14,
+        "NumberInputDataIndices": 62,
+        "NumberOutputButtonCaps": 0,
+        "NumberOutputValueCaps": 1,
+        "NumberOutputDataIndices": 1,
+        "NumberFeatureButtonCaps": 0,
+        "NumberFeatureValueCaps": 0,
+        "NumberFeatureDataIndices": 0
+      }
+    }
+  ],
+  "steps": [
+    {
+      "name": "initial_control",
+      "time": "2026-10-04T17:16:30.596367+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.598365+00:00",
+      "method": "ReadFile",
+      "index": 0,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.599365+00:00",
+      "method": "ReadFile",
+      "index": 1,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.600365+00:00",
+      "method": "ReadFile",
+      "index": 2,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.601365+00:00",
+      "method": "ReadFile",
+      "index": 3,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.603365+00:00",
+      "method": "ReadFile",
+      "index": 4,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.604366+00:00",
+      "method": "ReadFile",
+      "index": 5,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.605366+00:00",
+      "method": "ReadFile",
+      "index": 6,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "interrupt_input",
+      "time": "2026-10-04T17:16:30.606365+00:00",
+      "method": "ReadFile",
+      "index": 7,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "decoded": {
+        "report_id": 1,
+        "analog_words": [
+          32767,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "switch_words": [
+          16384,
+          32768
+        ],
+        "system": 2,
+        "usb": 0,
+        "reserved_hex": "0000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:30.606365+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 0,
+      "hex": "10010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:30.607365+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "timeout_disabled_init",
+      "time": "2026-10-04T17:16:30.628903+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:30.629902+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 1,
+      "hex": "10010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:30.629902+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "timed_init_1",
+      "time": "2026-10-04T17:16:30.652037+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "before_deadline_1",
+      "time": "2026-10-04T17:16:30.710828+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "after_deadline_1",
+      "time": "2026-10-04T17:16:30.790432+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:30.791430+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 0,
+      "hex": "10010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:30.792430+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "disabled_after_1",
+      "time": "2026-10-04T17:16:30.814430+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:30.815430+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 4,
+      "hex": "10010400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:30.815430+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "timed_init_4",
+      "time": "2026-10-04T17:16:30.837430+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "before_deadline_4",
+      "time": "2026-10-04T17:16:31.195879+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "after_deadline_4",
+      "time": "2026-10-04T17:16:31.276383+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:31.278384+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 0,
+      "hex": "10010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:31.279383+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "disabled_after_4",
+      "time": "2026-10-04T17:16:31.301383+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:31.302384+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 255,
+      "hex": "1001ff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:31.303383+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "timed_init_255",
+      "time": "2026-10-04T17:16:31.325297+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "before_deadline_255",
+      "time": "2026-10-04T17:16:56.783203+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "after_deadline_255",
+      "time": "2026-10-04T17:16:56.863203+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008002000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:56.864203+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 0,
+      "hex": "10010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:56.865203+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "disabled_after_255",
+      "time": "2026-10-04T17:16:56.887203+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:56.888204+00:00",
+      "method": "interrupt",
+      "command": 3,
+      "param": 0,
+      "hex": "10030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:56.890203+00:00",
+      "method": "WriteFile",
+      "passed": true
+    },
+    {
+      "name": "interrupt_cmd3_initialized",
+      "time": "2026-10-04T17:16:56.911551+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:56.912551+00:00",
+      "method": "control",
+      "command": 2,
+      "param": 32,
+      "hex": "10022000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:56.912551+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "control_cmd2_initialized",
+      "time": "2026-10-04T17:16:56.934250+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008030000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:56.935246+00:00",
+      "method": "control",
+      "command": 3,
+      "param": 0,
+      "hex": "10030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:56.935246+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "control_cmd3_initialized",
+      "time": "2026-10-04T17:16:56.957210+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:56.958207+00:00",
+      "method": "control",
+      "command": 4,
+      "param": 0,
+      "hex": "10040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:56.959207+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "zero_gpio_state",
+      "time": "2026-10-04T17:16:56.980275+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:56.981275+00:00",
+      "method": "control",
+      "command": 133,
+      "param": 0,
+      "hex": "10850000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:56.982275+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "unknown_0x85_state",
+      "time": "2026-10-04T17:16:57.004413+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:57.005413+00:00",
+      "method": "control",
+      "command": 1,
+      "param": 0,
+      "hex": "10010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:57.006447+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "output_attempt",
+      "time": "2026-10-04T17:16:57.007435+00:00",
+      "method": "control",
+      "command": 3,
+      "param": 0,
+      "hex": "10030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "output_completed",
+      "time": "2026-10-04T17:16:57.008436+00:00",
+      "method": "control",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "final_initialized_neutral",
+      "time": "2026-10-04T17:16:57.029436+00:00",
+      "method": "HidD_GetInputReport",
+      "passed": true,
+      "hex": "01ff7f00000000000000000000000000000000000000000000000000000040008000000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    }
+  ],
+  "flash_writes": 0,
+  "configuration_writes": 0,
+  "game": "not_run",
+  "kind": "diagnostic_not_full_protocol_acceptance",
+  "error": null,
+  "timing_trials": [
+    {
+      "timeout_units": 1,
+      "expected_timeout_seconds": 0.1,
+      "host_elapsed_seconds": 0.023038300219923258,
+      "early_system": 48,
+      "expired_before_expected_deadline": false,
+      "before_end_seconds": 0.0820250001270324,
+      "before_system": 48,
+      "after_end_seconds": 0.16170630021952093,
+      "after_system": 2,
+      "deadline_window_passed": true
+    },
+    {
+      "timeout_units": 4,
+      "expected_timeout_seconds": 0.4,
+      "host_elapsed_seconds": 0.022913199849426746,
+      "early_system": 48,
+      "expired_before_expected_deadline": false,
+      "before_end_seconds": 0.3818113999441266,
+      "before_system": 48,
+      "after_end_seconds": 0.4625615000259131,
+      "after_system": 2,
+      "deadline_window_passed": true
+    },
+    {
+      "timeout_units": 255,
+      "expected_timeout_seconds": 25.5,
+      "host_elapsed_seconds": 0.02415459998883307,
+      "early_system": 48,
+      "expired_before_expected_deadline": false,
+      "before_end_seconds": 25.481623499887064,
+      "before_system": 48,
+      "after_end_seconds": 25.561692799907178,
+      "after_system": 2,
+      "deadline_window_passed": true
+    }
+  ],
+  "interrupt_input_passed": true,
+  "interrupt_cmd3_passed": true,
+  "control_cmd2_state_transition_passed": true,
+  "zero_gpio_transport_passed": true,
+  "unknown_preserved_system_state": true,
+  "premature_timeout_observed": false,
+  "neutral_initialized_final": true,
+  "finished": "2026-10-04T17:16:57.030435+00:00",
+  "handles_closed": true,
+  "diagnostic_completed": true,
+  "protocol_acceptance": false
+}

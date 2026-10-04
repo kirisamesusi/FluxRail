@@ -1,0 +1,19 @@
+{
+    "started":  "2026-10-04T12:13:54.6815162Z",
+    "path":  "\\\\?\\hid#vid_239a\u0026pid_cafe\u0026mi_03\u0026col02#8\u00261ab03641\u00260\u00260001#{4d1e55b2-f16f-11cf-88cb-001111000030}",
+    "desired_access":  0,
+    "method":  "Independent C# HidD_GetInputReport; COL02 single current-state query",
+    "control_requests":  1,
+    "serial":  "5054316560DD729C",
+    "usage":  2,
+    "usage_page":  1,
+    "length":  6,
+    "passed":  false,
+    "buffer_is_device_report":  false,
+    "hex":  null,
+    "error":  1,
+    "error_message":  "函数不正确。",
+    "failed_buffer_hex":  "020000000000",
+    "handle_closed":  true,
+    "finished":  "2026-10-04T12:13:54.7131570Z"
+}

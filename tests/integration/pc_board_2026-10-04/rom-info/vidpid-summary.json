@@ -1,0 +1,5 @@
+{
+  "exit_code": -7,
+  "command": "info -a --vid 0x2e8a --pid 0x0003",
+  "flash_writes": 0
+}

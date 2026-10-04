@@ -1,0 +1,198 @@
+{
+  "source": "C:/Users/admin/Documents/FluxRail/web",
+  "backup": "C:/Users/admin/Documents/FluxRail/backups/web-before-template-management-2026-10-04",
+  "created": "2026-10-04",
+  "purpose": "before template management changes",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 23030,
+      "sha256": "4f7118de8b44d1b90e7e67fe3b47bda991427bc3d2c0087ea3b8682b788151c3"
+    },
+    {
+      "path": "package.json",
+      "bytes": 311,
+      "sha256": "537c5d46e4ad8a50571e6ecb5e572aa50ee8ba18b6370f641239964463ddf756"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17269,
+      "sha256": "4e41119bbd6564b9230ecc01fad7fb1e9bd820e75202309ed074a0363c0c2f5a"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 1717,
+      "sha256": "b5508888850bfd6f2d1ea4bb9b87134de0efa7da96285c42ba6d61e9d006c965"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 31005,
+      "sha256": "afcf4439182bce355678b77df7f2d189b62c3f3eb0f1e9f19aab2178b9e08e80"
+    },
+    {
+      "path": "src/config.js",
+      "bytes": 7058,
+      "sha256": "2cb2b91b05935b3b3b84458382f48c5972da84d325851ac54bd81c0d7ffe4ca3"
+    },
+    {
+      "path": "src/connection/client.js",
+      "bytes": 6629,
+      "sha256": "cefe0e868efad23fa160f0058d5c2214a6538ba2e5248dedbb8f4804b8c55cd3"
+    },
+    {
+      "path": "src/demo.js",
+      "bytes": 8852,
+      "sha256": "c8a89e8fb08c8e12dc9665aeb161057ab30706f17d96f96d4e21873bc89a4842"
+    },
+    {
+      "path": "src/device.js",
+      "bytes": 3494,
+      "sha256": "c55e99cf19fc752519c3ffaf725ac084d33ea23dca50081346d6d65ae30cd49f"
+    },
+    {
+      "path": "src/integration.js",
+      "bytes": 13178,
+      "sha256": "b24fc5202aafe5f94f8b3374cedd3370c12643e09565956167cb95b3cb08af22"
+    },
+    {
+      "path": "src/io4-editor.js",
+      "bytes": 6795,
+      "sha256": "9e792e61f6f12f990bcbe7d046dceac2c2f77bdd46840e121476430dc307e466"
+    },
+    {
+      "path": "src/keyboard.js",
+      "bytes": 3597,
+      "sha256": "ade1e14ad255431ae7f663c42f202b8c3a2ef318d7cd73f5e7491c007b28ba48"
+    },
+    {
+      "path": "src/knob-preview.js",
+      "bytes": 6595,
+      "sha256": "2618d996a28f2ccffa6ee382bc78ac8c18341f9db2a608a0c54c6ada641b95c2"
+    },
+    {
+      "path": "src/layout.js",
+      "bytes": 2570,
+      "sha256": "43e05a2090a8f1b701331f0412edd7583856d3603df1b95a6e25c2ccbb303879"
+    },
+    {
+      "path": "src/snapshot.js",
+      "bytes": 8620,
+      "sha256": "7900895bcb151a2670eb8249571bf49820862ccbf36190a4a35949df6fcb2bbd"
+    },
+    {
+      "path": "src/update/uf2.js",
+      "bytes": 1480,
+      "sha256": "8ff3ffd98af9afdcfc9cb6248cbfb8df26375d13b3bb62172765ba6458e26595"
+    },
+    {
+      "path": "style.css",
+      "bytes": 27868,
+      "sha256": "92aa0c0ebb1185495aaa629187cae40bfa154305632298f234744fa42a261058"
+    },
+    {
+      "path": "tests/golden.js",
+      "bytes": 2811,
+      "sha256": "f2c656a470166cf61d9c1e561652ea88bf2e0ea9669afa54b231b7b76b670c85"
+    },
+    {
+      "path": "tests/hall-controls-2026-10-03.png",
+      "bytes": 39314,
+      "sha256": "f415732247c282c854cf058fa482018b1ae28bc8417f8cd5243f19287818e063"
+    },
+    {
+      "path": "tests/import-example.json",
+      "bytes": 2923,
+      "sha256": "75da9671a70ae5b154a7a41d7260813b8c8105839fc1c9af63ef0ce6d7bcd000"
+    },
+    {
+      "path": "tests/input-status-2026-10-04.png",
+      "bytes": 133864,
+      "sha256": "9814097ac96c6baaaa2eadcbdd669c963926c47bc9ddb2316baeb5985f6653bb"
+    },
+    {
+      "path": "tests/integration-ui.test.mjs",
+      "bytes": 10629,
+      "sha256": "99eb18691e7c4c72dfa3df6fae5e3e06ab01ccb40d74bbb103bf9a94e08158b8"
+    },
+    {
+      "path": "tests/integration.test.mjs",
+      "bytes": 2855,
+      "sha256": "9fc23330b76c2a38c83e671b922235d2b4ecf179b9fa15a2ef465d2ff41bf494"
+    },
+    {
+      "path": "tests/knob-preview.test.mjs",
+      "bytes": 1342,
+      "sha256": "e413352b7cbe9f2bbbc4e820a8c632a774ce60a22d661b915aa0c96c2a644276"
+    },
+    {
+      "path": "tests/lab-layout-2026-10-03.png",
+      "bytes": 42549,
+      "sha256": "dd9d277b3a1a6f4bb6f290be1d78bc991ba31575bd1dc4f5a1c8aeeb2d801a63"
+    },
+    {
+      "path": "tests/layout-desktop-2026-10-04.png",
+      "bytes": 88145,
+      "sha256": "2410d4b6be5992b9dcab316a84a219a85f8bf8cb6bb30a7a874f3c4dd2557f95"
+    },
+    {
+      "path": "tests/layout-mobile-2026-10-04.png",
+      "bytes": 38795,
+      "sha256": "058d33c835540d3e50abd20b95c4a4a89bb3be489fe6a9ee9253ee0d02c97701"
+    },
+    {
+      "path": "tests/layout-review-2026-10-04.md",
+      "bytes": 2880,
+      "sha256": "c168fa18777e4e6721645a030a55bd0b95bb3bbe6a3a7d86b12e7906273b1550"
+    },
+    {
+      "path": "tests/layout-test-output-2026-10-04.txt",
+      "bytes": 3565,
+      "sha256": "fb802405c1116348911a77ae3a62505dc215e3aec1e778389c887df5a6165e41"
+    },
+    {
+      "path": "tests/layout.test.mjs",
+      "bytes": 4459,
+      "sha256": "8602fac3d3686d5197544a6ae578dbe2d329dab3e1e9d236587a52b8e4a10f5b"
+    },
+    {
+      "path": "tests/physical-keys-2026-10-04.png",
+      "bytes": 120437,
+      "sha256": "5f180bca09e5b20335dee4e53f517e5eac2ff6cbd707cd0ccb4f25ecfc699d97"
+    },
+    {
+      "path": "tests/style_review_2026-10-03.md",
+      "bytes": 4446,
+      "sha256": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36"
+    },
+    {
+      "path": "tests/validation-layout-2026-10-04.json",
+      "bytes": 1905,
+      "sha256": "9ae7ddc69c64ba64559355ce780f36e22bc15af584ac04319be7884b453d339f"
+    },
+    {
+      "path": "tests/validation-physical-layout-2026-10-04.json",
+      "bytes": 1306,
+      "sha256": "527612c9986d4622870f1f57133174ee478f6350e42667f74f1c874875d0e289"
+    },
+    {
+      "path": "tests/validation_2026-10-03.json",
+      "bytes": 11369,
+      "sha256": "9d33819a907772056a5fe332acada329554a3bee086653c31b8a93a8cce2d73b"
+    },
+    {
+      "path": "tests/validation_hall_controls_2026-10-03.json",
+      "bytes": 552,
+      "sha256": "7863c597ef90b3d0cd97e0beea35f7b533e04ef3afdd98c5b8ca1d6aa75a7851"
+    },
+    {
+      "path": "tests/validation_lab_layout_2026-10-03.json",
+      "bytes": 1867,
+      "sha256": "5fb154ab7e4bf8fc0b55ccaccbc8198de96463074743383a917023a67e148d5b"
+    },
+    {
+      "path": "tests/web.test.mjs",
+      "bytes": 11995,
+      "sha256": "ba555b0b6aa4e9323a73406ca68b9a9e7b159c919f44d446c33ab17a6da5abc3"
+    }
+  ]
+}

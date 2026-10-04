@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-03",
+  "scope": "hall controls visibility and removal of motion/calibration shortcut labels",
+  "tests": {
+    "total": 35,
+    "passed": 35
+  },
+  "browser": {
+    "unconnected_controls": 3,
+    "unconnected_multiplier": "待读取",
+    "connected_controls_enabled": true,
+    "invert_and_multiplier_applied_and_read_back": true,
+    "removed_shortcut_label_count": 0,
+    "console_warnings_and_errors": 0,
+    "screenshot": "web/tests/hall-controls-2026-10-03.png"
+  },
+  "firmware_changed": false,
+  "hardware_tested": false
+}

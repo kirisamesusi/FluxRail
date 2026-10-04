@@ -1,0 +1,41 @@
+{
+  "kind": "physical_usb_only_power_cycle",
+  "user_confirmation": "USB only; unplugged at least 5 seconds and reinserted",
+  "pnp_absence_seconds": 10.523723,
+  "pnp_disconnected_and_reconnected": true,
+  "schema_byte_exact": true,
+  "length": 1387,
+  "crc32": 895336899,
+  "profiles_equal": true,
+  "revision_before": 5,
+  "revision_after": 5,
+  "saved_revision_after": 5,
+  "dirty_after": false,
+  "usb_mode_after": {
+    "current": "NORMAL_NKRO",
+    "requested_startup": "NORMAL_NKRO",
+    "saved_startup": "NORMAL_NKRO",
+    "forced_recovery": false,
+    "reboot_ready": false
+  },
+  "status_after": {
+    "config_ready": true,
+    "applying": false,
+    "apply_failed": false,
+    "requested_revision": 5,
+    "maintenance": "idle",
+    "save_result": 0,
+    "valid_slots": 3,
+    "physical_mask": 0,
+    "protocol_requests": 2,
+    "protocol_rejected": 0,
+    "overlong_lines": 0
+  },
+  "serial_closed_by_baseline_finally": true,
+  "device_writes": 0,
+  "firmware_compile": "not_run",
+  "simulation": "not_run",
+  "game": "not_run",
+  "commit_interruption": "not_tested",
+  "passed": true
+}

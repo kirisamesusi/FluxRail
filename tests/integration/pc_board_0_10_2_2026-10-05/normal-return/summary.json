@@ -1,0 +1,10 @@
+{
+  "writes": 3,
+  "serial_closed": true,
+  "started": "2026-10-04T17:25:46.2998900Z",
+  "ram_preview_kept_normal": true,
+  "reboot_ack_received": true,
+  "finished": "2026-10-04T17:25:46.9699145Z",
+  "saved_revision": 11,
+  "target": "NORMAL_NKRO"
+}

@@ -1,0 +1,23 @@
+{
+  "reviewer": "Luna",
+  "assessment": "本轮在C# CreateFile阶段以ERROR_ACCESS_DENIED(5)中止，尚未取得句柄，也未执行HidD_GetInputReport；因此不构成HidD读取复现。日志中的target_count=1、目标为PSCustomObject且path为String，唯一目标是COL02，排除了把path数组/对象本身误传给CreateFile的猜测。P/Invoke声明与CreateFileW的基本ABI相符：字符串参数、HANDLE返回、DWORD参数及其顺序均合理；CharSet.Unicode会按惯例解析Unicode入口，若入口名错误通常是找不到入口而非ERROR_ACCESS_DENIED。为消除名称解析歧义，后续可显式指定EntryPoint=\"CreateFileW\"和ExactSpelling=true，但现有错误码本身不能证明该项是根因。Python先前access=0打开成功而C#当前失败，差异仍未解释；需先用同一路径、同进程身份、完全相同参数做不发任何HID控制请求的metadata-open最小对照，再决定是否重试GET。",
+  "evidence": {
+    "abort_record": "tests/integration/hid_diagnosis_2026-10-04/csharp-open-aborted.json",
+    "stage": "CSharp_CreateFile_before_HidD_query",
+    "error": 5,
+    "device_control_requests": 0,
+    "target_count": 1,
+    "target_type": "System.Management.Automation.PSCustomObject",
+    "path_type": "System.String",
+    "target_collection": "COL02",
+    "after_abort_cdc": "tests/integration/hid_diagnosis_2026-10-04/after-csharp-query",
+    "cdc_lines": 15,
+    "hello_device_profiles_config_usb_metadata_unchanged": true,
+    "schema2_equal": true,
+    "schema2_length": 1387,
+    "profiles_equal": true,
+    "status": "config_ready=true, applying=false, apply_failed=false, maintenance=idle, valid_slots=0, protocol_rejected=0"
+  },
+  "continue": true,
+  "next_step": "不要重复HidD读取。先以一个独立、仅metadata的最小验证确认C#的CreateFileW对同一Observed COL02 path以desiredAccess=0、share=3、OPEN_EXISTING=3是否仍失败；明确记录进程位数、用户身份、原始路径、错误码，并采用显式EntryPoint=CreateFileW/ExactSpelling=true。该最小验证不得调用HidD、DeviceIoControl或ReadFile。若仍失败，保留Python/C#打开差异为未解释并停止该C#分支；若成功，再由后续单独审核决定是否进行至多一次HidD对照。"
+}

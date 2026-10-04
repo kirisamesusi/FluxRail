@@ -1,0 +1,23 @@
+{
+  "reviewer": "Luna",
+  "assessment": "本次C#对照在读取并解析ObservedPaths阶段中止，早于Add-Type和CreateFile；device_control_requests=0，因此没有发出HID请求，也没有打开设备句柄。记录所述PowerShell 5.1默认ANSI解码UTF-8文件导致JSON解析失败，与修复方式吻合。修正后的脚本显式使用Get-Content -Encoding UTF8，改动限于文本解码，原证据JSON未改。中止后只读CDC检查正常，设备身份/版本/revision、配置与导出元数据、全部profiles和1387字节schema2文件与before相同；CDC日志各15行，status显示config_ready、idle、无apply失败、valid_slots=0、协议拒绝数0。该轮不构成HID读取失败或通过。",
+  "evidence": {
+    "abort_record": "tests/integration/hid_diagnosis_2026-10-04/csharp-first-attempt-aborted.json",
+    "reported_stage": "reading_observed_paths_before_AddType_or_CreateFile",
+    "device_control_requests": 0,
+    "correction": "tests/integration/confirm_hid_read.ps1 uses Get-Content -Raw -Encoding UTF8",
+    "cdc_after": "tests/integration/hid_diagnosis_2026-10-04/after-csharp",
+    "cdc_lines_before_after": [15, 15],
+    "identity_version_revision_profiles_config_usb_export_equal": true,
+    "schema2_bytes_equal": true,
+    "schema2_length": 1387,
+    "config_ready": true,
+    "applying": false,
+    "apply_failed": false,
+    "maintenance": "idle",
+    "valid_slots": 0,
+    "protocol_rejected": 0
+  },
+  "continue": true,
+  "next_step": "可以在修正后的脚本上重试一次已观察COL02的独立C# HidD_GetInputReport对照。执行前应保证输出路径为新的空证据文件名；仍需由脚本复核序号、Usage和报告长度。只记录API是否成功及有效设备返回，不把失败缓冲区当设备数据。完成后再做完整只读CDC健康核对。"
+}

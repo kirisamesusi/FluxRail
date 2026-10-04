@@ -1,0 +1,28 @@
+{
+  "reviewer": "/root main process",
+  "authorization": "Trusted user: 本轮改由主进程审核; Luna quota unavailable",
+  "time_utc": "2026-10-04T16:26:19.071655+00:00",
+  "method": "independently recomputed from original CDC transcripts, raw schema and original profiles; no new device requests",
+  "passed": true,
+  "checks": {
+    "readonly_responses": 30,
+    "held_mask": 512,
+    "released_mask": 0,
+    "raw_schema_equal_held_released": true,
+    "original_diff_offsets": [
+      4,
+      17
+    ],
+    "persistent_calibration_and_profiles_unchanged": true,
+    "v1_false_negative_preserved": "wrong mode offset and comparison of timestamp_us/sample_revision/epoch; V2 correctly excludes volatile telemetry"
+  },
+  "limitations": [
+    "one physical return only; no 20-cycle acceptance",
+    "no electrical health or repaired IO4 timeout board verification"
+  ],
+  "evidence_sha256": {
+    "io4-gp9-recovery.actual.json": "ae37681df9bbd4675cf0a52ce796d08ab5c1b18643ded455bb502165aa4c709f",
+    "io4-gp9-recovery.actual.v2.json": "4a98b67e9f7874c48e546247ff1520dbc303064f36a81589a97709a9c0d60fd6",
+    "normal-return-final.actual.json": "6ebcba0403b3bb3ef044b3a2c4ba32269e866ed45cb80a550fbccb9c73a1752e"
+  }
+}

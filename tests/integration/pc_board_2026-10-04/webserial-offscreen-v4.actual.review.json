@@ -1,0 +1,73 @@
+{
+  "reviewer": "Luna",
+  "kind": "actual_hidden_production_webserial_review",
+  "verdict": "production_WebSerial_flow_pass_with_one_intentional_disconnect_canceled_poll",
+  "evidence": [
+    "webserial-offscreen-v4/summary.json",
+    "webserial-offscreen-v4/cdc.json",
+    "webserial-before/baseline.json",
+    "webserial-before/baseline-cdc.jsonl",
+    "webserial-before/original-schema2.bin",
+    "webserial-before/original-profiles.json",
+    "webserial-after/baseline.json",
+    "webserial-after/baseline-cdc.jsonl",
+    "webserial-after/original-schema2.bin",
+    "webserial-after/original-profiles.json",
+    "webserial-v4.actual.json",
+    "webserial-launch-4/test_webserial_offscreen_v4-executed.cjs",
+    "webserial-pnp-correlation.json"
+  ],
+  "webserial": {
+    "write_attempts": 4,
+    "attempts": 36,
+    "stages": [
+      "connect/handshake/readback rev5",
+      "draft press_debounce_us 1000→1001, zero set_profile writes",
+      "apply to RAM rev6 (dirty)",
+      "save rev6 (clean)",
+      "intentional disconnect",
+      "reconnect and read saved test value",
+      "restore full original profile4 and save rev7"
+    ],
+    "disconnect_race": "One in-flight get_status failed at intentional disconnect with the SerialClient.close DISCONNECTED message; it has no device response and is a canceled read-only polling request, not a firmware rejection. Do not describe all 36 attempts as successful responses.",
+    "write_ops": [
+      "set_profile",
+      "save_config",
+      "set_profile",
+      "save_config"
+    ],
+    "target": "Fresh exact COM29 deviceInstanceId mapped to USB parent serial 5054316560DD729C; chooser and device permission callbacks both allowed",
+    "real": "Chromium 152 / Electron 44.5.1, production page/SerialClient, actual SerialPort; simulated=false",
+    "script_restore": true,
+    "completed_responses": 35
+  },
+  "independent_after": {
+    "physical_mask": 0,
+    "version": "0.10.1",
+    "serial": "5054316560DD729C",
+    "maintenance": "idle",
+    "dirty": false,
+    "current_mode": "NORMAL_NKRO",
+    "schema_length": 1387,
+    "read_only_cdc_requests": 15,
+    "all_success": true,
+    "schema_diff_offsets": [
+      4
+    ],
+    "saved_revision": 7,
+    "saved_mode": "NORMAL_NKRO",
+    "profiles_equal": true,
+    "revision": 7,
+    "revision_only_difference": "revision 5→7",
+    "crc32": 3710059708,
+    "serial_closed": true,
+    "active_profile": 4,
+    "valid_slots": 3
+  },
+  "limits": [
+    "This validates the hidden Electron production Web Serial flow and automated chooser/permission adapters, not the native interactive desktop chooser/UI.",
+    "The final UI snapshot still displays the pre-direct-restore revision6 and says a device reread is needed; the separate 15-request CDC snapshot independently verifies final saved revision7 and original configuration.",
+    "No game interaction, actual key/mouse/X/Y HID payload, physical input, or electrical health test was performed.",
+    "The test changes persisted Flash temporarily and restores the original profile; it does not validate Flash capacity or physical power-loss behavior."
+  ]
+}

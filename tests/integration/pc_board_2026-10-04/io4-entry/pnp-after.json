@@ -1,0 +1,44 @@
+[
+  {
+    "Status": "OK",
+    "Class": "Mouse",
+    "FriendlyName": "HID-compliant mouse",
+    "InstanceId": "HID\\VID_239A&PID_CAFE&MI_03&COL02\\8&1AB03641&0&0001"
+  },
+  {
+    "Status": "OK",
+    "Class": "Ports",
+    "FriendlyName": "USB 串行设备 (COM29)",
+    "InstanceId": "USB\\VID_239A&PID_CAFE&MI_00\\7&1E2FBD10&0&0000"
+  },
+  {
+    "Status": "OK",
+    "Class": "Keyboard",
+    "FriendlyName": "HID Keyboard Device",
+    "InstanceId": "HID\\VID_239A&PID_CAFE&MI_02\\8&2ECA9FC&0&0000"
+  },
+  {
+    "Status": "OK",
+    "Class": "HIDClass",
+    "FriendlyName": "USB 输入设备",
+    "InstanceId": "USB\\VID_239A&PID_CAFE&MI_02\\7&1E2FBD10&0&0002"
+  },
+  {
+    "Status": "OK",
+    "Class": "USB",
+    "FriendlyName": "USB Composite Device",
+    "InstanceId": "USB\\VID_239A&PID_CAFE\\5054316560DD729C"
+  },
+  {
+    "Status": "OK",
+    "Class": "HIDClass",
+    "FriendlyName": "USB 输入设备",
+    "InstanceId": "USB\\VID_239A&PID_CAFE&MI_03\\7&1E2FBD10&0&0003"
+  },
+  {
+    "Status": "OK",
+    "Class": "Mouse",
+    "FriendlyName": "HID-compliant mouse",
+    "InstanceId": "HID\\VID_239A&PID_CAFE&MI_03&COL01\\8&1AB03641&0&0000"
+  }
+]

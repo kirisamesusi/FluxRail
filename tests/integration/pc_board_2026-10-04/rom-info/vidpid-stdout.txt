@@ -1,0 +1,5 @@
+No accessible RP2040/RP2350 devices in BOOTSEL mode were found.
+
+but:
+
+Device at bus 1, address 22 appears to be a RP2040 device in BOOTSEL mode, but picotool was unable to connect. You may need to install a driver via Zadig. See "Getting started with Raspberry Pi Pico" for more information
