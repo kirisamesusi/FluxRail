@@ -4,6 +4,8 @@
 
 ## 工程约束
 
+- 当前开发与待验收分支为`test`；新任务从`test`继续。正式验收后再按用户指令建立/合并到`master`发布，不能仅因软件测试通过就标记正式可用。`main`保留首次上传历史。
+
 - 唯一正式工程`firmware/FluxRail/FluxRail.ino`。模块已接入App，不按旧“未实现/未接入”说明重新造实现。
 - 核心1采集，核心0唯一USB/配置/灯/维护。复用现有DeviceConfig、CDC v1、schema2和ConfigCoordinator实际应用ACK；业务模块不另建USB、Flash保存或协议。
 - 滑轨绝对，旋钮相对增量；普通绝对XY后端保留本设备Y；十二来源可映射、不同usage NKRO、同键盘usage每次DOWN重触发；音击双旋钮默认关闭。
