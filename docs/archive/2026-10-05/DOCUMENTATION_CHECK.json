@@ -2,16 +2,19 @@
   "date_local": "2026-10-05",
   "snapshot_audit": false,
   "document_count": 89,
-  "local_links_checked": 673,
+  "local_links_checked": 676,
   "missing_links": [],
   "archived_count": 34,
   "archive_errors": [],
   "snapshot_zip_error": null,
   "protected_count": 816,
   "changed_existing_code_or_evidence_since_snapshot": [
+    "web/package.json",
     "tests/integration/compile_firmware.py"
   ],
-  "changes_outside_reorganization_scope": [],
+  "changes_outside_reorganization_scope": [
+    "web/package.json"
+  ],
   "new_code": "docs/tools/verify_docs.py (documentation check only)",
   "artifact_naming_check_matches_current_script": true,
   "functional_tests_run": false,

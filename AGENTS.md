@@ -24,4 +24,6 @@ Web从根目录`node web/server.mjs`，localhost:4174；Web软件测试在web/�
 
 ## 文档同步
 
+FluxRail原创代码及配套文档采用根目录`LICENSE`的MIT许可；第三方与归档内的第三方文件保留原许可，范围见`THIRD_PARTY_NOTICES.md`。不要批量改历史文件版权头或冻结SHA。
+
 模块改动更新相应模块交接；公共接口/schema/协议变动同步公共契约、受影响模块及测试；新实测建日期/版本独立证据并更新状态表。文档结构变化运行`python docs/tools/verify_docs.py`。详细规则见`docs/文档维护与归档.md`。
