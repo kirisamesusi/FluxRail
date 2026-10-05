@@ -1,0 +1,31 @@
+{
+  "scope": "Independent preview header consolidation",
+  "production_files_unchanged": 74,
+  "hardware_tested": false,
+  "views": [
+    {
+      "width": 1274,
+      "header_height": 246.515625,
+      "modules_checked": 8,
+      "horizontal_overflow": false,
+      "local_confirmations_work": true
+    },
+    {
+      "width": 390,
+      "header_height": 264.15625,
+      "modules_checked": 8,
+      "horizontal_overflow": false,
+      "local_confirmations_work": true
+    },
+    {
+      "width": 320,
+      "header_height": 264.15625,
+      "modules_checked": 8,
+      "horizontal_overflow": false,
+      "local_confirmations_work": true
+    }
+  ],
+  "browser_errors": [],
+  "production_modules_loaded": false,
+  "passed": true
+}

@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "module": "keyboard",
+      "badges": 0,
+      "title": "按键映射"
+    },
+    {
+      "module": "hall",
+      "badges": 0,
+      "title": "滑轨设置"
+    },
+    {
+      "module": "knobs",
+      "badges": 0,
+      "title": "旋钮设置"
+    },
+    {
+      "module": "profiles",
+      "badges": 0,
+      "title": "模板管理"
+    }
+  ],
+  "production_files_unchanged": 74,
+  "scope": "Four preview heading badges only"
+}

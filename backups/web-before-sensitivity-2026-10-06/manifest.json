@@ -1,0 +1,437 @@
+[
+  {
+    "path": "web/index.html",
+    "sha256": "83e2c931726850719cb7ef8b323083003d6290f3f7c65143b626c57a4dc6d67a",
+    "bytes": 21275
+  },
+  {
+    "path": "web/package.json",
+    "sha256": "2800a48a1157e88858341adc3a550b3fc8b76739afd01ce61ee5f6b768617fd2",
+    "bytes": 407
+  },
+  {
+    "path": "web/README.md",
+    "sha256": "188df25bcf348ea72f92eed236dfa8b116dcf51e053ae316aeb498954e70df8f",
+    "bytes": 1967
+  },
+  {
+    "path": "web/server.mjs",
+    "sha256": "cb2f5a1469c5ba532812bae068f9e8bf759af10c5376d9b7ef5168cd0785b6e3",
+    "bytes": 2129
+  },
+  {
+    "path": "web/style.css",
+    "sha256": "ab3ad4c40ed33d31acb3ccac9003856faf8825d848491fab027f58f457c649d2",
+    "bytes": 42186
+  },
+  {
+    "path": "web/assets/fluxrail-favicon.ico",
+    "sha256": "758b59e3855c1a94d6f9ad16ee6a4c531f441da30d496bc12c64f63c3e2739c0",
+    "bytes": 9600
+  },
+  {
+    "path": "web/assets/fluxrail-icon-180.png",
+    "sha256": "f47e4c03b10552d0d872c0c690714c6a8a907cdcf1aa3f303a0d094afba2fef1",
+    "bytes": 48660
+  },
+  {
+    "path": "web/assets/fluxrail-icon-192.png",
+    "sha256": "26ad41d7422c4235176aba7c156001757faabcfba4affcff09f01fc2f090e841",
+    "bytes": 54445
+  },
+  {
+    "path": "web/assets/fluxrail-icon-32.png",
+    "sha256": "7d699c6419d14e9959d9fd8d7899e65ef6b1ba826cc445b6e0a6509836479dbb",
+    "bytes": 2938
+  },
+  {
+    "path": "web/assets/fluxrail-lace-bunny.png",
+    "sha256": "caf5f77ccada9e04011469bec6ebcf5d82d8ed96a3128a5d30f8c8acf3b097e1",
+    "bytes": 1149211
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-aqua.png",
+    "sha256": "50c88e70e9d5f3cf64ecd583d557d549f2a55441eefb33aa978dfefe858df009",
+    "bytes": 1222113
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-brand.png",
+    "sha256": "6d0e9a9b009556e3ddd5e304b1b7dc044f7b0bc2e52b7c2e6016fdc961b56afe",
+    "bytes": 75032
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-controller-source.png",
+    "sha256": "478f4500dede75cd5a9919998bd1ea9ac6c155545ad10b56c8e6d3f50b5e843a",
+    "bytes": 1263817
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-controller-theme-source.png",
+    "sha256": "89ae344193b3c7f732d6cc83e3d619800aa139aa368a33f6dc4091ac41fc29a8",
+    "bytes": 1263830
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-controller.png",
+    "sha256": "84bc195ae8c79cce5a7383c443c46733871918c194906873807cf98861b5db24",
+    "bytes": 431868
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-icon-source.png",
+    "sha256": "56f9d1ee6d46c6c31ec41922ff08303a03b8fc604cc2588bfcc6a6bfbd8d2f74",
+    "bytes": 1428172
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-icon-theme-source.png",
+    "sha256": "ca47359880e8052448ffad5e1f546d21777a91b1333761fe059418eafe3c1193",
+    "bytes": 1386728
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-theme-source.png",
+    "sha256": "cc72cd4146c068b9a3a35d2f19d6177099dd274ab29e533e4b70ebe12fd117df",
+    "bytes": 1206265
+  },
+  {
+    "path": "web/assets/mascot-generation.json",
+    "sha256": "e0847bdf6d3f6f7d476a84c68a20bce005abd704573b5f89eb3cdcdae33b7977",
+    "bytes": 8956
+  },
+  {
+    "path": "web/assets/MASCOT.md",
+    "sha256": "7152b8d5a2bcc98eb764a000c700ba03787add656b55229e03d820d99fdb5e6e",
+    "bytes": 2306
+  },
+  {
+    "path": "web/src/app.js",
+    "sha256": "e49a7f754a4bd1c0474ff6d1080ebbbcdf505ea57de397e672144a5d88985bc6",
+    "bytes": 35889
+  },
+  {
+    "path": "web/src/config.js",
+    "sha256": "2cb2b91b05935b3b3b84458382f48c5972da84d325851ac54bd81c0d7ffe4ca3",
+    "bytes": 7058
+  },
+  {
+    "path": "web/src/confirmation.js",
+    "sha256": "88ffaf2e42797d4a685c6c34a3a058b249bc570946fc711e086b024788ec76f6",
+    "bytes": 2467
+  },
+  {
+    "path": "web/src/demo.js",
+    "sha256": "c8a89e8fb08c8e12dc9665aeb161057ab30706f17d96f96d4e21873bc89a4842",
+    "bytes": 8852
+  },
+  {
+    "path": "web/src/device.js",
+    "sha256": "18c17e7e84702df0a196a8b6075459ac968a138311c3537e033fec001fdb04e5",
+    "bytes": 5557
+  },
+  {
+    "path": "web/src/gain-control.js",
+    "sha256": "229d6e94b399cd288f541811d360b905b010ff211b95b3447f473e4eb69db1c1",
+    "bytes": 3042
+  },
+  {
+    "path": "web/src/integration.js",
+    "sha256": "e06b88ffe30b15a59fa451a40a006cd9361475344ac70cade170df0fdb359b0e",
+    "bytes": 14000
+  },
+  {
+    "path": "web/src/io4-editor.js",
+    "sha256": "56821c6af8098d4f658d696c8ac332e92b46226da2f11e12f3de1b32688d6247",
+    "bytes": 6329
+  },
+  {
+    "path": "web/src/keyboard.js",
+    "sha256": "ade1e14ad255431ae7f663c42f202b8c3a2ef318d7cd73f5e7491c007b28ba48",
+    "bytes": 3597
+  },
+  {
+    "path": "web/src/knob-preview.js",
+    "sha256": "82d90df82f143cb69f93944be4ca6f623b204d89c14811ec9cc9a1cc9ac1c5df",
+    "bytes": 6468
+  },
+  {
+    "path": "web/src/layout.js",
+    "sha256": "cedcad236fb06e6c81e1a161e1ce7ff571fb55810175c59429d934a7e318e320",
+    "bytes": 2650
+  },
+  {
+    "path": "web/src/snapshot.js",
+    "sha256": "7900895bcb151a2670eb8249571bf49820862ccbf36190a4a35949df6fcb2bbd",
+    "bytes": 8620
+  },
+  {
+    "path": "web/src/template-actions.js",
+    "sha256": "4dda60d976df03540c45e78cd638807b095583340cbb7d6916f47ddd0d2f9989",
+    "bytes": 3608
+  },
+  {
+    "path": "web/src/workflows.js",
+    "sha256": "f0a203f7cd18b1969e63f8c5fa8b869a4533dc7954b412159de0e75f355954db",
+    "bytes": 3636
+  },
+  {
+    "path": "web/src/connection/client.js",
+    "sha256": "cefe0e868efad23fa160f0058d5c2214a6538ba2e5248dedbb8f4804b8c55cd3",
+    "bytes": 6629
+  },
+  {
+    "path": "web/src/update/controller.js",
+    "sha256": "e2b35eb2352133ebaf6f4ec62966e9cd811aaf87555d46df75ed883b8e49a686",
+    "bytes": 2737
+  },
+  {
+    "path": "web/src/update/uf2.js",
+    "sha256": "01d7ec56e3d9c710dc1fce1b6e059dc26b9f2674b51653f7a5dc8224619ae5a9",
+    "bytes": 7050
+  },
+  {
+    "path": "docs/FluxRail_IO4专项_开发交接.md",
+    "sha256": "2b980177ca9e9487be65a901ce847843509d24bc7757717dc8dfb3d4610d93f5",
+    "bytes": 359
+  },
+  {
+    "path": "docs/FluxRail_Web_开发与调整交接.md",
+    "sha256": "f8759b3ff4cfd60a256bc3507e22793d71484f6d983181bcb11499f3e28d9bda",
+    "bytes": 371
+  },
+  {
+    "path": "docs/FluxRail_开发交接_窗口必读.md",
+    "sha256": "2c211580c0481a7564dfc9a8df7898b43859304ab0e1433924604565d3f93c22",
+    "bytes": 4238
+  },
+  {
+    "path": "docs/FluxRail_需求总览_用户版.md",
+    "sha256": "5abad860934a56f70436d40174ba1f821aaa93ae27c0988134e2e4ba3d90044e",
+    "bytes": 360
+  },
+  {
+    "path": "docs/README.md",
+    "sha256": "1445f70b173832e1666cb5935fc6d4ea66ff1f047bf1dc3998e4050d747e2c99",
+    "bytes": 3381
+  },
+  {
+    "path": "docs/rp2040_kb_firmware_notes.md",
+    "sha256": "ddd7dff7badfa143cdf49bd3c9edb7da5a32c6b456708ab7cc74d4049bf841f0",
+    "bytes": 340
+  },
+  {
+    "path": "docs/Web重构交接_2026-10-05.md",
+    "sha256": "8f6fcb56314febb1a0c516d1dceb3665d29da3a4207c8deebe581f6781509628",
+    "bytes": 16809
+  },
+  {
+    "path": "docs/产品需求与约束.md",
+    "sha256": "0775fe33a3a0e507254facb2aa11563a16105563ed8734efeb770b2507f6784a",
+    "bytes": 4116
+  },
+  {
+    "path": "docs/仓库整理验证_2026-10-05.md",
+    "sha256": "d81d7ca467aa420c11ff8186ae60a44e2b030ce58b756b44ab156cb1f583e1c1",
+    "bytes": 1456
+  },
+  {
+    "path": "docs/仓库结构与克隆开发.md",
+    "sha256": "a97964a66567b9e2c68e2b3de1b8bd294fb2fd7877ec25750b9ee30869c7cf80",
+    "bytes": 4660
+  },
+  {
+    "path": "docs/公共架构与配置契约.md",
+    "sha256": "44494d6ed7ae6c595d2794ea5218ad1a67e8e9a4a4f21814783f176bbe84eb07",
+    "bytes": 7421
+  },
+  {
+    "path": "docs/文档维护与归档.md",
+    "sha256": "498336527d1eb476639b08c9ffa2c7232223aa413c3b4aa8b187ff247408aff3",
+    "bytes": 4828
+  },
+  {
+    "path": "docs/测试状态与待验收.md",
+    "sha256": "52e7b45489546c341bd0d34a32e4161b112772d0b73fe02dfd7ee46fda93b5d1",
+    "bytes": 8189
+  },
+  {
+    "path": "docs/硬件与引脚.md",
+    "sha256": "33020953fc927b68804ef315e8380278c8c36f3f92da04149f121f365fd0d04b",
+    "bytes": 2946
+  },
+  {
+    "path": "docs/视觉素材与角色规范.md",
+    "sha256": "f6036d15dfd5a3f62e62000ae2faf24cddaba6340f46de91aad97822af7e76ac",
+    "bytes": 2208
+  },
+  {
+    "path": "docs/modules/01_按键与灯光.md",
+    "sha256": "15a2dd18cbf2b93b1e879c650b48d2ff868fb121a54edeb7bb5a7cb57bf0721f",
+    "bytes": 10388
+  },
+  {
+    "path": "docs/modules/02_USB与IO4.md",
+    "sha256": "08362eba6dacaf8cd813c70a7d3aa0b5201055e7a178d411a57ef8bd3101410a",
+    "bytes": 11569
+  },
+  {
+    "path": "docs/modules/03_三霍尔滑轨.md",
+    "sha256": "d395d5fb49074209a047fbe198ce5aa4aee1742d081c0f6069183876988ed7e7",
+    "bytes": 10555
+  },
+  {
+    "path": "docs/modules/04_旋钮与PUSH.md",
+    "sha256": "4564dd0c3d90f6c7a3496c5596a26b7eacdddc1eb77d31f4b644d6c7d4ce7f02",
+    "bytes": 10790
+  },
+  {
+    "path": "docs/modules/05_Web配置工具.md",
+    "sha256": "535c42ffbbf5e2c7327c9d44c831e96476b97cb8c0f845769c2cce1d496d0cf0",
+    "bytes": 21912
+  },
+  {
+    "path": "docs/progress/IO4.md",
+    "sha256": "84e51d1f1c31c5bc3f0fb9ab9faf9e51f3ccb4c8157c222cbe0fc677848867df",
+    "bytes": 309
+  },
+  {
+    "path": "docs/progress/修复.md",
+    "sha256": "c8e3a790a37e7a9369f781fdd5da4820af846173365cf89f777dfc1032ec62bd",
+    "bytes": 319
+  },
+  {
+    "path": "docs/progress/模块1.md",
+    "sha256": "823eb539b22b4ff00cbd0fd1f07e5e4345ee5387cf364b4b0552c6f7c8ce038d",
+    "bytes": 323
+  },
+  {
+    "path": "docs/progress/模块2.md",
+    "sha256": "0cc240cced02e96f83acd2dacfba3d476e9e66be954afc85291390fb7cb48e9b",
+    "bytes": 323
+  },
+  {
+    "path": "docs/progress/模块3.md",
+    "sha256": "0040f42b3b18ca44a0d913f22678a9c468984cdefc7752d74ca4e4a44db47f2c",
+    "bytes": 321
+  },
+  {
+    "path": "docs/progress/模块4.md",
+    "sha256": "eb5c33dd180540e689245417d862c8569c6ab357924d97a3285fc48b1e23cc8d",
+    "bytes": 323
+  },
+  {
+    "path": "docs/progress/模块整合.md",
+    "sha256": "b4ae48a150491ed393cbb48508df1eaa35cfbaeb9d6b3e96f26dd48edca68a04",
+    "bytes": 331
+  },
+  {
+    "path": "docs/progress/测试.md",
+    "sha256": "a54929f7a2f69d9bdb5997acac0a4335851580fd676499aa480b6851ff8604b2",
+    "bytes": 319
+  },
+  {
+    "path": "docs/spec/00_项目需求与决策.md",
+    "sha256": "b98e8d81c412901f0444dee646d3c98730a57e81f85791ce244857f4aad34d64",
+    "bytes": 333
+  },
+  {
+    "path": "docs/spec/01_公共接口与集成约定.md",
+    "sha256": "7fbec7f6ff0cc59e7348b34c5ab20d456cfdc148cd8ca32d33528710fa41c39b",
+    "bytes": 366
+  },
+  {
+    "path": "docs/spec/02_模块1_键盘与灯光.md",
+    "sha256": "4b86b1659e66ceff0226a2bf4291e47c27cb5ddb862f7ff04e8640822752f23f",
+    "bytes": 357
+  },
+  {
+    "path": "docs/spec/03_模块2_三霍尔滑轨.md",
+    "sha256": "28cf7220d30e7bca3173f71e9e0ec50136bf74ae3abbd83e1eeb8b6828aacadf",
+    "bytes": 357
+  },
+  {
+    "path": "docs/spec/04_模块3_MT6701旋钮.md",
+    "sha256": "fc3353c4fd799d8cf18e9342b5b99cd321e6c9dc64a30a0db6746705b7e8ff81",
+    "bytes": 349
+  },
+  {
+    "path": "docs/spec/05_模块4_Web上位机.md",
+    "sha256": "a8d52304b9abb1759799ec0d2c0554d52d77299ed9f33daf6a03d70b8945f5f2",
+    "bytes": 351
+  },
+  {
+    "path": "docs/spec/06_验收与实测计划.md",
+    "sha256": "79fbbe74a18b83073615d3a20a9d88c84684beda1824e9316a9a488d1d2667cd",
+    "bytes": 351
+  },
+  {
+    "path": "docs/spec/07_旧项目审查与来源.md",
+    "sha256": "620a8d9ef87952550b1aa78d09915da6475da1ff3cbf2d066c4afd9ee7f279ae",
+    "bytes": 353
+  },
+  {
+    "path": "docs/spec/08_功能缺口与使用场景清单.md",
+    "sha256": "8197743f1ea68c07462fa909c7afe2d2679328b103c397e4c178286ae0fe9658",
+    "bytes": 375
+  },
+  {
+    "path": "docs/spec/09_IO4兼容与USB冷切换.md",
+    "sha256": "44fc5cec5e5db77bfc1d12b5dce8a4481416bfcc2d696287ae3230d85c7bf765",
+    "bytes": 353
+  },
+  {
+    "path": "docs/spec/10_IO4外部项目对比.md",
+    "sha256": "a10a14a8581be176d65bf4ac19bab29432265741f403d193ca7854d2bb8f1013",
+    "bytes": 347
+  },
+  {
+    "path": "docs/spec/11_Arduino模块拆分与四窗口交接.md",
+    "sha256": "1d4eac13ff5e2a8901c096de508db1db04fe5d2b8932a724435f6954f87d0805",
+    "bytes": 386
+  },
+  {
+    "path": "docs/spec/12_完整配置与Flash序列化.md",
+    "sha256": "af445f6de19a93806d85b4bc528aaba5639fbd32eb3c1c9717cb876e6761ab66",
+    "bytes": 370
+  },
+  {
+    "path": "docs/spec/13_IO4软件契约.md",
+    "sha256": "c7ed44ed67c79803097861291f7c9d76515512dcd6aeeb32508e46e748033777",
+    "bytes": 335
+  },
+  {
+    "path": "docs/spec/14_模块整合运行契约.md",
+    "sha256": "6216b500bcd8bf9eb3a34d29c02af4bab55bc9bf5d195f435ae3bc98fd2a4c3c",
+    "bytes": 360
+  },
+  {
+    "path": "docs/spec/15_固件版本与UF2识别.md",
+    "sha256": "9597ae21250113378c06756966db761806743a35420f216c29f73a1562f075bb",
+    "bytes": 350
+  },
+  {
+    "path": "web修改.md",
+    "sha256": "4cb83f4e1165576a5f0afadeb9e5b7978c1a95f24528b3cc281d13500dd244b5",
+    "bytes": 27277
+  },
+  {
+    "path": "backups/README.md",
+    "sha256": "dfcbe36213004f026bea0649e183df0aa6d764af08cccea6c7dee781668f3d0f",
+    "bytes": 8843
+  },
+  {
+    "path": "tests/module2/module2_tests.cpp",
+    "sha256": "1ba9aa35bf07c19229f54633b53a72481e695a709f4b817ca8a81b13129eb306",
+    "bytes": 21057
+  },
+  {
+    "path": "tests/module3/module3_tests.cpp",
+    "sha256": "301bf21f1e6124ecc053c2c186190980b2d703c2904bca7cbe8fa7b90b67992a",
+    "bytes": 16734
+  },
+  {
+    "path": "tests/integration/run_all.py",
+    "sha256": "d590b7ae8c2f855dc54c7ac4c67c3e0994b5e18773f5861eccae57b0e9f523e3",
+    "bytes": 2766
+  },
+  {
+    "path": "RUN_INTEGRATED.md",
+    "sha256": "ad0caa9fd494f5af7b9f7833007ae4102d5bf4838c576a5a5d6597e70c58f273",
+    "bytes": 6934
+  }
+]

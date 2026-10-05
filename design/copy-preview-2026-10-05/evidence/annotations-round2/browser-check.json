@@ -1,0 +1,98 @@
+{
+  "date_local": "2026-10-05",
+  "scope": "Independent round-2 preview",
+  "production_files_unchanged": 74,
+  "hardware_tested": false,
+  "compiled": false,
+  "views": [
+    {
+      "width": 1440,
+      "modules": 8,
+      "overflow": false,
+      "three_rulers_passed": true,
+      "restart_dialog_passed": true,
+      "io4_confirmation_passed": true
+    },
+    {
+      "width": 1285,
+      "modules": 8,
+      "overflow": false,
+      "three_rulers_passed": true,
+      "restart_dialog_passed": true,
+      "io4_confirmation_passed": true
+    },
+    {
+      "width": 390,
+      "modules": 8,
+      "overflow": false,
+      "three_rulers_passed": true,
+      "restart_dialog_passed": true,
+      "io4_confirmation_passed": true
+    }
+  ],
+  "covered_comments": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "ruler_geometry": [
+    {
+      "width": 1440,
+      "id": "hall-gain",
+      "max_error_px": 0.006944444444457076,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 1440,
+      "id": "knob-gain-1",
+      "max_error_px": 0.006944444444457076,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 1440,
+      "id": "knob-gain-2",
+      "max_error_px": 0.006944444444457076,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 1285,
+      "id": "hall-gain",
+      "max_error_px": 0.005208333333371229,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 1285,
+      "id": "knob-gain-1",
+      "max_error_px": 0.005208333333371229,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 1285,
+      "id": "knob-gain-2",
+      "max_error_px": 0.005208333333371229,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 390,
+      "id": "hall-gain",
+      "max_error_px": 0.006944444444457076,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 390,
+      "id": "knob-gain-1",
+      "max_error_px": 0.006944444444457076,
+      "checked_values": "1..10"
+    },
+    {
+      "width": 390,
+      "id": "knob-gain-2",
+      "max_error_px": 0.006944444444457076,
+      "checked_values": "1..10"
+    }
+  ],
+  "browser_errors": [],
+  "production_modules_loaded": false,
+  "passed": true
+}

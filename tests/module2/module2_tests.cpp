@@ -607,3 +607,25 @@ test_calibration_control_cooperative_checks_and_command_timeout() {
   CHECK(!job.candidate().valid);
   return 0;
 }
+
+// Product scale s=1.0..10.0 is converted once by Web to schema2 gain=s/5.
+// Run the actual Hall algorithm for all 91 settings, both orientations.
+extern "C" int test_web_sensitivity_scale() {
+  const auto c = fixture();
+  for (int tenth = 10; tenth <= 100; ++tenth) {
+    for (int inverted = 0; inverted < 2; ++inverted) {
+      HallPosition p; auto s = enabled();
+      s.center_gain = static_cast<float>(tenth) / 50.0f;
+      s.invert = inverted != 0;
+      CHECK(p.apply(s, 1, 1)); CHECK(p.load(c));
+      for (int i = 0; i <= 4; ++i) {
+        const auto e = p.process(at(-41 + i * 20, c, i, (i + 1) * 1000));
+        CHECK(e.valid); CHECK(near(e.p, i * 0.25f, 0.001f));
+        const float oriented = s.invert ? 1 - e.p : e.p;
+        const float expected = clamp(0.5f + s.center_gain * (oriented - 0.5f), 0, 1);
+        CHECK(near(e.output, expected, 0.001f));
+      }
+    }
+  }
+  return 0;
+}

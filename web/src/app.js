@@ -1,3 +1,5 @@
+import { applyAndSave } from './workflows.js';
+import { mountGainControl } from './gain-control.js';
 import { mountConfirmation } from './confirmation.js';
 import { templateAction } from './template-actions.js';
 import { mountModuleNavigation } from './layout.js';
@@ -8,7 +10,7 @@ import { hallFields, knobFields, pushFields, assert } from './config.js';
 import { archive, exportSnapshot, importSnapshot, parseArchive } from './snapshot.js';
 import { FirmwareUpdate } from './update/controller.js';
 import { mountKnobPreview } from './knob-preview.js';
-import { mountIntegration, pollIntegration, lockIntegration, hasIo4Draft } from './integration.js';
+import { mountIntegration, pollIntegration, lockIntegration, hasIo4Draft, hasModeDraft, getModeDraft, resetModeDraft, hasCalibrationJob } from './integration.js';
 /** 单页DOM编排层。网页草稿、设备RAM和已保存Flash是三个不同状态：
  * change只改draft；apply等待公共两核ACK再读回；save独立维护并等待最终ACK。
  * 所有设备字段用textContent展示，不将设备名称/文件内容注入HTML。
@@ -31,33 +33,32 @@ function cancelListening(showNotice=true){
   listening.button.classList.remove('listening');listening.button.setAttribute('aria-pressed','false');
   listening=null;if(showNotice)notice('已退出键盘监听');
 }
-function mark(){device.localDirty=true;$('draft-state').textContent='网页草稿未应用';cancelListening();syncBindingLabels();for(const update of knobPreviewUpdates)update();controls();}
-function writable(){return !!(device?.ready&&client?.alive&&!busy&&device.revision===client.revision&&device.status.config_ready&&!device.status.applying&&device.status.maintenance==='idle');}
+function mark(){device.localDirty=true;$('draft-state').textContent='网页草稿未应用';cancelListening();syncBindingLabels();syncOverview();for(const update of knobPreviewUpdates)update();controls();}
+function writable(){return !!(device?.ready&&client?.alive&&!busy&&device.revision===client.revision&&device.status.config_ready&&!device.status.applying&&device.status.maintenance==='idle'&&!hasCalibrationJob());}
 function controls(){
   lockIntegration(device,busy);
   firmwareUpdate.render();
   $('uf2-file').disabled=busy;
   // 维护/写请求期间禁用编辑；出错或冲突后仅允许读回，避免用户继续覆盖未知状态。
-  const connected=!!client?.alive,edit=writable()&&!hasIo4Draft(),caps=device?.hello?.capabilities||{},profiles=edit&&caps.profiles;
+  const connected=!!client?.alive,edit=writable()&&!hasIo4Draft(),caps=device?.hello?.capabilities||{},profiles=edit&&caps.profiles,templates=profiles&&!hasModeDraft();
   if(!edit)cancelListening(false);
   $('connect').disabled=busy||connected;$('demo').disabled=busy||connected;$('disconnect').disabled=busy||!connected;
-  $('refresh').disabled=busy||!connected;$('apply').disabled=!edit||!device?.localDirty;
-  $('save').disabled=!edit||!caps.flash_save||!!device?.localDirty;
+  $('refresh').disabled=busy||!connected;$('apply').disabled=!edit||(!caps.flash_save&&!device?.localDirty);$('apply').textContent=caps.flash_save||!device?.hello?'应用并保存':'应用设置（不支持保存）';
   // 折叠只改变展示；高级字段仍受同一会话、能力、revision与维护锁保护。
   for(const id of ['key-editor','key-advanced-editor','light-editor','light-advanced-editor'])$(id).disabled=!edit;
-  for(const id of ['hall-editor','hall-advanced-editor','knob-advanced-editor','routing-editor'])$(id).disabled=!profiles;
+  for(const id of ['overview-editor','hall-editor','hall-advanced-editor','knob-advanced-editor','routing-editor'])$(id).disabled=!profiles;
   // 旋钮本地模拟位于设置fieldset外：未连接/维护时也可演示，不绕过设备设置写锁。
   for(const settings of document.querySelectorAll('.knob-settings'))settings.disabled=!profiles;
-  $('profile-select').disabled=!profiles;$('profile-name').disabled=!profiles||device.selected<=4;
-  $('edit-template').disabled=!profiles||!caps.flash_save;
-  for(const button of document.querySelectorAll('[data-profile]'))button.disabled=!profiles;
-  for(const id of ['activate','rename','delete'])$(id).disabled=!profiles||!!device?.localDirty;
-  $('create').disabled=!profiles||!caps.flash_save||device.profiles.length>=caps.max_profiles;
-  $('restore').disabled=!profiles||device.selected>4;
-  if(profiles){$('rename').disabled=device.localDirty||device.selected<=4;$('delete').disabled=device.localDirty||device.selected<=4;$('activate').disabled=device.localDirty||device.selected===device.meta.active_profile;}
-  $('export').disabled=!edit||!caps.snapshot_transfer||!!device?.localDirty;
-  $('import-file').disabled=!edit||!caps.snapshot_transfer||!!device?.localDirty;
-  $('import-commit').disabled=!edit||!importCandidate||!!device?.localDirty||importCandidate.revision!==device?.revision;
+  $('profile-select').disabled=!templates;$('profile-name').disabled=!templates||device.selected<=4;
+  $('edit-template').disabled=!templates||!caps.flash_save;
+  for(const button of document.querySelectorAll('[data-profile]'))button.disabled=!templates;
+  for(const id of ['activate','rename','delete'])$(id).disabled=!templates||!!device?.localDirty;
+  $('create').disabled=!templates||!caps.flash_save||device.profiles.length>=caps.max_profiles;
+  $('restore').disabled=!templates||device.selected>4;
+  if(templates){$('rename').disabled=device.localDirty||device.selected<=4;$('delete').disabled=device.localDirty||device.selected<=4;$('activate').disabled=device.localDirty||device.selected===device.meta.active_profile;}
+  $('export').disabled=!edit||!caps.snapshot_transfer||!!device?.localDirty||hasModeDraft();
+  $('import-file').disabled=!edit||!caps.snapshot_transfer||!!device?.localDirty||hasModeDraft();
+  $('import-commit').disabled=!edit||!importCandidate||!!device?.localDirty||hasModeDraft()||importCandidate.revision!==device?.revision;
   $('record').disabled=busy||!connected;$('csv').disabled=records.length===0;
 }
 function field(container,label,object,key,type='number',options={}){
@@ -75,10 +76,11 @@ function field(container,label,object,key,type='number',options={}){
   input.addEventListener('change',()=>{
     if(!input.checkValidity()){input.reportValidity();return;}
     object[key]=type==='checkbox'?input.checked:type==='color'?[1,3,5].map(i=>parseInt(input.value.slice(i,i+2),16)):type==='select'&&options.numeric?Number(input.value):type==='select'?input.value:input.valueAsNumber;
-    mark();if(key==='brightness_level')$('brightness-text').textContent=`当前 ${object[key]} → 实际最高 ${object[key]/2}%`;
+    mark();if(key==='brightness_level')$('brightness-text').textContent=`当前 ${object[key]}`;
   });row.append(input);container.append(row);return input;
 }
-function numbers(container,object,descriptors){for(const[key,label,min,max,type]of descriptors)field(container,label,object,key,'number',{min,max,step:type.startsWith('u')?1:0.000001});}
+const hallHelp={range_min:'输出范围的最小值，取值 0～1，须小于上界。',range_max:'输出范围的最大值，取值 0～1，须大于下界。',quiet_tau_us:'静止或慢速移动时的平滑程度。值越大，抖动越少，跟随也越慢；设为 0 可关闭此滤波。',moving_tau_us:'快速移动时的平滑程度。值越小，跟随越快；不能大于静止滤波。',fast_speed_mm_s:'达到这个速度时，使用移动滤波。低于此速度时逐渐过渡，不限制滑块速度。',activity_mm:'移动多远才算正在操作滑轨，用于来源切换，不是位置死区。实际门槛还会参考校准噪声。',activity_hold_us:'确认滑轨正在移动后，保持活动状态的时间（微秒）。',enter_signal:'三个传感器经校准后的信号总和达到此值，才开始接受位置，单位 ADC count。',exit_signal:'三路校准信号总和低于此值便停止接受位置。不能大于进入信号；单位 ADC count。',curve_tolerance:'允许读数偏离校准曲线的程度（ADC count）。放宽可能接受更多异常读数。',max_gap_us:'有效采样间隔超过此值（微秒），或采样中断时，以新位置重新建立参考，不沿用旧滤波状态。'};
+function numbers(container,object,descriptors){for(const[key,label,min,max,type]of descriptors){const input=field(container,label,object,key,'number',{min,max,step:type.startsWith('u')?1:'any'});if(container.id==='hall-advanced-fields'){const row=input.parentElement;row.classList.add('parameter-field');const help=element('small',hallHelp[key],'parameter-help');help.id='hall-help-'+key;input.setAttribute('aria-describedby',help.id);row.append(help);}}}
 // 两个页面复用相同物理分组；source_id 和设备配置数组保持不变。
 function physicalKeyContainers(container){
   container.replaceChildren();
@@ -143,11 +145,11 @@ function renderHall(hall=null){
   if(hall){
     field(container,'启用滑轨输入',hall,'enabled','checkbox');
     field(container,'反转输出方向',hall,'invert','checkbox');
-    numbers(container,hall,hallFields.filter(([key])=>key==='center_gain'));
+    mountGainControl(container,{object:hall,key:'center_gain',id:'hall-gain',label:'中心灵敏度',onChange:mark});
     return;
   }
   // 未连接或旧固件无motion时保留设置位置，空值表示尚未读回设备参数。
-  for(const [label,type]of [['启用滑轨输入','checkbox'],['反转输出方向','checkbox'],['中心倍率','number']]){
+  for(const [label,type]of [['启用滑轨输入','checkbox'],['反转输出方向','checkbox'],['中心灵敏度','number']]){
     const row=element('label',label,type==='checkbox'?'check-field':'');
     const input=element('input');input.type=type;input.disabled=true;
     if(type==='number')input.placeholder='待读取';
@@ -161,10 +163,9 @@ function renderEditors(){
   for(const key of ['press_debounce_us','release_debounce_us'])field(scan,key==='press_debounce_us'?'按下消抖 µs':'释放消抖 µs',c.scan,key,'number',{min:0,max:20000});
   const l=$('light-fields');l.replaceChildren();field(l,'键灯启用',c.lighting,'enabled','checkbox');
   field(l,'灯效',c.lighting,'mode','select',{values:[['static','常亮'],['breathing','呼吸'],['color_cycle','同步换色'],['rainbow_wave','彩虹流动'],['press','按下即亮']]});
-  field(l,'亮度0～100',c.lighting,'brightness_level','range',{min:0,max:100});const bt=element('span',`当前 ${c.lighting.brightness_level} → 实际最高 ${c.lighting.brightness_level/2}%`);bt.id='brightness-text';l.append(bt);
+  field(l,'亮度0～100',c.lighting,'brightness_level','range',{min:0,max:100});const bt=element('span',`当前 ${c.lighting.brightness_level}`);bt.id='brightness-text';l.append(bt);
   field(l,'全局颜色',c.lighting,'global_color','color');
   const la=$('light-advanced-fields');la.replaceChildren();field(la,'使用逐键色',c.lighting,'per_key','checkbox');field(la,'周期 ms',c.lighting,'period_ms','number',{min:100,max:60000});field(la,'动画反向',c.lighting,'reverse','checkbox');
-  field(la,'GP11模式灯启用',c.indicator,'enabled','checkbox');field(la,'GP11模式颜色',c.indicator,'color','color');
   const colors=$('key-colors');colors.replaceChildren();for(let id=0;id<10;id++)field(colors,'BT'+(id+1),c.lighting.key_colors,id,'color');
   const h=$('hall-fields'),ha=$('hall-advanced-fields'),k=$('knob-fields'),ka=$('knob-advanced-fields'),r=$('routing-fields');
   for(const container of [h,ha,k,ka,r])container.replaceChildren();
@@ -174,18 +175,41 @@ function renderEditors(){
     for(let id=0;id<2;id++){
       const card=element('div','','knob-card');card.append(element('h3',id===0?'旋钮 1 · U4 / FPC1 / P1':'旋钮 2 · U5 / FPC2 / P2'));
       knobPreviewUpdates.push(mountKnobPreview(card,{id,state:knobPreviewState[id],getConfig:()=>device?.draft?.motion?.knobs[id]}));
-      const f=element('fieldset','','form-grid knob-settings');field(f,'启用旋钮输入',m.knobs[id],'enabled','checkbox');field(f,'输出轴',m.knobs[id],'axis','select',{numeric:true,values:[[0,'X'],[1,'Y']]});field(f,'反转输出方向',m.knobs[id],'invert','checkbox');numbers(f,m.knobs[id],knobFields.filter(([key])=>key==='gain'));card.append(f);k.append(card);
+      const f=element('fieldset','','form-grid knob-settings');field(f,'启用旋钮输入',m.knobs[id],'enabled','checkbox');field(f,'输出轴',m.knobs[id],'axis','select',{numeric:true,values:[[0,'X'],[1,'Y']]});field(f,'反转输出方向',m.knobs[id],'invert','checkbox');mountGainControl(f,{object:m.knobs[id],key:'gain',id:'knob-gain-'+(id+1),label:'灵敏度',onChange:mark});card.append(f);k.append(card);
       const advanced=element('div','','knob-card'),af=element('div','','form-grid');advanced.append(element('h3','旋钮 '+(id+1)+' · 进阶参数'));numbers(af,m.knobs[id],knobFields.filter(([key])=>key!=='gain'));
       field(af,'启用 PUSH 防误触',m.knobs[id].push,'enabled','checkbox');numbers(af,m.knobs[id].push,pushFields);advanced.append(af);ka.append(advanced);
     }
     field(r,'接管静止滞回 µs',m.routing,'idle_us','number',{min:0,max:100000});field(r,'同时起动滑轨优先（工程起点）',m.routing,'simultaneous_hall_first','checkbox');
   }
   if(!device.draft.motion){renderHall();renderStandaloneKnobs();}
+  renderOverview();
 }
 function renderStandaloneKnobs(){
   // 初始/旧runtime无motion时仍提供清楚标记的本地演示，不伪造已读取的设备配置。
   const grid=$('knob-fields');grid.replaceChildren();knobPreviewUpdates=[];
   for(let id=0;id<2;id++){const card=element('div','','knob-card');card.append(element('h3',id===0?'旋钮 1 · U4 / FPC1 / P1':'旋钮 2 · U5 / FPC2 / P2'));knobPreviewUpdates.push(mountKnobPreview(card,{id,state:knobPreviewState[id],getConfig:()=>null}));grid.append(card);}
+}
+function renderOverview(){
+  for(const id of ['hall-overview','knob-overview'])$(id).replaceChildren();
+  const motion=device?.draft?.motion;
+  if(!motion){for(const id of ['hall-overview','knob-overview'])$(id).append(element('small',client?.alive?'此固件未提供启用设置':'连接后读取启用状态','device-awaiting'));}
+  else{
+    field($('hall-overview'),'启用滑轨输入',motion.hall,'enabled','checkbox').dataset.overview='hall';
+    motion.knobs.forEach((knob,id)=>field($('knob-overview'),'启用旋钮 '+(id+1),knob,'enabled','checkbox').dataset.overview='knob-'+id);
+  }
+  syncOverview();
+}
+function syncOverview(){
+  if(!device?.draft)return;
+  const online=!!client?.alive,prefix=online&&device.ready&&device.revision===client.revision?'':'上次读回 · ';
+  const active=device.profiles.find(p=>p.profile_id===device.meta?.active_profile);
+  $('active-profile-state').textContent=prefix+(active?active.name+'（ID '+active.profile_id+'）':'此固件仅提供运行配置');
+  $('editing-profile-state').textContent=prefix+'页面编辑：'+device.draft.name+(device.localDirty?' · 网页草稿':' · 已读回');
+  $('key-overview').textContent=prefix+device.draft.config.keyboard.bindings.filter(b=>b.action.type!=='disabled').length+' / 12 个已绑定动作';
+  const m=device.draft.motion;if(!m)return;
+  for(const input of document.querySelectorAll('[data-overview]'))input.checked=input.dataset.overview==='hall'?m.hall.enabled:m.knobs[Number(input.dataset.overview.slice(-1))].enabled;
+  const h=$('hall-fields').querySelector('input[type=checkbox]');if(h)h.checked=m.hall.enabled;
+  document.querySelectorAll('.knob-settings').forEach((f,id)=>{const input=f.querySelector('input[type=checkbox]');if(input)input.checked=m.knobs[id].enabled;});
 }
 function renderInputTest(){
   const destination=physicalKeyContainers($('input-test'));for(const id of order){const tile=element('div',id<10?'BT'+(id+1):'P'+(id-9),'test-key');tile.id='test-key-'+id;tile.setAttribute('data-source',String(id));tile.append(element('small','等待连接'));destination(id).append(tile);}
@@ -204,28 +228,25 @@ function renderStatus(){
   if(!client?.alive){
     $('diagnostic-summary').textContent='已断开，等待重新连接读回物理状态。';renderInputTest();
     for(const card of document.querySelectorAll('.key-card')){card.classList.remove('down');card.querySelector('.physical-state').textContent='已断开 · 上次配置';}
-    $('save-state').textContent='已断开，保存结果以重连读回为准';controls();return;
+    $('save-state').textContent='已断开，保存结果以重连读回为准';$('identity-state').textContent=device?.hello?'已断开 · 上次读回':'连接后查看';syncOverview();controls();return;
   }
-  if(!device?.ready){controls();return;}
+  if(!device?.ready){$('identity-state').textContent='读回未完成 · 上次读回';$('save-state').textContent='保存结果未确认，请重新读取设置';$('draft-state').textContent='当前结果待读回';syncOverview();controls();return;}
   const e=device.latestEnvelope||device.envelope,s=device.status;
   $('save-state').textContent=(e.dirty?'设备设置尚未保存':'设备快照已保存')+(s.maintenance==='idle'?'':' · 维护 '+s.maintenance);
   $('status-data').textContent=JSON.stringify({revision:client.revision,applied_revision:e.applied_revision,saved_revision:e.saved_revision,dirty:e.dirty,...s},null,2);
-  $('draft-state').textContent=device.revision!==client.revision?'设备版本已变化：必须读回':device.localDirty?'网页草稿未应用':'网页与已读模板一致';renderPhysical();controls();
+  $('identity-state').textContent=device.revision===client.revision?'当前会话读回':'修订已变化 · 上次读回';syncOverview();
+  $('draft-state').textContent=device.revision!==client.revision?'设备版本已变化：必须读回':device.localDirty||hasModeDraft()?'网页草稿未应用':'网页与已读模板一致';renderPhysical();controls();
 }
 function render(){
   // 仅完整读回成功后重建编辑器。不会在周期轮询时覆盖用户草稿或抢走输入焦点。
   const hello=device.hello,dl=$('identity');dl.replaceChildren();
-  for(const[label,value]of [['产品 / 板型',hello.product+' / '+hello.board],['固件 / 协议',hello.firmware_version+' / CDC v1'],['唯一序号',hello.serial],['实际USB身份',hello.usb_mode],['已保存启动身份',device.meta?.startup_usb_mode||'此固件未提供'],['活动模板',device.meta?.active_profile??'模块1运行配置'],['读取revision',device.revision]])dl.append(element('dt',label),element('dd',String(value)));
-  $('demo-label').textContent=client.port.simulated?'仅模拟 · 不连接硬件、不验证Flash/USB':'未实板 / 游戏验证';
+  for(const[label,value]of [['设备型号',hello.product+' / '+hello.board],['固件 / 协议',hello.firmware_version+' / CDC v1'],['唯一序号',hello.serial],['当前 USB 模式',hello.usb_mode],['启动模式（设备 RAM）',device.meta?.startup_usb_mode||'此固件未提供'],['活动模板',device.meta?.active_profile??'模块1运行配置'],['设置修订号',device.revision]])dl.append(element('dt',label),element('dd',String(value)));
+  $('demo-label').textContent=client.port.simulated?'模拟演示 · 不连接硬件':'';
   $('connection-state').textContent=client.port.simulated?'模拟会话':'已连接并完成读回';
   $('diagnostic-summary').textContent='已连接 · 物理状态约 2Hz 读回，无法判断毫秒级漏采。'+(hello.capabilities.push_hardware?'PUSH以设备读回为准。':'P1 / P2硬件尚未接入。');
-  const active=device.profiles.find(p=>p.profile_id===device.meta?.active_profile);
-  $('device-summary').textContent=`${hello.product} · 固件 ${hello.firmware_version} · 活动模板 ${active?.name??'此固件仅提供运行配置'}`;
   const select=$('profile-select');select.replaceChildren();for(const p of device.profiles){const option=element('option',`${p.profile_id} · ${p.name} ${p.preset?'（预置）':''}`);option.value=p.profile_id;select.append(option);}select.value=device.selected;$('profile-name').value=device.profile.name;
   for(const button of document.querySelectorAll('[data-profile]'))button.setAttribute('aria-pressed',String(Number(button.dataset.profile)===device.selected));
   $('update-cap').textContent=hello.capabilities.bootloader_command?'设备支持进入 UF2 下载模式。请手动复制文件，完成后重新连接并核对版本。':'此固件只支持板上BOOT手动进入UF2。';
-  $('capacity').textContent=hello.capabilities.profiles?`${device.profiles.length} / ${hello.capabilities.max_profiles} 个模板`:'此固件仅支持模块1运行配置';
-  $('hall-cap').textContent=hello.capabilities.hall?'真实采集/绝对输出已接入，主机兼容待测':'设置可存储；运动/校准未接入';$('knob-cap').textContent=hello.capabilities.knobs?'双SSI/PUSH/相对输出已接入':'设置可存储；旋钮/PUSH未接入';
   $('calibration-state').textContent=device.meta?`全局校准：${device.meta.calibration_valid?'有效共享校准记录':'无有效校准'} · generation ${device.meta.calibration_generation}`:'全局校准存储未提供';
   importCandidate=null;$('import-file').value='';$('import-preview').textContent='导入schema1/2完整设备快照。全部模板、活动槽、启动身份和全局机械校准都会纳入候选。';
   device.latestEnvelope=null;renderEditors();renderStatus();
@@ -251,26 +272,39 @@ async function connect(simulated=false){
     if(simulated){const { createDemoPort }=await import('./demo.js');port=await createDemoPort();}
     else {assert(window.isSecureContext&&navigator.serial,'请在桌面Chrome/Edge的localhost或HTTPS打开；当前浏览器无Web Serial');port=await navigator.serial.requestPort();}
     client=new SerialClient(port,error=>{clearTimeout(pollTimer);cancelListening(false);$('connection-state').textContent='已断开 / 结果待读回';notice('连接失败',true);renderStatus();});
-    device=new Device(client);await client.open();
+    device=new Device(client);resetModeDraft(device);
+    $('identity').replaceChildren(element('dt','设备'),element('dd','正在握手'));$('identity-state').textContent='等待当前设备读回';$('active-profile-state').textContent='连接后查看';$('editing-profile-state').textContent='页面编辑：连接后查看';$('key-overview').textContent='启用情况：连接后查看';
+    $('status-data').textContent='等待当前设备 get_status';records=[];recording=false;dropped=0;$('record').textContent='开始状态记录';$('record-state').textContent='最多保留 600 条当前会话记录；超出后移除最早记录。';
+    importCandidate=null;$('import-file').value='';$('import-preview').textContent='等待当前设备配置读回';
+    $('key-grid').replaceChildren(element('p','等待当前设备设置','hint'));$('profile-select').replaceChildren();$('profile-name').value='';renderHall();renderStandaloneKnobs();renderOverview();await client.open();
     try{await device.handshake();render();schedulePoll();}catch(error){await client.close();throw error;}
   },simulated?'模拟会话已连接。全部结果仅用于界面/协议软件演示。':'已完成能力握手和配置读回。编辑只形成网页草稿。','连接失败');
 }
 $('connect').onclick=()=>connect(false);$('demo').onclick=()=>connect(true);
-$('disconnect').onclick=()=>action(async()=>{clearTimeout(pollTimer);if(device?.localDirty||hasIo4Draft()||client?.last?.dirty)notice('存在未应用或未保存变化；断开不保存。');await client.close();$('connection-state').textContent='未连接';},'已断开；设备RAM变化未自动保存，重连会重新读回。');
-$('refresh').onclick=()=>action(async()=>{await device.refresh();render();},'已读回设备；网页草稿已舍弃。设备RAM未保存变化仍保留。');
-$('apply').onclick=()=>action(async()=>{assert([...document.querySelectorAll('fieldset input')].every(i=>i.checkValidity()),'存在未修正的无效输入');await device.apply();render();},'设置已应用并读回。当前配置仅存于设备 RAM；需要掉电保留时，请点击“保存到设备”。');
-$('save').onclick=()=>action(async()=>{
-  const current=device,revision=device.revision;
-  const confirmed=await confirmChange({title:'保存到设备',description:'确认保存设备当前已应用的完整配置？网页草稿需先应用。预设中的运行设置可以保存；再次点击预设仍会恢复其默认设置。',confirmLabel:'确认保存到设备'});
-  if(!confirmed)return;
-  assert(current===device&&revision===device.revision,'确认期间设备已变化，请重新读回');
-  notice('正在保存配置，请等待设备完成。保存期间输入采集将暂停。');await device.mutate('save_config');render();notice('设备已完成保存，保存状态已读回。');
-},null,null,$('save'));
+$('disconnect').onclick=()=>action(async()=>{clearTimeout(pollTimer);if(device?.localDirty||hasIo4Draft()||hasModeDraft()||client?.last?.dirty)notice('存在未应用或未保存变化；断开不保存。');await client.close();$('connection-state').textContent='未连接';},'已断开；设备RAM变化未自动保存，重连会重新读回。');
+async function readSettings(){
+  const current=device,observedRevision=client.revision,selected=current.selected;
+  if(current.localDirty||hasIo4Draft()||hasModeDraft()){
+    const scopes=[current.localDirty?'普通设置':null,hasIo4Draft()?'IO4 映射':null,hasModeDraft()?'启动模式':null].filter(Boolean).join('、');
+    if(!await confirmChange({title:'重新读取设置',description:'将舍弃未应用的网页修改：'+scopes+'。设备 RAM 中已应用但未保存的设置仍保留。',confirmLabel:'舍弃并重新读取'}))return false;
+    // An uncertain prior operation may have invalidated ready; refresh is the recovery path.
+    assert(device===current&&client===current.client&&client.alive&&current.selected===selected,'确认期间连接或模板已变化');
+    assert(client.revision===observedRevision,'确认期间修订已变化，请再次读取');
+  }
+  await current.refresh();resetModeDraft(current);render();notice('设置已重新读取；设备 RAM 中未保存设置仍保留。');return true;
+}
+$('refresh').onclick=()=>action(readSettings,null);
+$('apply').onclick=()=>action(async()=>{
+  const current=device,mode=getModeDraft();notice('正在应用并保存，请等待设备确认。');
+  if(!current.hello.capabilities.flash_save){validateTemplateDraft();await current.apply();render();notice('设置已应用并读回；此固件不支持保存。');return;}
+  await applyAndSave(current,{startupMode:mode,validateDraft:validateTemplateDraft,isCurrent:()=>device===current&&!hasCalibrationJob(),hasIo4Draft});
+  resetModeDraft(current);render();notice('设置已应用并保存，当前模板和设备保存状态已读回。');
+},null);
 function validateTemplateDraft(){assert([...document.querySelectorAll('fieldset input')].every(i=>i.checkValidity()),'存在未修正的无效输入');}
 function runTemplateAction(kind,options={},success='') {
   return action(async()=>{
-    const current=device;
-    const changed=await templateAction(current,kind,confirmChange,{...options,validateDraft:validateTemplateDraft,isCurrent:()=>current===device&&!hasIo4Draft()});
+    const current=device;assert(!hasModeDraft()&&!hasIo4Draft()&&!hasCalibrationJob(),'请先处理启动模式、IO4 草稿或校准任务');
+    const changed=await templateAction(current,kind,confirmChange,{...options,validateDraft:validateTemplateDraft,isCurrent:()=>current===device&&!hasIo4Draft()&&!hasModeDraft()&&!hasCalibrationJob()});
     // 取消切换时，也将下拉框恢复到真正选中的模板。
     if(changed){render();notice(success);}else $('profile-select').value=device.selected;
   },null,null,$({save:'edit-template',create:'create',rename:'rename',delete:'delete',restore:'restore',activate:'activate',select:'profile-select'}[kind]));
@@ -297,7 +331,7 @@ $('record').onclick=()=>{recording=!recording;$('record').textContent=recording?
 $('csv').onclick=()=>{const columns=['host_time','revision','physical_mask','config_ready','applying','maintenance','save_result','valid_slots','protocol_requests','protocol_rejected','overlong_lines'];const csv=columns.join(',')+'\r\n'+records.map(r=>columns.map(k=>'"'+String(r[k]??'').replaceAll('"','""')+'"').join(',')).join('\r\n');download('FluxRail-status.csv',csv,'text/csv;charset=utf-8');};
 $('uf2-file').onchange=()=>action(async()=>{await firmwareUpdate.check($('uf2-file').files[0]);},null,'UF2检查未通过，请查看固件更新区的提示。');
 // 浏览器尽力提示未保存离开；不自动save，不假定beforeunload一定可阻止关闭。
-window.addEventListener('beforeunload',event=>{if(device?.localDirty||hasIo4Draft()||client?.last?.dirty){event.preventDefault();event.returnValue='';}});
-mountIntegration({getDevice:()=>device,getClient:()=>client,runAction:action,onControlsChange:controls,refresh:async()=>{await device.refresh();render();}});
-renderHall();renderStandaloneKnobs();renderInputTest();controls();
+window.addEventListener('beforeunload',event=>{if(device?.localDirty||hasIo4Draft()||hasModeDraft()||client?.last?.dirty){event.preventDefault();event.returnValue='';}});
+mountIntegration({getDevice:()=>device,getClient:()=>client,runAction:action,onControlsChange:controls,refresh:async()=>{await device.refresh();resetModeDraft(device);render();},confirm:confirmChange,notice,readSettings,hasModeDraft,calibrationBusy:hasCalibrationJob});
+renderHall();renderStandaloneKnobs();renderInputTest();renderOverview();controls();
 mountModuleNavigation({onNavigate:()=>cancelListening(false)});

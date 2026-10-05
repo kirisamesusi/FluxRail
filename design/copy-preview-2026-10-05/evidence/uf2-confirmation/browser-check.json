@@ -1,0 +1,31 @@
+{
+  "scope": "Independent UF2 confirmation preview",
+  "production_files_unchanged": 74,
+  "hardware_tested": false,
+  "views": [
+    {
+      "width": 1274,
+      "cancel_and_escape_preserve_notice": true,
+      "confirm_local_only": true,
+      "focus_returned": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "cancel_and_escape_preserve_notice": true,
+      "confirm_local_only": true,
+      "focus_returned": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "cancel_and_escape_preserve_notice": true,
+      "confirm_local_only": true,
+      "focus_returned": true,
+      "horizontal_overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "production_modules_loaded": false,
+  "passed": true
+}

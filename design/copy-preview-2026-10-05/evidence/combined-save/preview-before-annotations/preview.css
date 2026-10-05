@@ -1,0 +1,3 @@
+/* This strip identifies the isolated draft. The existing page stylesheet is copied unchanged. */
+.copy-preview-note { display:flex; flex-wrap:wrap; gap:6px 18px; padding:12px 20px; margin-bottom:16px; border:1px solid #c5dfee; border-radius:16px; background:#f2faff; color:#526e83; font-size:13px; line-height:1.6; }
+.copy-preview-note strong { color:#355871; }

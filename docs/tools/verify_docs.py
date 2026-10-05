@@ -12,6 +12,7 @@ def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--audit-snapshot',action='store_true',help='Also enforce the 2026-10-05 reorganization code/evidence baseline')
+    parser.add_argument('--output',help='Write this run to a new report path instead of overwriting the historical archive report')
     args=parser.parse_args()
     documents=list((ROOT/'docs').rglob('*.md'))
     documents += [ROOT/'AGENTS.md',ROOT/'README.md',ROOT/'RUN_INTEGRATED.md',ROOT/'REVIEW_FULL_2026-10-04.md',ROOT/'web/README.md',ROOT/'dependencies/README.md',BASELINE/'BACKUP-README.md']
@@ -49,7 +50,12 @@ def main():
     naming_ok=naming['passed'] and naming['compile_script_sha256']==digest(ROOT/'tests/integration/compile_firmware.py')
     report={'date_local':'2026-10-05','snapshot_audit':args.audit_snapshot,'document_count':len(documents),'local_links_checked':links,'missing_links':missing,'archived_count':len(manifest['files']),'archive_errors':archive_errors,'snapshot_zip_error':zip_error,'protected_count':len(protected),'changed_existing_code_or_evidence_since_snapshot':changed,'changes_outside_reorganization_scope':unexpected,'new_code':'docs/tools/verify_docs.py (documentation check only)','artifact_naming_check_matches_current_script':naming_ok,'functional_tests_run':False,'compiled':False,'uploaded':False,'passed':not(missing or archive_errors or zip_error) and (not args.audit_snapshot or (not unexpected and naming_ok))}
     report['missing_generated_outputs']=generated_links
-    (ARCHIVE/'DOCUMENTATION_CHECK.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    output=(ROOT/args.output).resolve() if args.output else ARCHIVE/'DOCUMENTATION_CHECK.json'
+    if args.output:
+        if not output.is_relative_to(ROOT):raise ValueError('Report path must be inside the repository')
+        if output.exists():raise FileExistsError('Refusing to overwrite an existing report')
+        output.parent.mkdir(parents=True,exist_ok=True)
+    output.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False,indent=2))
     return 0 if report['passed'] else 1
 

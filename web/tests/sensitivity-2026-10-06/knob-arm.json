@@ -1,0 +1,145 @@
+{
+  "validation": "ARM instruction simulation of original module C++",
+  "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+  "core": "Arduino-Pico 6.1.0",
+  "unicorn": "2.1.3",
+  "hardware_tested": false,
+  "game_tested": false,
+  "instruction_limit": 200000000,
+  "source_sha256": {
+    "firmware/FluxRail/src/knobs/KnobModule.cpp": "9ca8302f4fbdbfdfd7198aa9f0ea7a758057a27be3b53df3755c3bc355bf05ed",
+    "firmware/FluxRail/src/knobs/KnobMotion.cpp": "e8bc842e098dd1de7e525661266da9d23f4d0c85092d70faf59b189588de53c8",
+    "firmware/FluxRail/src/knobs/KnobSampler.cpp": "a9416b505a30011b1f12819819e7a277f369cc23295b3d0bb016d581b1747cab",
+    "firmware/FluxRail/src/knobs/KnobTypes.cpp": "43213a7fddd2eb9fb193fa011589530f8af2892d3ad47ba397912b5f6b6f1c88",
+    "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.cpp": "96cc34e020f5c6c31b822a635feec193c55c45cc001a5639ffeb4357deaf38f6",
+    "firmware/FluxRail/src/knobs/PushFilter.cpp": "d9bcc31ebebfa9d6acce050a09215c6889dbef83630a092c1a9a9bb5b803c0d8",
+    "firmware/FluxRail/src/knobs/AppPushSink.h": "d9f293f0df5e42e88520807fe9654a25ac492d4c1b9c8d4796c4fe9bf5c1abc6",
+    "firmware/FluxRail/src/knobs/KnobModule.h": "5659d3e3a1d901b4e865214b90f96a7d3ee77c19c72136e45d36e6309df8de23",
+    "firmware/FluxRail/src/knobs/KnobMotion.h": "a3659dce30beb2068ebe3c802064f49b8304562679c4519fff274b517c6aaf8c",
+    "firmware/FluxRail/src/knobs/KnobSampler.h": "3bed34fbadd2c67c92cfae751650479c47eefd789fcc137ecc5bd0cc085d71d9",
+    "firmware/FluxRail/src/knobs/KnobTypes.h": "24b48050ec66b05d9220b9ccdabf5b5c51b82a0322387898197c44eccf7e9964",
+    "firmware/FluxRail/src/knobs/Mt6701SsiRp2040.h": "da59845e22564bb09309be60a10d94d1fa655e4e66f0b4d8bd445e580b2d0074",
+    "firmware/FluxRail/src/knobs/PushFilter.h": "8c3ce8108f7cb32cec9b6b59ac95f0ddceb0e58d0557457ab2db455b101d83dd",
+    "firmware/FluxRail/src/board/BoardConfig.h": "da06a1f895a948fa38436226f95a343ae3934565c31b617669e9c053850a91c2",
+    "firmware/FluxRail/src/common/InputTypes.h": "244a3d3fc727e56ba83549976a0169d56a2007052bd1500be365151dc19657a8",
+    "firmware/FluxRail/src/realtime/SpscQueue.h": "d53170a665c34adf1283751120c794f084b6043f3ba4ea4e7b6b76819ed6bced",
+    "tests/module3/module3_tests.cpp": "34b860a42f4645693d3e9f3fd4a0c16a8820cefe85fd17c0e60a79871854e847",
+    "tests/module3/run_tests.py": "6119a1fb8a184f85f3a7f5ddd922a04de5e37a69d02e62836219f34bdd5fdd76"
+  },
+  "source_drift": [],
+  "object_size_bytes": {
+    "Sample": 20,
+    "Motion": 72,
+    "Settings": 80,
+    "KnobModule": 10080,
+    "KnobMotion": 208,
+    "PushFilter": 80
+  },
+  "results": [
+    {
+      "test": "test_crc_and_status",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 2126
+    },
+    {
+      "test": "test_wrap_multiturn_and_gain",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 1180
+    },
+    {
+      "test": "test_crc_gap_and_field_recovery",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 39
+    },
+    {
+      "test": "test_ambiguity_speed_and_time_wrap",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 10
+    },
+    {
+      "test": "test_fraction_filter_activity_and_config",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 37
+    },
+    {
+      "test": "test_push_start_rotate_release_timeout",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 48
+    },
+    {
+      "test": "test_push_quality_mismatch_and_gap",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 21
+    },
+    {
+      "test": "test_dual_queues_order_backpressure_and_resume",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 241
+    },
+    {
+      "test": "test_sampler_independence_and_skips",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 13
+    },
+    {
+      "test": "test_sampler_phase_jitter_and_wrap",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 6
+    },
+    {
+      "test": "test_validation_atomic_config",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 15
+    },
+    {
+      "test": "test_public_push_adapter",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 4
+    },
+    {
+      "test": "test_single_bad_sensor_and_same_axis",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 405
+    },
+    {
+      "test": "test_push_snapshot_on_pause_and_overflow",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 8
+    },
+    {
+      "test": "test_web_sensitivity_scale",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 2548
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { sensitivityText } from './sensitivity.js';
 /** 旋钮本地交互示意，不读取传感器、不生成HID、不发送CDC，不修改设备草稿。
  * 拖动产生的累计圈数仅用于解释倍率/反向；真实设备仍须使用公共累计圈数遥测。
  * 顺时针为本示意的正方向，不能据此推断实板SSI安装方向或主机像素位移。
@@ -33,8 +34,7 @@ export function mountKnobPreview(container,{id,state,getConfig}){
     const button=node('button',label);button.type='button';button.onclick=()=>{if(delta===null){state.turns=0;state.delta=0;update();}else advance(delta);};buttons.append(button);
   }
   const settings=node('p','','hint preview-settings');
-  panel.append(badge,dial,node('p','外圈圆点：模拟旋钮位置；内箭头：倍率后的旋转。','hint preview-legend'),direction,metrics,buttons,settings,
-    node('p','拖动圆盘或滚轮旋转；聚焦圆盘后用方向键，Home 复位。累计圈数范围 ±1000。','hint'));
+  panel.append(badge,dial,node('p','外圈圆点：模拟旋钮位置；内箭头：倍率后的旋转。','hint preview-legend'),direction,metrics,buttons,settings);
   container.append(panel);
   function update(){
     const current=getConfig(),config=current??{gain:1,invert:false,axis:id,enabled:true},p=projectPreview(state.turns,config);
@@ -43,7 +43,7 @@ export function mountKnobPreview(container,{id,state,getConfig}){
     values.raw.textContent=fixed(state.turns)+' 圈';values.rawAngle.textContent=p.rawAngle.toFixed(1)+'°';values.scaled.textContent=fixed(p.scaledTurns)+' 圈';values.scaledAngle.textContent=p.scaledAngle.toFixed(1)+'°';
     const delta=state.delta*config.gain*(config.invert?-1:1),arrow=!delta?'—':p.axis==='X'?(delta>0?'→':'←'):(delta>0?'↓':'↑');
     direction.textContent=`${arrow} 模拟输出轴 ${p.axis} · ${!state.delta?'未旋转':state.delta>0?'顺时针输入':'逆时针输入'}${current&&!config.enabled?' · 来源关闭，仅显示倍率效果':''}`;
-    settings.textContent=current?`使用网页设置：倍率 ${config.gain}，${config.invert?'反向':'正向'}。真实设备圈数另见遥测圆盘。`:'未读取设备配置：示意使用倍率 1、正向；默认轴仅用于本地预览。';
+    settings.textContent=current?`使用网页设置：灵敏度 ${sensitivityText(config.gain)}，${config.invert?'反向':'正向'}。真实设备圈数另见遥测圆盘。`:'未读取设备配置：示意使用灵敏度 5.0、正向；默认轴仅用于本地预览。';
     dial.setAttribute('aria-valuenow',String(state.turns));dial.setAttribute('aria-valuetext',`本地输入 ${fixed(state.turns)} 圈，倍率后 ${fixed(p.scaledTurns)} 圈，输出轴 ${p.axis}`);
   }
   function advance(delta){const next=boundedTurns(state.turns+delta);state.delta=next-state.turns;state.turns=next;update();}

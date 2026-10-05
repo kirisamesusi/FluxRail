@@ -1,0 +1,406 @@
+{
+  "date_local": "2026-10-06",
+  "scope": "Final source and independent evidence; no firmware/hardware release",
+  "files": [
+    {
+      "path": "web/index.html",
+      "sha256": "8ad33b94e3677ff97f45095439a7cbd9b0e735f54e5e1d02a6ee8551bf0fffa3",
+      "bytes": 22161
+    },
+    {
+      "path": "web/src/app.js",
+      "sha256": "59ea149acef50303c91c2b657d4bb42249c40b7b403a38d849697cf4e37e8168",
+      "bytes": 35868
+    },
+    {
+      "path": "web/src/config.js",
+      "sha256": "5c2e593c4b320eb57b8b12c632dbb564c729737c569a203069b773f475012cb7",
+      "bytes": 7149
+    },
+    {
+      "path": "web/src/knob-preview.js",
+      "sha256": "d2ae4a247a06cffb0ce74b9b081df0c5c95e47f1454d44b1f2d41b096600c798",
+      "bytes": 6545
+    },
+    {
+      "path": "web/src/gain-control.js",
+      "sha256": "48e6e6e6726dad9a0f0f4acd457f284931e6bb9cf9a03b7cb05a5aa33e4d50a2",
+      "bytes": 2973
+    },
+    {
+      "path": "web/src/sensitivity.js",
+      "sha256": "fac2a935291d44ddaf29f93b462e1c678b0b659c0fe2e4121b9ba1d05eca4b7c",
+      "bytes": 1484
+    },
+    {
+      "path": "web/package.json",
+      "sha256": "7dcd146eb0c937408b8d2b04d20674af476d814caf899520755283f6ec6fc4ca",
+      "bytes": 434
+    },
+    {
+      "path": "web/tests/sensitivity.test.mjs",
+      "sha256": "92ca9ded6b9061512e398d4b30ec93c3df3516a34c8fe8808a4800bafe3e63ff",
+      "bytes": 7110
+    },
+    {
+      "path": "tests/module2/module2_tests.cpp",
+      "sha256": "4d6ce09e857c632cff16411230f1c0c858f35ea808c2870b14ce133893e5a233",
+      "bytes": 21959
+    },
+    {
+      "path": "tests/module3/module3_tests.cpp",
+      "sha256": "34b860a42f4645693d3e9f3fd4a0c16a8820cefe85fd17c0e60a79871854e847",
+      "bytes": 17655
+    },
+    {
+      "path": "tests/integration/run_all.py",
+      "sha256": "a3d437c788224d9cd3999b58c06024fac2c0ba282e82cd49842813f38dcceca3",
+      "bytes": 2830
+    },
+    {
+      "path": "RUN_INTEGRATED.md",
+      "sha256": "ce95346fe3a5ab992f0bfebc22f1db32b60921f1747f6726fb1c8e0bd82c0c3e",
+      "bytes": 6972
+    },
+    {
+      "path": "docs/modules/03_三霍尔滑轨.md",
+      "sha256": "68089de6e6cad451ac61118195c05d616197fb9b235f3b51761e7af3e4c7ae89",
+      "bytes": 11928
+    },
+    {
+      "path": "docs/modules/04_旋钮与PUSH.md",
+      "sha256": "113e42a35e56214281182d9c70e3d704382cfafc3f1e58121ec49e156de235a0",
+      "bytes": 12260
+    },
+    {
+      "path": "docs/modules/05_Web配置工具.md",
+      "sha256": "70fc8646bcb763d30585b3f6e24261faf0bc88818e7393f369bce07c8774f24f",
+      "bytes": 23050
+    },
+    {
+      "path": "docs/公共架构与配置契约.md",
+      "sha256": "c4cb4ab56af893ba5b46c3d939f3fb8e90644fc2802fcd08195a57595ed45aba",
+      "bytes": 9039
+    },
+    {
+      "path": "docs/产品需求与约束.md",
+      "sha256": "14081fa6400b62882ff9e144de5d3290566bd32294a8792a0ba1406e52179f25",
+      "bytes": 4706
+    },
+    {
+      "path": "docs/测试状态与待验收.md",
+      "sha256": "3e745636a8b131f286aab8972a6e42c0890f40309780956f1c04cbaeb4f4ad7c",
+      "bytes": 8690
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "7b2392e39a7c3c7c502a5919913c7dbb88f34b96a27ad0ef2c3006348db07465",
+      "bytes": 3732
+    },
+    {
+      "path": "docs/Web重构交接_2026-10-05.md",
+      "sha256": "7fb9bf75aa3bf5e4154c43b7c2910a05e88dfd5668c9d0ff5d5b4b7702b15240",
+      "bytes": 17364
+    },
+    {
+      "path": "web修改.md",
+      "sha256": "cca1e77a08bc0add89b64f82ba8349158511b02975756c535c1ea125bcdecfa8",
+      "bytes": 29474
+    },
+    {
+      "path": "web/README.md",
+      "sha256": "6bff1c3c4ac9fb66b03b14f5e78549f67e1cba52f948f0bc0e415451b5ce59e1",
+      "bytes": 2387
+    },
+    {
+      "path": "backups/README.md",
+      "sha256": "b2bab26b731298138d71b241d716a7971c93a20e0652ba20d13197751e002fbd",
+      "bytes": 9215
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2-output.txt",
+      "sha256": "b3456278ca33fdcd270b6179e1e152d76dbeafe58ed9274c827a24e084a0a6e8",
+      "bytes": 1367
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-output.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-output.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/check.mjs",
+      "sha256": "d644f81bcfc1c70334c8257c4be1da6048a73de04b4e1c0a0d5bfca3669a7263",
+      "bytes": 25407
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/docs-final-check.json",
+      "sha256": "06e26a68e34dfd7fe423866770c8c73f3f51722ebdc8459e09f44e252999be1f",
+      "bytes": 1603
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-browser-output.txt",
+      "sha256": "b3456278ca33fdcd270b6179e1e152d76dbeafe58ed9274c827a24e084a0a6e8",
+      "bytes": 1367
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/hall-arm.json",
+      "sha256": "441a89f3effde00a20c8135bc3caacedaac1461294cea4c8205416a4e2c87110",
+      "bytes": 2838
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/hall-tests.txt",
+      "sha256": "c7c7aa193c64af1dfd984cb198d8de404268960c728dcffe9da84d06974fbe11",
+      "bytes": 1134
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/knob-arm.json",
+      "sha256": "4b1c8336c8946776e0fc6024723627f345e73e48bebee28bc33adea3a41fc5e9",
+      "bytes": 5139
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/knob-tests.txt",
+      "sha256": "553f0fa3f9aa36ea2dc4a73182cb610c99c96e9b6a63c4bc797101d561ee9a49",
+      "bytes": 1090
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/LUNA_REVIEW.md",
+      "sha256": "dd7fea0d84e431769db9fdae8654ef4bb57e10144357580c31846af4edc0135e",
+      "bytes": 1657
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/node-final-tests.txt",
+      "sha256": "172f0b703df2e271554a84db2fc3fe3945402d8e01a3b1d3783b2c0d16cd95cc",
+      "bytes": 6867
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/node-tests.txt",
+      "sha256": "ce8b03484fbca7f1f97e71bf3fdae5bc3b00452cb20ab37ef47621c909f50925",
+      "bytes": 6864
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/protection-check.json",
+      "sha256": "60922c6c2765a800280e829fc5e860476f7ccd48debc643325de11202a77c93d",
+      "bytes": 221
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/README.md",
+      "sha256": "b68a01fbc388c984c4e26c55d9cdc3faea455990255742072ea9590f90851048",
+      "bytes": 5058
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/syntax-check.json",
+      "sha256": "6bd461ed1e0fc9b678843d1229c66bb483798124104b5483d2b12d9902bcac16",
+      "bytes": 817
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/validation.json",
+      "sha256": "7386d7c9c162277cd108543cb0b73ff54b75f14f8a66393885aab99c37e08266",
+      "bytes": 678
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final/disconnected-1274.png",
+      "sha256": "220ddadde91a0129795450dec318dd6fbe81cf2360e75929578a31f12764fb09",
+      "bytes": 305557
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final/disconnected-320.png",
+      "sha256": "1adb83991d18e814f8d289482f91e5ad74201e5901308eb265a87e734b553e0d",
+      "bytes": 148470
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final/disconnected-390.png",
+      "sha256": "ae3d464bb54d604d4eb0ff2ca707f9f15df4e0d89dc712b1227d12296a4b5cbe",
+      "bytes": 160720
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final/integration-bootloader-confirmation.png",
+      "sha256": "76cc6a86a5c120e5488739db80b4165ffa1b0dc2c37823977c28f1f2cac5e38b",
+      "bytes": 233411
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final/knobs-1274.png",
+      "sha256": "3a5f5403926b8cca05c288355747f3f5913748a240d1da02f3b5637de41980ec",
+      "bytes": 511161
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final/restart-device-confirmation.png",
+      "sha256": "db737ee76b7cdab0e520ef693876b54728ec3e1501f51a8c252793a1b183ae91",
+      "bytes": 186071
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/browser-check.json",
+      "sha256": "82b2ab989a23a954b9a73812730c65034abfc7b53a6d89bd3a2cd048f7f2dfc4",
+      "bytes": 9578
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/disconnected-1274.png",
+      "sha256": "220ddadde91a0129795450dec318dd6fbe81cf2360e75929578a31f12764fb09",
+      "bytes": 305557
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/disconnected-320.png",
+      "sha256": "1adb83991d18e814f8d289482f91e5ad74201e5901308eb265a87e734b553e0d",
+      "bytes": 148470
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/disconnected-390.png",
+      "sha256": "ae3d464bb54d604d4eb0ff2ca707f9f15df4e0d89dc712b1227d12296a4b5cbe",
+      "bytes": 160720
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/integration-bootloader-confirmation.png",
+      "sha256": "76cc6a86a5c120e5488739db80b4165ffa1b0dc2c37823977c28f1f2cac5e38b",
+      "bytes": 233411
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/knobs-1274.png",
+      "sha256": "3a5f5403926b8cca05c288355747f3f5913748a240d1da02f3b5637de41980ec",
+      "bytes": 511161
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/knobs-320.png",
+      "sha256": "14d34fce211f0ea6ba7434a0d2f0aaa0884958382ad6b173a1a145895ea5c3b5",
+      "bytes": 308654
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/knobs-390.png",
+      "sha256": "cecd6b30fdbad345ea17ee2912f1bd7fb7f8a13925e0ff01f19f82acc1d1ebe8",
+      "bytes": 336484
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/restart-device-confirmation.png",
+      "sha256": "62be84083d7b33ddb6fcdf6ad958caea8ff224869a88fdb375b096de4e68d71b",
+      "bytes": 185993
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/status-1274.png",
+      "sha256": "b6b63858d22d63619037c495973d8698b03a028b0326172ba9813e9d94ee3a8e",
+      "bytes": 308771
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/status-320.png",
+      "sha256": "dc826a8660e6588482831234f64f15d14124e1e7cbbe34a6e6862af435179b5a",
+      "bytes": 155341
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/status-390.png",
+      "sha256": "ac5290d31ff6b4712d4351779f84eded5797a11e467e7d42e74e0c648cbfa9ce",
+      "bytes": 164828
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/uf2-dialog-1274.png",
+      "sha256": "1a663cd0125360043e021cddd2c34730ef8bca51e896c73e3a12c6d0c9cf16a2",
+      "bytes": 276909
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/uf2-dialog-320.png",
+      "sha256": "157a9e7d95c060f4787bfa7b4ddda9f4398f5957e99ff90a2821bb56853034e5",
+      "bytes": 115847
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/browser-final-2/uf2-dialog-390.png",
+      "sha256": "426ca9c42f2865fceec0c14ea2621717814760b649e57ca2eb5175cecf78d9bf",
+      "bytes": 127055
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/browser-check.json",
+      "sha256": "82b2ab989a23a954b9a73812730c65034abfc7b53a6d89bd3a2cd048f7f2dfc4",
+      "bytes": 9578
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/default-hall-1274.png",
+      "sha256": "4722fe2d0d36e89466d7843289e63979d2b0df7f366cf71301fa6c1c68b88068",
+      "bytes": 272635
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/default-hall-390.png",
+      "sha256": "d9c87cc0ebd49d72945a0020bd8484f821c91eb5ed8c768ed5c3004fb1df93f5",
+      "bytes": 134989
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/default-knobs-1274.png",
+      "sha256": "3aa72ee03f5040e186e494c4d4f20c47f9d13e4b54a76c608faa9398b3e299d5",
+      "bytes": 487405
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/default-knobs-390.png",
+      "sha256": "f4190467c25faeb2f89d06829ddf4ed89cf53e443a24b2f78b4b13555be5d22e",
+      "bytes": 331577
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/disconnected-1274.png",
+      "sha256": "a7b1086f96103e8cb0e486ceada30685e67fdb266b296287f02025b970bab637",
+      "bytes": 305866
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/disconnected-320.png",
+      "sha256": "2a69305ae8c9131ce962a5cf8280ecf93e9f27c4a581bf85bb03a608ce68c891",
+      "bytes": 148819
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/disconnected-390.png",
+      "sha256": "167baf9f7e6d455f7fef518488892ff9075571cc5199692995e5f69e7edac0b0",
+      "bytes": 161075
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/integration-bootloader-confirmation.png",
+      "sha256": "76cc6a86a5c120e5488739db80b4165ffa1b0dc2c37823977c28f1f2cac5e38b",
+      "bytes": 233411
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/knobs-1274.png",
+      "sha256": "9a05946de1f00281ed0b6420fd5f6f852f839e7c59641dc98acefdc1ddfc66fb",
+      "bytes": 511377
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/knobs-320.png",
+      "sha256": "b6224655b2305a5ac4663eb9143e9861d55fc44638477ea492fe383c3d863143",
+      "bytes": 309449
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/knobs-390.png",
+      "sha256": "c94f70c185cc48e0b6e860bf317b839401bfb8159a6abf468065fd7e583cb826",
+      "bytes": 336775
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/restart-device-confirmation.png",
+      "sha256": "832d5166ebb668071e36c57c667a01d88891e82d0c64e7fc28ebfee3a8822489",
+      "bytes": 186035
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/status-1274.png",
+      "sha256": "ed6dc3cad75b27a5045657f47dabcb203e2f2fafbc33233e2d2b14b35bad813c",
+      "bytes": 309077
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/status-320.png",
+      "sha256": "17363fad477e456dd07dec520a3484770d0aaaab026541ed03411ffaab4e26a9",
+      "bytes": 155690
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/status-390.png",
+      "sha256": "bee7a99988b3be2fc8a944ca487856ca3cd80321c997c63823d88dafa16c15dc",
+      "bytes": 165183
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/uf2-dialog-1274.png",
+      "sha256": "c5a9bf3bb777b13ea3f7f1295301f63e9beb11c804c90fa151d23beb36022f7c",
+      "bytes": 276919
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/uf2-dialog-320.png",
+      "sha256": "157a9e7d95c060f4787bfa7b4ddda9f4398f5957e99ff90a2821bb56853034e5",
+      "bytes": 115847
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/final-delivery/uf2-dialog-390.png",
+      "sha256": "426ca9c42f2865fceec0c14ea2621717814760b649e57ca2eb5175cecf78d9bf",
+      "bytes": 127055
+    }
+  ]
+}

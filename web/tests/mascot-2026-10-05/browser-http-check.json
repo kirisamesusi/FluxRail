@@ -1,0 +1,301 @@
+{
+  "date_local": "2026-10-05",
+  "scope": "Web static assets, responsive layout and disconnected navigation only",
+  "browser": "151.0.4129.107",
+  "hardware_tested": false,
+  "compiled": false,
+  "views": [
+    {
+      "width": 1440,
+      "height": 980,
+      "overflow": false,
+      "brandFits": true,
+      "images": [
+        {
+          "src": "assets/fluxrail-mascot-brand.png",
+          "width": 256,
+          "height": 256,
+          "loaded": true
+        },
+        {
+          "src": "assets/fluxrail-mascot-controller.png",
+          "width": 800,
+          "height": 503,
+          "loaded": true
+        }
+      ],
+      "icons": [
+        "assets/fluxrail-favicon.ico",
+        "assets/fluxrail-icon-32.png",
+        "assets/fluxrail-icon-192.png",
+        "assets/fluxrail-icon-180.png"
+      ]
+    },
+    {
+      "width": 980,
+      "height": 900,
+      "overflow": false,
+      "brandFits": true,
+      "images": [
+        {
+          "src": "assets/fluxrail-mascot-brand.png",
+          "width": 256,
+          "height": 256,
+          "loaded": true
+        },
+        {
+          "src": "assets/fluxrail-mascot-controller.png",
+          "width": 800,
+          "height": 503,
+          "loaded": true
+        }
+      ],
+      "icons": [
+        "assets/fluxrail-favicon.ico",
+        "assets/fluxrail-icon-32.png",
+        "assets/fluxrail-icon-192.png",
+        "assets/fluxrail-icon-180.png"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "overflow": false,
+      "brandFits": true,
+      "images": [
+        {
+          "src": "assets/fluxrail-mascot-brand.png",
+          "width": 256,
+          "height": 256,
+          "loaded": true
+        },
+        {
+          "src": "assets/fluxrail-mascot-controller.png",
+          "width": 800,
+          "height": 503,
+          "loaded": true
+        }
+      ],
+      "icons": [
+        "assets/fluxrail-favicon.ico",
+        "assets/fluxrail-icon-32.png",
+        "assets/fluxrail-icon-192.png",
+        "assets/fluxrail-icon-180.png"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "brandFits": true,
+      "images": [
+        {
+          "src": "assets/fluxrail-mascot-brand.png",
+          "width": 256,
+          "height": 256,
+          "loaded": true
+        },
+        {
+          "src": "assets/fluxrail-mascot-controller.png",
+          "width": 800,
+          "height": 503,
+          "loaded": true
+        }
+      ],
+      "icons": [
+        "assets/fluxrail-favicon.ico",
+        "assets/fluxrail-icon-32.png",
+        "assets/fluxrail-icon-192.png",
+        "assets/fluxrail-icon-180.png"
+      ]
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "overflow": false,
+      "brandFits": true,
+      "images": [
+        {
+          "src": "assets/fluxrail-mascot-brand.png",
+          "width": 256,
+          "height": 256,
+          "loaded": true
+        },
+        {
+          "src": "assets/fluxrail-mascot-controller.png",
+          "width": 800,
+          "height": 503,
+          "loaded": true
+        }
+      ],
+      "icons": [
+        "assets/fluxrail-favicon.ico",
+        "assets/fluxrail-icon-32.png",
+        "assets/fluxrail-icon-192.png",
+        "assets/fluxrail-icon-180.png"
+      ]
+    }
+  ],
+  "http": [
+    {
+      "route": "/assets/fluxrail-mascot-brand.png",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-mascot-brand.png",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-mascot-controller.png",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-mascot-controller.png",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-icon-32.png",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-icon-32.png",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-icon-180.png",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-icon-180.png",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-icon-192.png",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-icon-192.png",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-favicon.ico",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/vnd.microsoft.icon"
+    },
+    {
+      "route": "/assets/fluxrail-favicon.ico",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/vnd.microsoft.icon"
+    },
+    {
+      "route": "/favicon.ico",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/vnd.microsoft.icon"
+    },
+    {
+      "route": "/favicon.ico",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/vnd.microsoft.icon"
+    },
+    {
+      "route": "/assets/fluxrail-lace-bunny.png",
+      "method": "GET",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-lace-bunny.png",
+      "method": "HEAD",
+      "status": 200,
+      "mime": "image/png"
+    },
+    {
+      "route": "/assets/fluxrail-mascot-aqua.png",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/fluxrail-mascot-icon-source.png",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/fluxrail-mascot-controller-source.png",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/fluxrail-mascot-theme-source.png",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/fluxrail-mascot-icon-theme-source.png",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/fluxrail-mascot-controller-theme-source.png",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/MASCOT.md",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/tools/export-mascot.mjs",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/LICENSE",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/firmware/FluxRail/FluxRail.ino",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "route": "/assets/not-listed.png",
+      "method": "GET",
+      "status": 404
+    }
+  ],
+  "navigation_passed": true,
+  "browser_errors": [],
+  "ico_sizes": [
+    16,
+    32,
+    48
+  ],
+  "unchanged_existing_src_and_test_files": 44,
+  "passed": true
+}

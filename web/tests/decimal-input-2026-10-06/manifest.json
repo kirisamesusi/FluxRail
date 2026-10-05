@@ -1,0 +1,180 @@
+{
+  "date_local": "2026-10-06",
+  "files": [
+    {
+      "path": "web/src/gain-control.js",
+      "sha256": "48f448ed0fb7f91e54034b55ceb96bfe23cf33398b47847d4eef28252e123135",
+      "bytes": 3666
+    },
+    {
+      "path": "web/tests/sensitivity.test.mjs",
+      "sha256": "de349d7021d192974a945047ee8de525502594b3f83400c72956f35251d80e37",
+      "bytes": 8023
+    },
+    {
+      "path": "docs/modules/05_Web配置工具.md",
+      "sha256": "3d90343e4b4dbf67ab26c4fcf5230236914949202b519ea7ff86bcedb21e8687",
+      "bytes": 23267
+    },
+    {
+      "path": "docs/公共架构与配置契约.md",
+      "sha256": "06c75311d8bf6e5b65a03dd454f73c4839e7942722b67ed198f77d84ef9400c1",
+      "bytes": 9197
+    },
+    {
+      "path": "docs/测试状态与待验收.md",
+      "sha256": "0921babeb905e23ec0ea43a625f54f04dcdc36cf4f02584d0a02801679cad6cf",
+      "bytes": 9017
+    },
+    {
+      "path": "web修改.md",
+      "sha256": "eacb56c4b0ec1d05fc99ee24110db86553a922c26bf20354faa9c566ce3ab516",
+      "bytes": 30361
+    },
+    {
+      "path": "backups/README.md",
+      "sha256": "32471b4608877fad8fc27a36832d6a12d371ffc5b6963d24b33a69f8b252d8a3",
+      "bytes": 9422
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser-output.txt",
+      "sha256": "372221cb624f8ef8812e8db7f1b8eb72d5f3360fdbabbf6428b1774fe5a9c50d",
+      "bytes": 1504
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/check.mjs",
+      "sha256": "84fd2803dd486140b241d3e2e393b8e9e80c9176b8a6486cc548218587700eff",
+      "bytes": 26963
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/docs-check.json",
+      "sha256": "3ab827d4463166b28071a7c7d1ff3f4d86f6c25ce5130c386b6daf4e79e96fef",
+      "bytes": 1603
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/docs-output.txt",
+      "sha256": "81a5b3171b6a8dd23de3639b57995ae72ee1effae616e6819c4266b9b9d4461f",
+      "bytes": 1605
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/LUNA_REVIEW.md",
+      "sha256": "ee7497ad1529c2354a884d096f8432a8815dfd38987c9cc96944d30ddf768217",
+      "bytes": 515
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/node-tests.txt",
+      "sha256": "9652dc63a9a80d6d8b2bd3e23edf253aab51c1907afaf643ef2daef05f70f94b",
+      "bytes": 6976
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/README.md",
+      "sha256": "6a87ba5ebd34ecfd29732342d63b7c7d1cea14e1637327736dafb10c27388eed",
+      "bytes": 1994
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/browser-check.json",
+      "sha256": "f54e24f6dd8362e71710d5760b0c0ecac2f4fbecee48c3e357330ba5515f4417",
+      "bytes": 9720
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/default-hall-1274.png",
+      "sha256": "4722fe2d0d36e89466d7843289e63979d2b0df7f366cf71301fa6c1c68b88068",
+      "bytes": 272635
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/default-hall-390.png",
+      "sha256": "d9c87cc0ebd49d72945a0020bd8484f821c91eb5ed8c768ed5c3004fb1df93f5",
+      "bytes": 134989
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/default-knobs-1274.png",
+      "sha256": "3aa72ee03f5040e186e494c4d4f20c47f9d13e4b54a76c608faa9398b3e299d5",
+      "bytes": 487405
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/default-knobs-390.png",
+      "sha256": "f4190467c25faeb2f89d06829ddf4ed89cf53e443a24b2f78b4b13555be5d22e",
+      "bytes": 331577
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/disconnected-1274.png",
+      "sha256": "a7b1086f96103e8cb0e486ceada30685e67fdb266b296287f02025b970bab637",
+      "bytes": 305866
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/disconnected-320.png",
+      "sha256": "2a69305ae8c9131ce962a5cf8280ecf93e9f27c4a581bf85bb03a608ce68c891",
+      "bytes": 148819
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/disconnected-390.png",
+      "sha256": "167baf9f7e6d455f7fef518488892ff9075571cc5199692995e5f69e7edac0b0",
+      "bytes": 161075
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/integration-bootloader-confirmation.png",
+      "sha256": "76cc6a86a5c120e5488739db80b4165ffa1b0dc2c37823977c28f1f2cac5e38b",
+      "bytes": 233411
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/knobs-1274.png",
+      "sha256": "9a05946de1f00281ed0b6420fd5f6f852f839e7c59641dc98acefdc1ddfc66fb",
+      "bytes": 511377
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/knobs-320.png",
+      "sha256": "b6224655b2305a5ac4663eb9143e9861d55fc44638477ea492fe383c3d863143",
+      "bytes": 309449
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/knobs-390.png",
+      "sha256": "c94f70c185cc48e0b6e860bf317b839401bfb8159a6abf468065fd7e583cb826",
+      "bytes": 336775
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/restart-device-confirmation.png",
+      "sha256": "bda7dbe6a10e2fafd228ec7f88f00ad5369441d434e9dcd8f146533f046f623f",
+      "bytes": 186065
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/status-1274.png",
+      "sha256": "129616e4111fb461d1ada9e0bc67993f962578c9dbc88d79a3f23c6f5694061e",
+      "bytes": 309079
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/status-320.png",
+      "sha256": "17363fad477e456dd07dec520a3484770d0aaaab026541ed03411ffaab4e26a9",
+      "bytes": 155690
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/status-390.png",
+      "sha256": "bee7a99988b3be2fc8a944ca487856ca3cd80321c997c63823d88dafa16c15dc",
+      "bytes": 165183
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/uf2-dialog-1274.png",
+      "sha256": "c5a9bf3bb777b13ea3f7f1295301f63e9beb11c804c90fa151d23beb36022f7c",
+      "bytes": 276919
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/uf2-dialog-320.png",
+      "sha256": "157a9e7d95c060f4787bfa7b4ddda9f4398f5957e99ff90a2821bb56853034e5",
+      "bytes": 115847
+    },
+    {
+      "path": "web/tests/decimal-input-2026-10-06/browser/uf2-dialog-390.png",
+      "sha256": "426ca9c42f2865fceec0c14ea2621717814760b649e57ca2eb5175cecf78d9bf",
+      "bytes": 127055
+    }
+  ],
+  "backup_files_verified": 7,
+  "prior_frozen_files_verified": 57,
+  "node_tests": 73,
+  "browser_views": 72,
+  "browser_groups": 11,
+  "syntax_passed": true,
+  "diff_check_passed": true,
+  "documentation_passed": true,
+  "documentation_tool_date_field": "Historical baseline 2026-10-05; execution date is this manifest date_local",
+  "hardware_tested": false
+}

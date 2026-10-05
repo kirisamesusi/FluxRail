@@ -1,0 +1,43 @@
+/* This strip identifies the isolated draft. The existing page stylesheet is copied unchanged. */
+.copy-preview-note { display:flex; flex-wrap:wrap; gap:6px 18px; padding:12px 20px; margin-bottom:16px; border:1px solid #c5dfee; border-radius:16px; background:#f2faff; color:#526e83; font-size:13px; line-height:1.6; }
+.copy-preview-note strong { color:#355871; }
+
+/* Changes requested in the 21 browser annotations. Production stylesheet stays untouched. */
+.form-grid .gain-control { display:flex; flex-direction:column; align-items:stretch; gap:10px; grid-column:1/-1; width:100%; }
+.form-grid .gain-control .gain-title { font-size:13px; color:var(--ink); align-self:flex-start; }
+.gain-body { display:flex; align-items:center; gap:22px; width:100%; min-width:0; padding:15px 17px; border:1px solid #d4e7f4; border-radius:15px; background:#f6fbff; }
+.gain-scale { flex:1; min-width:0; }
+.gain-endpoints { display:flex; justify-content:space-between; margin-bottom:5px; }
+.gain-endpoints span { font-size:11px; color:#7895a9; }
+.gain-control input[type=range] { display:block; appearance:none; width:100%; height:6px; padding:0; margin:11px 0 0; border:0; border-radius:10px; background:linear-gradient(to right,#cbe7f6,#92bfdc); accent-color:#74a8ca; cursor:ew-resize; }
+.gain-control input[type=range]::-webkit-slider-thumb { appearance:none; width:16px; height:22px; border:3px solid white; border-radius:7px; background:#79aaca; box-shadow:0 1px 5px #416b8d44; }
+.gain-ticks { display:flex; justify-content:space-between; margin:0 0 1px; }
+.form-grid .gain-ticks span { display:flex; flex-direction:column; align-items:center; gap:4px; font-size:10px; color:#62829a; width:0; flex:none; }
+.gain-ticks span:before { content:''; height:7px; width:1px; background:#a7c7dc; }
+.gain-exact { display:flex; flex-direction:column; align-items:center; gap:6px; flex:0 0 86px; }
+.form-grid .gain-exact span { font-size:10px; white-space:nowrap; }
+.gain-exact input[type=number] { width:86px; min-width:0; padding:9px 7px; text-align:center; font-size:17px; font-weight:600; color:#466d88; background:white; }
+.gain-error { display:block; color:#ad4669; font-size:11px; }
+.gain-error:empty { display:none; }
+.knob-card:nth-child(2) .gain-body { background:#fff6fa; border-color:#ecd6e3; }
+.knob-card:nth-child(2) .gain-control input[type=range] { background:linear-gradient(to right,#f2dce9,#d6a9c2); }
+.knob-card:nth-child(2) .gain-control input[type=range]::-webkit-slider-thumb { background:#bf8faa; }
+.startup-mode-card { padding:20px; margin:0 0 22px; align-items:center; }
+.startup-mode-card h3 { width:100%; margin:0 0 8px; font-size:16px; }
+.startup-mode-card > p { margin:8px 0; }
+.io4-recovery { width:100%; background:#fff3f8; border:1px solid #efd8e5; border-radius:14px; padding:16px 18px; }
+.io4-recovery strong { display:block; font-size:17px; color:#8d5474; }
+.io4-recovery p { margin:8px 0 0; font-size:14px; line-height:1.8; color:#705c6b; }
+#current-firmware.current-version { font-size:17px; font-weight:600; color:#41657f; padding:13px 16px; border:1px solid #dbe9f2; border-radius:12px; background:#f5faff; }
+.form-grid .parameter-field { display:grid; grid-template-columns:minmax(0,1fr) 108px; align-items:center; gap:8px 10px; }
+.form-grid .parameter-field > .parameter-name { font-size:12px; color:var(--ink); align-self:center; }
+.parameter-field > input { width:108px; max-width:100%; }
+.parameter-help { display:block; grid-column:1/-1; color:#7890a2; font-size:11px; line-height:1.7; }
+#experiment-hall > #experiment-calibration { margin-top:20px; background:#f6fbff; }
+.io4-key-scroller { max-width:100%; overflow-x:auto; padding:2px 2px 8px; }
+.io4-key-grid.physical-keys-main { grid-template-columns:repeat(4,minmax(0,1fr)) 40px repeat(4,minmax(0,1fr)); gap:22px 8px; margin:18px 0; min-width:820px; }
+.io4-key-grid.physical-keys-main .io4-key-card { padding:12px 9px; background:#f1f9ff; }
+.io4-key-grid.physical-keys-main .io4-key-card[data-source="10"], .io4-key-grid.physical-keys-main .io4-key-card[data-source="11"] { background:#faf9fd; }
+.io4-key-card select { width:100%; padding:8px 5px; }
+.manual-update { margin-top:24px; }
+@media(max-width:600px) { .gain-body { padding:13px 14px; gap:18px; } .gain-exact { flex-basis:65px; } .gain-exact input[type=number] { width:65px; } .startup-mode-card { padding:16px; } .io4-recovery { padding:14px; } .io4-recovery strong { font-size:16px; } .startup-mode-card label { width:100%; flex-wrap:wrap; } }

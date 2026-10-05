@@ -1,6 +1,6 @@
 /** Module navigation affects presentation only. All editors keep the same DOM and draft. */
 export function mountModuleNavigation({ onNavigate = () => {}, document = globalThis.document, window = globalThis.window } = {}) {
-  const links = [...document.querySelectorAll('[data-module]')];
+  const links = [...document.querySelectorAll('.module-nav [data-module]')];
   const panels = new Map(links.map(link => [link.dataset.module, document.getElementById(link.dataset.module)]));
   let current = null;
 
@@ -9,9 +9,10 @@ export function mountModuleNavigation({ onNavigate = () => {}, document = global
     try { targetId = decodeURIComponent(window.location.hash.slice(1)); } catch { targetId = ''; }
     // The skip link moves focus to main without changing the selected module.
     if (targetId === 'main-content' && current) return;
+    if (targetId === 'diagnostics') targetId = 'input-status';
     const target = document.getElementById(targetId);
     const id = panels.has(targetId) ? targetId : target?.closest('.module-panel')?.id;
-    const selected = panels.has(id) ? id : 'profiles';
+    const selected = panels.has(id) ? id : 'device-status';
     const changed = current !== selected;
     current = selected;
     for (const [name, panel] of panels) panel.hidden = name !== selected;

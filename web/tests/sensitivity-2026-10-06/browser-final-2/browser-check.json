@@ -1,0 +1,430 @@
+{
+  "date_local": "2026-10-06",
+  "scope": "Production Web with disconnected UI, shipped demo and isolated in-browser CDC fixture. No hardware.",
+  "hardware_tested": false,
+  "compiled": false,
+  "views": [
+    {
+      "width": 1274,
+      "module": "device-status",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "keyboard",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "lighting",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "hall",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "knobs",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "profiles",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "update",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "experimental",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "device-status",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "keyboard",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "lighting",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "hall",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "knobs",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "profiles",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "update",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "experimental",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "device-status",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "keyboard",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "lighting",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "hall",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "knobs",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "profiles",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "update",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "experimental",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "device-status",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "keyboard",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "lighting",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "hall",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "knobs",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "profiles",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "update",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "experimental",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "device-status",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "keyboard",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "lighting",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "hall",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "knobs",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "profiles",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "update",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "experimental",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "device-status",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "keyboard",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "lighting",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "hall",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "knobs",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "profiles",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "update",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "experimental",
+      "connected": "shipped demo",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "device-status",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "keyboard",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "lighting",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "hall",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "knobs",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "profiles",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "update",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "experimental",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "device-status",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "keyboard",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "lighting",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "hall",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "knobs",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "profiles",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "update",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "module": "experimental",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "device-status",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "keyboard",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "lighting",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "hall",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "knobs",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "profiles",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "update",
+      "connected": "isolated fixture",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "module": "experimental",
+      "connected": "isolated fixture",
+      "overflow": false
+    }
+  ],
+  "checks": [
+    "navigation, old diagnostics deep link, back/forward and eight responsive modules",
+    "shipped demo capability limits, source order, overview/editor shared draft, refresh cancel/Escape/confirm, decimal 1.5, Hall10 acceptance and 5.14 normalized to5.1; out-of-range rejection, combined apply/save and RAM-only save",
+    "protocol fixture only: old gain0.5/12 read unchanged and unrelated save, IO4 selection no commands, mode/save sequence, reboot/UF2 cancel/Escape/confirm",
+    "IO4 dedicated apply/save and mutual locks, same physical grid, eleven Hall help fields, direct shared calibration, calibration/maintenance/revision locks",
+    "integer tick centres/native thumb click targets at 1274/390/320, decimal input, fixture responsive views",
+    "status icon renders; Hall and both knobs endpoints/4.9/5.1, one decimal rounding, arrow0.1, actual CDC gains and save/readback, old precision and old12 retained",
+    "browser injected apply failure stops save; save failure leaves applied RAM, disables retry and refresh recovers",
+    "browser UF2 parser fixture recognizes payload0.10.2 and clears invalid candidate; no firmware uploaded",
+    "non-timeout command rejection invalidates writable state until explicit readback",
+    "legacy runtime get_config/set_config only and no fictional active template; failed new handshake clears previous diagnosis/cache"
+  ],
+  "browser": "151.0.4129.107",
+  "page_errors": []
+}

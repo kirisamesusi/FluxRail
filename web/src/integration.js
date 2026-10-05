@@ -1,3 +1,4 @@
+import { confirmedCommand, confirmationGuard } from './workflows.js';
 import { assert } from './config.js';
 import { mountIo4Editor } from './io4-editor.js';
 /** 整合适配只调用已冻结CDC v1，不产生实时运动。圈数来自设备累计值，
@@ -12,7 +13,7 @@ function clearTelemetry(){
   for(let i=0;i<realDials.length;++i){realDials[i].raw.style.transform='rotate(0deg)';realDials[i].scaled.style.transform='rotate(0deg)';realDials[i].dial.setAttribute('aria-label','旋钮 '+(i+1)+' 当前设备遥测未读取');document.getElementById('integration-knob-'+i).textContent='等待当前设备的真实圈数';}
 }
 export function mountIntegration(context){
-  // 设备诊断和共享校准集中到实验室；仅改变DOM容器，命令/轮询/能力锁不变。
+  // 共享校准挂载到滑轨高级组，设备遥测挂载到首页；复用原命令/轮询/能力锁。
   const parent=document.getElementById('integration-calibration-content');
   view=make('div');view.className='calibration-content';parent.append(view);
   const intro=make('p','查看滑轨与旋钮的设备状态，建立所有模板共用的滑轨校准。填写实测端点、确认磁铁已移开后开始；采用结果后需保存到设备。');intro.className='hint';view.append(intro);
@@ -47,7 +48,7 @@ export function mountIntegration(context){
   const telemetryPanel=make('div');telemetryPanel.className='knob-telemetry';telemetryPanel.id='knob-telemetry';
   telemetryPanel.append(make('h3','设备旋钮状态'));
   const telemetryHint=make('p','连接支持运动遥测的设备后，显示实际累计圈数、输出方向与 PUSH 状态。本地旋转预览位于旋钮设置模块。');telemetryHint.className='hint';telemetryPanel.append(telemetryHint);
-  const telemetry=make('div');telemetry.className='knob-grid';telemetryPanel.append(telemetry);document.querySelector('#diagnostics').append(telemetryPanel);
+  const telemetry=make('div');telemetry.className='knob-grid';telemetryPanel.append(telemetry);document.getElementById('input-telemetry').append(telemetryPanel);
   for(let i=0;i<2;++i){
     const card=make('div');card.className='knob-card knob-preview';card.append(make('h3','旋钮 '+(i+1)+' · 设备遥测'));
     const dial=make('div');dial.className='interactive-dial real-dial';dial.setAttribute('role','img');dial.setAttribute('aria-label','旋钮 '+(i+1)+' 设备累计圈数投影');
@@ -61,36 +62,47 @@ export function mountIntegration(context){
   }
   const note=make('p','校准需空场、H1/H2/H3参考、7～17个含端点与交接的实测标签，然后全轨扫描。失败/取消保留旧记录。诊断轮询不证明采样无丢失。');note.className='hint';view.append(note);
   const boot=make('button','进入 UF2 下载模式');boot.type='button';boot.id='integration-bootloader';boot.disabled=true;document.querySelector('#update')?.append(boot);
-  boot.onclick=()=>context.runAction(async()=>{const d=context.getDevice();d.checkWritable();assert(!d.localDirty,'先应用或舍弃网页草稿');await context.getClient().request('enter_bootloader',{expected_revision:context.getClient().revision},4000);},'设备准备进入ROM下载模式；需手动复制FluxRail UF2，并重新连接确认版本。');
-  const modePanel=make('div');modePanel.className='soft-note integration-mode';document.querySelector('#update').append(modePanel);
-  const modeLabel=make('label','下次启动 USB 身份'),mode=make('select');mode.id='integration-mode';
-  for(const [value,text]of [['NORMAL_NKRO','普通 NKRO + CDC'],['IO4','IO4（游戏兼容待实测）']]){const o=make('option',text);o.value=value;mode.append(o);}modeLabel.append(mode);modePanel.append(modeLabel);
-  const setMode=make('button','应用启动身份到 RAM'),reboot=make('button','重启到已保存身份');setMode.type=reboot.type='button';modePanel.append(setMode,reboot);
-  setMode.onclick=()=>context.runAction(async()=>{await context.getDevice().mutate('set_startup_usb_mode',{mode:mode.value});await context.refresh();},'启动身份已应用到RAM。请显式保存，再重启到已保存身份。');
-  reboot.onclick=()=>context.runAction(async()=>{const d=context.getDevice();d.checkWritable();assert(!d.localDirty,'先应用网页草稿');await d.client.request('reboot_to_saved_mode',{expected_revision:d.revision,target:d.meta.startup_usb_mode},4000);},'重启请求已确认。IO4默认没有CDC；返回普通时按住BT10复位，再重新连接。');
-  modePanel.append(make('p','身份修改不立即切换USB；先应用、保存，再冷重启。IO4返回普通：按住BT10（GP9）复位/上电。BOOTSEL保留为ROM恢复入口。'));
+  const command=op=>context.runAction(async()=>{
+    const d=context.getDevice();
+    const changed=await confirmedCommand(d,op,context.confirm,{isCurrent:()=>context.getDevice()===d,hasDraft:()=>hasIo4Draft()||hasModeDraft(),calibrationBusy:hasCalibrationJob});
+    if(changed)context.notice(op==='enter_bootloader'?'设备准备进入下载模式；手动复制 UF2 后重新连接核对版本。':'重启请求已确认；请重新连接。IO4 返回普通需按住 BT10 复位或上电。');
+  },null);
+  boot.onclick=()=>command('enter_bootloader');
+  const mode=document.getElementById('io4-mode-switch'),reboot=document.getElementById('restart-device');
+  mode.onclick=()=>context.runAction(async()=>{
+    const d=context.getDevice(),guard=confirmationGuard(d,()=>context.getDevice()===d);
+    assert(!hasIo4Draft()&&!hasCalibrationJob(),'请先处理 IO4 草稿或校准任务');
+    const next=view.modeValue==='IO4'?'NORMAL_NKRO':'IO4';
+    if(next==='IO4'&&!await context.confirm({title:'选择 IO4 启动模式',confirmLabel:'选择 IO4',description:'这是待保存的启动模式，尚未切换设备。应用并保存后，下次上电或重启启用 IO4；网页将无法连接。按住 BT10 复位或重新上电可返回普通模式。取消会保留原选择。'}))return;
+    guard();assert(!hasIo4Draft()&&!hasCalibrationJob(),'设备状态已变化');
+    view.modeValue=next;context.notice('启动模式选择尚未应用；请点击应用并保存。');
+  },null);
+  reboot.onclick=()=>command('reboot_to_saved_mode');
   view.io4Editor=mountIo4Editor(context);
-  view.buttons=buttons;view.boot=boot;view.modeControls={mode,setMode,reboot};
+  view.buttons=buttons;view.boot=boot;view.modeControls={mode,reboot};
 }
 export function lockIntegration(device,busy=false){
   if(!view)return;
   view.busy=busy;
-  if(lastDevice!==device){clearTelemetry();lastDevice=device;view.modeRevision=undefined;}
+  if(lastDevice!==device){clearTelemetry();lastDevice=device;view.modeValue=device?.meta?.startup_usb_mode??null;view.modeBase=view.modeValue;}
   if(!device?.client?.alive||!device?.hello?.capabilities.motion_telemetry)clearTelemetry();
   view.io4Editor.sync(device,busy);
-  const {mode,setMode,reboot}=view.modeControls;
+  const {mode,reboot}=view.modeControls;
   const writable=device?.client?.alive&&device?.ready&&!busy&&!device.localDirty&&device.revision===device.client.revision&&device.status.config_ready&&!device.status.applying&&device.status.maintenance==='idle';
   // IO4草稿也属于未应用配置；校准/UF2会改变配置或断开设备，应先处理草稿。
   const io4Draft=view.io4Editor.hasDraft();
-  const modes=writable&&!io4Draft&&device.hello.capabilities.usb_cold_switch;
-  mode.disabled=setMode.disabled=reboot.disabled=!modes;
-  if(device?.meta){if(view.modeRevision!==device.revision){mode.value=device.meta.startup_usb_mode;view.modeRevision=device.revision;}reboot.disabled=!modes||device.client.last?.dirty;}
+  const modeWritable=device?.client?.alive&&device?.ready&&!busy&&device.revision===device.client.revision&&device.status.config_ready&&!device.status.applying&&device.status.maintenance==='idle';
+  const modes=modeWritable&&!io4Draft&&!hasCalibrationJob()&&device.hello.capabilities.usb_cold_switch;
+  if(device?.meta&&!hasModeDraft()){view.modeValue=device.meta.startup_usb_mode;view.modeBase=view.modeValue;}
+  mode.disabled=!modes;mode.setAttribute('aria-checked',String(view.modeValue==='IO4'));
+  document.getElementById('startup-mode-state').textContent=!device?.meta?'连接后读取启动模式':(!device.client.alive?'上次读回 · ':'')+(hasModeDraft()?'待应用：':'已读回：')+(view.modeValue==='IO4'?'IO4 模式':'普通模式');
+  reboot.disabled=!writable||io4Draft||hasModeDraft()||!modes||!!device?.client?.last?.dirty;
   const capable=device?.client?.alive&&device?.ready&&device.revision===device.client.revision&&device.hello.capabilities.hall_calibration;
   document.getElementById('calibration-availability').textContent=!device?.client?.alive?'连接支持共享校准的设备后可使用以下操作。':device?.hello?.capabilities.hall_calibration?'设备支持共享校准；完成采集并采用后，点击保存到设备。':device?.client?.port?.simulated?'模拟演示支持参数编辑与本地旋转预览；共享校准需连接支持校准的设备。':'当前固件未提供共享校准功能，请连接支持校准的整合固件。';
   const calibratable=capable&&device.status.config_ready&&!device.status.applying&&device.status.maintenance==='idle';
-  for(const b of view.buttons)b.disabled=!calibratable||busy||device.localDirty||io4Draft||last?.adopting;
-  for(const input of view.querySelectorAll('input'))input.disabled=!calibratable||busy||device.localDirty||io4Draft;
-  view.boot.disabled=!writable||io4Draft||!device?.hello?.capabilities.bootloader_command||last?.running||last?.adopting;
+  for(const b of view.buttons)b.disabled=!calibratable||busy||device.localDirty||io4Draft||hasModeDraft()||last?.adopting;
+  for(const input of view.querySelectorAll('input'))input.disabled=!calibratable||busy||device.localDirty||io4Draft||hasModeDraft();
+  view.boot.disabled=!writable||io4Draft||hasModeDraft()||!device?.hello?.capabilities.bootloader_command||last?.running||last?.adopting;
 }
 export async function pollIntegration(device){
   if(!view)return;
@@ -107,3 +119,8 @@ export async function pollIntegration(device){
 
 // 共享页面可据此阻止未应用IO4选择时保存/切换模板/冷切换，避免保存旧映射。
 export function hasIo4Draft(){return !!view?.io4Editor?.hasDraft();}
+
+export function hasModeDraft(){return !!view&&view.modeValue!==view.modeBase;}
+export function getModeDraft(){return hasModeDraft()?view.modeValue:null;}
+export function resetModeDraft(device){if(view){view.modeValue=device?.meta?.startup_usb_mode??null;view.modeBase=view.modeValue;}}
+export function hasCalibrationJob(){return !!(last?.running||last?.adopting);}

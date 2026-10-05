@@ -1,0 +1,32 @@
+{
+  "date_local": "2026-10-05",
+  "scope": "offline asset library only",
+  "browser": "151.0.4129.107",
+  "views": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "loaded": 18,
+      "visible": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "loaded": 18,
+      "visible": 3,
+      "overflow": false
+    }
+  ],
+  "groups": {
+    "recommended": 3,
+    "original": 4,
+    "exploration": 3,
+    "export": 6,
+    "reference": 2,
+    "all": 18
+  },
+  "page_errors": [],
+  "network_requests": [],
+  "passed": true
+}

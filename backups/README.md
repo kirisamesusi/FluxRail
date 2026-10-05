@@ -18,6 +18,8 @@
 | [web-before-physical-layout-2026-10-04](web-before-physical-layout-2026-10-04/BACKUP-README.md) | 已有左右布局，尚未按 PCB 参考调整十二路摆位/迁移旋钮设备状态 | 完整 web/ 快照 | 35 |
 | [web-before-template-management-2026-10-04](web-before-template-management-2026-10-04/BACKUP-README.md) | 已有物理布局与输入状态调整，尚未加入当前模板保存/预设恢复/二次确认流程 | 完整 web/ 快照 | 38 |
 | [web-before-header-image-2026-10-04](web-before-header-image-2026-10-04/BACKUP-README.md) | 模板调整后、页头仍用原SVG，尚未换为fluxrail-lace-bunny | 局部文件：index.html、style.css、server.mjs | 3 |
+| [web-before-production-refactor-2026-10-05](web-before-production-refactor-2026-10-05/BACKUP-README.md) | 固定模板迁入生产前，保留已有未提交修改 | 完整web/74文件和4份当前文档；manifest.json逐项SHA | 78 |
+| [web-before-mascot-2026-10-05](web-before-mascot-2026-10-05/BACKUP-README.md) | 水滴标志和兔子插画，新增水色少女吉祥物与icon之前 | 完整web快照；复制时逐项SHA/大小校验 | 50 |
 
 这些是 Web 源文件、测试、历史截图/说明的版本快照；不是固件、整个工程、设备 RAM/Flash 或用户模板数据备份。换图前快照缺少 src/、package.json 等，不能单独启动或替代整个 web/。
 
@@ -60,6 +62,8 @@ Write-Output ('Verified backup files: ' + $taskManifest.files.Count)
 
 图片更换若引用根目录素材，应明确根素材与 Web 资源副本的关系；后续完整 Web 备份包含资源副本。当前原素材是 ../fluxrail-lace-bunny.png，当前运行资源位于 ../web/assets/fluxrail-lace-bunny.png。
 
+2026-10-05后续视觉修改保留上述旧素材，当前右侧改用 `web/assets/fluxrail-mascot-controller.png`。水色角色原图、头像、右侧插画及主题配色原图均位于 `web/assets/`；来源、提示词、离线缩放导出和HTTP范围见[资源说明](../web/assets/MASCOT.md)。新完整备份须包含这些资源，不从本机临时目录或Codex生成目录恢复。
+
 ## 5. 恢复完整 Web 的步骤
 
 1. 选定具体版本，先读该目录的 BACKUP-README.md，确认是完整快照；要回到最初旧版则选择 before-layout。
@@ -78,3 +82,7 @@ Write-Output ('Verified backup files: ' + $taskManifest.files.Count)
 先完整备份当前 web/ 并校验，再停止本项目服务器，只把清单中的 index.html、style.css、server.mjs 恢复到对应位置。重新检查这些文件与当前 src/、控件 ID、样式和资源是否兼容，再启动和浏览器验证。
 
 该快照形成于当前模板逻辑之后，恢复它会回到原页头 SVG 及旧静态资源白名单，不回退模板 JS。不需要删除根图片；web/assets/ 中图片即使保留，也不代表仍会被旧服务器公开。不要把3文件局部快照当成整套旧 Web。
+
+2026-10-06本轮[灵敏度修改前快照](web-before-sensitivity-2026-10-06/BACKUP-README.md)：局部源码/资源与现行文档87文件、逐项SHA校验，包含先前未提交生产重构成果及两模块测试源码；未复制历史测试证据/工具，不是完整Web恢复包或设备配置。firmware-protection.json只用于核查93个固件文件未变。
+
+2026-10-06[一位小数输入限制前快照](web-before-decimal-input-2026-10-06/BACKUP-README.md)：7文件局部备份，保留已有未提交修改并逐项核对SHA，非完整Web或设备恢复包。

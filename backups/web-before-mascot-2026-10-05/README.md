@@ -1,0 +1,9 @@
+# FluxRail Web配置工具
+
+更新：2026-10-05。当前原生ES模块单页配置工具，开发目录为web/；左右模块导航、十二来源物理摆位、模板确认流程、schema1/2、IO4功能表、真实运动与共享校准、UF2识别已接入。
+
+完整接手文档：[05 Web配置工具](../docs/modules/05_Web配置工具.md)，包含文件职责、草稿/应用/保存/激活、预置保护、连接锁、测试和备份恢复。新窗口先读[统一交接](../docs/FluxRail_开发交接_窗口必读.md)，实板状态见[测试表](../docs/测试状态与待验收.md)。
+
+根目录`node web/server.mjs`，访问http://localhost:4174；Node>=20，无npm install与打包步骤。在web/执行`npm test`跑package.json列出的七套软件测试。模拟演示仅隔离schema1对象，不证明真实设备/Flash/运动/游戏；生产Web Serial读写已留裸板证据，完整功能和最终硬件仍待验。
+
+[旧Web README](../docs/archive/2026-10-05/source-readmes/web/README.md)保留历史页面说明和阶段数字；[备份说明](../backups/README.md)区分完整Web快照与局部换图快照。

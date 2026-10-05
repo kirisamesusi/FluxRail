@@ -1,0 +1,110 @@
+{
+  "validation": "ARM instruction simulation of original module C++",
+  "compiler": "arm-none-eabi-g++.exe (GCC) 16.1.0",
+  "core": "Arduino-Pico 6.1.0",
+  "unicorn": "2.1.3",
+  "hardware_tested": false,
+  "game_tested": false,
+  "instruction_limit": 200000000,
+  "object_size_bytes": {
+    "Sample": 36,
+    "Estimate": 60,
+    "Calibration": 544,
+    "HallModule": 5252,
+    "HallPosition": 644,
+    "HallCalibration": 620
+  },
+  "results": [
+    {
+      "test": "test_absolute_return_endpoints_gain_invert",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 3866
+    },
+    {
+      "test": "test_failure_reentry_and_parameter_atomicity",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 17
+    },
+    {
+      "test": "test_activity_slow_motion_filter_dt_wrap_reverse",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 341
+    },
+    {
+      "test": "test_saved_calibration_rejection_ambiguity",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 15
+    },
+    {
+      "test": "test_module_queue_recovery_revision_calibration_suppression",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 26
+    },
+    {
+      "test": "test_sampler_fixed_phase_under_jitter_and_stall",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 7
+    },
+    {
+      "test": "test_sampler_budget_cadence_errors_timestamp_wrap",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 18
+    },
+    {
+      "test": "test_measured_short_travel_and_maximum_nodes",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 190
+    },
+    {
+      "test": "test_web_sensitivity_scale",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 3094
+    },
+    {
+      "test": "test_async_calibration_success_and_reuse",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 91
+    },
+    {
+      "test": "test_calibration_control_cooperative_checks_and_command_timeout",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 15
+    },
+    {
+      "test": "test_module_calibration_success_atomic_application",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 13
+    },
+    {
+      "test": "test_calibration_cancel_timeout_noise_coverage_keeps_old",
+      "completed": true,
+      "passed": true,
+      "failed_cpp_line": null,
+      "checks": 23
+    }
+  ]
+}

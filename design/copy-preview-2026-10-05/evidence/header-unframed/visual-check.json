@@ -1,0 +1,32 @@
+{
+  "scope": "Header surface removal only",
+  "production_files_unchanged": 74,
+  "views": [
+    {
+      "width": 1274,
+      "border": "0px",
+      "background": "rgba(0, 0, 0, 0)",
+      "shadow": "none",
+      "horizontal_overflow": false,
+      "buttons": [
+        "refresh",
+        "apply",
+        "restart-preview"
+      ]
+    },
+    {
+      "width": 390,
+      "border": "0px",
+      "background": "rgba(0, 0, 0, 0)",
+      "shadow": "none",
+      "horizontal_overflow": false,
+      "buttons": [
+        "refresh",
+        "apply",
+        "restart-preview"
+      ]
+    }
+  ],
+  "browser_errors": [],
+  "hardware_tested": false
+}

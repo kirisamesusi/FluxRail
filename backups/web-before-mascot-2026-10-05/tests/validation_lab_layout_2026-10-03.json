@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-03",
+  "scope": "Web laboratory layout and wording",
+  "source_sha256": {
+    "web/index.html": "cb80188a50e410c0fc2ae063b4d86b4e9a2c9c0e56b3566ff348f4392dc1e2a1",
+    "web/style.css": "82b36d9db3f438376410d6c03889c7a30f5cb9ce049b3c37ca3663f4ff57e5ef",
+    "web/src/app.js": "38bfd54060a85c6d834fa4abaa397cc495cfd584775ab9251fd8275a22908434",
+    "web/src/integration.js": "d7db1f7a1fd7eee9b8cf83e93f858b7e6568fed6ad9af8052f022a53d4668443",
+    "web/src/io4-editor.js": "9e792e61f6f12f990bcbe7d046dceac2c2f77bdd46840e121476430dc307e466",
+    "web/tests/integration-ui.test.mjs": "d8de2999853b034a976f7254a7ab13b582ddf5b524478bce5e6c05524954bb3c",
+    "web/README.md": "cd63daedf8aaea9ea2e238efc54a6ca5356f15b1899703b44beb2fc3620087dd",
+    "docs/progress/模块4.md": "02daa5ebc454ec30739d8407ef53c7b7d8ee4a1cdb1607e3547b13eaba38cb88",
+    "RUN_INTEGRATED.md": "4c78d968b28edd513564d882f3bed6575c70e93eab6c4eed86f0d4d55c958b23"
+  },
+  "tests": {
+    "command": "node --test tests/web.test.mjs tests/knob-preview.test.mjs tests/integration.test.mjs tests/integration-ui.test.mjs",
+    "exit_code": 0,
+    "total": 35,
+    "passed": 35
+  },
+  "browser": {
+    "url": "http://localhost:4174/#experimental",
+    "groups": 11,
+    "first": "连接 · 模拟与设备信息",
+    "last": "运动 · 设备状态与共享校准",
+    "io4_same_container": true,
+    "all_groups_same_left_and_width": true,
+    "document_horizontal_overflow": false,
+    "knob_preview_and_advanced_cards": 2,
+    "one_turn_preview_verified": true,
+    "knob_calibration_link_verified": true,
+    "calibration_layout_verified": true,
+    "console_warnings_and_errors": 0,
+    "screenshot": "web/tests/lab-layout-2026-10-03.png",
+    "responsive": "CSS breakpoint review only; no separate mobile viewport run"
+  },
+  "firmware_changed": false,
+  "hardware_tested": false
+}

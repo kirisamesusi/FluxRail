@@ -1,0 +1,246 @@
+{
+  "template_id": "FluxRail-Web-template-2026-10-05-v1",
+  "date_local": "2026-10-05",
+  "timezone": "Asia/Shanghai",
+  "frozen_at_utc": "2026-10-05T15:13:03.381871+00:00",
+  "source_preview": "design/copy-preview-2026-10-05",
+  "production_git_head": "e4f469b625ef182ea7fcfa07426aca2da279cfe9",
+  "production_branch": "test",
+  "production_working_tree_clean": false,
+  "production_baseline_files_unchanged": 74,
+  "exact_preview_files": [
+    "index.html",
+    "style.css",
+    "preview.css",
+    "shell.js",
+    "assets/fluxrail-favicon.ico",
+    "assets/fluxrail-icon-180.png",
+    "assets/fluxrail-icon-192.png",
+    "assets/fluxrail-icon-32.png",
+    "assets/fluxrail-mascot-brand.png",
+    "assets/fluxrail-mascot-controller.png"
+  ],
+  "server_difference": "Default port 4176 and template-specific environment variable/log only.",
+  "scope": "Static design reference with local interactions; no production implementation or device validation.",
+  "runtime_dependency": "Node.js >=20, built-in modules only.",
+  "offline_checker_dependency": "Playwright + installed Edge; supplied as a module path.",
+  "evidence": [
+    "evidence/template-check.json",
+    "evidence/docs-check.json",
+    "evidence/docs-final-check.json",
+    "reviews/LUNA_REVIEW_重构交接.md"
+  ],
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": "assets/fluxrail-favicon.ico",
+      "bytes": 9600,
+      "sha256": "758b59e3855c1a94d6f9ad16ee6a4c531f441da30d496bc12c64f63c3e2739c0"
+    },
+    {
+      "path": "assets/fluxrail-icon-180.png",
+      "bytes": 48660,
+      "sha256": "f47e4c03b10552d0d872c0c690714c6a8a907cdcf1aa3f303a0d094afba2fef1"
+    },
+    {
+      "path": "assets/fluxrail-icon-192.png",
+      "bytes": 54445,
+      "sha256": "26ad41d7422c4235176aba7c156001757faabcfba4affcff09f01fc2f090e841"
+    },
+    {
+      "path": "assets/fluxrail-icon-32.png",
+      "bytes": 2938,
+      "sha256": "7d699c6419d14e9959d9fd8d7899e65ef6b1ba826cc445b6e0a6509836479dbb"
+    },
+    {
+      "path": "assets/fluxrail-mascot-brand.png",
+      "bytes": 75032,
+      "sha256": "6d0e9a9b009556e3ddd5e304b1b7dc044f7b0bc2e52b7c2e6016fdc961b56afe"
+    },
+    {
+      "path": "assets/fluxrail-mascot-controller.png",
+      "bytes": 431868,
+      "sha256": "84bc195ae8c79cce5a7383c443c46733871918c194906873807cf98861b5db24"
+    },
+    {
+      "path": "baseline/production-web-before-preview.json",
+      "bytes": 10585,
+      "sha256": "bc24ec9e79979b3a2d70f28aa3a4a78dcba42217e7c0daebf8181afa5f0ce104"
+    },
+    {
+      "path": "baseline/production-working-tree.txt",
+      "bytes": 1103,
+      "sha256": "f1f80a5e6429d05c3b107dd4484a8229669c23c452c9d57ae50a6e2bf779e482"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 23942,
+      "sha256": "794b4d43aec98b6ef826f79709a958322351701cad1791deaccaf05fce3a38f6"
+    },
+    {
+      "path": "check-template.mjs",
+      "bytes": 5908,
+      "sha256": "dcbb484f5904ee6916402258b3b629a1b1991e6d5650ddd794c6e8d8bedce5ae"
+    },
+    {
+      "path": "copy-replacements.json",
+      "bytes": 58502,
+      "sha256": "1a42403335943030a1d8377fc7332c083c3f341bc1d60c35ceeb931f95897262"
+    },
+    {
+      "path": "evidence/device-status-1274.png",
+      "bytes": 368565,
+      "sha256": "36a559912b5b863a681650669dff4f8ccca671eaca375aa62f8f544ed80177f9"
+    },
+    {
+      "path": "evidence/device-status-390.png",
+      "bytes": 129018,
+      "sha256": "36d3317e6640f182a308577facca6e9c5ca9a7043976811960dba4b604ced099"
+    },
+    {
+      "path": "evidence/docs-check.json",
+      "bytes": 765,
+      "sha256": "86e4090bd8f4c2683467c87beabe42d8591f028ec1c5b5c7bcde97c170851082"
+    },
+    {
+      "path": "evidence/docs-final-check.json",
+      "bytes": 765,
+      "sha256": "86e4090bd8f4c2683467c87beabe42d8591f028ec1c5b5c7bcde97c170851082"
+    },
+    {
+      "path": "evidence/keyboard-1274.png",
+      "bytes": 360468,
+      "sha256": "97b05cc72249acc9a1fdb6509b024a389d8b19cf87910f5f864313ba7ae3ae41"
+    },
+    {
+      "path": "evidence/keyboard-390.png",
+      "bytes": 120052,
+      "sha256": "1d457e31baf70c3e925e34269134116ea548f39b8bd4a50cfb1027ed44432f38"
+    },
+    {
+      "path": "evidence/template-check.json",
+      "bytes": 2934,
+      "sha256": "3ec18c1f9b56b195eed73a560a7dab1e610914d0e741c4ccae5211a26a356bd0"
+    },
+    {
+      "path": "evidence/uf2-dialog-1274.png",
+      "bytes": 279464,
+      "sha256": "3604768b3d886833f6e958edd9c7a140c067af547518083dfea38938d143e234"
+    },
+    {
+      "path": "evidence/uf2-dialog-320.png",
+      "bytes": 115921,
+      "sha256": "81545c676027e82e49241ee7784284ecbede2bb46d8dbe80fa8f2dd344c6e61c"
+    },
+    {
+      "path": "evidence/uf2-dialog-390.png",
+      "bytes": 126603,
+      "sha256": "baf6a69a6f014888f79383f37c88551e147d437b13fd11f0a8214d1d2692c92f"
+    },
+    {
+      "path": "evidence/update-1274.png",
+      "bytes": 298088,
+      "sha256": "ee2d291f00e445c5b8989e6907efaa55bb70912ec3ca3250c806441d22ceadd1"
+    },
+    {
+      "path": "evidence/update-390.png",
+      "bytes": 105901,
+      "sha256": "f9be15a559428c4cd8eba8a2db42579c810bb712eff19e2fb5cee457b3b04202"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 16804,
+      "sha256": "1c20c87f81f12d4a2be46c582e2cf31b4e659014a26ed5f749d1e08d29ae5979"
+    },
+    {
+      "path": "index.html",
+      "bytes": 114278,
+      "sha256": "c854d3e8e9e01236c863542a2c9193a1c9acaca03553a63e8be0a9faa7120691"
+    },
+    {
+      "path": "preview-edits.json",
+      "bytes": 1246,
+      "sha256": "4e58f2e9eed4f10e96d5864cacb607b535fcc8341f671ecc74db1f5f4673ec22"
+    },
+    {
+      "path": "preview.css",
+      "bytes": 12845,
+      "sha256": "2f6b11f553d3888bf6a79dfb0c309e0e57b01b01a31ba2060a7f0f5329caaa9b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4185,
+      "sha256": "6a67ec86dd70a3b23bf0695288553fcb950714b7a6de6ab5cf2ff0e7c8006a7d"
+    },
+    {
+      "path": "reviews/COPY_REVIEW.md",
+      "bytes": 3851,
+      "sha256": "4c0b483e5c2c42705d8365e0d1be24c8808b51c8fd02523304634097d04b68ce"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_UF2确认.md",
+      "bytes": 1073,
+      "sha256": "9eb3e0cdb040efc119ae94ceb6ac1886e10944b3f7ded4c11aea141ce9b9e3ed"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_批注版.md",
+      "bytes": 5780,
+      "sha256": "50816968d769a0b3ed8d23630a74e7f3f75994691f5ce96d43af52800e45692b"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_标题标签.md",
+      "bytes": 621,
+      "sha256": "1f35651e4caf7aa77a20562b139e018fd9b3a207f53860fc14492baa5bb56a0a"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_第三轮.md",
+      "bytes": 5201,
+      "sha256": "a5a60b48abce1a6c4cce8397b995bcb7844b9bee94ac64793829b7440455bb34"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_第二轮.md",
+      "bytes": 4374,
+      "sha256": "a8eb02c7fbc2416833dccf00257abfea2b6fbe1958351184e3c234df17beda8d"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_第四轮.md",
+      "bytes": 1015,
+      "sha256": "00c009fcb4e7ab600031e4005c33d124280675509cf55135a2451a5238bf6144"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_重构交接.md",
+      "bytes": 2440,
+      "sha256": "6e3d6f2c568f5f23219ca7b377f18801834380050e040b00006988e2e2098093"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_顶部去框.md",
+      "bytes": 672,
+      "sha256": "eade0cd4baeecac7d638c74cb53275456520c07e637ee5f9c1a093f8e6fbed01"
+    },
+    {
+      "path": "reviews/LUNA_REVIEW_顶部合并.md",
+      "bytes": 997,
+      "sha256": "73236ef45e93f74cc8311bab915cb9e379e48403542b48476d929e13dcde2369"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 1717,
+      "sha256": "6fca2cd1671b21d837f0b5dc16ae519bdc374a4b0717c65261738d06ee7aaad5"
+    },
+    {
+      "path": "shell.js",
+      "bytes": 5306,
+      "sha256": "d25b62200379c78f7d3b147762d671d5c43fbe0c4ef7ed7bc56d7e42f8e1ddde"
+    },
+    {
+      "path": "style.css",
+      "bytes": 29075,
+      "sha256": "190b735414744cca3a85b41fd337237e7a65c54e0ab583bff0b3721dd0aa285a"
+    },
+    {
+      "path": "verify-template.mjs",
+      "bytes": 771,
+      "sha256": "e003d9fcc961d6382c23e2eaffaa35d070402fff0968efa4d3de75942ff1d9d1"
+    }
+  ]
+}

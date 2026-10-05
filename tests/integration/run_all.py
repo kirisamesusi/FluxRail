@@ -28,7 +28,7 @@ def main():
                        'tests/integration/run_protocol.py','tests/integration/run_storage.py',
                        'tests/integration/run_app_storage.py','tests/integration/run_io4.py','tests/integration/run_motion.py']:
             step(script,[sys.executable,str(ROOT/script)])
-        step('web_all',['node','--test','web/tests/web.test.mjs','web/tests/knob-preview.test.mjs','web/tests/integration.test.mjs','web/tests/integration-ui.test.mjs','web/tests/layout.test.mjs','web/tests/template-actions.test.mjs','web/tests/uf2.test.mjs'])
+        step('web_all',['node','--test','web/tests/web.test.mjs','web/tests/knob-preview.test.mjs','web/tests/integration.test.mjs','web/tests/integration-ui.test.mjs','web/tests/layout.test.mjs','web/tests/template-actions.test.mjs','web/tests/uf2.test.mjs','web/tests/workflows.test.mjs','web/tests/sensitivity.test.mjs'])
         if not args.skip_build:
             for script in ['tests/integration/compile_firmware.py','tests/integration/run_usb_descriptors.py']:
                 step(script,[sys.executable,str(ROOT/script)])

@@ -1,0 +1,392 @@
+[
+  {
+    "path": "web/index.html",
+    "sha256": "f85b2a2c9aea2680d2527059dcda3ced776bd01e6bd01747ecfe095c9e7f6c98",
+    "bytes": 21395
+  },
+  {
+    "path": "web/package.json",
+    "sha256": "1bf4dbf1c7c71540906d5d4b467e8e3c842eb6c990a41144cccefb36d119a639",
+    "bytes": 382
+  },
+  {
+    "path": "web/README.md",
+    "sha256": "a28e5f75cf2edc9c511d61dc03c5b3709d828dbfc5b32be04d5cabad4ca4f839",
+    "bytes": 1577
+  },
+  {
+    "path": "web/server.mjs",
+    "sha256": "cb2f5a1469c5ba532812bae068f9e8bf759af10c5376d9b7ef5168cd0785b6e3",
+    "bytes": 2129
+  },
+  {
+    "path": "web/style.css",
+    "sha256": "190b735414744cca3a85b41fd337237e7a65c54e0ab583bff0b3721dd0aa285a",
+    "bytes": 29075
+  },
+  {
+    "path": "web/assets/fluxrail-favicon.ico",
+    "sha256": "758b59e3855c1a94d6f9ad16ee6a4c531f441da30d496bc12c64f63c3e2739c0",
+    "bytes": 9600
+  },
+  {
+    "path": "web/assets/fluxrail-icon-180.png",
+    "sha256": "f47e4c03b10552d0d872c0c690714c6a8a907cdcf1aa3f303a0d094afba2fef1",
+    "bytes": 48660
+  },
+  {
+    "path": "web/assets/fluxrail-icon-192.png",
+    "sha256": "26ad41d7422c4235176aba7c156001757faabcfba4affcff09f01fc2f090e841",
+    "bytes": 54445
+  },
+  {
+    "path": "web/assets/fluxrail-icon-32.png",
+    "sha256": "7d699c6419d14e9959d9fd8d7899e65ef6b1ba826cc445b6e0a6509836479dbb",
+    "bytes": 2938
+  },
+  {
+    "path": "web/assets/fluxrail-lace-bunny.png",
+    "sha256": "caf5f77ccada9e04011469bec6ebcf5d82d8ed96a3128a5d30f8c8acf3b097e1",
+    "bytes": 1149211
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-aqua.png",
+    "sha256": "50c88e70e9d5f3cf64ecd583d557d549f2a55441eefb33aa978dfefe858df009",
+    "bytes": 1222113
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-brand.png",
+    "sha256": "6d0e9a9b009556e3ddd5e304b1b7dc044f7b0bc2e52b7c2e6016fdc961b56afe",
+    "bytes": 75032
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-controller-source.png",
+    "sha256": "478f4500dede75cd5a9919998bd1ea9ac6c155545ad10b56c8e6d3f50b5e843a",
+    "bytes": 1263817
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-controller-theme-source.png",
+    "sha256": "89ae344193b3c7f732d6cc83e3d619800aa139aa368a33f6dc4091ac41fc29a8",
+    "bytes": 1263830
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-controller.png",
+    "sha256": "84bc195ae8c79cce5a7383c443c46733871918c194906873807cf98861b5db24",
+    "bytes": 431868
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-icon-source.png",
+    "sha256": "56f9d1ee6d46c6c31ec41922ff08303a03b8fc604cc2588bfcc6a6bfbd8d2f74",
+    "bytes": 1428172
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-icon-theme-source.png",
+    "sha256": "ca47359880e8052448ffad5e1f546d21777a91b1333761fe059418eafe3c1193",
+    "bytes": 1386728
+  },
+  {
+    "path": "web/assets/fluxrail-mascot-theme-source.png",
+    "sha256": "cc72cd4146c068b9a3a35d2f19d6177099dd274ab29e533e4b70ebe12fd117df",
+    "bytes": 1206265
+  },
+  {
+    "path": "web/assets/mascot-generation.json",
+    "sha256": "e0847bdf6d3f6f7d476a84c68a20bce005abd704573b5f89eb3cdcdae33b7977",
+    "bytes": 8956
+  },
+  {
+    "path": "web/assets/MASCOT.md",
+    "sha256": "7152b8d5a2bcc98eb764a000c700ba03787add656b55229e03d820d99fdb5e6e",
+    "bytes": 2306
+  },
+  {
+    "path": "web/src/app.js",
+    "sha256": "690e71097e67b36199b791c6aab3335fef8376e655bb83a249f35943a6d48493",
+    "bytes": 30823
+  },
+  {
+    "path": "web/src/config.js",
+    "sha256": "2cb2b91b05935b3b3b84458382f48c5972da84d325851ac54bd81c0d7ffe4ca3",
+    "bytes": 7058
+  },
+  {
+    "path": "web/src/confirmation.js",
+    "sha256": "9273f72d4d8ab32e9eb82aea99c0ecb5e117f6daeea1fdedfcd1bd1ccc4901b7",
+    "bytes": 1752
+  },
+  {
+    "path": "web/src/demo.js",
+    "sha256": "c8a89e8fb08c8e12dc9665aeb161057ab30706f17d96f96d4e21873bc89a4842",
+    "bytes": 8852
+  },
+  {
+    "path": "web/src/device.js",
+    "sha256": "f908975671ae71d3dede036d2f916bae129e9ca057c043e5bc64b79be81afeeb",
+    "bytes": 5449
+  },
+  {
+    "path": "web/src/integration.js",
+    "sha256": "b24fc5202aafe5f94f8b3374cedd3370c12643e09565956167cb95b3cb08af22",
+    "bytes": 13178
+  },
+  {
+    "path": "web/src/io4-editor.js",
+    "sha256": "9e792e61f6f12f990bcbe7d046dceac2c2f77bdd46840e121476430dc307e466",
+    "bytes": 6795
+  },
+  {
+    "path": "web/src/keyboard.js",
+    "sha256": "ade1e14ad255431ae7f663c42f202b8c3a2ef318d7cd73f5e7491c007b28ba48",
+    "bytes": 3597
+  },
+  {
+    "path": "web/src/knob-preview.js",
+    "sha256": "2618d996a28f2ccffa6ee382bc78ac8c18341f9db2a608a0c54c6ada641b95c2",
+    "bytes": 6595
+  },
+  {
+    "path": "web/src/layout.js",
+    "sha256": "43e05a2090a8f1b701331f0412edd7583856d3603df1b95a6e25c2ccbb303879",
+    "bytes": 2570
+  },
+  {
+    "path": "web/src/snapshot.js",
+    "sha256": "7900895bcb151a2670eb8249571bf49820862ccbf36190a4a35949df6fcb2bbd",
+    "bytes": 8620
+  },
+  {
+    "path": "web/src/template-actions.js",
+    "sha256": "4dda60d976df03540c45e78cd638807b095583340cbb7d6916f47ddd0d2f9989",
+    "bytes": 3608
+  },
+  {
+    "path": "web/tests/firmware-version-2026-10-04.png",
+    "sha256": "8b833619d737d90c2968235c60fde7b0808c6b705bcb72c9c8cf97f4402c1083",
+    "bytes": 113871
+  },
+  {
+    "path": "web/tests/golden.js",
+    "sha256": "f2c656a470166cf61d9c1e561652ea88bf2e0ea9669afa54b231b7b76b670c85",
+    "bytes": 2811
+  },
+  {
+    "path": "web/tests/hall-controls-2026-10-03.png",
+    "sha256": "f415732247c282c854cf058fa482018b1ae28bc8417f8cd5243f19287818e063",
+    "bytes": 39314
+  },
+  {
+    "path": "web/tests/header-lace-bunny-2026-10-04.png",
+    "sha256": "6cb64ad9a5787984838b5d66b8608e71126d99dbb101ff85a46663587f5f2355",
+    "bytes": 96337
+  },
+  {
+    "path": "web/tests/import-example.json",
+    "sha256": "75da9671a70ae5b154a7a41d7260813b8c8105839fc1c9af63ef0ce6d7bcd000",
+    "bytes": 2923
+  },
+  {
+    "path": "web/tests/input-status-2026-10-04.png",
+    "sha256": "9814097ac96c6baaaa2eadcbdd669c963926c47bc9ddb2316baeb5985f6653bb",
+    "bytes": 133864
+  },
+  {
+    "path": "web/tests/integration-ui.test.mjs",
+    "sha256": "99eb18691e7c4c72dfa3df6fae5e3e06ab01ccb40d74bbb103bf9a94e08158b8",
+    "bytes": 10629
+  },
+  {
+    "path": "web/tests/integration.test.mjs",
+    "sha256": "9fc23330b76c2a38c83e671b922235d2b4ecf179b9fa15a2ef465d2ff41bf494",
+    "bytes": 2855
+  },
+  {
+    "path": "web/tests/knob-preview.test.mjs",
+    "sha256": "e413352b7cbe9f2bbbc4e820a8c632a774ce60a22d661b915aa0c96c2a644276",
+    "bytes": 1342
+  },
+  {
+    "path": "web/tests/lab-layout-2026-10-03.png",
+    "sha256": "dd9d277b3a1a6f4bb6f290be1d78bc991ba31575bd1dc4f5a1c8aeeb2d801a63",
+    "bytes": 42549
+  },
+  {
+    "path": "web/tests/layout-desktop-2026-10-04.png",
+    "sha256": "2410d4b6be5992b9dcab316a84a219a85f8bf8cb6bb30a7a874f3c4dd2557f95",
+    "bytes": 88145
+  },
+  {
+    "path": "web/tests/layout-mobile-2026-10-04.png",
+    "sha256": "058d33c835540d3e50abd20b95c4a4a89bb3be489fe6a9ee9253ee0d02c97701",
+    "bytes": 38795
+  },
+  {
+    "path": "web/tests/layout-review-2026-10-04.md",
+    "sha256": "c168fa18777e4e6721645a030a55bd0b95bb3bbe6a3a7d86b12e7906273b1550",
+    "bytes": 2880
+  },
+  {
+    "path": "web/tests/layout-test-output-2026-10-04.txt",
+    "sha256": "fb802405c1116348911a77ae3a62505dc215e3aec1e778389c887df5a6165e41",
+    "bytes": 3565
+  },
+  {
+    "path": "web/tests/layout.test.mjs",
+    "sha256": "8602fac3d3686d5197544a6ae578dbe2d329dab3e1e9d236587a52b8e4a10f5b",
+    "bytes": 4459
+  },
+  {
+    "path": "web/tests/physical-keys-2026-10-04.png",
+    "sha256": "5f180bca09e5b20335dee4e53f517e5eac2ff6cbd707cd0ccb4f25ecfc699d97",
+    "bytes": 120437
+  },
+  {
+    "path": "web/tests/style_review_2026-10-03.md",
+    "sha256": "b3cefb8bfdc6708db3ee56ca301f73501cf617265a3d8f68098feb2baf892e36",
+    "bytes": 4446
+  },
+  {
+    "path": "web/tests/template-actions.test.mjs",
+    "sha256": "a8957ed25bcd01d1322a417a55b6c8f1d7b612332a8bf963a6a85143d2be530c",
+    "bytes": 10309
+  },
+  {
+    "path": "web/tests/template-confirmation-2026-10-04.png",
+    "sha256": "25bab58225c823dfbd62961445eabb303d99dddb12f186842dd8511a483f637b",
+    "bytes": 33403
+  },
+  {
+    "path": "web/tests/template-management-2026-10-04.png",
+    "sha256": "a518506ed29aed87cf73ebc059cc52e54574ad58b33b84b613a94660d56c52e3",
+    "bytes": 100505
+  },
+  {
+    "path": "web/tests/template-new-save-2026-10-04.png",
+    "sha256": "8b9e4da2fb741d4a2d8d9aec28bd5db7b939a469365633439360183067ef098b",
+    "bytes": 47964
+  },
+  {
+    "path": "web/tests/uf2.test.mjs",
+    "sha256": "f79b7e48c0e95e2c1d2a43fea6eba6e7bc83c96cd43f6804b6df1089a8b679ff",
+    "bytes": 7480
+  },
+  {
+    "path": "web/tests/validation-layout-2026-10-04.json",
+    "sha256": "9ae7ddc69c64ba64559355ce780f36e22bc15af584ac04319be7884b453d339f",
+    "bytes": 1905
+  },
+  {
+    "path": "web/tests/validation-physical-layout-2026-10-04.json",
+    "sha256": "527612c9986d4622870f1f57133174ee478f6350e42667f74f1c874875d0e289",
+    "bytes": 1306
+  },
+  {
+    "path": "web/tests/validation-template-management-2026-10-04.json",
+    "sha256": "b3b920f8144dc247f8cb064e8650cda6efcd3fff8756453e52635fe0dee4977f",
+    "bytes": 1903
+  },
+  {
+    "path": "web/tests/validation_2026-10-03.json",
+    "sha256": "9d33819a907772056a5fe332acada329554a3bee086653c31b8a93a8cce2d73b",
+    "bytes": 11369
+  },
+  {
+    "path": "web/tests/validation_hall_controls_2026-10-03.json",
+    "sha256": "7863c597ef90b3d0cd97e0beea35f7b533e04ef3afdd98c5b8ca1d6aa75a7851",
+    "bytes": 552
+  },
+  {
+    "path": "web/tests/validation_lab_layout_2026-10-03.json",
+    "sha256": "5fb154ab7e4bf8fc0b55ccaccbc8198de96463074743383a917023a67e148d5b",
+    "bytes": 1867
+  },
+  {
+    "path": "web/tests/web.test.mjs",
+    "sha256": "27dc7dcf9316971df0c340e3b5056c299ead917eaa3555bb0c371a39c3b8564c",
+    "bytes": 12234
+  },
+  {
+    "path": "web/tools/export-mascot.mjs",
+    "sha256": "a01af737cd77fedd9649822fa4e157bb6513438598e2058eed9d3aafba02d42d",
+    "bytes": 1988
+  },
+  {
+    "path": "web/src/connection/client.js",
+    "sha256": "cefe0e868efad23fa160f0058d5c2214a6538ba2e5248dedbb8f4804b8c55cd3",
+    "bytes": 6629
+  },
+  {
+    "path": "web/src/update/controller.js",
+    "sha256": "e2b35eb2352133ebaf6f4ec62966e9cd811aaf87555d46df75ed883b8e49a686",
+    "bytes": 2737
+  },
+  {
+    "path": "web/src/update/uf2.js",
+    "sha256": "01d7ec56e3d9c710dc1fce1b6e059dc26b9f2674b51653f7a5dc8224619ae5a9",
+    "bytes": 7050
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/assets-manifest.json",
+    "sha256": "eb5a3ae279d8b3a973c4815ea843df1a5866361e24f2de3f76ad4d582a069dd3",
+    "bytes": 2667
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/brand.png",
+    "sha256": "4772080056c3ff2f0712d53f26d92e968a212236bf29cecb4d07ddc459005540",
+    "bytes": 7562
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/browser-http-check.json",
+    "sha256": "b5a127b45137034302d48c9b2821f403ab20c737d5a49f657b12d50a8d4a3fef",
+    "bytes": 6793
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/check.mjs",
+    "sha256": "bdafabd945cfca13e5c27602d924dd4b3d3049d25892d218347ccad180102583",
+    "bytes": 6232
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/docs-check.json",
+    "sha256": "04d3aa4073eb41b1a716060d2b896befb34504615f63413e46e4034b7ecd04f7",
+    "bytes": 765
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/layout-1440.png",
+    "sha256": "954f4118bb24653e7536e5cd4969c35906674b20372113e01e51b11bbd8159be",
+    "bytes": 338022
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/layout-390.png",
+    "sha256": "e9961ccbdf00417cd9fd7b976be0805099ea7386e648a64ae263574b3f18923f",
+    "bytes": 179222
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/node-test-output.txt",
+    "sha256": "afdb9b2686d8e4f3814c7816caac70d01a18f9382134010e152577439c16ec79",
+    "bytes": 5583
+  },
+  {
+    "path": "web/tests/mascot-2026-10-05/README.md",
+    "sha256": "03f56b9c44a2396d7d1738b8c0df7242ef2ca238f1548c2ff02c4a7f9f9e0635",
+    "bytes": 3139
+  },
+  {
+    "path": "docs/modules/05_Web配置工具.md",
+    "sha256": "12bdaeaaff77e70c11c50058048b9b18f95c85e288c85a3c6f860c325425b26c",
+    "bytes": 18609
+  },
+  {
+    "path": "docs/测试状态与待验收.md",
+    "sha256": "88cfbc747184868de1facfc188bc3f17b3381031c75ddb67b4ca14f8b16ecef5",
+    "bytes": 7789
+  },
+  {
+    "path": "docs/README.md",
+    "sha256": "61b6ff1c5bcbfa0210b3d93b01740407ec01f3190155486d8e42f76f691bdb30",
+    "bytes": 3303
+  },
+  {
+    "path": "web修改.md",
+    "sha256": "05b819c17d0ae6a4abff749273d252cb8427fbd85b91f896bcc3cbb9d8a399d1",
+    "bytes": 23908
+  }
+]

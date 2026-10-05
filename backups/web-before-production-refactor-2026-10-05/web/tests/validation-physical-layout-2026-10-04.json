@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-04",
+  "backup": "backups/web-before-physical-layout-2026-10-04",
+  "backupFiles": 35,
+  "layout": {
+    "topLeft": [
+      "BT8",
+      "BT7",
+      "BT6",
+      "BT5"
+    ],
+    "topRight": [
+      "BT4",
+      "BT3",
+      "BT2",
+      "BT1"
+    ],
+    "bottom": [
+      "BT9",
+      "BT10"
+    ],
+    "views": [
+      "keyboard",
+      "diagnostics"
+    ],
+    "narrowScreens": "布局内部横向滚动，保留四键分组",
+    "pushCorners": {
+      "left": "P1",
+      "right": "P2"
+    },
+    "rows": [
+      "P1 / P2",
+      "左右四键",
+      "BT9 / BT10"
+    ]
+  },
+  "telemetry": {
+    "parent": "diagnostics",
+    "realDials": 2,
+    "localPreviewsRemainIn": "knobs",
+    "pollingAndProtocolUnchanged": true
+  },
+  "tests": {
+    "total": 40,
+    "pass": 40,
+    "fail": 0
+  },
+  "browser": {
+    "keyPositionsAndInputPositionsMatch": true,
+    "keyCards": 12,
+    "keyboardListening": "BT8 A→B",
+    "draftRetainedAfterNavigation": true,
+    "simulatedApplyReadback": "B",
+    "mobileViewportRequest": "390x844",
+    "documentClientWidth": 375,
+    "documentScrollWidth": 375,
+    "internalDiagramWidth": 820
+  },
+  "screenshots": [
+    "physical-keys-2026-10-04.png",
+    "input-status-2026-10-04.png"
+  ],
+  "hardwareTested": false,
+  "firmwareChanged": false
+}

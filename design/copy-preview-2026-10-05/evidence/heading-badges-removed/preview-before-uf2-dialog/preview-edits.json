@@ -1,0 +1,14 @@
+{
+  "revision": "heading-badges-removed",
+  "changes": [
+    { "selector": "#refresh", "text": "重新读取设置" },
+    { "selector": "#apply", "text": "应用并保存" },
+    { "selector": "#save", "remove": true },
+    { "selector": "#notice", "text": "连接设备后修改设置，改好后点“应用并保存”。设置会写入设备，断电后也会保留。" },
+    { "selector": ".workflow-note li:nth-child(2)", "text": "改好后点“应用并保存”" },
+    { "selector": ".workflow-note li:nth-child(3)", "remove": true },
+    { "selector": "footer span:last-child", "text": "修改设置后，点“应用并保存”。" },
+    { "selector": "#profiles .section-heading p", "text": "选择一个模板开始编辑。改好后可应用并保存，也可另存为自定义模板。" },
+    { "selector": "#profiles > .hint", "text": "四个预设模板不能改名或覆盖。点选预设会恢复它的默认设置；修改后可点“应用并保存”写入设备。想另存为自定义模板，请点“保存到当前模板”，再输入新模板名称。自定义模板可直接保存网页中的设置。选择或新建模板不会自动启用；需要让设备使用它时，请点“设为活动模板”。" }
+  ]
+}

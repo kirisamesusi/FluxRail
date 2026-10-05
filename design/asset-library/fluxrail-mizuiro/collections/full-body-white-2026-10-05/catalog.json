@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "controller-white-v2",
+      "path": "images/controller-white-v2.png",
+      "status": "generated_candidate",
+      "bytes": 1419255,
+      "sha256": "5f59ec07a50a19fff6c438420fea23be4f6858c612e765ac8cce580b83ce5436",
+      "width": 1024,
+      "height": 1536,
+      "has_alpha": true,
+      "source": "built-in image_gen; exact original bytes copied"
+    },
+    {
+      "id": "standing-white-v2",
+      "path": "images/standing-white-v2.png",
+      "status": "generated_candidate",
+      "bytes": 1347923,
+      "sha256": "8978919e12782e6443ac2f793067cd0a452bde715feb3f3a593dce22e9fb43f0",
+      "width": 1024,
+      "height": 1536,
+      "has_alpha": true,
+      "source": "built-in image_gen; exact original bytes copied"
+    },
+    {
+      "id": "waving-white-v2",
+      "path": "images/waving-white-v2.png",
+      "status": "generated_candidate",
+      "bytes": 1442342,
+      "sha256": "4f5272ec8ad2b5f79ac07e583e9d6cbf99bee6eaaaadeb7316a11718d4bc5a21",
+      "width": 1024,
+      "height": 1536,
+      "has_alpha": true,
+      "source": "built-in image_gen; exact original bytes copied"
+    }
+  ]
+}

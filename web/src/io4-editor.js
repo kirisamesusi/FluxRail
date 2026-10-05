@@ -3,7 +3,7 @@
  * Device负责revision/维护/错误后只读锁；所有持久化仍走唯一save_config。
  */
 export const io4Functions=['禁用','左 A','左 B','左 C','右 A','右 B','右 C','左菜单','右菜单','左侧键','右侧键','Test','Service'];
-const order=[7,6,5,4,8,3,2,1,0,9,10,11];
+const order=[10,11,7,6,5,4,3,2,1,0,8,9];
 const make=(tag,text='')=>{const e=document.createElement(tag);e.textContent=text;return e;};
 export function mountIo4Editor(context){
   const panel=make('details');panel.id='io4-mapping-editor';panel.className='experiment-group';
@@ -11,11 +11,11 @@ export function mountIo4Editor(context){
   const body=make('div');body.className='io4-editor-body';panel.append(body);
   const hint=text=>{const p=make('p',text);p.className='hint';body.append(p);};
   const identity=make('p');identity.id='io4-mapping-profile';body.append(identity);
-  hint('在普通模式下连接设备，为当前模板设置十二路 IO4 按键功能。修改后应用到 RAM，再设为活动模板并保存。切换到 IO4 后使用这组映射；普通键位单独保留。');
-  const grid=make('div');grid.className='io4-key-grid';body.append(grid);
+  hint('在普通模式下连接设备，为当前模板设置十二路 IO4 按键功能。改好后应用并保存。活动模板由模板管理单独选择。切换到 IO4 后使用这组映射；普通键位单独保留。');
+  const scroller=make('div');scroller.className='io4-key-scroller';body.append(scroller);const grid=make('div');grid.className='io4-key-grid physical-keys-main';scroller.append(grid);
   const selectors=Array(12),readback=Array(12);
   for(const id of order){
-    const card=make('label');card.className='io4-key-card';
+    const card=make('label');card.className='io4-key-card';card.setAttribute('data-source',String(id));
     card.append(make('strong',id<10?'BT'+(id+1):'P'+(id-9)+' · 旋钮按压'));
     const select=make('select');select.id='io4-binding-'+id;select.setAttribute('aria-label','IO4 '+(id<10?'BT'+(id+1):'P'+(id-9))+'功能');
     io4Functions.forEach((name,value)=>{const option=make('option',name);option.value=value;select.append(option);});
@@ -26,32 +26,26 @@ export function mountIo4Editor(context){
   const actions=make('div');actions.className='toolbar';body.append(actions);
   const button=(id,text,task,success)=>{const b=make('button',text);b.id=id;b.type='button';b.onclick=()=>context.runAction(task,success);actions.append(b);return b;};
   // 每个按钮对应一个已存在公共操作；不把网页选择或FIFO入队当成已采用/已保存。
-  const apply=button('io4-mapping-apply','应用 IO4 映射到 RAM',async()=>{
+  const apply=button('io4-mapping-apply','应用并保存 IO4 设置',async()=>{
     const d=context.getDevice();d.checkWritable();
+    if(context.hasModeDraft?.()||context.calibrationBusy?.())throw Error('先处理启动模式草稿或校准任务');
     if(!matches(d))throw Error('设备/模板已变化，请读回IO4映射后重新编辑');
     const values=selectors.map(s=>Number(s.value));
     if(!values.every(v=>Number.isInteger(v)&&v>=0&&v<=12))throw Error('IO4功能无效');
-    await d.mutate('set_io4_bindings',{profile_id:d.selected,bindings:values});await context.refresh();
-  },'IO4映射已由设备确认并读回。请启用需要的模板并保存，再切换IO4。');
-  const activate=button('io4-mapping-activate','将本模板设为活动',async()=>{
-    const d=context.getDevice();if(hasDraft())throw Error('先应用IO4映射草稿');
-    await d.mutate('set_active_profile',{profile_id:d.selected});await context.refresh();
-  },'该模板已成为活动模板，IO4会使用它的功能表。请保存到设备。');
-  const save=button('io4-mapping-save','保存到设备',async()=>{
-    if(hasDraft())throw Error('先应用IO4映射草稿');
-    await context.getDevice().mutate('save_config');await context.refresh();
-  },'设备已确认完整配置保存。现在可切换到IO4身份。');
-  const refresh=button('io4-mapping-refresh','读回映射（舍弃草稿）',async()=>{await context.refresh();},'IO4映射已从设备读回，未应用选择已舍弃。');
-  const link=make('a','下一步：USB 身份切换 →');link.href='#update';actions.append(link);
+    if(hasDraft())await d.mutate('set_io4_bindings',{profile_id:d.selected,bindings:values});
+    try{await d.mutate('save_config');}catch(error){throw Error('IO4 设置已应用，但保存未确认；请重新读取核对结果。'+error.message);}
+    await context.refresh();
+  },'IO4设置已应用并保存，当前模板和保存状态已读回；活动模板未自动切换。');
+  const refresh=button('io4-mapping-refresh','重新读取',async()=>{await context.readSettings();},null);
   hint('多个按键可绑定同一功能，任一按住即保持该功能。P1 / P2 为旋钮按压；按住 BT10 复位或上电可返回普通模式。');
-  document.getElementById('experimental-content').insertBefore(panel,document.getElementById('experiment-calibration'));
+  document.getElementById('io4-editor-mount').append(panel);
   let loadedDevice=null,loadedProfile=null,revision=null,selected=null,base=null;
   const hasDraft=()=>!!base&&selectors.some((s,i)=>Number(s.value)!==base[i]);
   const matches=d=>loadedDevice===d&&loadedProfile===d?.profile&&revision===d?.revision&&selected===d?.selected&&d?.revision===d?.client?.revision;
   function status(){
     if(!base){message.textContent='请连接整合固件并读回模板；IO4映射功能在普通USB模式下编辑。';return;}
     const changes=selectors.reduce((n,s,i)=>n+(Number(s.value)!==base[i]?1:0),0);
-    message.textContent=changes?'IO4 网页草稿：'+changes+' 路修改尚未应用，切换模式前先应用。':'IO4映射与设备RAM读回一致；掉电保留需要保存。';
+    message.textContent=changes?'IO4 网页草稿：'+changes+' 个修改尚未应用，请应用并保存 IO4 设置。':'IO4映射与设备RAM读回一致；掉电保留需要保存。';
   }
   function sync(d,busy=false){
     // 真实Device.refresh会生成新profile对象，明确读回才能舍弃旧草稿；
@@ -61,10 +55,8 @@ export function mountIo4Editor(context){
       base=Array.isArray(d?.profile?.io4_bindings)&&d.profile.io4_bindings.length===12?[...d.profile.io4_bindings]:null;
       selectors.forEach((s,i)=>{s.value=base?.[i]??0;readback[i].textContent=base?'设备已读回：'+io4Functions[base[i]]:'设备尚未读回';});
     }
-    const writable=!!(base&&d?.client?.alive&&d.ready&&matches(d)&&d.status.config_ready&&!d.status.applying&&d.status.maintenance==='idle'&&!d.localDirty&&!busy&&d.hello.capabilities.io4);
-    selectors.forEach(s=>s.disabled=!writable);apply.disabled=!writable||!hasDraft();
-    activate.disabled=!writable||hasDraft()||d?.selected===d?.meta?.active_profile;
-    save.disabled=!writable||hasDraft()||!d?.hello?.capabilities.flash_save;
+    const writable=!!(base&&d?.client?.alive&&d.ready&&matches(d)&&d.status.config_ready&&!d.status.applying&&d.status.maintenance==='idle'&&!d.localDirty&&!busy&&d.hello.capabilities.io4&&!context.hasModeDraft?.()&&!context.calibrationBusy?.());
+    selectors.forEach(s=>s.disabled=!writable);apply.disabled=!writable||!d?.hello?.capabilities.flash_save;
     refresh.disabled=!d?.client?.alive||busy;
     identity.textContent=base?'编辑模板：'+(d.profile.name||'ID '+d.selected)+'（ID '+d.selected+'） · '+(d.selected===d.meta?.active_profile?'当前活动模板':'尚未激活，IO4仍使用活动模板 ID '+d.meta?.active_profile):'等待设备模板';
     status();

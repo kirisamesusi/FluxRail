@@ -1,0 +1,32 @@
+{
+  "date_local": "2026-10-05",
+  "scope": "Isolated copy shell only",
+  "review_model": "gpt-6-luna",
+  "hardware_tested": false,
+  "compiled": false,
+  "unchanged_web_files": 74,
+  "views": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    }
+  ],
+  "modules": [
+    "profiles",
+    "keyboard",
+    "lighting",
+    "hall",
+    "knobs",
+    "diagnostics",
+    "update",
+    "experimental"
+  ],
+  "details": 11,
+  "browser_errors": [],
+  "production_modules_loaded": false,
+  "passed": true
+}

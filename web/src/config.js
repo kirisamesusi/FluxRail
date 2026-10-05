@@ -1,5 +1,6 @@
 /** schema1字段约束的网页适配。参数与公共C++校验保持一致，固件仍是最终校验者。
- * 描述表也用于高级编辑，避免UI出现未校验的隐式单位或魔法范围。
+ * 描述表也用于高级编辑。gain字段保持实际倍率；产品1.0～10.0刻度
+ * 由sensitivity.js换算，不能在快照/协议校验处再乘除5或截断旧值。
  */
 export const hallFields = [
   ['center_gain','中心倍率',0.1,8,'f32'],['range_min','输出下界（归一化）',0,1,'f32'],['range_max','输出上界（归一化）',0,1,'f32'],
@@ -9,7 +10,7 @@ export const hallFields = [
   ['exit_signal','退出信号 ADC count',1,12000,'f32'],['curve_tolerance','曲线容差 ADC count',1,1000,'f32'],['max_gap_us','最大有效间隔 µs',1000,100000,'u32']
 ];
 export const knobFields = [
-  ['gain','倍率',0.01,16,'f64'],['counts_per_turn_at_gain1','倍率1每圈 HID count',1,1000000,'f64'],
+  ['gain','倍率',0.01,16,'f64'],['counts_per_turn_at_gain1','灵敏度5.0每圈 HID count',1,1000000,'f64'],
   ['filter_tau_us','滤波 µs',0,20000,'u32'],['max_gap_us','最大有效间隔 µs',500,100000,'u32'],
   ['max_turns_per_second','可信转速 圈/s',0.01,1000,'f64'],['activity_ticks','活动门槛 ticks',1,8191,'u16'],['activity_hold_us','活动保持 µs',0,1000000,'u32']
 ];

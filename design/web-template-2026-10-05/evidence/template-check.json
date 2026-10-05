@@ -1,0 +1,145 @@
+{
+  "scope": "Fixed template assembly only",
+  "date_local": "2026-10-05",
+  "same_preview_files": [
+    "index.html",
+    "style.css",
+    "preview.css",
+    "shell.js",
+    "assets/fluxrail-mascot-brand.png",
+    "assets/fluxrail-mascot-controller.png",
+    "assets/fluxrail-favicon.ico",
+    "assets/fluxrail-icon-180.png",
+    "assets/fluxrail-icon-192.png",
+    "assets/fluxrail-icon-32.png"
+  ],
+  "production_files_unchanged": 74,
+  "hardware_tested": false,
+  "compiled": false,
+  "production_web_tests_run": false,
+  "views": [
+    {
+      "width": 1274,
+      "module": "device-status",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "keyboard",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "lighting",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "hall",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "knobs",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "profiles",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "update",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "experimental",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "device-status",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "keyboard",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "lighting",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "hall",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "knobs",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "profiles",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "update",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "experimental",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "device-status",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "keyboard",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "lighting",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "hall",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "knobs",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "profiles",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "update",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 320,
+      "module": "experimental",
+      "horizontal_overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "production_modules_loaded": false,
+  "passed": true
+}

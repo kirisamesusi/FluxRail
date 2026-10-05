@@ -6,6 +6,8 @@ export class Device {
   constructor(client) { this.client=client; this.selected=null; this.ready=false; }
   async handshake() { this.hello=verifyHello(await this.client.request('hello')); await this.refresh(); }
   async refresh(selected=this.selected) {
+    // A partial/failed readback must never leave the previous writable state active.
+    this.ready=false;
     const status=await this.client.request('get_status');const revision=this.client.revision;
     assert(status.config_ready && !status.applying && status.maintenance==='idle','设备仍在应用/维护，请稍后读回');
     let meta=null, profiles=[], profile;

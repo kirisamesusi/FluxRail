@@ -1,0 +1,30 @@
+[
+  {
+    "path": "web/src/gain-control.js",
+    "sha256": "48e6e6e6726dad9a0f0f4acd457f284931e6bb9cf9a03b7cb05a5aa33e4d50a2"
+  },
+  {
+    "path": "web/tests/sensitivity.test.mjs",
+    "sha256": "92ca9ded6b9061512e398d4b30ec93c3df3516a34c8fe8808a4800bafe3e63ff"
+  },
+  {
+    "path": "docs/modules/05_Web配置工具.md",
+    "sha256": "70fc8646bcb763d30585b3f6e24261faf0bc88818e7393f369bce07c8774f24f"
+  },
+  {
+    "path": "docs/公共架构与配置契约.md",
+    "sha256": "c4cb4ab56af893ba5b46c3d939f3fb8e90644fc2802fcd08195a57595ed45aba"
+  },
+  {
+    "path": "web修改.md",
+    "sha256": "cca1e77a08bc0add89b64f82ba8349158511b02975756c535c1ea125bcdecfa8"
+  },
+  {
+    "path": "backups/README.md",
+    "sha256": "b2bab26b731298138d71b241d716a7971c93a20e0652ba20d13197751e002fbd"
+  },
+  {
+    "path": "docs/测试状态与待验收.md",
+    "sha256": "3e745636a8b131f286aab8972a6e42c0890f40309780956f1c04cbaeb4f4ad7c"
+  }
+]

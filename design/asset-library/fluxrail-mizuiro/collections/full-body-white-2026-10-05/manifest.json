@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "created_local_date": "2026-10-05",
+  "immutable": true,
+  "excludes": [
+    "manifest.json",
+    "evidence/"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1196,
+      "sha256": "169e2295d2970bb161ae38cefc735124b6e7ecce8ed018c37d67855e969e8bec"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1386,
+      "sha256": "73f88b8f7aab19b38f30162e3f4d7ee9f90255cabf42e01ea6f983e45fab6d61"
+    },
+    {
+      "path": "catalog.json",
+      "bytes": 1163,
+      "sha256": "6718f628a7ead581b64fd1f031e4e2e1a946b8c7880a57b74d7a2c4d55aa50b3"
+    },
+    {
+      "path": "generation-prompts.json",
+      "bytes": 6453,
+      "sha256": "0d8a7c7c05d254c86fe6ff7358c291322df6ebf09314b4942699e301339412c4"
+    },
+    {
+      "path": "images/controller-white-v2.png",
+      "bytes": 1419255,
+      "sha256": "5f59ec07a50a19fff6c438420fea23be4f6858c612e765ac8cce580b83ce5436"
+    },
+    {
+      "path": "images/standing-white-v2.png",
+      "bytes": 1347923,
+      "sha256": "8978919e12782e6443ac2f793067cd0a452bde715feb3f3a593dce22e9fb43f0"
+    },
+    {
+      "path": "images/waving-white-v2.png",
+      "bytes": 1442342,
+      "sha256": "4f5272ec8ad2b5f79ac07e583e9d6cbf99bee6eaaaadeb7316a11718d4bc5a21"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "scope": "Independent third-round shell",
+  "covered_comments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "production_files_unchanged": 74,
+  "hardware_tested": false,
+  "compiled": false,
+  "views": [
+    {
+      "width": 1440,
+      "module": "device-status",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "keyboard",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "lighting",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "hall",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "knobs",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "profiles",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "update",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "module": "experimental",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "device-status",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "keyboard",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "lighting",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "hall",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "knobs",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "profiles",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "update",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1274,
+      "module": "experimental",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "device-status",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "keyboard",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "lighting",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "hall",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "knobs",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "profiles",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "update",
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "module": "experimental",
+      "horizontal_overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "production_modules_loaded": false,
+  "passed": true
+}

@@ -1,0 +1,35 @@
+## test...origin/test
+ M README.md
+ M backups/README.md
+ M docs/README.md
+ M docs/modules/05_Web配置工具.md
+ M docs/tools/verify_docs.py
+ M docs/仓库结构与克隆开发.md
+ M docs/文档维护与归档.md
+ M docs/测试状态与待验收.md
+ M web/README.md
+ M web/index.html
+ M web/server.mjs
+ M web/style.css
+?? backups/web-before-mascot-2026-10-05/
+?? backups/web-before-production-refactor-2026-10-05/
+?? design/
+?? docs/Web重构交接_2026-10-05.md
+?? docs/视觉素材与角色规范.md
+?? web/assets/MASCOT.md
+?? web/assets/fluxrail-favicon.ico
+?? web/assets/fluxrail-icon-180.png
+?? web/assets/fluxrail-icon-192.png
+?? web/assets/fluxrail-icon-32.png
+?? web/assets/fluxrail-mascot-aqua.png
+?? web/assets/fluxrail-mascot-brand.png
+?? web/assets/fluxrail-mascot-controller-source.png
+?? web/assets/fluxrail-mascot-controller-theme-source.png
+?? web/assets/fluxrail-mascot-controller.png
+?? web/assets/fluxrail-mascot-icon-source.png
+?? web/assets/fluxrail-mascot-icon-theme-source.png
+?? web/assets/fluxrail-mascot-theme-source.png
+?? web/assets/mascot-generation.json
+?? web/tests/mascot-2026-10-05/
+?? web/tools/
+?? web修改.md

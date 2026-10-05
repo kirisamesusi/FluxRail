@@ -1,0 +1,1248 @@
+[
+  {
+    "scope": "web/index.html#notice",
+    "from": "连接设备后读取设置。编辑 → 应用到RAM → 保存到设备。",
+    "to": "连接设备读取设置。修改后先应用到设备；要在断电后保留，再保存到设备。",
+    "reason": "把三步操作说清楚，避免箭头式流程口号。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#status-panel",
+    "from": "设备状态与配置保存",
+    "to": "设备状态与保存情况",
+    "reason": "用日常说法替代配置汇报口吻。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#device-summary",
+    "from": "未连接设备。连接后读取当前配置与保存状态。",
+    "to": "还没有连接设备。连接后这里会显示设备当前设置和保存情况。",
+    "reason": "更像页面提示，说明连接后会看到什么。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#draft-state",
+    "from": "无网页草稿",
+    "to": "没有待应用的修改",
+    "reason": "避免把网页内部状态叫作草稿。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#save-state",
+    "from": "尚未读取保存状态",
+    "to": "连接设备后查看保存情况",
+    "reason": "说明当前状态为什么为空。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#profiles .section-heading p",
+    "from": "选择预设或自定义模板，确认后保存当前设置。",
+    "to": "选择一个模板开始编辑。确认保存后，设置会写入设备。",
+    "reason": "拆开选择和保存，避免误以为选模板就会保存。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#profiles .hint",
+    "from": "四个预设模板不可覆盖或重命名，点击预设会恢复默认设置。可以修改预设设置，应用后保存到设备；若要保留为自定义模板，请点击“保存到当前模板”并新建模板。自定义模板确认后可直接保存当前网页设置，无需先应用。新建模板不会自动切换活动模板。",
+    "to": "四个预设模板不能改名或覆盖。点选预设会恢复它的默认设置；之后可以继续修改并应用到设备。想另存为自定义模板，请点“保存到当前模板”，再输入新模板名称。自定义模板可直接保存网页中的设置。新建模板后，设备仍使用原来的活动模板；需要启用新模板时，请另外点“设为活动模板”。",
+    "reason": "说明预设恢复、另存、保存和启用是不同动作，删去绕口的重复表述。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#keyboard .section-heading p",
+    "from": "从菜单选择键盘或鼠标动作，也可监听键盘录入。",
+    "to": "为每个按键选择键盘或鼠标动作，也可以按下键盘来录入。",
+    "reason": "把“监听”换成用户能直接理解的操作。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#keyboard .layout-guide",
+    "from": "面板布局：上排左侧 BT8～BT5，右侧 BT4～BT1；下排 BT9 / BT10。P1 / P2 为旋钮按压，分别位于布局左上 / 右上。",
+    "to": "按键位置：上排左侧是 BT8～BT5，右侧是 BT4～BT1；下排是 BT9 和 BT10。左上、右上的 P1 / P2 是旋钮按键。",
+    "reason": "用位置说明帮助用户对照实物。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#keyboard .hint",
+    "from": "允许重复映射。监听时 Esc 取消；Esc 键可从菜单选择。重复键按下会重触发，可能短暂中断原有长按。",
+    "to": "多个按键可以设成同一个动作。录入时按 Esc 可取消，也可以从菜单选择 Esc。相同键位再次按下会重新触发，可能打断正在持续的长按。",
+    "reason": "保留重复触发限制，改成直白说明。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#lighting .hint",
+    "from": "亮度 100 对应实际最高 50%。逐键配色与模式灯在实验性功能中。",
+    "to": "滑块设为 100 时，设备亮度最高为 50%。单独设置每颗按键的颜色和模式灯，请展开“实验性功能”。",
+    "reason": "说明数值对应的实际亮度，并指明入口。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#hall .section-heading p",
+    "from": "配置滑轨输入开关、输出方向和中心倍率。",
+    "to": "设置滑轨开关、输出方向和中心倍率。滑块停在哪，输出位置就对应到哪。",
+    "reason": "说明滑轨输出是绝对位置，避免与旋钮增量混淆。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#hall .hint",
+    "from": "中心倍率大于 1 提前裁边，小于 1 只覆盖中央；详细范围、校准与基准测试在实验性功能中。",
+    "to": "中心倍率大于 1 时，滑轨两端会更早到达输出边界；小于 1 时，输出只覆盖中央一段。校准和其他参数可在“实验性功能”中查看。",
+    "reason": "把倍率效果说清楚，去掉“基准测试”这类开发术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#knobs .section-heading p",
+    "from": "模拟旋转，观察当前位置、累计圈数和输出方向；修改输出轴、方向及倍率。",
+    "to": "转动圆盘可预览方向和倍率效果；下方可设置输出轴、方向和倍率。旋钮按转动增量输出。",
+    "reason": "区分本地预览和设备输入，并保留相对增量语义。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#knobs .hint",
+    "from": "本地模拟用于预览倍率与方向；实际设备旋钮状态位于输入测试模块。U4 / FPC1、U5 / FPC2 对应旋钮小板，左右位置需根据实际装配确认。输出范围、PUSH 过滤与来源接管在实验性功能中。",
+    "to": "这里的圆盘只用于预览倍率和方向，不会驱动设备。连接设备后，可在“输入测试”查看旋钮的实际读数。U4 / FPC1 和 U5 / FPC2 是两块旋钮小板的接口标记；左右对应关系请按实际装配确认。其他旋钮参数在“实验性功能”中。",
+    "reason": "先说明预览边界，再给出真实读数入口，减少接口缩写和抽象术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#diagnostics .section-heading p",
+    "from": "查看物理按键、旋钮按压与设备旋钮状态；修改绑定请使用按键映射模块。",
+    "to": "按住设备按键或旋钮按键，查看设备读到的状态。修改按键动作请到“按键映射”。",
+    "reason": "改成具体操作和导航指引。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#diagnostic-summary",
+    "from": "等待连接。状态快照约 2Hz，无法判断毫秒级漏采；PUSH 以设备能力为准。",
+    "to": "连接设备后查看按键状态。页面约每半秒读取一次，快速点按可能看不到；P1 / P2 是否可读取取决于设备硬件。",
+    "reason": "用户操作优先，同时保留观察限制。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#update .section-heading p",
+    "from": "检查 UF2 文件，进入下载模式并手动复制，重连后核对版本。",
+    "to": "选择 UF2 文件检查版本。更新时需手动进入下载盘并复制文件，完成后重新连接确认版本。",
+    "reason": "清楚说明更新需要手动复制文件。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-cap",
+    "from": "选择 UF2 后自动识别 FluxRail 固件与板型，并对比设备当前版本。",
+    "to": "选择 UF2 文件后，页面会检查固件和板型，并与已连接设备的版本比较。检查不会开始更新。",
+    "reason": "说明检查范围和不会刷写设备。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#experimental summary p",
+    "from": "调整进阶参数、管理配置文件，查看运动状态与恢复说明。",
+    "to": "设置更多参数、导入或导出配置，并查看设备状态和恢复方法。",
+    "reason": "避免抽象的“进阶”功能介绍。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#demo hint",
+    "from": "演示使用隔离模拟端口，不代表实板验证。",
+    "to": "演示只在页面中模拟设备，不会连接或测试真实硬件。",
+    "reason": "明确演示的边界。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#import hint",
+    "from": "完整快照包含全部模板和全局机械校准；导入前核对设备及安装信息。",
+    "to": "配置文件包含所有模板和滑轨校准。导入前请确认文件来自合适的设备；不同安装的校准可能不适用。",
+    "reason": "去掉“完整快照”等实现名词，说明导入风险。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#import-preview",
+    "from": "支持 schema1 / schema2 完整配置，包含全部模板与共享校准；选择文件后查看导入预览。",
+    "to": "选择配置文件后，先核对将导入的模板、启动身份和校准信息。",
+    "reason": "隐藏schema名词，突出用户需要核对的内容。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#advanced-binding-fields .hint",
+    "from": "手填按 US 布局，大写 / Shift 符号附加 Shift；主机布局、Caps Lock、输入法可能改变文字。鼠标中键指滚轮按压。",
+    "to": "字符按美式键盘布局录入。大写字母和需要 Shift 的符号会同时发送 Shift；电脑键盘布局、大小写状态和输入法可能影响最终显示。鼠标中键指按下滚轮。",
+    "reason": "把HID和主机布局影响解释成用户看到的结果。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/app.js#notice initial",
+    "from": "连接设备后读取设置。编辑 → 应用到RAM → 保存到设备。",
+    "to": "连接设备读取设置。修改后先应用到设备；要在断电后保留，再保存到设备。",
+    "reason": "与页面初始提示保持一致。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#keyboard-listening",
+    "from": "正在录入按键：按下目标键；Esc 取消，切换焦点退出。长按重复输入将被忽略。",
+    "to": "请按下要录入的键。按 Esc 取消，移开焦点退出；按住不放只会录入一次。",
+    "reason": "直接告诉用户下一步要做什么。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#advanced-character",
+    "from": "字符已录入网页草稿，应用后生效",
+    "to": "字符已填入页面，应用后会发送到设备",
+    "reason": "替换“网页草稿”内部用语，并说明应用时机。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#brightness-text",
+    "from": "当前 {brightness_level} → 实际最高 {brightness_level/2}%",
+    "to": "当前亮度 {brightness_level}；设备最高亮度为 {brightness_level/2}%",
+    "reason": "用分号解释滑块值与设备上限的关系。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/app.js#knob-advanced",
+    "from": "旋钮 {n} · 进阶参数",
+    "to": "旋钮 {n} · 更多设置",
+    "reason": "改用自然的导航名称。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/app.js#input-test.waiting",
+    "from": "等待连接",
+    "to": "等待设备状态",
+    "reason": "明确等待的是状态信息。",
+    "matches_in_preview": 24
+  },
+  {
+    "scope": "web/src/app.js#input-test.state",
+    "from": "设备：按下 / 设备：松开 / 硬件未接入",
+    "to": "按下 / 松开 / 此按键没有连接硬件",
+    "reason": "删去重复的“设备”前缀，避免把未接硬件显示成程序未实现。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#diagnostic-summary.connected",
+    "from": "已连接 · 物理状态约 2Hz 读回，无法判断毫秒级漏采。PUSH以设备读回为准。",
+    "to": "已连接。页面约每半秒读取一次按键状态，快速点按可能看不到；P1 / P2 按键状态以设备读数为准。",
+    "reason": "保留读取频率带来的限制，改用用户能理解的时间单位。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#draft-state",
+    "from": "网页草稿未应用",
+    "to": "页面修改尚未应用",
+    "reason": "减少内部术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#draft-state",
+    "from": "网页与已读模板一致",
+    "to": "页面设置与设备读回一致",
+    "reason": "说明比较的是页面与设备读数。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#draft-state",
+    "from": "设备版本已变化：必须读回",
+    "to": "设备设置已变化，请重新读取",
+    "reason": "去掉含义不明的“版本”。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#save-state",
+    "from": "设备设置尚未保存 / 设备快照已保存",
+    "to": "设备有尚未保存的修改 / 当前设置已保存",
+    "reason": "使用“设置”而不是“快照”描述保存内容。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#disconnect",
+    "from": "存在未应用或未保存变化；断开不保存。",
+    "to": "还有修改没有应用或保存。断开后，这些修改不会自动保存。",
+    "reason": "完整说明断开连接的结果。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#disconnect.success",
+    "from": "已断开；设备RAM变化未自动保存，重连会重新读回。",
+    "to": "已断开。设备中的修改没有自动保存；重新连接后会重新读取设置。",
+    "reason": "移除RAM术语，说明断开和重连后的行为。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#refresh.success",
+    "from": "已读回设备；网页草稿已舍弃。设备RAM未保存变化仍保留。",
+    "to": "已重新读取设备设置。页面中未应用的修改已清除；设备上尚未保存的设置仍保留。",
+    "reason": "明确读回会丢弃页面修改，但不会撤销设备上的修改。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#apply.success",
+    "from": "设置已应用并读回。当前配置仅存于设备 RAM；需要掉电保留时，请点击“保存到设备”。",
+    "to": "设置已应用到设备，并已重新读取确认。断电后仍要保留这些设置，请再点“保存到设备”。",
+    "reason": "保留应用与掉电保存的区别，删去实现用语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#save.confirm",
+    "from": "确认保存设备当前已应用的完整配置？网页草稿需先应用。预设中的运行设置可以保存；再次点击预设仍会恢复其默认设置。",
+    "to": "要保存设备当前已应用的全部设置吗？请先应用页面中的修改。保存预设的修改后，再次点选该预设仍会恢复默认设置。",
+    "reason": "说明保存范围，以及再次点预设会恢复默认值。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#save.pending",
+    "from": "正在保存配置，请等待设备完成。保存期间输入采集将暂停。",
+    "to": "正在保存设置，请稍候。保存期间设备会暂时停止读取输入。",
+    "reason": "将协议式状态改成简洁等待提示，同时说明实际影响。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#save.success",
+    "from": "设备已完成保存，保存状态已读回。",
+    "to": "设置已保存，并已从设备重新确认。",
+    "reason": "避免“保存状态已读回”的汇报语气。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#template.select.preset",
+    "from": "已恢复并读取预设默认设置；活动模板未切换。",
+    "to": "已恢复并读取预设的默认设置。设备仍使用原来的活动模板。",
+    "reason": "明确预设被恢复，但不会自动启用。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#template.select.custom",
+    "from": "已读取自定义模板；活动模板未切换。",
+    "to": "已读取自定义模板。设备仍使用原来的活动模板；要启用它，请点“设为活动模板”。",
+    "reason": "说明选择模板不会自动启用。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#template.save",
+    "from": "当前设置已保存到自定义模板，设备保存状态已读回。",
+    "to": "当前设置已另存为自定义模板，并已写入设备。",
+    "reason": "突出这是新模板，并简化保存回执。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#template.create",
+    "from": "已新建并保存当前设置；活动模板未切换。",
+    "to": "已新建模板并保存到设备。设备仍使用原来的活动模板。",
+    "reason": "明确保存与启用是两件事。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#template.activate",
+    "from": "活动模板已切换；需要掉电保留时，请保存到设备。",
+    "to": "设备现在使用这个模板。断电后仍要使用它，请再保存到设备。",
+    "reason": "用直接说法区分启用和持久保存。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#template.restore",
+    "from": "预设默认设置已恢复；需要掉电保留时，请保存到设备。",
+    "to": "预设的默认设置已恢复。断电后要保留当前设置，请再保存到设备。",
+    "reason": "说明恢复预设和保存不是同一个动作。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#select.confirm",
+    "from": "当前网页草稿尚未应用。确认后将舍弃草稿并读取所选模板；预设模板会恢复默认设置。",
+    "to": "页面中还有修改没有应用。切换后这些修改会被清除，并读取所选模板。点选预设还会恢复它的默认设置。",
+    "reason": "拆成清楚的后果说明。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#preset-save.confirm",
+    "from": "预设模板不能覆盖。请输入自定义模板名称，将当前设置保存到新模板中。保存会写入设备的完整配置，包括其他已应用的设置。",
+    "to": "预设模板不能覆盖。请输入名称，把当前设置另存为一个自定义模板。保存时，设备上其他已应用的设置也会一起写入。",
+    "reason": "保留预设保护和保存范围，语气更自然。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#create.confirm",
+    "from": "复制当前设置（包括网页草稿）并保存到新模板。活动模板保持不变。保存会写入设备的完整配置，包括其他已应用的设置。",
+    "to": "把当前设置（包括页面中尚未应用的修改）另存为新模板。设备仍使用原来的活动模板。保存时，其他已应用的设置也会一起写入设备。",
+    "reason": "解释页面修改和活动模板状态，去掉“完整配置”术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#activate.confirm",
+    "from": "确认让设备使用模板“{name}”？若需要掉电后继续使用，请再保存到设备。",
+    "to": "要让设备改用“{name}”吗？断电后仍要使用这个模板，请再保存到设备。",
+    "reason": "更直接地询问用户，并保留需另行保存的提醒。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#persistence",
+    "from": "保存会写入设备的完整配置，包括其他已应用的设置。",
+    "to": "保存时，设备上其他已应用的设置也会一起写入。",
+    "reason": "避免“完整配置”这种实现口吻，保留保存范围。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/knob-preview.js#badge",
+    "from": "本地模拟 · 不发送设备输入",
+    "to": "页面预览 · 不会驱动设备",
+    "reason": "准确说明圆盘的用途。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/knob-preview.js#legend",
+    "from": "外圈圆点：模拟旋钮位置；内箭头：倍率后的旋转。",
+    "to": "外圈圆点表示模拟转动位置；内箭头表示按当前倍率换算后的方向和位置。",
+    "reason": "让图形说明能独立读懂。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/knob-preview.js#instructions",
+    "from": "拖动圆盘或滚轮旋转；聚焦圆盘后用方向键，Home 复位。累计圈数范围 ±1000。",
+    "to": "拖动圆盘、滚动鼠标滚轮或使用方向键来转动预览；按 Home 复位。这里显示累计圈数，最多 ±1000 圈。",
+    "reason": "按用户操作顺序说明控件用法。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/knob-preview.js#direction",
+    "from": "模拟输出轴 {axis} · {direction}输入",
+    "to": "预览输出轴 {axis} · {direction}转动",
+    "reason": "明确这是页面预览，不会产生设备输入。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/knob-preview.js#settings.loaded",
+    "from": "使用网页设置：倍率 {gain}，{direction}。真实设备圈数另见遥测圆盘。",
+    "to": "预览使用页面中的倍率 {gain} 和{direction}方向。连接设备后，在“输入测试”查看实际圈数。",
+    "reason": "删去遥测术语，给出实际读数入口。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/knob-preview.js#settings.empty",
+    "from": "未读取设备配置：示意使用倍率 1、正向；默认轴仅用于本地预览。",
+    "to": "还没有读取设备设置。当前预览使用倍率 1、正向；输出轴只用于演示。",
+    "reason": "把等待状态和默认预览值说清楚。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/integration.js#intro",
+    "from": "查看滑轨与旋钮的设备状态，建立所有模板共用的滑轨校准。填写实测端点、确认磁铁已移开后开始；采用结果后需保存到设备。",
+    "to": "这里显示设备读取到的滑轨和旋钮状态。滑轨校准会供所有模板共用：填写实测左右端点，移开磁铁后开始采集。采用校准结果后，还要保存到设备才能在断电后保留。",
+    "reason": "解释校准影响范围和操作顺序，去掉“建立”式抽象表达。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/integration.js#calibration-availability",
+    "from": "连接支持共享校准的设备后可使用以下操作。",
+    "to": "连接设备后，可在这里查看校准操作是否可用。",
+    "reason": "改成面向当前页面的等待说明。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/integration.js#calibration-commands.success",
+    "from": "设备已确认校准命令。等待实际采样阶段，合格结果需显式保存。",
+    "to": "设备已接受这一步。请按当前提示继续采集；完成并采用结果后，再保存到设备。",
+    "reason": "说明下一步，去掉“实际采样阶段”“显式保存”等工程表达。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/integration.js#calibration.summary",
+    "from": "校准需空场、H1/H2/H3参考、7～17个含端点与交接的实测标签，然后全轨扫描。失败/取消保留旧记录。诊断轮询不证明采样无丢失。",
+    "to": "校准时先移开磁铁，再依次采集 H1、H2、H3，并填写 7～17 个实测位置（包括两端和传感器交接处），最后沿全轨移动滑块。取消或校准失败会保留上次结果。",
+    "reason": "保留实际校准要求和失败保护，删去测试报告语气。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/integration.js#telemetry-hint",
+    "from": "连接支持运动遥测的设备后，显示实际累计圈数、输出方向与 PUSH 状态。本地旋转预览位于旋钮设置模块。",
+    "to": "连接设备后，这里会显示旋钮实际转过的圈数、输出方向和按压状态。页面预览在“旋钮设置”中，不会驱动设备。",
+    "reason": "避免遥测、PUSH等术语，说明数据来源和本地预览边界。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/integration.js#telemetry-note",
+    "from": "外圈点：物理累计圈数；内箭头：设备倍率后圈数。快照约10Hz，不向设备发送运动。",
+    "to": "外圈圆点表示旋钮实际转动圈数；内箭头表示设备按倍率换算后的圈数。页面约每秒更新十次，快速转动时读数可能跳过中间位置。",
+    "reason": "把更新频率转成易懂时间，并清楚说明读数限制。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/integration.js#telemetry.waiting",
+    "from": "等待当前设备的真实遥测 / 等待当前设备的真实圈数 / 等待整合固件真实圈数",
+    "to": "连接设备后显示实际状态 / 连接设备后显示实际圈数",
+    "reason": "减少内部术语，让等待状态面向用户。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/integration.js#bootloader.success",
+    "from": "设备准备进入ROM下载模式；需手动复制FluxRail UF2，并重新连接确认版本。",
+    "to": "设备将进入下载模式。请把正确的 FluxRail UF2 文件复制到出现的磁盘中，然后重新连接并核对版本。",
+    "reason": "保留手动复制和重连核对步骤，去掉ROM术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/integration.js#mode-controls",
+    "from": "身份修改不立即切换USB；先应用、保存，再冷重启。IO4返回普通：按住BT10（GP9）复位/上电。BOOTSEL保留为ROM恢复入口。",
+    "to": "更改启动身份后不会马上切换。请先应用、保存，再重启设备。要从 IO4 返回普通模式，按住 BT10 后复位或重新上电。BOOTSEL 用于进入板载恢复模式。",
+    "reason": "保留步骤和 BT10 恢复方法，删去冷重启、ROM等术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/io4-editor.js#intro",
+    "from": "在普通模式下连接设备，为当前模板设置十二路 IO4 按键功能。修改后应用到 RAM，再设为活动模板并保存。切换到 IO4 后使用这组映射；普通键位单独保留。",
+    "to": "在普通模式下连接设备，为当前模板设置 12 个 IO4 按键功能。修改后先应用，再把模板设为活动模板并保存。切换到 IO4 后会使用这组功能；普通模式的按键设置会保留。",
+    "reason": "按操作顺序说明，保留普通键位单独保存这一点。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/io4-editor.js#apply.success",
+    "from": "IO4映射已由设备确认并读回。请启用需要的模板并保存，再切换IO4。",
+    "to": "IO4 按键设置已应用到设备。请把此模板设为活动模板并保存，再切换到 IO4。",
+    "reason": "去掉“确认并读回”汇报语气，明确启用和保存步骤。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#activate.success",
+    "from": "该模板已成为活动模板，IO4会使用它的功能表。请保存到设备。",
+    "to": "设备现在使用这个模板，切换到 IO4 后会采用其中的按键设置。断电后仍要保留，请保存到设备。",
+    "reason": "把活动模板效果和保存提醒说清楚。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#save.success",
+    "from": "设备已确认完整配置保存。现在可切换到IO4身份。",
+    "to": "设置已保存。现在可以切换到 IO4；要返回普通模式，请按住 BT10 后复位或重新上电。",
+    "reason": "删去“完整配置”术语，并补充返回路径。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#refresh.success",
+    "from": "IO4映射已从设备读回，未应用选择已舍弃。",
+    "to": "已重新读取 IO4 按键设置。页面里未应用的修改已清除。",
+    "reason": "直说读回会清除未应用修改。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#draft-status",
+    "from": "IO4 网页草稿：{count} 路修改尚未应用，切换模式前先应用。",
+    "to": "有 {count} 个 IO4 按键修改尚未应用。切换模式前请先应用。",
+    "reason": "移除内部用语并简化句子。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#clean-status",
+    "from": "IO4映射与设备RAM读回一致；掉电保留需要保存。",
+    "to": "IO4 按键设置与设备一致。断电后要保留修改，请保存到设备。",
+    "reason": "把RAM和掉电保存换成用户熟悉的说法。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#waiting-status",
+    "from": "请连接整合固件并读回模板；IO4映射功能在普通USB模式下编辑。",
+    "to": "请在普通模式下连接设备并读取模板，再编辑 IO4 按键功能。",
+    "reason": "删去“整合固件”内部称呼。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#stale-status",
+    "from": "设备revision已变化，旧草稿禁止写入；请读回映射后重新编辑。",
+    "to": "设备设置已经变化。请重新读取 IO4 按键设置后再编辑。",
+    "reason": "用可理解的原因和下一步替代revision术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#ordinary-draft-status",
+    "from": "普通设置还有网页草稿，请先应用或读回，再编辑IO4映射。",
+    "to": "页面中还有普通设置没有应用。请先应用或重新读取，再编辑 IO4 按键功能。",
+    "reason": "避免两个内部术语连用。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/io4-editor.js#disconnected-status",
+    "from": "设备已断开，映射仅供查看；重连读回后才能应用。",
+    "to": "设备已断开。当前设置只能查看；重新连接并读取后才能应用。",
+    "reason": "更自然地说明断连状态。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/update/controller.js#file-pending",
+    "from": "正在读取UF2识别头与版本…",
+    "to": "正在检查 UF2 文件…",
+    "reason": "移除用户无需了解的文件结构名词。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/update/controller.js#file-empty",
+    "from": "选择本项目正式FluxRail UF2，自动读取版本。",
+    "to": "选择适用于本设备的 FluxRail UF2 文件。",
+    "reason": "简化等待提示，避免“正式”引起误解。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/update/controller.js#file-result",
+    "from": "FluxRail固件识别通过 · 版本 {version}\n板型 {board}\n{blocks}块 / {payload_bytes}字节",
+    "to": "FluxRail 固件 · 版本 {version}\n适用板型：{board}\n文件大小：{payload_bytes} 字节",
+    "reason": "保留用户核对所需的信息，去掉分块实现细节和“通过”式验收口吻。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/update/controller.js#current-version",
+    "from": "模拟固件版本：{version}（仅模拟） / 当前固件版本：{version}（FluxRail识别通过 / 旧固件未提供识别头 / 固件身份不匹配）",
+    "to": "预览中的固件版本：{version}（模拟数据） / 已连接设备的固件版本：{version}（身份已核对 / 设备未提供身份信息 / 设备身份与 FluxRail 不符）",
+    "reason": "明确模拟与实机状态，隐藏识别头名词。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/update/controller.js#file-compare-empty",
+    "from": "选择UF2后自动识别固件并比较版本。",
+    "to": "选择 UF2 文件后，页面会检查固件并比较版本。",
+    "reason": "缩短等待提示。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/update/controller.js#file-not-flashed",
+    "from": "{assessment} 文件检查不会刷写设备。",
+    "to": "{assessment} 这里只检查文件，不会更新设备。",
+    "reason": "用用户熟悉的说法说明文件检查的边界。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/confirmation.js#busy-dialog",
+    "from": "请先处理当前确认窗口",
+    "to": "请先完成或关闭当前确认窗口",
+    "reason": "说明用户可以采取的动作。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#persistence.shared",
+    "from": "保存会写入设备的完整配置，包括其他已应用的设置。",
+    "to": "保存时，设备上其他已应用的设置也会一起写入。",
+    "reason": "用自然说法解释保存范围。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#rename-confirm",
+    "from": "确认将“{currentName}”重命名为“{name}”？保存会写入设备的完整配置，包括其他已应用的设置。",
+    "to": "要把“{currentName}”改名为“{name}”吗？保存时，其他已应用的设置也会一起写入设备。",
+    "reason": "改成清晰的确认问题。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#delete-confirm",
+    "from": "确认删除模板“{currentName}”？删除后无法通过页面撤销。保存会写入设备的完整配置，包括其他已应用的设置。",
+    "to": "要删除自定义模板“{currentName}”吗？删除后无法在页面恢复。保存时，其他已应用的设置也会一起写入设备。",
+    "reason": "说明删除后果，不用“通过页面撤销”的生硬措辞。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#restore-confirm",
+    "from": "确认恢复“{currentName}”的默认设置？当前模板的网页草稿和设备中的修改将被替换；其他模板保持不变。",
+    "to": "要恢复“{currentName}”的默认设置吗？当前模板中尚未应用的页面修改和设备上的修改都会被替换，其他模板不受影响。",
+    "reason": "把哪些内容会被替换说清楚。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/template-actions.js#active-confirm",
+    "from": "确认让设备使用模板“{currentName}”？若需要掉电后继续使用，请再保存到设备。",
+    "to": "要让设备改用“{currentName}”吗？断电后仍要使用这个模板，请再保存到设备。",
+    "reason": "自然地提示启用和保存是两步。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#export.success",
+    "from": "已导出设备完整快照与身份；未执行Flash保存。",
+    "to": "设备设置文件已导出。导出不会改动设备或保存设置。",
+    "reason": "去掉快照和Flash术语，说明导出行为。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#import-preview",
+    "from": "拟导入 {count} 个模板，活动ID {id}，启动身份 {mode}\n{profiles}\n全局校准 {calibration}。文件设备 {fileSerial}；当前设备 {deviceSerial}。\n跨安装校准可能不适用。网页仅检查结构/字段/范围，固件commit执行完整曲线语义检查。将替换全部RAM配置，未自动保存；确认这些拟变更后点击导入。",
+    "to": "将导入 {count} 个模板。导入后活动模板为 {id}，启动身份为 {mode}。\n{profiles}\n滑轨校准：{calibration}。文件中的设备序号：{fileSerial}；当前设备序号：{deviceSerial}。\n不同设备或安装的滑轨校准可能不适用。确认后，设备当前设置会被这份文件替换；导入不会自动保存。请检查以上内容，再点“导入”。",
+    "reason": "将检查边界、覆盖范围和保存动作说清楚，去掉commit、RAM和曲线检查术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#import-check.success",
+    "from": "配置文件检查完成，请查看导入预览。",
+    "to": "文件已读入，请检查将要导入的内容。",
+    "reason": "精简机器式状态回执。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#import.success",
+    "from": "固件校验并确认完整导入，RAM读回完成。需要掉电保留时再保存。",
+    "to": "设备已检查并载入文件中的设置。断电后仍要保留，请再保存到设备。",
+    "reason": "不用校验流程名词，保留导入与保存的区别。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#record-state",
+    "from": "{count}/600条 · 已移除最早记录 {dropped} 条；主机轮询快照",
+    "to": "已记录 {count} 条状态；最多保留 600 条，较早的 {dropped} 条已移除。",
+    "reason": "解释记录上限，不暴露轮询实现术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#connection.demo",
+    "from": "模拟会话已连接。全部结果仅用于界面/协议软件演示。",
+    "to": "模拟演示已开始。页面显示的是模拟数据，不代表设备或硬件测试结果。",
+    "reason": "保留演示与实测的区别，删去协议术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#connection.real",
+    "from": "已完成能力握手和配置读回。编辑只形成网页草稿。",
+    "to": "已连接并读取设备设置。页面中的修改还没有应用到设备。",
+    "reason": "去掉握手和草稿等内部术语。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#action.error",
+    "from": "{error}。配置/保存出错需读回核对结果。",
+    "to": "{error}。请重新读取设备设置，确认当前状态后再继续。",
+    "reason": "把出错后的安全操作说清楚。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#header-title",
+    "from": "管理模板与输入参数，查看设备状态。",
+    "to": "设置模板和输入方式，查看设备当前状态。",
+    "reason": "用用户要完成的事情介绍页面。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#header-tag",
+    "from": "配置以设备读回结果为准",
+    "to": "显示的是设备当前设置",
+    "reason": "去掉“读回结果”这一实现说法。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#apply-button",
+    "from": "应用编辑到RAM",
+    "to": "应用设置",
+    "reason": "按钮直接说明动作，移除RAM术语；相关说明统一称“应用设置”。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#workflow-step",
+    "from": "修改后应用到 RAM",
+    "to": "修改后应用到设备",
+    "reason": "和按钮名称一致，说明设置应用到设备。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#footer",
+    "from": "修改 → 应用到 RAM → 保存到设备",
+    "to": "修改后应用到设备；需要断电保留时，再保存到设备。",
+    "reason": "说明应用和保存的区别，去掉箭头流程口号。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#test-guide.action",
+    "from": "长按设备按键 → 显示按下状态",
+    "to": "按住设备上的按键，页面会显示“按下”状态。",
+    "reason": "按实际操作提示用户，避免把两段文本节点合并替换。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#test-guide.limit",
+    "from": "短按可能落在两次快照之间；网页不据此判断漏采。",
+    "to": "状态每半秒读取一次，快速点按可能看不到。",
+    "reason": "按单独文本节点匹配，保留快照限制并删去测试报告语气。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-step1.description",
+    "from": "更新前应用并保存需要保留的配置。",
+    "to": "先应用并保存要保留的设置。",
+    "reason": "按实际动作说明更新前准备。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-step2.description",
+    "from": "按住 SW2 / BOOT 插入 USB 后松开。出现 RPI-RP2 盘后复制正确的新板 UF2。",
+    "to": "按住 SW2 / BOOT 后接入 USB，再松开按键。出现 RPI-RP2 磁盘后，把适用于本设备的 UF2 文件复制进去。",
+    "reason": "按页面真实步骤分节点替换，保留手动复制固件和板型限制。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-step3.description",
+    "from": "核对设备身份与版本，再做实板功能验证。",
+    "to": "重新连接后核对设备和固件版本，再在设备和目标程序中逐项检查功能。",
+    "reason": "按单独步骤文本匹配；强调实际检查，不把网页预览写成硬件验收。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#import-button",
+    "from": "导入预览到RAM",
+    "to": "导入配置",
+    "reason": "按钮说明接下来要导入什么，移除RAM术语；导入说明同步使用此名称。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#import-preview",
+    "from": "选择配置文件后，查看将要导入的内容。导入会替换设备当前配置，包括全部模板和滑轨校准；保存后才能在断电后保留。",
+    "to": "选择配置文件后，先检查将要导入的内容。确认后点“导入配置”，设备当前设置会被文件替换，包括全部模板和滑轨校准。导入后还需保存，断电后才能保留。",
+    "reason": "说明导入会覆盖什么、如何确认及何时保存。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#profiles-summary",
+    "from": "4 个预设 · 最多 8 个自定义",
+    "to": "4 个预设 · 最多可另存 8 个模板",
+    "reason": "说明容量是另存模板的数量。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/app.js#template-capacity",
+    "from": "{count} / {max} 个模板",
+    "to": "已保存 {count} / {max} 个模板",
+    "reason": "让容量计数的含义更明确。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#profile-capacity-static",
+    "from": "4 个预置 + 自定义",
+    "to": "4 个预设 · 最多可另存 8 个模板",
+    "reason": "把实际总数限制写明。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#keyboard-waiting",
+    "from": "连接设备后读取十二路键位，或在实验性功能中打开模拟演示。",
+    "to": "连接设备后读取 12 个按键设置。",
+    "reason": "当前空壳仅展示文案，避免暗示模拟器可用。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#input-test-waiting",
+    "from": "等待连接",
+    "to": "等待设备状态",
+    "reason": "说明等待的是设备按键状态。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/app.js#input-test-unavailable",
+    "from": "硬件未接入",
+    "to": "此按键没有连接硬件",
+    "reason": "避免用户把硬件限制误解为软件功能未完成。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#slider-major-description",
+    "from": "配置滑轨输入开关、输出方向和中心倍率。",
+    "to": "设置滑轨开关、输出方向和中心倍率。滑块停在哪，输出位置就对应到哪。",
+    "reason": "说明滑轨输出位置跟随滑块位置，避免“可用行程”被理解为机械调节。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#slider-gain-help",
+    "from": "中心倍率大于 1 提前裁边，小于 1 只覆盖中央；详细范围、校准与基准测试在实验性功能中。",
+    "to": "中心倍率大于 1 时，滑轨两端会更早到达输出边界；小于 1 时，输出只覆盖中央一段。校准和其他参数可在“实验性功能”中查看。",
+    "reason": "修正小于 1 的含义：完整物理行程仍可移动，映射后的输出只覆盖中央区域。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#knob-legend",
+    "from": "外圈圆点：模拟旋钮位置；内箭头：倍率后的旋转。",
+    "to": "外圈圆点表示模拟转动位置；内箭头表示按当前倍率换算后的方向和位置。",
+    "reason": "图示说明写成完整易懂的句子。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#knob-preview-direction",
+    "from": "— 模拟输出轴 X · 未旋转 · 来源关闭，仅显示倍率效果",
+    "to": "预览输出轴 X · 尚未转动",
+    "reason": "移除后台路由状态术语；默认预览不表示设备活动状态。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#knob-preview-direction",
+    "from": "— 模拟输出轴 Y · 未旋转 · 来源关闭，仅显示倍率效果",
+    "to": "预览输出轴 Y · 尚未转动",
+    "reason": "移除后台路由状态术语；默认预览不表示设备活动状态。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#knob-settings-status",
+    "from": "使用网页设置：倍率 1，正向。真实设备圈数另见遥测圆盘。",
+    "to": "预览使用页面中的倍率 1 和正向设置。连接设备后，在“输入测试”查看实际圈数。",
+    "reason": "去掉遥测名词，指明实机读数位置。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#diagnostics-guide",
+    "from": "长按设备按键 → 显示按下状态",
+    "to": "按住设备上的按键，页面会显示“按下”状态。",
+    "reason": "短按提示和操作提示是两个独立文本节点，分别替换。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#diagnostics-hint",
+    "from": "短按可能落在两次快照之间；网页不据此判断漏采。",
+    "to": "状态每半秒读取一次，快速点按可能看不到。",
+    "reason": "短按限制按实际读取间隔说明。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#update-step1",
+    "from": "更新前应用并保存需要保留的配置。",
+    "to": "先应用并保存要保留的设置。",
+    "reason": "更新前提醒直接说明要做的操作。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#update-step2",
+    "from": "按住 SW2 / BOOT 插入 USB 后松开。出现 RPI-RP2 盘后复制正确的新板 UF2。",
+    "to": "按住 SW2 / BOOT 后接入 USB，再松开按键。出现 RPI-RP2 磁盘后，把适用于本设备的 UF2 文件复制进去。",
+    "reason": "保留手动复制要求，避免把多个节点作为一整句替换。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#update-step3",
+    "from": "核对设备身份与版本，再做实板功能验证。",
+    "to": "重新连接后核对设备和固件版本，再在设备和目标程序中逐项检查功能。",
+    "reason": "去掉验收汇报口吻，提醒仍需实际检查。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#advanced-title",
+    "from": "连接 · 模拟与设备信息",
+    "to": "设备 · 演示与信息",
+    "reason": "避免把“模拟”作为产品功能标题。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#advanced-demo",
+    "from": "演示使用隔离模拟端口，不代表实板验证。",
+    "to": "演示只在页面中显示模拟数据，不会连接或测试真实设备。",
+    "reason": "清楚说明演示不等于硬件测试。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#advanced-profile-title",
+    "from": "模板 · 配置文件导入导出",
+    "to": "模板 · 备份和导入",
+    "reason": "用用户熟悉的备份操作命名。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#advanced-profile-help",
+    "from": "完整快照包含全部模板和全局机械校准；导入前核对设备及安装信息。",
+    "to": "导出的文件包含所有模板和滑轨校准。导入前请确认文件来自合适的设备；不同安装的校准可能不适用。",
+    "reason": "去掉完整快照和全局机械校准术语，说明需要核对的内容。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#advanced-profile-preview",
+    "from": "支持 schema1 / schema2 完整配置，包含全部模板与共享校准；选择文件后查看导入预览。",
+    "to": "选择配置文件后，先检查将要导入的模板、活动模板、启动身份和校准信息。",
+    "reason": "隐藏schema名词，突出导入前需要确认的信息。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#advanced-key-title",
+    "from": "键位 · 字符录入与 HID / 扫描参数",
+    "to": "按键 · 字符录入和高级设置",
+    "reason": "减少标题中的接口名词，保留该组内容的入口含义。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#lighting-advanced-title",
+    "from": "灯光 · 逐键配色与模式灯",
+    "to": "灯光 · 单键颜色和模式灯",
+    "reason": "用完整说法替代“逐键配色”。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#lighting-advanced-help",
+    "from": "自动配色保留已存逐键 RGB；GP11 独立指示灯暂定实际 25%，由固件单独限幅。",
+    "to": "切换灯效时会沿用已经设置的单键颜色。模式灯亮度最高为 25%。",
+    "reason": "删除开发过程说明，留下用户可操作和实际亮度限制。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#slider-advanced-title",
+    "from": "滑轨 · 输出范围与滤波",
+    "to": "滑轨 · 输出范围和响应",
+    "reason": "把滤波换成用户能理解的响应设置。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#slider-advanced-help",
+    "from": "调整输出范围与信号滤波；共享校准在下方“运动”分组中。校准使用实测行程，失败或取消保留旧记录。",
+    "to": "在这里调整滑轨输出范围和响应。校准请到下方“运动”分组进行，并按实际行程填写；取消或失败会保留上次结果。",
+    "reason": "说明设置用途和校准入口，避免“共享校准”“信号滤波”等内部术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#slider-benchmark-button",
+    "from": "滑轨基准测试 · 等待公共协议",
+    "to": "滑轨测试（暂不可用）",
+    "reason": "移除公共协议和基准测试等开发状态词。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#slider-data-waiting",
+    "from": "连接支持运动遥测的设备后，显示三路 ADC、滑轨位置与信号质量。",
+    "to": "连接设备后查看传感器数值、滑轨位置和信号质量。",
+    "reason": "去掉遥测和ADC缩写，保留该面板显示内容。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#knob-advanced-title",
+    "from": "旋钮 · 输出范围与 PUSH 防误触",
+    "to": "旋钮 · 输出设置和按压防误触",
+    "reason": "减少“PUSH”缩写，说明按压过滤用途。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/src/config.js#knob-counts",
+    "from": "倍率1每圈 HID count",
+    "to": "倍率为 1 时每圈的 HID 计数",
+    "reason": "把计数单位写明，去掉中英混杂。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#knob-speed",
+    "from": "可信转速 圈/s",
+    "to": "转速上限（圈/秒）",
+    "reason": "用上限表达参数作用。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#knob-threshold",
+    "from": "活动门槛 ticks",
+    "to": "开始识别转动的刻度数",
+    "reason": "说明数值用于判断是否转动。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#push-enabled",
+    "from": "启用 PUSH 防误触",
+    "to": "启用按压防误触",
+    "reason": "减少硬件信号简称。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#press-us",
+    "from": "按下确认 µs",
+    "to": "按下确认时间（微秒）",
+    "reason": "用中文说明单位和参数作用。",
+    "matches_in_preview": 4
+  },
+  {
+    "scope": "web/src/config.js#rotating-press-us",
+    "from": "旋转按下确认 µs",
+    "to": "转动时按下确认时间（微秒）",
+    "reason": "说明旋转过程中使用的确认时间。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/src/config.js#release-us",
+    "from": "释放确认 µs",
+    "to": "松开确认时间（微秒）",
+    "reason": "用常见说法替代“释放”。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#rearm-us",
+    "from": "重新就绪 µs",
+    "to": "再次响应前的等待时间（微秒）",
+    "reason": "解释重新就绪参数对操作的影响。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#max-hold-us",
+    "from": "保持超时 µs",
+    "to": "按住状态最长时间（微秒）",
+    "reason": "说明超时对应的状态。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/src/config.js#sample-gap-us",
+    "from": "采样间隔上限 µs",
+    "to": "允许的最大读取间隔（微秒）",
+    "reason": "避免采样术语，改为用户可理解的读取间隔。",
+    "matches_in_preview": 2
+  },
+  {
+    "scope": "web/index.html#knob-advanced-help",
+    "from": "HID count 不等于屏幕像素；磁环和 PUSH 结构尚未实板验证。",
+    "to": "旋钮输出的是转动增量。不同程序和系统设置会影响实际移动距离，请在目标程序中确认效果。",
+    "reason": "删除硬件验收汇报，说明输出效果可能因软件设置不同而变化。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#routing-title",
+    "from": "来源接管 · 同轴策略",
+    "to": "输入优先级 · 滑轨和旋钮",
+    "reason": "替换“来源接管”“同轴”等内部词。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#routing-priority-label",
+    "from": "同时起动滑轨优先（工程起点）",
+    "to": "滑轨和旋钮同时动作时优先滑轨",
+    "reason": "去掉工程起点，直接说明开关作用。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#routing-help",
+    "from": "滑轨与 X 旋钮按活动状态接管，Y 轴独立。静止等待时间和同时动作优先级可在此调整。",
+    "to": "滑轨和 X 轴旋钮共用 X 轴；Y 轴单独输出。设备会让正在转动或移动的输入控制 X 轴，静止一段时间后才切换来源。两者同时开始时，可选择让滑轨优先。",
+    "reason": "解释输入切换规则和Y轴关系，避免“接管”“活动状态”术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#diagnostics-record-title",
+    "from": "输入测试 · 原始状态与记录",
+    "to": "输入测试 · 状态记录",
+    "reason": "删去原始状态这一开发术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#diagnostics-record-help",
+    "from": "十键、PUSH、三 ADC、SSI 与 USB / 游戏需要分别实测。",
+    "to": "页面状态可帮助检查输入。按键、旋钮和游戏中的实际效果仍需连接设备后逐项确认。",
+    "reason": "避免测试报告口吻，不夸大网页检查结果。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-advanced-title",
+    "from": "更新 · 文件检查与恢复细节",
+    "to": "更新 · 手动进入下载模式",
+    "reason": "标题直接指出这一节的用途。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-advanced-file",
+    "from": "选择本项目正式 FluxRail UF2，自动读取识别头、板型与版本。",
+    "to": "选择适用于本设备的 FluxRail UF2 文件，查看板型和版本。",
+    "reason": "删去识别头和正式构建口吻，提醒选择对应文件。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#update-advanced-help",
+    "from": "也可按住 BOOT，按下并松开 SW1 / RUN，再松开 BOOT。Web Serial 无法直接向 ROM 上传；进入下载模式或复制结束均不等于升级验证通过。USB 身份在更新主区设置：应用启动身份 → 保存到设备 → 重启到已保存身份。IO4 模式下返回普通模式需按住 BT10 复位或上电。",
+    "to": "如果页面中的进入下载模式操作不可用，也可以按住 BOOT，按下再松开 SW1 / RUN，然后松开 BOOT。电脑出现 RPI-RP2 磁盘后，把适用于本设备的 UF2 文件复制进去；复制完成后重新连接并核对版本。更改下次启动身份后，请先应用、保存，再重启。IO4 模式下按住 BT10 并复位或重新上电，可返回普通模式。",
+    "reason": "保留按键步骤、手动复制UF2、重连核对和BT10恢复路径，去掉Web Serial/ROM/验证状态等实现说明。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#io4-summary",
+    "from": "IO4 · 按键功能映射",
+    "to": "IO4 · 按键设置",
+    "reason": "标题更简洁，具体映射操作仍由表单说明。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#io4-apply-button",
+    "from": "应用 IO4 映射到 RAM",
+    "to": "应用 IO4 设置",
+    "reason": "按钮名去掉RAM术语；成功提示会引用“IO4 按键设置”。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#io4-waiting",
+    "from": "请在普通 USB 模式下连接设备，读取后编辑 IO4 键位。",
+    "to": "请在普通模式下连接设备并读取模板，再编辑 IO4 按键设置。",
+    "reason": "减少USB名词，明确读取模板这一步。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#io4-help",
+    "from": "多个按键可绑定同一功能，任一按住即保持该功能。P1 / P2 为旋钮按压；按住 BT10 复位或上电可返回普通模式。",
+    "to": "多个按键可以设为同一功能；按住任意一个，对应功能就会保持。P1 / P2 是旋钮按键。要返回普通模式，按住 BT10 后复位或重新上电。",
+    "reason": "保留按键保持和BT10恢复方式，改成操作说明。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#calibration-title",
+    "from": "运动 · 设备状态与共享校准",
+    "to": "设备状态 · 滑轨校准",
+    "reason": "减少工程术语，保留校准入口。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#calibration-waiting",
+    "from": "连接设备后可开始校准。",
+    "to": "连接设备并读取设置后，可开始校准。",
+    "reason": "说明开始操作的前提。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#calibration-empty-state",
+    "from": "连接设备后查看滑轨与旋钮状态。",
+    "to": "连接设备后查看滑轨位置和旋钮转动情况。",
+    "reason": "把状态信息具体化。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#calibration-state",
+    "from": "连接后查看校准记录",
+    "to": "连接设备后查看校准情况",
+    "reason": "明确连接设备后才能读取。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#calibration-help",
+    "from": "校准需空场、H1/H2/H3参考、7～17个含端点与交接的实测标签，然后全轨扫描。失败/取消保留旧记录。诊断轮询不证明采样无丢失。",
+    "to": "校准时先移开磁铁，再依次采集 H1、H2、H3，并填写 7～17 个实测位置（包括两端和传感器交接处），最后沿全轨移动滑块。取消或失败会保留上次校准。",
+    "reason": "按用户可执行的顺序说明校准，并删去诊断轮询和采样丢失报告。",
+    "matches_in_preview": 0
+  },
+  {
+    "scope": "web/index.html#copy-preview-note",
+    "from": "这页只供检查文案。可切换页面、展开说明；连接和保存等按钮暂不可用。",
+    "to": "这里用于查看页面文案。可以切换栏目、展开说明；设备操作目前关闭。",
+    "reason": "空壳提示更自然，并明确设备操作不可用。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#identity-product-label",
+    "from": "产品 / 板型",
+    "to": "设备型号",
+    "reason": "减少技术表格式标签。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#identity-firmware-label",
+    "from": "固件 / 协议",
+    "to": "固件版本",
+    "reason": "协议版本不是用户日常需要查看的设备信息。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#identity-serial-label",
+    "from": "唯一序号",
+    "to": "设备序号",
+    "reason": "用设备页面常用说法。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#identity-usb-label",
+    "from": "实际USB身份",
+    "to": "当前 USB 模式",
+    "reason": "“身份”容易与设备身份混淆。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#identity-startup-label",
+    "from": "已保存启动身份",
+    "to": "已保存的启动模式",
+    "reason": "和页面里的普通/IO4选项名称一致。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#identity-revision-label",
+    "from": "读取revision",
+    "to": "设置修订号",
+    "reason": "移除英文实现术语。",
+    "matches_in_preview": 1
+  },
+  {
+    "scope": "web/index.html#io4-waiting-card",
+    "from": "连接后读取",
+    "to": "连接设备后读取",
+    "reason": "等待状态补充对象。",
+    "matches_in_preview": 13
+  }
+]

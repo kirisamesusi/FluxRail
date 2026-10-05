@@ -1,0 +1,42 @@
+[
+  {
+    "path": "web/src/app.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/device.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/integration.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/io4-editor.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/layout.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/knob-preview.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/workflows.js",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "path": "web/src/gain-control.js",
+    "exit_code": 0,
+    "stderr": ""
+  }
+]

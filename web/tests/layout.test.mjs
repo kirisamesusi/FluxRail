@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mountModuleNavigation } from '../src/layout.js';
 
 function fixture(hash = '') {
-  const ids = ['profiles', 'keyboard', 'lighting', 'hall', 'knobs', 'diagnostics', 'update', 'experimental'];
+  const ids = ['device-status', 'keyboard', 'lighting', 'hall', 'knobs', 'profiles', 'update', 'experimental'];
   const nodes = new Map(), listeners = new Map();
   function node(id, tagName = 'SECTION', parentElement = null) {
     const attributes = new Map(), handlers = new Map();
@@ -19,6 +19,7 @@ function fixture(hash = '') {
   }
   const state = { focus: null, scrolledTarget: null, top: null, changes: [] };
   const links = ids.map(id => { const panel = node(id); node(id + '-title', 'H2', panel); const link = node('nav-' + id, 'A'); link.dataset = { module: id }; link.setAttribute('href', '#' + id); return link; });
+  node('input-status', 'DETAILS', nodes.get('device-status'));
   const lab = node('experimental-panel', 'DETAILS', nodes.get('experimental'));
   const calibration = node('experiment-calibration', 'DETAILS', lab);
   node('calibration-field', 'INPUT', calibration);
@@ -28,10 +29,10 @@ function fixture(hash = '') {
   return { nodes, links, state, window, dispose, navigate(hash) { window.location.hash = hash; listeners.get('hashchange')?.(); }, visible() { return ids.filter(id => !nodes.get(id).hidden); } };
 }
 
-test('默认模块与无效片段回退到模板，初次加载不移动焦点', () => {
+test('默认模块与无效片段回退到设备状态，初次加载不移动焦点', () => {
   for (const hash of ['', '#unknown', '#%E0%A4%A']) {
     const f = fixture(hash);
-    assert.deepEqual(f.visible(), ['profiles']); assert.equal(f.state.focus, null);
+    assert.deepEqual(f.visible(), ['device-status']); assert.equal(f.state.focus, null);
     assert.equal(f.links[0].getAttribute('aria-current'), 'page');
   }
 });
@@ -58,6 +59,8 @@ test('历史导航恢复模块，跳转到主内容保留当前模块', () => {
 });
 test('修饰键点击保留浏览器链接行为，卸载后取消事件监听', () => {
   const f = fixture(); f.links[1].click({ ctrlKey: true });
-  assert.equal(f.window.location.hash, ''); assert.deepEqual(f.visible(), ['profiles']);
-  f.dispose(); f.navigate('#keyboard'); f.links[1].click(); assert.deepEqual(f.visible(), ['profiles']);
+  assert.equal(f.window.location.hash, ''); assert.deepEqual(f.visible(), ['device-status']);
+  f.dispose(); f.navigate('#keyboard'); f.links[1].click(); assert.deepEqual(f.visible(), ['device-status']);
 });
+
+test('旧 diagnostics 深链接打开首页输入状态，品牌回首页不覆盖草稿',()=>{const f=fixture('#diagnostics');assert.deepEqual(f.visible(),['device-status']);assert(f.nodes.get('input-status').open);f.navigate('#diagnostics');assert.equal(f.state.focus,'device-status-title');});

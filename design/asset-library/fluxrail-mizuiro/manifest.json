@@ -1,0 +1,133 @@
+{
+  "library": "FluxRail 水色少女",
+  "version": "v1",
+  "date_local": "2026-10-05",
+  "scope": "18个素材及图册、设计信息、提示词、只读校验工具；验证报告单独保存",
+  "files": [
+    {
+      "path": "catalog.json",
+      "bytes": 10955,
+      "sha256": "476495b27ffe990258095197ad69899c972139874859e6ef0e209033fe56f2e6"
+    },
+    {
+      "path": "explorations/cat-waterdrop-draft-v1.png",
+      "bytes": 1128570,
+      "sha256": "c70d3bd0bfcb711762aa48a35f71e7b1fd3a731a4412301f1da72fd83cfd3348"
+    },
+    {
+      "path": "explorations/glossy-girl-draft-v1.png",
+      "bytes": 1532441,
+      "sha256": "57546e581a784fdf9cc812100d1b1857f18020484507baf6748029a0dbc09e8d"
+    },
+    {
+      "path": "explorations/monochrome-draft-v1.png",
+      "bytes": 1135853,
+      "sha256": "466f489545700b9ce61795b7fc270d642f6fac45f4ae5d4a430287c548d2e36b"
+    },
+    {
+      "path": "explorations/waterdrop-draft-v1.png",
+      "bytes": 954756,
+      "sha256": "d6f964fe301fe5f790e4d0af764a6b9960bfaa87ec43ec3a0589ece71f302ad3"
+    },
+    {
+      "path": "exports/fluxrail-favicon.ico",
+      "bytes": 9600,
+      "sha256": "758b59e3855c1a94d6f9ad16ee6a4c531f441da30d496bc12c64f63c3e2739c0"
+    },
+    {
+      "path": "exports/fluxrail-icon-180.png",
+      "bytes": 48660,
+      "sha256": "f47e4c03b10552d0d872c0c690714c6a8a907cdcf1aa3f303a0d094afba2fef1"
+    },
+    {
+      "path": "exports/fluxrail-icon-192.png",
+      "bytes": 54445,
+      "sha256": "26ad41d7422c4235176aba7c156001757faabcfba4affcff09f01fc2f090e841"
+    },
+    {
+      "path": "exports/fluxrail-icon-32.png",
+      "bytes": 2938,
+      "sha256": "7d699c6419d14e9959d9fd8d7899e65ef6b1ba826cc445b6e0a6509836479dbb"
+    },
+    {
+      "path": "exports/fluxrail-mascot-brand.png",
+      "bytes": 75032,
+      "sha256": "6d0e9a9b009556e3ddd5e304b1b7dc044f7b0bc2e52b7c2e6016fdc961b56afe"
+    },
+    {
+      "path": "exports/fluxrail-mascot-controller.png",
+      "bytes": 431868,
+      "sha256": "84bc195ae8c79cce5a7383c443c46733871918c194906873807cf98861b5db24"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14820,
+      "sha256": "e2ff2568d03fa1be731b96718d572d8d820cfbc054bf5ccddd9e4ad84933d2a4"
+    },
+    {
+      "path": "masters/approved-original-v1.png",
+      "bytes": 1222113,
+      "sha256": "50c88e70e9d5f3cf64ecd583d557d549f2a55441eefb33aa978dfefe858df009"
+    },
+    {
+      "path": "masters/avatar-original-v1.png",
+      "bytes": 1428172,
+      "sha256": "56f9d1ee6d46c6c31ec41922ff08303a03b8fc604cc2588bfcc6a6bfbd8d2f74"
+    },
+    {
+      "path": "masters/controller-original-v1.png",
+      "bytes": 1263817,
+      "sha256": "478f4500dede75cd5a9919998bd1ea9ac6c155545ad10b56c8e6d3f50b5e843a"
+    },
+    {
+      "path": "masters/theme-avatar-v1.png",
+      "bytes": 1386728,
+      "sha256": "ca47359880e8052448ffad5e1f546d21777a91b1333761fe059418eafe3c1193"
+    },
+    {
+      "path": "masters/theme-controller-v1.png",
+      "bytes": 1263830,
+      "sha256": "89ae344193b3c7f732d6cc83e3d619800aa139aa368a33f6dc4091ac41fc29a8"
+    },
+    {
+      "path": "masters/theme-halfbody-v1.png",
+      "bytes": 1206265,
+      "sha256": "cc72cd4146c068b9a3a35d2f19d6177099dd274ab29e533e4b70ebe12fd117df"
+    },
+    {
+      "path": "metadata/exploration-prompts.json",
+      "bytes": 6797,
+      "sha256": "e442eb03f1ea6e5a85d892156c4f43ad6f187a3252b5dc5b9e9f2a45c71f311c"
+    },
+    {
+      "path": "metadata/generation-prompts.json",
+      "bytes": 9236,
+      "sha256": "a8790fbd0d02a850fc19572edac32f4167c663a331e6c6f1caab666d8c7bbc1f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2189,
+      "sha256": "3ceab74813d4277bebcc029d7aa7cff0e25753fe7c083a9964c3d3d81ec38bd2"
+    },
+    {
+      "path": "references/controller-base-v1.png",
+      "bytes": 1149211,
+      "sha256": "caf5f77ccada9e04011469bec6ebcf5d82d8ed96a3128a5d30f8c8acf3b097e1"
+    },
+    {
+      "path": "references/user-manga-reference.png",
+      "bytes": 21615,
+      "sha256": "8e5549678d55a4d782f5532dcbc577d99e5f00510c17705200c6267260e8f163"
+    },
+    {
+      "path": "STYLE_GUIDE.md",
+      "bytes": 3546,
+      "sha256": "d2f9e984cdcda6948aee44f67a100af439bd1c2e999769aa18a5c7781f60da84"
+    },
+    {
+      "path": "tools/verify_library.py",
+      "bytes": 1843,
+      "sha256": "fc5541937be524b991f5437638de62cbf97c76020f82cc97e8148cad2da769a3"
+    }
+  ]
+}

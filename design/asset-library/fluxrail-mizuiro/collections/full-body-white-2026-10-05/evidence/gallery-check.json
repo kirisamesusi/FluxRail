@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "scope": "offline full-body art collection only",
+  "browser": "151.0.4129.107",
+  "views": [
+    {
+      "width": 1440,
+      "height": 950,
+      "loaded": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "loaded": 3,
+      "overflow": false
+    }
+  ],
+  "page_errors": [],
+  "network_requests": []
+}

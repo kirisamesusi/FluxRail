@@ -270,3 +270,25 @@ extern "C" int test_push_snapshot_on_pause_and_overflow() {
   CHECK(!m.latestPush(0).filtered_down&&!sink.states[0]&&!m.latest(0).valid);
   return 0;
 }
+
+// Same Web scale as Hall; physical increments/activity stay gain independent.
+extern "C" int test_web_sensitivity_scale() {
+  for (int tenth = 10; tenth <= 100; ++tenth) {
+    for (uint8_t id = 0; id < 2; ++id) {
+      for (int inverted = 0; inverted < 2; ++inverted) {
+        KnobMotion m; auto s = enabled(id);
+        s.gain = static_cast<double>(tenth) / 50.0;
+        s.invert = inverted != 0; CHECK(m.apply(s, 1));
+        CHECK(!m.sample(frame(0, 0, 0), id, 1).valid);
+        const auto out = m.sample(frame(256, 500, 1), id, 1);
+        CHECK(out.valid && out.delta_ticks == 256 && out.active);
+        CHECK(near(out.raw_turns, 1.0 / 64));
+        const double signed_gain = s.invert ? -s.gain : s.gain;
+        CHECK(near(out.scaled_turns, signed_gain / 64));
+        CHECK(near(out.delta_counts, 16 * signed_gain));
+        CHECK(out.axis == (id == 0 ? Axis::X : Axis::Y));
+      }
+    }
+  }
+  return 0;
+}

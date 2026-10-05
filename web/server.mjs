@@ -6,12 +6,14 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const root=fileURLToPath(new URL('.',import.meta.url));
 const port=Number(process.env.FLUXRAIL_WEB_PORT || 4174);
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.bin':'application/octet-stream','.png':'image/png'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.bin':'application/octet-stream','.png':'image/png','.ico':'image/vnd.microsoft.icon'};
+const publicAssets=new Set(['/assets/fluxrail-lace-bunny.png','/assets/fluxrail-mascot-brand.png','/assets/fluxrail-mascot-controller.png','/assets/fluxrail-icon-32.png','/assets/fluxrail-icon-180.png','/assets/fluxrail-icon-192.png','/assets/fluxrail-favicon.ico']);
 http.createServer(async(req,res)=>{
   try {
     if(req.method!=='GET'&&req.method!=='HEAD'){res.writeHead(405);res.end();return;}
-    const url=new URL(req.url,'http://localhost');const route=decodeURIComponent(url.pathname);
-    const allowed=route==='/'||route==='/index.html'||route==='/style.css'||route==='/assets/fluxrail-lace-bunny.png'||route.startsWith('/src/')||route==='/tests/golden.js';
+    const url=new URL(req.url,'http://localhost');let route=decodeURIComponent(url.pathname);
+    if(route==='/favicon.ico')route='/assets/fluxrail-favicon.ico';
+    const allowed=route==='/'||route==='/index.html'||route==='/style.css'||publicAssets.has(route)||route.startsWith('/src/')||route==='/tests/golden.js';
     const target=path.resolve(root,'.'+(route==='/'?'/index.html':route));
     if(!allowed||!target.startsWith(root)||!mime[path.extname(target)]){res.writeHead(404);res.end();return;}
     const body=await readFile(target);

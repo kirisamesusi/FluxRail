@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-04",
+  "backup": "backups/web-before-layout-2026-10-04",
+  "backupOriginalFiles": 28,
+  "backupHashesVerified": true,
+  "changedExistingFiles": [
+    "index.html",
+    "package.json",
+    "README.md",
+    "src/app.js",
+    "style.css"
+  ],
+  "unchangedOriginalFiles": [
+    "server.mjs",
+    "src/config.js",
+    "src/connection/client.js",
+    "src/demo.js",
+    "src/device.js",
+    "src/integration.js",
+    "src/io4-editor.js",
+    "src/keyboard.js",
+    "src/knob-preview.js",
+    "src/snapshot.js",
+    "src/update/uf2.js",
+    "tests/golden.js",
+    "tests/hall-controls-2026-10-03.png",
+    "tests/import-example.json",
+    "tests/integration-ui.test.mjs",
+    "tests/integration.test.mjs",
+    "tests/knob-preview.test.mjs",
+    "tests/lab-layout-2026-10-03.png",
+    "tests/style_review_2026-10-03.md",
+    "tests/validation_2026-10-03.json",
+    "tests/validation_hall_controls_2026-10-03.json",
+    "tests/validation_lab_layout_2026-10-03.json",
+    "tests/web.test.mjs"
+  ],
+  "addedImplementationFiles": [
+    "src/layout.js",
+    "tests/layout.test.mjs"
+  ],
+  "tests": {
+    "total": 40,
+    "pass": 40,
+    "fail": 0
+  },
+  "browser": {
+    "modules": 8,
+    "labGroups": 11,
+    "draftRetained": "BT8 A→B，切换模块后保留，模拟应用/保存后读回B",
+    "knobPreview": "输入与倍率后1.000圈，圈内0.0度",
+    "navigation": [
+      "修改模板→按键映射",
+      "浏览器返回→模板",
+      "共享校准深链接展开",
+      "左侧设置标题，移除01–08编号"
+    ],
+    "requestedViewports": [
+      "default",
+      "820x900",
+      "390x844",
+      "320x740"
+    ],
+    "pageHorizontalOverflow": false,
+    "consoleWarnings": 0,
+    "consoleErrors": 0
+  },
+  "hardwareTested": false,
+  "firmwareChanged": false,
+  "referenceSkill": "https://github.com/emilkowalski/skills/blob/main/skills/emil-design-eng/SKILL.md"
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "modules": [
+    {
+      "path": "web/src/sensitivity.js",
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "path": "web/src/gain-control.js",
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "path": "web/src/app.js",
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "path": "web/src/config.js",
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "path": "web/src/knob-preview.js",
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "path": "web/tests/sensitivity.test.mjs",
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "path": "web/tests/sensitivity-2026-10-06/check.mjs",
+      "exit_code": 0,
+      "error": ""
+    }
+  ],
+  "unified_web_test_list_matches_package": true,
+  "test_suites": 9
+}

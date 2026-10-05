@@ -1,0 +1,13 @@
+{
+  "name": "fluxrail-web",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/web.test.mjs tests/knob-preview.test.mjs tests/integration.test.mjs tests/integration-ui.test.mjs tests/layout.test.mjs tests/template-actions.test.mjs tests/uf2.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

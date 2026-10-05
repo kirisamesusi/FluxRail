@@ -1,0 +1,23 @@
+{
+  "date_local": "2026-10-06",
+  "branch": "test",
+  "firmware_version": "0.10.2",
+  "firmware_source_changed": false,
+  "formal_arduino_build_run": false,
+  "arm_hall_groups": 13,
+  "arm_hall_checks": 7716,
+  "arm_knob_groups": 15,
+  "arm_knob_checks": 6701,
+  "node_tests": 72,
+  "node_passed": 72,
+  "browser_views": 72,
+  "browser_groups": 10,
+  "documents": 91,
+  "local_links": 736,
+  "hardware_tested": false,
+  "game_tested": false,
+  "uploaded": false,
+  "merged": false,
+  "published": false,
+  "docs_verifier_note": "Unmodified verifier date_local field is its historical 2026-10-05 baseline; this report supplies actual task execution date."
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "Two fourth-round presentation edits",
+  "production_files_unchanged": 74,
+  "hardware_tested": false,
+  "checks": [
+    {
+      "width": 1274,
+      "selected": {
+        "color": "rgb(150, 87, 121)",
+        "background": "linear-gradient(120deg, rgba(255, 245, 250, 0.81), rgba(243, 223, 238, 0.66))",
+        "track": "rgba(199, 146, 175, 0.72)"
+      },
+      "hover_stays_pink": true,
+      "off_returns_blue": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "selected": {
+        "color": "rgb(150, 87, 121)",
+        "background": "linear-gradient(120deg, rgba(255, 245, 250, 0.81), rgba(243, 223, 238, 0.66))",
+        "track": "rgba(199, 146, 175, 0.72)"
+      },
+      "hover_stays_pink": true,
+      "off_returns_blue": true,
+      "horizontal_overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "passed": true
+}

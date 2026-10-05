@@ -11,7 +11,7 @@ cd C:/Users/admin/Documents/FluxRail
 python tests/integration/run_all.py
 ```
 
-执行模块1/2/3、公共集成/transport/protocol/storage/app_storage/io4/motion、七套Web测试、正式Arduino编译及正式ELF描述符检查。失败立即停，结果`tests/integration/build/full_results.json`，日志`build/full/`。仅软件回归可加`--skip-build`，结果不含新正式构建。IO4 timeout专门回归为`python tests/integration/run_io4_timeout_regression.py`；统一run_all目前未单列该专门入口，涉及超时改动应补跑。
+执行模块1/2/3、公共集成/transport/protocol/storage/app_storage/io4/motion、九套Web测试（含组合保存与灵敏度兼容）、正式Arduino编译及正式ELF描述符检查。失败立即停，结果`tests/integration/build/full_results.json`，日志`build/full/`。仅软件回归可加`--skip-build`，结果不含新正式构建。IO4 timeout专门回归为`python tests/integration/run_io4_timeout_regression.py`；统一run_all目前未单列该专门入口，涉及超时改动应补跑。
 
 固定依赖：Python3.12、Unicorn2.1.3、Node>=20、本机Arduino CLI0.35.3、Arduino-Pico6.1.0、ARM GCC16.1.0、TinyUSB3.7.7项目私有适配。Python依赖准备见[模块1测试说明](tests/module1/README.md)；Web无npm install或打包步骤。
 

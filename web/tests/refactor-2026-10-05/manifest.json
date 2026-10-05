@@ -1,0 +1,222 @@
+{
+  "date_local": "2026-10-05",
+  "branch": "test",
+  "scope": "Production Web source and software-only evidence; no device upload",
+  "files": [
+    {
+      "path": "web/index.html",
+      "bytes": 21275,
+      "sha256": "83e2c931726850719cb7ef8b323083003d6290f3f7c65143b626c57a4dc6d67a"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 42186,
+      "sha256": "ab3ad4c40ed33d31acb3ccac9003856faf8825d848491fab027f58f457c649d2"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 407,
+      "sha256": "2800a48a1157e88858341adc3a550b3fc8b76739afd01ce61ee5f6b768617fd2"
+    },
+    {
+      "path": "web/src/app.js",
+      "bytes": 35889,
+      "sha256": "e49a7f754a4bd1c0474ff6d1080ebbbcdf505ea57de397e672144a5d88985bc6"
+    },
+    {
+      "path": "web/src/device.js",
+      "bytes": 5557,
+      "sha256": "18c17e7e84702df0a196a8b6075459ac968a138311c3537e033fec001fdb04e5"
+    },
+    {
+      "path": "web/src/integration.js",
+      "bytes": 14000,
+      "sha256": "e06b88ffe30b15a59fa451a40a006cd9361475344ac70cade170df0fdb359b0e"
+    },
+    {
+      "path": "web/src/io4-editor.js",
+      "bytes": 6329,
+      "sha256": "56821c6af8098d4f658d696c8ac332e92b46226da2f11e12f3de1b32688d6247"
+    },
+    {
+      "path": "web/src/layout.js",
+      "bytes": 2650,
+      "sha256": "cedcad236fb06e6c81e1a161e1ce7ff571fb55810175c59429d934a7e318e320"
+    },
+    {
+      "path": "web/src/knob-preview.js",
+      "bytes": 6468,
+      "sha256": "82d90df82f143cb69f93944be4ca6f623b204d89c14811ec9cc9a1cc9ac1c5df"
+    },
+    {
+      "path": "web/src/confirmation.js",
+      "bytes": 2467,
+      "sha256": "88ffaf2e42797d4a685c6c34a3a058b249bc570946fc711e086b024788ec76f6"
+    },
+    {
+      "path": "web/src/gain-control.js",
+      "bytes": 3042,
+      "sha256": "229d6e94b399cd288f541811d360b905b010ff211b95b3447f473e4eb69db1c1"
+    },
+    {
+      "path": "web/src/workflows.js",
+      "bytes": 3636,
+      "sha256": "f0a203f7cd18b1969e63f8c5fa8b869a4533dc7954b412159de0e75f355954db"
+    },
+    {
+      "path": "web/tests/workflows.test.mjs",
+      "bytes": 6705,
+      "sha256": "518c57611d10966205d716e85d32344ed766ecb7c0c19015011931424427350d"
+    },
+    {
+      "path": "web/tests/integration-ui.test.mjs",
+      "bytes": 9899,
+      "sha256": "bac2eb86af073b1faf04a184e8a1c33720c5b314537b12dc1689863a0ef5b4cc"
+    },
+    {
+      "path": "web/tests/layout.test.mjs",
+      "bytes": 4843,
+      "sha256": "5883fea4f5ea37fa1063eec095e41894793d9816e4a97bc6b6c74895f9e45e02"
+    },
+    {
+      "path": "docs/modules/05_Web配置工具.md",
+      "bytes": 21912,
+      "sha256": "535c42ffbbf5e2c7327c9d44c831e96476b97cb8c0f845769c2cce1d496d0cf0"
+    },
+    {
+      "path": "docs/测试状态与待验收.md",
+      "bytes": 8189,
+      "sha256": "52e7b45489546c341bd0d34a32e4161b112772d0b73fe02dfd7ee46fda93b5d1"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 3381,
+      "sha256": "1445f70b173832e1666cb5935fc6d4ea66ff1f047bf1dc3998e4050d747e2c99"
+    },
+    {
+      "path": "web/README.md",
+      "bytes": 1967,
+      "sha256": "188df25bcf348ea72f92eed236dfa8b116dcf51e053ae316aeb498954e70df8f"
+    },
+    {
+      "path": "web修改.md",
+      "bytes": 27277,
+      "sha256": "4cb83f4e1165576a5f0afadeb9e5b7978c1a95f24528b3cc281d13500dd244b5"
+    },
+    {
+      "path": "backups/README.md",
+      "bytes": 8843,
+      "sha256": "dfcbe36213004f026bea0649e183df0aa6d764af08cccea6c7dee781668f3d0f"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/README.md",
+      "bytes": 3732,
+      "sha256": "d78a6e680ffb524f6b3d0d6e51eeac0258ab57ab0460d88a2a0f8343d5b5b8e7"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/LUNA_REVIEW.md",
+      "bytes": 1612,
+      "sha256": "267957e3852250c9d0c5e38b1b1b36a85298d8946d4edf8343a35b044a89ffaa"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/check.mjs",
+      "bytes": 22222,
+      "sha256": "10a5b17470731c95aa571f7c34fdf2c5469df39173a0d2600c43d5f3eb83aa45"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/node-final-output.txt",
+      "bytes": 6354,
+      "sha256": "88bdb230f8e169878585fa36c54c3d779c1bdf772cec9f32405eb1a9415cfe5b"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/syntax-final-check.json",
+      "bytes": 740,
+      "sha256": "0c9115e52c407c421735b0da1123c2fb83f4594d3a130cb033fe01dbd9edb2d2"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/docs-final-check.json",
+      "bytes": 1317,
+      "sha256": "52dfad1cfaafb36a8271358dcc2ea2ea4fd5f1576dcbb2afc0f72142c682416d"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/baseline-protection.json",
+      "bytes": 3268,
+      "sha256": "383795beff91feeda80bcc7065f8785417d6c3af5d79518da2be72822d9cb0f6"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/browser-check.json",
+      "bytes": 9359,
+      "sha256": "87f27a20426054fde8c6d8506b13770e9c311963cdcf5ad58c1c8859011ae4d2"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/disconnected-1274.png",
+      "bytes": 303630,
+      "sha256": "76837dfa8ef5d87862b9e205efbd0063c28b9c941a6815a3a8e16c9425332a16"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/disconnected-320.png",
+      "bytes": 147354,
+      "sha256": "99671c5f5152a50605fd7c63eabd1ce56a063242fb6c9642c376ff2449a81273"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/disconnected-390.png",
+      "bytes": 159492,
+      "sha256": "1be85ebc44da1bf78ba62bc1c965b3ebd127e92114ea6cbefcb41d468940e6d1"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/integration-bootloader-confirmation.png",
+      "bytes": 232483,
+      "sha256": "07d11534433ae5ace836acd0c7091b37f11aa55c680cff40ff81105a87f4404e"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/knobs-1274.png",
+      "bytes": 498423,
+      "sha256": "3278be255004ca1f1d39156d7b77dba0bf76fb23a698c8820254fa26050c2513"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/knobs-320.png",
+      "bytes": 297777,
+      "sha256": "aa270bd7c682a2dfb9e65415dbd2de7fa1c332a3d4625bb184a57564e5b0da69"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/knobs-390.png",
+      "bytes": 325317,
+      "sha256": "ce0456ec95613ae1c055ee70e54564472b9abca796f59212f41360eb806d22cc"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/restart-device-confirmation.png",
+      "bytes": 185121,
+      "sha256": "d1901d29a407ca33ce3edeaaf31ce261983b9a036dca54d663cce816bfdc36f6"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/status-1274.png",
+      "bytes": 306858,
+      "sha256": "ebbf3b6ed319964ddccc1f22a4d878aefeafe49a0281f182281b63087fc6a0ac"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/status-320.png",
+      "bytes": 154240,
+      "sha256": "54324e3d262cca552d64eb0b6a8314ac0bd6752f41fddc15da74be2f83374993"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/status-390.png",
+      "bytes": 163776,
+      "sha256": "3b2116531969b14b73b4acf252550414593798e66948c19b8903ac6ba8706480"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/uf2-dialog-1274.png",
+      "bytes": 275901,
+      "sha256": "1cc71d96a5d59649dadceacdbe55ac09c1762e30bfaeee7f6e939e5e80d257a2"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/uf2-dialog-320.png",
+      "bytes": 115847,
+      "sha256": "157a9e7d95c060f4787bfa7b4ddda9f4398f5957e99ff90a2821bb56853034e5"
+    },
+    {
+      "path": "web/tests/refactor-2026-10-05/final-delivery/uf2-dialog-390.png",
+      "bytes": 127055,
+      "sha256": "426ca9c42f2865fceec0c14ea2621717814760b649e57ca2eb5175cecf78d9bf"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "module": 4,
+  "runtime": "Node.js 24.14.1",
+  "public_contract": "CDC v1 / device schema 1 / stage 8",
+  "syntax_check": {
+    "command": "node --check <file>",
+    "passed_units": 10,
+    "result": "passed",
+    "firmware_compiled": false,
+    "note": "Native ES modules, no frontend bundler; this is JavaScript parsing, not RP2040 firmware compilation."
+  },
+  "software_simulation": {
+    "command": "node --test tests/web.test.mjs tests/knob-preview.test.mjs",
+    "tests": 21,
+    "passed": 21,
+    "failed": 0,
+    "golden_source": "tests/integration/schema1_defaults.bin",
+    "golden_bytes": 1339,
+    "golden_crc32": 3954875198,
+    "coverage": [
+      "schema1 golden bytes and simulated encoder equality",
+      "archive product/board/schema/CRC/length and scalar ranges",
+      "12 bindings, US character capture, duplicate usage and modifiers",
+      "fragmented/multiple/CRLF/overlong/non-ASCII lines",
+      "RAM apply without implicit Flash save",
+      "revision conflict prevents stale draft writes",
+      "12-profile capacity, stable IDs, preset deletion refusal, active deletion fallback",
+      "sequential 512-byte import/export without implicit save",
+      "serialized request IDs and wraparound",
+      "bad JSON/id/protocol terminates session and cancels queued requests",
+      "timeout covers missing ACK and stalled write after ACK",
+      "legacy runtime_module1 adaptation",
+      "mixed-revision snapshot rejection",
+      "request queue capacity 8",
+      "incomplete successful ACK metadata rejection",
+      "UF2 magic/family/blocks/address/config-region rejection",
+      "local-only knob preview: angle crossing, cumulative gain 1/2/0.5, inversion and bounds"
+    ],
+    "limits": "DemoHost is a JavaScript model, not actual C++ firmware, dual-core execution, USB host or Flash."
+  },
+  "browser_simulation": {
+    "browser": "Codex In-app Browser",
+    "url": "http://localhost:4174",
+    "passed": [
+      "handshake and coherent configuration display",
+      "BT8 and BT7 both bound to Space",
+      "P1 mapped to middle mouse button while hardware shown unavailable",
+      "computer keyboard capture of ArrowRight",
+      "apply ACK/readback revision 2 and separate save/readback saved_revision 2",
+      "import-example.json chooser, change preview, commit ACK/readback and separate save",
+      "ONGEKI template both knobs and PUSH filtering disabled",
+      "desktop five-column physical order",
+      "390px viewport override: visible document width 375px, content width 375px, two key columns",
+      "final page load and no error/warning console entries"
+    ],
+    "not_verified": [
+      "download reaches a file on disk: UI completed export, but In-app Browser returned no download event; Chrome/Edge verification required",
+      "real navigator.serial port authorization, DTR, unplug and reconnect",
+      "actual UF2 file chooser/update/ROM copy/version recovery"
+    ],
+    "screenshot": "C:/Users/admin/.codex/visualizations/2026/10/02/01a0fe82-6b46-7b12-a611-c1610b0c782a/fluxrail-web-module4.jpg"
+  },
+  "code_review": {
+    "method": "single-window manual review plus regression tests",
+    "fixed": [
+      "deadline remains effective when ACK precedes stalled write completion",
+      "binary32 boundaries compare with firmware precision and reject string coercion",
+      "demo responses escape non-ASCII error text",
+      "uncertain write result locks further writes until complete readback",
+      "invalid edited input cannot silently apply an older draft value",
+      "demo request log bounded at 1000",
+      "success ACK and hello metadata compatibility checks",
+      "download anchor attached to DOM and Blob URL retained for 30 seconds"
+    ],
+    "blocking_open_findings_in_implemented_scope": 0
+  },
+  "hardware": "not tested; no device opened or firmware uploaded",
+  "game": "not tested",
+  "dependencies": [
+    "public Hall/Knob/PUSH sampling and motion ACK integration",
+    "calibration job commands/state/progress/event contract",
+    "cumulative knob turns and motion diagnostic snapshots",
+    "benchmark/high-speed telemetry budgeting",
+    "bootloader command and trusted board release metadata",
+    "IO4 persona, cold-switch protocol and physical recovery entry"
+  ],
+  "watercolor_redesign": {
+    "date": "2026-10-03",
+    "scope": [
+      "web/index.html",
+      "web/style.css",
+      "web/src/app.js",
+      "web/README.md",
+      "web/tests/style_review_2026-10-03.md",
+      "web/tests/validation_2026-10-03.json",
+      "docs/progress/模块4.md"
+    ],
+    "public_interface_changed": false,
+    "design": "Blue/white/pink mizuiro with native SVG controller, smiling water droplet, stars, bubbles and per-module illustrations.",
+    "advanced": "Outer laboratory plus 9 module groups closed by default; explicit #experimental navigation opens outer. Character/HID/scan and all advanced configuration share the complete device.draft.",
+    "syntax": {
+      "units": 9,
+      "passed": 9,
+      "firmware_compiled": false
+    },
+    "software_regression": {
+      "tests": 17,
+      "passed": 17,
+      "failed": 0
+    },
+    "browser_passed": [
+      "Fresh page without experimental hash: outer and all 9 groups closed",
+      "12 basic binding cards with menus/capture and zero character inputs in #keyboard",
+      "Menu Space and keyboard ArrowRight capture create draft; save blocked until apply",
+      "US Q capture, modifier 3 and advanced lighting period 3210 ACK/readback at revision 3; separate simulated save",
+      "Preset card selection reads ONGEKI, shows selected state, keeps MULTI K active until explicit activation",
+      "Preset card and select disabled while local draft dirty; activation/apply/save complete",
+      "390px viewport: actual document/content width 375px, two key columns, heading width 241px; no overflow with key or knob advanced group open",
+      "Disconnect completes: no down cards, input tiles waiting, advanced fieldset disabled",
+      "Final desktop document/content width 1270px, no overflow",
+      "Final browser console has zero error/warning entries"
+    ],
+    "browser_automation_note": "IAB fill updates DOM without guaranteed change; numeric commit verified via real ArrowUp/ArrowDown inputs, not DOM value alone.",
+    "review": {
+      "code": "Primary-window manual review: ID uniqueness, static DOM references, shared draft, capability/busy/revision locks, full field preservation, physical state truth, responsive rendering.",
+      "style_model": "gpt-6-luna",
+      "style_rounds": 2,
+      "style_result": "passed; no blocking findings",
+      "record": "web/tests/style_review_2026-10-03.md",
+      "fixed": [
+        "Decorative preset tiles converted into protected real selection controls",
+        "Physical key order explained",
+        "Input test illustration and snapshot limits differentiated",
+        "Narrow-screen badges moved to separate row",
+        "Disconnected physical snapshots cleared; faults refresh disconnected UI"
+      ]
+    },
+    "screenshots": [
+      "fluxrail-watercolor-final.jpg",
+      "fluxrail-watercolor-full.jpg",
+      "fluxrail-watercolor-mobile.jpg"
+    ],
+    "hardware": "not tested",
+    "game": "not tested",
+    "downloads": "Previous IAB download limitation remains; real disk downloads not revalidated",
+    "dependencies": "Unchanged: calibration jobs, real motion/telemetry/benchmark, online UF2 and IO4 public interfaces."
+  },
+  "functional_template_knob_update": {
+    "date": "2026-10-03",
+    "public_interface_changed": false,
+    "scope": [
+      "web/index.html",
+      "web/style.css",
+      "web/src/app.js",
+      "web/src/knob-preview.js",
+      "web/tests/knob-preview.test.mjs",
+      "web/package.json",
+      "web/README.md",
+      "web/tests/validation_2026-10-03.json",
+      "web/tests/style_review_2026-10-03.md",
+      "docs/progress/模块4.md"
+    ],
+    "completed": [
+      "Functional copy throughout; blue/white/pink cute graphics retained",
+      "Main template create, edit-settings entry, rename, delete custom, restore preset",
+      "New template selected after existing create_profile and coherent readback; active unchanged",
+      "Interactive independent knob SVG previews: drag, wheel, keyboard, quarter/full-turn buttons, Home/reset, input/output positions and cumulative turns",
+      "Motion settings preserve existing draft and full set_profile; preview never marks draft or sends device input"
+    ],
+    "syntax": {
+      "units": 10,
+      "passed": 10,
+      "firmware_compiled": false
+    },
+    "regression": {
+      "tests": 21,
+      "passed": 21,
+      "failed": 0
+    },
+    "browser_passed": [
+      "Unconnected local knobs independently operable; keyboard negative angle normalized",
+      "Real browser drag top-to-right and wheel advance correct direction",
+      "Create PREVIEW TEST ID5 and select new ID; rename PREVIEW EDIT; edit entry reaches #keyboard",
+      "BT8 Space retained through complete RAM apply/readback",
+      "Gain 2: 0.25 raw turn / 90 degrees -> 0.5 scaled turn / 180 degrees; Y inversion points upward",
+      "Gain 0.5: one raw turn -> 0.5 scaled turn; reset works",
+      "Local preview leaves draft clean and apply disabled",
+      "Dirty draft disables create/rename/delete/restore/activate/profile select; edit navigation remains available",
+      "Delete own simulated custom template; restore preset; save only simulated state",
+      "390px viewport: actual content width 375px, single-column knob cards and main template controls, no overflow",
+      "Desktop 2153px viewport: actual content width 2138px, no overflow; 1285px screenshot: width 1270px",
+      "Final reload confirms functional template entry explanation; experimental outer and groups default closed",
+      "Final browser console has zero warning/error entries"
+    ],
+    "review": {
+      "code": "Primary manual review: local simulation boundary, SVG transforms, event handling, bounds/accessibility, shared draft, profile new-ID selection, capability/busy/revision/draft locks, DOM ID uniqueness.",
+      "style_model": "gpt-6-luna",
+      "style_result": "passed; desktop and mobile functional UI and knob direction/position have no blocking findings",
+      "fixed": [
+        "Profile capacity/preset conditions now preserve localDirty UI write lock",
+        "Ctrl/Meta wheel retains browser zoom",
+        "Edit-template navigation purpose explicitly documented in main hint"
+      ],
+      "blocking_open_findings": 0
+    },
+    "screenshots": [
+      "fluxrail-knob-preview.jpg",
+      "fluxrail-knob-preview-mobile.jpg",
+      "fluxrail-functional-profiles-mobile.jpg",
+      "fluxrail-functional-home.jpg"
+    ],
+    "hardware": "not tested; no real serial port opened, no firmware uploaded",
+    "game": "not tested",
+    "limits": [
+      "Preview is local hypothetical rotation; no physical sensor telemetry or HID output",
+      "U4/FPC1/P1 and U5/FPC2/P2 known; assembled left/right placement unconfirmed",
+      "Calibration, real motion/telemetry, online UF2, IO4 and browser download-to-disk dependencies unchanged"
+    ],
+    "next": "Read latest module progress and web README; run 21 tests; use isolated demo for UI changes. Integrate new public motion/telemetry capabilities only after contract is frozen."
+  }
+}
