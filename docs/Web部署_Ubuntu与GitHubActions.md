@@ -4,18 +4,18 @@
 
 ## 2026-10-08：从第3步之后使用交互部署包
 
-用户已安装基础环境并添加Nginx Full规则，希望余下步骤交互完成。当前交付 [r3部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r3.tar.gz) 含最新Web运行文件（包括BT10映射提示）、[交互脚本](../web/deploy/setup-fluxrail.sh)、工作流副本及网页SHA校验；不含密钥或登录信息。[包内说明](../web/deploy/README.setup.md)，脚本本地验证见[准备记录](../web/tests/deployment-script-2026-10-08/README.md)，r3包与本轮提交检查见[Git交付记录](../web/tests/git-delivery-2026-10-08/README.md)。原r2及其证据保留。
+用户已安装基础环境并添加Nginx Full规则，希望余下步骤交互完成。当前交付 [r4部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r4.tar.gz) 含最新Web运行文件（BT10映射提示及UF2固定说明实际修复）、[交互脚本](../web/deploy/setup-fluxrail.sh)、工作流副本及网页SHA校验；不含密钥或登录信息。[包内说明](../web/deploy/README.setup.md)，脚本本地验证见[准备记录](../web/tests/deployment-script-2026-10-08/README.md)，r4包与本轮修复见[新记录](../web/tests/uf2-fixed-result-2026-10-08/README.md)。原r2/r3及其证据保留。
 
 本地仓库根目录 PowerShell（将登录名/IP换成自己的；SSH非22端口时scp增加 `-P 实际端口`）：
 
 ```powershell
-scp .\outputs\FluxRail-Ubuntu-Setup-2026-10-08-r3.tar.gz ubuntu@SERVER_IP:~/
+scp .\outputs\FluxRail-Ubuntu-Setup-2026-10-08-r4.tar.gz ubuntu@SERVER_IP:~/
 ```
 
 然后在服务器自己的SSH交互终端执行：
 
 ```bash
-tar -xzf ~/FluxRail-Ubuntu-Setup-2026-10-08-r3.tar.gz -C ~/
+tar -xzf ~/FluxRail-Ubuntu-Setup-2026-10-08-r4.tar.gz -C ~/
 cd ~/fluxrail-setup
 sudo bash setup-fluxrail.sh
 ```
