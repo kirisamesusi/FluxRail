@@ -1,0 +1,74 @@
+name: Deploy FluxRail Web
+
+on:
+  push:
+    branches: [test]
+    paths:
+      - 'web/**'
+      - 'LICENSE'
+      - '.github/workflows/deploy-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fluxrail-web-test
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/test'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: web-test
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Test Web
+        working-directory: web
+        run: npm test
+      - name: Prepare static release
+        shell: bash
+        run: |
+          set -euo pipefail
+          node web/deploy/prepare-site.mjs "$RUNNER_TEMP/fluxrail-site"
+          printf '%s\n' "$GITHUB_SHA-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT" > "$RUNNER_TEMP/fluxrail-site/deploy-version.txt"
+          bash -n web/deploy/activate-release.sh
+      - name: Upload and activate
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_DOMAIN: ${{ vars.DEPLOY_DOMAIN }}
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_HOST:?Missing DEPLOY_HOST}"
+          : "${DEPLOY_SSH_KEY:?Missing DEPLOY_SSH_KEY}"
+          : "${DEPLOY_KNOWN_HOSTS:?Missing DEPLOY_KNOWN_HOSTS}"
+          : "${DEPLOY_DOMAIN:?Missing DEPLOY_DOMAIN}"
+          port=${DEPLOY_PORT:-22}
+          [[ "$DEPLOY_HOST" =~ ^[a-zA-Z0-9][a-zA-Z0-9.-]*$ ]]
+          [[ "$DEPLOY_DOMAIN" =~ ^[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]$ ]]
+          [[ "$port" =~ ^[0-9]{1,5}$ ]] && (( 10#$port >= 1 && 10#$port <= 65535 ))
+          release_id="$GITHUB_SHA-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          key="$RUNNER_TEMP/fluxrail-deploy-key"
+          known="$RUNNER_TEMP/fluxrail-known-hosts"
+          trap 'rm -f -- "$key" "$known"' EXIT
+          umask 077
+          printf '%s\n' "$DEPLOY_SSH_KEY" > "$key"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$known"
+          ssh_options=(-i "$key" -p "$port" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$known" -o ConnectTimeout=15)
+          destination="fluxrail-deploy@$DEPLOY_HOST"
+          ssh "${ssh_options[@]}" "$destination" "mkdir -m 755 '/srv/fluxrail/releases/$release_id'"
+          export RSYNC_RSH="ssh -i $key -p $port -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$known -o ConnectTimeout=15"
+          rsync -r --chmod=D755,F644 "$RUNNER_TEMP/fluxrail-site/" "$destination:/srv/fluxrail/releases/$release_id/"
+          ssh "${ssh_options[@]}" "$destination" "bash -s -- '$release_id' '$DEPLOY_DOMAIN'" < web/deploy/activate-release.sh
+          printf 'Deployed %s to https://%s\n' "$release_id" "$DEPLOY_DOMAIN"

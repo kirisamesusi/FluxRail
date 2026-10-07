@@ -14,14 +14,13 @@ export function mountGainControl(container, { object, key, id, label, onChange }
   exact.append(make('span', '灵敏度'), number); body.append(scale, exact);
   const hint = make('small', '', 'gain-error'); hint.id = id + '-help'; number.setAttribute('aria-describedby', hint.id); ruler.setAttribute('aria-describedby', hint.id);
   root.append(body, hint); container.append(root);
-  const guidance = '1.0～10.0，步进 0.1；5.0 为原来的 1 倍。';
   function sync() {
     const view = gainView(object[key], key === 'center_gain' ? 'f32' : 'f64');
     number.setCustomValidity('');
     number.value = view.legacy ? '' : view.value.toFixed(1);
     ruler.value = view.legacy ? '5' : String(view.value); ruler.classList.toggle('outside-scale', view.legacy);
     ruler.setAttribute('aria-valuetext', view.legacy ? '旧配置原倍率 ' + object[key] + '，原值保留；选择刻度才会替换' : view.value.toFixed(1));
-    hint.textContent = view.legacy ? '旧配置原倍率 ' + object[key] + ' 无法用新刻度准确表示，原值保留。重新选择 1.0～10.0 才会替换。' : guidance;
+    hint.textContent = view.legacy ? '旧配置原倍率 ' + object[key] + ' 无法用新刻度准确表示，原值保留。重新选择 1.0～10.0 才会替换。' : '';
   }
   function commit(value) {
     try {

@@ -83,18 +83,41 @@ function fixture() {
 }
 const file = (b = image()) => ({ name: 'FluxRail.uf2', size: b.length, async arrayBuffer() { return b.buffer; } });
 test('先选择文件再连接、重连同版及断线清除当前版本，不发设备请求', async () => {
-  const f = fixture(); await f.controller.check(file()); assert.match(f.version.textContent, /请连接设备/);
+  // 以当前Web为准：result保留文件详情，version显示当前会话的比较提示。
+  const f = fixture(); f.controller.render();
+  assert.equal(f.version.textContent, '选择UF2后自动识别固件并比较版本。');
+  await f.controller.check(file()); assert.match(f.version.textContent, /请连接设备/);
+  const summary = f.result.textContent;
+  assert.match(summary, /FluxRail\.uf2[\s\S]*识别通过[\s\S]*0\.10\.0[\s\S]*板型[\s\S]*2块 \/ 512字节/);
   f.connect({ hello }); assert.match(f.current.textContent, /0.9.0/); assert.match(f.version.textContent, /可升级/);
+  assert.equal(f.result.textContent, summary);
   f.connect(null); assert.match(f.current.textContent, /未连接设备/); assert.match(f.version.textContent, /请连接设备/);
+  assert.equal(f.result.textContent, summary);
   f.connect({ hello: { ...hello, firmware_version: '0.10.0' } }); assert.match(f.version.textContent, /版本相同/);
+  assert.equal(f.result.textContent, summary);
   f.connect({ hello: { ...hello, serial: 'device-b' } }); assert.match(f.version.textContent, /设备序号改变/);
+  assert.equal(f.version.classList.error, true); assert.equal(f.result.textContent, summary);
   await f.controller.check(file()); assert.match(f.version.textContent, /可升级/);
+  assert.equal(f.version.classList.error, false); assert.equal(f.result.textContent, summary);
+  assert.match(f.version.textContent, /文件检查不会刷写设备/);
 });
 test('无效/过大文件和取消选择会清空旧候选；模拟不参与硬件版本比较', async () => {
   const f = fixture(); f.connect({ hello, simulated: true }); await f.controller.check(file());
-  assert.match(f.current.textContent, /模拟/); assert.match(f.version.textContent, /模拟会话/);
+  assert.match(f.current.textContent, /模拟固件版本[\s\S]*仅模拟/);
+  assert.match(f.version.textContent, /模拟会话[\s\S]*请连接真实设备/);
+  assert.doesNotMatch(f.version.textContent, /可升级|版本相同/);
+  assert.match(f.result.textContent, /FluxRail\.uf2[\s\S]*识别通过[\s\S]*板型/);
   await assert.rejects(f.controller.check(file(uf2(new Uint8Array(256))))); assert.equal(f.controller.candidate, null);
-  assert.match(f.version.textContent, /固件不对/); assert.equal(f.version.classList.error, true);
+  assert.equal(f.controller.expectedSerial, null);
+  assert.match(f.result.textContent, /固件不对/); assert.doesNotMatch(f.result.textContent, /识别通过/);
+  assert.equal(f.version.textContent, f.result.textContent); assert.equal(f.version.classList.error, true);
+  f.connect(null); assert.match(f.current.textContent, /未连接设备/);
+  assert.equal(f.version.textContent, f.result.textContent); assert.equal(f.version.classList.error, true);
   await assert.rejects(f.controller.check({ size: 8 * 1024 * 1024 + 1 })); assert.match(f.result.textContent, /文件过大/);
-  await f.controller.check(null); assert.equal(f.controller.candidate, null); assert.equal(f.version.classList.error, false);
+  assert.equal(f.controller.candidate, null); assert.equal(f.version.classList.error, true);
+  assert.equal(f.version.textContent, f.result.textContent);
+  await f.controller.check(null); assert.equal(f.controller.candidate, null); assert.equal(f.controller.error, null);
+  assert.equal(f.version.classList.error, false);
+  assert.match(f.result.textContent, /选择本项目正式FluxRail UF2/);
+  assert.equal(f.version.textContent, '选择UF2后自动识别固件并比较版本。');
 });

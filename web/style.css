@@ -269,6 +269,10 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
 .confirmation-dialog::backdrop{background:#293d5c55;backdrop-filter:blur(4px)}
 .confirmation-dialog h2{margin:0 0 12px;font-size:22px}
 .confirmation-dialog p{line-height:1.7;white-space:pre-line}
+.confirmation-dialog .io4-warning { position:relative; margin:20px 0 16px; padding:4px 0 4px 33px; }
+.confirmation-dialog .io4-warning:before { content:'!'; position:absolute; left:0; top:4px; display:grid; place-items:center; width:23px; height:23px; border-radius:50%; background:#f8eaf1; color:#9b6482; font-size:14px; font-weight:700; }
+.confirmation-dialog .io4-warning > strong { display:block; font-size:15px; color:#46667e; }
+.confirmation-dialog .io4-warning > p { margin:8px 0 0; font-size:13px; line-height:1.9; }
 .confirmation-dialog label{display:grid;gap:8px;margin-top:20px}
 .confirmation-dialog [hidden]{display:none}
 .confirmation-dialog label input{width:100%;box-sizing:border-box}
@@ -393,7 +397,7 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
 .uf2-dialog-fallback .manual-update { margin:10px 0; font-size:12px; }
 
 .gain-control input.outside-scale::-webkit-slider-thumb { opacity:0; }
-#confirmation-description { white-space:pre-line; line-height:1.9; }
+#confirmation-description { line-height:1.9; }
 #demo-label { display:block; font-size:11px; font-weight:400; }
 #identity-state { font-size:11px; font-weight:400; }
 .io4-key-card { display:flex; flex-direction:column; gap:8px; min-width:0; }

@@ -1,0 +1,42 @@
+{
+  "date_local": "2026-10-08",
+  "cases": [
+    {
+      "name": "keyboard",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住 本设备的 BT10（当前映射：N），再重新接通电源。",
+      "cancel_preserved": true
+    },
+    {
+      "name": "mouse",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住 本设备的 BT10（当前映射：鼠标右键），再重新接通电源。",
+      "cancel_preserved": true
+    },
+    {
+      "name": "disabled",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住 本设备的 BT10（当前映射：禁用），再重新接通电源。",
+      "cancel_preserved": true
+    },
+    {
+      "name": "draft",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住 本设备的 BT10（网页草稿映射：A），再重新接通电源。",
+      "cancel_preserved": true
+    },
+    {
+      "name": "different-template",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住 本设备的 BT10（编辑模板映射：B），再重新接通电源。",
+      "cancel_preserved": true
+    },
+    {
+      "name": "unavailable",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住 本设备的 BT10（映射未读回），再重新接通电源。",
+      "cancel_preserved": true
+    }
+  ],
+  "unchanged_files": [
+    "C:\\Users\\admin\\Documents\\FluxRail\\web\\src\\confirmation.js",
+    "C:\\Users\\admin\\Documents\\FluxRail\\web\\index.html",
+    "C:\\Users\\admin\\Documents\\FluxRail\\web\\style.css",
+    "C:\\Users\\admin\\Documents\\FluxRail\\web\\tests\\integration-ui.test.mjs"
+  ],
+  "passed": true
+}

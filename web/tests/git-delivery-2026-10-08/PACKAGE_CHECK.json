@@ -1,0 +1,8 @@
+{
+  "date_local": "2026-10-08",
+  "bundle": "FluxRail-Ubuntu-Setup-2026-10-08-r3.tar.gz",
+  "files": 33,
+  "sha256": "6a84fb40ea0307239f1693a5768f47b3aaf5921b8cdc12bc21181291c5b82a90",
+  "matches_current_sources": true,
+  "passed": true
+}

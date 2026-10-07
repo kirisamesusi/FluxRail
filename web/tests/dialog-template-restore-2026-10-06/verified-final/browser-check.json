@@ -1,0 +1,13 @@
+{
+  "date_local": "2026-10-06",
+  "hardware_tested": false,
+  "checks": [
+    "IO4/restart presentation, no overflow, Escape/cancel no writes at 1274",
+    "IO4/restart presentation, no overflow, Escape/cancel no writes at 390",
+    "IO4/restart presentation, no overflow, Escape/cancel no writes at 320",
+    "IO4 confirm only changes draft; other dialogs clear warning/note; confirmed reboot writes once; UF2 guidance preserved",
+    "template name dialog and initial input focus preserved; cancellation no writes"
+  ],
+  "passed": true,
+  "browser": "151.0.4129.107"
+}

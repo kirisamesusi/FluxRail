@@ -42,8 +42,9 @@ export async function confirmedCommand(device, op, confirm, { isCurrent = () => 
   const boot = op === 'enter_bootloader';
   if (!await confirm({ title: boot ? '进入 UF2 下载模式' : '重启设备', confirmLabel: boot ? '确认进入下载模式' : '确认重启', description: boot
     ? '请先保存需要保留的设置。确认后连接将断开，进入下载模式不代表更新完成。'
-    : '重启会丢失未保存的修改，并使用已保存的启动模式。IO4 模式下网页无法连接；按住 BT10 复位或重新上电可返回普通模式。',
-    ...(boot ? { steps: ['等待电脑出现 RPI-RP2 磁盘。', '手动复制匹配此板型的 FluxRail UF2 到磁盘，Web Serial 不传送固件。', '完成后重新连接，核对固件版本并检查功能。'], fallback: '按住 BOOT 接入 USB 后松开；或按住 BOOT，按下并松开 RUN，再松开 BOOT。' } : {}) })) return false;
+    : '重启后，未保存的修改会丢失，设备将使用已保存的设置。确定要重启吗？',
+    ...(!boot ? { note: '点击“确认重启”后，设备将重启并断开网页连接。' } : {}),
+    ...(boot ? { steps: ['等待电脑出现 RPI-RP2 磁盘。', '手动复制匹配此板型的 FluxRail UF2 到磁盘，Web Serial 不传送固件。', '完成后重新连接，核对固件版本并检查功能。'], fallback: '按住键盘上的 BOOT 接入 USB 后松开。' } : {}) })) return false;
   guard(); check();
   try {
     await device.client.request(op, { expected_revision: device.revision, ...(boot ? {} : { target: device.meta.startup_usb_mode }) }, 4000);

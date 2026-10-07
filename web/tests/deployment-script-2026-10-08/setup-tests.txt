@@ -1,0 +1,17 @@
+PASS input validation accepts valid domains/ports and rejects URL/injection/range errors
+PASS ask writes into caller variable and confirm recognizes yes
+PASS nginx template retains literal variables, domain and Web Serial policy
+PASS new independent site validates before service reload
+
+保留已有FluxRail站点配置（包括Certbot加入的HTTPS）。
+PASS rerun preserves existing TLS/custom site configuration byte for byte
+PASS conflicting existing site is refused without overwrite
+PASS nginx validation failure removes only newly created site and never reloads
+
+已安装部署包中的当前FluxRail网页。
+
+保留当前网页版本：/tmp/fluxrail-setup-test-r9ns0oqs/site-root/releases/setup-20261007T161329Z-1950
+PASS initial payload installs; rerun retains live version even if bundle changes
+PASS tampered payload fails checksum before publishing a current link
+PASS GitHub mocked secrets use stdin/environment; no key logging or existing environment replacement
+Completed 10 isolated checks

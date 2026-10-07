@@ -1,0 +1,28 @@
+{
+  "date_local": "2026-10-08",
+  "bundle": "outputs/FluxRail-Ubuntu-Setup-2026-10-08-r2.tar.gz",
+  "bundle_sha256": "09237954ceea76ab2f822af0a4e284111d2e584934eed9b7902f7a370d589e64",
+  "regular_file_count": 33,
+  "runtime_file_count": 29,
+  "isolated_checks": 10,
+  "bash_syntax": "passed",
+  "python_syntax": "passed",
+  "payload_sha_matches_sources": true,
+  "site_checksum_manifest": "passed",
+  "existing_archive_refused_unchanged": true,
+  "initial_provisional_bundle_unchanged": true,
+  "web_tests": {
+    "passed": 73,
+    "failed": 0,
+    "scope": "complete npm test, run after adding setup files"
+  },
+  "not_run": [
+    "real Ubuntu setup",
+    "apt/snap installations",
+    "Certbot",
+    "GitHub auth/API",
+    "public deployment",
+    "browser/hardware/game"
+  ],
+  "script_sha256": "aeaa9166d36dbbfeb839479eea1d25de07f1b78091db6954a441e7e8ae3a8103"
+}

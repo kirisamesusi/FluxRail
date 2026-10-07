@@ -1,6 +1,7 @@
 import { confirmedCommand, confirmationGuard } from './workflows.js';
 import { assert } from './config.js';
 import { mountIo4Editor } from './io4-editor.js';
+import { actionLabel } from './keyboard.js';
 /** 整合适配只调用已冻结CDC v1，不产生实时运动。圈数来自设备累计值，
  * 页面丢快照也不积分相邻角度；记录表示10Hz诊断而非毫秒级性能验收。 */
 let view=null,last=null,lastDevice=null;
@@ -73,7 +74,10 @@ export function mountIntegration(context){
     const d=context.getDevice(),guard=confirmationGuard(d,()=>context.getDevice()===d);
     assert(!hasIo4Draft()&&!hasCalibrationJob(),'请先处理 IO4 草稿或校准任务');
     const next=view.modeValue==='IO4'?'NORMAL_NKRO':'IO4';
-    if(next==='IO4'&&!await context.confirm({title:'选择 IO4 启动模式',confirmLabel:'选择 IO4',description:'这是待保存的启动模式，尚未切换设备。应用并保存后，下次上电或重启启用 IO4；网页将无法连接。按住 BT10 复位或重新上电可返回普通模式。取消会保留原选择。'}))return;
+    const bt10=d.draft?.config?.keyboard?.bindings?.[9]?.action??d.profile?.config?.keyboard?.bindings?.[9]?.action;
+    const mappingState=d.localDirty?'网页草稿映射':d.selected!==d.meta?.active_profile?'编辑模板映射':'当前映射';
+    const bt10Label='本设备的 BT10（'+(bt10?mappingState+'：'+actionLabel(bt10):'映射未读回')+'）';
+    if(next==='IO4'&&!await context.confirm({title:'启用 IO4 模式？',confirmLabel:'了解，选择 IO4',warning:'启用后，配置网页将无法连接设备。',description:'应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住'+bt10Label+'，再重新接通电源。',note:'这里只选择启动模式，不会直接切换,应用并保存后重启生效。'}))return;
     guard();assert(!hasIo4Draft()&&!hasCalibrationJob(),'设备状态已变化');
     view.modeValue=next;context.notice('启动模式选择尚未应用；请点击应用并保存。');
   },null);

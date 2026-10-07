@@ -1,0 +1,52 @@
+✔ 读取真实payload识别头，支持跨块、乱序块、非零byteOffset (1.3159ms)
+✔ 其他固件、旧文件、错误板型、截断/损坏/重复识别头拒绝 (0.9356ms)
+✔ 文件头/UF2 padding的伪识别头不能替代Flash payload，跨空洞拒绝 (0.3228ms)
+✔ UF2损坏、地址重叠、块号重复、保留区、大小错误拒绝 (0.2119ms)
+✔ 版本按数值和SemVer预发布顺序比较，兼容旧集成版本 (0.3614ms)
+✔ 版本相同/可升级/低版本，以及未知版本、模拟、设备变更分别提示 (0.2532ms)
+✖ 先选择文件再连接、重连同版及断线清除当前版本，不发设备请求 (0.7316ms)
+✖ 无效/过大文件和取消选择会清空旧候选；模拟不参与硬件版本比较 (0.3076ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 103.9775
+
+✖ failing tests:
+
+test at tests\uf2.test.mjs:85:1
+✖ 先选择文件再连接、重连同版及断线清除当前版本，不发设备请求 (0.7316ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /请连接设备/. Input:
+  
+  'FluxRail.uf2\nFluxRail固件识别通过 · 版本 0.10.0\n板型 fluxrail-rp2040-4mib\n2块 / 512字节'
+  
+      at TestContext.<anonymous> (file:///C:/Users/admin/Documents/FluxRail/web/tests/uf2.test.mjs:86:65)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'FluxRail.uf2\nFluxRail固件识别通过 · 版本 0.10.0\n板型 fluxrail-rp2040-4mib\n2块 / 512字节',
+    expected: /请连接设备/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\uf2.test.mjs:96:1
+✖ 无效/过大文件和取消选择会清空旧候选；模拟不参与硬件版本比较 (0.3076ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /模拟会话/. Input:
+  
+  'FluxRail.uf2\nFluxRail固件识别通过 · 版本 0.10.0\n板型 fluxrail-rp2040-4mib\n2块 / 512字节'
+  
+      at TestContext.<anonymous> (file:///C:/Users/admin/Documents/FluxRail/web/tests/uf2.test.mjs:98:53)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'FluxRail.uf2\nFluxRail固件识别通过 · 版本 0.10.0\n板型 fluxrail-rp2040-4mib\n2块 / 512字节',
+    expected: /模拟会话/,
+    operator: 'match',
+    diff: 'simple'
+  }

@@ -1,0 +1,38 @@
+{
+  "date_local": "2026-10-08",
+  "cases": [
+    {
+      "name": "keyboard",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10（当前映射：N），再重新接通电源。",
+      "passed": true
+    },
+    {
+      "name": "mouse",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10（当前映射：鼠标右键），再重新接通电源。",
+      "passed": true
+    },
+    {
+      "name": "disabled",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10（当前映射：禁用），再重新接通电源。",
+      "passed": true
+    },
+    {
+      "name": "draft",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10（网页草稿映射：A），再重新接通电源。",
+      "passed": true
+    },
+    {
+      "name": "different-template",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10（编辑模板映射：B），再重新接通电源。",
+      "passed": true
+    },
+    {
+      "name": "unavailable",
+      "description": "应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10（映射未读回），再重新接通电源。",
+      "passed": true
+    }
+  ],
+  "other_dialog_fields_unchanged": true,
+  "protected_files_unchanged": true,
+  "passed": true
+}

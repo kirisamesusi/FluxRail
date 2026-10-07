@@ -49,7 +49,11 @@
 <dialog id="confirmation-dialog" class="confirmation-dialog" aria-labelledby="confirmation-title" aria-describedby="confirmation-description">
   <form novalidate>
     <h2 id="confirmation-title" data-title></h2>
-    <p id="confirmation-description" data-description></p>
+    <div id="confirmation-description">
+      <p data-description></p>
+      <div class="io4-warning" data-warning hidden><strong data-warning-title></strong><p data-warning-description></p></div>
+      <p class="hint" data-note hidden></p>
+    </div>
     <div data-guidance hidden></div>
     <label data-name-row hidden>新模板名称 <input aria-label="新模板名称" maxlength="31" autocomplete="off" spellcheck="false" aria-describedby="template-name-help confirmation-error"></label>
     <p id="template-name-help" class="hint">模板名称使用 1～31 个 ASCII 字符，不含双引号和反斜杠。</p>

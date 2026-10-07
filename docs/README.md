@@ -26,7 +26,11 @@
 
 Web与角色视觉另见[视觉素材与角色规范](视觉素材与角色规范.md)及[基础素材库](../design/asset-library/README.md)，保存用户选定的水色少女、原图、配色、头像、键盘插画与生成信息。
 
-Web生产重构依据 [2026-10-05固定模板交接](Web重构交接_2026-10-05.md) 和 [固定模板](../design/web-template-2026-10-05/README.md)。该设计基准已沿现有生产实现迁移，结果见 [生产Web重构验证](../web/tests/refactor-2026-10-05/README.md)；固定模板继续冻结，软件/夹具证据不替代硬件验收。
+服务器朋友测试站见 [Ubuntu 24.04 / Nginx独立站点 / HTTPS / GitHub Actions部署](Web部署_Ubuntu与GitHubActions.md)，域名为 `fluxrail.baka.moe`；部署跟随 `test` 分支 Web 更新，不表示正式硬件验收。
+
+Web当前页面与提示规则以 [Web模块交接](modules/05_Web配置工具.md) 和 [Web README](../web/README.md) 为入口（2026-10-08同步）。默认首页是设备状态；模拟演示位于“实验性功能 → 临时测试 · 模拟演示”。用户本次要求UF2测试适配当前Web：version显示连接/比较/模拟提示，result显示文件详情或文件错误；专项8/8、完整Node73/73通过，见[本轮记录](../web/tests/uf2-current-web-2026-10-08/README.md)。本轮未改页面代码，也不证明此前固定说明目标已实现；[10/07失败复核](../web/tests/web-docs-sync-2026-10-07/README.md)保留。模拟入口迁移不取消模拟版本警示。
+
+Web生产重构依据 [2026-10-05固定模板交接](Web重构交接_2026-10-05.md) 和 [固定模板](../design/web-template-2026-10-05/README.md)。该设计基准已沿现有生产实现迁移，结果见 [生产Web重构验证](../web/tests/refactor-2026-10-05/README.md)；重构交接中的“尚未接入”、旧页面和测试数量只描述当时阶段。固定模板继续冻结，软件/夹具证据不替代硬件验收。
 
 ## 历史和原始证据
 

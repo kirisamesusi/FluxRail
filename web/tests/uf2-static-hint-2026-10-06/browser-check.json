@@ -1,0 +1,10 @@
+{
+  "date_local": "2026-10-06",
+  "hardware_tested": false,
+  "checks": [
+    "fixed hint across initial/error/valid/clear, result-only details, no overflow at 1274",
+    "fixed hint across initial/error/valid/clear, result-only details, no overflow at 390"
+  ],
+  "passed": true,
+  "browser": "151.0.4129.107"
+}
