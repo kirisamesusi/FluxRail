@@ -4,18 +4,20 @@
 
 ## 2026-10-08：从第3步之后使用交互部署包
 
-用户已安装基础环境并添加Nginx Full规则，希望余下步骤交互完成。当前交付 [r4部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r4.tar.gz) 含最新Web运行文件（BT10映射提示及UF2固定说明实际修复）、[交互脚本](../web/deploy/setup-fluxrail.sh)、工作流副本及网页SHA校验；不含密钥或登录信息。[包内说明](../web/deploy/README.setup.md)，脚本本地验证见[准备记录](../web/tests/deployment-script-2026-10-08/README.md)，r4包与本轮修复见[新记录](../web/tests/uf2-fixed-result-2026-10-08/README.md)。原r2/r3及其证据保留。
+用户已安装基础环境并添加Nginx Full规则，希望余下步骤交互完成。当前交付 [r5部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r5.tar.gz) 含最新Web运行文件（BT10映射提示、UF2固定说明、正确文件反馈复位及动态结果可读性）、[交互脚本](../web/deploy/setup-fluxrail.sh)、工作流副本及网页SHA校验；不含密钥或登录信息。[包内说明](../web/deploy/README.setup.md)，脚本本地验证见[准备记录](../web/tests/deployment-script-2026-10-08/README.md)，r5包与本轮修复见[新记录](../web/tests/uf2-copy-readability-2026-10-08/README.md)。原r2/r3/r4及其证据保留。
+
+后续部署已启用：`7d9273b992257e007d12267af656e2872142cca9`的test分支Actions运行37658432800成功，公网deploy-version与该提交一致；下文安装/未执行说明为准备阶段范围。本轮r5页面改动仍需以对应新提交的Actions及公网版本分别核对。
 
 本地仓库根目录 PowerShell（将登录名/IP换成自己的；SSH非22端口时scp增加 `-P 实际端口`）：
 
 ```powershell
-scp .\outputs\FluxRail-Ubuntu-Setup-2026-10-08-r4.tar.gz ubuntu@SERVER_IP:~/
+scp .\outputs\FluxRail-Ubuntu-Setup-2026-10-08-r5.tar.gz ubuntu@SERVER_IP:~/
 ```
 
 然后在服务器自己的SSH交互终端执行：
 
 ```bash
-tar -xzf ~/FluxRail-Ubuntu-Setup-2026-10-08-r4.tar.gz -C ~/
+tar -xzf ~/FluxRail-Ubuntu-Setup-2026-10-08-r5.tar.gz -C ~/
 cd ~/fluxrail-setup
 sudo bash setup-fluxrail.sh
 ```

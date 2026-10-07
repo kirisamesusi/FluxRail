@@ -86,7 +86,7 @@ export function assessFirmware(firmware, hello, { simulated = false, expectedSer
       (hello.firmware_id !== undefined && hello.firmware_id !== firmware.id) ||
       (hello.firmware_board !== undefined && hello.firmware_board !== firmware.board) ||
       (hello.firmware_metadata_format !== undefined && hello.firmware_metadata_format !== firmware.format))
-    return { status: 'wrong_device', message: '固件不对：文件与当前设备的固件身份或板型不匹配。' };
+    return { status: 'wrong_device', message: '固件版本不对：请重新检查固件文件' };
   let comparison;
   try { comparison = compareVersions(firmware.version, hello.firmware_version); }
   catch { return { status: 'unknown', message: '当前固件版本无法比较（' + String(hello.firmware_version) + '），文件版本 ' + firmware.version + '。' }; }

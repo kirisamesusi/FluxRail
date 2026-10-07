@@ -329,7 +329,7 @@ $('import-file').onchange=()=>action(async()=>{
 $('import-commit').onclick=()=>action(async()=>{device.checkWritable();assert(!device.localDirty&&importCandidate,'请重新选择文件并预览');try{await importSnapshot(client,importCandidate.bytes,importCandidate.revision);await device.refresh();render();}catch(error){device.ready=false;throw error;}},'固件校验并确认完整导入，RAM读回完成。需要掉电保留时再保存。');
 $('record').onclick=()=>{recording=!recording;$('record').textContent=recording?'停止状态记录':'开始状态记录';};
 $('csv').onclick=()=>{const columns=['host_time','revision','physical_mask','config_ready','applying','maintenance','save_result','valid_slots','protocol_requests','protocol_rejected','overlong_lines'];const csv=columns.join(',')+'\r\n'+records.map(r=>columns.map(k=>'"'+String(r[k]??'').replaceAll('"','""')+'"').join(',')).join('\r\n');download('FluxRail-status.csv',csv,'text/csv;charset=utf-8');};
-$('uf2-file').onchange=()=>action(async()=>{await firmwareUpdate.check($('uf2-file').files[0]);},null,'UF2检查未通过，请查看固件更新区的提示。');
+$('uf2-file').onchange=()=>action(async()=>{const file=$('uf2-file').files[0];await firmwareUpdate.check(file);notice(file?'UF2检查通过，请查看固件更新区的识别与版本比较结果。':'已清空 UF2 文件选择。');},null,'UF2检查未通过，请查看固件更新区的提示。');
 // 浏览器尽力提示未保存离开；不自动save，不假定beforeunload一定可阻止关闭。
 window.addEventListener('beforeunload',event=>{if(device?.localDirty||hasIo4Draft()||hasModeDraft()||client?.last?.dirty){event.preventDefault();event.returnValue='';}});
 mountIntegration({getDevice:()=>device,getClient:()=>client,runAction:action,onControlsChange:controls,refresh:async()=>{await device.refresh();resetModeDraft(device);render();},confirm:confirmChange,notice,readSettings,hasModeDraft,calibrationBusy:hasCalibrationJob});

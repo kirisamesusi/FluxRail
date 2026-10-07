@@ -6,7 +6,7 @@
 
 朋友测试站部署见 [Ubuntu / HTTPS / GitHub Actions](../docs/Web部署_Ubuntu与GitHubActions.md)：Nginx独立站点配置，`test`分支测试通过后上传静态运行文件；服务器无需Node常驻服务。部署文件在 `web/deploy/`，工作流在 `.github/workflows/deploy-web.yml`。
 
-已完成基础环境后可使用 [交互式部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r2.tar.gz)，解压执行 `sudo bash setup-fluxrail.sh`；[使用说明](deploy/README.setup.md)。需要打包新的本地Web快照，根目录运行 `python web/deploy/package-setup.py outputs/新的文件名.tar.gz`，已有包不覆盖。
+已完成基础环境后可使用 [交互式部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r5.tar.gz)，解压执行 `sudo bash setup-fluxrail.sh`；[使用说明](deploy/README.setup.md)。需要打包新的本地Web快照，根目录运行 `python web/deploy/package-setup.py outputs/新的文件名.tar.gz`，已有包不覆盖。
 
 ## 启动与页面入口
 
@@ -32,6 +32,8 @@
 `#version-result` 始终显示“选择UF2后自动识别固件并比较版本。”，不显示动态结果或错误样式。下方 `#uf2-result` 显示读取进度、文件识别详情加最新版本比较/连接/模拟/换设备提示，或者单一文件错误；连接变化时重建结果，保留文件详情且不重复追加。错误样式仅用于结果框，取消选择清除候选/摘要/错误并恢复选文件说明。`#current-firmware` 单独显示当前真实/模拟版本，`#update-cap` 单独说明设备下载模式能力。
 
 “模拟会话不能用于比较实际设备版本”是UF2结果提示，和模拟入口移到实验性功能没有冲突。选文件仍自动识别；模拟设备版本不能用于真实设备升级判断。网页检查不刷写，进入下载模式后仍需用户手动复制UF2，再重连核对版本。
+
+2026-10-08后续反馈修复：选正确文件或清空选择都会更新顶部操作提示，避免残留上一份错误文件的失败提示。UF2结果框及顶部操作提示使用14px、600字重；文件信息标签为“型号”，文件拒绝及身份不匹配统一显示“固件版本不对：请重新检查固件文件”，底层校验仍保留详细错误。下载确认说明改为“手动复制匹配此设备的 FluxRail UF2”。上方固定说明和IO4弹窗保持现行规则。Node73/73及Edge三宽度错误→正确→清空、样式和下载说明检查通过，见[反馈与可读性记录](tests/uf2-copy-readability-2026-10-08/README.md)。
 
 本轮修复真实提示渲染，并恢复两项控制器测试对固定说明及下方动态结果的检查，额外覆盖读取中说明固定、反复连接不重复追加文件详情；完整Web73/73通过，Edge在1274/390/320px检查初始/错误/有效/清空通过，见[固定结果修复记录](tests/uf2-fixed-result-2026-10-08/README.md)。此前[10/08仅适配测试](tests/uf2-current-web-2026-10-08/README.md)与[10/07失败复核](tests/web-docs-sync-2026-10-07/README.md)保持原样，不能把仅适配测试的通过当作当时已修页面。
 

@@ -87,7 +87,7 @@ function fixedHint(f) {
   assert.equal(f.version.classList.error, false);
 }
 function fileDetails(f) {
-  assert.match(f.result.textContent, /FluxRail\.uf2[\s\S]*识别通过[\s\S]*0\.10\.0[\s\S]*板型[\s\S]*2块 \/ 512字节/);
+  assert.match(f.result.textContent, /FluxRail\.uf2[\s\S]*识别通过[\s\S]*0\.10\.0[\s\S]*型号[\s\S]*2块 \/ 512字节/);
   assert.equal((f.result.textContent.match(/识别通过/g) ?? []).length, 1);
   fixedHint(f);
 }
@@ -110,12 +110,12 @@ test('无效/过大文件和取消选择会清空旧候选；模拟不参与硬�
   assert.doesNotMatch(f.result.textContent, /可升级|版本相同/); fileDetails(f);
   await assert.rejects(f.controller.check(file(uf2(new Uint8Array(256))))); assert.equal(f.controller.candidate, null);
   assert.equal(f.controller.expectedSerial, null); assert.equal(f.controller.fileSummary, '');
-  assert.match(f.result.textContent, /固件不对/); assert.doesNotMatch(f.result.textContent, /识别通过/);
-  assert.equal((f.result.textContent.match(/固件不对/g) ?? []).length, 1);
+  assert.equal(f.result.textContent, '固件版本不对：请重新检查固件文件'); assert.doesNotMatch(f.result.textContent, /识别通过/);
+  assert.equal((f.result.textContent.match(/固件版本不对/g) ?? []).length, 1);
   assert.equal(f.result.classList.error, true); fixedHint(f);
   f.connect(null); assert.match(f.current.textContent, /未连接设备/);
-  assert.match(f.result.textContent, /固件不对/); assert.equal(f.result.classList.error, true); fixedHint(f);
-  await assert.rejects(f.controller.check({ size: 8 * 1024 * 1024 + 1 })); assert.match(f.result.textContent, /文件过大/);
+  assert.equal(f.result.textContent, '固件版本不对：请重新检查固件文件'); assert.equal(f.result.classList.error, true); fixedHint(f);
+  await assert.rejects(f.controller.check({ size: 8 * 1024 * 1024 + 1 }), /UF2文件过大/); assert.equal(f.result.textContent, '固件版本不对：请重新检查固件文件');
   assert.equal(f.controller.candidate, null); assert.equal(f.result.classList.error, true); fixedHint(f);
   await f.controller.check(null); assert.equal(f.controller.candidate, null); assert.equal(f.controller.error, null);
   assert.equal(f.result.classList.error, false);
