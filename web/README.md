@@ -6,7 +6,7 @@
 
 朋友测试站部署见 [Ubuntu / HTTPS / GitHub Actions](../docs/Web部署_Ubuntu与GitHubActions.md)：Nginx独立站点配置，`test`分支测试通过后上传静态运行文件；服务器无需Node常驻服务。部署文件在 `web/deploy/`，工作流在 `.github/workflows/deploy-web.yml`。
 
-已完成基础环境后可使用 [交互式部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r5.tar.gz)，解压执行 `sudo bash setup-fluxrail.sh`；[使用说明](deploy/README.setup.md)。需要打包新的本地Web快照，根目录运行 `python web/deploy/package-setup.py outputs/新的文件名.tar.gz`，已有包不覆盖。
+已完成基础环境后可使用 [交互式部署包](../outputs/FluxRail-Ubuntu-Setup-2026-10-08-r6.tar.gz)，解压执行 `sudo bash setup-fluxrail.sh`；[使用说明](deploy/README.setup.md)。需要打包新的本地Web快照，根目录运行 `python web/deploy/package-setup.py outputs/新的文件名.tar.gz`，已有包不覆盖。
 
 ## 启动与页面入口
 
@@ -36,6 +36,8 @@
 2026-10-08后续反馈修复：选正确文件或清空选择都会更新顶部操作提示，避免残留上一份错误文件的失败提示。UF2结果框及顶部操作提示使用14px、600字重；文件信息标签为“型号”，文件拒绝及身份不匹配统一显示“固件版本不对：请重新检查固件文件”，底层校验仍保留详细错误。下载确认说明改为“手动复制匹配此设备的 FluxRail UF2”。上方固定说明和IO4弹窗保持现行规则。Node73/73及Edge三宽度错误→正确→清空、样式和下载说明检查通过，见[反馈与可读性记录](tests/uf2-copy-readability-2026-10-08/README.md)。
 
 本轮修复真实提示渲染，并恢复两项控制器测试对固定说明及下方动态结果的检查，额外覆盖读取中说明固定、反复连接不重复追加文件详情；完整Web73/73通过，Edge在1274/390/320px检查初始/错误/有效/清空通过，见[固定结果修复记录](tests/uf2-fixed-result-2026-10-08/README.md)。此前[10/08仅适配测试](tests/uf2-current-web-2026-10-08/README.md)与[10/07失败复核](tests/web-docs-sync-2026-10-07/README.md)保持原样，不能把仅适配测试的通过当作当时已修页面。
+
+现行样式以用户后续审美反馈为准：动态提示13px、常规字重400，UF2结果沿用页面正文字体，避免整段粗等宽字与整体风格不搭。文件检查失败改为“固件文件检查未通过，请选择适用于本设备的 UF2 文件。”，不再归因于版本号。顶部反馈复位、型号/设备文案与固定说明继续保留。Node73/73和三宽度浏览器复核见[柔和样式记录](tests/uf2-soft-style-2026-10-08/README.md)；此前14px/600与旧文案为上轮快照。
 
 ## 当前配置规则与历史证据
 

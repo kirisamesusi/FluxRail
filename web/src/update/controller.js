@@ -25,7 +25,7 @@ export class FirmwareUpdate {
         '\n型号 ' + checked.firmware.board + '\n' + checked.blocks + '块 / ' + checked.payload_bytes + '字节';
       this.render();
     } catch (error) {
-      this.error = '固件版本不对：请重新检查固件文件';
+      this.error = '固件文件检查未通过，请选择适用于本设备的 UF2 文件。';
       this.render();
       throw error;
     }

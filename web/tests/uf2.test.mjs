@@ -110,12 +110,12 @@ test('无效/过大文件和取消选择会清空旧候选；模拟不参与硬�
   assert.doesNotMatch(f.result.textContent, /可升级|版本相同/); fileDetails(f);
   await assert.rejects(f.controller.check(file(uf2(new Uint8Array(256))))); assert.equal(f.controller.candidate, null);
   assert.equal(f.controller.expectedSerial, null); assert.equal(f.controller.fileSummary, '');
-  assert.equal(f.result.textContent, '固件版本不对：请重新检查固件文件'); assert.doesNotMatch(f.result.textContent, /识别通过/);
-  assert.equal((f.result.textContent.match(/固件版本不对/g) ?? []).length, 1);
+  assert.equal(f.result.textContent, '固件文件检查未通过，请选择适用于本设备的 UF2 文件。'); assert.doesNotMatch(f.result.textContent, /识别通过/);
+  assert.equal((f.result.textContent.match(/固件文件检查未通过/g) ?? []).length, 1);
   assert.equal(f.result.classList.error, true); fixedHint(f);
   f.connect(null); assert.match(f.current.textContent, /未连接设备/);
-  assert.equal(f.result.textContent, '固件版本不对：请重新检查固件文件'); assert.equal(f.result.classList.error, true); fixedHint(f);
-  await assert.rejects(f.controller.check({ size: 8 * 1024 * 1024 + 1 }), /UF2文件过大/); assert.equal(f.result.textContent, '固件版本不对：请重新检查固件文件');
+  assert.equal(f.result.textContent, '固件文件检查未通过，请选择适用于本设备的 UF2 文件。'); assert.equal(f.result.classList.error, true); fixedHint(f);
+  await assert.rejects(f.controller.check({ size: 8 * 1024 * 1024 + 1 }), /UF2文件过大/); assert.equal(f.result.textContent, '固件文件检查未通过，请选择适用于本设备的 UF2 文件。');
   assert.equal(f.controller.candidate, null); assert.equal(f.result.classList.error, true); fixedHint(f);
   await f.controller.check(null); assert.equal(f.controller.candidate, null); assert.equal(f.controller.error, null);
   assert.equal(f.result.classList.error, false);

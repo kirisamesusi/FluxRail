@@ -406,5 +406,6 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
 
 @media(max-width:380px) { .connection { display:grid; grid-template-columns:1fr; gap:6px; } .connection .nav-label { margin:0; } #connection-state { min-width:0; } .connection .toolbar { justify-content:flex-start; } }
 
-/* UF2动态结果与顶部操作反馈：成功和错误统一提高可读性。 */
-#uf2-result, .device-header-feedback #notice { font-size:14px; font-weight:600; line-height:1.8; }
+/* 动态提示沿用页面正文风格，略增字号，不使用整段粗体。 */
+#uf2-result, .device-header-feedback #notice { font-size:13px; font-weight:400; line-height:1.85; }
+#uf2-result { font-family:inherit; }
