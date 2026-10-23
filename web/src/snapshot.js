@@ -28,8 +28,9 @@ export function decodeSnapshot(bytes) {
   assert([1,2].includes(schema) && revision>0 && count>=4 && count<=12 && (schema===1?startup===0:startup<=1) && next_profile_id>=5,'schema/模板数量/USB模式不支持');
   const profiles=[];
   for(let i=0;i<count;i++) {
-    const profile_id=read('u32'); let name='', ended=false;
-    for(let j=0;j<32;j++){const b=read('u8'); if(!b)ended=true; else if(!ended)name+=String.fromCharCode(b);}
+    const profile_id=read('u32'); const nameBytes=[]; let ended=false;
+    for(let j=0;j<32;j++){const b=read('u8'); if(!b)ended=true; else if(!ended)nameBytes.push(b);}
+    let name; try{name=new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(nameBytes));}catch{throw new Error('模板名称不是有效UTF-8');}
     assert(ended,'模板名称缺少NUL终止'); const bindings=[];
     for(let j=0;j<12;j++){
       const type=read('u8'),usage=read('u8'),modifiers=read('u8'),button=read('u8');

@@ -27,7 +27,37 @@ export function shape(object, names) {
 }
 function bool(value) { assert(typeof value === 'boolean','开关须为布尔值'); }
 function rgb(color) { assert(Array.isArray(color) && color.length === 3,'RGB须为三通道'); color.forEach(v => range(v,0,255,true)); }
-export function validName(name) { assert(typeof name === 'string' && /^[\x20-\x21\x23-\x5b\x5d-\x7e]{1,31}$/.test(name),'名称须为1～31个ASCII字符，不含引号和反斜杠'); }
+/** 模板名称。线路仍是ASCII：非ASCII字符由client.js以\uXXXX发送，固件解码为UTF-8存入32字节槽。
+ * 固件接受1..31字节、仅BMP（1～3字节UTF-8，无emoji）、无控制/双向控制符；
+ * 这里的 validName 是“新建/改名输入”规则：1～10个字符，且不以空格开头或结尾。
+ * validStoredName 用于读回设备已有名称：保持固件口径，旧的最长31字符ASCII名称仍然有效。
+ */
+export const NAME_RULE_TEXT = '模板名称为 1～10 个字符，可以用中文，不含双引号和反斜杠。';
+function nameCodePointOk(cp) {
+  if (cp < 0x20 || cp === 0x7f || cp === 0x22 || cp === 0x5c) return false;
+  if (cp >= 0x80 && cp <= 0x9f) return false;
+  if (cp >= 0x200b && cp <= 0x200f) return false;
+  if (cp >= 0x2028 && cp <= 0x202e) return false;
+  if (cp >= 0x2066 && cp <= 0x2069) return false;
+  if (cp === 0xfeff || cp >= 0xfff9) return false; // 含全部4字节字符（emoji）
+  return cp < 0xd800 || cp > 0xdfff;
+}
+export function utf8Length(name) {
+  let bytes = 0;
+  for (const ch of name) { const cp = ch.codePointAt(0); bytes += cp < 0x80 ? 1 : cp < 0x800 ? 2 : cp < 0x10000 ? 3 : 4; }
+  return bytes;
+}
+export function validStoredName(name) {
+  assert(typeof name === 'string' && name.length > 0, '名称不能为空');
+  for (const ch of name) assert(nameCodePointOk(ch.codePointAt(0)), '名称含不支持的字符');
+  assert(utf8Length(name) <= 31, '名称超过31字节');
+}
+export function validName(name) {
+  assert(typeof name === 'string', NAME_RULE_TEXT);
+  assert([...name].length >= 1 && [...name].length <= 10, NAME_RULE_TEXT);
+  assert(name.trim() === name, '名称开头和结尾不能是空格');
+  validStoredName(name);
+}
 export function validateConfig(config) {
   shape(config,['keyboard','scan','lighting','indicator']);
   shape(config.keyboard,['bindings','retrigger_gap_us']);
@@ -72,7 +102,7 @@ export function validateMotion(motion) {
   }
   shape(motion.routing,['idle_us','simultaneous_hall_first']); range(motion.routing.idle_us,0,100000,true); bool(motion.routing.simultaneous_hall_first);
 }
-export function validateProfile(p) { range(p.profile_id,1,0xffffffff,true); validName(p.name); validateConfig(p.config); validateMotion(p.motion); if(p.io4_bindings!==undefined){assert(Array.isArray(p.io4_bindings)&&p.io4_bindings.length===12,"IO4功能绑定须为十二路");p.io4_bindings.forEach(v=>range(v,0,12,true));} }
+export function validateProfile(p) { range(p.profile_id,1,0xffffffff,true); validStoredName(p.name); validateConfig(p.config); validateMotion(p.motion); if(p.io4_bindings!==undefined){assert(Array.isArray(p.io4_bindings)&&p.io4_bindings.length===12,"IO4功能绑定须为十二路");p.io4_bindings.forEach(v=>range(v,0,12,true));} }
 export function verifyHello(hello) {
   assert(hello.product === 'FluxRail' && hello.board === 'FluxRail RP2040 4MiB','产品或板型不匹配，停止配置');
   assert(typeof hello.serial === 'string' && hello.serial.length > 0 && typeof hello.firmware_version === 'string','握手缺少固件版本/序号');

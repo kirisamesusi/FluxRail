@@ -173,7 +173,7 @@ bool ConfigProtocol::dispatchDevice(uint16_t op, uint16_t p, uint32_t now,
         w.literal("{\"profile_id\":");
         w.number(pr.id);
         w.literal(",\"name\":\"");
-        w.literal(pr.name);
+        w.name(pr.name);
         w.literal("\",\"preset\":");
         w.boolean(pr.id <= 4);
         w.literal("}");
@@ -184,7 +184,7 @@ bool ConfigProtocol::dispatchDevice(uint16_t op, uint16_t p, uint32_t now,
       w.literal("\"profile_id\":");
       w.number(id);
       w.literal(",\"name\":\"");
-      w.literal(pr.name);
+      w.name(pr.name);
       w.literal("\",\"config\":");
       encodeRuntime(w, pr.runtime);
       w.literal(",\"motion\":");
@@ -354,7 +354,7 @@ bool ConfigProtocol::dispatchDevice(uint16_t op, uint16_t p, uint32_t now,
     }
     bool ok = false;
     if (create || rename) {
-      if (json_.stringValue(json_.field(p, "name"), name, sizeof(name)))
+      if (json_.utf8Value(json_.field(p, "name"), name, sizeof(name)))
         ok = create ? config::createProfile(candidate_, id, name)
                     : config::renameProfile(candidate_, id, name);
     } else if (del)

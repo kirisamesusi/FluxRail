@@ -6,6 +6,7 @@ export class ProtocolError extends Error {
   constructor(code, message) { super(message); this.code = code; }
 }
 const fail = (code, message) => new ProtocolError(code, message);
+export const asciiJson = text => text.replace(/[^\x00-\x7f]/g, ch => '\\u' + ch.charCodeAt(0).toString(16).padStart(4, '0'));
 export class LineFramer {
   constructor(onLine, onError, limit = 4096) {
     this.onLine = onLine; this.onError = onError; this.limit = limit;
@@ -90,7 +91,8 @@ export class SerialClient {
     if (!this.alive) throw fail('DISCONNECTED', '会话已结束，未发送排队请求');
     this.id = this.id % 0xffffffff + 1;
     const id = this.id;
-    const line = JSON.stringify({ protocol_version: 1, id, op, payload });
+    // 线路保持纯ASCII：模板中文名只以JSON \uXXXX 转义发送（固件解码为UTF-8）。
+    const line = asciiJson(JSON.stringify({ protocol_version: 1, id, op, payload }));
     if (/[^\x00-\x7f]/.test(line) || line.length > 4096) throw fail('INVALID_REQUEST', '请求必须为ASCII且不超过4096字节');
     let timer;
     const response = new Promise((resolve, reject) => {

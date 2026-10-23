@@ -231,6 +231,45 @@ bool Json::stringValue(uint16_t token, char *out, size_t capacity) const {
   out[size] = 0;
   return true;
 }
+bool Json::utf8Value(uint16_t token, char *out, size_t capacity) const {
+  if (token == kMissing || token >= used_ || capacity == 0 ||
+      tokens_[token].kind != JsonKind::String)
+    return false;
+  const auto &t = tokens_[token];
+  const uint16_t end = t.start + t.length - 1; // closing quote
+  size_t size = 0;
+  for (uint16_t p = t.start + 1; p < end;) {
+    uint32_t cp = static_cast<uint8_t>(data_[p++]);
+    if (cp == '\\') {
+      if (p >= end || data_[p++] != 'u' || p + 4 > end)
+        return false; // only \uXXXX is accepted for names
+      cp = 0;
+      for (uint8_t i = 0; i < 4; ++i) {
+        const char h = data_[p++];
+        if (!hex(h))
+          return false;
+        cp = cp * 16 + (digit(h) ? h - '0' : (h | 0x20) - 'a' + 10);
+      }
+    }
+    if (cp < 0x20 || cp == 0x7f || (cp >= 0xd800 && cp <= 0xdfff))
+      return false;
+    const uint8_t need = cp < 0x80 ? 1 : cp < 0x800 ? 2 : 3;
+    if (size + need >= capacity)
+      return false; // keep room for the terminator
+    if (need == 1)
+      out[size++] = static_cast<char>(cp);
+    else if (need == 2) {
+      out[size++] = static_cast<char>(0xc0 | (cp >> 6));
+      out[size++] = static_cast<char>(0x80 | (cp & 0x3f));
+    } else {
+      out[size++] = static_cast<char>(0xe0 | (cp >> 12));
+      out[size++] = static_cast<char>(0x80 | ((cp >> 6) & 0x3f));
+      out[size++] = static_cast<char>(0x80 | (cp & 0x3f));
+    }
+  }
+  out[size] = 0;
+  return true;
+}
 bool Json::floatValue(uint16_t token, float &out) const {
   double value;
   if (!doubleValue(token, value) || value < -3.4028234e38 ||
@@ -308,6 +347,41 @@ void JsonWriter::put(char c) {
 void JsonWriter::literal(const char *s) {
   while (*s)
     put(*s++);
+}
+void JsonWriter::name(const char *s) {
+  static const char kHex[] = "0123456789abcdef";
+  while (*s) {
+    const uint8_t c = static_cast<uint8_t>(*s++);
+    if (c < 0x80) {
+      put(static_cast<char>(c));
+      continue;
+    }
+    uint32_t cp = 0;
+    uint8_t extra = 0;
+    if (c >= 0xc2 && c <= 0xdf) {
+      cp = c & 0x1f;
+      extra = 1;
+    } else if (c >= 0xe0 && c <= 0xef) {
+      cp = c & 0x0f;
+      extra = 2;
+    } else {
+      ok_ = false; // a name that bypassed validation must not leak raw bytes
+      return;
+    }
+    for (uint8_t i = 0; i < extra; ++i) {
+      const uint8_t d = static_cast<uint8_t>(*s);
+      if ((d & 0xc0) != 0x80) {
+        ok_ = false;
+        return;
+      }
+      ++s;
+      cp = (cp << 6) | (d & 0x3f);
+    }
+    put('\\');
+    put('u');
+    for (int shift = 12; shift >= 0; shift -= 4)
+      put(kHex[(cp >> shift) & 0xf]);
+  }
 }
 void JsonWriter::number(uint32_t v) {
   char digits[10];

@@ -13,11 +13,19 @@
 ## 当前应知道的事实
 
 - 唯一正式工程`firmware/FluxRail/FluxRail.ino`；十BT、Hall、双SSI/PUSH、USB/IO4、配置与Web已接入。
-- 当前固件宏0.10.2；10/05设备hello0.10.2、IO4协议及100ms/400ms/25.5s超时复测通过。用户手刷过程/hash未直接观测。
+- 当前源码版本0.10.3（2026-10-11升，UTF-8模板名，**尚未编译/刷机**）；最近一次有设备证据的是0.10.2。固件有改动并重编译就升版本并写[固件升级日志](固件升级日志.md)。10/05设备hello0.10.2、IO4协议及100ms/400ms/25.5s超时复测通过。用户手刷过程/hash未直接观测。
 - 最新收尾普通身份、active4、revision=applied=saved11、dirty=false，原模板恢复且串口关闭；这是历史收尾，接手先重新握手备份。
 - 0.10.1有Windows COL02启动与裸板Hall平均约1kHz证据；普通HID payload读取error1仍未解决。
 - 实测板2MiB，最终4MiB、实体按键/灯/霍尔/旋钮/PUSH、电气、Flash写入中掉电和游戏未完整验收。
-- Web生产真实读写/保存有记录；模拟演示和Node/DOM测试只是软件证据。
+- Web生产真实读写/保存有记录；模拟演示和Node/DOM测试只是软件证据。2026-10-11起Web为三页签v2设计，改前后端接口先读[Web v2对接指南](Web_v2_设计实现与后端对接指南.md)；模板名UTF-8固件改动未ARM编译/实板验证。
+
+## 待办：模板名UTF-8固件的正式编译与实板验证（2026-10-11，未完成）
+
+源码已含UTF-8模板名改动（`ProfileManager.cpp`、`protocol/Json.*`、`ConfigProtocolDevice.cpp`），版本已按规则升到0.10.3（见[固件升级日志](固件升级日志.md)），但**还没有ARM编译、UF2和实板证据**。接手或做其他开发的窗口注意：
+- 模板名规则已改为UTF-8（≤31字节，Web限1～10字符），**不要再按旧的“1..31可打印ASCII”写代码、测试或文档**；旧ASCII名仍合法。
+- 之后每次有改动的重新编译都先升版本并补升级日志；同源码重编译不升。
+- 步骤：①`python tests/integration/compile_firmware.py`，产物在`tests/integration/build/releases/<版本>/<UTC时间>/`；②刷机前按常规先握手并备份当前配置；③实测：新建含中文的模板、改名为中文、保存后断电重连读回、导入导出一次、再确认旧ASCII模板不受影响；④新建日期/版本证据目录，更新[测试状态表](测试状态与待验收.md)的“中文模板名”一行，不覆盖旧证据。
+- 主机侧证据与复跑方法：[tests/integration/utf8_name_2026-10-11](../tests/integration/utf8_name_2026-10-11/README.md)；网页与协议链路：[Web v2对接指南](Web_v2_设计实现与后端对接指南.md)第5节。
 
 ## 开发边界
 

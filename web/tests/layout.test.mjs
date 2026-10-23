@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mountModuleNavigation } from '../src/layout.js';
 
 function fixture(hash = '') {
-  const ids = ['device-status', 'keyboard', 'lighting', 'hall', 'knobs', 'profiles', 'update', 'experimental'];
+  const ids = ['device-status', 'update', 'experimental'];
   const nodes = new Map(), listeners = new Map();
   function node(id, tagName = 'SECTION', parentElement = null) {
     const attributes = new Map(), handlers = new Map();
@@ -37,13 +37,13 @@ test('默认模块与无效片段回退到设备状态，初次加载不移动�
   }
 });
 test('切换模块保留同一编辑器及草稿，活动链接与焦点同步', () => {
-  const f = fixture(); const editor = f.nodes.get('keyboard'), draft = editor.draft;
+  const f = fixture(); const editor = f.nodes.get('device-status'), draft = editor.draft;
   draft.value = 'B'; f.links[1].click();
-  assert.equal(f.window.location.hash, '#keyboard'); assert.deepEqual(f.visible(), ['keyboard']);
-  assert.equal(f.state.focus, 'keyboard-title'); assert.equal(f.state.top, 0);
+  assert.equal(f.window.location.hash, '#update'); assert.deepEqual(f.visible(), ['update']);
+  assert.equal(f.state.focus, 'update-title'); assert.equal(f.state.top, 0);
   assert.equal(f.links[0].getAttribute('aria-current'), null);
-  f.links[2].click(); f.links[1].click();
-  assert.equal(f.nodes.get('keyboard'), editor); assert.equal(editor.draft, draft); assert.equal(draft.value, 'B');
+  f.links[2].click(); f.links[0].click();
+  assert.equal(f.nodes.get('device-status'), editor); assert.equal(editor.draft, draft); assert.equal(draft.value, 'B');
 });
 test('内部深链接显示实验室并展开祖先分组；回到普通模块关闭展示', () => {
   const f = fixture('#calibration-field');
@@ -53,14 +53,16 @@ test('内部深链接显示实验室并展开祖先分组；回到普通模块�
   f.navigate('#update'); assert.deepEqual(f.visible(), ['update']); assert.equal(f.state.focus, 'update-title');
 });
 test('历史导航恢复模块，跳转到主内容保留当前模块', () => {
-  const f = fixture('#knobs'); f.navigate('#hall'); f.navigate('#knobs');
-  assert.deepEqual(f.visible(), ['knobs']); f.navigate('#main-content'); assert.deepEqual(f.visible(), ['knobs']);
-  assert.deepEqual(f.state.changes, ['knobs', 'hall', 'knobs']);
+  const f = fixture('#experimental'); f.navigate('#update'); f.navigate('#experimental');
+  assert.deepEqual(f.visible(), ['experimental']); f.navigate('#main-content'); assert.deepEqual(f.visible(), ['experimental']);
+  assert.deepEqual(f.state.changes, ['experimental', 'update', 'experimental']);
 });
 test('修饰键点击保留浏览器链接行为，卸载后取消事件监听', () => {
   const f = fixture(); f.links[1].click({ ctrlKey: true });
   assert.equal(f.window.location.hash, ''); assert.deepEqual(f.visible(), ['device-status']);
-  f.dispose(); f.navigate('#keyboard'); f.links[1].click(); assert.deepEqual(f.visible(), ['device-status']);
+  f.dispose(); f.navigate('#update'); f.links[1].click(); assert.deepEqual(f.visible(), ['device-status']);
 });
 
-test('旧 diagnostics 深链接打开首页输入状态，品牌回首页不覆盖草稿',()=>{const f=fixture('#diagnostics');assert.deepEqual(f.visible(),['device-status']);assert(f.nodes.get('input-status').open);f.navigate('#diagnostics');assert.equal(f.state.focus,'device-status-title');});
+test('旧 diagnostics 深链接打开首页输入状态，品牌回首页不覆盖草稿',()=>{const f=fixture('#diagnostics');assert.deepEqual(f.visible(),['device-status']);f.navigate('#diagnostics');assert.equal(f.state.focus,'device-status-title');});
+
+test('旧的 keyboard/lighting/hall/knobs/profiles 链接都回到设备状态',()=>{for(const h of ['#keyboard','#lighting','#hall','#knobs','#profiles']){const f=fixture(h);assert.deepEqual(f.visible(),['device-status']);}});

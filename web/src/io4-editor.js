@@ -3,24 +3,26 @@
  * Device负责revision/维护/错误后只读锁；所有持久化仍走唯一save_config。
  */
 export const io4Functions=['禁用','左 A','左 B','左 C','右 A','右 B','右 C','左菜单','右菜单','左侧键','右侧键','Test','Service'];
-const order=[10,11,7,6,5,4,3,2,1,0,8,9];
+// 网页只显示 BT1～BT10；P1 / P2（旋钮按压）的映射不在网页显示和编辑，但读回值原样保留并随保存带回。
+const visible=[0,1,2,3,4,5,6,7,8,9];
 const make=(tag,text='')=>{const e=document.createElement(tag);e.textContent=text;return e;};
 export function mountIo4Editor(context){
-  const panel=make('details');panel.id='io4-mapping-editor';panel.className='experiment-group';
+  const panel=make('details');panel.id='io4-mapping-editor';panel.className='card labg';
   panel.append(make('summary','IO4 · 按键功能映射'));
-  const body=make('div');body.className='io4-editor-body';panel.append(body);
+  const body=make('div');body.className='io4-editor-body gb';panel.append(body);
   const hint=text=>{const p=make('p',text);p.className='hint';body.append(p);};
   const identity=make('p');identity.id='io4-mapping-profile';body.append(identity);
-  hint('在普通模式下连接设备，为当前模板设置十二路 IO4 按键功能。改好后应用并保存。活动模板由模板管理单独选择。切换到 IO4 后使用这组映射；普通键位单独保留。');
-  const scroller=make('div');scroller.className='io4-key-scroller';body.append(scroller);const grid=make('div');grid.className='io4-key-grid physical-keys-main';scroller.append(grid);
+  hint('在普通模式下连接设备，为当前模板设置十路 IO4 按键功能。改好后应用并保存。活动模板由模板管理单独选择。切换到 IO4 后使用这组映射；普通键位单独保留。');
+  const scroller=make('div');scroller.className='io4-key-scroller';body.append(scroller);const grid=make('div');grid.className='io4-key-grid';scroller.append(grid);
   const selectors=Array(12),readback=Array(12);
-  for(const id of order){
-    const card=make('label');card.className='io4-key-card';card.setAttribute('data-source',String(id));
-    card.append(make('strong',id<10?'BT'+(id+1):'P'+(id-9)+' · 旋钮按压'));
+  for(let id=0;id<12;id++){
     const select=make('select');select.id='io4-binding-'+id;select.setAttribute('aria-label','IO4 '+(id<10?'BT'+(id+1):'P'+(id-9))+'功能');
     io4Functions.forEach((name,value)=>{const option=make('option',name);option.value=value;select.append(option);});
     selectors[id]=select;select.onchange=()=>{status();context.onControlsChange?.();};
-    const confirmed=make('small');readback[id]=confirmed;card.append(select,confirmed);grid.append(card);
+    const confirmed=make('small');readback[id]=confirmed;
+    if(!visible.includes(id))continue; // 不显示的映射仍参与读回、比较与保存，值不会被丢弃
+    const card=make('label');card.className='io4-key-card';card.setAttribute('data-source',String(id));
+    card.append(make('strong','BT'+(id+1)),select,confirmed);grid.append(card);
   }
   const message=make('p');message.id='io4-mapping-status';message.setAttribute('role','status');body.append(message);
   const actions=make('div');actions.className='toolbar';body.append(actions);
@@ -37,7 +39,7 @@ export function mountIo4Editor(context){
     await context.refresh();
   },'IO4设置已应用并保存，当前模板和保存状态已读回；活动模板未自动切换。');
   const refresh=button('io4-mapping-refresh','重新读取',async()=>{await context.readSettings();},null);
-  hint('多个按键可绑定同一功能，任一按住即保持该功能。P1 / P2 为旋钮按压；按住 BT10 复位或上电可返回普通模式。');
+  hint('多个按键可绑定同一功能，任一按住即保持该功能。按住 BT10 复位或上电可返回普通模式。');
   document.getElementById('io4-editor-mount').append(panel);
   let loadedDevice=null,loadedProfile=null,revision=null,selected=null,base=null;
   const hasDraft=()=>!!base&&selectors.some((s,i)=>Number(s.value)!==base[i]);

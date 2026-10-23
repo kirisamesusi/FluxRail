@@ -17,7 +17,7 @@ export class DemoHost {
     const b=x=>put('u8',x?1:0),u=x=>put('u32',x),color=x=>x.forEach(y=>put('u8',y));
     [1,d.revision,d.active_profile,d.next_profile_id].forEach(u);put('u8',d.profiles.length);put('u8',0);
     for(const p of d.profiles){
-      u(p.profile_id);for(let i=0;i<32;i++)put('u8',p.name.charCodeAt(i)||0);
+      u(p.profile_id);{const nb=new TextEncoder().encode(p.name);for(let i=0;i<32;i++)put('u8',nb[i]||0);}
       for(const {action:a}of p.config.keyboard.bindings){put('u8',a.type==='keyboard'?1:a.type==='mouse_button'?2:0);put('u8',a.usage||0);put('u8',a.modifiers||0);put('u8',a.button||0);}
       const c=p.config,l=c.lighting;u(c.keyboard.retrigger_gap_us);u(c.scan.press_debounce_us);u(c.scan.release_debounce_us);
       b(l.enabled);put('u8',modes.indexOf(l.mode));put('u8',l.brightness_level);b(l.per_key);u(l.period_ms);b(l.reverse);b(c.indicator.enabled);color(l.global_color);l.key_colors.forEach(color);color(c.indicator.color);

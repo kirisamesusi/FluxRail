@@ -60,7 +60,7 @@ test('拒绝直接覆盖预设、预设重命名和删除；无设备写入',asy
 });
 test('无效名称、无效草稿与容量已满均在创建写入前拒绝',async()=>{
   const {port,client,device}=await connected();try{
-    const before=writes(port).length;await assert.rejects(templateAction(device,'create',async()=>({name:'中文'})),/名称/);assert.equal(writes(port).length,before);
+    const before=writes(port).length;await assert.rejects(templateAction(device,'create',async()=>({name:'bad"name'})),/名称/);assert.equal(writes(port).length,before);
     device.draft.config.lighting.brightness_level=101;device.localDirty=true;await assert.rejects(device.createFromDraft('Good'));assert.equal(writes(port).length,before);await device.refresh();
     for(let i=0;i<8;i++)await device.createFromDraft('Custom '+i);
     const full=writes(port).length;await assert.rejects(device.createFromDraft('Overflow'),/已满/);assert.equal(writes(port).length,full);

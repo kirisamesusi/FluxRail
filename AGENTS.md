@@ -18,6 +18,8 @@
 
 统一入口`python tests/integration/run_all.py`，正式编译`python tests/integration/compile_firmware.py`；正式编译前自动保留旧UF2/ELF、对应完整源码、下一源码、diff及依赖，备份不完整停止。不要绕过入口覆盖旧正式产物。工具链、FQBN和维护流程见`RUN_INTEGRATED.md`。
 
+**固件有改动并重新编译＝一次升级：先升`FirmwareInfo.h`版本，并在`docs/固件升级日志.md`顶部新增一条记录改动、涉及文件、兼容性和分层验证状态（用户2026-10-11规定）；无改动的同源码重编译不升版本。**
+
 **每次正式编译交付的UF2/ELF文件名必须带固件版本号。** 入口在检查通过后输出`tests/integration/build/releases/<版本>/<UTC时间>/FluxRail-<版本>-<UTC时间>.uf2/.elf`及摘要清单；同版本重编译分开保留。版本来自FirmwareInfo.h与实际UF2校验，不能仅改文件名。Arduino内部固定产物供既有校验/回滚使用，交付优先带版本文件。独立模块烟测UF2不能当整机固件。
 
 Web从根目录`node web/server.mjs`，localhost:4174；Web软件测试在web/执行`npm test`。根据改动范围选择相关检查，具体任务与设备操作范围按用户当前指令执行。

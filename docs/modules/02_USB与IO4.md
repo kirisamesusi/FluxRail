@@ -58,3 +58,7 @@ IO4指令的工程行为来自本地固定参考及协议交叉核对：启动 `
 - 固定第三方对照快照：[references/io4/README](../../references/io4/README.md)、[本机 Arduino USB 审核快照](../../references/arduino-usb-audit/README.md)。参考快照不是FluxRail依赖或成功实板基线；ESP32-S2项目/主机库/segatools仅用于协议交叉核对，旧 `failed-lkick` 是用户已验证失败的历史样本。
 
 
+
+## 2026-10-11 协议与 IO4 网页口径
+- **模板名 UTF-8（固件已改，未 ARM 编译/实板）**：CDC v1 仍为纯 ASCII 单行；`create_profile`/`rename_profile` 的 `name` 以 JSON `\uXXXX`（含代理对）传输，固件 `Json::utf8Value` 解码为 UTF-8，`ProfileManager::validName` 校验（1～3 字节序列、≤31 字节，拒绝控制/DEL/C1、零宽与双向控制、引号、反斜杠），回复时 `JsonWriter::name` 再转义。名称槽仍 32 字节，schema/Flash 布局和 `set_profile` 不变；旧 ASCII 名全部合法。源码：`protocol/Json.*`、`protocol/ConfigProtocolDevice.cpp`、`config/ProfileManager.cpp`。证据：[主机 96 项](../../tests/integration/utf8_name_2026-10-11/README.md)。固件版本已升到0.10.3（见[升级日志](../固件升级日志.md)），正式编译与刷机由用户执行。
+- **IO4 网页**：界面只显示 BT1～BT10；P1/P2（source id 10/11）的映射不显示，保存时原值带回（用户2026-10-11确认：这两个PUSH按键硬件暂时取消）。固件 IO4 功能表仍是 12 项，未改。

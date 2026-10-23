@@ -72,3 +72,6 @@ python tests/module3/finalize_report.py
 - 原模块规范：[模块 3 MT6701 旋钮](../archive/2026-10-05/spec/04_模块3_MT6701旋钮.md)、[公共接口约定](../archive/2026-10-05/spec/01_公共接口与集成约定.md)、[完整配置与 Flash 序列化](../archive/2026-10-05/spec/12_完整配置与Flash序列化.md)、[模块整合运行契约](../archive/2026-10-05/spec/14_模块整合运行契约.md)、[验收与实测计划](../archive/2026-10-05/spec/06_验收与实测计划.md)。
 - 验收/历史进度：[模块 3 进度](../archive/2026-10-05/progress/模块3.md)、[整合进度](../archive/2026-10-05/progress/模块整合.md)、[修复进度](../archive/2026-10-05/progress/修复.md)。模块 3 阶段 3 和 10 月 3 日 validation 都早于整机 App 接入状态，作为历史验证边界保留。
 - 当前源码与测试入口见上文链接；厂家 SSI/PUSH 电气定义见原规范中引用的 MT6701 Rev1.8，以及 [`tests/module3/HARDWARE_CHECKLIST.md`](../../tests/module3/HARDWARE_CHECKLIST.md)。
+
+## 2026-10-11 Web v2 口径
+网页不再显示 PUSH 防误触参数，也不显示本地旋转预览圆盘；旋钮指示改读 `get_motion`（`raw_turns` 原生、`scaled_turns` 为灵敏度后），仅模拟演示可手动转动。PUSH 底层字段仍随 `set_profile` 原样读写，固件未改。灵敏度显示 1.0～10.0，写入值＝显示值/5。详见[对接指南](../Web_v2_设计实现与后端对接指南.md)。

@@ -3,7 +3,7 @@ import { validName } from './config.js';
 export function mountConfirmation(dialog) {
   const form=dialog.querySelector('form'),title=dialog.querySelector('[data-title]'),description=dialog.querySelector('[data-description]'),nameRow=dialog.querySelector('[data-name-row]'),input=dialog.querySelector('input'),error=dialog.querySelector('[data-error]'),submit=dialog.querySelector('[data-confirm]'),cancel=dialog.querySelector('[data-cancel]');
   let pending=null,needsName=false;
-  const guidance=dialog.querySelector('[data-guidance]');
+  const guidance=dialog.querySelector('[data-guidance]'),nameHelp=dialog.querySelector('#template-name-help');
   const warning=dialog.querySelector('[data-warning]'),warningTitle=dialog.querySelector('[data-warning-title]'),warningDescription=dialog.querySelector('[data-warning-description]'),note=dialog.querySelector('[data-note]');
   const finish=value=>{const resolve=pending;pending=null;dialog.close();resolve?.(value);};
   cancel.addEventListener('click',()=>finish(null));
@@ -17,7 +17,7 @@ export function mountConfirmation(dialog) {
   input.addEventListener('input',()=>{error.textContent='';});
   return options=>{
     if(pending)throw new Error('请先处理当前确认窗口');
-    needsName=options.name!==undefined;title.textContent=options.title;description.textContent=options.description;
+    needsName=options.name!==undefined;title.textContent=options.title;dialog.classList.toggle('danger',!!options.danger);description.textContent=options.description;
     description.hidden=!!options.warning;warning.hidden=!options.warning;
     warningTitle.textContent=options.warning??'';warningDescription.textContent=options.warning?options.description:'';
     note.hidden=!options.note;note.textContent=options.note??'';
@@ -27,7 +27,7 @@ export function mountConfirmation(dialog) {
       for(const text of options.steps){const item=document.createElement('li');item.textContent=text;list.append(item);}guidance.append(list);
       if(options.fallback){const detail=document.createElement('details'),summary=document.createElement('summary'),text=document.createElement('p');detail.className='uf2-dialog-fallback';summary.textContent='物理方法：用PCB的BOOT按键进入下载模式';text.textContent=options.fallback;detail.append(summary,text);guidance.append(detail);}
     }
-    nameRow.hidden=!needsName;input.disabled=!needsName;input.required=needsName;input.value=options.name??'';
+    nameRow.hidden=!needsName;if(nameHelp)nameHelp.hidden=!needsName;input.disabled=!needsName;input.required=needsName;input.value=options.name??'';
     error.textContent='';submit.textContent=options.confirmLabel??'确认';
     return new Promise(resolve=>{pending=resolve;dialog.showModal();if(needsName){input.focus();input.select();}else cancel.focus();});
   };

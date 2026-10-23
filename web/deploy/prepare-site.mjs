@@ -13,6 +13,7 @@ const assets = [
   'fluxrail-lace-bunny.png', 'fluxrail-mascot-brand.png',
   'fluxrail-mascot-controller.png', 'fluxrail-icon-32.png',
   'fluxrail-icon-180.png', 'fluxrail-icon-192.png', 'fluxrail-favicon.ico',
+  'fluxrail-v2-head.png', 'fluxrail-v2-girl.png', 'fluxrail-v2-hero.png', 'mascot-lines.txt',
 ];
 const files = ['index.html', 'style.css', 'tests/golden.js', ...assets.map(name => `assets/${name}`)];
 async function sourceFiles(directory = 'src') {

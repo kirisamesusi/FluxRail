@@ -24,6 +24,8 @@ python tests/integration/compile_firmware.py
 python tests/integration/run_usb_descriptors.py
 ```
 
+**有改动的重新编译先升`FirmwareInfo.h`版本并写[固件升级日志](docs/固件升级日志.md)。**
+
 **每次正式编译成功，交付文件名必须带固件版本号。** 当前入口在UF2身份和源/链接审计通过后，输出`tests/integration/build/releases/<版本>/<UTC导出时间>/FluxRail-<版本>-<UTC导出时间>.uf2`及同名`.elf`；编译目录存在`.bin/.map`时也按同样规则导出。附同名`-manifest.json`（版本、导出时间、文件SHA256及大小）。同一版本反复编译按独立时间目录保留，失败构建不发布成功交付文件；失败复制可能留下`.pending`暂存目录，不作为可用固件。控制台打印带版本文件路径，给用户复制/交接时优先选择这些文件。
 
 Arduino内部仍生成`tests/integration/build/arduino/FluxRail.ino.uf2`及相邻`.elf`，供既有描述符检查/回滚入口使用；此固定路径会覆盖。源和链接审计`build/source_link_audit.json`、构建记录`build/firmware_results.json`（新增`versioned_artifacts`含实际路径/摘要）。版本来自验证后的真实UF2记录，不能只改文件名。独立Module1/2/3烟测固件不可作为整机UF2；`.o`等内部缓存不是交付固件。

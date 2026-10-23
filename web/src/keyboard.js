@@ -45,3 +45,19 @@ export function actionLabel(action) {
   const label = keys.find(k => k.usage === action.usage)?.label || 'HID ' + action.usage;
   return action.modifiers ? label + ' · modifiers=' + action.modifiers : label;
 }
+
+const modifierNames = [[1, 'Ctrl'], [2, 'Shift'], [4, 'Alt'], [8, 'Win']];
+/** 设备面板按键上的短标签：键盘键显示按键名（带修饰键前缀），鼠标显示左 / 右 / 中键。 */
+export function actionShort(action) {
+  if (action.type === 'disabled') return '禁用';
+  if (action.type === 'mouse_button') return actionLabel(action);
+  const label = keys.find(k => k.usage === action.usage)?.label || 'HID ' + action.usage;
+  const mods = modifierNames.filter(([bit]) => action.modifiers & bit).map(([, name]) => name);
+  return mods.length ? mods.join('+') + '+' + label : label;
+}
+/** 历史操作里的完整说法，例如“键盘 · F”“鼠标 · 左键”。 */
+export function actionText(action) {
+  if (action.type === 'disabled') return '禁用';
+  if (action.type === 'mouse_button') return '鼠标 · ' + ({ 1: '左键', 2: '右键', 4: '中键' })[action.button];
+  return '键盘 · ' + actionShort(action);
+}

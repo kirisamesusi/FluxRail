@@ -123,10 +123,10 @@ test('真实Device应用/保存/再读回及快照保留实际倍率，不重复
   assert.equal(device.profile.motion.knobs[0].gain, 12); assert.equal(device.profile.motion.knobs[1].gain, 1.003);
 });
 
-test('每个模块的SVG引用都定义，设备状态导航和标题使用同一个有内容的图标', async () => {
+test('页面三个页签齐全，SVG引用都已定义，且不再含已删除的旧面板', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   const symbols = new Set([...html.matchAll(/<symbol id="([^"]+)"/g)].map(m => m[1]));
   for (const match of html.matchAll(/<use href="#([^"]+)"/g)) assert(symbols.has(match[1]), match[1]);
-  assert.equal([...html.matchAll(/<use href="#art-device-status"/g)].length, 2);
-  assert.match(html, /<symbol id="art-device-status"[^>]*>.*<circle.*<path.*<\/symbol>/);
+  assert.deepEqual([...html.matchAll(/data-module="([^"]+)"/g)].map(m => m[1]), ['device-status', 'update', 'experimental']);
+  for (const id of ['keysL', 'keysR', 'keysB', 'knobL', 'knobR', 'slider', 'inspector', 'profile-list', 'bubble', 'history', 'apply', 'chips']) assert(html.includes('id="' + id + '"'), id);
 });

@@ -5,14 +5,14 @@ import { actionLabel } from './keyboard.js';
 /** 整合适配只调用已冻结CDC v1，不产生实时运动。圈数来自设备累计值，
  * 页面丢快照也不积分相邻角度；记录表示10Hz诊断而非毫秒级性能验收。 */
 let view=null,last=null,lastDevice=null;
-const realDials=[];
 const phases=['未启动','空场采集','等待传感器参考','参考采集','等待毫米标签','标签采集','检查曲线','全轨扫描','完成','失败','取消'];
 function make(tag,text=''){const e=document.createElement(tag);e.textContent=text;return e;}
 function clearTelemetry(){
   last=null;document.getElementById('integration-motion-summary').textContent='等待当前设备的真实遥测';
   document.getElementById('hall-data').textContent='连接支持运动遥测的设备后，显示三路 ADC、滑轨位置与信号质量。';
-  for(let i=0;i<realDials.length;++i){realDials[i].raw.style.transform='rotate(0deg)';realDials[i].scaled.style.transform='rotate(0deg)';realDials[i].dial.setAttribute('aria-label','旋钮 '+(i+1)+' 当前设备遥测未读取');document.getElementById('integration-knob-'+i).textContent='等待当前设备的真实圈数';}
 }
+/** 最近一次 get_motion 快照（约10Hz）；设备面板的旋钮 / 滑轨指示据此显示，没有数据时为 null。 */
+export function getMotion(){return last;}
 export function mountIntegration(context){
   // 共享校准挂载到滑轨高级组，设备遥测挂载到首页；复用原命令/轮询/能力锁。
   const parent=document.getElementById('integration-calibration-content');
@@ -46,23 +46,9 @@ export function mountIntegration(context){
   opButton('采集当前毫米标签','calibration_node',()=>{assert(inputs.node.value.trim(),'填写当前实测毫米标签');return {mm:Number(inputs.node.value)};});
   opButton('检查曲线并开始全轨扫描','calibration_begin_sweep');opButton('结束扫描并采用候选','calibration_finish');opButton('取消校准，保留旧记录','calibration_cancel');
   const summary=make('p','等待支持真实遥测/校准的设备');summary.id='integration-motion-summary';summary.className='soft-note';view.append(summary);
-  const telemetryPanel=make('div');telemetryPanel.className='knob-telemetry';telemetryPanel.id='knob-telemetry';
-  telemetryPanel.append(make('h3','设备旋钮状态'));
-  const telemetryHint=make('p','连接支持运动遥测的设备后，显示实际累计圈数、输出方向与 PUSH 状态。本地旋转预览位于旋钮设置模块。');telemetryHint.className='hint';telemetryPanel.append(telemetryHint);
-  const telemetry=make('div');telemetry.className='knob-grid';telemetryPanel.append(telemetry);document.getElementById('input-telemetry').append(telemetryPanel);
-  for(let i=0;i<2;++i){
-    const card=make('div');card.className='knob-card knob-preview';card.append(make('h3','旋钮 '+(i+1)+' · 设备遥测'));
-    const dial=make('div');dial.className='interactive-dial real-dial';dial.setAttribute('role','img');dial.setAttribute('aria-label','旋钮 '+(i+1)+' 设备累计圈数投影');
-    const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 200 200');
-    const shape=(tag,attrs)=>{const e=document.createElementNS(svg.namespaceURI,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,String(v));return e;};
-    svg.append(shape('circle',{cx:100,cy:100,r:79,class:'preview-ring'}),shape('circle',{cx:100,cy:100,r:63,class:'preview-face'}));
-    const raw=shape('g',{class:'preview-raw'}),scaled=shape('g',{class:'preview-scaled'});
-    raw.append(shape('circle',{cx:100,cy:28,r:6}));scaled.append(shape('path',{d:'M100 44 90 62h7v52h6V62h7z'}));svg.append(raw,scaled);dial.append(svg);card.append(dial);
-    const label=make('p','等待整合固件真实圈数');label.id='integration-knob-'+i;card.append(label,make('p','外圈点：物理累计圈数；内箭头：设备倍率后圈数。快照约10Hz，不向设备发送运动。'));
-    telemetry.append(card);realDials.push({raw,scaled,dial});
-  }
   const note=make('p','校准需空场、H1/H2/H3参考、7～17个含端点与交接的实测标签，然后全轨扫描。失败/取消保留旧记录。诊断轮询不证明采样无丢失。');note.className='hint';view.append(note);
-  const boot=make('button','进入 UF2 下载模式');boot.type='button';boot.id='integration-bootloader';boot.disabled=true;document.querySelector('#update')?.append(boot);
+  let boot=document.getElementById('integration-bootloader');
+  if(!boot){boot=make('button','进入 UF2 下载模式');boot.type='button';boot.id='integration-bootloader';boot.disabled=true;document.querySelector('#update')?.append(boot);}
   const command=op=>context.runAction(async()=>{
     const d=context.getDevice();
     const changed=await confirmedCommand(d,op,context.confirm,{isCurrent:()=>context.getDevice()===d,hasDraft:()=>hasIo4Draft()||hasModeDraft(),calibrationBusy:hasCalibrationJob});
@@ -116,7 +102,6 @@ export async function pollIntegration(device){
   const phase=m.calibration?.stage??0;
   document.getElementById('integration-motion-summary').textContent=m.sample_ready?
     '采集 ADC '+(m.adc_started?'已启动':'失败')+' / SSI '+(m.ssi_started?'已启动':'失败')+' · 三ADC '+m.raw_adc.join(' / ')+'；滑轨 '+(m.hall.valid?m.hall.mm.toFixed(2)+' mm · 输出 '+m.hall.output.toFixed(4):'无有效输出，质量 '+m.hall.quality)+'；'+phases[phase]+' '+m.calibration.collected+'/'+m.calibration.required+'；核心1最大服务 '+m.core1_max_service_us+' µs':'采集尚未采用配置';
-  for(let i=0;i<2;++i){const k=m.knobs?.[i];if(k){realDials[i].raw.style.transform='rotate('+k.raw_turns*360+'deg)';realDials[i].scaled.style.transform='rotate('+k.scaled_turns*360+'deg)';realDials[i].dial.setAttribute('aria-label','旋钮 '+(i+1)+' 物理 '+k.raw_turns.toFixed(4)+'圈、倍率后 '+k.scaled_turns.toFixed(4)+'圈');document.getElementById('integration-knob-'+i).textContent='旋钮 '+(i+1)+'：物理 '+k.raw_turns.toFixed(4)+' 圈 · 倍率后 '+k.scaled_turns.toFixed(4)+' 圈 · 箭头 '+(((k.scaled_turns%1)+1)%1*360).toFixed(1)+'° · PUSH '+(k.filtered_push?'按下':'松开')+' · CRC错 '+k.crc_errors+' · '+(k.valid?'有效':'质量 '+k.quality)+' · '+(k.axis?'Y':'X');}}
   lockIntegration(device,view.busy);
   document.getElementById('calibration-state').textContent=phases[phase]+' · job '+m.calibration.job_id+' · generation '+m.calibration_generation+(m.running?' · 其他来源继续工作':'');
 }

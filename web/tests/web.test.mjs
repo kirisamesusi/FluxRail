@@ -28,7 +28,7 @@ test('schema1长度/身份/CRC/字段/范围拒绝，保留浮点精度',()=>{
   m.hall.range_max=m.hall.range_min;assert.throws(()=>validateMotion(m));
   const numeric=clone(decodeSnapshot(gold).profiles[0].motion);numeric.hall.center_gain='1';assert.throws(()=>validateMotion(numeric));
   const config=clone(decodeSnapshot(gold).profiles[0].config);config.lighting.brightness_level=101;assert.throws(()=>validateConfig(config));
-  assert.throws(()=>validName('中文'));assert.throws(()=>validName('bad"name'));validName('Custom 1');
+  validName('中文模板');validName('Custom 1');validName('一二三四五六七八九十');assert.throws(()=>validName('一二三四五六七八九十一'));assert.throws(()=>validName('bad"name'));assert.throws(()=>validName('a\\b'));assert.throws(()=>validName(' x'));assert.throws(()=>validName('x\u200b'));
 });
 test('12路键盘录入/字符/修饰键，重复绑定允许，长按重复忽略',()=>{
   assert.deepEqual(fromCharacter('A'),{type:'keyboard',usage:4,modifiers:2});assert.equal(fromCharacter('a').modifiers,0);

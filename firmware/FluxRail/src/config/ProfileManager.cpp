@@ -6,12 +6,56 @@
 namespace fluxrail {
 namespace config {
 uint32_t nextRevision(uint32_t r) { return r == UINT32_MAX ? 1 : r + 1; }
+// 模板名称：UTF-8，1..31字节（槽位32字节含结尾0）。只接受1..3字节形式（基本多文
+// 种平面）；ASCII仅允许可打印字符且不含引号/反斜杠。拒绝非最短形式、代理对、C1控制
+// 符、零宽/双向控制符与非字符，避免界面名称被伪装。旧的纯ASCII名称保持有效；
+// "最多10个字符"是Web新建/改名输入规则，固件不据此拒绝已保存的旧名称。
+static bool nameCodePoint(uint32_t cp) {
+  if (cp < 0x20 || cp == 0x7f || cp == '"' || cp == '\\')
+    return false;
+  if (cp >= 0x80 && cp <= 0x9f) // C1 controls
+    return false;
+  if (cp >= 0x200b && cp <= 0x200f) // zero width / direction marks
+    return false;
+  if (cp >= 0x2028 && cp <= 0x202e) // separators, bidi embedding/override
+    return false;
+  if (cp >= 0x2066 && cp <= 0x2069) // bidi isolates
+    return false;
+  if (cp == 0xfeff || cp >= 0xfff9) // BOM, annotation marks, noncharacters
+    return false;
+  return true;
+}
 bool validName(const char *n) {
-  for (uint8_t i = 0; i < common::kProfileNameBytes; ++i) {
-    if (!n[i])
+  uint8_t i = 0;
+  while (i < common::kProfileNameBytes) {
+    const uint8_t c = static_cast<uint8_t>(n[i]);
+    if (!c)
       return i > 0;
-    if (n[i] < 32 || n[i] > 126 || n[i] == '"' || n[i] == 92)
+    uint32_t cp = c;
+    uint8_t extra = 0;
+    if (c < 0x80)
+      extra = 0;
+    else if (c >= 0xc2 && c <= 0xdf) { // C0/C1 would be overlong
+      cp = c & 0x1f;
+      extra = 1;
+    } else if (c >= 0xe0 && c <= 0xef) {
+      cp = c & 0x0f;
+      extra = 2;
+    } else
+      return false; // continuation byte, overlong lead or 4-byte form (no emoji)
+    if (i + extra >= common::kProfileNameBytes)
       return false;
+    for (uint8_t k = 1; k <= extra; ++k) {
+      const uint8_t d = static_cast<uint8_t>(n[i + k]);
+      if ((d & 0xc0) != 0x80)
+        return false;
+      cp = (cp << 6) | (d & 0x3f);
+    }
+    if ((extra == 2 && cp < 0x800) || (cp >= 0xd800 && cp <= 0xdfff))
+      return false; // overlong three-byte form / surrogate
+    if (!nameCodePoint(cp))
+      return false;
+    i += extra + 1;
   }
   return false;
 }

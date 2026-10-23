@@ -25,6 +25,9 @@ public:
   bool text(uint16_t token, const char *literal) const;
   bool uintValue(uint16_t token, uint32_t &value) const;
   bool stringValue(uint16_t token, char *out, size_t capacity) const;
+  // 名称字符串：协议线路仍为ASCII；非ASCII字符只能用\uXXXX（基本多文种平面）
+  // 传输，在此解码为UTF-8。不接受其他转义；字符合法性由config::validName决定。
+  bool utf8Value(uint16_t token, char *out, size_t capacity) const;
   bool floatValue(uint16_t token, float &value) const;
   bool doubleValue(uint16_t token, double &value) const;
   bool boolValue(uint16_t token, bool &value) const;
@@ -45,6 +48,8 @@ class JsonWriter {
 public:
   JsonWriter(char *data, size_t capacity) : data_(data), capacity_(capacity) {}
   void literal(const char *text);
+  // 写入已验证UTF-8名称：ASCII原样输出，非ASCII转为\uXXXX，线路保持纯ASCII。
+  void name(const char *utf8);
   void number(uint32_t value);
   void real(double value);
   void boolean(bool value) { literal(value ? "true" : "false"); }

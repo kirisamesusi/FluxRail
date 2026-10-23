@@ -1,4 +1,9 @@
-/** Module navigation affects presentation only. All editors keep the same DOM and draft. */
+/** 顶部三个页签只改变展示。设备状态 / 固件 / 实验性功能共用同一 DOM 与草稿，
+ * 切换页签不会重建编辑器，也不会丢失网页草稿。旧链接（#keyboard、#lighting、#hall、
+ * #knobs、#profiles 等）回到设备状态；#update 为固件页；内部深链接会展开其所在的分组。
+ */
+const legacyToStatus = new Set(['keyboard', 'lighting', 'hall', 'knobs', 'profiles', 'diagnostics', 'input-status']);
+
 export function mountModuleNavigation({ onNavigate = () => {}, document = globalThis.document, window = globalThis.window } = {}) {
   const links = [...document.querySelectorAll('.module-nav [data-module]')];
   const panels = new Map(links.map(link => [link.dataset.module, document.getElementById(link.dataset.module)]));
@@ -7,9 +12,9 @@ export function mountModuleNavigation({ onNavigate = () => {}, document = global
   function show({ focus = false } = {}) {
     let targetId;
     try { targetId = decodeURIComponent(window.location.hash.slice(1)); } catch { targetId = ''; }
-    // The skip link moves focus to main without changing the selected module.
+    // The skip link moves focus to main without changing the selected page.
     if (targetId === 'main-content' && current) return;
-    if (targetId === 'diagnostics') targetId = 'input-status';
+    if (legacyToStatus.has(targetId)) targetId = 'device-status';
     const target = document.getElementById(targetId);
     const id = panels.has(targetId) ? targetId : target?.closest('.module-panel')?.id;
     const selected = panels.has(id) ? id : 'device-status';
@@ -20,7 +25,6 @@ export function mountModuleNavigation({ onNavigate = () => {}, document = global
       if (link.dataset.module === selected) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     }
-    if (selected === 'experimental') document.getElementById('experimental-panel').open = true;
     if (target && target !== panels.get(selected)) {
       for (let ancestor = target; ancestor && ancestor !== panels.get(selected); ancestor = ancestor.parentElement) {
         if (ancestor.tagName === 'DETAILS') ancestor.open = true;

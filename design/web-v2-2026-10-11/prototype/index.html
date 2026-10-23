@@ -1,0 +1,1011 @@
+<title>FluxRail 配置页原型</title>
+<style>
+/* 布局：顶栏 / 横幅（标题 + 看板娘说话）/ 三栏（模板·历史 | 设备面板·灯光 | 检查器）/ 状态栏。桌面优先，最小宽度 1100px，不做移动端适配。 */
+:root{
+  --blue:#8FD3F0; --blue-soft:#BFE6F7; --blue-wash:#EAF7FD; --blue-line:#CBE9F6;
+  --pink:#F7A8C4; --pink-soft:#FBC5D8; --pink-wash:#FFE9F1; --pink-deep:#C2456F;
+  --ink:#1F3A4A; --muted:#52707F; --faint:#7A93A1; --link:#2A7FA8;
+  --panel:linear-gradient(155deg,#FFFFFF 0%,#F2F9FD 42%,#FFF3F8 100%); --warn-ink:#9B2F57; --err:#B23A48; --err-wash:#FBE3E3; --ok:#2F9E6B;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  --mono:ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{font-family:var(--font);color:var(--ink);background:#F4F8FB;font-size:14px}
+button,select,input{font-family:inherit;color:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.app{min-width:1100px;min-height:100vh;display:flex;flex-direction:column;background:linear-gradient(180deg,#EAF7FD 0%,#FFF1F6 100%)}
+h1,h2,h3{margin:0}
+
+/* 顶栏 */
+.top{display:flex;align-items:center;gap:18px;padding:10px 28px;background:rgba(255,255,255,.9);border-bottom:2px dotted #BFE3F3}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;background:#DDF1FA}
+.brand b{font-size:21px;font-weight:800;letter-spacing:.04em}
+.io4{display:flex;align-items:center;gap:10px;padding:6px 16px 6px 12px;border-radius:16px;background:#fff;border:2px solid var(--blue-line);text-align:left}
+.io4:disabled{opacity:.6}
+.sw{position:relative;width:40px;height:22px;border-radius:999px;background:var(--blue-line);flex:none;transition:background .15s}
+.sw i{position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .15s}
+.io4[aria-checked="true"] .sw{background:var(--pink)}
+.io4[aria-checked="true"] .sw i{left:21px}
+.io4 span.t{display:flex;flex-direction:column;line-height:1.3}
+.io4 span.t b{font-size:14px}
+.io4 span.t small{font-size:12px;color:var(--muted)}
+.tabs{display:flex;gap:8px;flex:1;justify-content:center}
+.tab{border:0;padding:8px 22px;border-radius:999px;background:#fff;font-size:14px}
+.tab[aria-selected="true"]{background:var(--blue);font-weight:700}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;background:#F2F5F7;font-size:13px;color:var(--muted);white-space:nowrap}
+.pill i{width:8px;height:8px;border-radius:50%;background:#9FB3BF}
+.pill.on{background:#E3F5EC;color:#256B4B}
+.pill.on i{background:var(--ok)}
+.btn{height:38px;padding:0 20px;border-radius:999px;border:2px solid transparent;font-size:14px;font-weight:700;white-space:nowrap}
+.btn.line{border-color:#D5E0E7;background:#fff;color:#3D5666;font-weight:600}
+.btn.line:disabled{opacity:.5}
+.btn.blue{background:var(--blue);border-color:var(--blue)}
+.btn.blue:disabled{opacity:.7}
+.btn.pink{background:var(--pink);border-color:var(--pink)}
+.btn.pink:disabled{background:#F9DCE7;border-color:#F9DCE7;color:#8E6577}
+.btn .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--pink-deep);margin-right:8px}
+
+/* 横幅 */
+.banner-wrap{padding:20px 24px 0}
+.banner{min-height:290px;border-radius:28px;background:linear-gradient(90deg,#FFF 0%,#F3FAFE 55%,#FFF1F6 100%);box-shadow:0 6px 24px rgba(79,179,224,.12);display:flex;align-items:center;justify-content:space-between;gap:32px;padding:20px 40px}
+.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--pink-deep);font-weight:700}
+.banner h1{font-size:44px;line-height:1.1;margin:10px 0}
+.banner p{margin:0;font-size:15px;color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.chip{display:inline-flex;align-items:center;height:32px;padding:0 13px;box-sizing:border-box;line-height:1;border-radius:999px;background:var(--blue-wash);font-size:13px;font-family:var(--mono)}
+.chip.p{background:var(--pink-wash);font-family:var(--font);font-weight:700}
+.chip.off{opacity:.55}
+.talk{flex:none;display:flex;align-items:center;gap:14px;margin-right:140px}
+.bubble{position:relative;width:290px;background:#fff;border:2px solid var(--ink);border-radius:20px;padding:12px 16px;line-height:1.55;transition:border-color .2s}
+.bubble::after{content:"";position:absolute;right:-9px;top:50%;margin-top:-7px;width:14px;height:14px;background:#fff;border-top:2px solid var(--bc,var(--ink));border-right:2px solid var(--bc,var(--ink));transform:rotate(45deg)}
+.bubble .bt{display:flex;align-items:center;gap:8px;font-weight:700}
+.bubble .bb{color:var(--muted);margin-top:2px}
+.bubble .ba{margin-top:8px;display:flex;gap:8px}
+.bubble .ba button{height:30px;padding:0 14px;border-radius:999px;border:2px solid var(--blue-line);background:#fff;font-size:13px}
+.talk img{height:230px;width:auto;flex:none}
+
+/* 主体 */
+main.grid{flex:1;display:flex;gap:20px;padding:20px 24px;align-items:stretch}
+.card{background:var(--panel);border-radius:24px;padding:18px;box-shadow:0 4px 18px rgba(79,179,224,.12)}
+.left{width:248px;flex:none;position:relative}
+.leftin{position:absolute;inset:0;display:flex;flex-direction:column;gap:16px}
+.leftin .log{flex:1 1 120px;min-height:120px;overflow:auto}
+.leftin>.card:not(.log):not(.devinfo){flex:none}
+.leftin>.devinfo{flex:0 1 auto;min-height:58px;overflow:auto}
+.left h2{font-size:17px}
+.head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.head small{font-size:12px;color:var(--faint)}
+.tpl{display:flex;width:100%;align-items:center;justify-content:space-between;padding:11px 14px;margin-bottom:8px;border-radius:16px;background:#F7FBFD;border:2px solid transparent;text-align:left;font-size:14px}
+.tpl:hover{background:#EEF8FD}
+.tpl.act{background:#DDF1FA;border-color:var(--blue);font-weight:700}
+.tpl.sel{border-color:var(--pink);box-shadow:0 0 0 3px rgba(247,168,196,.45)}
+.tpl em{font-style:normal;font-size:12px;color:#8E4A66;font-weight:700}
+.add{width:100%;height:38px;border-radius:999px;border:2px dashed var(--blue-line);background:transparent;font-size:14px;color:var(--link)}
+.add:disabled{opacity:.5}
+.log{flex:1;display:flex;flex-direction:column;gap:10px}
+.logrow{display:flex;gap:10px;font-size:13px;line-height:1.5}
+.logrow time{color:var(--faint);font-family:var(--mono);flex:none}
+.logrow.new{animation:fadein .5s}
+@keyframes fadein{from{background:var(--pink-wash)}to{background:transparent}}
+
+.center{flex:1;min-width:0;background:var(--panel);border-radius:28px;padding:24px 28px;box-shadow:0 6px 24px rgba(79,179,224,.12);display:flex;flex-direction:column;gap:20px}
+.center>.head h2{font-size:22px}
+.legend{display:flex;align-items:center;gap:18px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.ldot{width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--blue-line)}
+.lbar{width:18px;height:6px;border-radius:3px;background:var(--pink)}
+
+.stage{flex:1;display:flex;flex-direction:column;justify-content:center;gap:46px;padding:10px 0}
+.ctrls{display:flex;align-items:center;gap:36px;padding:0 6px}
+.knob{position:relative;width:160px;height:160px;border-radius:50%;border:0;background:radial-gradient(circle at 50% 36%,#FFFFFF 0%,#F4F9FD 72%);padding:0;flex:none;touch-action:none;box-shadow:0 8px 20px rgba(79,179,224,.18)}
+.knob svg{display:block;width:100%;height:100%;overflow:visible}
+.knob.sel{box-shadow:0 0 0 6px rgba(247,168,196,.5),0 8px 20px rgba(79,179,224,.18)}
+.knob .mn,.knob .ma{transform-origin:80px 80px;transition:opacity .2s}
+.knob.off .mn,.knob.off .ma{opacity:0}
+.sliderbox{flex:1;min-width:0;padding:8px 0 12px;border-radius:26px;border:2px solid transparent;background:transparent;display:block;text-align:left}
+.sliderbox.sel{border-color:var(--pink);box-shadow:0 0 0 5px rgba(247,168,196,.4)}
+.strack{position:relative;height:24px;margin:34px 34px 0}
+.strack .rail{position:absolute;inset:0;border-radius:999px;background:linear-gradient(180deg,#EAF5FB,#F7FBFE);box-shadow:inset 0 0 0 3.5px #BFE0F1,inset 0 3px 6px rgba(31,58,74,.08)}
+.strack .fill{position:absolute;left:0;top:3px;bottom:3px;border-radius:999px;background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.85) 2.2px,transparent 2.8px) 0 0/22px 100%,linear-gradient(180deg,#FBC5D8,#F29DBB);box-shadow:inset 0 -3px 0 rgba(194,69,111,.18)}
+.strack .fill::after{content:"";position:absolute;left:12px;right:12px;top:3px;height:3px;border-radius:2px;background:rgba(255,255,255,.7)}
+.strack .thumb{position:absolute;top:-7px;width:38px;height:38px;margin-left:-19px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#BFE9FA,#8FD3F0 70%);border:5px solid #fff;box-shadow:0 3px 10px rgba(79,179,224,.5)}
+.strack .pin{position:absolute;top:-24px;margin-left:-9px;width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-top:13px solid var(--pink);filter:drop-shadow(0 2px 0 rgba(194,69,111,.25))}
+.sliderbox.off .fill,.sliderbox.off .thumb,.sliderbox.off .pin{opacity:0}
+.ticks{display:flex;justify-content:space-between;align-items:flex-start;margin:12px 34px 0}
+.ticks i{width:3px;height:8px;border-radius:2px;background:#C5DCE8}
+.ticks i.M{height:14px;background:#9CC4D8}
+.keys{display:flex;justify-content:center;gap:56px}
+.keys>div{display:flex;gap:16px}
+.key{width:90px;height:82px;border-radius:22px;background:var(--blue-soft);border:2px solid var(--blue);box-shadow:0 4px 0 var(--blue),inset 0 4px 0 rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0;transition:transform .08s}
+.key:active{transform:translateY(2px);box-shadow:0 2px 0 var(--blue)}
+.key b{font-size:15px;font-weight:800}
+.key span{font-size:13px;color:#3D6377;max-width:78px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.key.down{transform:translateY(3px);background:#fff;border-color:var(--blue);box-shadow:0 1px 0 var(--blue),0 0 0 6px rgba(143,211,240,.5),inset 0 0 14px rgba(143,211,240,.6)}
+.key.wide.down{background:#fff;border-color:#F29DBB;box-shadow:0 1px 0 #F29DBB,0 0 0 6px rgba(247,168,196,.5),inset 0 0 14px rgba(247,168,196,.6)}
+.key.sel{background:var(--blue);border-color:var(--ink);box-shadow:0 0 0 4px rgba(247,168,196,.7)}
+.key.dis{background:#EEF3F6;border-color:#C9D6DD;box-shadow:0 4px 0 #C9D6DD;color:#8AA0AC}
+.key.dis span{color:#8AA0AC}
+.key.wide{width:108px;background:var(--pink-soft);border-color:#F29DBB;box-shadow:0 4px 0 #F29DBB,inset 0 4px 0 rgba(255,255,255,.7)}
+.key.wide span{color:#7B3A55}
+.key.wide.sel{background:var(--pink);border-color:var(--ink);box-shadow:0 0 0 4px rgba(143,211,240,.8)}
+.bottomkeys{display:flex;justify-content:center;gap:240px}
+.light{border-top:2px dotted #F9D0DF;padding-top:18px;display:flex;flex-direction:column;gap:14px;margin-top:auto}
+.light h3{font-size:17px}
+.lrow{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.lrow>div{display:flex;align-items:center;gap:10px}
+.lrow label,.lrow .lb{font-size:14px;font-weight:700}
+select.sel-in{height:40px;min-width:150px;border-radius:14px;border:2px solid var(--blue-line);padding:0 12px;font-size:14px;background:#fff}
+select.sel-in.big{height:40px;font-size:15px;padding:0 14px;width:100%}
+select:disabled,input:disabled{opacity:.55;cursor:not-allowed}
+.val{min-width:44px;text-align:center;padding:5px 0;border-radius:12px;background:#F3FAFE;font-size:13px;font-family:var(--mono)}
+input[type=range]{accent-color:#E2779F;flex:1}
+.sw-row{display:flex;gap:10px}
+.cs{width:30px;height:30px;border-radius:50%;border:0;padding:0}
+.cs[aria-pressed="true"],.cs.sel{box-shadow:0 0 0 3px var(--ink)}
+.cs.custom{position:relative;overflow:hidden;display:inline-block;background:conic-gradient(#ff9aa2,#ffdf8e,#b5ead7,#8FD3F0,#d5c6f2,#ff9aa2);box-shadow:0 0 0 2px #fff,0 0 0 3px #CBD9E1}
+.cs.custom input{position:absolute;inset:-6px;width:calc(100% + 12px);height:calc(100% + 12px);opacity:0;cursor:pointer;padding:0;border:0}
+.cs.custom.dis{opacity:.5}
+.cs.white{box-shadow:inset 0 0 0 2px #CBD9E1}
+.cs.white[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #CBD9E1,0 0 0 3px var(--ink)}
+.hexv{font-family:var(--mono);font-size:12px;color:var(--muted);padding:5px 9px;border-radius:10px;background:#F3FAFE}
+.kdot{position:absolute;top:6px;right:7px;width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 3px rgba(31,58,74,.25)}
+.key{position:relative}
+.cs.custom.dis input{cursor:not-allowed}
+.listen{border-color:var(--pink)!important;background:var(--pink-wash)!important;color:var(--warn-ink)}
+.numin{width:60px;height:34px;border-radius:12px;border:2px solid var(--blue-line);text-align:center;font-size:14px;font-family:var(--mono);background:#fff}
+.cs:disabled{opacity:.5}
+
+.right{width:320px;flex:none;background:var(--panel);border-radius:28px;padding:22px 24px 24px;box-shadow:0 6px 24px rgba(247,168,196,.18);display:flex;flex-direction:column;gap:12px}
+.right h2{font-size:26px;margin-top:4px}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld>label,.fld>.lb{font-size:14px;font-weight:700}
+.row{display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.row input[type=checkbox]{width:20px;height:20px;accent-color:#E2779F}
+.note{font-size:13px;line-height:1.7;color:var(--muted)}
+.readout{padding:10px 14px;border-radius:14px;background:#F3FAFE;display:flex;flex-direction:column;gap:8px}
+.readout .two{display:flex;gap:16px}
+.readout .two>div{flex:1;min-width:0}
+.readout .nm{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.readout .num{margin-top:3px;font-size:17px;font-weight:700;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.readout .num.none{font-size:14px;font-family:var(--font);font-weight:600;color:var(--faint)}
+.hero{margin-top:auto;margin-bottom:34px;display:flex;position:relative}
+.hero img{width:100%;height:auto;display:block}
+.herobtn{border:0;background:transparent;padding:0;width:100%;border-radius:20px;position:relative;top:18px}
+.herobtn:active img{transform:scale(.985)}
+.hero img{transition:transform .12s}
+.mbub{position:absolute;right:6px;bottom:calc(100% + 2px);width:200px;background:#fff;border:2px solid var(--ink);border-radius:18px;padding:10px 14px;font-size:13.5px;line-height:1.6;z-index:5;box-shadow:0 6px 18px rgba(31,58,74,.15);animation:pop .22s ease-out}
+.mbub::after{content:"";position:absolute;right:46px;bottom:-9px;width:14px;height:14px;background:#fff;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+@keyframes pop{from{transform:translateY(6px) scale(.95);opacity:0}to{transform:none;opacity:1}}
+.rbtn{height:42px;border-radius:999px;border:2px solid var(--blue-line);background:#fff;font-size:14px;font-weight:600}
+.rbtn.main{background:var(--blue);border-color:var(--blue);font-weight:700}
+.rbtn.danger{border-color:#E3B5BC;color:#8F2433}
+.rbtn:disabled{opacity:.5}
+.nameedit{display:flex;gap:8px}
+.nameedit input{flex:1;min-width:0;height:40px;border-radius:12px;border:2px solid var(--blue-line);padding:0 12px;font-size:14px}
+.nameedit button{height:40px;padding:0 14px;border-radius:12px;border:0;background:var(--blue);font-weight:700}
+
+/* 状态栏 */
+.foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:9px 24px;background:rgba(255,255,255,.88);border-top:2px dotted #BFE3F3;font-size:13px;color:var(--muted)}
+.foot .sim{display:flex;align-items:center;gap:8px}
+.foot select{height:30px;border-radius:10px;border:2px solid var(--blue-line);padding:0 8px;font-size:13px;background:#fff}
+.dirtytag{color:var(--warn-ink);font-weight:700}
+
+.placeholder{flex:1;display:flex;align-items:center;justify-content:center;padding:40px}
+.placeholder div{max-width:460px;background:#fff;border-radius:28px;padding:36px;text-align:center;box-shadow:0 6px 24px rgba(79,179,224,.12);line-height:1.8;color:var(--muted)}
+.placeholder h2{color:var(--ink);font-size:24px;margin-bottom:8px}
+
+/* 弹窗 */
+.mask{position:fixed;inset:0;background:rgba(31,58,74,.32);display:flex;align-items:center;justify-content:center;z-index:50}
+.dlg{width:400px;background:#fff;border:2px solid var(--blue-line);border-radius:24px;padding:24px;box-shadow:0 12px 36px rgba(31,58,74,.28);display:flex;flex-direction:column;gap:14px}
+.dlg .hd{display:flex;align-items:center;gap:12px}
+.dlg h2{font-size:19px}
+.dlg .ic{width:36px;height:36px;border-radius:50%;background:var(--pink-wash);display:flex;align-items:center;justify-content:center;flex:none}
+.dlg.danger .ic{background:var(--err-wash)}
+.dlg p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+.dlg .dnote{font-size:13px;color:var(--faint)}
+.dlg .derr{color:var(--err);font-size:13px;min-height:0}
+.dlg .warnbox{padding:10px 12px;border-radius:14px;background:var(--pink-wash);border:2px solid #F3C3D6}
+.dlg .warnbox strong{color:var(--warn-ink);font-size:14px}
+.dlg .dname{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700}
+.dlg .dname input{height:42px;border-radius:12px;border:2px solid var(--blue-line);padding:0 12px;font-size:14px;font-weight:400}
+.devdl{display:block;margin:8px 0 0;font-size:12.5px;line-height:1.4}
+.devdl dt{color:var(--faint);font-size:11.5px;margin-top:7px}.devdl dt:first-child{margin-top:0}.devdl dd{margin:1px 0 0;overflow-wrap:anywhere}
+details.devinfo summary{cursor:pointer;font-size:17px;font-weight:700}
+.dlg .ft{display:flex;justify-content:flex-end;gap:10px;margin-top:4px}
+.dlg .ft button{height:40px;padding:0 18px;border-radius:999px;border:2px solid var(--blue-line);background:#fff;font-size:14px}
+.dlg .ft button.ok{border-color:var(--blue-line)}
+.dlg.danger .ft button.ok{border-color:#E3B5BC;color:#8F2433}
+.dlg .ft button.cancel{border:0;background:var(--blue);font-weight:700;padding:0 22px}
+.dlg .ft button.cancel:focus-visible{outline:3px solid var(--ink);outline-offset:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* 桌面自适应：1920 / 1440 / 1280 都排得下。不适配手机，最小宽度 1200px */
+.app{min-width:1200px}
+.banner-wrap,main.grid{width:100%;max-width:1800px;margin-left:auto;margin-right:auto}
+.io4{flex:none}
+@media (max-width:1560px){
+  .key{width:78px;height:72px;border-radius:19px}.key.wide{width:94px}
+  .keys{gap:40px}.keys>div{gap:12px}.bottomkeys{gap:170px}
+  .knob{width:136px;height:136px}.ctrls{gap:26px}
+  .left{width:226px}.right{width:300px}
+  .banner{padding:20px 32px}.banner h1{font-size:40px}.talk{margin-right:60px}
+  .stage{gap:38px}
+}
+@media (max-width:1360px){
+  .top{gap:10px;padding:10px 16px}
+  .tab{padding:8px 14px}.btn{padding:0 14px}.io4{padding:6px 12px 6px 10px}
+  main.grid{gap:14px;padding:16px}.banner-wrap{padding:16px 16px 0}
+  .left{width:204px}.right{width:278px;padding:20px}
+  .center{padding:20px 20px}
+  .key{width:64px;height:62px;border-radius:17px}.key b{font-size:14px}.key span{font-size:12px;max-width:56px}.key.wide{width:80px}
+  .keys{gap:28px}.keys>div{gap:8px}.bottomkeys{gap:120px}
+  .knob{width:116px;height:116px}.ctrls{gap:18px}
+  .banner{padding:16px 24px;min-height:250px}.banner h1{font-size:36px}.talk{margin-right:10px;gap:10px}.talk img{height:200px}.bubble{width:250px}
+  .stage{gap:30px}
+  .lrow{gap:16px}
+}
+@media (max-height:800px){
+  .herobtn{width:74%;margin-left:auto}.hero{margin-bottom:0}.right{gap:7px;padding-top:18px}select.sel-in.big{height:36px}.right .readout{padding:6px 12px}
+  .banner{min-height:220px}.talk img{height:180px}
+}
+.pg{flex:1;display:none;flex-direction:column;gap:16px;padding:20px 24px 28px;width:100%;max-width:1800px;margin:0 auto}
+.pghead{border-radius:28px;background:linear-gradient(90deg,#FFF 0%,#F3FAFE 55%,#FFF1F6 100%);box-shadow:0 6px 24px rgba(79,179,224,.12);padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.lab .pghead{width:100%;max-width:1080px;margin:0 auto}.pghead h1{font-size:32px;line-height:1.15;margin:6px 0 4px}.pghead p{margin:0;color:var(--muted);font-size:14px}
+.pghead .eyebrow{display:block}
+.pgbadge{padding:6px 14px;border-radius:999px;background:var(--pink-wash);font-weight:700;font-size:13px;white-space:nowrap}
+.fwgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+.fwcard h2,.labg h3{margin:0}
+.fwcard h2{font-size:18px;margin-bottom:12px}
+.fwver{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.fwver .chip{height:32px}
+.pgnote{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+.filebtn{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:999px;border:2px dashed var(--blue-line);background:#fff;font-weight:700;cursor:pointer}
+.filebtn input{position:absolute;opacity:0;width:1px;height:1px}
+.filebtn:focus-within{outline:3px solid var(--ink);outline-offset:2px}
+.resbox{margin:12px 0 0;padding:12px 14px;border-radius:16px;background:#F3FAFE;font:13px/1.7 var(--font);white-space:pre-wrap;color:var(--ink);min-height:70px}
+.steps{margin:0;padding-left:20px;line-height:1.9;color:var(--muted);font-size:13.5px}
+.labgrid{display:flex;flex-direction:column;gap:12px;width:100%;max-width:1080px;margin:0 auto}
+.labg{padding:0}.labg.wide{grid-column:1/-1}
+.labg>summary{list-style:none;display:flex;align-items:center;gap:10px;padding:16px 22px;cursor:pointer;border-radius:24px}.labg .gt{display:flex;flex-direction:column;gap:2px}.labg .gt b{font-size:16px}.labg .gt small{font-size:12.5px;color:var(--muted);font-weight:400}.labg[open]>summary{padding-bottom:12px}.labg .gb{border-top:1px dashed var(--blue-line);padding-top:16px;margin:0 22px;padding-left:0;padding-right:0}
+.labg>summary::-webkit-details-marker{display:none}
+.labg>summary::after{content:"";margin-left:auto;width:9px;height:9px;border-right:2.5px solid var(--muted);border-bottom:2.5px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.labg[open]>summary::after{transform:rotate(-135deg)}
+.labg .gb{padding:0 0 20px;display:flex;flex-direction:column;gap:12px}
+.labg .sub{font-size:13px;color:var(--faint);font-weight:700;margin:4px 0 0}
+.lf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px}
+.lf.three{grid-template-columns:repeat(3,minmax(0,1fr))}.lf.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lf label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700}
+.lf label.ck{flex-direction:row;align-items:center;gap:10px;min-height:40px}
+.lf small{font-weight:400;color:var(--muted);line-height:1.5;font-size:12px}
+.lf input[type=number],.lf input[type=text],.lab select{height:38px;border-radius:12px;border:2px solid var(--blue-line);padding:0 10px;font-size:13.5px;background:#fff;width:100%}
+.lf input:disabled,.lab select:disabled{background:#F1F5F8;border-color:#E1E9EF}
+.lf input[type=checkbox]{width:20px;height:20px;accent-color:var(--pink-deep)}
+.lab fieldset{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:12px}
+.lab .acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.lab .btn{height:36px;padding:0 16px;font-size:13px}
+.lab pre,.lab .prebox{margin:0;padding:10px 12px;border-radius:14px;background:#F3FAFE;font:12.5px/1.65 var(--mono);white-space:pre-wrap;color:var(--ink)}
+.lab .kc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lab .kc>div{padding:14px;border-radius:18px;background:#F7FBFE}
+.lab .kc h4{margin:0 0 10px;font-size:14px}
+.io4g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 14px}
+.io4g label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;font-weight:700}
+.dnote{white-space:pre-line}
+@media (max-width:1360px){.fwgrid{grid-template-columns:1fr}.io4g{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
+<div class="app" id="app">
+  <header class="top">
+    <div class="brand"><img src="img/head.png" alt="FluxRail 角色头像"><b>FluxRail</b></div>
+    <button type="button" class="io4" id="io4" role="switch" aria-checked="false" aria-label="IO4 模式">
+      <span class="sw"><i></i></span>
+      <span class="t"><b>IO4 模式</b><small id="io4sub">连接后可切换</small></span>
+    </button>
+    <nav class="tabs" role="tablist" aria-label="页面">
+      <button type="button" class="tab" role="tab" aria-selected="true" data-tab="status">设备状态</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-tab="firmware">固件</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-tab="lab">实验性功能</button>
+    </nav>
+    <span class="pill" id="pill"><i></i><span id="pilltxt">未连接</span></span>
+    <button type="button" class="btn line" id="reboot" disabled>重启设备</button>
+    <button type="button" class="btn blue" id="conn">连接 FluxRail</button>
+    <button type="button" class="btn pink" id="apply" disabled>应用并保存</button>
+  </header>
+
+  <div id="statusPage" style="display:flex;flex-direction:column;flex:1">
+    <div class="banner-wrap">
+      <section class="banner">
+        <div>
+          <div class="eyebrow">FLUXRAIL / CONFIGURATION</div>
+          <h1>设备配置</h1>
+          <p>改动会立即生效，点「应用并保存」写入设备。</p>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="talk">
+          <div class="bubble" role="status" id="bubble"></div>
+          <img src="img/girl.png" alt="">
+        </div>
+      </section>
+    </div>
+
+    <main class="grid">
+      <aside class="left"><div class="leftin">
+        <section class="card">
+          <div class="head"><h2>模板</h2><small>点选后在右侧管理</small></div>
+          <div id="tpls"></div>
+          <button type="button" class="add" id="newTpl">新建模板</button>
+        </section>
+        <details class="card devinfo" id="devinfo"><summary>设备信息</summary><dl class="devdl" id="devdl"></dl></details>
+        <section class="card log" id="logcard">
+          <h2>历史操作</h2>
+          <div id="log" style="display:flex;flex-direction:column;gap:10px"></div>
+          <div style="flex:1"></div>
+          <div style="font-size:12px;color:var(--faint)">气泡里的提示会淡出，这里留有记录。</div>
+        </section>
+      </div></aside>
+
+      <section class="center" id="center">
+        <div class="head" style="margin:0">
+          <h2 style="display:flex;align-items:center;gap:8px">设备面板<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.6L21 11l-6.4 2.4L12 20l-2.6-6.6L3 11l6.4-2.4z" fill="#F7A8C4"/></svg></h2>
+          <div class="legend"><span>点按键、旋钮或滑轨，在右侧修改设置</span><span><i class="ldot"></i>原生</span><span><i class="lbar"></i>灵敏度后</span></div>
+        </div>
+        <div class="stage">
+        <div class="ctrls">
+          <button type="button" class="knob off" id="knobL" aria-label="左旋钮"></button>
+          <button type="button" class="sliderbox off" id="slider" aria-label="滑轨">
+            <div class="strack" id="track"><div class="rail"></div><div class="fill"></div><div class="thumb"></div><div class="pin"></div></div>
+            <div class="ticks" aria-hidden="true"><i class="M"></i><i></i><i></i><i></i><i></i><i class="M"></i><i></i><i></i><i></i><i></i><i class="M"></i></div>
+          </button>
+          <button type="button" class="knob off" id="knobR" aria-label="右旋钮"></button>
+        </div>
+        <div class="keys"><div id="keysL"></div><div id="keysR"></div></div>
+        <div class="bottomkeys" id="keysB"></div>
+        </div>
+
+        <div class="light">
+          <div class="head" style="margin:0"><h3>灯光设置</h3><small style="font-size:12px;color:var(--faint)">选「自定义」后，在每个按键的设置里选颜色</small></div>
+          <div class="lrow">
+            <div style="gap:8px"><label for="len">键灯启用</label><input id="len" type="checkbox" checked style="width:20px;height:20px;accent-color:#E2779F"></div>
+            <div><label for="lmode">灯效模式</label>
+              <select id="lmode" class="sel-in"><option>常亮</option><option>呼吸</option><option>同步换色</option><option>彩虹流动</option><option>按下即亮</option><option>自定义</option></select></div>
+            <div style="flex:1;min-width:200px"><label for="lbright">亮度</label><input id="lbright" type="range" min="0" max="100" value="60"><span class="val" id="lbv">60</span></div>
+            <div><span class="lb">全局颜色</span><span class="sw-row" id="gcolors"></span><span class="hexv" id="chex"></span></div>
+          </div>
+          <div class="note" id="lnote" style="font-size:12px;display:none">灯效为「自定义」时，每个按键单独设置颜色和亮度，全局颜色不可用。</div>
+        </div>
+      </section>
+
+      <aside class="right" id="right"></aside>
+    </main>
+  </div>
+
+<div class="pg" id="fwPage"></div><div class="pg" id="labPage"></div>
+
+  <footer class="foot">
+    <span>RP2040 · Web Serial</span>
+    <span class="sim"><label for="sim">设备信号</label>
+      <select id="sim"><option value="demo">演示动画</option><option value="manual">手动测试（滚轮 / 拖动）</option><option value="pause">暂停</option></select>
+      </span>
+  </footer>
+</div>
+<div id="dlgRoot"></div>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var HEXDEF='#8FD3F0';
+  var KEYS=[['BT8','A'],['BT7','S'],['BT6','D'],['BT5','F'],['BT4','J'],['BT3','K'],['BT2','L'],['BT1',';'],['BT9','V'],['BT10','N']];
+  var KDEF={};KEYS.forEach(function(k){KDEF[k[0]]=k[1]});
+  function defCfg(){
+    var c={keys:{},light:{enabled:true,mode:'常亮',bright:60,color:'#8FD3F0'},lk:{en:true,rev:false,axis:'X',sens:5},rk:{en:true,rev:false,axis:'Y',sens:5},sl:{en:true,rev:false,sens:5}};
+    KEYS.forEach(function(k){c.keys[k[0]]={action:'键盘 · '+k[1],bright:60,color:'#8FD3F0'}});
+    return c;
+  }
+  var clone=function(o){return JSON.parse(JSON.stringify(o))};
+  var S={
+    tab:'status',connected:false,connecting:false,io4:false,
+    tpls:[{id:'sdvx',name:'SDVX 双旋钮',ascii:'SDVX',preset:true},{id:'ongeki',name:'音击',ascii:'Ongeki',preset:true},{id:'falsus',name:'In Falsus',ascii:'In Falsus',preset:true},{id:'multik',name:'普通多 K',ascii:'Multi-K',preset:true}],
+    active:'sdvx',savedActive:'sdvx',io4Saved:false,sel:{type:'key',id:'BT3'},
+    cfg:defCfg(),saved:defCfg(),log:[],flash:null,nextTpl:1,renaming:false,saving:false,
+    sig:{lk:0,rk:0,sl:.5},shown:{lk:0,rk:0,sl:.5},listen:false,logSnap:null,pal:{g:['#8FD3F0','#F7A8C4','#FFFFFF'],k:['#8FD3F0','#F7A8C4','#FFFFFF']},nx:{g:0,k:0},t0:performance.now()
+  };
+  var flashTimer=null;
+
+  function hhmm(){var d=new Date();return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}
+  function addLog(t){S.log.unshift({time:hhmm(),text:t,fresh:true});S.log=S.log.slice(0,8);renderLog()}
+  function flat(o,p,out){out=out||{};for(var k in o){if(o[k]&&typeof o[k]==='object')flat(o[k],p+k+'.',out);else out[p+k]=o[k]}return out}
+  function dirtyCount(){
+    var a=flat(S.cfg,''),b=flat(S.saved,''),n=0;
+    for(var k in a)if(a[k]!==b[k])n++;
+    if(S.active!==S.savedActive)n++;
+    if(S.io4!==S.io4Saved)n++;
+    return n;
+  }
+  function tplName(id){var t=S.tpls.filter(function(x){return x.id===id})[0];return t?t.name:''}
+
+  /* ---------- 气泡 ---------- */
+  var ICON={
+    ok:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A7FA8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    info:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A7FA8" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 11v6"/><path d="M12 6.5v.01"/></svg>',
+    warn:'<svg width="18" height="18" viewBox="0 0 24 24" fill="#C2456F" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>',
+    err:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B23A48" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v9"/><path d="M12 18.5v.01"/></svg>'
+  };
+  function baseBubble(){
+    if(S.connecting)return{k:'info',t:'正在连接…',b:'请在浏览器弹窗里选择 FluxRail。'};
+    if(!S.connected)return{k:'info',t:'尚未连接设备',b:'连接后可读取和修改设置。'};
+    var n=dirtyCount();
+    if(n)return{k:'warn',t:'有 '+n+' 处修改已生效，还没保存',b:'断电或切换模板会丢失。点右上角「应用并保存」写入设备，或「还原」。',discard:true};
+    return{k:'ok',t:'设置和设备一致',b:'修改后点「应用并保存」写入设备'};
+  }
+  function say(msg,ms){
+    S.flash=msg;clearTimeout(flashTimer);renderBubble();
+    if(ms)flashTimer=setTimeout(function(){S.flash=null;renderBubble()},ms);
+  }
+  function renderBubble(){
+    var m=S.flash||baseBubble();
+    var bc={ok:'#1F3A4A',info:'#1F3A4A',warn:'#C2456F',err:'#B23A48'}[m.k];
+    var b=$('#bubble');b.style.borderColor=bc;b.style.setProperty('--bc',bc);
+    var tc={ok:'var(--ink)',info:'var(--ink)',warn:'var(--warn-ink)',err:'#8F2433'}[m.k];
+    b.innerHTML='<div class="bt" style="color:'+tc+'">'+ICON[m.k]+'<span>'+m.t+'</span></div><div class="bb">'+m.b+'</div>'+(m.discard?'<div class="ba"><button type="button" id="discard">还原修改</button></div>':'');
+    var d=$('#discard');if(d)d.onclick=discard;
+  }
+
+  /* ---------- 弹窗 ---------- */
+  var NAME_RULE='模板名称为 1～10 个字符，可以用中文，不含双引号和反斜杠。';
+  function validName(v){var n=Array.from(v).length;return n>=1&&n<=10&&!/["\\\x00-\x1F]/.test(v)&&v.trim()===v&&new TextEncoder().encode(v).length<=31}
+  function confirmDlg(o){
+    var prev=document.activeElement,root=$('#dlgRoot'),warnCls=o.danger?'#B23A48':'#C2456F';
+    root.innerHTML='<div class="mask"><form class="dlg '+(o.danger?'danger':'')+'" role="alertdialog" aria-modal="true" aria-labelledby="dt" aria-describedby="dd" novalidate>'+
+      '<div class="hd"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="'+warnCls+'" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span><h2 id="dt"></h2></div>'+
+      '<div id="dd"><div class="warnbox" id="dwarn" hidden><strong></strong><p></p></div><p id="dbody"></p><p class="dnote" id="dnote" hidden></p></div>'+
+      '<label class="dname" id="dnamerow" hidden>新模板名称<input id="dname" autocomplete="off" spellcheck="false" maxlength="10" aria-describedby="dnamehelp derr"></label>'+
+      '<p class="dnote" id="dnamehelp" hidden>'+NAME_RULE+'</p><p class="derr" id="derr" role="alert"></p>'+
+      '<div class="ft"><button type="submit" class="ok"></button><button type="button" class="cancel">取消</button></div></form></div>';
+    $('#dt').textContent=o.title;$('.ok',root).textContent=o.ok;
+    if(o.warning){$('#dwarn').hidden=false;$('#dwarn strong').textContent=o.warning;$('#dwarn p').textContent=o.body}else $('#dbody').textContent=o.body;
+    if(o.note){$('#dnote').hidden=false;$('#dnote').textContent=o.note}
+    if(o.name!==undefined){$('#dnamerow').hidden=false;$('#dnamehelp').hidden=false;$('#dname').value=o.name}
+    function close(){root.innerHTML='';document.removeEventListener('keydown',key);if(prev&&prev.focus)prev.focus()}
+    function key(e){
+      if(e.key==='Escape'){e.preventDefault();close()}
+      if(e.key==='Tab'){
+        var f=[].slice.call(root.querySelectorAll('input:not([hidden]),button')).filter(function(x){return !x.closest('[hidden]')}),i=f.indexOf(document.activeElement);
+        e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus();
+      }
+    }
+    document.addEventListener('keydown',key);
+    $('.dlg',root).onsubmit=function(e){
+      e.preventDefault();
+      if(o.name!==undefined){var v=$('#dname').value;if(!validName(v)){$('#derr').textContent=NAME_RULE;$('#dname').focus();return}close();o.onOk(v);return}
+      close();o.onOk();
+    };
+    $('.cancel',root).onclick=close;
+    if(o.name!==undefined){$('#dname').focus();$('#dname').select()}else $('.cancel',root).focus();
+  }
+
+  /* ---------- 渲染：顶栏 ---------- */
+  function renderTop(){
+    var n=dirtyCount();
+    $('#pill').className='pill'+(S.connected?' on':'');
+    $('#pilltxt').textContent=S.connected?'已连接':(S.connecting?'连接中':'未连接');
+    var cb=$('#conn');
+    cb.textContent=S.connecting?'连接中…':(S.connected?'断开':'连接 FluxRail');
+    cb.disabled=S.connecting;
+    $('#reboot').disabled=!S.connected;
+    var ap=$('#apply');
+    ap.disabled=!S.connected||n===0||S.saving;
+    ap.innerHTML=S.saving?'保存中…':((S.connected&&n?'<span class="dot"></span>':'')+'应用并保存');
+    var io=$('#io4');io.disabled=!S.connected;io.setAttribute('aria-checked',S.io4);
+    $('#io4sub').textContent=S.connected?((S.io4!==S.io4Saved?'待应用：':'已读回：')+(S.io4?'IO4 模式':'普通模式')):'连接后读取启动模式';
+    $('#io4').title='应用并保存后，下次上电启用。';
+    var tabs=document.querySelectorAll('.tab');
+    for(var i=0;i<tabs.length;i++)tabs[i].setAttribute('aria-selected',tabs[i].dataset.tab===S.tab);
+  }
+  function renderDevInfo(){
+    var c=S.connected,v=function(x){return c?x:'连接后查看'};
+    var rows=[['设备型号',v('FluxRail / RP2040')],['固件 / 协议',v('0.10.2 / CDC v1')],['唯一序号',v('E6614103E7… （示例）')],['当前 USB 模式',v(S.io4Saved?'IO4':'普通模式')],['启动模式（设备 RAM）',v(S.io4Saved?'IO4 模式':'普通模式')],['活动模板',v(tplName(S.savedActive))],['设置修订号',v('12')]];
+    $('#devdl').innerHTML=rows.map(function(r){return '<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>'}).join('');
+  }
+  function renderChips(){
+    renderDevInfo();
+    var c=S.connected;
+    $('#chips').innerHTML=
+      '<span class="chip'+(c?'':' off')+'">'+(c?'FluxRail RP2040 4MiB':'设备型号：连接后读取')+'</span>'+
+      '<span class="chip'+(c?'':' off')+'">'+(c?'固件 0.10.2':'固件：—')+'</span>'+
+      '<span class="chip p'+(c?'':' off')+'">'+(c?'活动模板 · '+tplName(S.active)+(S.active!==S.savedActive?'（未保存）':''):'活动模板：—')+'</span>';
+  }
+  function renderLog(){
+    $('#log').innerHTML=S.log.length?S.log.map(function(l){
+      var c='logrow'+(l.fresh?' new':'');l.fresh=false;
+      return '<div class="'+c+'"><time>'+l.time+'</time><span>'+l.text+'</span></div>';
+    }).join(''):'<div style="font-size:13px;color:var(--faint)">还没有操作记录</div>';
+  }
+  function renderTpls(){
+    $('#tpls').innerHTML=S.tpls.map(function(t){
+      var cls='tpl'+(t.id===S.active?' act':'')+((S.sel.type==='tpl'&&S.sel.id===t.id)?' sel':'');
+      return '<button type="button" class="'+cls+'" data-id="'+t.id+'"><span>'+t.name+'</span><em>'+(t.id===S.active?'使用中':'')+'</em></button>';
+    }).join('');
+    var bs=document.querySelectorAll('.tpl');
+    for(var i=0;i<bs.length;i++)bs[i].onclick=(function(b){return function(){select({type:'tpl',id:b.dataset.id})}})(bs[i]);
+    $('#newTpl').disabled=!S.connected;
+  }
+
+  /* ---------- 渲染：面板 ---------- */
+  function keyBtn(k,wide){
+    var cf=S.cfg.keys[k[0]];
+    var cls='key'+(wide?' wide':'')+((S.sel.type==='key'&&S.sel.id===k[0])?' sel':'')+(cf.action==='禁用'?' dis':'');
+    var sub=cf.action.split(' · ')[1]||cf.action;
+    return '<button type="button" class="'+cls+'" data-id="'+k[0]+'" aria-label="'+k[0]+' '+cf.action+'"><b>'+k[0]+'</b><span>'+(cf.action==='禁用'?'禁用':sub)+'</span>'+(S.cfg.light.mode==='自定义'&&cf.action!=='禁用'?'<i class="kdot" style="background:'+cf.color+'"></i>':'')+'</button>';
+  }
+  function renderKeys(){
+    $('#keysL').innerHTML=KEYS.slice(0,4).map(function(k){return keyBtn(k)}).join('');
+    $('#keysR').innerHTML=KEYS.slice(4,8).map(function(k){return keyBtn(k)}).join('');
+    $('#keysB').innerHTML=KEYS.slice(8).map(function(k){return keyBtn(k,true)}).join('');
+    var bs=document.querySelectorAll('.key');
+    for(var i=0;i<bs.length;i++)bs[i].onclick=(function(b){return function(){select({type:'key',id:b.dataset.id})}})(bs[i]);
+  }
+  function lightish(h){var n=parseInt(h.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255;return (r*299+g*587+b*114)/1000>235}
+  function slotsHTML(ctx,size,dis){
+    return S.pal[ctx].map(function(c,i){return '<button type="button" class="cs slot" data-ctx="'+ctx+'" data-slot="'+i+'" style="width:'+size+'px;height:'+size+'px"'+(dis?' disabled':'')+'></button>'}).join('');
+  }
+  function customHTML(id,size,dis){
+    return '<label class="cs custom'+(dis?' dis':'')+'" style="width:'+size+'px;height:'+size+'px" title="调色盘，选一个新颜色"><input type="color" id="'+id+'" aria-label="调色盘，选一个新颜色" value="'+HEXDEF.toLowerCase()+'"'+(dis?' disabled':'')+'></label>';
+  }
+  function curHex(ctx){
+    if(ctx==='g')return S.cfg.light.color;
+    return S.sel.type==='key'?S.cfg.keys[S.sel.id].color:null;
+  }
+  function setCur(ctx,h){if(ctx==='g')S.cfg.light.color=h;else S.cfg.keys[S.sel.id].color=h}
+  function paintSlots(){
+    var bs=document.querySelectorAll('.slot');
+    for(var i=0;i<bs.length;i++){
+      var b=bs[i],h=S.pal[b.dataset.ctx][+b.dataset.slot],cur=curHex(b.dataset.ctx);
+      b.style.background=h;b.classList.toggle('white',lightish(h));
+      b.setAttribute('aria-pressed',!!cur&&cur.toLowerCase()===h.toLowerCase());
+      b.setAttribute('aria-label',(b.dataset.ctx==='g'?'全局颜色 ':'按键灯光 ')+h);
+    }
+    var g=$('#chex');if(g)g.textContent=S.cfg.light.color;
+    var k=$('#khex');if(k&&S.sel.type==='key')k.textContent=S.cfg.keys[S.sel.id].color;
+    var gp=$('#gcustom');if(gp)gp.value=S.cfg.light.color.toLowerCase();
+    var kp=$('#kcustom');if(kp&&S.sel.type==='key')kp.value=S.cfg.keys[S.sel.id].color.toLowerCase();
+  }
+  /* 全局颜色和按键颜色各用一套三个球。新选的颜色依次顶掉：第一个，第二个，第三个，然后回到第一个 */
+  function bindColorUI(root,ctx,pickerId){
+    var bs=root.querySelectorAll('.slot');
+    for(var i=0;i<bs.length;i++)bs[i].onclick=(function(b){return function(){setCur(ctx,S.pal[ctx][+b.dataset.slot]);paintSlots();changed(true)}})(bs[i]);
+    var sess=null,pk=$('#'+pickerId);
+    pk.oninput=function(){var hx=this.value.toUpperCase();if(sess===null)sess=S.nx[ctx];S.pal[ctx][sess]=hx;setCur(ctx,hx);paintSlots();changed(true)};
+    pk.onchange=function(){if(sess!==null){S.nx[ctx]=(sess+1)%3;sess=null}};
+  }
+  function buildColors(){
+    $('#gcolors').innerHTML=slotsHTML('g',30)+customHTML('gcustom',30);
+    bindColorUI($('#gcolors'),'g','gcustom');
+  }
+  function renderLight(){
+    var c=S.cfg.light,cust=c.mode==='自定义',dis=!S.connected;
+    $('#lmode').value=c.mode;$('#lbright').value=c.bright;$('#lbv').textContent=c.bright;$('#len').checked=c.enabled;
+    $('#len').disabled=dis;$('#lmode').disabled=dis||!c.enabled;$('#lbright').disabled=dis||!c.enabled;
+    var gd=dis||cust||!c.enabled,bs=document.querySelectorAll('#gcolors .slot');
+    for(var i=0;i<bs.length;i++)bs[i].disabled=gd;
+    var cc=$('#gcolors .custom');cc.classList.toggle('dis',gd);$('#gcustom').disabled=gd;
+    $('#chex').style.opacity=gd?.45:1;
+    $('#lnote').style.display=cust?'block':'none';
+    paintSlots();
+  }
+  function renderSel(){
+    $('#knobL').classList.toggle('sel',S.sel.type==='knobL');
+    $('#knobR').classList.toggle('sel',S.sel.type==='knobR');
+    $('#slider').classList.toggle('sel',S.sel.type==='slider');
+  }
+
+  /* ---------- 信号 ---------- */
+  var KF=function(s){return s/5};   // 旋钮灵敏度 → 倍率
+  var clamp=function(v){return Math.max(0,Math.min(1,v))};
+  function sliderAfter(p){return clamp(.5+(p-.5)*S.cfg.sl.sens/5)}
+  function knobSVG(label){
+    var id=label;
+    return '<svg viewBox="0 0 160 160" aria-hidden="true"><defs>'+
+      '<linearGradient id="rg'+id+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CBEAF8"/><stop offset="1" stop-color="#FAD3E2"/></linearGradient>'+
+      '<radialGradient id="cap'+id+'" cx="50%" cy="32%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFF0F6"/></radialGradient></defs>'+
+      '<circle cx="80" cy="80" r="73" fill="none" stroke="#9CCBE6" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round"/>'+
+      '<circle cx="80" cy="80" r="58" fill="none" stroke="url(#rg'+id+')" stroke-width="18"/>'+
+      '<circle cx="80" cy="80" r="66.5" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>'+
+      '<circle cx="80" cy="80" r="45" fill="url(#cap'+id+')" stroke="#fff" stroke-width="3"/>'+
+      '<circle cx="80" cy="80" r="45" fill="none" stroke="#F6D5E2" stroke-width="1.5"/>'+
+      '<g class="mn"><circle cx="80" cy="22" r="11" fill="#8FD3F0" stroke="#fff" stroke-width="4.5"/></g>'+
+      '<g class="ma"><rect x="76" y="41" width="8" height="14" rx="4" fill="#F7A8C4"/></g>'+
+      '<text x="80" y="87" text-anchor="middle" font-size="14" font-weight="800" fill="#1F3A4A" font-family="inherit">'+(label==='L'?'左旋钮':'右旋钮')+'</text></svg>';
+  }
+  function setKnob(el,turns,after,on){
+    el.classList.toggle('off',!on);
+    el.querySelector('.mn').style.transform='rotate('+(turns*360)+'deg)';
+    el.querySelector('.ma').style.transform='rotate('+(after*360)+'deg)';
+  }
+  function updateSignals(){
+    var on=S.connected,h=S.shown;
+    setKnob($('#knobL'),h.lk,h.lk*KF(S.cfg.lk.sens)*(S.cfg.lk.rev?-1:1),on);
+    setKnob($('#knobR'),h.rk,h.rk*KF(S.cfg.rk.sens)*(S.cfg.rk.rev?-1:1),on);
+    var sl=$('#slider'),a=sliderAfter(h.sl);
+    sl.classList.toggle('off',!on);
+    $('#track .thumb').style.left=(h.sl*100)+'%';
+    $('#track .fill').style.width=(a*100)+'%';
+    $('#track .pin').style.left=(a*100)+'%';
+    if(S.sel.type==='knobL'||S.sel.type==='knobR'||S.sel.type==='slider')updateReadout();
+  }
+  function updateReadout(){
+    var box=$('#ro');if(!box)return;
+    var t=S.sel.type,n=$('#ro_n'),a=$('#ro_a'),h=S.shown;
+    if(!S.connected){n.textContent='暂无有效位置';a.textContent='暂无有效位置';n.className=a.className='num none';return}
+    n.className=a.className='num';
+    if(t==='slider'){n.textContent=(h.sl*100).toFixed(1)+'%';a.textContent=sliderAfter(h.sl).toFixed(3)}
+    else{var k=t==='knobL'?'lk':'rk',tr=h[k];n.textContent=tr.toFixed(3)+' 圈';a.textContent=(tr*KF(S.cfg[k].sens)*(S.cfg[k].rev?-1:1)).toFixed(3)+' 圈'}
+  }
+  function loop(now){
+    var m=$('#sim').value,t=(now-S.t0)/1000;
+    if(S.connected&&m==='demo'){
+      S.sig.lk=1.2*Math.sin(t*.7);
+      S.sig.rk=.9*Math.sin(t*.45+1.6)+(t*.05)%1;
+      S.sig.sl=.5+.38*Math.sin(t*.55+.8);
+      S.shown.lk=S.sig.lk;S.shown.rk=S.sig.rk;S.shown.sl=S.sig.sl;
+    }else{
+      ['lk','rk','sl'].forEach(function(k){var d=S.sig[k]-S.shown[k];S.shown[k]=Math.abs(d)<.0005?S.sig[k]:S.shown[k]+d*.14});
+    }
+    updateDown(t,m);
+    updateSignals();
+    requestAnimationFrame(loop);
+  }
+  /* 设备按键按下：和鼠标点选是两回事，可以同时出现 */
+  var DOWN={};
+  function updateDown(t,m){
+    var bs=document.querySelectorAll('.key');
+    for(var i=0;i<bs.length;i++){
+      var id=bs[i].dataset.id,on=false;
+      if(S.connected&&m==='demo'){var ph=((t*1.1+i*.83)%4.2);on=ph<.28&&S.cfg.keys[id].action!=='禁用'}
+      else if(S.connected&&m==='manual')on=!!DOWN[id];
+      if(bs[i].classList.contains('down')!==on)bs[i].classList.toggle('down',on);
+    }
+  }
+  function keyId(e){var k=e.key.length===1?e.key.toUpperCase():'';for(var i=0;i<KEYS.length;i++)if(KEYS[i][1]===k)return KEYS[i][0];return null}
+  document.addEventListener('keydown',function(e){if(S.listen||/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName))return;var id=keyId(e);if(id)DOWN[id]=true});
+  document.addEventListener('keyup',function(e){var id=keyId(e);if(id)DOWN[id]=false});
+
+  /* ---------- 渲染：右栏 ---------- */
+  function fldSelect(id,label,opts,val,dis){
+    return '<div class="fld"><label for="'+id+'">'+label+'</label><select id="'+id+'" class="sel-in big"'+(dis?' disabled':'')+'>'+opts.map(function(o){return '<option'+(o===val?' selected':'')+'>'+o+'</option>'}).join('')+'</select></div>';
+  }
+  function keyColors(c,dis){
+    return '<div class="sw-row" id="kcolors">'+slotsHTML('k',32,dis)+customHTML('kcustom',32,dis)+'<span class="hexv" id="khex" style="margin-left:4px"></span></div>';
+  }
+  var HERO='<div class="hero"><div class="mbub" id="mbub" role="status" hidden></div><button type="button" class="herobtn" id="heroBtn" aria-label="和看板娘说话"><img src="img/hero.png" alt=""></button></div>';
+  var lockNote=function(){return S.connected?'':'<div class="note" style="color:var(--pink-deep)">连接设备后才能修改。</div>'};
+  function sensRow(id,label,val,max,dis){
+    return '<div class="fld"><label for="'+id+'n">'+label+'</label><div style="display:flex;align-items:center;gap:12px"><input id="'+id+'" type="range" aria-label="'+label+'滑块" min="1" max="'+max+'" step="0.1" value="'+val+'"'+(dis?' disabled':'')+'><input id="'+id+'n" class="numin" type="number" min="1" max="'+max+'" step="0.1" value="'+Number(val).toFixed(1)+'"'+(dis?' disabled':'')+'></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-right:72px"><span>低</span><span>5.0 为标准</span><span>高</span></div></div>';
+  }
+  function bindSens(c){
+    var r=$('#ksens'),n=$('#ksensn');
+    r.oninput=function(){c.sens=+this.value;n.value=Number(this.value).toFixed(1);changed(true)};
+    n.oninput=function(){if(this.value==='')return;var v=Math.max(1,Math.min(10,Math.round(+this.value*10)/10));if(isNaN(v))return;c.sens=v;r.value=v;changed(true)};
+    n.onchange=function(){this.value=Number(c.sens).toFixed(1)};
+  }
+  function readoutBox(){
+    return '<div class="readout" id="ro" role="group" aria-label="设备实时读数"><div class="two"><div><div class="nm"><i class="ldot"></i>原生</div><div class="num" id="ro_n">—</div></div><div><div class="nm"><i class="lbar"></i>灵敏度后</div><div class="num" id="ro_a">—</div></div></div></div>';
+  }
+  function renderRight(){
+    var R=$('#right'),dis=!S.connected,t=S.sel.type,h='';
+    if(t==='key'){
+      var id=S.sel.id,c=S.cfg.keys[id],d=KDEF[id],cust=S.cfg.light.mode==='自定义';
+      var opts=['禁用','鼠标 · 左键','鼠标 · 右键','鼠标 · 中键','键盘 · '+d];
+      if(opts.indexOf(c.action)<0)opts.unshift(c.action);
+      var bd=dis||!cust||!S.cfg.light.enabled;
+      h='<div><div class="eyebrow">SELECTED</div><h2>'+id+' · '+(c.action.split(' · ')[1]||c.action)+'</h2></div>'+
+        fldSelect('kact','按键动作',opts,c.action,dis)+
+        '<button type="button" class="rbtn'+(S.listen?' listen':'')+'" id="klisten"'+(dis?' disabled':'')+'>'+(S.listen?'正在录入：按下目标键（Esc 取消）':'监听按键')+'</button>'+
+        '<div class="fld"><span class="lb">按键灯光</span>'+keyColors(c,bd)+'<div style="display:flex;align-items:center;gap:12px;margin-top:4px"><label for="kbr" style="font-size:14px;font-weight:700">亮度</label><input id="kbr" type="range" min="0" max="100" value="'+c.bright+'"'+(bd?' disabled':'')+'><span class="val" id="kbrv">'+c.bright+'</span></div><div class="note" style="font-size:12px">'+(cust?'灯效为「自定义」，可以单独设置这个按键的颜色和亮度。':'按键灯光和灯效互斥。灯效模式选「自定义」后才能设置。')+'</div></div>'+
+        lockNote()+HERO;
+    }else if(t==='knobL'||t==='knobR'){
+      var k=t==='knobL'?'lk':'rk',c2=S.cfg[k];
+      h='<div><div class="eyebrow">SELECTED</div><h2>'+(t==='knobL'?'左旋钮':'右旋钮')+'</h2></div>'+readoutBox()+
+        '<div class="row"><label for="ken">启用旋钮输入</label><input id="ken" type="checkbox"'+(c2.en?' checked':'')+(dis?' disabled':'')+'></div>'+
+        '<div class="row"><label for="krev">反转输出方向</label><input id="krev" type="checkbox"'+(c2.rev?' checked':'')+(dis?' disabled':'')+'></div>'+
+        fldSelect('kaxis','输出轴',['Y','X'],c2.axis,dis)+sensRow('ksens','灵敏度',c2.sens,10,dis)+
+        lockNote()+HERO;
+    }else if(t==='slider'){
+      var s=S.cfg.sl;
+      h='<div><div class="eyebrow">SELECTED</div><h2>滑轨</h2></div>'+readoutBox()+
+        '<div class="row"><label for="ken">启用滑轨输入</label><input id="ken" type="checkbox"'+(s.en?' checked':'')+(dis?' disabled':'')+'></div>'+
+        '<div class="row"><label for="krev">反转输出方向</label><input id="krev" type="checkbox"'+(s.rev?' checked':'')+(dis?' disabled':'')+'></div>'+
+        sensRow('ksens','中心灵敏度',s.sens,10,dis)+
+        '<div class="note" style="font-size:12px">灵敏度影响输出位置的覆盖范围。</div>'+lockNote()+HERO;
+    }else{
+      var tp=S.tpls.filter(function(x){return x.id===S.sel.id})[0];if(!tp){S.sel={type:'key',id:'BT3'};return renderRight()}
+      var isAct=tp.id===S.active;
+      h='<div><div class="eyebrow">'+(tp.preset?'PRESET TEMPLATE':'CUSTOM TEMPLATE')+'</div><h2>'+tp.name+'</h2></div>'+
+        '<div class="note">'+(tp.preset?'预设模板，不能改名，也不能覆盖。':'自定义模板，可以改名、更新或删除。')+(isAct?' 当前使用中。':'')+'</div>';
+      h+='<button type="button" class="rbtn main" id="tAct"'+(isAct||dis?' disabled':'')+'>'+(isAct?'当前使用中':'设为活动模板')+'</button>';
+      if(tp.preset){
+        h+='<button type="button" class="rbtn" id="tSaveAs"'+(dis?' disabled':'')+'>保存到当前模板</button>'+
+           '<div class="note" style="font-size:12px;margin-top:-6px">预设不能覆盖，保存时会另存为新模板。</div>'+
+           '<button type="button" class="rbtn" id="tReset"'+(dis||!isAct?' disabled':'')+'>恢复预置模板</button>';
+      }else{
+        h+=(S.renaming?'<div class="nameedit"><input id="tName" aria-label="模板名称" value="'+tp.name+'" maxlength="10" placeholder="1～10个字符"><button type="button" id="tNameOk">确定</button></div><div class="note" id="tNameErr" style="font-size:12px;color:var(--err)" role="alert"></div>':'<button type="button" class="rbtn" id="tRename"'+(dis?' disabled':'')+'>修改名称</button>')+
+           '<button type="button" class="rbtn" id="tSave"'+(dis||!isAct?' disabled':'')+'>保存到当前模板</button>'+
+           '<button type="button" class="rbtn danger" id="tDel"'+(dis||isAct?' disabled':'')+'>删除自定义模板</button>'+(isAct?'<div class="note" style="font-size:12px">使用中的模板不能删除，先切换到其他模板。</div>':'');
+      }
+      h+='<div class="note" style="font-size:12px">设为活动后，还要点右上角「应用并保存」，设备才会使用。</div>'+lockNote()+HERO;
+    }
+    R.innerHTML=h;
+    bindRight();
+    bindHero();
+    paintSlots();
+    updateReadout();
+  }
+  /* 看板娘随机说话：台词放在 mascot-lines.txt，一行一句，# 开头是注释 */
+  var LINES=['改完记得点「应用并保存」哦。','今天也辛苦啦。','旋钮转一转，就知道灵敏度合不合适啦。','喝口水再继续吧。','有疑问的话，先看看左边的历史操作。','断电之前别忘了保存哦。','我在这里陪你调试。'],lastLine='',mTimer=null;
+  var mascot={text:'',until:0};
+  try{fetch('mascot-lines.txt').then(function(r){return r.ok?r.text():''}).then(function(t){var a=t.split(/\r?\n/).map(function(x){return x.trim()}).filter(function(x){return x&&x[0]!=='#'});if(a.length)LINES=a}).catch(function(){})}catch(e){}
+  function showMascot(){
+    var pick=LINES[Math.floor(Math.random()*LINES.length)],tries=0;
+    while(LINES.length>1&&pick===lastLine&&tries++<8)pick=LINES[Math.floor(Math.random()*LINES.length)];
+    lastLine=pick;mascot={text:pick,until:Date.now()+5000};paintMascot();
+    clearTimeout(mTimer);mTimer=setTimeout(paintMascot,5100);
+  }
+  function paintMascot(){var b=$('#mbub');if(!b)return;if(Date.now()<mascot.until){b.textContent=mascot.text;b.hidden=false}else b.hidden=true}
+  function bindHero(){var h=$('#heroBtn');if(!h)return;h.onclick=showMascot;paintMascot()}
+  function bindRight(){
+    var t=S.sel.type;
+    if(t==='key'){
+      var c=S.cfg.keys[S.sel.id];
+      $('#kact').onchange=function(){c.action=this.value;changed()};
+      $('#kbr').oninput=function(){c.bright=+this.value;$('#kbrv').textContent=this.value;changed(true)};
+      bindColorUI($('#kcolors'),'k','kcustom');
+      $('#klisten').onclick=function(){S.listen=!S.listen;renderRight()};
+    }else if(t==='knobL'||t==='knobR'){
+      var c2=S.cfg[t==='knobL'?'lk':'rk'];
+      $('#ken').onchange=function(){c2.en=this.checked;changed(true)};
+      $('#krev').onchange=function(){c2.rev=this.checked;changed(true)};
+      $('#kaxis').onchange=function(){c2.axis=this.value;changed(true)};
+      bindSens(c2);
+    }else if(t==='slider'){
+      var s=S.cfg.sl;
+      $('#ken').onchange=function(){s.en=this.checked;changed(true)};
+      $('#krev').onchange=function(){s.rev=this.checked;changed(true)};
+      bindSens(s);
+    }else{
+      var id=S.sel.id,tp=S.tpls.filter(function(x){return x.id===id})[0];
+      if($('#tAct'))$('#tAct').onclick=function(){activate(id)};
+      if($('#tSaveAs'))$('#tSaveAs').onclick=function(){createTpl(true,tp)};
+      if($('#tReset'))$('#tReset').onclick=function(){confirmDlg({title:'恢复预设模板',body:'确认恢复「'+tp.name+'」的默认设置？当前模板的网页草稿和设备中的修改将被替换；其他模板保持不变。',ok:'恢复默认设置',onOk:function(){S.cfg=defCfg();resetSnap();S.flash=null;addLog('恢复预设模板「'+tp.name+'」的默认设置（未保存）');renderAll()}})};
+      if($('#tRename'))$('#tRename').onclick=function(){S.renaming=true;renderRight();$('#tName').focus();$('#tName').select()};
+      if($('#tNameOk'))$('#tNameOk').onclick=function(){
+        var v=$('#tName').value;
+        if(!validName(v)){$('#tNameErr').textContent=NAME_RULE;$('#tName').focus();return}
+        if(v===tp.name){S.renaming=false;renderRight();return}
+        confirmDlg({title:'修改模板名称',body:'确认将「'+tp.name+'」重命名为「'+v+'」？'+PERSIST,ok:'确认修改',onOk:function(){addLog('模板「'+tp.name+'」改名为「'+v+'」');tp.name=v;tp.ascii=v;S.renaming=false;renderAll()}});
+      };
+      if($('#tName'))$('#tName').onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();$('#tNameOk').click()}if(e.key==='Escape'){S.renaming=false;renderRight()}};
+      if($('#tSave'))$('#tSave').onclick=function(){confirmDlg({title:'保存到当前模板',body:'确认用当前设置更新模板「'+tp.name+'」？'+PERSIST,ok:'确认保存',onOk:function(){addLog('已用当前设置更新模板「'+tp.name+'」');say({k:'ok',t:'已保存到「'+tp.name+'」',b:'当前模板和设备保存状态已读回。'},5000)}})};
+      if($('#tDel'))$('#tDel').onclick=function(){confirmDlg({title:'删除自定义模板',body:'确认删除模板「'+tp.name+'」？删除后无法通过页面撤销。'+PERSIST,ok:'确认删除',danger:true,onOk:function(){S.tpls=S.tpls.filter(function(x){return x.id!==id});S.sel={type:'tpl',id:S.active};addLog('删除模板「'+tp.name+'」');renderAll()}})};
+    }
+  }
+
+  /* ---------- 动作 ---------- */
+  function select(s){S.sel=s;S.renaming=false;S.listen=false;renderSel();renderTpls();renderKeys();renderRight()}
+  function changed(skipRight){
+    if(dirtyCount()>0){S.flash=null;clearTimeout(flashTimer)}
+    renderTop();renderKeys();renderLight();renderBubble();renderTpls();updateSignals();
+    if(!skipRight&&S.sel.type==='key')renderRight();
+    logChange();
+  }
+  var logT=null;
+  var AX={lk:'左旋钮',rk:'右旋钮',sl:'滑轨'};
+  function describe(k,o,n,all,old){
+    var p=k.split('.');
+    if(p[0]==='keys'){
+      var id=p[1];
+      if(p[2]==='action')return id+' 按键动作：'+o+' → '+n;
+      if(p[2]==='bright')return id+' 按键亮度：'+o+' → '+n;
+      if(p[2]==='color')return id+' 按键颜色：'+o+' → '+n;
+    }
+    if(p[0]==='light'){
+      if(p[1]==='enabled')return n?'键灯已启用':'键灯已关闭';
+      if(p[1]==='mode')return '灯效模式：'+o+' → '+n;
+      if(p[1]==='bright')return '灯光亮度：'+o+' → '+n;
+      if(p[1]==='color')return '全局颜色：'+o+' → '+n;
+    }
+    var nm=AX[p[0]];
+    if(nm){
+      if(p[1]==='sens')return nm+(p[0]==='sl'?'中心灵敏度：':'灵敏度：')+Number(o).toFixed(1)+' → '+Number(n).toFixed(1);
+      if(p[1]==='en')return nm+(n?' 已启用':' 已停用');
+      if(p[1]==='rev')return nm+(n?' 已反转输出方向':' 已取消反转');
+      if(p[1]==='axis')return nm+' 输出轴：'+o+' → '+n;
+    }
+    return null;
+  }
+  function resetSnap(){clearTimeout(logT);S.logSnap=clone(S.cfg)}
+  function logChange(){
+    clearTimeout(logT);
+    logT=setTimeout(function(){
+      var a=flat(S.cfg,''),b=flat(S.logSnap||S.saved,''),out=[];
+      for(var k in a)if(a[k]!==b[k]){var d=describe(k,b[k],a[k],a,b);if(d)out.push(d)}
+      S.logSnap=clone(S.cfg);
+      out.slice(0,4).forEach(function(t){addLog(t+'（未保存）')});
+      if(out.length>4)addLog('另有 '+(out.length-4)+' 项修改（未保存）');
+    },600);
+  }
+  /* ---------- 固件页 / 实验性功能页 ---------- */
+  var FWV='0.10.3';
+  function fwHtml(){
+    var c=S.connected;
+    return '<div class="pghead"><div><span class="eyebrow">FIRMWARE</span><h1>固件更新</h1><p>检查 UF2 文件，进入下载模式并手动复制，重连后核对版本。</p></div><span class="pgbadge">不会上传固件</span></div>'+
+    '<div class="fwgrid"><section class="card fwcard"><h2>检查 UF2 文件</h2>'+
+      '<div class="fwver"><span class="chip">'+(c?'当前固件版本：0.10.2（FluxRail 识别通过）':'当前固件版本：未连接设备')+'</span></div>'+
+      '<label class="filebtn">选择 UF2 文件<input type="file" id="uf2" accept=".uf2"></label>'+
+      '<p class="pgnote" id="fwcap">'+(c?'设备支持进入 UF2 下载模式。请手动复制文件，完成后重新连接并核对版本。':'选择 UF2 后自动识别 FluxRail 固件与型号，并对比设备当前版本。')+'</p>'+
+      '<p class="pgnote" id="fwver" role="status" aria-live="polite">选择UF2后自动识别固件并比较版本。</p>'+
+      '<div class="resbox" id="fwres">选择本项目正式 FluxRail UF2，自动读取识别头、型号与版本。</div></section>'+
+    '<section class="card fwcard"><h2>进入下载模式并更新</h2>'+
+      '<ol class="steps"><li>先保存需要保留的设置。</li><li>点下面的按钮进入 UF2 下载模式，电脑会出现 RPI-RP2 磁盘。</li><li>手动复制匹配此设备的 FluxRail UF2 到磁盘，网页不传送固件。</li><li>完成后重新连接，核对固件版本并检查功能。</li></ol>'+
+      '<div class="acts" style="margin-top:14px"><button type="button" class="btn pink" id="fwboot"'+(c?'':' disabled')+'>进入 UF2 下载模式</button></div>'+
+      '<p class="pgnote">'+(c?'':'连接设备后才能使用。没有连接时：')+'按住键盘上的 BOOT 接入 USB 后松开，也可进入下载模式。</p></section></div>';
+  }
+  function lnum(l,v,help){return '<label>'+l+'<input type="number" value="'+v+'">'+(help?'<small>'+help+'</small>':'')+'</label>'}
+  function lck(l,on){return '<label class="ck"><input type="checkbox"'+(on?' checked':'')+'>'+l+'</label>'}
+  function labHtml(){
+    var c=S.connected,d=c?'':' disabled';
+    var kopts='<option>BT1</option><option>BT2</option><option>BT3</option><option>BT4</option><option>BT5</option><option>BT6</option><option>BT7</option><option>BT8</option><option>BT9</option><option>BT10</option>';
+    var io='';for(var i=1;i<=10;i++)io+='<label>BT'+i+'<select'+d+'><option>'+(i<=8?'IO4 按键 '+i:'IO4 功能 '+i)+'</option><option>未绑定</option></select></label>';
+    function knobCard(n){return '<div><h4>旋钮 '+n+' · 进阶参数</h4><div class="lf">'+lnum('倍率',1,'')+lnum('灵敏度 5.0 每圈 HID count',1000)+lnum('滤波 µs',500)+lnum('最大有效间隔 µs',20000)+lnum('可信转速 圈/s',20)+lnum('活动门槛 ticks',2)+lnum('活动保持 µs',100000)+'</div></div>'}
+    return '<div class="pghead"><div><span class="eyebrow">ADVANCED</span><h1>实验性功能</h1><p>调整进阶参数、管理配置文件，查看运动状态与恢复说明。</p></div><span class="pgbadge">进阶设置</span></div>'+
+    '<div class="labgrid">'+
+    '<details class="card labg"><summary><span class="gt"><b>临时测试 · 模拟演示</b><small>没有设备时，用模拟端口预览页面</small></span></summary><div class="gb"><div class="acts"><button type="button" class="btn line" id="labdemo">模拟演示</button></div><p class="pgnote" style="margin:0">演示使用隔离模拟端口，不代表实板验证。</p></div></details>'+
+    '<details class="card labg"><summary><span class="gt"><b>模板 · 配置文件导入导出</b><small>导出全部模板和校准快照，或导入配置文件</small></span></summary><div class="gb"><p class="pgnote" style="margin:0">完整快照包含全部模板和全局机械校准；导入前核对设备及安装信息。</p><div class="acts"><button type="button" class="btn line"'+d+'>导出全部快照</button><label class="filebtn" style="height:36px;padding:0 16px;font-size:13px">选择配置文件<input type="file" accept=".json"'+d+'></label><button type="button" class="btn line"'+d+'>导入预览到RAM</button></div><pre>支持 schema1 / schema2 完整配置，包含全部模板与共享校准；选择文件后查看导入预览。</pre></div></details>'+
+    '<details class="card labg"><summary><span class="gt"><b>键位 · 字符录入与 HID / 扫描参数</b><small>手填字符、HID 值，以及消抖和重触发</small></span></summary><div class="gb"><fieldset'+d+'><label style="font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:4px">选择按键<select>'+kopts+'</select></label><div class="lf">'+'<label>手填 US 单字符<input type="text" maxlength="2"></label>'+lnum('HID usage',7)+lnum('修饰掩码 0～255',0)+'</div><p class="pgnote" style="margin:0">手填按 US 布局，大写 / Shift 符号附加 Shift；主机布局、Caps Lock、输入法可能改变文字。鼠标中键指滚轮按压。</p><div class="sub">扫描与重触发</div><div class="lf three">'+lnum('重触发间隔 µs',5000)+lnum('按下消抖 µs',500)+lnum('释放消抖 µs',1000)+'</div></fieldset></div></details>'+
+    '<details class="card labg"><summary><span class="gt"><b>灯光 · 动画参数</b><small>动画周期与反向</small></span></summary><div class="gb"><fieldset'+d+'><div class="lf">'+lnum('周期 ms',4000)+lck('动画反向',false)+'</div></fieldset><p class="pgnote" style="margin:0">逐键颜色已搬到首页的按键设置里，选「自定义」灯效后设置。</p></div></details>'+
+    '<details class="card labg wide"><summary><span class="gt"><b>滑轨 · 校准、输出范围与响应</b><small>滤波、信号门槛，以及共享校准流程</small></span></summary><div class="gb"><fieldset'+d+'><div class="lf three">'+
+      lnum('输出下界（归一化）',0,'输出范围的最小值，取值 0～1，须小于上界。')+lnum('输出上界（归一化）',1,'输出范围的最大值，取值 0～1，须大于下界。')+lnum('静止滤波 µs',4000,'静止或慢速移动时的平滑程度。值越大，抖动越少，跟随也越慢；设为 0 可关闭此滤波。')+
+      lnum('移动滤波 µs',800,'快速移动时的平滑程度。值越小，跟随越快；不能大于静止滤波。')+lnum('滤波过渡速度 mm/s',300,'达到这个速度时，使用移动滤波。低于此速度时逐渐过渡，不限制滑块速度。')+lnum('活动门槛 mm',0.3,'移动多远才算正在操作滑轨，用于来源切换，不是位置死区。实际门槛还会参考校准噪声。')+
+      lnum('活动保持 µs',50000,'确认滑轨正在移动后，保持活动状态的时间（微秒）。')+lnum('进入信号 ADC count',1500,'三个传感器经校准后的信号总和达到此值，才开始接受位置，单位 ADC count。')+lnum('退出信号 ADC count',1000,'三路校准信号总和低于此值便停止接受位置。不能大于进入信号；单位 ADC count。')+
+      lnum('曲线容差 ADC count',80,'允许读数偏离校准曲线的程度（ADC count）。放宽可能接受更多异常读数。')+lnum('最大有效间隔 µs',20000,'有效采样间隔超过此值（微秒），或采样中断时，以新位置重新建立参考，不沿用旧滤波状态。')+
+    '</div></fieldset>'+
+    '<p class="pgnote" style="margin:0">调整滑轨的输出范围和响应。下方可按实际行程建立共享校准记录。</p>'+
+    '<div class="acts"><button type="button" class="btn line" disabled>滑轨基准测试 · 等待公共协议</button></div>'+
+    '<pre>连接支持运动遥测的设备后，显示三路 ADC、滑轨位置与信号质量。</pre>'+
+    '<div class="sub">滑轨校准</div><p class="pgnote" style="margin:0">'+(c?'校准状态：未校准（示例）':'校准状态未读取')+'</p>'+
+    '<p class="pgnote" style="margin:0">查看滑轨与旋钮的设备状态，建立所有模板共用的滑轨校准。填写实测端点、确认磁铁已移开后开始；采用结果后需保存到设备。</p>'+
+    '<fieldset'+d+'><div class="lf three">'+lnum('实测左端 mm','')+lnum('实测右端 mm','')+lnum('当前实测标签 mm','')+lck('磁铁已移开，可采集空场',false)+'</div>'+
+    '<div class="acts"><button type="button" class="btn line">开始空场校准</button><button type="button" class="btn line">采集 H1 参考</button><button type="button" class="btn line">采集 H2 参考</button><button type="button" class="btn line">采集 H3 参考</button><button type="button" class="btn line">采集当前毫米标签</button><button type="button" class="btn line">检查曲线并开始全轨扫描</button><button type="button" class="btn blue">结束扫描并采用候选</button><button type="button" class="btn line">取消校准，保留旧记录</button></div></fieldset>'+
+    '<p class="pgnote" style="margin:0">校准需空场、H1/H2/H3参考、7～17个含端点与交接的实测标签，然后全轨扫描。失败/取消保留旧记录。诊断轮询不证明采样无丢失。</p></div></details>'+
+    '<details class="card labg wide"><summary><span class="gt"><b>旋钮 · 进阶参数</b><small>两个旋钮的转速、滤波和活动判定</small></span></summary><div class="gb"><fieldset'+d+'><div class="kc">'+knobCard(1)+knobCard(2)+'</div></fieldset><p class="pgnote" style="margin:0">HID count 不等于屏幕像素；磁环结构尚未实板验证。</p></div></details>'+
+    '<details class="card labg"><summary><span class="gt"><b>来源接管 · 同轴策略</b><small>滑轨与旋钮同时操作时谁优先</small></span></summary><div class="gb"><fieldset'+d+'><div class="lf">'+lnum('接管静止滞回 µs',60000)+lck('同时起动滑轨优先（工程起点）',false)+'</div></fieldset><p class="pgnote" style="margin:0">滑轨与 X 旋钮按活动状态接管，Y 轴独立。静止等待时间和同时动作优先级可在此调整。</p></div></details>'+
+    '<details class="card labg"><summary><span class="gt"><b>输入测试 · 原始状态与记录</b><small>查看原始状态，记录并导出 CSV</small></span></summary><div class="gb"><pre>'+(c?'get_status：（示例）\nkeys=0000000000  hall=—  knobs=—':'尚未读取 get_status')+'</pre><div class="acts"><button type="button" class="btn line"'+d+'>开始状态记录</button><button type="button" class="btn line"'+d+'>导出状态CSV</button></div><p class="pgnote" style="margin:0">最多保留 600 条记录；超出后移除最早记录。十键、三 ADC、SSI 与 USB / 游戏需要分别实测。</p></div></details>'+
+    '<details class="card labg wide"><summary><span class="gt"><b>IO4 · 按键功能映射</b><small>IO4 启动模式下每个按键的功能</small></span></summary><div class="gb"><p class="pgnote" style="margin:0">在普通模式下连接设备，为当前模板设置十路 IO4 按键功能。改好后应用并保存。活动模板由模板管理单独选择。切换到 IO4 后使用这组映射；普通键位单独保存。</p><fieldset'+d+'><div class="io4g">'+io+'</div></fieldset><p class="pgnote" style="margin:0">多个按键可绑定同一功能，任一按住即保持该功能。按住 BT10 复位或上电可返回普通模式。</p></div></details>'+
+    '</div>';
+  }
+  function renderPages(){
+    var fw=$('#fwPage'),lab=$('#labPage');
+    if(renderPages.k===S.connected)return;renderPages.k=S.connected;
+    fw.innerHTML=fwHtml();lab.innerHTML=labHtml();lab.classList.add('lab');
+    $('#uf2').onchange=function(){
+      var f=this.files[0];if(!f)return;
+      $('#fwres').textContent=f.name+'\nFluxRail固件识别通过 · 版本 '+FWV+'\n型号 RP2040\n（示例：块数 / 字节数）';
+      $('#fwver').textContent=S.connected?'当前固件 0.10.2，文件版本 '+FWV+'。当前固件版本较低，可升级到所选版本。':'文件版本 '+FWV+'。请连接设备读取当前固件版本后比较。';
+    };
+    var b=$('#fwboot');if(b)b.onclick=function(){confirmDlg({title:'进入 UF2 下载模式',body:'请先保存需要保留的设置。确认后连接将断开，进入下载模式不代表更新完成。',note:'1. 等待电脑出现 RPI-RP2 磁盘。\n2. 手动复制匹配此设备的 FluxRail UF2 到磁盘，Web Serial 不传送固件。\n3. 完成后重新连接，核对固件版本并检查功能。\n物理方法：按住键盘上的 BOOT 接入 USB 后松开。',ok:'确认进入下载模式',onOk:function(){S.connected=false;S.cfg=clone(S.saved);resetSnap();S.active=S.savedActive;S.io4=S.io4Saved;addLog('已进入下载模式，连接已断开');S.flash=null;renderAll();renderPages()}})};
+    $('#labdemo').onclick=function(){say('演示使用隔离模拟端口，不代表实板验证。')};
+  }
+  function renderAll(){renderTop();renderChips();renderTpls();renderKeys();renderLight();renderSel();renderRight();renderBubble();renderLog();updateSignals();renderPages()}
+  var PERSIST='保存会写入设备的完整配置，包括其他已应用的设置。';
+  function activate(id){
+    function go(){
+      S.active=id;S.cfg=defCfg();resetSnap();addLog('切换活动模板：'+tplName(id)+'（未保存）');
+      S.flash=null;renderAll();
+    }
+    if(dirtyCount()>0)confirmDlg({title:'切换模板',body:'当前有已生效但未保存的修改。切换后，这些修改会被所选模板覆盖；预设模板会恢复默认设置。',ok:'放弃修改并切换',onOk:go});
+    else confirmDlg({title:'切换活动模板',body:'确认让设备使用模板「'+tplName(id)+'」？若需要掉电后继续使用，请再保存到设备。',ok:'确认切换',onOk:go});
+  }
+  function uniqueName(n){var all=S.tpls.map(function(t){return t.name}),r=n,i=2;while(all.indexOf(r)>=0)r=n+' '+(i++);return r}
+  function createTpl(fromPreset,tp){
+    var base='自定义 '+S.nextTpl;
+    confirmDlg(fromPreset
+      ?{title:'新建模板后保存',body:'预设模板不能覆盖。请输入自定义模板名称，将当前设置保存到新模板中。'+PERSIST,ok:'新建并保存',name:uniqueName(base),onOk:add}
+      :{title:'新建模板',body:'复制当前设置（包括网页草稿）并保存到新模板。活动模板保持不变。'+PERSIST,ok:'新建并保存',name:uniqueName(base),onOk:add});
+    function add(name){
+      var id='c'+(S.nextTpl++);S.tpls.push({id:id,name:name,preset:false});
+      addLog('新建模板「'+name+'」');S.sel={type:'tpl',id:id};renderAll();
+      say({k:'ok',t:'已新建模板「'+name+'」',b:'活动模板没有变化'},5000);
+    }
+  }
+  function tplByAscii(){var t=S.tpls.filter(function(x){return x.id===S.active})[0];return t&&t.ascii?t.ascii:'Template'}
+  function discard(){
+    confirmDlg({title:'还原到已保存的设置',body:'设备会回到上次保存的设置，已生效但未保存的修改会丢失。'+(S.io4!==S.io4Saved?'启动模式的选择也会取消。':''),ok:'还原',onOk:function(){
+      S.cfg=clone(S.saved);resetSnap();S.active=S.savedActive;S.io4=S.io4Saved;S.flash=null;addLog('已还原到已保存的设置');renderAll();
+      say({k:'ok',t:'已还原',b:'设备回到上次保存的设置。'},5000);
+    }});
+  }
+  function connect(){
+    if(S.connected){
+      var go=function(){S.connected=false;S.cfg=clone(S.saved);resetSnap();S.active=S.savedActive;S.io4=S.io4Saved;addLog('已断开连接');S.flash=null;renderAll()};
+      if(dirtyCount()>0)confirmDlg({title:'断开连接',body:'设备仍在使用未保存的设置，断电或重启后会丢失。断开不会保存。',ok:'仍然断开',onOk:go});else go();
+      return;
+    }
+    S.connecting=true;renderTop();renderBubble();
+    setTimeout(function(){
+      S.connecting=false;S.connected=true;S.t0=performance.now();
+      addLog('已连接设备，读取设置');addLog('读取模板：'+tplName(S.active));
+      renderAll();say({k:'ok',t:'已连接，设置已读回',b:'改动会立即在设备上生效，点「应用并保存」才会写入设备。'},5000);
+    },900);
+  }
+  function apply(){
+    S.saving=true;renderTop();say({k:'info',t:'正在应用并保存',b:'请等待设备确认。'},0);
+    setTimeout(function(){
+      S.saving=false;S.saved=clone(S.cfg);S.savedActive=S.active;S.io4Saved=S.io4;
+      addLog('设置已应用并保存，模板：'+tplName(S.active));
+      renderAll();say({k:'ok',t:'设置已应用并保存',b:'当前模板和设备保存状态已读回。'+(S.io4?'下次上电进入 IO4 模式。':'')},5000);
+    },900);
+  }
+
+  /* ---------- 事件 ---------- */
+  $('#conn').onclick=connect;
+  $('#apply').onclick=apply;
+  $('#reboot').onclick=function(){
+    confirmDlg({title:'重启设备',body:'重启后，已生效但未保存的修改会丢失，设备将使用已保存的设置。确定要重启吗？',note:'点击“确认重启”后，设备将重启并断开网页连接。',ok:'确认重启',onOk:function(){
+      S.connected=false;S.cfg=clone(S.saved);resetSnap();S.active=S.savedActive;S.io4=S.io4Saved;addLog('已重启设备，连接已断开');S.flash=null;renderAll();
+    }});
+  };
+  $('#io4').onclick=function(){
+    if(!S.io4){
+      confirmDlg({title:'启用 IO4 模式？',warning:'启用后，配置网页将无法连接设备。',body:'应用并保存后，下次上电进入 IO4 模式。需要返回普通模式时，按住本设备的 BT10，再重新接通电源。',note:'这里只选择启动模式，不会直接切换，应用并保存后重启生效。',ok:'了解，选择 IO4',onOk:function(){
+        S.io4=true;addLog('启动模式：普通模式 → IO4 模式（未保存）');S.flash=null;renderAll();
+      }});
+    }else{S.io4=false;addLog('启动模式：IO4 模式 → 普通模式（未保存）');S.flash=null;renderAll()}
+  };
+  $('#newTpl').onclick=function(){createTpl(false)};
+  $('#len').onchange=function(){S.cfg.light.enabled=this.checked;changed()};
+  $('#lmode').onchange=function(){S.cfg.light.mode=this.value;changed()};
+  $('#lbright').oninput=function(){S.cfg.light.bright=+this.value;$('#lbv').textContent=this.value;changed()};
+  $('#knobL').onclick=function(){select({type:'knobL'})};
+  $('#knobR').onclick=function(){select({type:'knobR'})};
+  $('#slider').onclick=function(){select({type:'slider'})};
+  var tabs=document.querySelectorAll('.tab');
+  for(var i=0;i<tabs.length;i++)tabs[i].onclick=function(){
+    S.tab=this.dataset.tab;
+    $('#statusPage').style.display=S.tab==='status'?'flex':'none';$('#fwPage').style.display=S.tab==='firmware'?'flex':'none';$('#labPage').style.display=S.tab==='lab'?'flex':'none';
+    renderTop();
+  };
+  function keyName(e){
+    var k=e.key;
+    if(k===' ')return 'Space';
+    if(k.length===1)return k.toUpperCase();
+    return k.replace('Arrow','方向 ');
+  }
+  document.addEventListener('keydown',function(e){
+    if(!S.listen||S.sel.type!=='key')return;
+    e.preventDefault();
+    if(e.key==='Escape'){S.listen=false;renderRight();return}
+    if(['Shift','Control','Alt','Meta'].indexOf(e.key)>=0&&false)return;
+    S.cfg.keys[S.sel.id].action='键盘 · '+keyName(e);S.listen=false;changed();renderRight();
+  },true);
+  /* 手动测试：滚轮转旋钮，拖动滑轨 */
+  function manual(){return S.connected&&$('#sim').value==='manual'}
+  ;[['#knobL','lk'],['#knobR','rk']].forEach(function(p){
+    $(p[0]).addEventListener('wheel',function(e){if(!manual())return;e.preventDefault();S.sig[p[1]]+=(e.deltaY>0?1:-1)*.125},{passive:false});
+  });
+  var drag=false;
+  function dragTo(e){
+    var r=$('#track').getBoundingClientRect();
+    S.sig.sl=clamp((e.clientX-r.left)/r.width);
+  }
+  $('#slider').addEventListener('pointerdown',function(e){if(!manual())return;drag=true;dragTo(e);this.setPointerCapture(e.pointerId)});
+  $('#slider').addEventListener('pointermove',function(e){if(drag)dragTo(e)});
+  $('#slider').addEventListener('pointerup',function(){drag=false});
+  $('#sim').onchange=function(){if(this.value==='demo')S.t0=performance.now()};
+
+  $('#knobL').innerHTML=knobSVG('L');$('#knobR').innerHTML=knobSVG('R');
+  buildColors();resetSnap();renderAll();
+  requestAnimationFrame(loop);
+})();
+</script>

@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 // Release version: change only this value before building the formal UF2.
-#define FLUXRAIL_FIRMWARE_VERSION "0.10.2"
+#define FLUXRAIL_FIRMWARE_VERSION "0.10.3"
 
 namespace fluxrail {
 namespace firmware {
