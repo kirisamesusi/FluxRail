@@ -1,0 +1,857 @@
+[
+  {
+    "mode": "inf",
+    "slider": 64.25020090040181,
+    "angle": 0,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_1",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_2",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_3",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_4",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_1",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_2",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_3",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_1",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_2",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_3",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_4",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_5",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_6",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_7",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_8",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_9",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_10",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_11",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_12",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_4",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_5",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_T_hanger_0",
+        "b": "K1_N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_0",
+        "b": "K1_S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_1",
+        "b": "K1_N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_1",
+        "b": "K1_S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_2",
+        "b": "K1_N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_2",
+        "b": "K1_S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_3",
+        "b": "K1_N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_3",
+        "b": "K1_S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_A_lid",
+        "b": "K1_S_brake_adjust",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_T_hanger_0",
+        "b": "K2_N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_0",
+        "b": "K2_S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_1",
+        "b": "K2_N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_1",
+        "b": "K2_S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_2",
+        "b": "K2_N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_2",
+        "b": "K2_S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_3",
+        "b": "K2_N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_3",
+        "b": "K2_S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_A_lid",
+        "b": "K2_S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "mode": "inf",
+    "slider": 135.7502009004018,
+    "angle": 90,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_1",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_2",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_3",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_4",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_1",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_2",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_3",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_1",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_2",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_3",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_4",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_5",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_6",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_7",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_8",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_9",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_10",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_11",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_12",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_4",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_5",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_T_hanger_0",
+        "b": "K1_N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_0",
+        "b": "K1_S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_1",
+        "b": "K1_N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_1",
+        "b": "K1_S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_2",
+        "b": "K1_N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_2",
+        "b": "K1_S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_3",
+        "b": "K1_N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_3",
+        "b": "K1_S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_A_lid",
+        "b": "K1_S_brake_adjust",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_T_hanger_0",
+        "b": "K2_N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_0",
+        "b": "K2_S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_1",
+        "b": "K2_N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_1",
+        "b": "K2_S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_2",
+        "b": "K2_N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_2",
+        "b": "K2_S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_3",
+        "b": "K2_N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_3",
+        "b": "K2_S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_A_lid",
+        "b": "K2_S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "mode": "ongeki",
+    "slider": 100.00020090040181,
+    "angle": 45,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_1",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_2",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_3",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_pcb_col_4",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_1",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_2",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "B_rail_lower_3",
+        "volumeMM3": 3.39292
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_1",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_2",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_3",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_4",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_5",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_6",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_7",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_8",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_9",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_10",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_11",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_rim_12",
+        "volumeMM3": 2.148849
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_4",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_base_upper",
+        "b": "S_laminate_5",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_P_case",
+        "b": "K1_I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K1_T_hanger_0",
+        "b": "K1_N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_0",
+        "b": "K1_S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_1",
+        "b": "K1_N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_1",
+        "b": "K1_S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_2",
+        "b": "K1_N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_2",
+        "b": "K1_S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_T_hanger_3",
+        "b": "K1_N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K1_T_hanger_3",
+        "b": "K1_S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K1_A_lid",
+        "b": "K1_S_brake_adjust",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_P_case",
+        "b": "K2_I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "K2_T_hanger_0",
+        "b": "K2_N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_0",
+        "b": "K2_S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_1",
+        "b": "K2_N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_1",
+        "b": "K2_S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_2",
+        "b": "K2_N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_2",
+        "b": "K2_S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_T_hanger_3",
+        "b": "K2_N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "K2_T_hanger_3",
+        "b": "K2_S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "K2_A_lid",
+        "b": "K2_S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  }
+]

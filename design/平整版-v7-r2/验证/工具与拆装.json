@@ -1,0 +1,175 @@
+[
+  {
+    "test": "driver enters with cap installed",
+    "driverDiameterMM": 1.8,
+    "localXY": [
+      6,
+      -14.9
+    ]
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": 0
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": -2
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": -5
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": -9
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": -13
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": -18
+  },
+  {
+    "test": "PCB out of separate tray",
+    "translationY": -25
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 0
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 0.2
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 0.5
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 1
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 2
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 4
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 8
+  },
+  {
+    "test": "shaft-and-hub up after removing yoke and wave spring",
+    "translationZ": 15
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 0
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 0.3
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 1
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 3
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 6
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 12
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pressure_yoke",
+    "translationZ": 18
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 0
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 0.3
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 1
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 3
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 6
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 12
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "P_pom_saddle",
+    "translationZ": 18
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 0
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 0.3
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 1
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 3
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 6
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 12
+  },
+  {
+    "test": "brake part out of open tray",
+    "id": "C_brake_disc",
+    "translationZ": 18
+  }
+]

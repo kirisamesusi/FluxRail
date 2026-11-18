@@ -1,0 +1,26 @@
+{
+  "pages": [
+    {
+      "file": "旋钮模型.html",
+      "initialCADInstances": 63,
+      "webgl": true,
+      "explode": true,
+      "isolateAndDownload": true,
+      "reset": true,
+      "variantSwitch": false
+    },
+    {
+      "file": "整机模型.html",
+      "initialCADInstances": 268,
+      "webgl": true,
+      "explode": true,
+      "isolateAndDownload": true,
+      "reset": true,
+      "variantSwitch": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "smallViewport": true,
+  "allLocalLinks": true
+}

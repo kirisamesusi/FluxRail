@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FluxRail v7 r2 · __TITLE__</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#12212a;color:#ecf5f7;font:15px/1.55 system-ui,"Microsoft YaHei",sans-serif}
+header{padding:19px 24px;border-bottom:1px solid #324651;background:#172a34;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1{font-size:clamp(22px,3vw,30px);line-height:1.15;margin:4px 0}.eyebrow{color:#9ee0e3;font-size:12px;letter-spacing:.13em;font-weight:650}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+a{color:#a7e7e9;text-decoration:none}a:hover{text-decoration:underline}
+main{display:grid;grid-template-columns:minmax(0,1fr) 310px;min-height:calc(100vh - 100px)}
+#stage{position:relative;min-height:620px;background:#21343e;overflow:hidden}
+canvas{display:block;width:100%;height:100%;outline:none;touch-action:none}
+#caption{position:absolute;pointer-events:none;bottom:14px;left:16px;max-width:calc(100% - 32px);margin:0;padding:8px 12px;background:#0b1823d9;border:1px solid #536875;border-radius:8px;color:#e8f3f6}
+aside{padding:18px;background:#172a34;border-left:1px solid #324651}
+.controls{display:grid;gap:16px}.block{display:grid;gap:6px}
+label{font-weight:640}input[type=range]{width:100%;accent-color:#8cd6d9}
+select,button{font:inherit;border:1px solid #536975;border-radius:7px;padding:8px 10px;color:#ecf5f7;background:#213a47}
+select{width:100%}button{cursor:pointer}button:hover{background:#2c4c5a}
+.check{display:flex;align-items:center;gap:8px}.check input{accent-color:#8cd6d9}
+#detail{min-height:130px;border-top:1px solid #536875;margin-top:20px;padding-top:16px}
+#links{display:flex;gap:15px;flex-wrap:wrap}.dim{color:#bacbd1;font-size:13px}
+[hidden]{display:none!important}
+@media(max-width:760px){main{grid-template-columns:1fr}#stage{height:60vh;min-height:340px}aside{border-left:0;border-top:1px solid #324651}header{padding:12px 15px}}
+</style>
+<header>
+  <div><span class="eyebrow">FLUXRAIL / V7 R2 · ADJUSTABLE DRAG</span><h1>__TITLE__</h1></div>
+  <nav><a href="index.html">交付入口</a><a href="单件下载.html">单件清单</a><a href="打印装配.html">装配说明</a></nav>
+</header>
+<main>
+  <div id="stage"><p id="caption" role="status">正在载入 3D 模型…</p></div>
+  <aside>
+    <div class="controls">
+      <label class="block" id="variant-row">整机滑块
+        <select id="variant"><option>INF</option><option>音击</option></select>
+      </label>
+      <label class="block">爆炸距离 <output id="amount-label">0%</output>
+        <input id="amount" type="range" min="0" max="100" value="0">
+      </label>
+      <label class="block" id="rotate-row">主轴转角 <output id="angle-label">0°</output>
+        <input id="angle" type="range" min="0" max="360" value="0">
+      </label>
+      <label class="block">选择零件
+        <select id="pick"><option value="">全部零件</option></select>
+      </label>
+      <label class="check"><input id="hide" type="checkbox">隐藏旋钮帽</label>
+      <label class="check"><input id="isolate" type="checkbox">只看所选零件</label>
+      <button id="reset" type="button">重置视图</button>
+    </div>
+    <div id="detail"><strong id="name">全部零件</strong><p class="dim" id="note">点选模型或从清单选择。轴承三种包络对应一个采购件。</p><div id="links"></div></div>
+    <p class="dim">蓝色：打印件 · 浅色：金属/POM · 深色：密封盖。波簧造型、轴承内部与帽内腔是参考包络。</p>
+  </aside>
+</main>
+<script type="application/json" id="cad-data">__DATA__</script>
+<script>
+__LIBRARY__
+</script>
+<script>
+(()=>{
+  const $=id=>document.getElementById(id);
+  const data=JSON.parse($('cad-data').textContent);
+  $('variant-row').hidden=!data.machine;
+  $('rotate-row').hidden=data.machine;
+  const scene=new THREE.Scene();
+  scene.background=new THREE.Color('#21343e');
+  const camera=new THREE.PerspectiveCamera(36,1,.1,5000);
+  camera.up.set(0,0,1);
+  let renderer;
+  try { renderer=new THREE.WebGLRenderer({antialias:true}); }
+  catch (e) {
+    $('caption').textContent='浏览器无法启动 WebGL。仍可从交付入口下载 STEP 查看。';
+    return;
+  }
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.domElement.setAttribute('aria-label','可旋转的 CAD 模型');
+  $('stage').prepend(renderer.domElement);
+  const controls=new Orbit(camera,renderer.domElement);
+  controls.enableDamping=true;
+  scene.add(new THREE.HemisphereLight(0xf3f8ff,0x72858f,2.05));
+  const light=new THREE.DirectionalLight(0xffffff,2.1); light.position.set(70,-100,150); scene.add(light);
+  const fill=new THREE.DirectionalLight(0x9ecfe5,0.65); fill.position.set(-80,50,90); scene.add(fill);
+  const items=[];
+  for(const part of data.parts){
+    const geo=new THREE.BufferGeometry();
+    geo.setAttribute('position',new THREE.Float32BufferAttribute(part.v.flat(),3));
+    geo.setIndex(part.f.flat());
+    geo.computeVertexNormals();
+    const color=new THREE.Color(...part.rgb);
+    const material=new THREE.MeshStandardMaterial({color,roughness:.7,metalness:.16,side:THREE.DoubleSide});
+    const mesh=new THREE.Mesh(geo,material);
+    mesh.userData.key=part.key;
+    scene.add(mesh);
+    items.push({mesh,part,color});
+  }
+  for(const [key,row] of Object.entries(data.files)){
+    $('pick').add(new Option(row.name,key));
+  }
+  let pressed=null;
+  renderer.domElement.addEventListener('pointerdown',e=>{pressed=[e.clientX,e.clientY];});
+  renderer.domElement.addEventListener('pointerup',e=>{
+    if(!pressed || Math.hypot(e.clientX-pressed[0],e.clientY-pressed[1])>4) return;
+    const b=renderer.domElement.getBoundingClientRect();
+    const pointer=new THREE.Vector2((e.clientX-b.x)/b.width*2-1,1-(e.clientY-b.y)/b.height*2);
+    const ray=new THREE.Raycaster(); ray.setFromCamera(pointer,camera);
+    const hits=ray.intersectObjects(items.filter(x=>x.mesh.visible).map(x=>x.mesh),false);
+    $('pick').value=hits[0]?.object.userData.key||'';
+    update(false);
+  });
+  function fit(){
+    const b=new THREE.Box3();
+    for(const {mesh} of items) if(mesh.visible) b.expandByObject(mesh);
+    if(b.isEmpty())return;
+    const c=b.getCenter(new THREE.Vector3());
+    const away=new THREE.Vector3(1,-1.38,1.18).normalize();
+    const right=new THREE.Vector3().crossVectors(camera.up,away).normalize();
+    const up=new THREE.Vector3().crossVectors(away,right);
+    const tan=Math.tan(camera.fov*Math.PI/360)*.83;
+    let d=16;
+    for(const x of [b.min.x,b.max.x]) for(const y of [b.min.y,b.max.y]) for(const z of [b.min.z,b.max.z]){
+      const q=new THREE.Vector3(x,y,z).sub(c);
+      d=Math.max(d,q.dot(away)+Math.abs(q.dot(right))/(tan*camera.aspect),
+                   q.dot(away)+Math.abs(q.dot(up))/tan);
+    }
+    camera.position.copy(c).addScaledVector(away,d);
+    controls.target.copy(c); controls.update();
+  }
+  function download(label,path){
+    const a=document.createElement('a');
+    a.href=path.split('/').map(encodeURIComponent).join('/');
+    a.dataset.partFile='';a.download='';a.textContent=label;return a;
+  }
+  function update(reframe){
+    const amount=Number($('amount').value);
+    const angle=Number($('angle').value);
+    const key=$('pick').value;
+    const variant=$('variant').value;
+    const row=data.files[key];
+    $('amount-label').textContent=amount+'%';
+    $('angle-label').textContent=angle+'°';
+    let visible=0;
+    for(const {mesh,part,color} of items){
+      const selected=!!key&&key===part.key;
+      mesh.visible=(!part.variant||part.variant===variant)&&(!key||!$('isolate').checked||selected)
+        &&(!$('hide').checked||!['cap','cap-set'].includes(part.key));
+      if(mesh.visible)visible++;
+      mesh.position.set(...part.ex.map(x=>x*amount/100));
+      mesh.rotation.z=!data.machine&&['rotor','cap'].includes(part.group)?angle*Math.PI/180:0;
+      mesh.material.color.copy(color);
+      mesh.material.emissive.set(selected?0x99621e:0x000000);
+      mesh.material.emissiveIntensity=selected?.85:0;
+    }
+    $('name').textContent=row?.name||'全部零件';
+    $('note').textContent=row?.note||'点选模型或从清单选择。轴承三种包络对应一个采购件。';
+    $('links').replaceChildren(...(row?[download('STEP',row.step),download(row.printable?'打印 STL':'参考 STL',row.stl)]:[]));
+    $('caption').textContent=(visible?visible+' 个 CAD 实例':'当前筛选无可见零件')+' · 拖动旋转 / 滚轮缩放 / 右键平移';
+    document.body.dataset.visible=visible;
+    if(reframe) fit();
+  }
+  for(const id of ['variant','pick','isolate','hide']){
+    $(id).addEventListener('change',()=>update(id==='isolate'||(id==='pick'&&$('isolate').checked)));
+  }
+  $('amount').addEventListener('input',()=>update(false));
+  $('amount').addEventListener('change',fit);
+  $('angle').addEventListener('input',()=>update(false));
+  $('reset').addEventListener('click',()=>{
+    $('amount').value=0;$('angle').value=0;$('pick').value='';
+    $('hide').checked=false;$('isolate').checked=false;update(true);
+  });
+  const resize=()=>{
+    const {width,height}=$('stage').getBoundingClientRect();
+    camera.aspect=width/height;camera.updateProjectionMatrix();renderer.setSize(width,height,false);
+  };
+  new ResizeObserver(resize).observe($('stage'));resize();update(true);
+  renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
+  document.body.dataset.ready='yes';
+})();
+</script>
+<script src="单件保存.js"></script>
+</html>

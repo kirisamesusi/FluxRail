@@ -1,0 +1,20 @@
+﻿编号,名称,单旋钮,整机 INF,整机 音击,STL,建议朝向
+tray,底壳与 POM 制动座,1,2,2,打印STL/旋钮/tray 底壳与 POM 制动座.stl,壳底贴床，给 POM 座背面局部支撑
+keeper,退板挡条,1,2,2,打印STL/旋钮/keeper 退板挡条.stl,挡条底面贴床
+hub,磁铁杯与浮动盘驱动键,1,2,2,打印STL/旋钮/hub 磁铁杯与浮动盘驱动键.stl,磁铁杯口朝下，给驱动键和杯顶局部支撑
+carrier-l,固定座 左半,1,2,2,打印STL/旋钮/carrier-l 固定座 左半.stl,悬挂耳贴床，桥和中座加局部支撑
+carrier-r,固定座 右半,1,2,2,打印STL/旋钮/carrier-r 固定座 右半.stl,悬挂耳贴床，桥和中座加局部支撑
+cup,固定上轴承杯,1,2,2,打印STL/旋钮/cup 固定上轴承杯.stl,Ø13.08 轴承装入口贴床；给法兰外缘加局部支撑
+top-clamp,一体肩上夹箍,1,2,2,打印STL/旋钮/top-clamp 一体肩上夹箍.stl,大端平面贴床，内圈肩向上
+pom-saddle,上 POM 防转托环,1,2,2,打印STL/旋钮/pom-saddle 上 POM 防转托环.stl,平面贴床，两键朝上
+brake-yoke,导向压环,1,2,2,打印STL/旋钮/brake-yoke 导向压环.stl,按 STL，环和伸出臂局部支撑
+host-p045,机械轴定位板-平整版2mm,0,1,1,打印STL/整机/host-p045 机械轴定位板-平整版2mm.stl,延用 v6 方向；确认装配面
+host-p062,导轨端部限位垫脚-左-PETG,0,1,1,打印STL/整机/host-p062 导轨端部限位垫脚-左-PETG.stl,延用 v6 方向；确认装配面
+host-p063,导轨端部限位垫脚-右-PETG,0,1,1,打印STL/整机/host-p063 导轨端部限位垫脚-右-PETG.stl,延用 v6 方向；确认装配面
+host-p064,导轨中央垫脚-5×3.4×1.5,0,1,1,打印STL/整机/host-p064 导轨中央垫脚-5×3.4×1.5.stl,延用 v6 方向；确认装配面
+host-p052,背板防掉螺母杯-PETG-直径6x1.9mm,0,16,16,打印STL/旋钮接口/host-p052 背板防掉螺母杯-PETG-直径6x1.9mm.stl,延用 v6 方向；确认装配面
+host-p072,滑块共用快拆底座-PETG,0,1,1,打印STL/滑块/host-p072 滑块共用快拆底座-PETG.stl,延用 v6 方向；确认装配面
+host-p077,滑块手拧钮-PETG,0,1,1,打印STL/滑块/host-p077 滑块手拧钮-PETG.stl,延用 v6 方向；确认装配面
+host-p078,滑块限退框-PETG,0,1,1,打印STL/滑块/host-p078 滑块限退框-PETG.stl,延用 v6 方向；确认装配面
+host-p081,滑块帽-INF短帽,0,1,0,打印STL/滑块/host-p081 滑块帽-INF短帽.stl,延用 v6 方向；确认装配面
+host-p082,滑块帽-音击握把,0,0,1,打印STL/滑块/host-p082 滑块帽-音击握把.stl,延用 v6 方向；确认装配面

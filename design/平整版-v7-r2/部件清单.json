@@ -1,0 +1,2054 @@
+[
+  {
+    "id": "tray",
+    "name": "底壳与 POM 制动座",
+    "obtain": "打印新版",
+    "spec": "PETG，集成下 POM 托面及两根导柱",
+    "note": "按 r2 重打",
+    "v6Source": "r2 集成制动座，v6 和 r1 底壳均换新版。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      32.0,
+      31.05003,
+      15.1
+    ],
+    "step": "独立零件/旋钮/tray 底壳与 POM 制动座.step",
+    "stl": "打印STL/旋钮/tray 底壳与 POM 制动座.stl",
+    "solids": 1,
+    "stepSHA256": "fe7e56fd5cad122b3589ec25d00c109ac464cb926a25e4eb0bf9e132e7eefe7c",
+    "stlSHA256": "b11528d68405e599d720cac57bd3f39ddeaf7a466df63ab4f389377e856b5247",
+    "mesh": {
+      "triangles": 10450,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "fluxdial",
+    "name": "FluxDial 小板",
+    "obtain": "直接复用 v6",
+    "spec": "15×18×1.6；现有装联",
+    "note": "小板共 1 片/旋钮",
+    "v6Source": "直接复用已装联的 v6 FluxDial 小板。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      15.00006,
+      18.00007,
+      1.6
+    ],
+    "step": "独立零件/旋钮/fluxdial FluxDial 小板.step",
+    "stl": "独立零件/旋钮/fluxdial FluxDial 小板.stl",
+    "solids": 1,
+    "stepSHA256": "056a1bbf6b7c4957a5988bf1a5f3c0e22fb31117192dc917f9cd175397d6b15d",
+    "stlSHA256": "f60aa38db0995797f3e62a3b653ded08b6ad0380539b096a37e36fedda7a6e26",
+    "mesh": {
+      "triangles": 1732,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "mt6701",
+    "name": "MT6701 包络",
+    "obtain": "随小板复用",
+    "spec": "沿用 FluxDial 装联",
+    "note": "不重复买",
+    "v6Source": "随 v6 FluxDial 小板。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      6.2,
+      5.1,
+      1.85
+    ],
+    "step": "独立零件/旋钮/mt6701 MT6701 包络.step",
+    "stl": "独立零件/旋钮/mt6701 MT6701 包络.stl",
+    "solids": 1,
+    "stepSHA256": "34a9793f609941921deaca36439b359502b47aedd23b06a76c86e7324eb2234b",
+    "stlSHA256": "136f1d19948476ba24de7dc334012f9a92d2ee0f9b1b34b68ceec3abd43736af",
+    "mesh": {
+      "triangles": 12,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "fpc",
+    "name": "排线座包络",
+    "obtain": "随小板复用",
+    "spec": "沿用 FluxDial 装联",
+    "note": "不重复买；软排线按实物维护余量选",
+    "v6Source": "插座随 v6 FluxDial 小板。现有排线长度按实装核对。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      12.1,
+      5.45,
+      2.2
+    ],
+    "step": "独立零件/旋钮/fpc 排线座包络.step",
+    "stl": "独立零件/旋钮/fpc 排线座包络.stl",
+    "solids": 1,
+    "stepSHA256": "e4138e4ab4e392d6765dd22adc5556a54ecbdd01ef8f8669fa999ff845d158f0",
+    "stlSHA256": "117b4e78b47b608ff30e56a3afa5964553702a18d2234730a1471e518bea3d79",
+    "mesh": {
+      "triangles": 12,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "capacitor",
+    "name": "电容包络",
+    "obtain": "随小板复用",
+    "spec": "沿用 FluxDial 装联",
+    "note": "不重复买",
+    "v6Source": "随 v6 FluxDial 小板。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      2.2,
+      1.3,
+      1.1
+    ],
+    "step": "独立零件/旋钮/capacitor 电容包络.step",
+    "stl": "独立零件/旋钮/capacitor 电容包络.stl",
+    "solids": 1,
+    "stepSHA256": "421cd6b5889d0c080a66fa0692b4f01d578202dac9f4b9d783dbf77712798585",
+    "stlSHA256": "7c4cd62f7fd7735c8c0583a3ee427c8a5a17b89f2000f0a0a6e64df48477e160",
+    "mesh": {
+      "triangles": 12,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "keeper",
+    "name": "退板挡条",
+    "obtain": "直接复用 v6",
+    "spec": "v6 挡条 PETG",
+    "note": "与 v6 相同",
+    "v6Source": "直接复用 v6 FluxDial 退板挡条。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      23.6,
+      4.0,
+      2.7
+    ],
+    "step": "独立零件/旋钮/keeper 退板挡条.step",
+    "stl": "打印STL/旋钮/keeper 退板挡条.stl",
+    "solids": 1,
+    "stepSHA256": "ea6aeacb11b84875843f72f9b06663af1a40631f89c67d34dbf633d8be75c54e",
+    "stlSHA256": "f484e89e9251c32b597ec630335ad959470250995b2b52e4102dcf457f866556",
+    "mesh": {
+      "triangles": 2386,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "keeper-m2",
+    "name": "挡条沉头 M2×3",
+    "obtain": "直接复用 v6",
+    "spec": "M2×3 沉头",
+    "note": "旧规格；小扭矩装入底壳导孔",
+    "v6Source": "直接复用 v6 挡条螺丝，每只两颗。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 2,
+    "qtyINF": 4,
+    "qtyOngeki": 4,
+    "sizeMM": [
+      3.8,
+      3.8,
+      3.0
+    ],
+    "step": "独立零件/旋钮/keeper-m2 挡条沉头 M2×3.step",
+    "stl": "独立零件/旋钮/keeper-m2 挡条沉头 M2×3.stl",
+    "solids": 1,
+    "stepSHA256": "d3cc90cede8126800fc88e9b1b12e3a4902029b15e5a0ced67831e2f00d70763",
+    "stlSHA256": "7a8e617423a58be3a136b6b0b65eb09c812b38b76b2cc566e8cadee71177daea",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "shaft",
+    "name": "精密光轴",
+    "obtain": "直接复用 v6",
+    "spec": "低磁性精密不锈钢 Ø6×24",
+    "note": "仅截长去毛刺；到货实测轴径和磁性",
+    "v6Source": "直接复用原 Ø6×24 光轴。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      6.0,
+      6.0,
+      24.0
+    ],
+    "step": "独立零件/旋钮/shaft 精密光轴.step",
+    "stl": "独立零件/旋钮/shaft 精密光轴.stl",
+    "solids": 1,
+    "stepSHA256": "bac404ec9ff2f419826980e6fbdc484fe157288c0516682e7ec547bbe3b1e858",
+    "stlSHA256": "5ba6f949249860b22a295044dfb5255766a226891029a9757529ab752d9fa56d",
+    "mesh": {
+      "triangles": 416,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "hub",
+    "name": "磁铁杯与浮动盘驱动键",
+    "obtain": "打印新版",
+    "spec": "PETG，孔 Ø6.10，肩 Ø6.85",
+    "note": "两驱动键带动黄铜盘",
+    "v6Source": "重打带双驱动键的 r2 磁铁杯。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      14.08,
+      12.6,
+      6.2
+    ],
+    "step": "独立零件/旋钮/hub 磁铁杯与浮动盘驱动键.step",
+    "stl": "打印STL/旋钮/hub 磁铁杯与浮动盘驱动键.stl",
+    "solids": 1,
+    "stepSHA256": "c51ce9b4d95b03cc5ae8558f439bea19fa5b08f8f192eef67cf88fe7f7b5bf0e",
+    "stlSHA256": "22edded85a67651d0d14f7999b5c5c3f9b85a6a1399988e631febbc7a91dd56f",
+    "mesh": {
+      "triangles": 3586,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "magnet",
+    "name": "编码器磁铁",
+    "obtain": "缺件才补买",
+    "spec": "Ø6×2.5 径向充磁",
+    "note": "不是轴向充磁；实测磁隙与场状态",
+    "v6Source": "用 v6 同规格备件，或拆下完好磁铁复用。胶接件拆不下时才补买。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      6.0,
+      6.0,
+      2.5
+    ],
+    "step": "独立零件/旋钮/magnet 编码器磁铁.step",
+    "stl": "独立零件/旋钮/magnet 编码器磁铁.stl",
+    "solids": 1,
+    "stepSHA256": "45f431dcab138d6f1a99955a24f084ec28ddf5e9d21832a68b3ef284c07b51b3",
+    "stlSHA256": "e5c2f2a60b485695f09f69f4756e0c34539f55d7c7d6438384cd714c16aa478e",
+    "mesh": {
+      "triangles": 416,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "clamp-m2",
+    "name": "夹轴杯头 M2×8",
+    "obtain": "直接复用 v6",
+    "spec": "M2×8 内六角杯头",
+    "note": "上夹箍用 1 颗",
+    "v6Source": "复用 v6 的原夹轴杯头，移到上夹箍。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      3.8,
+      10.0,
+      3.8
+    ],
+    "step": "独立零件/旋钮/clamp-m2 夹轴杯头 M2×8.step",
+    "stl": "独立零件/旋钮/clamp-m2 夹轴杯头 M2×8.stl",
+    "solids": 1,
+    "stepSHA256": "4cf28d9abc455ca1293823d005e08b5d9502009acc872cf504be5d272045f2e8",
+    "stlSHA256": "8ed9b0f1f43f0c7ab073af2242a03b58723a4c6a1cd6c2ac72706b13d677f8a2",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "clamp-nut",
+    "name": "夹轴六角螺母 M2",
+    "obtain": "直接复用 v6",
+    "spec": "M2×0.4，AF4，厚 1.6",
+    "note": "顶夹箍和磁铁杯各 1",
+    "v6Source": "沿用原夹轴螺母，另一颗从 v6 摩擦盘的 AF4 螺母取。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 2,
+    "qtyINF": 4,
+    "qtyOngeki": 4,
+    "sizeMM": [
+      4.6188,
+      1.6,
+      4.0
+    ],
+    "step": "独立零件/旋钮/clamp-nut 夹轴六角螺母 M2.step",
+    "stl": "独立零件/旋钮/clamp-nut 夹轴六角螺母 M2.stl",
+    "solids": 1,
+    "stepSHA256": "40ec34f3039de4cc90adcb153c8b0c781d2b687d304cc0b13c76d6ed995775c1",
+    "stlSHA256": "24f82f89274509368ace7f88f7de7c892b032eac0b5325c615ea0db7ec5df6ae",
+    "mesh": {
+      "triangles": 444,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "bearing-mr",
+    "name": "下轴承 MR106ZZ",
+    "obtain": "直接复用 v6",
+    "spec": "6×10×3，双铁盖，无外法兰",
+    "note": "每旋钮 1 只；两端面环尺寸验收",
+    "v6Source": "从 v6 每套两只 MR106ZZ 中取一只。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      10.0,
+      10.0,
+      3.0
+    ],
+    "step": "独立零件/旋钮/bearing-mr 下轴承 MR106ZZ.step",
+    "stl": "独立零件/旋钮/bearing-mr 下轴承 MR106ZZ.stl",
+    "solids": 3,
+    "stepSHA256": "4afe23ef0ab7b3525c826102a99debf208ae25dc2aac5d8116d639f7140fa5bb",
+    "stlSHA256": "de424d431c61bddc02d2433e7f8cf0c75e4b3b1368f5c34d6128f4de650e125e",
+    "mesh": {
+      "triangles": 2520,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "bearing-686",
+    "name": "上轴承 686-2RS",
+    "obtain": "新购",
+    "spec": "6×13×5，低 / 中阻尼同规格",
+    "note": "历史截图 ¥8.50/只；选择一档装配；可另买另一档对比",
+    "v6Source": "v6 无对应件。每只旋钮买一只，低／中阻尼任选。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      13.0,
+      13.0,
+      5.0
+    ],
+    "step": "独立零件/旋钮/bearing-686 上轴承 686-2RS.step",
+    "stl": "独立零件/旋钮/bearing-686 上轴承 686-2RS.stl",
+    "solids": 3,
+    "stepSHA256": "b1f011c179c0554682502f05f713575c56178761d22548b8ff2f7d41af49da14",
+    "stlSHA256": "8fd717bfb8642c0cf97f3c3130a776602cd10961e8acec04eee3f82ac77b856a",
+    "mesh": {
+      "triangles": 2520,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "carrier-l",
+    "name": "固定座 左半",
+    "obtain": "打印新版",
+    "spec": "PETG；MR 座 Ø10.08、夹层高 5",
+    "note": "下外圈双肩、弹簧座和悬挂集成",
+    "v6Source": "重打 r2 左固定座，桥位及 MR106ZZ 高度已变。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      15.49,
+      18.01778,
+      6.0
+    ],
+    "step": "独立零件/旋钮/carrier-l 固定座 左半.step",
+    "stl": "打印STL/旋钮/carrier-l 固定座 左半.stl",
+    "solids": 1,
+    "stepSHA256": "7510d7d556a9669ba83f032240311e5958875fef6b8028c713d505711efbd951",
+    "stlSHA256": "d543df1ad399b7bf169832a542714589d2f855cb90e2913a8e48ad18f20fdb53",
+    "mesh": {
+      "triangles": 2704,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "carrier-r",
+    "name": "固定座 右半",
+    "obtain": "打印新版",
+    "spec": "PETG；MR 座 Ø10.08、夹层高 5",
+    "note": "对称半座，按独立 STL",
+    "v6Source": "重打 r2 右固定座，桥位及 MR106ZZ 高度已变。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      15.49,
+      18.01778,
+      6.0
+    ],
+    "step": "独立零件/旋钮/carrier-r 固定座 右半.step",
+    "stl": "打印STL/旋钮/carrier-r 固定座 右半.stl",
+    "solids": 1,
+    "stepSHA256": "c26f4d599b4116e7e8691fb11a38db544a50e093e5f1d7f01241790ff78205c5",
+    "stlSHA256": "8d5187477a4019fd2430b402ae8053dc6400f09fc5e814e21e416e0a553cbd8d",
+    "mesh": {
+      "triangles": 2704,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "cup",
+    "name": "固定上轴承杯",
+    "obtain": "打印新版",
+    "spec": "PETG，孔 Ø13.08，外导向 Ø17.1",
+    "note": "法兰由固定座与封盖夹住",
+    "v6Source": "重打 r2 固定杯，r1 浮动杯停用。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      21.95,
+      21.95,
+      6.4
+    ],
+    "step": "独立零件/旋钮/cup 固定上轴承杯.step",
+    "stl": "打印STL/旋钮/cup 固定上轴承杯.stl",
+    "solids": 1,
+    "stepSHA256": "83b3dd3d6e7d7459b23b68a97c86b7d48bad1bf2d76a913144123bdd437993b6",
+    "stlSHA256": "fa9c025b6f7a154e719541f76733d880589a9b47291625942745cdc54071a3ef",
+    "mesh": {
+      "triangles": 2154,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "hanger",
+    "name": "双通圆铜柱",
+    "obtain": "直接复用 v6",
+    "spec": "M2 母牙双通，Ø3.2×5",
+    "note": "必须实际核对 Ø3.2；金属限距",
+    "v6Source": "直接复用 v6 双通铜柱，贴铝封盖底面。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.2,
+      3.2,
+      5.0
+    ],
+    "step": "独立零件/旋钮/hanger 双通圆铜柱.step",
+    "stl": "独立零件/旋钮/hanger 双通圆铜柱.stl",
+    "solids": 1,
+    "stepSHA256": "a6b262861c829137e34248a8a75fe46679ded5b3bd019215ca76a3ecb5bb6c0f",
+    "stlSHA256": "dcd6dcf3c8026b8bb7e92070fa09c92a709fc9747627ae5a4b914f4a25e415b4",
+    "mesh": {
+      "triangles": 840,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "m2-washer",
+    "name": "M2 平垫",
+    "obtain": "直接复用 v6",
+    "spec": "2.2×5×0.3",
+    "note": "仅铜柱下端各 1 片；每套省去上端 4 片",
+    "v6Source": "v6 八片中只取四片，均装在铜柱下端。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      5.0,
+      5.0,
+      0.3
+    ],
+    "step": "独立零件/旋钮/m2-washer M2 平垫.step",
+    "stl": "独立零件/旋钮/m2-washer M2 平垫.stl",
+    "solids": 1,
+    "stepSHA256": "9b2e620f895a9d8f0f30375f6a68c91e94de6112923d6a8670579ee5a90849aa",
+    "stlSHA256": "03c23a273d68e296127043190219b6fdaa4b882af84a2d44b6766b3fcc7fc024",
+    "mesh": {
+      "triangles": 840,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "hanger-bottom",
+    "name": "铜柱下端杯头 M2×3",
+    "obtain": "直接复用 v6",
+    "spec": "M2×3 杯头",
+    "note": "下端向上装，别换沉头",
+    "v6Source": "直接复用 v6 铜柱下端杯头，实测两端螺钉不互顶。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.8,
+      3.8,
+      5.0
+    ],
+    "step": "独立零件/旋钮/hanger-bottom 铜柱下端杯头 M2×3.step",
+    "stl": "独立零件/旋钮/hanger-bottom 铜柱下端杯头 M2×3.stl",
+    "solids": 1,
+    "stepSHA256": "cc3fdbe86690857161ce5bc0e3e056c316f484491e124eafc7409b80f25e6a67",
+    "stlSHA256": "18330ebfee6c859ea5d29a39bdc12e0c4b0e236a762737e98b2c61b63d64dab0",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "hanger-top",
+    "name": "铜柱上端沉头 M2×4",
+    "obtain": "直接复用 v6",
+    "spec": "M2×4 沉头",
+    "note": "顶部从铝封盖装入",
+    "v6Source": "直接复用 v6 铜柱上端沉头，实测两端螺钉不互顶。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.8,
+      3.8,
+      4.0
+    ],
+    "step": "独立零件/旋钮/hanger-top 铜柱上端沉头 M2×4.step",
+    "stl": "独立零件/旋钮/hanger-top 铜柱上端沉头 M2×4.stl",
+    "solids": 1,
+    "stepSHA256": "01f4c43a5d2d79c380cb4ccaaf66151f5536e19c0b6a5670b3876543e62e7813",
+    "stlSHA256": "c56b9544522702c7c7e96af194ef05e5e33aa923334221bd9cb633b7c99cfcb4",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "case-insert",
+    "name": "底壳热熔嵌件",
+    "obtain": "缺件才补买",
+    "spec": "M2×3 铜嵌件",
+    "note": "只固定电子托盘；避免压进托盘螺丝过孔",
+    "v6Source": "优先用 v6 同规格库存。旧件已热熔时，完整取出才复用。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.2,
+      3.2,
+      3.0
+    ],
+    "step": "独立零件/旋钮/case-insert 底壳热熔嵌件.step",
+    "stl": "独立零件/旋钮/case-insert 底壳热熔嵌件.stl",
+    "solids": 1,
+    "stepSHA256": "70ee59f9eb3352df87867ad6c43e0acc31cca5a1c20f884260952319f1c9af6f",
+    "stlSHA256": "6c92a20b63527f7a24ce871a4a26fa0067da3032147ea267b719d5f3d01a3f11",
+    "mesh": {
+      "triangles": 840,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "case-m2",
+    "name": "底壳沉头 M2×6",
+    "obtain": "直接复用 v6",
+    "spec": "M2×6 沉头",
+    "note": "中圈托盘螺丝 4",
+    "v6Source": "直接复用 v6 托盘螺丝，每只四颗。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.8,
+      3.8,
+      6.0
+    ],
+    "step": "独立零件/旋钮/case-m2 底壳沉头 M2×6.step",
+    "stl": "独立零件/旋钮/case-m2 底壳沉头 M2×6.stl",
+    "solids": 1,
+    "stepSHA256": "ea7de1117b198ed4b6af96f36aabfa23f68089987d445f4ab23748782b1f4a9e",
+    "stlSHA256": "256ca09a07b462d94e01c974a336c03a42582aab5d0b6ca61162c6c086b90570",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "lid",
+    "name": "v7 r2 铝封盖",
+    "obtain": "按 v7 图加工",
+    "spec": "38×38×2 铝，新增 1 个 M2×0.4 通牙",
+    "note": "r1 铝盖可补钻攻，中心台阶沿用",
+    "v6Source": "v6 升级按 r2 图加工。r1 铝盖按调节孔图补钻攻。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      38.0,
+      38.0,
+      2.0
+    ],
+    "step": "独立零件/旋钮/lid v7 r2 铝封盖.step",
+    "stl": "独立零件/旋钮/lid v7 r2 铝封盖.stl",
+    "solids": 1,
+    "stepSHA256": "0dd869521ac168717af11fd414f0bbe1c424fb41ed052e50a3ec47f9648536e3",
+    "stlSHA256": "9e16c32f9f982b0e105253fc614165b3a17513f4f76999233990b0d664cbf07e",
+    "mesh": {
+      "triangles": 16472,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "service-m2",
+    "name": "外圈维修沉头 M2×6",
+    "obtain": "直接复用 v6",
+    "spec": "M2×6 沉头",
+    "note": "最外侧整套拆取螺丝 4",
+    "v6Source": "直接复用 v6 外圈维修螺丝，每只四颗。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 4,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.8,
+      3.8,
+      6.0
+    ],
+    "step": "独立零件/旋钮/service-m2 外圈维修沉头 M2×6.step",
+    "stl": "独立零件/旋钮/service-m2 外圈维修沉头 M2×6.stl",
+    "solids": 1,
+    "stepSHA256": "a50b95cdbea7920953789901a99762c642f4aab3f3df188455c95d591b518d41",
+    "stlSHA256": "6d5b5094410a48a8a9bb887fc76c6e4e352c38dc369039b8f117d04ef96bb01b",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "top-clamp",
+    "name": "一体肩上夹箍",
+    "obtain": "打印新版",
+    "spec": "PETG；孔 6.10、肩 Ø7.25",
+    "note": "配 M2×8 杯头和 AF4 螺母",
+    "v6Source": "替换 v6 帽内止挡环。初版 v7 夹箍可用。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      13.98913,
+      14.0,
+      4.1
+    ],
+    "step": "独立零件/旋钮/top-clamp 一体肩上夹箍.step",
+    "stl": "打印STL/旋钮/top-clamp 一体肩上夹箍.stl",
+    "solids": 1,
+    "stepSHA256": "d5ee35ac3b77725c61338629a3c715a76b09007f235a5ca25492513cbfd4343a",
+    "stlSHA256": "224cfc57482f89ea1ea025b4aec0f922efda42ae8398e171ff6ecb99d242261f",
+    "mesh": {
+      "triangles": 2416,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "cap",
+    "name": "成品旋钮帽",
+    "obtain": "直接复用 v6",
+    "spec": "Ø30×25 孔 6，侧面顶丝",
+    "note": "实测内腔、孔深、顶丝高度；保留 ≥5 mm 夹轴目标",
+    "v6Source": "直接复用原 Ø30×25 孔 6 顶丝帽。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      30.0,
+      30.0,
+      25.0
+    ],
+    "step": "独立零件/旋钮/cap 成品旋钮帽.step",
+    "stl": "独立零件/旋钮/cap 成品旋钮帽.stl",
+    "solids": 1,
+    "stepSHA256": "fb191d949a041a3aaed0987a28eeb4467a8a63f93d4637f842e6638964702f83",
+    "stlSHA256": "0516436afb5e986dac50048f36fa13699ee4660efd45886f4200ad0ce88e8ecb",
+    "mesh": {
+      "triangles": 1748,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "cap-set",
+    "name": "帽随附顶丝",
+    "obtain": "随帽复用",
+    "spec": "侧顶丝，CAD 暂按 M3 包络",
+    "note": "跟帽配套，不按模型螺纹单买",
+    "v6Source": "随 v6 旋钮帽复用。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      3.0,
+      3.0,
+      3.0
+    ],
+    "step": "独立零件/旋钮/cap-set 帽随附顶丝.step",
+    "stl": "独立零件/旋钮/cap-set 帽随附顶丝.stl",
+    "solids": 1,
+    "stepSHA256": "5c5f048d41135728bcc0a00b0d59d0ae564739e9f0f8dbb8f4c15b09afef85e7",
+    "stlSHA256": "f9c8d9355680921b982c09eba86120f5a79583b7d6957383077dcc141501690f",
+    "mesh": {
+      "triangles": 416,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "hub-grub",
+    "name": "下磁铁杯紧定螺钉",
+    "obtain": "新购",
+    "spec": "M2×3 平端内六角紧定螺钉",
+    "note": "配可回收的 AF4 钢螺母",
+    "v6Source": "v6 无此规格。每只需要 1 颗，有库存可用。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      2.0,
+      3.0,
+      2.0
+    ],
+    "step": "独立零件/旋钮/hub-grub 下磁铁杯紧定螺钉.step",
+    "stl": "独立零件/旋钮/hub-grub 下磁铁杯紧定螺钉.stl",
+    "solids": 1,
+    "stepSHA256": "5be1abf6788ad79a52b0e7bbe9f1e48d7534c98d3dfbe8e039ea95ac7690818c",
+    "stlSHA256": "4b6f21466a1e4c3565ea54f05ad67bb0218739f28f406ab07f7bf68278ad9b14",
+    "mesh": {
+      "triangles": 416,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "pom",
+    "name": "开缺口的白色 POM 垫片",
+    "obtain": "新购",
+    "spec": "毛坯内 15 × 外 20 × 厚 1",
+    "note": "按加工图锉两处防转缺口，每只两片",
+    "v6Source": "v6 毛毡不复用。每只旋钮买两片。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 2,
+    "qtyINF": 4,
+    "qtyOngeki": 4,
+    "sizeMM": [
+      19.91884,
+      20.0,
+      1.0
+    ],
+    "step": "独立零件/旋钮/pom 开缺口的白色 POM 垫片.step",
+    "stl": "独立零件/旋钮/pom 开缺口的白色 POM 垫片.stl",
+    "solids": 1,
+    "stepSHA256": "d486ebfb75e176320e2ea483dcc0df92b1002bb25941801cb60aee634f5d984d",
+    "stlSHA256": "852d74865758ba7d198a7b48a41d703728b9f0f1ccaffbf640fda0b72b43e9c9",
+    "mesh": {
+      "triangles": 844,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "brake-disc",
+    "name": "黄铜浮动摩擦盘",
+    "obtain": "按 v7 图加工",
+    "spec": "Ø20.4×1 黄铜片，双驱动槽",
+    "note": "双面平整去毛刺，可在驱动键上轴向滑动",
+    "v6Source": "v6 摩擦盘厚 1.5 mm 且孔不同，按 r2 图做新盘。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      20.4,
+      20.4,
+      1.0
+    ],
+    "step": "独立零件/旋钮/brake-disc 黄铜浮动摩擦盘.step",
+    "stl": "独立零件/旋钮/brake-disc 黄铜浮动摩擦盘.stl",
+    "solids": 1,
+    "stepSHA256": "fa61457a4768a69e48746257b81814da16b5df7047aefa88e8692623d4dbb8fc",
+    "stlSHA256": "d6240d2000ffaf726191e160ab23c8ad399f87e96e30d0359f7989193dad4c29",
+    "mesh": {
+      "triangles": 828,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "pom-saddle",
+    "name": "上 POM 防转托环",
+    "obtain": "打印新版",
+    "spec": "PETG，环基体 0.75 厚",
+    "note": "键朝下夹住上 POM",
+    "v6Source": "r2 新打印件，每只 1 件。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      28.3,
+      21.3,
+      1.05
+    ],
+    "step": "独立零件/旋钮/pom-saddle 上 POM 防转托环.step",
+    "stl": "打印STL/旋钮/pom-saddle 上 POM 防转托环.stl",
+    "solids": 1,
+    "stepSHA256": "97f268c0f1d88d7e1db3dab0a30bd3e062a3295ad0cd19bf78759aa418c7f1e7",
+    "stlSHA256": "6d431595ac82f6e72378657a0ad100a024f0489cf0381442d09163f3ca760859",
+    "mesh": {
+      "triangles": 884,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "wave",
+    "name": "304 三波峰波簧",
+    "obtain": "新购",
+    "spec": "内 14 × 外 21 × 片厚 0.4",
+    "note": "历史截图 ¥6.82/50 只；自由高 2.0 仅 CAD 假设",
+    "v6Source": "v6 无对应件。每只旋钮买一片。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      21.0,
+      21.0,
+      2.00006
+    ],
+    "step": "独立零件/旋钮/wave 304 三波峰波簧.step",
+    "stl": "独立零件/旋钮/wave 304 三波峰波簧.stl",
+    "solids": 1,
+    "stepSHA256": "b0f9fb09a856c09121a1552e82f86def3e2b8d2ffc530250c48e6e34611b5fb6",
+    "stlSHA256": "404fdc75c3d087e80b364348c6e6d3e21f28c942638a8d64594b3abf2d79c3d7",
+    "mesh": {
+      "triangles": 1240,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "brake-yoke",
+    "name": "导向压环",
+    "obtain": "打印新版",
+    "spec": "PETG，双导柱，调节行程 0.60",
+    "note": "先试直线滑动和受压偏斜",
+    "v6Source": "r2 新打印件，每只 1 件。",
+    "module": "旋钮",
+    "printable": true,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      28.3,
+      27.075,
+      4.35
+    ],
+    "step": "独立零件/旋钮/brake-yoke 导向压环.step",
+    "stl": "打印STL/旋钮/brake-yoke 导向压环.stl",
+    "solids": 1,
+    "stepSHA256": "ae4ffbbb02f15ab7d7756c3e01d3383c9be6a6906f62220631f39721677628be",
+    "stlSHA256": "f974c531b421834efa30436c19ff9f106924a939c5be3b10f0be9135e5bb0bd8",
+    "mesh": {
+      "triangles": 1032,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "brake-adjust",
+    "name": "外部调阻尼螺丝",
+    "obtain": "新购",
+    "spec": "M2×6 内六角杯头",
+    "note": "每只 1 颗，头下长 6 mm",
+    "v6Source": "v6 阻尼螺丝长 8 mm。r2 用头下长 6 mm 的杯头。",
+    "module": "旋钮",
+    "printable": false,
+    "qtyKnob": 1,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      3.8,
+      3.8,
+      8.0
+    ],
+    "step": "独立零件/旋钮/brake-adjust 外部调阻尼螺丝.step",
+    "stl": "独立零件/旋钮/brake-adjust 外部调阻尼螺丝.stl",
+    "solids": 1,
+    "stepSHA256": "386e49d224ef9e0518f440bd765050c604e505ee031f4722411d3d200e07172e",
+    "stlSHA256": "70d285d62a0a1717a71505e515594dc5c6e6f2e05ed6a25d66a519062f91d61f",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p042",
+    "name": "复合底板-下层2mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "35 blind pilots; target full thread depth 3.2; cylinder depth 3.8 + 118deg point 0.4807; no milling pockets; base underside intact",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      222.0004,
+      147.05031,
+      2.0
+    ],
+    "step": "独立零件/整机/host-p042 复合底板-下层2mm.step",
+    "stl": "独立零件/整机/host-p042 复合底板-下层2mm.stl",
+    "solids": 1,
+    "stepSHA256": "ccf2b8f2387ada460ef14f5850f3236bc4bb792830606e949b4c0c30006121a4",
+    "stlSHA256": "667d9c574d73a90fe24b564bfb3bc7ea9d9727f56e1fbac5698853540013213a",
+    "mesh": {
+      "triangles": 26147,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p043",
+    "name": "复合底板-上层3mm避让层",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "35 blind pilots; target full thread depth 3.2; cylinder depth 3.8 + 118deg point 0.4807; no milling pockets; base underside intact",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      222.0004,
+      147.05031,
+      3.0
+    ],
+    "step": "独立零件/整机/host-p043 复合底板-上层3mm避让层.step",
+    "stl": "独立零件/整机/host-p043 复合底板-上层3mm避让层.stl",
+    "solids": 1,
+    "stepSHA256": "cedef4534c89f04586b2e31c4cb1674dc96e809e8343da20dd5669f98e70598d",
+    "stlSHA256": "e4b992a544d8fe857929f833464ced61d48e50daaa7ef0b0df196f8dc52de744",
+    "mesh": {
+      "triangles": 12204,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p047",
+    "name": "机身亚克力主框-平整版",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "10 radial ×10.1 high; inner 2×6 LED recess; CNC thickness",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      222.0004,
+      147.05031,
+      10.1
+    ],
+    "step": "独立零件/整机/host-p047 机身亚克力主框-平整版.step",
+    "stl": "独立零件/整机/host-p047 机身亚克力主框-平整版.stl",
+    "solids": 1,
+    "stepSHA256": "2a0f214c6872d8496186974f6457cd1f33902d01ddf2a2524c9e4223148a70ce",
+    "stlSHA256": "cbc77d87d85cce7541b0efca47dbe60c5a7992768296f66945ff53a4a0134af5",
+    "mesh": {
+      "triangles": 6196,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p048",
+    "name": "机身亚克力后中段-平整版",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "10 radial ×10.1 high; inner 2×6 LED recess; CNC thickness",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      133.0004,
+      10.0,
+      10.1
+    ],
+    "step": "独立零件/整机/host-p048 机身亚克力后中段-平整版.step",
+    "stl": "独立零件/整机/host-p048 机身亚克力后中段-平整版.stl",
+    "solids": 1,
+    "stepSHA256": "8bca229adfdd84b169c4ef788cfd310e08275c6cc791f0259ce2459e23e381d0",
+    "stlSHA256": "0a6b06f5702519c5e9e2f9c0c5a734b49dd284d69d6c98e97a1057e4c5200755",
+    "mesh": {
+      "triangles": 964,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p055",
+    "name": "主体PCB板框-装联包络",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      200.0004,
+      115.05031,
+      1.6
+    ],
+    "step": "独立零件/整机/host-p055 主体PCB板框-装联包络.step",
+    "stl": "独立零件/整机/host-p055 主体PCB板框-装联包络.stl",
+    "solids": 1,
+    "stepSHA256": "e23fa13e714f97d8362a24e151150cf64fab725985933bd839700b2c6eb52db2",
+    "stlSHA256": "9cd1b1696288234be8eb787228b3dde99b4e0e6fc56f3ddedf1e8ee67a38a865",
+    "mesh": {
+      "triangles": 7236,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p056",
+    "name": "公母铜柱-M2×5+3-对边3-母孔有效深度≥3",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 7,
+    "qtyOngeki": 7,
+    "sizeMM": [
+      3.4641,
+      3.0,
+      8.0
+    ],
+    "step": "独立零件/整机/host-p056 公母铜柱-M2×5+3-对边3-母孔有效深度≥3.step",
+    "stl": "独立零件/整机/host-p056 公母铜柱-M2×5+3-对边3-母孔有效深度≥3.stl",
+    "solids": 1,
+    "stepSHA256": "764babc6f3cee29098d05141041a045c7e24eda494e09f3fa070efea2da99d4d",
+    "stlSHA256": "80996795fbb74d4db1059701b7e06de4d893e5396d7b50e3f84fa9b59d40f0ff",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p057",
+    "name": "圆柱头内六角螺丝-M2×4-头Ø3.8-高2",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 4,
+    "qtyOngeki": 4,
+    "sizeMM": [
+      3.8,
+      3.8,
+      6.0
+    ],
+    "step": "独立零件/整机/host-p057 圆柱头内六角螺丝-M2×4-头Ø3.8-高2.step",
+    "stl": "独立零件/整机/host-p057 圆柱头内六角螺丝-M2×4-头Ø3.8-高2.stl",
+    "solids": 1,
+    "stepSHA256": "a1dd6a5075906b633fec07aca1c21f841f912c2d8463aea9b07373be9fa899eb",
+    "stlSHA256": "1ee3cbf72a1451e5ba550e31a1af8fb3277d34bda01bc20c930054a7459e2c02",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p058",
+    "name": "双通铜柱-M2-柱身长5-对边3-贯通内螺纹",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 3,
+    "qtyOngeki": 3,
+    "sizeMM": [
+      3.4641,
+      3.0,
+      5.0
+    ],
+    "step": "独立零件/整机/host-p058 双通铜柱-M2-柱身长5-对边3-贯通内螺纹.step",
+    "stl": "独立零件/整机/host-p058 双通铜柱-M2-柱身长5-对边3-贯通内螺纹.stl",
+    "solids": 1,
+    "stepSHA256": "824f5ebdd4735a2e0bd441334090b96dcbe16d3f23f1a25167302706a28df111",
+    "stlSHA256": "0b92a236c77232343c4964459def542b105a6e2faafb7abed8e0db83f42e20dd",
+    "mesh": {
+      "triangles": 444,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p059",
+    "name": "连接螺柱-M2×6-无头",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 3,
+    "qtyOngeki": 3,
+    "sizeMM": [
+      2.0,
+      2.0,
+      6.0
+    ],
+    "step": "独立零件/整机/host-p059 连接螺柱-M2×6-无头.step",
+    "stl": "独立零件/整机/host-p059 连接螺柱-M2×6-无头.stl",
+    "solids": 1,
+    "stepSHA256": "29b654e543910c12dd451548f517d7e596579633467be98d90f668416e244b0a",
+    "stlSHA256": "6c576e79372530385a50bb819b7e8ebff9876a56e1d67c939d22b1800424a1bd",
+    "mesh": {
+      "triangles": 416,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p060",
+    "name": "圆柱头内六角螺丝-M2×6-头Ø3.8-高2",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 3,
+    "qtyOngeki": 3,
+    "sizeMM": [
+      3.8,
+      3.8,
+      8.0
+    ],
+    "step": "独立零件/整机/host-p060 圆柱头内六角螺丝-M2×6-头Ø3.8-高2.step",
+    "stl": "独立零件/整机/host-p060 圆柱头内六角螺丝-M2×6-头Ø3.8-高2.stl",
+    "solids": 1,
+    "stepSHA256": "5ff800cc2745191efa0ec913e6197da1d93d2139a18c4ef60689b114073d8f42",
+    "stlSHA256": "21f5616914899deb78b6156ab0042a441aa7efae93c25a44b571d8f2dd8582bf",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p046",
+    "name": "吸音棉-平整版3.5mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "Actual populated PCB heights require measurement before foam cutting",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      200.0004,
+      115.05031,
+      3.5
+    ],
+    "step": "独立零件/整机/host-p046 吸音棉-平整版3.5mm.step",
+    "stl": "独立零件/整机/host-p046 吸音棉-平整版3.5mm.stl",
+    "solids": 1,
+    "stepSHA256": "00f317200eec36bc37414d856ed9fd7d11fc6b8699a56c68de7eec40fa0be3f5",
+    "stlSHA256": "27f248212aaf2d3ce957172a1188c39d866c43c3e4d063050cf55c8926de9c6f",
+    "mesh": {
+      "triangles": 2396,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p045",
+    "name": "机械轴定位板-平整版2mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      222.0004,
+      147.05031,
+      2.0
+    ],
+    "step": "独立零件/整机/host-p045 机械轴定位板-平整版2mm.step",
+    "stl": "打印STL/整机/host-p045 机械轴定位板-平整版2mm.stl",
+    "solids": 1,
+    "stepSHA256": "61f270a8f8176a63e43f7a59c4f21b6df94de92af5e8f2a6544434aca41935a7",
+    "stlSHA256": "4230b968cb9c9d27e3922a1000687da8a382f08bfe44aa2a9d4d89a97beea021",
+    "mesh": {
+      "triangles": 5072,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p044",
+    "name": "主体顶板-铝2mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      222.0004,
+      147.05031,
+      2.0
+    ],
+    "step": "独立零件/整机/host-p044 主体顶板-铝2mm.step",
+    "stl": "独立零件/整机/host-p044 主体顶板-铝2mm.stl",
+    "solids": 1,
+    "stepSHA256": "db12043949e2c1e153bbe773956f4152d7166b22963ef7d610d1867b0585ee52",
+    "stlSHA256": "b1891a72b20776a190e68daf36c684951d0671d62a884a7a3988461e355bcc38",
+    "mesh": {
+      "triangles": 26456,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p061",
+    "name": "沉头内六角螺丝-M2×16-90°-头Ø3.8",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 12,
+    "qtyOngeki": 12,
+    "sizeMM": [
+      3.8,
+      3.8,
+      16.0
+    ],
+    "step": "独立零件/整机/host-p061 沉头内六角螺丝-M2×16-90°-头Ø3.8.step",
+    "stl": "独立零件/整机/host-p061 沉头内六角螺丝-M2×16-90°-头Ø3.8.stl",
+    "solids": 1,
+    "stepSHA256": "eaafd89db53cba555a206c67960270bd83975f05431cef5b62426a619fdd1dc0",
+    "stlSHA256": "63569ea9fe8f236110f68b70266f96892d31d47bcc6a0e200050ce6914c8225f",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p070",
+    "name": "MGN7导轨-100mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      100.0,
+      7.0,
+      4.8
+    ],
+    "step": "独立零件/滑块/host-p070 MGN7导轨-100mm.step",
+    "stl": "独立零件/滑块/host-p070 MGN7导轨-100mm.stl",
+    "solids": 1,
+    "stepSHA256": "fff67ea04e173960bed0ae5052a0d4cecb84d5dd439fa3207abf170b453f871a",
+    "stlSHA256": "39d14a433154ccd9532e9eac99a807a829d53b1674dbb9ba6ed0dfdc7af55028",
+    "mesh": {
+      "triangles": 5920,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p062",
+    "name": "导轨端部限位垫脚-左-PETG",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      7.5,
+      21.0,
+      9.7
+    ],
+    "step": "独立零件/整机/host-p062 导轨端部限位垫脚-左-PETG.step",
+    "stl": "打印STL/整机/host-p062 导轨端部限位垫脚-左-PETG.stl",
+    "solids": 1,
+    "stepSHA256": "48b671d465138c20f54ae8f0091d85cb21221521b16b7de88d80b1bdc404935c",
+    "stlSHA256": "cc82924b6e6e777b22e6e522aa9a8d12c8aedf7191328261ce18bc06594b8edc",
+    "mesh": {
+      "triangles": 476,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p063",
+    "name": "导轨端部限位垫脚-右-PETG",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      7.5,
+      21.0,
+      9.7
+    ],
+    "step": "独立零件/整机/host-p063 导轨端部限位垫脚-右-PETG.step",
+    "stl": "打印STL/整机/host-p063 导轨端部限位垫脚-右-PETG.stl",
+    "solids": 1,
+    "stepSHA256": "4dd2720e22b18eb63f3c4d0f5bc5402c39f7f09bc1c48a1ae14ef68f977c28ca",
+    "stlSHA256": "ccb74cab75e5a96f414fe2530ad2d1553e73e19994caa10402b753ba53ea9da6",
+    "mesh": {
+      "triangles": 476,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p064",
+    "name": "导轨中央垫脚-5×3.4×1.5",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      5.0,
+      3.4,
+      1.5
+    ],
+    "step": "独立零件/整机/host-p064 导轨中央垫脚-5×3.4×1.5.step",
+    "stl": "打印STL/整机/host-p064 导轨中央垫脚-5×3.4×1.5.stl",
+    "solids": 1,
+    "stepSHA256": "afc0c38f7ee2a387d9c7623d616a892125b0ca214dd8f1cb7681140384e3fc7a",
+    "stlSHA256": "47b48357e2f80b74bb0a95dd86ccd17767c7e0c0011e23c9c06fa09a1f44e62b",
+    "mesh": {
+      "triangles": 436,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p071",
+    "name": "MGN7C滑块",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      22.5,
+      17.0,
+      7.0
+    ],
+    "step": "独立零件/滑块/host-p071 MGN7C滑块.step",
+    "stl": "独立零件/滑块/host-p071 MGN7C滑块.stl",
+    "solids": 1,
+    "stepSHA256": "9218808b15da08d7b1443d94fbf5b07598a910896547149c1bb4b41369177e5a",
+    "stlSHA256": "1bf4da018573324fbf7164e23c61923928f74883df73cefd188705ac84ce239c",
+    "mesh": {
+      "triangles": 1708,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p065",
+    "name": "SS49E霍尔芯片-装联包络",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 3,
+    "qtyOngeki": 3,
+    "sizeMM": [
+      3.05,
+      3.05,
+      1.5
+    ],
+    "step": "独立零件/整机/host-p065 SS49E霍尔芯片-装联包络.step",
+    "stl": "独立零件/整机/host-p065 SS49E霍尔芯片-装联包络.stl",
+    "solids": 1,
+    "stepSHA256": "709c251412062f1903d5e56567968ab8784b6eb556dee3c6f431de0fc4bc1eb7",
+    "stlSHA256": "ef5cfb57b8109f740a1d3754256d841c31ac2fa50b2084ed5f377e9c6af6b21b",
+    "mesh": {
+      "triangles": 12,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p066",
+    "name": "USB-C插座-装联包络",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      9.0,
+      8.0,
+      3.4
+    ],
+    "step": "独立零件/整机/host-p066 USB-C插座-装联包络.step",
+    "stl": "独立零件/整机/host-p066 USB-C插座-装联包络.stl",
+    "solids": 1,
+    "stepSHA256": "76953a0052af5702a3ff61a0fdea99a1f2513527abcb58fa255bf5dd21f102eb",
+    "stlSHA256": "cb9d3afe65be4dac40baccd01d5983f64ce0f778ce3f538bb65ffb3ec648fcfa",
+    "mesh": {
+      "triangles": 12,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p067",
+    "name": "MX机械轴外壳-成品包络",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 10,
+    "qtyOngeki": 10,
+    "sizeMM": [
+      15.6,
+      15.6,
+      14.9
+    ],
+    "step": "独立零件/整机/host-p067 MX机械轴外壳-成品包络.step",
+    "stl": "独立零件/整机/host-p067 MX机械轴外壳-成品包络.stl",
+    "solids": 1,
+    "stepSHA256": "3f93682918d551ee2c6d66978f161dd41f0a913a707ebb638aaa7120a5ebe7e2",
+    "stlSHA256": "94edd1a9671b376e306ae114186cc8abd055fb10064a0bb62f4ca5b1327a5ff3",
+    "mesh": {
+      "triangles": 884,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p068",
+    "name": "MX机械轴轴芯-成品包络",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 10,
+    "qtyOngeki": 10,
+    "sizeMM": [
+      3.8,
+      3.8,
+      3.6
+    ],
+    "step": "独立零件/整机/host-p068 MX机械轴轴芯-成品包络.step",
+    "stl": "独立零件/整机/host-p068 MX机械轴轴芯-成品包络.stl",
+    "solids": 1,
+    "stepSHA256": "ef49351a710d105de70f2c68152439daf4d72451bcc9ed3ef09a36f30f699769",
+    "stlSHA256": "4fa8b22fbd445fb6da88884e94c1af16cec86cc2e4322ee057a47cf02e6e531b",
+    "mesh": {
+      "triangles": 44,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p069",
+    "name": "键帽-1U-MX接口",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 10,
+    "qtyOngeki": 10,
+    "sizeMM": [
+      18.0,
+      18.0,
+      9.0
+    ],
+    "step": "独立零件/整机/host-p069 键帽-1U-MX接口.step",
+    "stl": "独立零件/整机/host-p069 键帽-1U-MX接口.stl",
+    "solids": 1,
+    "stepSHA256": "8275c92c9ecd7a652509e6fec65df9f9a5c27ca36775e469508a4c95589cbbda",
+    "stlSHA256": "744e2d744ba4df5dbe48cf84b06c5af2b87c9db82fe8b6f54371c2e46cd00d83",
+    "mesh": {
+      "triangles": 504,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "整机",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 6,
+    "qtyOngeki": 6,
+    "sizeMM": [
+      3.8,
+      3.8,
+      4.0
+    ],
+    "step": "独立零件/整机/host-p049 复合底板M2x4沉头螺丝.step",
+    "stl": "独立零件/整机/host-p049 复合底板M2x4沉头螺丝.stl",
+    "solids": 1,
+    "stepSHA256": "06984c81df025d7c827d8268f8579fcf22ee0c81f6410cf1b34144aea28c89bd",
+    "stlSHA256": "22e4bee10e820e4c77169b67fe69c7afed215a9ecb60c15bfe0a3b7058c55504",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p050",
+    "name": "旋钮承力背板-左-铝1.5mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "；左右按所在旋钮位置选一片，不同时装两片",
+    "module": "旋钮接口",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      52.0,
+      40.0,
+      1.5
+    ],
+    "step": "独立零件/旋钮接口/host-p050 旋钮承力背板-左-铝1.5mm.step",
+    "stl": "独立零件/旋钮接口/host-p050 旋钮承力背板-左-铝1.5mm.stl",
+    "solids": 1,
+    "stepSHA256": "04012fe9b2b4bb73cd859892b2090eaeeea4717b34c47330d4d6821423c824f1",
+    "stlSHA256": "4b54fe5d975433a4446df5ecb89c39c2e5df0011761eb4bd3cd28bc0d282f438",
+    "mesh": {
+      "triangles": 5224,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p051",
+    "name": "背板M2螺母",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "金属螺母直接接触背板；PETG杯仅防转和防掉",
+    "module": "旋钮接口",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 16,
+    "qtyOngeki": 16,
+    "sizeMM": [
+      4.6188,
+      4.0,
+      1.6
+    ],
+    "step": "独立零件/旋钮接口/host-p051 背板M2螺母.step",
+    "stl": "独立零件/旋钮接口/host-p051 背板M2螺母.stl",
+    "solids": 1,
+    "stepSHA256": "e91534bea77e75a1564ee68127ac3a356bb24551e5810e92e820770dbf8bbfc5",
+    "stlSHA256": "84cfc40775d3decd25dcfbd6d844f18b4b916cd03fd5a27f87230cc9bc1162d3",
+    "mesh": {
+      "triangles": 444,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p052",
+    "name": "背板防掉螺母杯-PETG-直径6x1.9mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "杯口胶接/胶带固定到背板下表面，仅定位防掉，不用胶承担旋钮载荷",
+    "module": "旋钮接口",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 16,
+    "qtyOngeki": 16,
+    "sizeMM": [
+      6.0,
+      6.0,
+      1.9
+    ],
+    "step": "独立零件/旋钮接口/host-p052 背板防掉螺母杯-PETG-直径6x1.9mm.step",
+    "stl": "打印STL/旋钮接口/host-p052 背板防掉螺母杯-PETG-直径6x1.9mm.stl",
+    "solids": 1,
+    "stepSHA256": "cc16e16b0790743a2b8e1f6748c4bd027e5f4437592af6b0a0102a54a0a74797",
+    "stlSHA256": "c1792f9537b5c7fe8a4e0485204142a4acc9ccb5a49d77047f0e38503ea73e76",
+    "mesh": {
+      "triangles": 864,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "旋钮接口",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 8,
+    "qtyOngeki": 8,
+    "sizeMM": [
+      3.8,
+      3.8,
+      6.0
+    ],
+    "step": "独立零件/旋钮接口/host-p053 背板连接主顶板M2x6沉头螺丝.step",
+    "stl": "独立零件/旋钮接口/host-p053 背板连接主顶板M2x6沉头螺丝.stl",
+    "solids": 1,
+    "stepSHA256": "e0f5ef2d4e03bec179f364c7474f1e6a64a3b53a7cb59ed15ab340c67c13f320",
+    "stlSHA256": "ecd3fc90a9c6c901177fc97e42d9da002d50cc0644a382add155ac1fd351eacb",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p054",
+    "name": "旋钮承力背板-右-铝1.5mm",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "；左右按所在旋钮位置选一片，不同时装两片",
+    "module": "旋钮接口",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      52.0,
+      40.0,
+      1.5
+    ],
+    "step": "独立零件/旋钮接口/host-p054 旋钮承力背板-右-铝1.5mm.step",
+    "stl": "独立零件/旋钮接口/host-p054 旋钮承力背板-右-铝1.5mm.stl",
+    "solids": 1,
+    "stepSHA256": "104014a8122e3c5cc911d018fe632e261dfcc41ff9f5ac525c46fd722d5a7086",
+    "stlSHA256": "847d7e17de1e0bf30b2a6058365299cd25fd75bbe74eea298eb5f3c64086356b",
+    "mesh": {
+      "triangles": 5224,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p072",
+    "name": "滑块共用快拆底座-PETG",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      26.0,
+      38.1,
+      25.6
+    ],
+    "step": "独立零件/滑块/host-p072 滑块共用快拆底座-PETG.step",
+    "stl": "打印STL/滑块/host-p072 滑块共用快拆底座-PETG.stl",
+    "solids": 1,
+    "stepSHA256": "14c34a98edc689b210bf61c24c532c261d304a91681741e9e09d891e4162aab3",
+    "stlSHA256": "3c9e1f9a2697bc4ccfff9db95fc309d93744c3c17c8299b9733d6b0c47b79c86",
+    "mesh": {
+      "triangles": 10236,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p073",
+    "name": "滑块固定螺丝-M2×4-90°沉头-核对实物头径及孔深",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 4,
+    "qtyOngeki": 4,
+    "sizeMM": [
+      3.8,
+      3.8,
+      4.0
+    ],
+    "step": "独立零件/滑块/host-p073 滑块固定螺丝-M2×4-90°沉头-核对实物头径及孔深.step",
+    "stl": "独立零件/滑块/host-p073 滑块固定螺丝-M2×4-90°沉头-核对实物头径及孔深.stl",
+    "solids": 1,
+    "stepSHA256": "6f8be374c5cc3895256fd71cc4760a2f5a080d31a2bb547d3303eaba6a67f4cf",
+    "stlSHA256": "bb5a0fcb56659bc5fa10ff5ec10bec159a6488281a32818f9fefcb19841a9fce",
+    "mesh": {
+      "triangles": 1202,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p074",
+    "name": "滑轨磁铁-10×5×3-磁化方向／极性沿用原件",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      10.0,
+      5.0,
+      3.0
+    ],
+    "step": "独立零件/滑块/host-p074 滑轨磁铁-10×5×3-磁化方向／极性沿用原件.step",
+    "stl": "独立零件/滑块/host-p074 滑轨磁铁-10×5×3-磁化方向／极性沿用原件.stl",
+    "solids": 1,
+    "stepSHA256": "358fd07e3c8e4f890b98c5b9f1f9a617fd4afa77741fd577dda16d0828614607",
+    "stlSHA256": "68f1af24bc6fa139b731aa296dbb15d1d265cafaf5f30d089edbe90e8967cbd8",
+    "mesh": {
+      "triangles": 12,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p075",
+    "name": "锁紧螺母-DIN934M3-AF5.5、厚2.4",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      6.35085,
+      2.4,
+      5.5
+    ],
+    "step": "独立零件/滑块/host-p075 锁紧螺母-DIN934M3-AF5.5、厚2.4.step",
+    "stl": "独立零件/滑块/host-p075 锁紧螺母-DIN934M3-AF5.5、厚2.4.stl",
+    "solids": 1,
+    "stepSHA256": "f9b879029a9639a09c850198724fa036e05e1716723f138b5939e0b15943c91f",
+    "stlSHA256": "2450cd0dd2874f30e5adf7c352065d563bfdc8e7003957a85b11eb41e35d79a6",
+    "mesh": {
+      "triangles": 444,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p076",
+    "name": "锁紧螺栓-DIN933M3×8-AF5.5、头高≤2.12",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      6.35085,
+      10.12,
+      5.5
+    ],
+    "step": "独立零件/滑块/host-p076 锁紧螺栓-DIN933M3×8-AF5.5、头高≤2.12.step",
+    "stl": "独立零件/滑块/host-p076 锁紧螺栓-DIN933M3×8-AF5.5、头高≤2.12.stl",
+    "solids": 1,
+    "stepSHA256": "e3269d5b237e973d8f105a7e9e07d08ebd3792656dd2e4b5a46e8ded945d4eaa",
+    "stlSHA256": "11334135fe4629beddb3971df4a1487a34b7c5873bcd6a8776908eebcb742890",
+    "mesh": {
+      "triangles": 440,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p077",
+    "name": "滑块手拧钮-PETG",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      12.0,
+      6.1,
+      12.0
+    ],
+    "step": "独立零件/滑块/host-p077 滑块手拧钮-PETG.step",
+    "stl": "打印STL/滑块/host-p077 滑块手拧钮-PETG.stl",
+    "solids": 1,
+    "stepSHA256": "d5f6b86f6ca9c95bbb18060fb0a1550aa69792188d61a16da7fcd58e4d56d022",
+    "stlSHA256": "0edb650d2b8102eda01512c0d6595ca7337c059064f4b7c4d2aebf09e5f22fb2",
+    "mesh": {
+      "triangles": 1280,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p078",
+    "name": "滑块限退框-PETG",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      26.0,
+      9.7,
+      15.0
+    ],
+    "step": "独立零件/滑块/host-p078 滑块限退框-PETG.step",
+    "stl": "打印STL/滑块/host-p078 滑块限退框-PETG.stl",
+    "solids": 1,
+    "stepSHA256": "86c6abd67226d906eaf973cae027ee783173c9e0e655072ebd8eb6cdd715d76c",
+    "stlSHA256": "8d9c803ddb14f35160047479fd260878698d0ab402e4a1485def3a821f5583f3",
+    "mesh": {
+      "triangles": 1320,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p079",
+    "name": "限退框固定螺丝-DIN912M2×8-头Ø3.8高2",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      3.8,
+      10.0,
+      3.8
+    ],
+    "step": "独立零件/滑块/host-p079 限退框固定螺丝-DIN912M2×8-头Ø3.8高2.step",
+    "stl": "独立零件/滑块/host-p079 限退框固定螺丝-DIN912M2×8-头Ø3.8高2.stl",
+    "solids": 1,
+    "stepSHA256": "2bc2e18f29f29524e3a26691b8e230473e993b0d1990f47e950fa5510e247f00",
+    "stlSHA256": "42fd3f2582a20ec7b20f034f9759bd4e10bf78cdaabd306bf8ae4afd7b006ab5",
+    "mesh": {
+      "triangles": 860,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p080",
+    "name": "限退框螺母-DIN934M2-AF4、厚1.6包络",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "",
+    "module": "滑块",
+    "printable": false,
+    "qtyKnob": 0,
+    "qtyINF": 2,
+    "qtyOngeki": 2,
+    "sizeMM": [
+      4.6188,
+      1.6,
+      4.0
+    ],
+    "step": "独立零件/滑块/host-p080 限退框螺母-DIN934M2-AF4、厚1.6包络.step",
+    "stl": "独立零件/滑块/host-p080 限退框螺母-DIN934M2-AF4、厚1.6包络.stl",
+    "solids": 1,
+    "stepSHA256": "f9c1ce3129009e93c7e8e776d163086ea42129aa1c8a114497375464b310cfd5",
+    "stlSHA256": "6e14c0e0d4e392cc92d4969c8fea931a5e2068ef7a8e40379dfae025eee87461",
+    "mesh": {
+      "triangles": 444,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p081",
+    "name": "滑块帽-INF短帽",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "；INF短帽与音击握把二选一，不同时装配",
+    "module": "滑块",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 1,
+    "qtyOngeki": 0,
+    "sizeMM": [
+      36.88393,
+      26.0,
+      21.5
+    ],
+    "step": "独立零件/滑块/host-p081 滑块帽-INF短帽.step",
+    "stl": "打印STL/滑块/host-p081 滑块帽-INF短帽.stl",
+    "solids": 1,
+    "stepSHA256": "df45e678ee221594e1060df6ad836be45ad34ce1948874060d2d4b7673be8dbf",
+    "stlSHA256": "bec81b45474aaabbc8a3d5c1764c97be052368d2b6c55b21debc356efd65ed8a",
+    "mesh": {
+      "triangles": 10414,
+      "nonmanifoldEdges": 0
+    }
+  },
+  {
+    "id": "host-p082",
+    "name": "滑块帽-音击握把",
+    "obtain": "直接复用 v6",
+    "v6Source": "沿用同名 v6 整机件，按所用滑块版本选配。",
+    "spec": "沿用 v6 整机件",
+    "note": "；INF短帽与音击握把二选一，不同时装配",
+    "module": "滑块",
+    "printable": true,
+    "qtyKnob": 0,
+    "qtyINF": 0,
+    "qtyOngeki": 1,
+    "sizeMM": [
+      32.0,
+      26.0,
+      39.5
+    ],
+    "step": "独立零件/滑块/host-p082 滑块帽-音击握把.step",
+    "stl": "打印STL/滑块/host-p082 滑块帽-音击握把.stl",
+    "solids": 1,
+    "stepSHA256": "b7472c3237c941bdfb1022cff5ade083307f928d9d7e2d8bb51f1a6c9c441840",
+    "stlSHA256": "c9cc7f8d86745a6ac139792fdd5441e68e6b1bf7c49b5b184a05154420110a85",
+    "mesh": {
+      "triangles": 1092,
+      "nonmanifoldEdges": 0
+    }
+  }
+]

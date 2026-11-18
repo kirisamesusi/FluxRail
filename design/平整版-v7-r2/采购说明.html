@@ -1,0 +1,73 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>采购说明</title><style>body{margin:0;background:#f3f5f6;color:#1a2730;font:16px/1.65 system-ui,'Microsoft YaHei',sans-serif}main{max-width:1120px;margin:auto;padding:30px}
+a{color:#086477}h1{line-height:1.18}h2{margin-top:1.6em}nav{display:flex;gap:16px;flex-wrap:wrap}
+table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #d6e0e4;padding:9px;text-align:left}th{background:#e0edf0}td{vertical-align:top}
+section{background:white;border:1px solid #d4dfe3;border-radius:14px;padding:22px;margin:20px 0}code{background:#edf2f4;padding:1px 4px}img{max-width:100%}.muted{color:#4e616c}
+@media(max-width:750px){main{padding:16px}table{font-size:13px;display:block;overflow:auto}}</style><main><nav><a href="index.html">v7 入口</a><a href="旋钮模型.html">旋钮 3D</a><a href="整机模型.html">整机 3D</a><a href="单件下载.html">单件下载</a><a href="采购说明.html">采购</a><a href="打印装配.html">打印与装配</a></nav><h1>v7 r2 采购与加工</h1>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: right;">单只／双只</th>
+<th>从 v6 升级</th>
+<th>从 r1 升级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>686-2RS</td>
+<td style="text-align: right;">1／2</td>
+<td>买 6×13×5，低或中阻尼作基础档</td>
+<td>复用</td>
+</tr>
+<tr>
+<td>MR106ZZ</td>
+<td style="text-align: right;">1／2</td>
+<td>从每只 v6 取一只 6×10×3</td>
+<td>复用</td>
+</tr>
+<tr>
+<td>白色 POM</td>
+<td style="text-align: right;">2／4</td>
+<td>买内15、外20、厚1的垫片</td>
+<td>复用垫片。每片锉两个相对缺口</td>
+</tr>
+<tr>
+<td>304 三波峰波簧</td>
+<td style="text-align: right;">1／2</td>
+<td>买内14、外21、片厚0.4</td>
+<td>复用。量自由高和弹力</td>
+</tr>
+<tr>
+<td>外部调阻尼螺丝</td>
+<td style="text-align: right;">1／2</td>
+<td>M2×6 杯头内六角，头下长6</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>磁铁杯紧定螺钉</td>
+<td style="text-align: right;">1／2</td>
+<td>M2×3 平端内六角</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>黄铜浮动摩擦盘</td>
+<td style="text-align: right;">1／2</td>
+<td>Ø20.4×1，中心 Ø12.96，双驱动槽，按 DXF 加工</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>r2 铝封盖</td>
+<td style="text-align: right;">1／2</td>
+<td>按通切和二次加工图做 38×38×2 铝盖</td>
+<td>原 r1 盖只补钻攻孔</td>
+</tr>
+<tr>
+<td>旧五金、光轴、磁铁、帽、FluxDial</td>
+<td style="text-align: right;">见 <a href="BOM.xlsx">BOM</a></td>
+<td>大部分直接复用。M2×8 杯头一颗移到上夹箍，第二颗 M2 AF4 螺母可从 v6 摩擦盘拆</td>
+<td>复用。胶接磁铁和热熔嵌件需完整取下</td>
+</tr>
+</tbody>
+</table>
+<p>自由高 2.0 mm 仍是建模假设。历史卖家表的 2.0 mm 对应 16×21×0.3，选中款 14×21×0.4 的高度要实测。量取波峰到波谷之间整片自然高度，卡尺轻触。老 v6 的 1.5 mm 摩擦盘和 M2×8 超低头调节螺丝尺寸不同。</p>
+<p>封盖钻攻坐标为局部 <strong>(+6.00, −14.90)</strong>，从顶视图确认 +X 和 +Y。用 Ø1.60 底孔配 M2×0.4 切削丝锥，钻攻层单独处理。先取下所有内部零件再加工，彻底清屑。底孔参考 <a href="https://brand.yg1.solutions/en/support/data-room.do?articleNo=13747&amp;mode=view&amp;title=Recommended+Tap+Drill+Sizes">YG-1 切削丝锥底孔表</a>。两处 POM 缺口从外缘按尺寸图锉入，保持摩擦面平整。黄铜盘两面去毛刺，留意双驱动槽滑配。可用 <a href="旋钮/加工图/r2尺寸图.svg">加工尺寸图</a> 核对朝向。</p></main>

@@ -1,0 +1,62 @@
+{
+  "matched": [
+    "K1_C_pcb",
+    "K1_C_sensor",
+    "K1_C_fpc",
+    "K1_C_magnet",
+    "K1_C_shaft",
+    "K1_C_cap",
+    "K1_S_service_0",
+    "K1_S_service_1",
+    "K1_S_service_2",
+    "K1_S_service_3",
+    "K2_C_pcb",
+    "K2_C_sensor",
+    "K2_C_fpc",
+    "K2_C_magnet",
+    "K2_C_shaft",
+    "K2_C_cap",
+    "K2_S_service_0",
+    "K2_S_service_1",
+    "K2_S_service_2",
+    "K2_S_service_3"
+  ],
+  "lifts": [
+    {
+      "liftMM": 0,
+      "collisions": []
+    },
+    {
+      "liftMM": 1,
+      "collisions": []
+    },
+    {
+      "liftMM": 3,
+      "collisions": []
+    },
+    {
+      "liftMM": 5,
+      "collisions": []
+    },
+    {
+      "liftMM": 10,
+      "collisions": []
+    },
+    {
+      "liftMM": 16,
+      "collisions": []
+    },
+    {
+      "liftMM": 20,
+      "collisions": []
+    },
+    {
+      "liftMM": 35,
+      "collisions": []
+    },
+    {
+      "liftMM": 55,
+      "collisions": []
+    }
+  ]
+}

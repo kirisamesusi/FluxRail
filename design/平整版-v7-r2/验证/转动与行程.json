@@ -1,0 +1,1994 @@
+[
+  {
+    "angle": 0,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 0,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 0,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 45,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 45,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 45,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 90,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 90,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 90,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 135,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 135,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 135,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 180,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 180,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 180,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 225,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 225,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 225,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 270,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 270,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 270,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 315,
+    "travel": 0,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 315,
+    "travel": 0.3,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  },
+  {
+    "angle": 315,
+    "travel": 0.6,
+    "unintendedIntersections": [],
+    "plannedThreadsOrInserts": [
+      {
+        "a": "P_case",
+        "b": "S_keeper_-1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "S_keeper_1",
+        "volumeMM3": 5.542955
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_0",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_1",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_2",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "P_case",
+        "b": "I_case_3",
+        "volumeMM3": 2.921681
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "N_hanger_0",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_0",
+        "b": "S_lid_0",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "N_hanger_1",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_1",
+        "b": "S_lid_1",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "N_hanger_2",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_2",
+        "b": "S_lid_2",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "N_hanger_3",
+        "volumeMM3": 3.053628
+      },
+      {
+        "a": "T_hanger_3",
+        "b": "S_lid_3",
+        "volumeMM3": 2.261947
+      },
+      {
+        "a": "A_lid",
+        "b": "S_brake_adjust",
+        "volumeMM3": 2.261947
+      }
+    ],
+    "invalid": []
+  }
+]

@@ -1,0 +1,1297 @@
+[
+  {
+    "path": "BOM.csv",
+    "bytes": 13217,
+    "sha256": "752742f00a949c61b4b686f854fc110b291f7d5c13e7c0d7789c307484b818ae"
+  },
+  {
+    "path": "BOM.xlsx",
+    "bytes": 11273,
+    "sha256": "932cad4fd7ce68866206e512aca38befebda95553e3de8367d20aee3777aa8d8"
+  },
+  {
+    "path": "index.html",
+    "bytes": 2904,
+    "sha256": "fd2b5b0772d54ebcec4e697c7cb2b901d47d2c9241de41d73d1dbaf888568b57"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1069,
+    "sha256": "d21a162cf816abbacdb4aa2350af38283d3ae3032a613e81e72ec9826e6f5207"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1835,
+    "sha256": "6be252c18ea835ab552cd1a2c47cd7c5b1ac4c1ac41a40af7bd07db5b205c3b1"
+  },
+  {
+    "path": "单件下载.html",
+    "bytes": 38251,
+    "sha256": "635bc1abafbec79d369789d4233c502915cc3864c2e09857e3e996b5c498195e"
+  },
+  {
+    "path": "单件保存.js",
+    "bytes": 1565,
+    "sha256": "60d7659b8c43cc8fae97347068c458720782f3c32704ad4b6738dab0a44511df"
+  },
+  {
+    "path": "参数.json",
+    "bytes": 3001,
+    "sha256": "8b2a58c4aa9e62d9fa3a1f55cb114d56e35c4e5d88c0c8ba4a2093876741df9d"
+  },
+  {
+    "path": "打印STL/整机/host-p045 机械轴定位板-平整版2mm.stl",
+    "bytes": 253684,
+    "sha256": "4230b968cb9c9d27e3922a1000687da8a382f08bfe44aa2a9d4d89a97beea021"
+  },
+  {
+    "path": "打印STL/整机/host-p062 导轨端部限位垫脚-左-PETG.stl",
+    "bytes": 23884,
+    "sha256": "cc82924b6e6e777b22e6e522aa9a8d12c8aedf7191328261ce18bc06594b8edc"
+  },
+  {
+    "path": "打印STL/整机/host-p063 导轨端部限位垫脚-右-PETG.stl",
+    "bytes": 23884,
+    "sha256": "ccb74cab75e5a96f414fe2530ad2d1553e73e19994caa10402b753ba53ea9da6"
+  },
+  {
+    "path": "打印STL/整机/host-p064 导轨中央垫脚-5×3.4×1.5.stl",
+    "bytes": 21884,
+    "sha256": "47b48357e2f80b74bb0a95dd86ccd17767c7e0c0011e23c9c06fa09a1f44e62b"
+  },
+  {
+    "path": "打印STL/旋钮/brake-yoke 导向压环.stl",
+    "bytes": 51684,
+    "sha256": "f974c531b421834efa30436c19ff9f106924a939c5be3b10f0be9135e5bb0bd8"
+  },
+  {
+    "path": "打印STL/旋钮/carrier-l 固定座 左半.stl",
+    "bytes": 135284,
+    "sha256": "d543df1ad399b7bf169832a542714589d2f855cb90e2913a8e48ad18f20fdb53"
+  },
+  {
+    "path": "打印STL/旋钮/carrier-r 固定座 右半.stl",
+    "bytes": 135284,
+    "sha256": "8d5187477a4019fd2430b402ae8053dc6400f09fc5e814e21e416e0a553cbd8d"
+  },
+  {
+    "path": "打印STL/旋钮/cup 固定上轴承杯.stl",
+    "bytes": 107784,
+    "sha256": "fa9c025b6f7a154e719541f76733d880589a9b47291625942745cdc54071a3ef"
+  },
+  {
+    "path": "打印STL/旋钮/hub 磁铁杯与浮动盘驱动键.stl",
+    "bytes": 179384,
+    "sha256": "22edded85a67651d0d14f7999b5c5c3f9b85a6a1399988e631febbc7a91dd56f"
+  },
+  {
+    "path": "打印STL/旋钮/keeper 退板挡条.stl",
+    "bytes": 119384,
+    "sha256": "f484e89e9251c32b597ec630335ad959470250995b2b52e4102dcf457f866556"
+  },
+  {
+    "path": "打印STL/旋钮/pom-saddle 上 POM 防转托环.stl",
+    "bytes": 44284,
+    "sha256": "6d431595ac82f6e72378657a0ad100a024f0489cf0381442d09163f3ca760859"
+  },
+  {
+    "path": "打印STL/旋钮/top-clamp 一体肩上夹箍.stl",
+    "bytes": 120884,
+    "sha256": "224cfc57482f89ea1ea025b4aec0f922efda42ae8398e171ff6ecb99d242261f"
+  },
+  {
+    "path": "打印STL/旋钮/tray 底壳与 POM 制动座.stl",
+    "bytes": 522584,
+    "sha256": "b11528d68405e599d720cac57bd3f39ddeaf7a466df63ab4f389377e856b5247"
+  },
+  {
+    "path": "打印STL/旋钮接口/host-p052 背板防掉螺母杯-PETG-直径6x1.9mm.stl",
+    "bytes": 43284,
+    "sha256": "c1792f9537b5c7fe8a4e0485204142a4acc9ccb5a49d77047f0e38503ea73e76"
+  },
+  {
+    "path": "打印STL/滑块/host-p072 滑块共用快拆底座-PETG.stl",
+    "bytes": 511884,
+    "sha256": "3c9e1f9a2697bc4ccfff9db95fc309d93744c3c17c8299b9733d6b0c47b79c86"
+  },
+  {
+    "path": "打印STL/滑块/host-p077 滑块手拧钮-PETG.stl",
+    "bytes": 64084,
+    "sha256": "0edb650d2b8102eda01512c0d6595ca7337c059064f4b7c4d2aebf09e5f22fb2"
+  },
+  {
+    "path": "打印STL/滑块/host-p078 滑块限退框-PETG.stl",
+    "bytes": 66084,
+    "sha256": "8d9c803ddb14f35160047479fd260878698d0ab402e4a1485def3a821f5583f3"
+  },
+  {
+    "path": "打印STL/滑块/host-p081 滑块帽-INF短帽.stl",
+    "bytes": 520784,
+    "sha256": "bec81b45474aaabbc8a3d5c1764c97be052368d2b6c55b21debc356efd65ed8a"
+  },
+  {
+    "path": "打印STL/滑块/host-p082 滑块帽-音击握把.stl",
+    "bytes": 54684,
+    "sha256": "c9cc7f8d86745a6ac139792fdd5441e68e6b1bf7c49b5b184a05154420110a85"
+  },
+  {
+    "path": "打印清单.csv",
+    "bytes": 2603,
+    "sha256": "0978a10db832d5f88e576f982d413381b97fd771bcbb3ab39422496b9f139962"
+  },
+  {
+    "path": "打印装配.html",
+    "bytes": 3984,
+    "sha256": "d22bf0a9eaf140df70d5d8997707344a38c8e2e4eff0e9420c990dde29a21e95"
+  },
+  {
+    "path": "打印装配.md",
+    "bytes": 2793,
+    "sha256": "78162b3f579e3acb9c9bc754a01bb788e9d7ab092c4c05f751e76f1a886d28bf"
+  },
+  {
+    "path": "整机/复用加工图/A_acrylic_1.dxf",
+    "bytes": 24486,
+    "sha256": "0afa22c13299cd5eab40b048c28214ff0b565d8486dd999dee2bfa6a865a81df"
+  },
+  {
+    "path": "整机/复用加工图/A_acrylic_2.dxf",
+    "bytes": 20546,
+    "sha256": "17da34de7f5c2be56c76871898fbbce72dc2e702b068f0063c55e2cb1ea8e29a"
+  },
+  {
+    "path": "整机/复用加工图/A_base_lower.dxf",
+    "bytes": 23926,
+    "sha256": "37f2e41dcb56a8120a4c49895a14a03740a9c1f3e8575d7911c5777f9e4ba62e"
+  },
+  {
+    "path": "整机/复用加工图/A_base_upper.dxf",
+    "bytes": 27091,
+    "sha256": "e187fa844bfeb0b9431f4a34a961ecc937ca5cd0faf30719e80bb4178cd7a960"
+  },
+  {
+    "path": "整机/复用加工图/A_foam.dxf",
+    "bytes": 36268,
+    "sha256": "4018c0db5ef367e35ce354ef209f96d9d3574bf302b92d6d9acceea33f7fb396"
+  },
+  {
+    "path": "整机/复用加工图/A_locator_TOP_PROFILE_NOT_FULL_3D.dxf",
+    "bytes": 34438,
+    "sha256": "e08fdd498a009aad45dae0e10a5b1df764914820080bb58e5a28933fc09d2c9b"
+  },
+  {
+    "path": "整机/复用加工图/A_top.dxf",
+    "bytes": 34165,
+    "sha256": "cf4510d68d18fc92f4c8e5d5a4015b4e6f05e7f42c90f4c744fef45c31fd4a95"
+  },
+  {
+    "path": "整机/复用加工图/叠层固定孔.csv",
+    "bytes": 665,
+    "sha256": "7280d9e8deb5058511e144eda187e21fec48dd60322e56a190bca684776be657"
+  },
+  {
+    "path": "整机/复用加工图/右旋钮承力背板_1.5mm.dxf",
+    "bytes": 23572,
+    "sha256": "e3373407c25dba433f70e7505337e12c26bc784742b7d946e0de87a63f3358e4"
+  },
+  {
+    "path": "整机/复用加工图/左旋钮承力背板_1.5mm.dxf",
+    "bytes": 23369,
+    "sha256": "a43e4c1647ffab8e4851a31f161764afcbe9689eb92090456c184de04b250753"
+  },
+  {
+    "path": "整机/整机-INF-爆炸.step",
+    "bytes": 17186744,
+    "sha256": "911272e606bc0b643c933fa88c4f4a060ad2d52ecd1867695d218b9cd28c6cea"
+  },
+  {
+    "path": "整机/整机-INF.step",
+    "bytes": 17309166,
+    "sha256": "c86eb2f1bfeefaf4019db3bed55324d91acd54773784df89cb9d52c546bd7f04"
+  },
+  {
+    "path": "整机/整机-音击-爆炸.step",
+    "bytes": 17226039,
+    "sha256": "526da81780bd89a9f8699bc3377afd3c966630c3c939df49c4508d6954e29e9a"
+  },
+  {
+    "path": "整机/整机-音击.step",
+    "bytes": 17348164,
+    "sha256": "b54957a7b9dea521943b26845ae5f9e8650c24d44fd9fad512869605a7b709fe"
+  },
+  {
+    "path": "整机实例映射.json",
+    "bytes": 35632,
+    "sha256": "dec8680450e62918cb6d81c2eaf669258c8d3e405e3832683ae1b9150d2daf27"
+  },
+  {
+    "path": "整机模型.html",
+    "bytes": 13514945,
+    "sha256": "b5a49c1ec390a374d239ff3ce699890b39b7a969a6e9adc8984256daddc33b40"
+  },
+  {
+    "path": "旋钮/加工图/r2-POM缺口.dxf",
+    "bytes": 19910,
+    "sha256": "f9e996eb3d4b1bad553aeed50e4a82cf65f6d0c406a3569302f20d3193592ee4"
+  },
+  {
+    "path": "旋钮/加工图/r2封盖-01-通切.dxf",
+    "bytes": 20733,
+    "sha256": "38adb6715febd4a963ca45e911221c1d45652f1c99502eb9ec3b0befcfe9e406"
+  },
+  {
+    "path": "旋钮/加工图/r2封盖-02-二次加工.dxf",
+    "bytes": 20703,
+    "sha256": "f2c32eb94d902d8609b7d5ae9a91c94e7e7ceb8f837a302044a76aacaf6157c8"
+  },
+  {
+    "path": "旋钮/加工图/r2封盖孔表.csv",
+    "bytes": 1299,
+    "sha256": "089fd4000d77bf4f69f47ab8d4eb4b0e7df4248d3428d82ae37b6fd5301e6e81"
+  },
+  {
+    "path": "旋钮/加工图/r2尺寸图.svg",
+    "bytes": 4030,
+    "sha256": "7bf52d6c2dc630e4992dabff3d2848107c6c617fb1a7b0e23fdddf0a2551b6fa"
+  },
+  {
+    "path": "旋钮/加工图/r2黄铜摩擦盘.dxf",
+    "bytes": 19828,
+    "sha256": "242fc2efd1c71a396ea90456c4a84b37f72dfe04e6f47ca346237fe27d360515"
+  },
+  {
+    "path": "旋钮/旋钮总成.step",
+    "bytes": 3622809,
+    "sha256": "57f2527b02c3c30d441c5eb2c4f4b804463e8b152d68602c36dbb3a68c864b50"
+  },
+  {
+    "path": "旋钮/旋钮爆炸.step",
+    "bytes": 3532847,
+    "sha256": "4135c9c1bb79ea4bb379fbb39f8ef08803fcc9e2a5e25dbda747a4c2811a7fdd"
+  },
+  {
+    "path": "旋钮模型.html",
+    "bytes": 4065725,
+    "sha256": "e172fd12e6690c43ba188d41f6ad03cd7aacfd412e1489adb0d1f68becc3c539"
+  },
+  {
+    "path": "独立零件/整机/host-p042 复合底板-下层2mm.step",
+    "bytes": 216552,
+    "sha256": "ccf2b8f2387ada460ef14f5850f3236bc4bb792830606e949b4c0c30006121a4"
+  },
+  {
+    "path": "独立零件/整机/host-p042 复合底板-下层2mm.stl",
+    "bytes": 1307434,
+    "sha256": "667d9c574d73a90fe24b564bfb3bc7ea9d9727f56e1fbac5698853540013213a"
+  },
+  {
+    "path": "独立零件/整机/host-p043 复合底板-上层3mm避让层.step",
+    "bytes": 232739,
+    "sha256": "cedef4534c89f04586b2e31c4cb1674dc96e809e8343da20dd5669f98e70598d"
+  },
+  {
+    "path": "独立零件/整机/host-p043 复合底板-上层3mm避让层.stl",
+    "bytes": 610284,
+    "sha256": "e4b992a544d8fe857929f833464ced61d48e50daaa7ef0b0df196f8dc52de744"
+  },
+  {
+    "path": "独立零件/整机/host-p044 主体顶板-铝2mm.step",
+    "bytes": 480751,
+    "sha256": "db12043949e2c1e153bbe773956f4152d7166b22963ef7d610d1867b0585ee52"
+  },
+  {
+    "path": "独立零件/整机/host-p044 主体顶板-铝2mm.stl",
+    "bytes": 1322884,
+    "sha256": "b1891a72b20776a190e68daf36c684951d0671d62a884a7a3988461e355bcc38"
+  },
+  {
+    "path": "独立零件/整机/host-p045 机械轴定位板-平整版2mm.step",
+    "bytes": 474121,
+    "sha256": "61f270a8f8176a63e43f7a59c4f21b6df94de92af5e8f2a6544434aca41935a7"
+  },
+  {
+    "path": "独立零件/整机/host-p046 吸音棉-平整版3.5mm.step",
+    "bytes": 400656,
+    "sha256": "00f317200eec36bc37414d856ed9fd7d11fc6b8699a56c68de7eec40fa0be3f5"
+  },
+  {
+    "path": "独立零件/整机/host-p046 吸音棉-平整版3.5mm.stl",
+    "bytes": 119884,
+    "sha256": "27f248212aaf2d3ce957172a1188c39d866c43c3e4d063050cf55c8926de9c6f"
+  },
+  {
+    "path": "独立零件/整机/host-p047 机身亚克力主框-平整版.step",
+    "bytes": 314901,
+    "sha256": "2a0f214c6872d8496186974f6457cd1f33902d01ddf2a2524c9e4223148a70ce"
+  },
+  {
+    "path": "独立零件/整机/host-p047 机身亚克力主框-平整版.stl",
+    "bytes": 309884,
+    "sha256": "cbc77d87d85cce7541b0efca47dbe60c5a7992768296f66945ff53a4a0134af5"
+  },
+  {
+    "path": "独立零件/整机/host-p048 机身亚克力后中段-平整版.step",
+    "bytes": 96284,
+    "sha256": "8bca229adfdd84b169c4ef788cfd310e08275c6cc791f0259ce2459e23e381d0"
+  },
+  {
+    "path": "独立零件/整机/host-p048 机身亚克力后中段-平整版.stl",
+    "bytes": 48284,
+    "sha256": "0a6b06f5702519c5e9e2f9c0c5a734b49dd284d69d6c98e97a1057e4c5200755"
+  },
+  {
+    "path": "独立零件/整机/host-p049 复合底板M2x4沉头螺丝.step",
+    "bytes": 52728,
+    "sha256": "06984c81df025d7c827d8268f8579fcf22ee0c81f6410cf1b34144aea28c89bd"
+  },
+  {
+    "path": "独立零件/整机/host-p049 复合底板M2x4沉头螺丝.stl",
+    "bytes": 60184,
+    "sha256": "22e4bee10e820e4c77169b67fe69c7afed215a9ecb60c15bfe0a3b7058c55504"
+  },
+  {
+    "path": "独立零件/整机/host-p055 主体PCB板框-装联包络.step",
+    "bytes": 98620,
+    "sha256": "e23fa13e714f97d8362a24e151150cf64fab725985933bd839700b2c6eb52db2"
+  },
+  {
+    "path": "独立零件/整机/host-p055 主体PCB板框-装联包络.stl",
+    "bytes": 361884,
+    "sha256": "9cd1b1696288234be8eb787228b3dde99b4e0e6fc56f3ddedf1e8ee67a38a865"
+  },
+  {
+    "path": "独立零件/整机/host-p056 公母铜柱-M2×5+3-对边3-母孔有效深度≥3.step",
+    "bytes": 31806,
+    "sha256": "764babc6f3cee29098d05141041a045c7e24eda494e09f3fa070efea2da99d4d"
+  },
+  {
+    "path": "独立零件/整机/host-p056 公母铜柱-M2×5+3-对边3-母孔有效深度≥3.stl",
+    "bytes": 43084,
+    "sha256": "80996795fbb74d4db1059701b7e06de4d893e5396d7b50e3f84fa9b59d40f0ff"
+  },
+  {
+    "path": "独立零件/整机/host-p057 圆柱头内六角螺丝-M2×4-头Ø3.8-高2.step",
+    "bytes": 31183,
+    "sha256": "a1dd6a5075906b633fec07aca1c21f841f912c2d8463aea9b07373be9fa899eb"
+  },
+  {
+    "path": "独立零件/整机/host-p057 圆柱头内六角螺丝-M2×4-头Ø3.8-高2.stl",
+    "bytes": 43084,
+    "sha256": "1ee3cbf72a1451e5ba550e31a1af8fb3277d34bda01bc20c930054a7459e2c02"
+  },
+  {
+    "path": "独立零件/整机/host-p058 双通铜柱-M2-柱身长5-对边3-贯通内螺纹.step",
+    "bytes": 27531,
+    "sha256": "824f5ebdd4735a2e0bd441334090b96dcbe16d3f23f1a25167302706a28df111"
+  },
+  {
+    "path": "独立零件/整机/host-p058 双通铜柱-M2-柱身长5-对边3-贯通内螺纹.stl",
+    "bytes": 22284,
+    "sha256": "0b92a236c77232343c4964459def542b105a6e2faafb7abed8e0db83f42e20dd"
+  },
+  {
+    "path": "独立零件/整机/host-p059 连接螺柱-M2×6-无头.step",
+    "bytes": 5663,
+    "sha256": "29b654e543910c12dd451548f517d7e596579633467be98d90f668416e244b0a"
+  },
+  {
+    "path": "独立零件/整机/host-p059 连接螺柱-M2×6-无头.stl",
+    "bytes": 20884,
+    "sha256": "6c576e79372530385a50bb819b7e8ebff9876a56e1d67c939d22b1800424a1bd"
+  },
+  {
+    "path": "独立零件/整机/host-p060 圆柱头内六角螺丝-M2×6-头Ø3.8-高2.step",
+    "bytes": 31182,
+    "sha256": "5ff800cc2745191efa0ec913e6197da1d93d2139a18c4ef60689b114073d8f42"
+  },
+  {
+    "path": "独立零件/整机/host-p060 圆柱头内六角螺丝-M2×6-头Ø3.8-高2.stl",
+    "bytes": 43084,
+    "sha256": "21f5616914899deb78b6156ab0042a441aa7efae93c25a44b571d8f2dd8582bf"
+  },
+  {
+    "path": "独立零件/整机/host-p061 沉头内六角螺丝-M2×16-90°-头Ø3.8.step",
+    "bytes": 51379,
+    "sha256": "eaafd89db53cba555a206c67960270bd83975f05431cef5b62426a619fdd1dc0"
+  },
+  {
+    "path": "独立零件/整机/host-p061 沉头内六角螺丝-M2×16-90°-头Ø3.8.stl",
+    "bytes": 60184,
+    "sha256": "63569ea9fe8f236110f68b70266f96892d31d47bcc6a0e200050ce6914c8225f"
+  },
+  {
+    "path": "独立零件/整机/host-p062 导轨端部限位垫脚-左-PETG.step",
+    "bytes": 51630,
+    "sha256": "48b671d465138c20f54ae8f0091d85cb21221521b16b7de88d80b1bdc404935c"
+  },
+  {
+    "path": "独立零件/整机/host-p063 导轨端部限位垫脚-右-PETG.step",
+    "bytes": 51505,
+    "sha256": "4dd2720e22b18eb63f3c4d0f5bc5402c39f7f09bc1c48a1ae14ef68f977c28ca"
+  },
+  {
+    "path": "独立零件/整机/host-p064 导轨中央垫脚-5×3.4×1.5.step",
+    "bytes": 20131,
+    "sha256": "afc0c38f7ee2a387d9c7623d616a892125b0ca214dd8f1cb7681140384e3fc7a"
+  },
+  {
+    "path": "独立零件/整机/host-p065 SS49E霍尔芯片-装联包络.step",
+    "bytes": 15430,
+    "sha256": "709c251412062f1903d5e56567968ab8784b6eb556dee3c6f431de0fc4bc1eb7"
+  },
+  {
+    "path": "独立零件/整机/host-p065 SS49E霍尔芯片-装联包络.stl",
+    "bytes": 684,
+    "sha256": "ef5cfb57b8109f740a1d3754256d841c31ac2fa50b2084ed5f377e9c6af6b21b"
+  },
+  {
+    "path": "独立零件/整机/host-p066 USB-C插座-装联包络.step",
+    "bytes": 15378,
+    "sha256": "76953a0052af5702a3ff61a0fdea99a1f2513527abcb58fa255bf5dd21f102eb"
+  },
+  {
+    "path": "独立零件/整机/host-p066 USB-C插座-装联包络.stl",
+    "bytes": 684,
+    "sha256": "cb9d3afe65be4dac40baccd01d5983f64ce0f778ce3f538bb65ffb3ec648fcfa"
+  },
+  {
+    "path": "独立零件/整机/host-p067 MX机械轴外壳-成品包络.step",
+    "bytes": 51517,
+    "sha256": "3f93682918d551ee2c6d66978f161dd41f0a913a707ebb638aaa7120a5ebe7e2"
+  },
+  {
+    "path": "独立零件/整机/host-p067 MX机械轴外壳-成品包络.stl",
+    "bytes": 44284,
+    "sha256": "94edd1a9671b376e306ae114186cc8abd055fb10064a0bb62f4ca5b1327a5ff3"
+  },
+  {
+    "path": "独立零件/整机/host-p068 MX机械轴轴芯-成品包络.step",
+    "bytes": 42075,
+    "sha256": "ef49351a710d105de70f2c68152439daf4d72451bcc9ed3ef09a36f30f699769"
+  },
+  {
+    "path": "独立零件/整机/host-p068 MX机械轴轴芯-成品包络.stl",
+    "bytes": 2284,
+    "sha256": "4fa8b22fbd445fb6da88884e94c1af16cec86cc2e4322ee057a47cf02e6e531b"
+  },
+  {
+    "path": "独立零件/整机/host-p069 键帽-1U-MX接口.step",
+    "bytes": 80965,
+    "sha256": "8275c92c9ecd7a652509e6fec65df9f9a5c27ca36775e469508a4c95589cbbda"
+  },
+  {
+    "path": "独立零件/整机/host-p069 键帽-1U-MX接口.stl",
+    "bytes": 25284,
+    "sha256": "744e2d744ba4df5dbe48cf84b06c5af2b87c9db82fe8b6f54371c2e46cd00d83"
+  },
+  {
+    "path": "独立零件/旋钮/bearing-686 上轴承 686-2RS.step",
+    "bytes": 29734,
+    "sha256": "b1f011c179c0554682502f05f713575c56178761d22548b8ff2f7d41af49da14"
+  },
+  {
+    "path": "独立零件/旋钮/bearing-686 上轴承 686-2RS.stl",
+    "bytes": 126084,
+    "sha256": "8fd717bfb8642c0cf97f3c3130a776602cd10961e8acec04eee3f82ac77b856a"
+  },
+  {
+    "path": "独立零件/旋钮/bearing-mr 下轴承 MR106ZZ.step",
+    "bytes": 29605,
+    "sha256": "4afe23ef0ab7b3525c826102a99debf208ae25dc2aac5d8116d639f7140fa5bb"
+  },
+  {
+    "path": "独立零件/旋钮/bearing-mr 下轴承 MR106ZZ.stl",
+    "bytes": 126084,
+    "sha256": "de424d431c61bddc02d2433e7f8cf0c75e4b3b1368f5c34d6128f4de650e125e"
+  },
+  {
+    "path": "独立零件/旋钮/brake-adjust 外部调阻尼螺丝.step",
+    "bytes": 31175,
+    "sha256": "386e49d224ef9e0518f440bd765050c604e505ee031f4722411d3d200e07172e"
+  },
+  {
+    "path": "独立零件/旋钮/brake-adjust 外部调阻尼螺丝.stl",
+    "bytes": 43084,
+    "sha256": "70d285d62a0a1717a71505e515594dc5c6e6f2e05ed6a25d66a519062f91d61f"
+  },
+  {
+    "path": "独立零件/旋钮/brake-disc 黄铜浮动摩擦盘.step",
+    "bytes": 33368,
+    "sha256": "fa61457a4768a69e48746257b81814da16b5df7047aefa88e8692623d4dbb8fc"
+  },
+  {
+    "path": "独立零件/旋钮/brake-disc 黄铜浮动摩擦盘.stl",
+    "bytes": 41484,
+    "sha256": "d6240d2000ffaf726191e160ab23c8ad399f87e96e30d0359f7989193dad4c29"
+  },
+  {
+    "path": "独立零件/旋钮/brake-yoke 导向压环.step",
+    "bytes": 165361,
+    "sha256": "ae4ffbbb02f15ab7d7756c3e01d3383c9be6a6906f62220631f39721677628be"
+  },
+  {
+    "path": "独立零件/旋钮/cap 成品旋钮帽.step",
+    "bytes": 47652,
+    "sha256": "fb191d949a041a3aaed0987a28eeb4467a8a63f93d4637f842e6638964702f83"
+  },
+  {
+    "path": "独立零件/旋钮/cap 成品旋钮帽.stl",
+    "bytes": 87484,
+    "sha256": "0516436afb5e986dac50048f36fa13699ee4660efd45886f4200ad0ce88e8ecb"
+  },
+  {
+    "path": "独立零件/旋钮/cap-set 帽随附顶丝.step",
+    "bytes": 5757,
+    "sha256": "5c5f048d41135728bcc0a00b0d59d0ae564739e9f0f8dbb8f4c15b09afef85e7"
+  },
+  {
+    "path": "独立零件/旋钮/cap-set 帽随附顶丝.stl",
+    "bytes": 20884,
+    "sha256": "f9c8d9355680921b982c09eba86120f5a79583b7d6957383077dcc141501690f"
+  },
+  {
+    "path": "独立零件/旋钮/capacitor 电容包络.step",
+    "bytes": 15404,
+    "sha256": "421cd6b5889d0c080a66fa0692b4f01d578202dac9f4b9d783dbf77712798585"
+  },
+  {
+    "path": "独立零件/旋钮/capacitor 电容包络.stl",
+    "bytes": 684,
+    "sha256": "7c4cd62f7fd7735c8c0583a3ee427c8a5a17b89f2000f0a0a6e64df48477e160"
+  },
+  {
+    "path": "独立零件/旋钮/carrier-l 固定座 左半.step",
+    "bytes": 134841,
+    "sha256": "7510d7d556a9669ba83f032240311e5958875fef6b8028c713d505711efbd951"
+  },
+  {
+    "path": "独立零件/旋钮/carrier-r 固定座 右半.step",
+    "bytes": 135955,
+    "sha256": "c26f4d599b4116e7e8691fb11a38db544a50e093e5f1d7f01241790ff78205c5"
+  },
+  {
+    "path": "独立零件/旋钮/case-insert 底壳热熔嵌件.step",
+    "bytes": 9260,
+    "sha256": "70ee59f9eb3352df87867ad6c43e0acc31cca5a1c20f884260952319f1c9af6f"
+  },
+  {
+    "path": "独立零件/旋钮/case-insert 底壳热熔嵌件.stl",
+    "bytes": 42084,
+    "sha256": "6c92a20b63527f7a24ce871a4a26fa0067da3032147ea267b719d5f3d01a3f11"
+  },
+  {
+    "path": "独立零件/旋钮/case-m2 底壳沉头 M2×6.step",
+    "bytes": 51260,
+    "sha256": "ea7de1117b198ed4b6af96f36aabfa23f68089987d445f4ab23748782b1f4a9e"
+  },
+  {
+    "path": "独立零件/旋钮/case-m2 底壳沉头 M2×6.stl",
+    "bytes": 60184,
+    "sha256": "256ca09a07b462d94e01c974a336c03a42582aab5d0b6ca61162c6c086b90570"
+  },
+  {
+    "path": "独立零件/旋钮/clamp-m2 夹轴杯头 M2×8.step",
+    "bytes": 31842,
+    "sha256": "4cf28d9abc455ca1293823d005e08b5d9502009acc872cf504be5d272045f2e8"
+  },
+  {
+    "path": "独立零件/旋钮/clamp-m2 夹轴杯头 M2×8.stl",
+    "bytes": 43084,
+    "sha256": "8ed9b0f1f43f0c7ab073af2242a03b58723a4c6a1cd6c2ac72706b13d677f8a2"
+  },
+  {
+    "path": "独立零件/旋钮/clamp-nut 夹轴六角螺母 M2.step",
+    "bytes": 29013,
+    "sha256": "40ec34f3039de4cc90adcb153c8b0c781d2b687d304cc0b13c76d6ed995775c1"
+  },
+  {
+    "path": "独立零件/旋钮/clamp-nut 夹轴六角螺母 M2.stl",
+    "bytes": 22284,
+    "sha256": "24f82f89274509368ace7f88f7de7c892b032eac0b5325c615ea0db7ec5df6ae"
+  },
+  {
+    "path": "独立零件/旋钮/cup 固定上轴承杯.step",
+    "bytes": 67238,
+    "sha256": "83b3dd3d6e7d7459b23b68a97c86b7d48bad1bf2d76a913144123bdd437993b6"
+  },
+  {
+    "path": "独立零件/旋钮/fluxdial FluxDial 小板.step",
+    "bytes": 54621,
+    "sha256": "056a1bbf6b7c4957a5988bf1a5f3c0e22fb31117192dc917f9cd175397d6b15d"
+  },
+  {
+    "path": "独立零件/旋钮/fluxdial FluxDial 小板.stl",
+    "bytes": 86684,
+    "sha256": "f60aa38db0995797f3e62a3b653ded08b6ad0380539b096a37e36fedda7a6e26"
+  },
+  {
+    "path": "独立零件/旋钮/fpc 排线座包络.step",
+    "bytes": 15430,
+    "sha256": "e4138e4ab4e392d6765dd22adc5556a54ecbdd01ef8f8669fa999ff845d158f0"
+  },
+  {
+    "path": "独立零件/旋钮/fpc 排线座包络.stl",
+    "bytes": 684,
+    "sha256": "117b4e78b47b608ff30e56a3afa5964553702a18d2234730a1471e518bea3d79"
+  },
+  {
+    "path": "独立零件/旋钮/hanger 双通圆铜柱.step",
+    "bytes": 9251,
+    "sha256": "a6b262861c829137e34248a8a75fe46679ded5b3bd019215ca76a3ecb5bb6c0f"
+  },
+  {
+    "path": "独立零件/旋钮/hanger 双通圆铜柱.stl",
+    "bytes": 42084,
+    "sha256": "dcd6dcf3c8026b8bb7e92070fa09c92a709fc9747627ae5a4b914f4a25e415b4"
+  },
+  {
+    "path": "独立零件/旋钮/hanger-bottom 铜柱下端杯头 M2×3.step",
+    "bytes": 32107,
+    "sha256": "cc3fdbe86690857161ce5bc0e3e056c316f484491e124eafc7409b80f25e6a67"
+  },
+  {
+    "path": "独立零件/旋钮/hanger-bottom 铜柱下端杯头 M2×3.stl",
+    "bytes": 43084,
+    "sha256": "18330ebfee6c859ea5d29a39bdc12e0c4b0e236a762737e98b2c61b63d64dab0"
+  },
+  {
+    "path": "独立零件/旋钮/hanger-top 铜柱上端沉头 M2×4.step",
+    "bytes": 51275,
+    "sha256": "01f4c43a5d2d79c380cb4ccaaf66151f5536e19c0b6a5670b3876543e62e7813"
+  },
+  {
+    "path": "独立零件/旋钮/hanger-top 铜柱上端沉头 M2×4.stl",
+    "bytes": 60184,
+    "sha256": "c56b9544522702c7c7e96af194ef05e5e33aa923334221bd9cb633b7c99cfcb4"
+  },
+  {
+    "path": "独立零件/旋钮/hub 磁铁杯与浮动盘驱动键.step",
+    "bytes": 170670,
+    "sha256": "c51ce9b4d95b03cc5ae8558f439bea19fa5b08f8f192eef67cf88fe7f7b5bf0e"
+  },
+  {
+    "path": "独立零件/旋钮/hub-grub 下磁铁杯紧定螺钉.step",
+    "bytes": 5741,
+    "sha256": "5be1abf6788ad79a52b0e7bbe9f1e48d7534c98d3dfbe8e039ea95ac7690818c"
+  },
+  {
+    "path": "独立零件/旋钮/hub-grub 下磁铁杯紧定螺钉.stl",
+    "bytes": 20884,
+    "sha256": "4b6f21466a1e4c3565ea54f05ad67bb0218739f28f406ab07f7bf68278ad9b14"
+  },
+  {
+    "path": "独立零件/旋钮/keeper 退板挡条.step",
+    "bytes": 74545,
+    "sha256": "ea6aeacb11b84875843f72f9b06663af1a40631f89c67d34dbf633d8be75c54e"
+  },
+  {
+    "path": "独立零件/旋钮/keeper-m2 挡条沉头 M2×3.step",
+    "bytes": 51244,
+    "sha256": "d3cc90cede8126800fc88e9b1b12e3a4902029b15e5a0ced67831e2f00d70763"
+  },
+  {
+    "path": "独立零件/旋钮/keeper-m2 挡条沉头 M2×3.stl",
+    "bytes": 60184,
+    "sha256": "7a8e617423a58be3a136b6b0b65eb09c812b38b76b2cc566e8cadee71177daea"
+  },
+  {
+    "path": "独立零件/旋钮/lid v7 r2 铝封盖.step",
+    "bytes": 167681,
+    "sha256": "0dd869521ac168717af11fd414f0bbe1c424fb41ed052e50a3ec47f9648536e3"
+  },
+  {
+    "path": "独立零件/旋钮/lid v7 r2 铝封盖.stl",
+    "bytes": 823684,
+    "sha256": "9e16c32f9f982b0e105253fc614165b3a17513f4f76999233990b0d664cbf07e"
+  },
+  {
+    "path": "独立零件/旋钮/m2-washer M2 平垫.step",
+    "bytes": 9255,
+    "sha256": "9b2e620f895a9d8f0f30375f6a68c91e94de6112923d6a8670579ee5a90849aa"
+  },
+  {
+    "path": "独立零件/旋钮/m2-washer M2 平垫.stl",
+    "bytes": 42084,
+    "sha256": "03c23a273d68e296127043190219b6fdaa4b882af84a2d44b6766b3fcc7fc024"
+  },
+  {
+    "path": "独立零件/旋钮/magnet 编码器磁铁.step",
+    "bytes": 5646,
+    "sha256": "45f431dcab138d6f1a99955a24f084ec28ddf5e9d21832a68b3ef284c07b51b3"
+  },
+  {
+    "path": "独立零件/旋钮/magnet 编码器磁铁.stl",
+    "bytes": 20884,
+    "sha256": "e5c2f2a60b485695f09f69f4756e0c34539f55d7c7d6438384cd714c16aa478e"
+  },
+  {
+    "path": "独立零件/旋钮/mt6701 MT6701 包络.step",
+    "bytes": 15415,
+    "sha256": "34a9793f609941921deaca36439b359502b47aedd23b06a76c86e7324eb2234b"
+  },
+  {
+    "path": "独立零件/旋钮/mt6701 MT6701 包络.stl",
+    "bytes": 684,
+    "sha256": "136f1d19948476ba24de7dc334012f9a92d2ee0f9b1b34b68ceec3abd43736af"
+  },
+  {
+    "path": "独立零件/旋钮/pom 开缺口的白色 POM 垫片.step",
+    "bytes": 33626,
+    "sha256": "d486ebfb75e176320e2ea483dcc0df92b1002bb25941801cb60aee634f5d984d"
+  },
+  {
+    "path": "独立零件/旋钮/pom 开缺口的白色 POM 垫片.stl",
+    "bytes": 42284,
+    "sha256": "852d74865758ba7d198a7b48a41d703728b9f0f1ccaffbf640fda0b72b43e9c9"
+  },
+  {
+    "path": "独立零件/旋钮/pom-saddle 上 POM 防转托环.step",
+    "bytes": 92842,
+    "sha256": "97f268c0f1d88d7e1db3dab0a30bd3e062a3295ad0cd19bf78759aa418c7f1e7"
+  },
+  {
+    "path": "独立零件/旋钮/service-m2 外圈维修沉头 M2×6.step",
+    "bytes": 51245,
+    "sha256": "a50b95cdbea7920953789901a99762c642f4aab3f3df188455c95d591b518d41"
+  },
+  {
+    "path": "独立零件/旋钮/service-m2 外圈维修沉头 M2×6.stl",
+    "bytes": 60184,
+    "sha256": "6d5b5094410a48a8a9bb887fc76c6e4e352c38dc369039b8f117d04ef96bb01b"
+  },
+  {
+    "path": "独立零件/旋钮/shaft 精密光轴.step",
+    "bytes": 5661,
+    "sha256": "bac404ec9ff2f419826980e6fbdc484fe157288c0516682e7ec547bbe3b1e858"
+  },
+  {
+    "path": "独立零件/旋钮/shaft 精密光轴.stl",
+    "bytes": 20884,
+    "sha256": "5ba6f949249860b22a295044dfb5255766a226891029a9757529ab752d9fa56d"
+  },
+  {
+    "path": "独立零件/旋钮/top-clamp 一体肩上夹箍.step",
+    "bytes": 109904,
+    "sha256": "d5ee35ac3b77725c61338629a3c715a76b09007f235a5ca25492513cbfd4343a"
+  },
+  {
+    "path": "独立零件/旋钮/tray 底壳与 POM 制动座.step",
+    "bytes": 680170,
+    "sha256": "fe7e56fd5cad122b3589ec25d00c109ac464cb926a25e4eb0bf9e132e7eefe7c"
+  },
+  {
+    "path": "独立零件/旋钮/wave 304 三波峰波簧.step",
+    "bytes": 87275,
+    "sha256": "b0f9fb09a856c09121a1552e82f86def3e2b8d2ffc530250c48e6e34611b5fb6"
+  },
+  {
+    "path": "独立零件/旋钮/wave 304 三波峰波簧.stl",
+    "bytes": 62084,
+    "sha256": "404fdc75c3d087e80b364348c6e6d3e21f28c942638a8d64594b3abf2d79c3d7"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p050 旋钮承力背板-左-铝1.5mm.step",
+    "bytes": 116672,
+    "sha256": "04012fe9b2b4bb73cd859892b2090eaeeea4717b34c47330d4d6821423c824f1"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p050 旋钮承力背板-左-铝1.5mm.stl",
+    "bytes": 261284,
+    "sha256": "4b54fe5d975433a4446df5ecb89c39c2e5df0011761eb4bd3cd28bc0d282f438"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p051 背板M2螺母.step",
+    "bytes": 28134,
+    "sha256": "e91534bea77e75a1564ee68127ac3a356bb24551e5810e92e820770dbf8bbfc5"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p051 背板M2螺母.stl",
+    "bytes": 22284,
+    "sha256": "84cfc40775d3decd25dcfbd6d844f18b4b916cd03fd5a27f87230cc9bc1162d3"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p052 背板防掉螺母杯-PETG-直径6x1.9mm.step",
+    "bytes": 32305,
+    "sha256": "cc16e16b0790743a2b8e1f6748c4bd027e5f4437592af6b0a0102a54a0a74797"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p053 背板连接主顶板M2x6沉头螺丝.step",
+    "bytes": 52067,
+    "sha256": "e0f5ef2d4e03bec179f364c7474f1e6a64a3b53a7cb59ed15ab340c67c13f320"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p053 背板连接主顶板M2x6沉头螺丝.stl",
+    "bytes": 60184,
+    "sha256": "ecd3fc90a9c6c901177fc97e42d9da002d50cc0644a382add155ac1fd351eacb"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p054 旋钮承力背板-右-铝1.5mm.step",
+    "bytes": 116576,
+    "sha256": "104014a8122e3c5cc911d018fe632e261dfcc41ff9f5ac525c46fd722d5a7086"
+  },
+  {
+    "path": "独立零件/旋钮接口/host-p054 旋钮承力背板-右-铝1.5mm.stl",
+    "bytes": 261284,
+    "sha256": "847d7e17de1e0bf30b2a6058365299cd25fd75bbe74eea298eb5f3c64086356b"
+  },
+  {
+    "path": "独立零件/滑块/host-p070 MGN7导轨-100mm.step",
+    "bytes": 81286,
+    "sha256": "fff67ea04e173960bed0ae5052a0d4cecb84d5dd439fa3207abf170b453f871a"
+  },
+  {
+    "path": "独立零件/滑块/host-p070 MGN7导轨-100mm.stl",
+    "bytes": 296084,
+    "sha256": "39d14a433154ccd9532e9eac99a807a829d53b1674dbb9ba6ed0dfdc7af55028"
+  },
+  {
+    "path": "独立零件/滑块/host-p071 MGN7C滑块.step",
+    "bytes": 47052,
+    "sha256": "9218808b15da08d7b1443d94fbf5b07598a910896547149c1bb4b41369177e5a"
+  },
+  {
+    "path": "独立零件/滑块/host-p071 MGN7C滑块.stl",
+    "bytes": 85484,
+    "sha256": "1bf4da018573324fbf7164e23c61923928f74883df73cefd188705ac84ce239c"
+  },
+  {
+    "path": "独立零件/滑块/host-p072 滑块共用快拆底座-PETG.step",
+    "bytes": 325594,
+    "sha256": "14c34a98edc689b210bf61c24c532c261d304a91681741e9e09d891e4162aab3"
+  },
+  {
+    "path": "独立零件/滑块/host-p073 滑块固定螺丝-M2×4-90°沉头-核对实物头径及孔深.step",
+    "bytes": 51230,
+    "sha256": "6f8be374c5cc3895256fd71cc4760a2f5a080d31a2bb547d3303eaba6a67f4cf"
+  },
+  {
+    "path": "独立零件/滑块/host-p073 滑块固定螺丝-M2×4-90°沉头-核对实物头径及孔深.stl",
+    "bytes": 60184,
+    "sha256": "bb5a0fcb56659bc5fa10ff5ec10bec159a6488281a32818f9fefcb19841a9fce"
+  },
+  {
+    "path": "独立零件/滑块/host-p074 滑轨磁铁-10×5×3-磁化方向／极性沿用原件.step",
+    "bytes": 15378,
+    "sha256": "358fd07e3c8e4f890b98c5b9f1f9a617fd4afa77741fd577dda16d0828614607"
+  },
+  {
+    "path": "独立零件/滑块/host-p074 滑轨磁铁-10×5×3-磁化方向／极性沿用原件.stl",
+    "bytes": 684,
+    "sha256": "68f1af24bc6fa139b731aa296dbb15d1d265cafaf5f30d089edbe90e8967cbd8"
+  },
+  {
+    "path": "独立零件/滑块/host-p075 锁紧螺母-DIN934M3-AF5.5、厚2.4.step",
+    "bytes": 27819,
+    "sha256": "f9b879029a9639a09c850198724fa036e05e1716723f138b5939e0b15943c91f"
+  },
+  {
+    "path": "独立零件/滑块/host-p075 锁紧螺母-DIN934M3-AF5.5、厚2.4.stl",
+    "bytes": 22284,
+    "sha256": "2450cd0dd2874f30e5adf7c352065d563bfdc8e7003957a85b11eb41e35d79a6"
+  },
+  {
+    "path": "独立零件/滑块/host-p076 锁紧螺栓-DIN933M3×8-AF5.5、头高≤2.12.step",
+    "bytes": 28090,
+    "sha256": "e3269d5b237e973d8f105a7e9e07d08ebd3792656dd2e4b5a46e8ded945d4eaa"
+  },
+  {
+    "path": "独立零件/滑块/host-p076 锁紧螺栓-DIN933M3×8-AF5.5、头高≤2.12.stl",
+    "bytes": 22084,
+    "sha256": "11334135fe4629beddb3971df4a1487a34b7c5873bcd6a8776908eebcb742890"
+  },
+  {
+    "path": "独立零件/滑块/host-p077 滑块手拧钮-PETG.step",
+    "bytes": 35720,
+    "sha256": "d5f6b86f6ca9c95bbb18060fb0a1550aa69792188d61a16da7fcd58e4d56d022"
+  },
+  {
+    "path": "独立零件/滑块/host-p078 滑块限退框-PETG.step",
+    "bytes": 54679,
+    "sha256": "86c6abd67226d906eaf973cae027ee783173c9e0e655072ebd8eb6cdd715d76c"
+  },
+  {
+    "path": "独立零件/滑块/host-p079 限退框固定螺丝-DIN912M2×8-头Ø3.8高2.step",
+    "bytes": 32117,
+    "sha256": "2bc2e18f29f29524e3a26691b8e230473e993b0d1990f47e950fa5510e247f00"
+  },
+  {
+    "path": "独立零件/滑块/host-p079 限退框固定螺丝-DIN912M2×8-头Ø3.8高2.stl",
+    "bytes": 43084,
+    "sha256": "42fd3f2582a20ec7b20f034f9759bd4e10bf78cdaabd306bf8ae4afd7b006ab5"
+  },
+  {
+    "path": "独立零件/滑块/host-p080 限退框螺母-DIN934M2-AF4、厚1.6包络.step",
+    "bytes": 27759,
+    "sha256": "f9c1ce3129009e93c7e8e776d163086ea42129aa1c8a114497375464b310cfd5"
+  },
+  {
+    "path": "独立零件/滑块/host-p080 限退框螺母-DIN934M2-AF4、厚1.6包络.stl",
+    "bytes": 22284,
+    "sha256": "6e14c0e0d4e392cc92d4969c8fea931a5e2068ef7a8e40379dfae025eee87461"
+  },
+  {
+    "path": "独立零件/滑块/host-p081 滑块帽-INF短帽.step",
+    "bytes": 252981,
+    "sha256": "df45e678ee221594e1060df6ad836be45ad34ce1948874060d2d4b7673be8dbf"
+  },
+  {
+    "path": "独立零件/滑块/host-p082 滑块帽-音击握把.step",
+    "bytes": 278991,
+    "sha256": "b7472c3237c941bdfb1022cff5ade083307f928d9d7e2d8bb51f1a6c9c441840"
+  },
+  {
+    "path": "第三方说明.md",
+    "bytes": 411,
+    "sha256": "f409ef160b862df566e5b2098210fc75efcf2aab39f2436d5e2c4a5ad7b38bfb"
+  },
+  {
+    "path": "续做.md",
+    "bytes": 427,
+    "sha256": "e55755a7ce41412f069c3294c8a2b9f0419a976aca30ea635fdecb9dccdb3099"
+  },
+  {
+    "path": "设计源/baseline/knob-coaxial-v5-20261008/build_coaxial.py",
+    "bytes": 17765,
+    "sha256": "ac6bdebe3538b66f49f860d0105d22b0654a30c6c8219aa64ac9e334e4d8f725"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/build.py",
+    "bytes": 12614,
+    "sha256": "92417e910c12424bc2720f835ecbeecffa133de3d8ed108265aa1efb79ed2734"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/build_flush.py",
+    "bytes": 18159,
+    "sha256": "736ac9eab10680b9f7f003423090b0b744a44426a2909fcb14bfe3b53ab71069"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/build.py",
+    "bytes": 18072,
+    "sha256": "12e304413c026dbc347fb89e4ccf0d8b3b662c2357d2adcce5c81c7a75a44353"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/fluxdial-measured.json",
+    "bytes": 32646,
+    "sha256": "28898ccffb8ed49db24967c544fa15522ad7d378d3575fcddf2e359e4302964a"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/knob-reference-source/build.py",
+    "bytes": 18878,
+    "sha256": "70db2d2dc47bff10bd625636c86e4273996cf2d35395acf4b1f04ba0fbd0d6a1"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/knob-reference-source/parameters.json",
+    "bytes": 1698,
+    "sha256": "95bcc7420dd65d926a30636c59d219b7239571b3c9497c56d0dce1c15b43e3bd"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/parameters.json",
+    "bytes": 1276,
+    "sha256": "e8e9fd72ec6b33f0b868e2b04c9b9054bdef9cefd410494faa9e42e2cfaa0618"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/parts-step/P_slider_cap_tray.step",
+    "bytes": 190777,
+    "sha256": "81b08b9e83196d84b27b946c369b86afe979520277eb610b09e24d91f28a62d5"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/enclosure/pcb-extracted.json",
+    "bytes": 532841,
+    "sha256": "18b243b381551ee4994e01f3eda148908844a0b67db8a3f0210b28fbda3e61c5"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/build.py",
+    "bytes": 13407,
+    "sha256": "7bdd628b52201cf8110f855a1a32e7610765f0b6c00f13681e62f0f4d2b43e41"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/parameters.json",
+    "bytes": 945,
+    "sha256": "b36647e8c9f87df48afb5c3eafba2c421b0c1d79ce679fee7fc36a4740552042"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/reference-enclosure/build.py",
+    "bytes": 18072,
+    "sha256": "12e304413c026dbc347fb89e4ccf0d8b3b662c2357d2adcce5c81c7a75a44353"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/reference-enclosure/knob-reference-source/build.py",
+    "bytes": 18878,
+    "sha256": "70db2d2dc47bff10bd625636c86e4273996cf2d35395acf4b1f04ba0fbd0d6a1"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/reference-enclosure/knob-reference-source/parameters.json",
+    "bytes": 1698,
+    "sha256": "95bcc7420dd65d926a30636c59d219b7239571b3c9497c56d0dce1c15b43e3bd"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/reference-enclosure/parameters.json",
+    "bytes": 1276,
+    "sha256": "e8e9fd72ec6b33f0b868e2b04c9b9054bdef9cefd410494faa9e42e2cfaa0618"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/reference-enclosure/parts-step/P_slider_cap_tray.step",
+    "bytes": 190777,
+    "sha256": "81b08b9e83196d84b27b946c369b86afe979520277eb610b09e24d91f28a62d5"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/reference-enclosure/pcb-extracted.json",
+    "bytes": 532841,
+    "sha256": "18b243b381551ee4994e01f3eda148908844a0b67db8a3f0210b28fbda3e61c5"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/vendor/three-0.160.0/LICENSE",
+    "bytes": 1081,
+    "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/vendor/three-0.160.0/OrbitControls.js",
+    "bytes": 29868,
+    "sha256": "5a44a9e86a2a0fb11933eed69bc2cd33c76a496854c1aed6ed776efa87d7b064"
+  },
+  {
+    "path": "设计源/baseline/knob-no-push-20261008/source-baseline/slider-quick-release/vendor/three-0.160.0/three.module.js",
+    "bytes": 1272972,
+    "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+  },
+  {
+    "path": "设计源/baseline/knob-service-v4-20261008/build_service.py",
+    "bytes": 17399,
+    "sha256": "cf409746b4c0acf47e67e92a98f9364b5d42adc7d3af31206c631c6fa3731f9b"
+  },
+  {
+    "path": "设计源/baseline/knob-standard-shaft-v6-20261008/build_standard.py",
+    "bytes": 19340,
+    "sha256": "19dac5e8175ec8892c6117ba5dc4714b343d037bf4f11015108ed9ca267ecb62"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_acrylic_1.dxf",
+    "bytes": 24486,
+    "sha256": "0afa22c13299cd5eab40b048c28214ff0b565d8486dd999dee2bfa6a865a81df"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_acrylic_2.dxf",
+    "bytes": 20546,
+    "sha256": "17da34de7f5c2be56c76871898fbbce72dc2e702b068f0063c55e2cb1ea8e29a"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_base_lower.dxf",
+    "bytes": 23926,
+    "sha256": "37f2e41dcb56a8120a4c49895a14a03740a9c1f3e8575d7911c5777f9e4ba62e"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_base_upper.dxf",
+    "bytes": 27091,
+    "sha256": "e187fa844bfeb0b9431f4a34a961ecc937ca5cd0faf30719e80bb4178cd7a960"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_foam.dxf",
+    "bytes": 36268,
+    "sha256": "4018c0db5ef367e35ce354ef209f96d9d3574bf302b92d6d9acceea33f7fb396"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_locator_TOP_PROFILE_NOT_FULL_3D.dxf",
+    "bytes": 34438,
+    "sha256": "e08fdd498a009aad45dae0e10a5b1df764914820080bb58e5a28933fc09d2c9b"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/A_top.dxf",
+    "bytes": 34165,
+    "sha256": "cf4510d68d18fc92f4c8e5d5a4015b4e6f05e7f42c90f4c744fef45c31fd4a95"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/叠层固定孔.csv",
+    "bytes": 665,
+    "sha256": "7280d9e8deb5058511e144eda187e21fec48dd60322e56a190bca684776be657"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/右旋钮承力背板_1.5mm.dxf",
+    "bytes": 23572,
+    "sha256": "e3373407c25dba433f70e7505337e12c26bc784742b7d946e0de87a63f3358e4"
+  },
+  {
+    "path": "设计源/baseline/v6-machine-drawings/左旋钮承力背板_1.5mm.dxf",
+    "bytes": 23369,
+    "sha256": "a43e4c1647ffab8e4851a31f161764afcbe9689eb92090456c184de04b250753"
+  },
+  {
+    "path": "设计源/baseline/整机实例映射.json",
+    "bytes": 38443,
+    "sha256": "56aa6e116ed1dbcee6ceef37cb58a619fb49c2c0f7196ed95c83bea91d620da3"
+  },
+  {
+    "path": "设计源/baseline/部件清单.json",
+    "bytes": 63689,
+    "sha256": "24606a6350872ae0b557aeb4041e4e80d961fdf27b74307f6818d6679939f04b"
+  },
+  {
+    "path": "设计源/build_bom.mjs",
+    "bytes": 3340,
+    "sha256": "f308af0945b823fae2c82ca6e5c2c1dea66479aaba9ea2f7ca3a5737f5efc935"
+  },
+  {
+    "path": "设计源/build_r1_reference.py",
+    "bytes": 14127,
+    "sha256": "bdbcb7f74fcc2c0ed0394ea0a5e5005b87deb24d6f44d89d2a8d13571ab72402"
+  },
+  {
+    "path": "设计源/build_v7.py",
+    "bytes": 8142,
+    "sha256": "f2cbf8551549991e817a05ad3886feb7a3d6256d5206e5426dd1f512b00a3a98"
+  },
+  {
+    "path": "设计源/export_v7.py",
+    "bytes": 26263,
+    "sha256": "31f0ea3d350c50926adfc2acfeaaaad06ed4da20ed565e624ed673d3e20c9fb4"
+  },
+  {
+    "path": "设计源/package_v7.py",
+    "bytes": 5788,
+    "sha256": "d22bf2fdab5acee7b49f9217caf8c4e203abe8c0a48a25e7d83e00c5956f13e7"
+  },
+  {
+    "path": "设计源/part_download.js",
+    "bytes": 1565,
+    "sha256": "60d7659b8c43cc8fae97347068c458720782f3c32704ad4b6738dab0a44511df"
+  },
+  {
+    "path": "设计源/requirements.txt",
+    "bytes": 70,
+    "sha256": "0da7ef291c35a1ee8b3590af91d85aec288e753e42284f3a266d9189210a881b"
+  },
+  {
+    "path": "设计源/verify_browser.py",
+    "bytes": 4976,
+    "sha256": "ca85e8e498406deb47ce64a3e7f3b9246fd27d77c6c25a649519f1baa3ab1498"
+  },
+  {
+    "path": "设计源/verify_v7.py",
+    "bytes": 5687,
+    "sha256": "27eab147afc976d7ba4183eabbf144952e22913eafbb750ae52c65bb7ce103bc"
+  },
+  {
+    "path": "设计源/viewer.html",
+    "bytes": 9623,
+    "sha256": "67c643ed2a7da40a68152fa58414cdf9159a535dac3b0d912850b5e8f0e77e72"
+  },
+  {
+    "path": "设计源/重建.md",
+    "bytes": 1563,
+    "sha256": "87d434a1a104a09fca8b08ae4a3f8c3269df14b8efd783473811d79fe291a061"
+  },
+  {
+    "path": "部件清单.json",
+    "bytes": 65313,
+    "sha256": "db7db3a27137ac44ed8c76ae05d05000e205430ba3415cb98dfd54bcef828377"
+  },
+  {
+    "path": "采购说明.html",
+    "bytes": 3775,
+    "sha256": "b0b6745e24fbe3fcf00d1c3d9811f863ef5befabba1a5a136d7d5e2e4d979ad0"
+  },
+  {
+    "path": "采购说明.md",
+    "bytes": 1858,
+    "sha256": "411f197e86f31a1829ef9f988bee03c3b686c4e91c69d576faa10529a2794d9b"
+  },
+  {
+    "path": "零件数据.js",
+    "bytes": 5056088,
+    "sha256": "508d087952b60b94ca111204993acbb42ce5519f7901145a89c880eeca3c4127"
+  },
+  {
+    "path": "验证/BOM-export-inspect.ndjson",
+    "bytes": 223648,
+    "sha256": "28697776c43e52075a9759544a6f2f36701384e1f3ff5b60157fd5ff25fb324c"
+  },
+  {
+    "path": "验证/BOM-inspect.ndjson",
+    "bytes": 1613,
+    "sha256": "55fddc9de04a78c0987ce5eba34b1cbb86e39f1ddc9609abd1bb8370fc9bed68"
+  },
+  {
+    "path": "验证/BOM预览.png",
+    "bytes": 144934,
+    "sha256": "eea7f779a82e0e917bddc7cd3f79d2963261df25c46ffc3d1df1f4800f741c93"
+  },
+  {
+    "path": "验证/r2尺寸图.png",
+    "bytes": 137028,
+    "sha256": "6b3b1a58290fe8107bd4993a0c8ed2898270682e59bb99df4074e6f5f00fc5da"
+  },
+  {
+    "path": "验证/README.md",
+    "bytes": 980,
+    "sha256": "2f9300e9e6a301e3b6ccbaf061108bbc1e8bac3a3cd3942d7cc745803d22a771"
+  },
+  {
+    "path": "验证/STEP装配.json",
+    "bytes": 519,
+    "sha256": "5d2fb357cfb43ccd0245d9e05e0a27cd417626447f01a7c20048d03c81f66368"
+  },
+  {
+    "path": "验证/包检查.json",
+    "bytes": 565,
+    "sha256": "2ce336f7d1e7b617ed8b2743aaa95e4e2e9f2fe9561d1414bd23fb60332280c4"
+  },
+  {
+    "path": "验证/原接口与整套上取.json",
+    "bytes": 985,
+    "sha256": "f05e83657765ba93101a9767b2e062fa3327d3fee49121eb3a1f03adcb7ac0bb"
+  },
+  {
+    "path": "验证/工具与拆装.json",
+    "bytes": 3744,
+    "sha256": "8a30c57bbde80d7a01f0fbc1beaaa81723b77ecfbd9569d5fbc3bb48b4a61669"
+  },
+  {
+    "path": "验证/整机.json",
+    "bytes": 18483,
+    "sha256": "7376d309960d102b11668d25cf6c0471aead8313805d12a77f2ee64d32a205c5"
+  },
+  {
+    "path": "验证/整机预览.png",
+    "bytes": 123742,
+    "sha256": "3a26aa0dcd7d5a3b4b507badbad1ac523c1d83271f52187806e8f69a0a76d0c9"
+  },
+  {
+    "path": "验证/旋钮总成预览.png",
+    "bytes": 70459,
+    "sha256": "c3870db5feeb07ad6812979167f5d56884af7315ade52f31088d4c7d25e6ea3e"
+  },
+  {
+    "path": "验证/旋钮爆炸预览.png",
+    "bytes": 85472,
+    "sha256": "a425368f842ab20ad235c7e7d113441d4500965e6661d29a0d18a4c3ae8a9751"
+  },
+  {
+    "path": "验证/独立导出.json",
+    "bytes": 137,
+    "sha256": "0a66eb2fa2f85ea10ef64abe1a933dd0fcedc522c5850df4e41bbe93dd7dbaa4"
+  },
+  {
+    "path": "验证/离线网页.json",
+    "bytes": 547,
+    "sha256": "52ba8846c1e86f803da1fb0b94af318d2f75dbd7c22290a51a228b3cb7c78cb3"
+  },
+  {
+    "path": "验证/转动与行程.json",
+    "bytes": 40585,
+    "sha256": "e6b5f5a9f1f02e1770fd6d1de6fde8f8c77721e1937b8752542e0f13a8a11fcc"
+  },
+  {
+    "path": "验证/阻尼受力与净空.json",
+    "bytes": 1004,
+    "sha256": "ef3d5a836c2fa0cd4579188bcbc961a2b5d6f58c3757d79b9de647cf94b33945"
+  },
+  {
+    "path": "验证/隔离重建.json",
+    "bytes": 868,
+    "sha256": "54ece212ebfe92c659d003423bcacbb8871b95252732a1bd7faf688e1df8b608"
+  },
+  {
+    "path": "验证/项目文档检查.json",
+    "bytes": 1977,
+    "sha256": "f55b31e4d21976072a960d3512c78f1a93a526636be40bbb7eaa7599a89225dd"
+  }
+]

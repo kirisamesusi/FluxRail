@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>打印装配</title><style>body{margin:0;background:#f3f5f6;color:#1a2730;font:16px/1.65 system-ui,'Microsoft YaHei',sans-serif}main{max-width:1120px;margin:auto;padding:30px}
+a{color:#086477}h1{line-height:1.18}h2{margin-top:1.6em}nav{display:flex;gap:16px;flex-wrap:wrap}
+table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #d6e0e4;padding:9px;text-align:left}th{background:#e0edf0}td{vertical-align:top}
+section{background:white;border:1px solid #d4dfe3;border-radius:14px;padding:22px;margin:20px 0}code{background:#edf2f4;padding:1px 4px}img{max-width:100%}.muted{color:#4e616c}
+@media(max-width:750px){main{padding:16px}table{font-size:13px;display:block;overflow:auto}}</style><main><nav><a href="index.html">v7 入口</a><a href="旋钮模型.html">旋钮 3D</a><a href="整机模型.html">整机 3D</a><a href="单件下载.html">单件下载</a><a href="采购说明.html">采购</a><a href="打印装配.html">打印与装配</a></nav><h1>v7 r2 打印、装配与调节</h1>
+<p>按 <a href="打印清单.csv">打印清单</a> 使用 PETG。底壳底面贴床，在下 POM 环座背面加局部支撑，从开口取出支撑并清理排线通道。左右固定座悬挂耳贴床，给中座与桥局部支撑。磁铁杯口朝下，给盘驱动键和杯顶局部支撑。固定杯轴承装入口贴床，给外法兰局部支撑。压环按 STL 加支撑，清净双导孔和螺丝接触面。上 POM 托环平面贴床，防转键向上。0.75 mm 托环和承压臂用实心设置，先做一套。</p>
+<ol>
+<li>干装空压环，确认它在两导柱上轴向滑动。导柱名义 1.96×2.76，压环孔 2.28×3.08。双导孔修到能滑又不明显偏斜。两片 POM 各锉相对的两个缺口，底座和上托环的键分别扣进去。</li>
+<li>在底壳装 FluxDial 和挡条。放下 POM、黄铜盘。磁铁放入杯内，保留轴与磁铁间隔层。Ø6×24 光轴顶住杯内止面，用 M2×3 平端螺钉和从顶部插入的 AF4 螺母锁紧。把轴和磁铁杯从上放进黄铜盘，双键对槽。盘应能沿键上下轻滑，转向反向时记录余隙。</li>
+<li>放上 POM、托环、三波峰波簧和导向压环。先量实际波簧和两片 POM，确认叠层尺寸。压环的偏置臂对准封盖调节孔，压环下移时两导柱均应滑顺。</li>
+<li>在台面把下 MR106ZZ 合入两半固定座，四根 Ø3.2×5 双通铜柱从下端用杯头和下平垫锁住。上端直接靠铝盖，铜柱的两端螺钉尖名义间隔 0.30 mm。把固定杯夹在座顶和封盖台阶之间，随后固定盖和桥。将整个桥和盖从上沿光轴套到底壳，把下轴承内圈贴到磁铁杯小肩。再装 686、上夹箍和帽。轻贴合后锁上夹箍，在无明显轴向窜动且轴承自由转动的位置试装。帽顶丝只锁帽。底壳仍用中圈四颗 M2×6 沉头固定。</li>
+<li>从上装外调 M2×6 杯头，头底从距盖约 0.60 mm 的松端开始。先在轻阻尼端转动，再每次顺时针拧约 1/8 圈。M2×0.4 每 1/8 圈推进 0.05 mm。名义全程 1.5 圈，螺钉头触盖是几何止位。试装中如阻力突然上升、压环卡住或轴出现窜动，先退回检查叠层。</li>
+<li>手转对比松、中、紧三处起动和连续转动力矩，正反向都测。再确认压环两侧不翘、黄铜盘无周期擦碰、轴承与磁隙不随调节而动。实测转矩、螺丝保持、PETG 变形和波簧高度之前，CAD 行程只用于定尺寸。建议核对双向阻尼一致性、持续旋转后的磨损和实际 SSI 场状态。</li>
+</ol>
+<p>换制动件先断电，从机身卸外圈四螺丝并断开 FPC。卸帽、上夹箍和调节螺丝，松中圈托盘螺丝，沿轴抬起封盖与固定座组合。先取导向压环和波簧，再抽轴与磁铁杯。板子拆挡条后沿局部 −Y 退出。</p></main>

@@ -1,0 +1,45 @@
+{
+  "checked": "v7 r2 完整隔离重建",
+  "originalV6NotRead": true,
+  "sourceFromV7Only": true,
+  "result": {
+    "catalog": 76,
+    "printable": 19,
+    "machineViewer": 269,
+    "knobSolids": 63,
+    "watertight": true,
+    "stepReadback": true
+  },
+  "assemblies": [
+    {
+      "file": "旋钮总成.step",
+      "solids": 63,
+      "valid": true
+    },
+    {
+      "file": "旋钮爆炸.step",
+      "solids": 63,
+      "valid": true
+    },
+    {
+      "file": "整机-INF.step",
+      "solids": 268,
+      "valid": true
+    },
+    {
+      "file": "整机-音击.step",
+      "solids": 268,
+      "valid": true
+    },
+    {
+      "file": "整机-INF-爆炸.step",
+      "solids": 268,
+      "valid": true
+    },
+    {
+      "file": "整机-音击-爆炸.step",
+      "solids": 268,
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "travelMM": 0,
+    "magnetGapMM": 0.6,
+    "springGapMM": 0.05,
+    "POMContactAreasMM2": [
+      134.07,
+      134.07
+    ],
+    "fixedCupClearanceMM": 0.4272,
+    "floatingDiscHubProbeMM": [
+      -0.2,
+      0.2
+    ]
+  },
+  {
+    "travelMM": 0.05,
+    "magnetGapMM": 0.6,
+    "springGapMM": 0.0,
+    "POMContactAreasMM2": [
+      134.07,
+      134.07
+    ],
+    "fixedCupClearanceMM": 0.47434,
+    "floatingDiscHubProbeMM": [
+      -0.2,
+      0.2
+    ]
+  },
+  {
+    "travelMM": 0.3,
+    "magnetGapMM": 0.6,
+    "springGapMM": 0.0,
+    "POMContactAreasMM2": [
+      134.07,
+      134.07
+    ],
+    "fixedCupClearanceMM": 0.71589,
+    "floatingDiscHubProbeMM": [
+      -0.2,
+      0.2
+    ]
+  },
+  {
+    "travelMM": 0.6,
+    "magnetGapMM": 0.6,
+    "springGapMM": 0.0,
+    "POMContactAreasMM2": [
+      134.07,
+      134.07
+    ],
+    "fixedCupClearanceMM": 1.01119,
+    "floatingDiscHubProbeMM": [
+      -0.2,
+      0.2
+    ]
+  }
+]

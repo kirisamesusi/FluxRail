@@ -1,0 +1,1616 @@
+[
+  {
+    "id": "A_base_lower",
+    "partKey": "host-p042",
+    "name": "复合底板2mm下板",
+    "variant": "通用"
+  },
+  {
+    "id": "A_base_upper",
+    "partKey": "host-p043",
+    "name": "同轴复合底板3mm上板",
+    "variant": "通用"
+  },
+  {
+    "id": "A_acrylic_1",
+    "partKey": "host-p047",
+    "name": "乳白亚克力主框",
+    "variant": "通用"
+  },
+  {
+    "id": "A_acrylic_2",
+    "partKey": "host-p048",
+    "name": "乳白亚克力后中段",
+    "variant": "通用"
+  },
+  {
+    "id": "E_main_pcb",
+    "partKey": "host-p055",
+    "name": "主PCB板框与机械孔参考",
+    "variant": "通用"
+  },
+  {
+    "id": "B_pcb_col_1",
+    "partKey": "host-p056",
+    "name": "M2×5+3铜柱；对边3",
+    "variant": "通用"
+  },
+  {
+    "id": "S_pcb_1",
+    "partKey": "host-p057",
+    "name": "PCB M2×4圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "B_pcb_col_2",
+    "partKey": "host-p056",
+    "name": "M2×5+3铜柱；对边3",
+    "variant": "通用"
+  },
+  {
+    "id": "S_pcb_2",
+    "partKey": "host-p057",
+    "name": "PCB M2×4圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "B_pcb_col_3",
+    "partKey": "host-p056",
+    "name": "M2×5+3铜柱；对边3",
+    "variant": "通用"
+  },
+  {
+    "id": "S_pcb_3",
+    "partKey": "host-p057",
+    "name": "PCB M2×4圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "B_pcb_col_4",
+    "partKey": "host-p056",
+    "name": "M2×5+3铜柱；对边3",
+    "variant": "通用"
+  },
+  {
+    "id": "S_pcb_4",
+    "partKey": "host-p057",
+    "name": "PCB M2×4圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "B_rail_lower_1",
+    "partKey": "host-p056",
+    "name": "轨下层M2×5+3铜柱",
+    "variant": "通用"
+  },
+  {
+    "id": "B_rail_upper_1",
+    "partKey": "host-p058",
+    "name": "轨上层M2双通5mm铜柱",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rail_stud_1",
+    "partKey": "host-p059",
+    "name": "连接上下铜柱M2×6螺柱",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rail_1",
+    "partKey": "host-p060",
+    "name": "导轨M2×6圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "B_rail_lower_2",
+    "partKey": "host-p056",
+    "name": "轨下层M2×5+3铜柱",
+    "variant": "通用"
+  },
+  {
+    "id": "B_rail_upper_2",
+    "partKey": "host-p058",
+    "name": "轨上层M2双通5mm铜柱",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rail_stud_2",
+    "partKey": "host-p059",
+    "name": "连接上下铜柱M2×6螺柱",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rail_2",
+    "partKey": "host-p060",
+    "name": "导轨M2×6圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "B_rail_lower_3",
+    "partKey": "host-p056",
+    "name": "轨下层M2×5+3铜柱",
+    "variant": "通用"
+  },
+  {
+    "id": "B_rail_upper_3",
+    "partKey": "host-p058",
+    "name": "轨上层M2双通5mm铜柱",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rail_stud_3",
+    "partKey": "host-p059",
+    "name": "连接上下铜柱M2×6螺柱",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rail_3",
+    "partKey": "host-p060",
+    "name": "导轨M2×6圆柱头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "A_foam",
+    "partKey": "host-p046",
+    "name": "3.5mm吸音棉；芯片和插座开窗",
+    "variant": "通用"
+  },
+  {
+    "id": "A_locator",
+    "partKey": "host-p045",
+    "name": "2mm定位板；卡扣处1.5mm",
+    "variant": "通用"
+  },
+  {
+    "id": "A_top",
+    "partKey": "host-p044",
+    "name": "2mm铝合金装饰顶板",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_1",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_2",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_3",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_4",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_5",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_6",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_7",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_8",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_9",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_10",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_11",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_rim_12",
+    "partKey": "host-p061",
+    "name": "外框M2×16沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "M_rail",
+    "partKey": "host-p070",
+    "name": "MGN7导轨100×7×4.8",
+    "variant": "通用"
+  },
+  {
+    "id": "P_rail_stop_1",
+    "partKey": "host-p062",
+    "name": "导轨一体垫脚与端部限位",
+    "variant": "通用"
+  },
+  {
+    "id": "P_rail_stop_2",
+    "partKey": "host-p063",
+    "name": "导轨一体垫脚与端部限位",
+    "variant": "通用"
+  },
+  {
+    "id": "P_rail_midpad",
+    "partKey": "host-p064",
+    "name": "中间导轨1.5mm垫脚",
+    "variant": "通用"
+  },
+  {
+    "id": "M_block",
+    "partKey": "host-p071",
+    "name": "MGN7C滑块22.5×17×7外包络",
+    "variant": "通用"
+  },
+  {
+    "id": "E_hall_1",
+    "partKey": "host-p065",
+    "name": "三霍尔SOT23占位包络",
+    "variant": "通用"
+  },
+  {
+    "id": "E_hall_2",
+    "partKey": "host-p065",
+    "name": "三霍尔SOT23占位包络",
+    "variant": "通用"
+  },
+  {
+    "id": "E_hall_3",
+    "partKey": "host-p065",
+    "name": "三霍尔SOT23占位包络",
+    "variant": "通用"
+  },
+  {
+    "id": "E_usb",
+    "partKey": "host-p066",
+    "name": "USB-C插座保守占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_1",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_1",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_1",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_2",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_2",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_2",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_3",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_3",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_3",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_4",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_4",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_4",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_5",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_5",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_5",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_6",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_6",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_6",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_7",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_7",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_7",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_8",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_8",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_8",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_9",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_9",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_9",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "M_MX_10",
+    "partKey": "host-p067",
+    "name": "MX机械轴固定外壳参考",
+    "variant": "通用"
+  },
+  {
+    "id": "M_stem_10",
+    "partKey": "host-p068",
+    "name": "MX十字轴动态占位",
+    "variant": "通用"
+  },
+  {
+    "id": "M_keycap_10",
+    "partKey": "host-p069",
+    "name": "1U键帽18mm参考包络",
+    "variant": "通用"
+  },
+  {
+    "id": "S_laminate_0",
+    "partKey": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_laminate_1",
+    "partKey": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_laminate_2",
+    "partKey": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_laminate_3",
+    "partKey": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_laminate_4",
+    "partKey": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_laminate_5",
+    "partKey": "host-p049",
+    "name": "复合底板M2x4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "A_backplate_1",
+    "partKey": "host-p050",
+    "name": "顶板承力背板52x40x1.5",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_0",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_0",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_1",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_1",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_2",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_2",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_3",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_3",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_4",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_4",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_5",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_5",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_6",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_6",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_1_7",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_1_7",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_1_0",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_1_1",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_1_2",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_1_3",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "A_backplate_2",
+    "partKey": "host-p054",
+    "name": "顶板承力背板52x40x1.5",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_0",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_0",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_1",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_1",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_2",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_2",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_3",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_3",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_4",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_4",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_5",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_5",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_6",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_6",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "N_panel_2_7",
+    "partKey": "host-p051",
+    "name": "背板M2螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "P_panelnut_2_7",
+    "partKey": "host-p052",
+    "name": "PETG背板防掉螺母杯6x1.9",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_2_0",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_2_1",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_2_2",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "S_panel_2_3",
+    "partKey": "host-p053",
+    "name": "背板连接主顶板M2x6沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_base",
+    "partKey": "host-p072",
+    "name": "共用快拆底座＋原位置磁铁托",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_mount_1",
+    "partKey": "host-p073",
+    "name": "MGN7C固定M2×4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_mount_2",
+    "partKey": "host-p073",
+    "name": "MGN7C固定M2×4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_mount_3",
+    "partKey": "host-p073",
+    "name": "MGN7C固定M2×4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_mount_4",
+    "partKey": "host-p073",
+    "name": "MGN7C固定M2×4沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_magnet",
+    "partKey": "host-p074",
+    "name": "滑轨磁铁10×5×3（位置保持）",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_nut_M3",
+    "partKey": "host-p075",
+    "name": "DIN934 M3六角螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_lock_screw",
+    "partKey": "host-p076",
+    "name": "DIN933 M3×8后侧锁紧螺栓",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_thumbwheel",
+    "partKey": "host-p077",
+    "name": "后侧手拧钮Ø12／外露Ø8凸台",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_keeper",
+    "partKey": "host-p078",
+    "name": "后侧限退框＋螺母防脱盖",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_keeper_screw_1",
+    "partKey": "host-p079",
+    "name": "限退框DIN912 M2×8螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_keeper_nut_1",
+    "partKey": "host-p080",
+    "name": "DIN934 M2六角螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_keeper_screw_2",
+    "partKey": "host-p079",
+    "name": "限退框DIN912 M2×8螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_keeper_nut_2",
+    "partKey": "host-p080",
+    "name": "DIN934 M2六角螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_cap_inf",
+    "partKey": "host-p081",
+    "name": "INF加高窄侧浅弧帽36×24",
+    "variant": "INF"
+  },
+  {
+    "id": "K1_P_case",
+    "partKey": "tray",
+    "name": "PETG 底壳与 POM 制动座",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_pcb",
+    "partKey": "fluxdial",
+    "name": "FluxDial 15×18×1.6",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_sensor",
+    "partKey": "mt6701",
+    "name": "MT6701",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_fpc",
+    "partKey": "fpc",
+    "name": "FPC 插座",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_capacitor",
+    "partKey": "capacitor",
+    "name": "电容",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_board_keeper",
+    "partKey": "keeper",
+    "name": "PETG 退板挡条（复用）",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_keeper_-1",
+    "partKey": "keeper-m2",
+    "name": "M2×3 挡条沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_keeper_1",
+    "partKey": "keeper-m2",
+    "name": "M2×3 挡条沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_shaft",
+    "partKey": "shaft",
+    "name": "Ø6×24 精密不锈钢光轴",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_rotor_hub",
+    "partKey": "hub",
+    "name": "PETG 磁铁杯与浮动盘驱动键",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_magnet",
+    "partKey": "magnet",
+    "name": "Ø6×2.5 径向充磁磁铁",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_top",
+    "partKey": "clamp-m2",
+    "name": "M2×8 杯头夹轴螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_N_top",
+    "partKey": "clamp-nut",
+    "name": "M2 六角螺母 AF4",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_lower_outer",
+    "partKey": "bearing-mr",
+    "name": "MR106ZZ 外圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_lower_inner",
+    "partKey": "bearing-mr",
+    "name": "MR106ZZ 内圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_lower_seal",
+    "partKey": "bearing-mr",
+    "name": "MR106ZZ 防尘盖包络",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_upper_outer",
+    "partKey": "bearing-686",
+    "name": "686-2RS 外圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_upper_inner",
+    "partKey": "bearing-686",
+    "name": "686-2RS 内圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_upper_seal",
+    "partKey": "bearing-686",
+    "name": "686-2RS 密封包络",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_carrier_left",
+    "partKey": "carrier-l",
+    "name": "PETG 固定座 左半",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_carrier_right",
+    "partKey": "carrier-r",
+    "name": "PETG 固定座 右半",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_cup",
+    "partKey": "cup",
+    "name": "PETG 固定上轴承杯",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_T_hanger_0",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_hanger_0",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_N_hanger_0",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_lid_0",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_T_hanger_1",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_hanger_1",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_N_hanger_1",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_lid_1",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_T_hanger_2",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_hanger_2",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_N_hanger_2",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_lid_2",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_T_hanger_3",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_hanger_3",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_N_hanger_3",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_lid_3",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_I_case_0",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_case_0",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_I_case_1",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_case_1",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_I_case_2",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_case_2",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_I_case_3",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_case_3",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_A_lid",
+    "partKey": "lid",
+    "name": "v7 r2 铝封盖",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_service_0",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_service_1",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_service_2",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_service_3",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_top_clamp",
+    "partKey": "top-clamp",
+    "name": "PETG 一体肩上夹箍",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_cap",
+    "partKey": "cap",
+    "name": "成品旋钮帽 Ø30×25 孔6",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_cap_set",
+    "partKey": "cap-set",
+    "name": "帽随附顶丝（包络）",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_hub_grub",
+    "partKey": "hub-grub",
+    "name": "磁铁杯 M2×3 内六角紧定螺钉",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_N_hub",
+    "partKey": "clamp-nut",
+    "name": "磁铁杯 M2 AF4 螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_pom_1",
+    "partKey": "pom",
+    "name": "开防转缺口的 POM 15×20×1",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_C_brake_disc",
+    "partKey": "brake-disc",
+    "name": "黄铜浮动摩擦盘 Ø20.4×1",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_pom_2",
+    "partKey": "pom",
+    "name": "开防转缺口的 POM 15×20×1",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_pom_saddle",
+    "partKey": "pom-saddle",
+    "name": "PETG 上 POM 防转托环",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_W_wave",
+    "partKey": "wave",
+    "name": "304 三波峰波簧 14×21×0.4",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_P_pressure_yoke",
+    "partKey": "brake-yoke",
+    "name": "PETG 导向压环",
+    "variant": "通用"
+  },
+  {
+    "id": "K1_S_brake_adjust",
+    "partKey": "brake-adjust",
+    "name": "外部调阻尼 M2×6 杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_case",
+    "partKey": "tray",
+    "name": "PETG 底壳与 POM 制动座",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_pcb",
+    "partKey": "fluxdial",
+    "name": "FluxDial 15×18×1.6",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_sensor",
+    "partKey": "mt6701",
+    "name": "MT6701",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_fpc",
+    "partKey": "fpc",
+    "name": "FPC 插座",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_capacitor",
+    "partKey": "capacitor",
+    "name": "电容",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_board_keeper",
+    "partKey": "keeper",
+    "name": "PETG 退板挡条（复用）",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_keeper_-1",
+    "partKey": "keeper-m2",
+    "name": "M2×3 挡条沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_keeper_1",
+    "partKey": "keeper-m2",
+    "name": "M2×3 挡条沉头螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_shaft",
+    "partKey": "shaft",
+    "name": "Ø6×24 精密不锈钢光轴",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_rotor_hub",
+    "partKey": "hub",
+    "name": "PETG 磁铁杯与浮动盘驱动键",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_magnet",
+    "partKey": "magnet",
+    "name": "Ø6×2.5 径向充磁磁铁",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_top",
+    "partKey": "clamp-m2",
+    "name": "M2×8 杯头夹轴螺丝",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_N_top",
+    "partKey": "clamp-nut",
+    "name": "M2 六角螺母 AF4",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_lower_outer",
+    "partKey": "bearing-mr",
+    "name": "MR106ZZ 外圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_lower_inner",
+    "partKey": "bearing-mr",
+    "name": "MR106ZZ 内圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_lower_seal",
+    "partKey": "bearing-mr",
+    "name": "MR106ZZ 防尘盖包络",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_upper_outer",
+    "partKey": "bearing-686",
+    "name": "686-2RS 外圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_upper_inner",
+    "partKey": "bearing-686",
+    "name": "686-2RS 内圈",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_upper_seal",
+    "partKey": "bearing-686",
+    "name": "686-2RS 密封包络",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_carrier_left",
+    "partKey": "carrier-l",
+    "name": "PETG 固定座 左半",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_carrier_right",
+    "partKey": "carrier-r",
+    "name": "PETG 固定座 右半",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_cup",
+    "partKey": "cup",
+    "name": "PETG 固定上轴承杯",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_T_hanger_0",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_hanger_0",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_N_hanger_0",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_lid_0",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_T_hanger_1",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_hanger_1",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_N_hanger_1",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_lid_1",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_T_hanger_2",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_hanger_2",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_N_hanger_2",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_lid_2",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_T_hanger_3",
+    "partKey": "hanger",
+    "name": "M2×5 双通圆铜柱 Ø3.2",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_hanger_3",
+    "partKey": "m2-washer",
+    "name": "M2 下平垫 2.2×5×0.3",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_N_hanger_3",
+    "partKey": "hanger-bottom",
+    "name": "M2×3 铜柱下端杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_lid_3",
+    "partKey": "hanger-top",
+    "name": "M2×4 铜柱上端沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_I_case_0",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_case_0",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_I_case_1",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_case_1",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_I_case_2",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_case_2",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_I_case_3",
+    "partKey": "case-insert",
+    "name": "M2×3 热熔铜嵌件",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_case_3",
+    "partKey": "case-m2",
+    "name": "M2×6 底壳沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_A_lid",
+    "partKey": "lid",
+    "name": "v7 r2 铝封盖",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_service_0",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_service_1",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_service_2",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_service_3",
+    "partKey": "service-m2",
+    "name": "M2×6 外圈维修沉头",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_top_clamp",
+    "partKey": "top-clamp",
+    "name": "PETG 一体肩上夹箍",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_cap",
+    "partKey": "cap",
+    "name": "成品旋钮帽 Ø30×25 孔6",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_cap_set",
+    "partKey": "cap-set",
+    "name": "帽随附顶丝（包络）",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_hub_grub",
+    "partKey": "hub-grub",
+    "name": "磁铁杯 M2×3 内六角紧定螺钉",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_N_hub",
+    "partKey": "clamp-nut",
+    "name": "磁铁杯 M2 AF4 螺母",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_pom_1",
+    "partKey": "pom",
+    "name": "开防转缺口的 POM 15×20×1",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_C_brake_disc",
+    "partKey": "brake-disc",
+    "name": "黄铜浮动摩擦盘 Ø20.4×1",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_pom_2",
+    "partKey": "pom",
+    "name": "开防转缺口的 POM 15×20×1",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_pom_saddle",
+    "partKey": "pom-saddle",
+    "name": "PETG 上 POM 防转托环",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_W_wave",
+    "partKey": "wave",
+    "name": "304 三波峰波簧 14×21×0.4",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_P_pressure_yoke",
+    "partKey": "brake-yoke",
+    "name": "PETG 导向压环",
+    "variant": "通用"
+  },
+  {
+    "id": "K2_S_brake_adjust",
+    "partKey": "brake-adjust",
+    "name": "外部调阻尼 M2×6 杯头",
+    "variant": "通用"
+  },
+  {
+    "id": "Q_cap_ongeki",
+    "partKey": "host-p082",
+    "name": "音击分面握把18×24／渐变斜面／周边倒角0.8",
+    "variant": "音击"
+  }
+]

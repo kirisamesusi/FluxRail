@@ -1,0 +1,25 @@
+{
+  "catalog": 76,
+  "independentFiles": 152,
+  "printable": 19,
+  "instanceMap": 269,
+  "worksheetRows": 76,
+  "adjustmentScrewPerKnob": 1,
+  "newPurchaseQtyForTwo": {
+    "bearing-686": 2,
+    "pom": 4,
+    "wave": 2,
+    "hub-grub": 2,
+    "brake-adjust": 2
+  },
+  "cadDigestChecks": 152,
+  "browserBinaryPayloadMatches": 152,
+  "stepAssemblies": 6,
+  "processDxf": [
+    "r2封盖-01-通切.dxf",
+    "r2封盖-02-二次加工.dxf",
+    "r2黄铜摩擦盘.dxf",
+    "r2-POM缺口.dxf"
+  ],
+  "archiveVerifiedByZipTestAndHashes": true
+}

@@ -1,0 +1,186 @@
+{
+  "revision": "flat-knob-v7-r2-drag-trial-2026-11-06",
+  "units": "mm",
+  "machineAxisXY": [
+    [
+      17.5,
+      115.35030756097744
+    ],
+    [
+      182.50039878079758,
+      115.35030756097744
+    ]
+  ],
+  "serviceMountXY": [
+    [
+      -15.6,
+      -15.6
+    ],
+    [
+      -15.6,
+      15.6
+    ],
+    [
+      15.6,
+      -15.6
+    ],
+    [
+      15.6,
+      15.6
+    ]
+  ],
+  "caseMountXY": [
+    [
+      -11.5,
+      -11.5
+    ],
+    [
+      -11.5,
+      11.5
+    ],
+    [
+      11.5,
+      -11.5
+    ],
+    [
+      11.5,
+      11.5
+    ]
+  ],
+  "localHangerXY": [
+    [
+      -12.8,
+      -6.6
+    ],
+    [
+      -12.8,
+      6.6
+    ],
+    [
+      12.8,
+      -6.6
+    ],
+    [
+      12.8,
+      6.6
+    ]
+  ],
+  "lid": [
+    38,
+    38,
+    2
+  ],
+  "hangerStack": {
+    "columnZ": [
+      12.1,
+      17.1
+    ],
+    "topWasherCount": 0,
+    "bottomWasherZ": [
+      11.8,
+      12.1
+    ]
+  },
+  "lidZ": [
+    17.1,
+    19.1
+  ],
+  "lidThroughDiameter": 17.6,
+  "lidUndersidePocketDiameter": 22.5,
+  "lidUndersidePocketDepth": 1.2999999999999972,
+  "upperBearing": {
+    "spec": "686-2RS 6x13x5",
+    "z": [
+      18.25,
+      23.25
+    ],
+    "seatID": 13.08,
+    "guideOD": 17.1,
+    "outerAbutmentID": 12.0,
+    "innerAbutmentOD": 7.25
+  },
+  "lowerBearing": {
+    "spec": "MR106ZZ 6x10x3",
+    "z": [
+      13.45,
+      16.45
+    ],
+    "seatID": 10.08,
+    "outerAbutmentID": 9.4,
+    "innerAbutmentOD": 6.85
+  },
+  "wave": {
+    "spec": "304, 3 waves, ID14 OD21 sheet0.4",
+    "freeHeightAssumption": 2.0,
+    "installedHeight": 1.7499999999999982,
+    "notMeasured": true,
+    "model": "periodic sinusoidal envelope; no spring rate",
+    "gapAtMinimumDrag": 0.05,
+    "compressedHeightAtTravelLimit": 1.45
+  },
+  "POM": {
+    "qtyPerKnob": 2,
+    "ID": 15,
+    "OD": 20,
+    "thickness": 1
+  },
+  "springSeatsZ": [
+    12.15,
+    14.2
+  ],
+  "flangeZ": [
+    16.65,
+    17.9
+  ],
+  "nominalDownHardStopTravel": 0,
+  "nominalUpServiceStopTravel": 0,
+  "shaft": {
+    "diameter": 6,
+    "length": 24,
+    "z": [
+      10.35,
+      34.35
+    ]
+  },
+  "magnet": {
+    "diameter": 6,
+    "thickness": 2.5,
+    "polarization": "diametrical",
+    "z": [
+      7.25,
+      9.75
+    ]
+  },
+  "chipOffsetXYMagnitude": 0.166,
+  "chipTopZ": 6.65,
+  "cap": {
+    "diameter": 30,
+    "height": 25,
+    "bore": 6,
+    "bottomZ": 24.75,
+    "nominalCavityDiameter": 20,
+    "nominalCavityDepth": 3,
+    "nominalShaftGrip": 6.6,
+    "setScrewZAssumption": 30.75
+  },
+  "brake": {
+    "screwXY": [
+      6,
+      -14.9
+    ],
+    "screw": "M2x6 socket, lid M2x0.4 tapped",
+    "travelMM": 0.6,
+    "rotor": [
+      "brass",
+      20.4,
+      1,
+      9.4
+    ],
+    "POMfaceZ": [
+      9.4,
+      10.4
+    ],
+    "bearingCup": "fixed",
+    "friction": "keyed POM pair and axially floating rotor disc"
+  }
+}

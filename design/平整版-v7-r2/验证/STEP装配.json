@@ -1,0 +1,32 @@
+[
+  {
+    "file": "旋钮总成.step",
+    "solids": 63,
+    "valid": true
+  },
+  {
+    "file": "旋钮爆炸.step",
+    "solids": 63,
+    "valid": true
+  },
+  {
+    "file": "整机-INF.step",
+    "solids": 268,
+    "valid": true
+  },
+  {
+    "file": "整机-音击.step",
+    "solids": 268,
+    "valid": true
+  },
+  {
+    "file": "整机-INF-爆炸.step",
+    "solids": 268,
+    "valid": true
+  },
+  {
+    "file": "整机-音击-爆炸.step",
+    "solids": 268,
+    "valid": true
+  }
+]
