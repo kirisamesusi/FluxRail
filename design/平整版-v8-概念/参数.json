@@ -1,0 +1,58 @@
+{
+  "revision": "flat-knob-v8-concept-2026-11-18",
+  "status": "concept geometry only; not CAD-verified",
+  "units": "mm",
+  "coordinates": "knob-local origin, Z up, top view +X right +Y up (same as v7 r2)",
+  "unchangedFromV7r2": {
+    "magnet": {"diameter": 6, "thickness": 2.5, "polarization": "diametrical", "z": [7.25, 9.75], "nominalGap": 0.6},
+    "chipTopZ": 6.65,
+    "POM": {"ID": 15, "OD": 20, "thickness": 1, "lowerZ": [8.4, 9.4], "upperZ": [10.4, 11.4], "notches": "two, at ±X, width 1.8, bottom r 9.05"},
+    "brakeDisc": {"material": "brass", "OD": 20.4, "ID": 12.96, "z": [9.4, 10.4], "driveSlots": "two, at ±X, width 2.06, end r 7.305"},
+    "upperBearing": {"spec": "686-2RS 6x13x5", "z": [18.25, 23.25]},
+    "lid": {"size": [38, 38, 2], "z": [17.1, 19.1], "centerHole": 17.6, "adjustTap": {"xy": [6, -14.9], "thread": "M2x0.4"}, "caseScrewXY": "±11.5", "serviceScrewXY": "±15.6"},
+    "cap": {"diameter": 30, "height": 25, "bottomZ": 24.75},
+    "shaft": {"diameter": 6, "length": 24, "z": [10.35, 34.35]}
+  },
+  "changed": {
+    "shaftFlat": {"type": "D", "depth": 0.5, "faces": "+Y"},
+    "lowerBearing": {"spec": "MR106ZZ 6x10x3", "z": [12.9, 15.9], "v7r2z": [13.45, 16.45]},
+    "bearingCenterSpan": {"v8": 6.35, "v7r2": 5.8},
+    "hub": {"magnetCupOD": 8.4, "flangeOD": 12.6, "flangeZ": [8.85, 10.9], "keys": {"x": "±6.6", "radial": 1.0, "width": 1.8, "z": [9.2, 10.9]}, "upperOD": 10.0, "upperZ": [10.9, 12.55], "innerRaceShoulderOD": 6.85, "topZ": 12.9, "shaftGripLength": 2.55, "grub": {"size": "M2x3", "axis": "+Y", "z": 11.7}},
+    "screwLengthCase": {"v8": "M2x8 countersunk", "v7r2": "M2x6 countersunk"}
+  },
+  "new": {
+    "housing": {
+      "material": "PETG",
+      "lowerBossOD": 12.6, "lowerBossZ": [12.9, 15.6],
+      "MRseat": {"diameter": 10.08, "z": [12.9, 15.9], "shoulderID": 9.4, "insertFrom": "below"},
+      "relief": {"diameter": 12.0, "z": [16.3, 18.25]},
+      "seat686": {"diameter": 13.08, "z": [18.25, 23.3], "shoulderID": 12.0, "insertFrom": "above"},
+      "tubeOD": 17.1, "tubeZ": [15.6, 23.3],
+      "flange": {"size": [30, 30], "z": [15.6, 17.1], "holes": "Ø2.4 at ±11.5", "notchAtAdjust": {"center": [6, -15], "radius": 1.9}},
+      "fulcrumSlot": {"center": [-6, 14.9], "railWidth": 0.8, "railGap": 2.6, "railLengthRadial": 3.0, "z": [14.9, 15.6]},
+      "optionalBossForR2Lid": {"diameter": 22.4, "height": 1.3}
+    },
+    "lever": {
+      "material": "PETG",
+      "ring": {"ID": 14.3, "OD": 22.4, "z": [11.9, 13.1]},
+      "pressurePads": {"xy": [[8.1, 3.3], [-8.1, -3.3]], "diameter": 2.0, "z": [11.4, 11.9]},
+      "antiRotationKeys": {"xy": [[9.6, 0], [-9.6, 0]], "radial": 1.0, "width": 1.6, "z": [10.6, 11.9]},
+      "fulcrum": {"xy": [-6, 14.9], "edgeRadius": 0.5, "contactZ": 15.6, "width": 2.6},
+      "springWell": {"xy": [6, -14.9], "ID": 3.8, "OD": 5.2, "floorTopZ": 9.8, "z": [9.2, 15.0]},
+      "leverRatio": 2.0
+    },
+    "spring": {"OD": 3.4, "wire": 0.35, "freeLength": 6.0, "rateAssumptionNperMM": 1.5, "selected": false},
+    "springCap": {"diameter": 3.5, "thickness": 0.6},
+    "adjustScrew": {"spec": "M2x6 socket cap", "xy": [6, -14.9], "nominalTravel": 2.0, "headBottomAboveLidAtLoosest": 2.0, "stop": "head on lid"},
+    "tray": {"outline": [32, 32], "z": [2.0, 8.4], "deckZ": [7.5, 8.4], "deckID": 14.7, "posts": {"xy": "±11.5", "diameter": 5, "topZ": 15.6}, "insertDepth": 4, "latch": "front (−Y) cantilever, hook at y −11.45"},
+    "lidScale": {"ticks": 8, "perTick": "1/8 turn = 0.05 mm"}
+  },
+  "estimates": {
+    "method": "spring force x2 (lever), two friction faces, mu 0.15–0.25, effective radius 8.8; excludes 686-2RS seal drag",
+    "springCompressionRange": [1.3, 3.3],
+    "stackForceRangeN": [3.9, 9.9],
+    "addedTorqueRangeNmm": [10, 44],
+    "perEighthTurnNmm": [0.4, 0.7],
+    "v7r2WaveSpringRateEstimateNperMM": 400
+  }
+}
